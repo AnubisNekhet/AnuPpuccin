@@ -1,5 +1,5 @@
 <h1 align="center">AnuPpuccin</h1>
-<h3 align="center">Personal theme for <a href="https://obsidian.md">Obsidian</a> :3</h3><br>
+<h3 align="center">Sanitized theme for <a href="https://obsidian.md">Obsidian</a> :3</h3><br>
 
 <p align="center"> <img src="assets/gh-preview.webp"> </p>
 
