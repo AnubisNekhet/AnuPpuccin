@@ -1,0 +1,15 @@
+.workspace-split:not(.mod-root) {
+  .graph-controls.is-close,
+  .graph-controls,
+  .graph-controls:not(.is-close) {
+    background-color: rgb(var(--ctp-crust));
+  }
+}
+.anp-card-layout .workspace-split:not(.mod-root),
+.workspace-leaf {
+  .graph-controls.is-close,
+  .graph-controls,
+  .graph-controls:not(.is-close) {
+    background-color: rgb(var(--ctp-mantle));
+  }
+}

@@ -1,0 +1,57 @@
+/*-Highlight current line-*/
+.anp-current-line .markdown-source-view {
+  .cm-active.cm-line {
+    background-color: rgba(var(--ctp-surface1), 0.4);
+  }
+}
+.anp-current-line-border .markdown-source-view {
+  .cm-active.cm-line {
+    border-left: 2px solid var(--interactive-accent);
+    margin-left: -2px !important;
+    background-color: rgba(var(--ctp-surface1), 0.4);
+  }
+}
+/*-Custom editor font-*/
+.anp-editor-font-toggle .markdown-source-view.mod-cm6:not(.is-live-preview) .cm-scroller {
+  font-family: var(--anp-editor-font);
+}
+/*-Highlighted gutter number-*/
+.cm-lineNumbers .cm-gutterElement.cm-active {    
+  color:  var(--interactive-accent) !important;
+}
+/*-ZWSP Highlight-*/
+.ͼ2 .cm-specialChar {
+  color: rgb(var(--ctp-red));
+}
+/*-Block edit button-*/
+.markdown-source-view.mod-cm6 .edit-block-button {
+  background-color: var(--background-secondary);
+  cursor: pointer;
+  border: 1px solid var(--background-modifer-border);
+  &:hover {
+    background-color: var(--background-secondary);
+  background-color: var(--background-secondary);
+    opacity: 1;
+  }
+}
+.markdown-source-view.mod-cm6 .cm-embed-block:hover .edit-block-button:hover {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--background-modifer-border);
+  opacity: 1;
+}
+/*-Vim Terminal-*/
+.ͼ2 .cm-panels-bottom {
+  border-top: 1px solid rgb(var(--ctp-surface1));
+  input {
+    &:hover, &:focus, &:focus-visible {
+      border: none;
+      box-shadow: none;
+    }
+    background-color: transparent;
+    font-family: var(--font-monospace);
+    width: 100%;
+  }
+}
+.ͼp .cm-vim-panel {
+  font-family: var(--font-monospace);
+}

@@ -1,0 +1,15 @@
+.nav-folder-children {
+  > .nav-folder {
+    &:nth-child(11n+2) { --rainbow-folder-color: var(--ctp-red); }
+    &:nth-child(11n+3) { --rainbow-folder-color: var(--ctp-maroon); }
+    &:nth-child(11n+4) { --rainbow-folder-color: var(--ctp-peach); }
+    &:nth-child(11n+5) { --rainbow-folder-color: var(--ctp-yellow); }
+    &:nth-child(11n+6) { --rainbow-folder-color: var(--ctp-green); }
+    &:nth-child(11n+7) { --rainbow-folder-color: var(--ctp-teal); }
+    &:nth-child(11n+8) { --rainbow-folder-color: var(--ctp-sky); }
+    &:nth-child(11n+9) { --rainbow-folder-color: var(--ctp-sapphire); }
+    &:nth-child(11n+10) { --rainbow-folder-color: var(--ctp-blue); }
+    &:nth-child(11n+11) { --rainbow-folder-color: var(--ctp-lavender); }
+    &:nth-child(11n+12) { --rainbow-folder-color: var(--ctp-mauve); }
+  }
+}

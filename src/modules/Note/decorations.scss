@@ -1,0 +1,38 @@
+/*-Decorations for bold and italics-*/
+.anp-decoration-toggle {
+  --italic-color: rgb(var(--anp-italic-color, var(--ctp-green)));
+  --bold-color: rgb(var(--anp-bold-color, var(--ctp-red)));
+}
+/*-Make it so that mark overwrites italic and bold colors-*/
+.markdown-rendered mark {
+  --italic-color: rgb(var(--ctp-text));
+  --bold-color: rgb(var(--ctp-text));
+  border-radius: 4px;
+  padding: 2px;
+}
+// Internal links have no underline
+.markdown-rendered .internal-link {
+  &:hover, &:active, &.is-unresolved:hover, &.is-unresolved {
+    text-decoration-line: none;
+  }
+  text-decoration-line: none;
+}
+.cm-formatting-link-string {
+  color: var(--text-normal);
+}
+// External links have underline but no icon
+.external-link,
+.external-link:hover {
+  background-image: none;
+  padding-right: 0px;
+}
+
+// Editor colors follow the same color as in reading mode
+.cm-s-obsidian span {
+  &.cm-formatting-strong, &.cm-strong {
+    color: var(--bold-color);
+  }
+  &.cm-formatting-em, &.cm-em {
+    color: var(--italic-color);
+  }
+}

@@ -1,0 +1,30 @@
+/*------------FLOATING VAULT TITLE-----------*/
+/*----------------------------------
+This feature is inspired by Cecilia May's Primary theme: https://github.com/ceciliamay/obsidianmd-theme-primary
+None of the original code was used and the feature was implemented from scratch.
+----------------------------------*/
+.anp-floating-header .nav-folder.mod-root > .nav-folder-title {
+  background-color: var(--background-secondary);
+  position: fixed;
+  z-index: 1;
+  margin-left: calc(-0.5*var(--size-4-3));
+  width: calc(100% - 1.22*var(--size-4-3));
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-s);
+}
+.anp-floating-header .nav-folder.mod-root > .nav-folder-title:hover {
+  background-color: var(--background-secondary);
+  width: calc(100% - 1.2*var(--size-4-3));
+  margin-left: calc(-0.5*var(--size-4-3));
+}
+.anp-floating-header .nav-folder.mod-root > .nav-folder-children {
+  padding-top: 32px; //Might change this later
+}
+.anp-floating-header.anp-custom-vault-toggle {
+  .nav-folder.mod-root > .nav-folder-title {
+    padding-top: 10px;
+  }
+  .nav-folder.mod-root > .nav-folder-children {
+    padding-top: 45px;
+  }
+}

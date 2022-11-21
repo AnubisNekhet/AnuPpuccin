@@ -1,0 +1,94 @@
+/*-Recolor table borders-*/
+.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table,
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview)
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table,
+.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) {
+    &,
+    td,
+    th,
+    thead
+    tr > th:first-child,
+    thead tr > th,
+    thead tr > th:last-child {
+        border: var(--anp-table-thickness, 1px) solid var(--table-border-color);
+    }
+    th ,
+    thead tr > th:first-child,
+    thead tr > th,
+    thead tr > th:last-child {
+        text-align: var(--anp-table-align-th, center);
+    }
+    td {
+        text-align: var(--anp-table-align-td, center);
+    }
+}
+//dataview table
+table.dataview.table-view-table {
+   > tbody > tr:hover {
+    background-color: rgba(var(--ctp-surface1), 0.1) !important;
+  }
+}
+.anp-table-toggle {
+    &.anp-th-highlight .markdown-preview-view:not(.cards):not(.table-disable),
+    &.anp-th-highlight .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+    &.anp-th-highlight .is-live-preview:not(.cards):not(.table-disable),
+    &.anp-th-highlight .is-live-preview.cards:not(.table-disable) table:not(.dataview) {
+        th {
+            background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
+        }
+    }
+    &.anp-td-alt-rows .markdown-preview-view:not(.cards):not(.table-disable) table,
+    &.anp-td-alt-rows .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+    &.anp-td-alt-rows .is-live-preview:not(.cards):not(.table-disable) table,
+    &.anp-td-alt-rows .is-live-preview.cards:not(.table-disable) table:not(.dataview) {
+        tr:nth-child(2n) td {
+            background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
+        }
+    }
+    &.anp-td-alt-cols .markdown-preview-view:not(.cards):not(.table-disable) table,
+    &.anp-td-alt-cols .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+    &.anp-td-alt-cols .is-live-preview:not(.cards):not(.table-disable) table,
+    &.anp-td-alt-cols .is-live-preview.cards:not(.table-disable) table:not(.dataview) {
+        tr td:nth-child(2n) {
+            background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
+        }
+    }
+    &.anp-td-checkered .markdown-preview-view:not(.cards):not(.table-disable) table,
+    &.anp-td-checkered .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+    &.anp-td-checkered .is-live-preview:not(.cards):not(.table-disable) table,
+    &.anp-td-checkered .is-live-preview.cards:not(.table-disable) table:not(.dataview) {
+        tr td:nth-child(2n),
+        tr:nth-child(2n) td {
+            background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
+        }
+        tr:nth-child(2n) td:nth-child(2n) {
+            background-color: rgba(var(--ctp-crust), var(--anp-table-highlight-opacity, 0.5));
+        }
+    }
+    &.anp-td-full .markdown-preview-view:not(.cards):not(.table-disable) table,
+    &.anp-td-full .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+    &.anp-td-full .is-live-preview:not(.cards:not(.table-disable)) table,
+    &.anp-td-full .is-live-preview.cards:not(.table-disable) table:not(.dataview) {
+        td {
+            background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
+        }
+    }
+}
+.anp-table-auto.markdown-rendered:not(.cards):not(.table-disable) table,
+.anp-table-auto.markdown-rendered.cards:not(.table-disable) table:not(.dataview) {
+    margin: 0 auto;
+}
+.anp-table-width.markdown-rendered:not(.cards):not(.table-disable) table,
+.anp-table-width.markdown-rendered.cards:not(.table-disable) table:not(.dataview) {
+    width: var(--anp-table-width-pct);
+}
+.anp-table-auto.anp-table-toggle .markdown-rendered:not(.cards):not(.table-disable) table,
+.anp-table-auto.anp-table-toggle .markdown-rendered.cards:not(.table-disable) table:not(.dataview) {
+    margin: 0 auto;
+}
+.anp-table-width.anp-table-toggle .markdown-rendered:not(.cards):not(.table-disable) table,
+.anp-table-width.anp-table-toggle .markdown-rendered.cards:not(.table-disable) table:not(.dataview) {
+    width: var(--anp-table-width-pct);
+    margin-left: calc(50% - var(--anp-table-width-pct)/2);
+    margin-right: calc(50% - var(--anp-table-width-pct)/2);
+}

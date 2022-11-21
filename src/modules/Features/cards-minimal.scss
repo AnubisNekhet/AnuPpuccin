@@ -1,0 +1,49 @@
+/*-------Tweak for Minimal Cards--------------
+Minimal cards are a snippet designed by Kepano for the Minimal theme.
+None of the original code was used in this theme, and the following code is merely some tweaks to the snippet.
+--------------------------------------------*/
+.cards {
+    .table-view-table {
+        > tbody > tr> td {
+            border-bottom: 1px dashed var(--background-modifier-border) !important;/*-Dashed borders for all cells-*/
+            &:last-child {
+                border-bottom-color: transparent !important;/*-No border for last cell-*/
+            }
+            &:first-child {
+                    width: 100% !important; /*-Max width for first cell-*/
+            border-bottom: 1px dashed var(--background-modifier-border) !important;/*-Border for first table that spans to the end because of max width-*/
+                span {
+                    margin: 2px calc(var(--cards-padding)*0.5) 0 calc(var(--cards-padding)*0.5);/*-Add padding to text-*/
+                    a {
+                    padding: 0 !important;/*-0 padding on link-*/
+                    }
+                }
+            }
+        }
+    }
+    &:not([class*="cards-cols-"]) {
+        --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width))); /*-force card width to be obeyed on notes not having cards-cols css class-*/
+    }
+}
+.cards.cards-bookmark {
+    .table-view-table {
+                    .table-view-tbody {
+            tr::after {
+              --text-normal: var(--text-muted);
+                content: ' ';
+                width: 25px;
+                height: 25px;
+                -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--!  --%3E%3Cpath d='M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z'/%3E%3C/svg%3E");/*-SVG for bookmark-*/
+                -webkit-mask-repeat: no-repeat;
+                background-color: var(--color-accent);/*-Bookmark follows accent color-*/
+                position: absolute;
+                margin-top: calc(-2px + -1*var(--cards-border-width));/*-Bookmark is a bit higher than the card-*/
+                margin-left: 5px;/*-Bookmark is 5px from the left*/
+            }
+        }
+        tbody tr > td:first-child span {
+                margin: 2px calc(var(--cards-padding) * 0.5) 0 calc(var(--cards-padding) * 0.5 + 20px);/*-Shift first cell title to the left by about 20px-*/
+        }
+
+    }
+}

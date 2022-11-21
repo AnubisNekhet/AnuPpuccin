@@ -1,0 +1,26 @@
+.mod-community-theme summary {
+  h1, h2, h3, h4, h5, h6 {
+    &:first-child {
+      margin-top: -24px !important;
+      margin-left: 24px !important;
+    }
+  }
+}
+.modal.mod-settings,
+.modal.mod-community-theme,
+.modal.mod-community-plugin {
+  --h1-font: var(--font-interface);
+  --h2-font: var(--font-interface);
+  --h3-font: var(--font-interface);
+  --h4-font: var(--font-interface);
+  --h5-font: var(--font-interface);
+  --h6-font: var(--font-interface);
+  --h1-weight: 600;
+  --h1-color: var(--text-normal);
+  --h2-color: var(--text-normal);
+  --h3-color: var(--text-normal);
+  --h4-color: var(--text-normal);
+  --h5-color: var(--text-normal);
+  --h6-color: var(--text-normal);
+}
+

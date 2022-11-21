@@ -1,0 +1,19 @@
+.anp-list-toggle ul.has-list-bullet > li > ul.has-list-bullet > li {
+  .list-bullet::after {
+    border: 1px solid var(--list-marker-color);
+    background-color: transparent;
+    width: calc(var(--list-bullet-size) - 1px);
+    height: calc(var(--list-bullet-size) - 1px);
+  }
+  > ul.has-list-bullet > li {
+    .list-bullet::after {
+      border-radius: 0;
+      background-color: var(--list-marker-color);
+    }
+    > ul.has-list-bullet > li {
+      .list-bullet::after {
+        background-color: transparent;
+      }
+    }
+  }
+}

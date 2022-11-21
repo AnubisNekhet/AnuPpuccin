@@ -1,0 +1,133 @@
+/*--------------HEADERS----------------*/
+/*-Custom header font-*/
+.anp-header-color-toggle {
+	/*--------------H1 Colors-------------*/
+	&.anp-h1-rosewater { --h1-color: rgb(var(--ctp-rosewater)); }
+	&.anp-h1-flamingo { --h1-color: rgb(var(--ctp-flamingo)); }
+	&.anp-h1-pink { --h1-color: rgb(var(--ctp-pink)); }
+	&.anp-h1-mauve { --h1-color: rgb(var(--ctp-mauve)); }
+	&.anp-h1-red { --h1-color: rgb(var(--ctp-red)); }
+	&.anp-h1-maroon { --h1-color: rgb(var(--ctp-maroon)); }
+	&.anp-h1-peach { --h1-color: rgb(var(--ctp-peach)); }
+	&.anp-h1-yellow { --h1-color: rgb(var(--ctp-yellow)); }
+	&.anp-h1-green { --h1-color: rgb(var(--ctp-green)); }
+	&.anp-h1-teal { --h1-color: rgb(var(--ctp-teal)); }
+	&.anp-h1-sky { --h1-color: rgb(var(--ctp-sky)); }
+	&.anp-h1-sapphire { --h1-color: rgb(var(--ctp-sapphire)); }
+	&.anp-h1-blue { --h1-color: rgb(var(--ctp-blue)); }
+	&.anp-h1-lavender { --h1-color: rgb(var(--ctp-lavender)); }
+	/*--------------H2 Colors-------------*/
+	&.anp-h2-rosewater { --h2-color: rgb(var(--ctp-rosewater)); }
+	&.anp-h2-flamingo { --h2-color: rgb(var(--ctp-flamingo)); }
+	&.anp-h2-pink { --h2-color: rgb(var(--ctp-pink)); }
+	&.anp-h2-mauve { --h2-color: rgb(var(--ctp-mauve)); }
+	&.anp-h2-red { --h2-color: rgb(var(--ctp-red)); }
+	&.anp-h2-maroon { --h2-color: rgb(var(--ctp-maroon)); }
+	&.anp-h2-peach { --h2-color: rgb(var(--ctp-peach)); }
+	&.anp-h2-yellow { --h2-color: rgb(var(--ctp-yellow)); }
+	&.anp-h2-green { --h2-color: rgb(var(--ctp-green)); }
+	&.anp-h2-teal { --h2-color: rgb(var(--ctp-teal)); }
+	&.anp-h2-sky { --h2-color: rgb(var(--ctp-sky)); }
+	&.anp-h2-sapphire { --h2-color: rgb(var(--ctp-sapphire)); }
+	&.anp-h2-blue { --h2-color: rgb(var(--ctp-blue)); }
+	&.anp-h2-lavender { --h2-color: rgb(var(--ctp-lavender)); }
+	/*--------------H3 Colors-------------*/
+	&.anp-h3-rosewater { --h3-color: rgb(var(--ctp-rosewater)); }
+	&.anp-h3-flamingo { --h3-color: rgb(var(--ctp-flamingo)); }
+	&.anp-h3-pink { --h3-color: rgb(var(--ctp-pink)); }
+	&.anp-h3-mauve { --h3-color: rgb(var(--ctp-mauve)); }
+	&.anp-h3-red { --h3-color: rgb(var(--ctp-red)); }
+	&.anp-h3-maroon { --h3-color: rgb(var(--ctp-maroon)); }
+	&.anp-h3-peach { --h3-color: rgb(var(--ctp-peach)); }
+	&.anp-h3-yellow { --h3-color: rgb(var(--ctp-yellow)); }
+	&.anp-h3-green { --h3-color: rgb(var(--ctp-green)); }
+	&.anp-h3-teal { --h3-color: rgb(var(--ctp-teal)); }
+	&.anp-h3-sky { --h3-color: rgb(var(--ctp-sky)); }
+	&.anp-h3-sapphire { --h3-color: rgb(var(--ctp-sapphire)); }
+	&.anp-h3-blue { --h3-color: rgb(var(--ctp-blue)); }
+	&.anp-h3-lavender { --h3-color: rgb(var(--ctp-lavender)); }
+	/*--------------H4 Colors-------------*/
+	&.anp-h4-rosewater { --h4-color: rgb(var(--ctp-rosewater)); }
+	&.anp-h4-flamingo { --h4-color: rgb(var(--ctp-flamingo)); }
+	&.anp-h4-pink { --h4-color: rgb(var(--ctp-pink)); }
+	&.anp-h4-mauve { --h4-color: rgb(var(--ctp-mauve)); }
+	&.anp-h4-red { --h4-color: rgb(var(--ctp-red)); }
+	&.anp-h4-maroon { --h4-color: rgb(var(--ctp-maroon)); }
+	&.anp-h4-peach { --h4-color: rgb(var(--ctp-peach)); }
+	&.anp-h4-yellow { --h4-color: rgb(var(--ctp-yellow)); }
+	&.anp-h4-green { --h4-color: rgb(var(--ctp-green)); }
+	&.anp-h4-teal { --h4-color: rgb(var(--ctp-teal)); }
+	&.anp-h4-sky { --h4-color: rgb(var(--ctp-sky)); }
+	&.anp-h4-sapphire { --h4-color: rgb(var(--ctp-sapphire)); }
+	&.anp-h4-blue { --h4-color: rgb(var(--ctp-blue)); }
+	&.anp-h4-lavender { --h4-color: rgb(var(--ctp-lavender)); }
+	/*--------------H5 Colors-------------*/
+	&.anp-h5-rosewater { --h5-color: rgb(var(--ctp-rosewater)); }
+	&.anp-h5-flamingo { --h5-color: rgb(var(--ctp-flamingo)); }
+	&.anp-h5-pink { --h5-color: rgb(var(--ctp-pink)); }
+	&.anp-h5-mauve { --h5-color: rgb(var(--ctp-mauve)); }
+	&.anp-h5-red { --h5-color: rgb(var(--ctp-red)); }
+	&.anp-h5-maroon { --h5-color: rgb(var(--ctp-maroon)); }
+	&.anp-h5-peach { --h5-color: rgb(var(--ctp-peach)); }
+	&.anp-h5-yellow { --h5-color: rgb(var(--ctp-yellow)); }
+	&.anp-h5-green { --h5-color: rgb(var(--ctp-green)); }
+	&.anp-h5-teal { --h5-color: rgb(var(--ctp-teal)); }
+	&.anp-h5-sky { --h5-color: rgb(var(--ctp-sky)); }
+	&.anp-h5-sapphire { --h5-color: rgb(var(--ctp-sapphire)); }
+	&.anp-h5-blue { --h5-color: rgb(var(--ctp-blue)); }
+	&.anp-h5-lavender { --h5-color: rgb(var(--ctp-lavender)); }
+	/*--------------H6 Colors-------------*/
+	&.anp-h6-rosewater { --h6-color: rgb(var(--ctp-rosewater)); }
+	&.anp-h6-flamingo { --h6-color: rgb(var(--ctp-flamingo)); }
+	&.anp-h6-pink { --h6-color: rgb(var(--ctp-pink)); }
+	&.anp-h6-mauve { --h6-color: rgb(var(--ctp-mauve)); }
+	&.anp-h6-red { --h6-color: rgb(var(--ctp-red)); }
+	&.anp-h6-maroon { --h6-color: rgb(var(--ctp-maroon)); }
+	&.anp-h6-peach { --h6-color: rgb(var(--ctp-peach)); }
+	&.anp-h6-yellow { --h6-color: rgb(var(--ctp-yellow)); }
+	&.anp-h6-green { --h6-color: rgb(var(--ctp-green)); }
+	&.anp-h6-teal { --h6-color: rgb(var(--ctp-teal)); }
+	&.anp-h6-sky { --h6-color: rgb(var(--ctp-sky)); }
+	&.anp-h6-sapphire { --h6-color: rgb(var(--ctp-sapphire)); }
+	&.anp-h6-blue { --h6-color: rgb(var(--ctp-blue)); }
+	&.anp-h6-lavender { --h6-color: rgb(var(--ctp-lavender)); }
+}
+.anp-h1-divider .markdown-rendered h1,
+.anp-h1-divider .HyperMD-header-1,
+.anp-h2-divider .markdown-rendered h2,
+.anp-h2-divider .HyperMD-header-2,
+.anp-h3-divider .markdown-rendered h3,
+.anp-h3-divider .HyperMD-header-3,
+.anp-h4-divider .markdown-rendered h4,
+.anp-h4-divider .HyperMD-header-4,
+.anp-h5-divider .markdown-rendered h5,
+.anp-h5-divider .HyperMD-header-5,
+.anp-h6-divider .HyperMD-header-6,
+.anp-h6-divider .markdown-rendered h6 {
+	border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
+	padding-bottom: 2px;
+}
+/*-Source editor recolor application-*/
+.cm-formatting-header-1 { color: var(--h1-color); }
+.cm-formatting-header-2 { color: var(--h2-color); }
+.cm-formatting-header-3 { color: var(--h3-color); }
+.cm-formatting-header-4 { color: var(--h4-color); }
+.cm-formatting-header-5 { color: var(--h5-color); }
+.cm-formatting-header-6 { color: var(--h6-color); }
+.anp-header-toggle.anp-header-margin-toggle h1,
+.anp-header-toggle.anp-header-margin-toggle h2,
+.anp-header-toggle.anp-header-margin-toggle h3,
+.anp-header-toggle.anp-header-margin-toggle h4,
+.anp-header-toggle.anp-header-margin-toggle h5,
+.anp-header-toggle.anp-header-margin-toggle h6 {
+   margin-block-start: var(--anp-header-margin-value);
+  margin-block-end: var(--anp-header-margin-value);
+}
+.anp-editor-font-toggle .markdown-source-view:not(.is-live-preview) {
+	--h1-font: var(--anp-editor-font);
+	--h2-font: var(--anp-editor-font);
+	--h3-font: var(--anp-editor-font);
+	--h4-font: var(--anp-editor-font);
+	--h5-font: var(--anp-editor-font);
+	--h6-font: var(--anp-editor-font);
+}

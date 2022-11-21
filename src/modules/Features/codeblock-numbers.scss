@@ -1,0 +1,30 @@
+.anp-codeblock-numbers .HyperMD-codeblock-begin {
+    counter-reset: line-numbers;
+}
+.anp-codeblock-numbers .HyperMD-codeblock.cm-line:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end) {
+    padding-left: 5em;
+    position: relative;
+}
+.anp-codeblock-numbers .HyperMD-codeblock.cm-line:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end)::before {
+    align-items: flex-end;
+    border-right: 1px solid var(--scrollbar-thumb-bg);
+    color: var(--text-faint);
+    content: counter(line-numbers);
+    counter-increment: line-numbers;
+    display: flex;
+    font-size: .8em;
+    height: 100%;
+    justify-content: flex-end;
+    left: 0;
+    padding-right: 0.5em;
+    padding-top: 1px;
+    position: absolute;
+    text-align: right;
+    width: 3em;
+}
+.anp-codeblock-numbers .HyperMD-codeblock.cm-line.cm-active:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end)::before {
+    color: var(--color-accent);
+}
+.anp-codeblock-numbers .HyperMD-codeblock .cm-foldPlaceholder::before {
+    display: none;
+}

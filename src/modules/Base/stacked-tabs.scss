@@ -1,0 +1,6 @@
+body {
+  --tab-stacked-header-width: var(--anp-stacked-header-width, 40px);
+}
+.anp-card-layout .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-leaf {
+  background-color: var(--background-primary);
+}

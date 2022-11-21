@@ -1,0 +1,10 @@
+body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) {
+  .workspace-split.mod-vertical {
+    .workspace-tab-header-spacer {
+      display: none;
+    }
+    .workspace-tab-header-new-tab {
+      margin-left: auto
+    }
+  }
+}

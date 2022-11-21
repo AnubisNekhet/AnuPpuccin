@@ -1,0 +1,75 @@
+.anp-full-rainbow-color-toggle {
+  .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title, .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title, .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title, .nav-folder-collapse-indicator svg, .is-collapsed .nav-folder-collapse-indicator svg {
+    color: var(--background-primary);
+  }
+  &.anp-rainbow-file-toggle {
+    .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {
+      color: var(--background-primary);
+    }
+    &.theme-dark  .nav-folder.mod-root > .nav-folder-children > .nav-file {
+      background-color: rgba(var(--ctp-text), var(--anp-rainbow-folder-bg-opacity));
+    }
+    &.theme-light  .nav-folder.mod-root > .nav-folder-children > .nav-file {
+      background-color: rgba(var(--ctp-overlay1), var(--anp-rainbow-folder-bg-opacity));
+    }
+    .nav-folder.mod-root > .nav-folder-children > .nav-file { 
+      border-radius: 5px;
+      margin-bottom: 2px;
+    }
+  }
+  //Root file colors are slightly white
+  &:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:hover {
+    background-color: rgba(var(--ctp-text), 0.1);
+  }
+  &:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  &:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title.is-active {
+    border-color: rgba(var(--ctp-text), 0.2);
+    background-color: rgba(var(--ctp-text), 0.2);
+  }
+  //Hide scrollbars and allow horizontal scrolling
+  .nav-file {
+    overflow-y: hidden;
+  }
+  //Renaming files
+  .nav-file-title-content.is-being-renamed, .nav-folder-title-content.is-being-renamed {
+    cursor: text;
+    border-color: var(--interactive-accent);
+    background-color: rgba(var(--ctp-crust), 0.2);
+    &::selection {
+      background-color: hsla(var(--color-accent-hsl), 0.2);
+    }
+  }
+  .nav-file-title-content.is-being-renamed::selection {
+    background-color: rgba(var(--ctp-accent), 0.2);
+  }
+  .nav-folder {
+    &.mod-root {
+      .nav-folder > .nav-folder-children { padding: 0 5px 0 5px; }
+      > .nav-folder-children {
+        > .nav-folder {
+          transition: background-color 0.4s;
+          background-color: rgba(var(--rainbow-folder-color), var(--anp-rainbow-folder-bg-opacity));
+          border-color: rgba(var(--rainbow-folder-color), var(--anp-rainbow-folder-border-opacity));
+          margin-bottom: 2px;
+          border-radius: 5px;
+          .nav-folder-children {
+            border-color: rgba(var(--ctp-crust), 0.4);
+          }
+        }
+        > .nav-file.has-focus {
+          background-color: rgba(var(--ctp-text), var(--anp-rainbow-folder-bg-opacity));
+          border-left: none;
+          border-color: rgb(var(--ctp-accent));
+        }
+        > .nav-file.has-focus > .nav-file-title, > .nav-file > .nav-file-title {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title:focus-within, .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title:focus-within, .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title, .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title {
+    box-shadow: none;
+  }
+}

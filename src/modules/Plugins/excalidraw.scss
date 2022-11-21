@@ -1,0 +1,71 @@
+.theme-dark, .theme-light {
+  .excalidraw, .excalidraw.theme--dark {
+    --button-destructive-bg-color: rgba(var(--ctp-red), 0.2);
+    --button-destructive-color: rgb(var(--ctp-red));
+    --button-gray-1: rgb(var(--ctp-base));
+    --button-gray-2: rgb(var(--ctp-mantle));
+    --button-gray-3: rgb(var(--ctp-crust));
+    --button-special-active-bg-color: rgb(var(--ctp-base));
+    --dialog-border-color: rgb(var(--ctp-surface1));
+    --focus-highlight-color: rgb(var(--ctp-accent, var(--ctp-teal)));
+    --icon-fill-color: var(--text-normal);
+    --icon-green-fill-color: rgb(var(--ctp-green));
+    --default-bg-color: rgb(var(--ctp-base));
+    --input-bg-color: rgb(var(--ctp-mantle));
+    --input-border-color: rgb(var(--ctp-surface1));
+    --input-hover-bg-color: rgb(var(--ctp-surface0));
+    --input-label-color: rgb(var(--ctp-text));
+    --island-bg-color: rgba(var(--ctp-base), 0.96);
+    --keybinding-color: rgb(var(--ctp-crust));
+    --link-color: var(--color-accent);
+    --overlay-bg-color: rgba(var(--ctp-base), 0.88);
+    --popup-bg-color: rgb(var(--ctp-base));
+    --popup-secondary-bg-color: rgb(var(--ctp-mantle));
+    --popup-text-color: rgb(var(--ctp-text));
+    --popup-text-inverted-color: rgb(var(--ctp-base));
+    --select-highlight-color: var(--color-accent);
+    --shadow-island: 0 0 0 1px rgba(var(--ctp-text), 0.01), 1px 1px 5px rgb(var(--ctp-text) / 12%);
+    --text-primary-color: rgb(var(--ctp-text));
+    --color-primary: var(--color-accent);
+    --color-primary-darker: var(--color-accent);
+    --color-primary-darkest: var(--color-accent);
+    --color-primary-light: rgb(var(--ctp-base));
+  }
+}
+.excalidraw-tooltip {
+  background: rgb(var(--ctp-crust)) !important;
+  color: var(--text-normal) !important;
+}
+.excalidraw {
+  .ToolIcon--plain,
+  .reset-zoom-button,
+  .ToolIcon[aria-label="Zoom in"],
+  .ToolIcon[aria-label="Zoom out"],
+  .ToolIcon[aria-label="Reset the canvas"] {
+    background-color: rgb(var(--ctp-crust)) !important;
+  }
+  .Dialog__titleContent {
+    font-family: var(--font-interface) !important;
+    font-variant-caps: normal;
+    --h2-color: var(--color-accent);
+  }
+  .confirm-dialog--confirm.ToolIcon_type_button {
+    background-color: rgb(var(--ctp-red)) !important;
+  }
+  .confirm-dialog--confirm.ToolIcon_type_button .ToolIcon__icon {
+    color: var(--background-primary) !important;
+  }
+}
+//Reset excalidraw title margins
+[data-type="excalidraw"] .view-header {
+  margin: 0;
+}
+body .excalidraw .library-menu-items-container .library-actions--load {
+  &, &:hover {
+    background-color: var(--color-accent);
+  }
+}
+
+.excalidraw h3 {
+  --h3-font: var(--font-interface);
+}

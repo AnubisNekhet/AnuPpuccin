@@ -1,0 +1,20 @@
+.callout[data-callout="formula"] {
+  --callout-color: var(--ctp-text);
+  width: fit-content;
+  height: fit-content;
+  mix-blend-mode: normal;
+  background-color: transparent !important;
+  .callout-title {
+    .callout-icon, .callout-fold {
+      display: none;
+    }
+    background-color: rgba(var(--callout-color), 0.05) !important;
+    color: var(--ctp-text);
+  }
+  .callout-content {
+    background-color: transparent !important;
+    ul, ol {
+      padding-inline-start: 12px;
+    }
+  }
+}

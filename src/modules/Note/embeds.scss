@@ -1,0 +1,49 @@
+span[alt="anp-embed-animated"], .anp-embed-animated-toggle {
+  .markdown-embed {
+    border-width: 0px;
+    border-color: var(--color-accent);
+    border-style: solid;
+    transition: border-width 0.2s, background-color 0.2s;
+    .markdown-embed-title {
+      width: fit-content;
+      position: absolute;
+      left: unset;
+      right: 33px;
+      top: 5px;
+    }
+    .markdown-embed-link, .file-embed-link, .markdown-embed-title {
+      opacity: 0;
+      transition: opacity 0.2s, display 0.2s;
+    }
+    &:hover {
+      transition: border-width 0.2s, background-color 0.2s;
+      border-left-width: 4px;
+      background-color: var(--background-secondary);
+      .markdown-embed-link, .file-embed-link, .markdown-embed-title {
+        opacity: 1;
+        transition: opacity 0.2s, display 0.2s;
+      }
+    }
+  }
+}
+span[alt="anp-embed"], .anp-embed-toggle,
+.anp-embed-animated-toggle, span[alt="anp-embed-animated"] {
+  .markdown-embed {
+    .markdown-preview-section {
+      padding-left: 10px;
+    }
+  }
+}
+span[alt="anp-embed"], .anp-embed-toggle {
+  .markdown-embed {
+    border-width: 0px;
+    border-style: solid;
+    .markdown-embed-title {
+      width: fit-content;
+      position: absolute;
+      left: unset;
+      right: 33px;
+      top: 5px;
+    }
+  }
+}

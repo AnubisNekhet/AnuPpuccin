@@ -1,0 +1,29 @@
+.anp-mini-tab-toggle {
+  --header-height: var(--anp-alt-tab-custom-height, 40px);
+  --tab-stacked-header-width: var(--anp-stacked-header-width, 40px);
+  .workspace-split:not(.mod-left-split):not(.mod-right-split) {
+    .workspace-tab-header-container-inner {
+      .workspace-tab-header {
+        background-color: transparent;
+        &::before, &::after { display: none;}
+        box-shadow: none;
+        &.is-active {
+          border-bottom: 2px solid var(--color-accent);
+          margin-bottom: 0px;
+          padding-bottom: 0px;
+          .workspace-tab-header-inner {
+            border-radius: var(--tab-radius) var(--tab-radius) 0px 0px;
+            margin-top: 0.5px;
+            padding-bottom: 4px;
+          }
+        }
+        ::after {
+          display: none;
+        }
+        &:hover .workspace-tab-header-inner {
+          background-color: var(--background-modifier-hover);
+        }
+      }
+    }
+  }
+}

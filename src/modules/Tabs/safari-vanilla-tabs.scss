@@ -1,0 +1,74 @@
+.anp-safari-tab-toggle {
+  .workspace-split.mod-vertical.mod-root {
+    /*-----VARIABLES---------*/
+    --tab-background-inactive: var(--background-secondary-alt);
+    --tab-background-active: var(--background-primary);
+    --tab-background-inactive-hover: var(--background-primary-secondary);
+    --tab-text-color: var(--text-faint);
+    --tab-text-color-active: var(--text-muted);
+    --tab-text-color-focused: var(--text-muted);
+    --tab-text-color-focused-active: var(--text-muted);
+    --tab-text-color-focused-highlighted: var(--text-accent);
+    --tab-text-color-focused-active-current: var(--text-accent);
+    --tab-divider-color: var(--background-modifier-border-hover);
+    --tab-width: 200px;
+    --tab-max-width: 320px;
+    /*-------CONFIGS---------*/
+    .workspace-tabs {
+      .workspace-tab-header-container {
+        .workspace-tab-header-container-inner {
+          margin: 5px 0 !important;
+          .workspace-tab-header {
+            .workspace-tab-header-inner {
+              .workspace-tab-header-inner-title {
+                margin-top: 3px;
+              }
+            }
+            &::before,
+            &::after {
+              display: none;
+            }
+            border-radius: var(--anp-safari-tab-radius, 5px);
+            border: var(--anp-safari-border-width, 1px) solid var(--tab-outline-color);
+            background-color: var(--tab-background-inactive);
+            color: var(--text-muted);
+            max-width: var(--tab-max-width) ;
+            &.is-active {
+              background-color: var(--tab-background-active);
+              max-width: var(--tab-max-width) ;
+              box-shadow: none;
+            }
+            &:not(.is-active):hover {
+              .workspace-tab-header-inner {
+                background-color: transparent;
+              }
+            }
+          }
+          gap: var(--anp-safari-tab-gap, 10px);
+        }
+      }
+    }
+  }
+  &:not(.anp-disable-newtab-align) {
+    .workspace-tab-header-container-inner {
+      width: 100%;
+    }
+  }
+}
+.anp-safari-tab-toggle.anp-safari-tab-animated {
+  .workspace-split.mod-vertical.mod-root {
+    .workspace-tabs {
+      .workspace-tab-header-container {
+        .workspace-tab-header-container-inner {
+          .workspace-tab-header {
+            &.is-active {
+              flex-grow: 1.67;
+              max-width: var(--tab-max-width-active) ;
+            }
+            transition: max-width 400ms ease-in-out, width 400ms ease-in-out, flex-grow 400ms ease, background-color 150ms;
+          }
+        }
+      }
+    }
+  }
+}

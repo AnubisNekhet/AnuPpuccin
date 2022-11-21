@@ -1,0 +1,11 @@
+.anp-color-transition-toggle {
+  .horizontal-tab-content,
+  .vertical-tab-content,
+  .vertical-tab-header,
+  .workspace-tab-header-container,
+  .workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
+  .mod-root .workspace-tabs .workspace-leaf,
+  .setting-item-name {
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border-color 0.5s ease-in-out !important;
+  }
+}

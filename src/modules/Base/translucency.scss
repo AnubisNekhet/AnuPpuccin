@@ -1,0 +1,32 @@
+body.is-translucent {
+  background-color: transparent;
+  --workspace-background-translucent: rgba(var(--ctp-crust), var(--anp-translucency-opacity));
+}
+.is-translucent:not(.is-fullscreen) {
+  --nav-collapse-icon-color: rgba(var(--mono-rgb-100), 0.3);
+  --nav-collapse-icon-color-collapsed: rgba(var(--mono-rgb-100), 0.3);
+  --divider-color: rgba(var(--ctp-surface0), 0.15);
+}
+.is-translucent.anp-translucent-left:not(.is-fullscreen) .workspace-ribbon.mod-left,
+.is-translucent.anp-translucent-center:not(.is-fullscreen) .workspace-tabs,
+.is-translucent.anp-translucent-left:not(.is-fullscreen) .mod-left-split .workspace-tab-header-container,
+.is-translucent.anp-translucent-right:not(.is-fullscreen) .mod-right-split .workspace-tab-header-container,
+.is-translucent.anp-translucent-center:not(.is-fullscreen) .mod-top .workspace-tab-header-container,
+.is-translucent.anp-translucent-center:not(.is-fullscreen) .workspace-tabs .workspace-leaf,
+.is-translucent.anp-translucent-left:not(.is-fullscreen) .workspace-ribbon.mod-left:before,
+.is-translucent.anp-translucent-center:not(.is-fullscreen) .workspace-split.mod-root,
+.is-translucent.anp-translucent-center:not(.is-fullscreen) .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header,
+.is-translucent.anp-translucent-center:not(.is-fullscreen) .workspace-split.mod-root .view-content,
+.is-translucent.anp-translucent-center:not(.is-fullscreen) .view-header {
+  background-color: transparent;
+}
+.is-translucent .workspace {
+  background-color: transparent;
+}
+.is-translucent.anp-translucent-center:not(.is-fullscreen) .view-header-title-container:not(.mod-at-end):after {
+  background-image: none;
+}
+.is-translucent .workspace-split.mod-left-split.is-sidedock-collapsed .workspace-tabs,
+.is-translucent .workspace-split.mod-right-split.is-sidedock-collapsed .workspace-tabs {
+  visibility: hidden;
+}

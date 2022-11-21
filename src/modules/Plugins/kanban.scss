@@ -1,0 +1,26 @@
+.kanban-plugin {
+  &__lane-items>.kanban-plugin__placeholder:only-child {
+    border: 2px dashed rgba(var(--text-muted-rgb),.1);
+  }
+  &__new-item-button, &__lane button.kanban-plugin__lane-settings-button:hover, &__lane-settings-button:hover {
+    box-shadow: none;
+    background-color: rgb(var(--ctp-crust));
+  }
+  button {
+    box-shadow: none;
+  }
+  &__lane-grip {
+    background-color: rgb(var(--ctp-crust));
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 4px;
+  }
+  &__item{
+    &.is-complete {
+      .kanban-plugin__item-markdown {
+        color: var(--text-muted);
+        text-decoration-line: line-through
+      }
+    }
+  }
+}

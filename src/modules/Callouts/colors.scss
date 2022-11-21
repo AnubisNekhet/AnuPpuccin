@@ -1,0 +1,36 @@
+.anp-callout-color-toggle {
+  .callout {
+    &[data-callout= "note" ] {
+      --callout-color: var(--ctp-blue);
+    }
+    &[data-callout="abstract"], &[data-callout="summary"], &[data-callout="tldr"], &[data-callout="seealso"] {
+      --callout-color: var(--ctp-blue);
+    }
+    &[data-callout="info"], &[data-callout="todo"], &[data-callout="tip"], &[data-callout="hint"], &[data-callout="important"] {
+      --callout-color: var(--ctp-teal);
+    }
+    &[data-callout="success"], &[data-callout="check"], &[data-callout="done"], &[data-callout="question"], &[data-callout="help"], &[data-callout="faq"] {
+      --callout-color: var(--ctp-green);
+    }
+    &[data-callout="warning"], &[data-callout="caution"], &[data-callout="attention"] {
+      --callout-color: var(--ctp-yellow);
+    }
+    &[data-callout="failure"], &[data-callout="fail"], &[data-callout="missing"] {
+      --callout-color: var(--ctp-maroon);
+    }
+    &[data-callout="danger"], &[data-callout="error"], &[data-callout="bug"] {
+      --callout-color: var(--ctp-red);
+    }
+    &[data-callout="example"] {
+      --callout-color: var(--ctp-mauve);
+    }
+    &[data-callout="quote"], &[data-callout="cite"] {
+      --callout-color: var(--ctp-surface2);
+    }
+  }
+  &.anuppuccin-accent-toggle .callout {
+    &[data-callout="note"] {
+      --callout-color: var(--ctp-accent);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.markdown-rendered.rtl {
+  .list-bullet {
+    float: right;
+    margin-right: -12px;
+  }
+  .anp-button-metadata-toggle & {
+    .frontmatter-container .frontmatter-container-header {
+      left: unset;
+      right: calc(100% - 32px);
+      &:after {
+        margin-left: unset;
+        margin-right: 7px;
+      }
+    }
+  }
+  blockquote {
+    border-right: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
+    border-left: none;
+  }
+  .collapse-indicator {
+    float: right;
+    margin-left: unset;
+    margin-right: -22px;
+  }
+}
