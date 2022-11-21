@@ -16,7 +16,9 @@ I've made this theme primarily for my own purposes and it's completely free, but
 <details>
 <summary><h2>Installation</h2></summary>
 <h3>Normal Installation</h3>
-Install from the theme store in Obsidian.
+Go to your theme folder (<code>.obsidian/themes</code>) and run <code>git clone https://github.com/AnubisNekhet/AnuPpuccin.git</code>.
+<h3>Updating</h3>
+Go to your AnuPuccin folder (<code>.obsidian/themes/Anuppuccin</code>) and run <code>git pull</code>.
 <h3>Building</h3>
 Clone the github repo and run <code>sass src/base.scss theme.css</code> in the root folder.
 </details>
