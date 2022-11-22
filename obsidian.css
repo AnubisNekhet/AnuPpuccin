@@ -176,8 +176,8 @@ settings:
                 label: Block
                 value: anp-callout-block
             - 
-                label: Willemstad
-                value: anp-callout-willemstad
+                label: Vanilla
+                value: anp-callout-vanilla
     - 
         id: anp-callout-normal-toggle
         title: Toggle callout styling to non-collapsible callouts
@@ -3090,12 +3090,36 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
 }
 
 /*----------------CALLOUTS-------------------*/
-/*------------------------------------------
-The Willemstad callout style was inspired by @tingmelvin's Willemstad theme: https://github.com/tingmelvin/willemstad-x
-None of the code was used, and the callout was written from scratch.
------------------------------------------*/
 .anp-callout-fold-position {
   --anp-callout-fold-position: 1;
+}
+
+.callout-title-inner {
+  flex-grow: 1;
+}
+
+.callout-title {
+  --bold-color: currentColor;
+  --italic-color: currentColor;
+}
+
+.theme-light.anp-callout-toggle .callout-title-inner,
+.theme-light.anp-callout-toggle.anp-callout-normal-toggle .callout:not(.is-collapsible) .callout-title-inner {
+  color: var(--text-normal);
+  --bold-color: var(--text-normal);
+  --italic-color: var(--text-normal);
+}
+
+.anp-callout-toggle .callout-content > p:first-child, .anp-callout-toggle .callout-content > ul:first-child, .anp-callout-toggle .callout-content > ol:first-child {
+  margin-top: 0px;
+}
+.anp-callout-toggle .callout-content > p:last-child, .anp-callout-toggle .callout-content > ul:last-child, .anp-callout-toggle .callout-content > ol:last-child {
+  margin-bottom: 0px;
+}
+
+.anp-callout-toggle.anp-callout-block .callout {
+  border-left: 4px solid rgb(var(--callout-color));
+  --callout-radius: 0px;
 }
 
 .anp-callout-toggle.anp-callout-sleek:not(.anp-callout-normal-toggle) .callout:not(.is-collapsible),
@@ -3182,32 +3206,20 @@ None of the code was used, and the callout was written from scratch.
   padding-right: 3px;
 }
 
-.callout-title-inner {
-  flex-grow: 1;
+.anp-callout-vanilla .callout {
+  background-color: transparent;
+  border-radius: var(--radius-s);
+  padding: 0;
 }
-
-.anp-callout-toggle.anp-callout-block .callout {
-  border-left: 4px solid rgb(var(--callout-color));
-  --callout-radius: 0px;
+.anp-callout-vanilla .callout .callout-title {
+  background-color: rgba(var(--callout-color), 0.1);
 }
-
-.callout-title {
-  --bold-color: currentColor;
-  --italic-color: currentColor;
+.anp-callout-vanilla .callout .callout-content {
+  padding: var(--callout-padding);
+  background-color: rgb(var(--ctp-mantle));
 }
-
-.theme-light.anp-callout-toggle .callout-title-inner,
-.theme-light.anp-callout-toggle.anp-callout-normal-toggle .callout:not(.is-collapsible) .callout-title-inner {
-  color: var(--text-normal);
-  --bold-color: var(--text-normal);
-  --italic-color: var(--text-normal);
-}
-
-.anp-callout-toggle .callout-content > p:first-child, .anp-callout-toggle .callout-content > ul:first-child, .anp-callout-toggle .callout-content > ol:first-child {
-  margin-top: 0px;
-}
-.anp-callout-toggle .callout-content > p:last-child, .anp-callout-toggle .callout-content > ul:last-child, .anp-callout-toggle .callout-content > ol:last-child {
-  margin-bottom: 0px;
+.anp-callout-vanilla .callout .callout-title, .anp-callout-vanilla .callout .callout-content {
+  border-left: var(--size-2-3) solid rgb(var(--callout-color));
 }
 
 /*---------------CALLOUT COLORS----------------*/
