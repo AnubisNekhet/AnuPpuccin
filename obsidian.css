@@ -3191,24 +3191,6 @@ None of the code was used, and the callout was written from scratch.
   --callout-radius: 0px;
 }
 
-.anp-callout-toggle.anp-callout-willemstad .callout {
-  border-left: 0px solid rgb(var(--callout-color));
-  transition: border-left-width 0.1s;
-  --callout-padding: 0px;
-  --callout-title-padding: var(--size-4-2) var(--size-4-2) var(--size-4-2) var(--size-4-3);
-  --callout-content-padding: 0 var(--size-4-2) var(--size-4-2) var(--size-4-3);
-  background-color: transparent;
-}
-.anp-callout-toggle.anp-callout-willemstad .callout:hover {
-  border-left-width: 4px;
-}
-.anp-callout-toggle.anp-callout-willemstad .callout .callout-content {
-  background-color: rgba(var(--ctp-mantle), 0.4);
-}
-.anp-callout-toggle.anp-callout-willemstad .callout .callout-title {
-  background-color: rgba(var(--callout-color), 0.1);
-}
-
 .callout-title {
   --bold-color: currentColor;
   --italic-color: currentColor;
@@ -3336,7 +3318,7 @@ None of the code was used, and the callout was written from scratch.
   margin-left: -2px;
 }
 
-.collapse-icon svg.svg-icon {
+.anp-collapse-folders .collapse-icon svg.svg-icon {
   color: transparent !important;
 }
 
@@ -3863,6 +3845,18 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   left: 0px;
 }
 
+.anp-custom-checkboxes [data-task='"'] input[type=checkbox]:checked, .anp-custom-checkboxes [data-task='"'][type=checkbox]:checked {
+  --checkbox-color: transparent;
+  --checkbox-color-hover: transparent;
+  border-width: 0;
+}
+.anp-custom-checkboxes [data-task='"'] input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task='"'][type=checkbox]:checked:after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z'/%3E%3C/svg%3E");
+  -webkit-mask-size: contain;
+  background-color: rgb(var(--ctp-subtext0));
+  left: 0px;
+}
+
 .anp-speech-bubble [data-task="0"],
 .anp-speech-bubble [data-task="1"],
 .anp-speech-bubble [data-task="2"],
@@ -4359,6 +4353,9 @@ body .excalidraw .library-menu-items-container .library-actions--load, body .exc
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   background-color: var(--text-normal);
+}
+.status-bar-item.plugin-obsidian-discordrpc:hover:after {
+  filter: brightness(60%);
 }
 
 #calendar-container h3 {
