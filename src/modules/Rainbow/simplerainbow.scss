@@ -2,12 +2,12 @@
   &.anp-simple-rainbow-title-toggle {
     .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title {
       transition: color 0.4s;
-      color: rgb(var(--rainbow-folder-color));
+      color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
     }
   }
   &.anp-simple-rainbow-icon-toggle  .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:after {
     transition: color 0.4s;
-    color: rgb(var(--rainbow-folder-color));
+    color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
     content: "⬤";
     position: relative;
     margin-left: 4px;
@@ -22,7 +22,7 @@
     .nav-folder.is-collapsed .collapse-icon, .nav-folder-collapse-indicator.collapse-icon {
       svg.svg-icon {
         transition: color 0.4s;
-        color: rgb(var(--rainbow-folder-color));
+        color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
       }
     }
   }

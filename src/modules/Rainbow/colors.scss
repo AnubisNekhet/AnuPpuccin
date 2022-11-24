@@ -13,3 +13,8 @@
     &:nth-child(11n+12) { --rainbow-folder-color: var(--ctp-mauve); }
   }
 }
+.anp-rainbow-subfolder-color-toggle {
+  .nav-folder.mod-root .nav-folder .nav-folder {
+    --rainbow-folder-color: inherit;
+  }
+}

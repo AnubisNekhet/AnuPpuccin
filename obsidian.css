@@ -1068,6 +1068,10 @@ settings:
         title: Toggle to enable circular file
         type: class-toggle
     - 
+        id: anp-rainbow-subfolder-color-toggle
+        title: Toggle to enable subfolder color inheritance
+        type: class-toggle
+    - 
         id: anp-stacked-tabs-header
         title: Stacked Tabs
         type: heading
@@ -4415,6 +4419,10 @@ body .excalidraw .library-menu-items-container .library-actions--load, body .exc
   --rainbow-folder-color: var(--ctp-mauve);
 }
 
+.anp-rainbow-subfolder-color-toggle .nav-folder.mod-root .nav-folder .nav-folder {
+  --rainbow-folder-color: inherit;
+}
+
 /*-Full rainbow theme-*/
 .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title, .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title, .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title, .anp-full-rainbow-color-toggle .nav-folder-collapse-indicator svg, .anp-full-rainbow-color-toggle .is-collapsed .nav-folder-collapse-indicator svg {
   color: var(--background-primary);
@@ -4484,11 +4492,11 @@ body .excalidraw .library-menu-items-container .library-actions--load, body .exc
 /*-Simple rainbow theme-*/
 .anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title {
   transition: color 0.4s;
-  color: rgb(var(--rainbow-folder-color));
+  color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
 }
 .anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:after {
   transition: color 0.4s;
-  color: rgb(var(--rainbow-folder-color));
+  color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
   content: "⬤";
   position: relative;
   margin-left: 4px;
@@ -4501,7 +4509,7 @@ body .excalidraw .library-menu-items-container .library-actions--load, body .exc
 }
 .anp-simple-rainbow-color-toggle.anp-simple-rainbow-collapse-toggle .nav-folder.is-collapsed .collapse-icon svg.svg-icon, .anp-simple-rainbow-color-toggle.anp-simple-rainbow-collapse-toggle .nav-folder-collapse-indicator.collapse-icon svg.svg-icon {
   transition: color 0.4s;
-  color: rgb(var(--rainbow-folder-color));
+  color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
 }
 
 /*--------------DISABLING IN-FRONTMATTER---------------*/
