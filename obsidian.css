@@ -3136,7 +3136,7 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
 }
 .anp-callout-toggle.anp-callout-sleek:not(.anp-callout-normal-toggle) .callout:not(.is-collapsible) .callout-title,
 .anp-callout-toggle.anp-callout-sleek .callout[data-callout-metadata*=revert] .callout-title {
-  background-color: rgba(var(--callout-color), 0 0.5);
+  background-color: transparent !important;
   padding: var(--callout-title-padding);
   cursor: pointer;
 }

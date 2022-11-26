@@ -2,11 +2,11 @@
   &:not(.anp-callout-normal-toggle) .callout:not(.is-collapsible),
   .callout[data-callout-metadata*="revert"] {
       padding: 0px;
-      .callout-content {
+      > .callout-content {
         padding: 0 var(--callout-title-padding) var(--callout-title-padding) var(--callout-title-padding);
       }
-      .callout-title {
-        background-color: rgba(var(--callout-color), 0.0.5);
+      > .callout-title {
+        background-color: transparent !important;
         padding: var(--callout-title-padding);
         cursor: pointer;
         .callout-title-inner {
@@ -21,24 +21,26 @@
       border-radius: var(--callout-radius);
       background-color: rgba(var(--ctp-mantle), 0.4);
     }
-    .callout:not([data-callout-metadata*="revert"]) .callout-content {
+    .callout:not([data-callout-metadata*="revert"]) > .callout-content {
       padding: var(--callout-title-padding) var(--callout-title-padding) var(--callout-title-padding) calc(var(--callout-title-padding)*1.5);
       border-top: 1px dashed rgba(var(--callout-color), 0.4);
     }
-    .callout:not([data-callout-metadata*="revert"]) .callout-fold {
+    .callout:not([data-callout-metadata*="revert"]) > .callout-title .callout-fold {
       padding-right: 0px;
     }
-    .callout:not([data-callout-metadata*="revert"]) .callout-title-inner {
+    .callout:not([data-callout-metadata*="revert"]) > .callout-title .callout-title-inner {
       flex-grow: var(--anp-callout-fold-position, unset);
     }
   }
   .callout:not([data-callout-metadata*="revert"]) {
     &.is-collapsible {
-      .callout-fold {
-        padding-right: 0px;
-      }
-      .callout-title-inner {
-        flex-grow: var(--anp-callout-fold-position, unset);
+      * > .callout-title {
+        & > .callout-fold {
+          padding-right: 0px;
+        }
+        & > .callout-title-inner {
+          flex-grow: var(--anp-callout-fold-position, unset);
+        }
       }
       border-color: rgba(var(--callout-color), 0.4);
       border-width: 1px;
@@ -47,24 +49,24 @@
       --bold-weight: bolder;
       &.is-collapsed {
         padding: 0;
-        .callout-title {
+        & > .callout-title {
           background-color: rgba(var(--callout-color), 0.1);
           padding: var(--callout-title-padding);
           cursor: pointer;
         }
-        .callout-content {
+        & > .callout-content {
           display: none;
         }
       }
       &:not(.is-collapsed) {
         padding: 0px 0px var(--callout-title-padding) 0px;
-        .callout-title {
+        & > .callout-title {
           background-color: rgba(var(--callout-color), 0.1);
           padding: var(--callout-title-padding);
           border-color: rgba(var(--callout-color), 0.4);
           cursor: pointer;
         }
-        .callout-content {
+        & > .callout-content {
           padding: var(--callout-title-padding) var(--callout-title-padding) 0 calc(var(--callout-title-padding)*1.5);
           border-top: 1px dashed rgba(var(--callout-color), 0.4);
         }
@@ -72,7 +74,7 @@
     }
     &:not(.is-collapsible) {
       padding: 0px;
-      .callout-title {
+      & > .callout-title {
         background-color: rgba(var(--callout-color), 0.1);
         padding: var(--callout-title-padding);
         border-color: rgba(var(--callout-color), 0.4);

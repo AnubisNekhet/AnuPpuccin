@@ -3130,18 +3130,18 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
 .anp-callout-toggle.anp-callout-sleek .callout[data-callout-metadata*=revert] {
   padding: 0px;
 }
-.anp-callout-toggle.anp-callout-sleek:not(.anp-callout-normal-toggle) .callout:not(.is-collapsible) .callout-content,
-.anp-callout-toggle.anp-callout-sleek .callout[data-callout-metadata*=revert] .callout-content {
+.anp-callout-toggle.anp-callout-sleek:not(.anp-callout-normal-toggle) .callout:not(.is-collapsible) > .callout-content,
+.anp-callout-toggle.anp-callout-sleek .callout[data-callout-metadata*=revert] > .callout-content {
   padding: 0 var(--callout-title-padding) var(--callout-title-padding) var(--callout-title-padding);
 }
-.anp-callout-toggle.anp-callout-sleek:not(.anp-callout-normal-toggle) .callout:not(.is-collapsible) .callout-title,
-.anp-callout-toggle.anp-callout-sleek .callout[data-callout-metadata*=revert] .callout-title {
-  background-color: rgba(var(--callout-color), 0 0.5);
+.anp-callout-toggle.anp-callout-sleek:not(.anp-callout-normal-toggle) .callout:not(.is-collapsible) > .callout-title,
+.anp-callout-toggle.anp-callout-sleek .callout[data-callout-metadata*=revert] > .callout-title {
+  background-color: transparent !important;
   padding: var(--callout-title-padding);
   cursor: pointer;
 }
-.anp-callout-toggle.anp-callout-sleek:not(.anp-callout-normal-toggle) .callout:not(.is-collapsible) .callout-title .callout-title-inner,
-.anp-callout-toggle.anp-callout-sleek .callout[data-callout-metadata*=revert] .callout-title .callout-title-inner {
+.anp-callout-toggle.anp-callout-sleek:not(.anp-callout-normal-toggle) .callout:not(.is-collapsible) > .callout-title .callout-title-inner,
+.anp-callout-toggle.anp-callout-sleek .callout[data-callout-metadata*=revert] > .callout-title .callout-title-inner {
   font-weight: normal;
 }
 .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle .callout:not(.is-collapsible):not([data-callout-metadata*=revert]) {
@@ -3150,14 +3150,14 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
   border-radius: var(--callout-radius);
   background-color: rgba(var(--ctp-mantle), 0.4);
 }
-.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle .callout:not([data-callout-metadata*=revert]) .callout-content {
+.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle .callout:not([data-callout-metadata*=revert]) > .callout-content {
   padding: var(--callout-title-padding) var(--callout-title-padding) var(--callout-title-padding) calc(var(--callout-title-padding) * 1.5);
   border-top: 1px dashed rgba(var(--callout-color), 0.4);
 }
-.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle .callout:not([data-callout-metadata*=revert]) .callout-fold {
+.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle .callout:not([data-callout-metadata*=revert]) > .callout-title .callout-fold {
   padding-right: 0px;
 }
-.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle .callout:not([data-callout-metadata*=revert]) .callout-title-inner {
+.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle .callout:not([data-callout-metadata*=revert]) > .callout-title .callout-title-inner {
   flex-grow: var(--anp-callout-fold-position, unset);
 }
 .anp-callout-toggle.anp-callout-sleek .callout:not([data-callout-metadata*=revert]).is-collapsible {
@@ -3167,40 +3167,40 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
   background-color: rgba(var(--ctp-mantle), 0.4);
   --bold-weight: bolder;
 }
-.anp-callout-toggle.anp-callout-sleek .callout:not([data-callout-metadata*=revert]).is-collapsible .callout-fold {
+.anp-callout-toggle.anp-callout-sleek .callout:not([data-callout-metadata*=revert]).is-collapsible * > .callout-title > .callout-fold {
   padding-right: 0px;
 }
-.anp-callout-toggle.anp-callout-sleek .callout:not([data-callout-metadata*=revert]).is-collapsible .callout-title-inner {
+.anp-callout-toggle.anp-callout-sleek .callout:not([data-callout-metadata*=revert]).is-collapsible * > .callout-title > .callout-title-inner {
   flex-grow: var(--anp-callout-fold-position, unset);
 }
 .anp-callout-toggle.anp-callout-sleek .callout:not([data-callout-metadata*=revert]).is-collapsible.is-collapsed {
   padding: 0;
 }
-.anp-callout-toggle.anp-callout-sleek .callout:not([data-callout-metadata*=revert]).is-collapsible.is-collapsed .callout-title {
+.anp-callout-toggle.anp-callout-sleek .callout:not([data-callout-metadata*=revert]).is-collapsible.is-collapsed > .callout-title {
   background-color: rgba(var(--callout-color), 0.1);
   padding: var(--callout-title-padding);
   cursor: pointer;
 }
-.anp-callout-toggle.anp-callout-sleek .callout:not([data-callout-metadata*=revert]).is-collapsible.is-collapsed .callout-content {
+.anp-callout-toggle.anp-callout-sleek .callout:not([data-callout-metadata*=revert]).is-collapsible.is-collapsed > .callout-content {
   display: none;
 }
 .anp-callout-toggle.anp-callout-sleek .callout:not([data-callout-metadata*=revert]).is-collapsible:not(.is-collapsed) {
   padding: 0px 0px var(--callout-title-padding) 0px;
 }
-.anp-callout-toggle.anp-callout-sleek .callout:not([data-callout-metadata*=revert]).is-collapsible:not(.is-collapsed) .callout-title {
+.anp-callout-toggle.anp-callout-sleek .callout:not([data-callout-metadata*=revert]).is-collapsible:not(.is-collapsed) > .callout-title {
   background-color: rgba(var(--callout-color), 0.1);
   padding: var(--callout-title-padding);
   border-color: rgba(var(--callout-color), 0.4);
   cursor: pointer;
 }
-.anp-callout-toggle.anp-callout-sleek .callout:not([data-callout-metadata*=revert]).is-collapsible:not(.is-collapsed) .callout-content {
+.anp-callout-toggle.anp-callout-sleek .callout:not([data-callout-metadata*=revert]).is-collapsible:not(.is-collapsed) > .callout-content {
   padding: var(--callout-title-padding) var(--callout-title-padding) 0 calc(var(--callout-title-padding) * 1.5);
   border-top: 1px dashed rgba(var(--callout-color), 0.4);
 }
 .anp-callout-toggle.anp-callout-sleek .callout:not([data-callout-metadata*=revert]):not(.is-collapsible) {
   padding: 0px;
 }
-.anp-callout-toggle.anp-callout-sleek .callout:not([data-callout-metadata*=revert]):not(.is-collapsible) .callout-title {
+.anp-callout-toggle.anp-callout-sleek .callout:not([data-callout-metadata*=revert]):not(.is-collapsible) > .callout-title {
   background-color: rgba(var(--callout-color), 0.1);
   padding: var(--callout-title-padding);
   border-color: rgba(var(--callout-color), 0.4);
