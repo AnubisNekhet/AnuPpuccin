@@ -1,0 +1,90 @@
+.callout[data-callout=capacities-card] {
+  --h1-font: var(--font-text);
+  --h2-font: var(--font-text);
+  --h3-font: var(--font-text);
+  --h4-font: var(--font-text);
+  --h5-font: var(--font-text);
+  --h6-font: var(--font-text);
+  --h1-color: var(--font-normal);
+  --h2-color: var(--font-normal);
+  --h3-color: var(--font-normal);
+  --h4-color: var(--font-normal);
+  --h5-color: var(--font-normal);
+  --h6-color: var(--font-normal);
+  --italic-color: var(--font-normal);
+  --bold-color: var(--font-normal);
+}
+.callout[data-callout=capacities-index] {
+  --highlight-mix-blend-mode: none;
+  margin-left: 10px;
+}
+.anp-callout-toggle.anp-callout-sleek {
+  &, &.anp-callout-normal-toggle {
+   div.callout:not([data-callout-metadata*=revert]) {
+      &[data-callout=capacities-card] {
+        > .callout-content {
+          padding: 0 0 0 10px;
+        }
+        background-color: transparent;
+      }
+      &[data-callout=capacities-index-prop] {
+        background-color: var(--background-primary);
+        margin: 0 10px 10px 10px;
+        > .callout-content {
+          padding: 3px 0;
+        }
+      }
+      &[data-callout=capacities-prop] {
+        > .callout-content {
+          margin: 0 10px 10px 10px;
+          background-color: var(--background-primary);
+          border-color: var(--background-modifier-border);
+          padding: 3px 0;
+          border-top-style: solid;
+          border-radius: 6px;
+        }
+        > .callout-title {
+          background-color: transparent;
+        }
+        border: none;
+        padding: 0;
+      }
+      &[data-callout=capacities-index] {
+        > .callout-content {
+          padding: 0;
+        }
+        border-radius: 0;
+        p:first-child {
+          margin-bottom: 0;
+        }
+        margin: -1px -1px -1px 10px;
+      }
+      &[data-callout=capacities-sidebar] {
+        > .callout-content {
+          padding-right: 0;
+          padding-left: 0;
+          background-color: var(--background-secondary);
+        }
+        background-color: var(--background-secondary);
+      }
+      &[data-callout=capacities-prop-image] {
+        > .callout-content {
+          padding: 0;
+        }
+      }
+      &[data-callout=capacities-index],
+      &[data-callout=capacities-prop-image],
+      &[data-callout=capacities-sidebar],
+      &[data-callout=capacities-index-prop],
+      &[data-callout=capacities-card] {
+        border-color: var(--background-modifier-border);
+        > .callout-content {
+          border-top: none;
+        }
+      }
+    }
+  }
+}
+.anp-card-layout.anp-callout-toggle.anp-callout-sleek {
+  --capacities-sidebar-bottom: calc(var(--anp-card-layout-padding, 10px) + 80px);
+}
