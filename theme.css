@@ -901,20 +901,6 @@ settings:
         default: 0.075
         format: em
     - 
-        id: anp-markdown-embed-header
-        title: Markdown embeds
-        type: heading
-        level: 2
-        collapsed: true
-    - 
-        id: anp-embed-toggle
-        title: Enable custom internal embeds
-        type: class-toggle
-    - 
-        id: anp-embed-animated-toggle
-        title: Enable custom animated internal embeds
-        type: class-toggle
-    - 
         id: anp-misc-element-header
         title: Misc. element settings
         description: Values in this category may be shifted to their own category in the future
