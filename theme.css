@@ -3427,6 +3427,15 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
   border-top: none;
 }
 
+.anp-callout-toggle.anp-callout-vanilla div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] .callout-content, .anp-callout-toggle.anp-callout-vanilla div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop] .callout-content, .anp-callout-toggle.anp-callout-vanilla div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar] .callout-content, .anp-callout-toggle.anp-callout-vanilla.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] .callout-content, .anp-callout-toggle.anp-callout-vanilla.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop] .callout-content, .anp-callout-toggle.anp-callout-vanilla.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar] .callout-content {
+  border-left: none;
+  padding: 0;
+}
+.anp-callout-toggle.anp-callout-vanilla div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] .callout-title, .anp-callout-toggle.anp-callout-vanilla.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] .callout-title {
+  border-left: none;
+  background-color: transparent;
+}
+
 .anp-card-layout.anp-callout-toggle.anp-callout-sleek {
   --capacities-sidebar-bottom: calc(var(--anp-card-layout-padding, 10px) + 80px);
 }
