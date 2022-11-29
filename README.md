@@ -107,10 +107,7 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 
 | Embed style | Alt name |
 | ----------- | -------- |
-| Static | anp-embed |
-| Animated | anp-embed-animated |
-
-<p align="center"> <img src="assets/markdown-embed.png" style="width: 60%;"> </p>
+| Seamless | seamless |
 
 ## Colorschemes used
 **Note**: Colorschemes that aren't in the base theme can be used through the [extended colorschemes](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/extended-colorschemes.css) snippet. <br> **Important**: Some colorschemes have been been modified to fit the Catppuccin color value style, which means there will be some changes made to make the theme feel more natural.
