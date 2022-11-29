@@ -2402,11 +2402,11 @@ body.is-translucent {
   color: var(--italic-color);
 }
 
-.internal-embed[alt*=seamless] .markdown-embed {
+.internal-embed[alt*=seamless] > .markdown-embed {
   --embed-padding: 0;
   border-width: 0px;
 }
-.internal-embed[alt*=seamless] .markdown-embed .markdown-embed-title {
+.internal-embed[alt*=seamless] > .markdown-embed > .markdown-embed-title {
   width: fit-content;
   position: absolute;
   left: unset;
@@ -2415,11 +2415,11 @@ body.is-translucent {
   opacity: 0;
   transition: opacity 0.1s;
 }
-.internal-embed[alt*=seamless] .markdown-embed .markdown-embed-link {
+.internal-embed[alt*=seamless] > .markdown-embed > .markdown-embed-link {
   opacity: 0;
   transition: opacity 0.1s;
 }
-.internal-embed[alt*=seamless] .markdown-embed:hover .markdown-embed-title, .internal-embed[alt*=seamless] .markdown-embed:hover .markdown-embed-link {
+.internal-embed[alt*=seamless] > .markdown-embed:hover > .markdown-embed-title, .internal-embed[alt*=seamless] > .markdown-embed:hover > .markdown-embed-link {
   opacity: 1;
   transition: opacity 0.1s;
 }

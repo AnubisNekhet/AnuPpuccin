@@ -1,8 +1,8 @@
 .internal-embed[alt*="seamless"] {
-  .markdown-embed {
+  > .markdown-embed {
     --embed-padding: 0;
     border-width: 0px;
-    .markdown-embed-title {
+    > .markdown-embed-title {
       width: fit-content;
       position: absolute;
       left: unset;
@@ -11,12 +11,12 @@
       opacity: 0;
       transition: opacity 0.1s;
     }
-    .markdown-embed-link {
+    > .markdown-embed-link {
       opacity: 0;
       transition: opacity 0.1s;
     }
     &:hover {
-      .markdown-embed-title, .markdown-embed-link {
+      & > .markdown-embed-title, & > .markdown-embed-link {
         opacity: 1;
         transition: opacity 0.1s;
       }
