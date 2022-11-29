@@ -23,20 +23,29 @@
    div.callout:not([data-callout-metadata*=revert]) {
       &[data-callout=capacities-card] {
         > .callout-content {
-          padding: 0 0 0 10px;
+          padding: 0;
+          background-color: var(--background-primary);
+        overflow-y: hidden;
         }
-        background-color: transparent;
-      }
-      &[data-callout=capacities-index-prop] {
         background-color: var(--background-primary);
-        margin: 0 10px 10px 10px;
-        > .callout-content {
-          padding: 3px 0;
-        }
+        border-radius: 6px;
+        mix-blend-mode: normal;
+        overflow-y: hidden;
       }
+      &[data-callout=capacities-card-prop] {
+          border-radius: 0;
+          top: -1px;
+          padding-top: 1px;
+          right: 11px;
+          padding-right: 1px;
+          height: calc(100% + 6px);
+          > .callout-content {
+            padding: 0;
+          }
+        }
       &[data-callout=capacities-prop] {
         > .callout-content {
-          margin: 0 10px 10px 10px;
+          margin: 0 10px 7px 10px;
           background-color: var(--background-primary);
           border-color: var(--background-modifier-border);
           padding: 3px 0;
@@ -44,6 +53,11 @@
           border-radius: 6px;
         }
         > .callout-title {
+          text-transform: uppercase;
+          > .callout-title-inner {
+            color: rgba(var(--ctp-text), 0.7);
+            font-size: 80%;
+          }
           background-color: transparent;
         }
         border: none;
@@ -57,7 +71,7 @@
         p:first-child {
           margin-bottom: 0;
         }
-        margin: -1px -1px -1px 10px;
+        margin: -1px;
       }
       &[data-callout=capacities-sidebar] {
         > .callout-content {
@@ -72,10 +86,20 @@
           padding: 0;
         }
       }
+      &[data-callout=capacities-body] {
+        > .callout-content {
+          padding: var(--callout-padding);
+          background-color: var(--background-primary);
+        }
+        border-width: 0 1px 0 0;
+        background-color: var(--background-primary);
+        mix-blend-mode: normal;
+      }
       &[data-callout=capacities-index],
+      &[data-callout=capacities-card-prop],
       &[data-callout=capacities-prop-image],
       &[data-callout=capacities-sidebar],
-      &[data-callout=capacities-index-prop],
+      &[data-callout=capacities-body],
       &[data-callout=capacities-card] {
         border-color: var(--background-modifier-border);
         > .callout-content {
@@ -87,4 +111,10 @@
 }
 .anp-card-layout.anp-callout-toggle.anp-callout-sleek {
   --capacities-sidebar-bottom: calc(var(--anp-card-layout-padding, 10px) + 80px);
+}
+.markdown-reading-view .markdown-preview-view.capacities-card {
+  overflow-y: hidden;
+  &::after {
+    display: none;
+  }
 }
