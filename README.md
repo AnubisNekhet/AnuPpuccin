@@ -124,6 +124,7 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 | [Rosé Pine](https://github.com/rose-pine/rose-pine-theme) | Yes | Yes | The second variant of the dark theme, namely Rosé Pine dawn hasn't been implemented yet. |
 | [Rosebox](https://github.com/KraXen72/rosebox) | No | Yes | Accent value is hardcoded into the theme. |
 | [Royal Velvet](https://github.com/caro401/royal-velvet) | No | Yes | - |
+| Sandy Beaches | Yes | No | Provided by [melnhh](https://github.com/melnhh) |
 | [Solarized](https://github.com/altercation/solarized) | Yes | Yes | - |
 
 <details>
@@ -221,6 +222,7 @@ Note: Themes are toggled via style settings, the default themes are **Latte** fo
 
 ### Special thanks to:
 - [Chuck Harmston](https://github.com/chuckharmston) for his amazing alternate tabs snippet.
+- [melnhh](https://github.com/melnhh) for their amazing colorscheme.
 - [EdualcLaiv](https://github.com/EdualcLaiv)
 - [Paul Ryley](https://github.com/pryley) for his gorgeous numbered codeblock snippet and style inputs on kanban cards and safari-style tabs.
 

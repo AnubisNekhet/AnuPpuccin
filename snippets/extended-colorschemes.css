@@ -35,6 +35,9 @@ settings:
             label: Nord
             value: ctp-nord-light
         - 
+            label: Sandy Beaches
+            value: ctp-sandy-beaches-light
+        - 
             label: Solarized
             value: ctp-solarized-light
   - 
@@ -603,4 +606,32 @@ settings:
   --ctp-mantle: 33, 37, 43;
   --ctp-crust: 26, 30, 36;
   --ctp-accent: var(--ctp-blue);
+}
+.theme-light.anp-theme-ext-light.ctp-sandy-beaches-light {
+  --ctp-rosewater: 228, 212, 196;
+  --ctp-flamingo: 214, 188, 174;
+  --ctp-pink: 200, 164, 152;
+  --ctp-mauve: 149, 136, 138;
+  --ctp-red: 166, 137, 123;
+  --ctp-maroon: 186, 144, 123;
+  --ctp-peach: 199, 161, 135;
+  --ctp-yellow: 212, 187, 160;
+  --ctp-green: 152, 150, 134;
+  --ctp-teal: 149, 156, 153;
+  --ctp-sky: 138, 155, 163;
+  --ctp-sapphire: 124, 133, 143;
+  --ctp-blue: 109, 111, 123;
+  --ctp-lavender: 135, 128, 142;
+  --ctp-text: 104, 88, 80;
+  --ctp-subtext1: 108, 92, 84;
+  --ctp-subtext0: 111, 96, 88;
+  --ctp-overlay2: 118, 103, 96;
+  --ctp-overlay1: 124, 110, 103;
+  --ctp-overlay0: 130, 117, 110;
+  --ctp-surface2: 205, 197, 193;
+  --ctp-surface1: 212, 205, 200;
+  --ctp-surface0: 222, 216, 209;
+  --ctp-crust: 230, 223, 216;
+  --ctp-mantle: 237, 231, 224;
+  --ctp-base: 240, 234, 226;
 }
