@@ -182,11 +182,6 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 <img src="assets/colorschemes/nord-darker.webp"/>
 </details>
 <details>
-<summary><h4>Primary</h4></summary>
-<img src="assets/colorschemes/primary-light.webp"/>
-<img src="assets/colorschemes/primary-dark.webp"/>
-</details>
-<details>
 <summary><h4>Rosebox</h4></summary>
 <img src="assets/colorschemes/rosebox-dark.webp"/>
 </details>
@@ -200,6 +195,10 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 <details>
 <summary><h4>Royal Velvet</h4></summary>
 <img src="assets/colorschemes/royal-velvet.webp"/>
+</details>
+<details>
+<summary><h4>Sandy Beaches</h4></summary>
+<img src="assets/colorschemes/sandy-beaches-light.webp"/>
 </details>
 <details>
 <summary><h4>Solarized</h4></summary>
