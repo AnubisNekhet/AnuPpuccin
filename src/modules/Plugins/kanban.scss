@@ -8,6 +8,11 @@
   }
   button {
     box-shadow: none;
+    &:hover {
+      background-color: rgb(var(--ctp-crust));
+      color: var(--text-normal);
+      transition: background-color 0.1s;
+    }
   }
   &__lane-grip {
     background-color: rgb(var(--ctp-crust));

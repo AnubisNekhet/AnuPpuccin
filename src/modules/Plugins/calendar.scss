@@ -6,3 +6,9 @@
 #calendar-container .right-nav .reset-button {
   margin: auto;
 }
+.calendar .day.svelte-q3wqg9 {
+  &:hover {
+    background-color: rgb(var(--ctp-crust));
+  }
+  transition: background-color 0.1s;
+}

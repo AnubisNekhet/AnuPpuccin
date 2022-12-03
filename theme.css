@@ -2281,9 +2281,7 @@ body.anp-disable-borders {
   margin-left: 24px !important;
 }
 
-.modal.mod-settings,
-.modal.mod-community-theme,
-.modal.mod-community-plugin {
+.modal.mod-settings, .modal.mod-community-theme, .modal.kanban-plugin__board-settings-modal, .modal.mod-community-plugin {
   --h1-font: var(--font-interface);
   --h2-font: var(--font-interface);
   --h3-font: var(--font-interface);
@@ -4316,6 +4314,11 @@ None of the original code was used and the feature was implemented from scratch.
 .kanban-plugin button {
   box-shadow: none;
 }
+.kanban-plugin button:hover {
+  background-color: rgb(var(--ctp-crust));
+  color: var(--text-normal);
+  transition: background-color 0.1s;
+}
 .kanban-plugin__lane-grip {
   background-color: rgb(var(--ctp-crust));
   padding-top: 5px;
@@ -4466,6 +4469,13 @@ body .excalidraw .library-menu-items-container .library-actions--load, body .exc
 
 #calendar-container .right-nav .reset-button {
   margin: auto;
+}
+
+.calendar .day.svelte-q3wqg9 {
+  transition: background-color 0.1s;
+}
+.calendar .day.svelte-q3wqg9:hover {
+  background-color: rgb(var(--ctp-crust));
 }
 
 /*------------RAINBOW FOLDERS-------------*/
