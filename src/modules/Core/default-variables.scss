@@ -166,6 +166,9 @@
     --background-modifier-border-focus: rgb(var(--ctp-surface2));
     --anp-speech-bubble-opacity: var(--anp-sp-op-dark, 0.9);
     --background-modifier-cover: rgba(var(--ctp-mantle), 0.4);
+    &.theme-dark {
+        --canvas-color: var(--ctp-overlay0);
+    }
 }
 .theme-light {
       color-scheme: light;
@@ -175,6 +178,9 @@
     --background-modifier-border-focus: rgb(var(--ctp-overlay0));
     --anp-speech-bubble-opacity: var(--anp-sp-op-light, 0.5);
     --background-modifier-cover: #00000022
+    &.theme-light {
+        --canvas-color: var(--ctp-overlay0);
+    }
 }
 body {
   --anp-rainbow-folder-bg-opacity: 1;
@@ -186,4 +192,5 @@ body {
   --anp-header-font: "Noto Serif";
   --tab-stacked-pane-width: calc(var(--anp-tab-stacked-pane-width, 1)*var(--file-line-width));
   --anp-table-width-pct: 100%;
+    --canvas-color: var(--ctp-overlay2);
 }
