@@ -198,6 +198,16 @@ settings:
         title: Callout fold position
         type: class-toggle
     - 
+        id: anp-canvas-header
+        title: Canvas
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: anp-canvas-dark-bg
+        title: Darker canvas background
+        type: class-toggle
+    - 
         id: anp-custom-checkboxes-header
         title: Custom checkboxes
         type: heading
@@ -1791,11 +1801,17 @@ settings:
   --color-red: rgb(var(--ctp-red));
   --color-green-rgb: var(--ctp-green);
   --color-green: rgb(var(--ctp-green));
+  --color-orange-rgb: var(--ctp-peach);
   --color-orange: rgb(var(--ctp-peach));
+  --color-yellow-rgb: var(--ctp-yellow);
   --color-yellow: rgb(var(--ctp-yellow));
+  --color-cyan-rgb: var(--ctp-sky);
   --color-cyan: rgb(var(--ctp-sky));
+  --color-blue-rgb: var(--ctp-blue);
   --color-blue: rgb(var(--ctp-blue));
+  --color-purple-rgb: var(--ctp-lavender);
   --color-purple: rgb(var(--ctp-lavender));
+  --color-pink-rgb: var(--ctp-pink);
   --color-pink: rgb(var(--ctp-pink));
   --color-base-00: rgb(var(--ctp-crust));
   --color-base-10: rgb(var(--ctp-mantle));
@@ -1958,6 +1974,40 @@ body {
 
 .ͼp .cm-vim-panel {
   font-family: var(--font-monospace);
+}
+
+.canvas-card-menu {
+  box-shadow: none;
+  border: 1px solid var(--background-modifier-border);
+  background-color: var(--background-secondary);
+}
+.canvas-card-menu .canvas-card-menu-button svg {
+  fill: var(--background-secondary);
+}
+.canvas-card-menu .canvas-card-menu-button:hover {
+  color: var(--text-normal);
+}
+
+.canvas-controls button {
+  background-color: var(--background-secondary);
+}
+.canvas-controls button:hover {
+  filter: brightness(95%);
+}
+
+.anp-canvas-dark-bg .canvas-wrapper {
+  background-color: var(--background-secondary);
+}
+.anp-canvas-dark-bg .canvas-controls button, .anp-canvas-dark-bg .canvas-card-menu {
+  background-color: var(--background-primary);
+}
+.anp-canvas-dark-bg .canvas-card-menu .canvas-card-menu-button svg {
+  fill: var(--background-primary);
+}
+
+.anuppuccin-accent-toggle .canvas-selection {
+  background-color: rgba(var(--ctp-accent), 0.1);
+  border: 2px solid var(--color-accent);
 }
 
 /*----------FILE PREVIEW MARGINS--------------*/
@@ -4173,12 +4223,19 @@ None of the original code was used and the feature was implemented from scratch.
 .anp-file-icons .nav-file .nav-file-title[data-path$=".md"]::before,
 .anp-file-icons .nav-file .nav-file-title[data-path$=".txt"]::before {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z'/%3E%3Cpath d='M14 2v6h6m-4 5H8m8 4H8m2-8H8'/%3E%3C/svg%3E%0A");
+  -webkit-mask-repeat: no-repeat;
+}
+
+.anp-file-icons .nav-file .nav-file-title[data-path$=".canvas"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' data-darkreader-inline-stroke='' style='--darkreader-inline-stroke:currentColor;'%3E%3Crect x='3' y='3' width='7' height='9'%3E%3C/rect%3E%3Crect x='14' y='3' width='7' height='5'%3E%3C/rect%3E%3Crect x='14' y='12' width='7' height='9'%3E%3C/rect%3E%3Crect x='3' y='16' width='7' height='5'%3E%3C/rect%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
 }
 
 .anp-file-icons .nav-file .nav-file-title[data-path$=".jpg"]::before,
 .anp-file-icons .nav-file .nav-file-title[data-path$=".jpeg"]::before,
 .anp-file-icons .nav-file .nav-file-title[data-path$=".png"]::before {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z'/%3E%3Cpath d='M14 2v6h6'/%3E%3Ccircle cx='10' cy='13' r='2'/%3E%3Cpath d='m20 17-1.09-1.09a2 2 0 0 0-2.82 0L10 22'/%3E%3C/svg%3E%0A");
+  -webkit-mask-repeat: no-repeat;
 }
 
 .anp-file-icons .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {

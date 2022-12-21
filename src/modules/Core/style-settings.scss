@@ -197,6 +197,16 @@ settings:
         title: Callout fold position
         type: class-toggle
     - 
+        id: anp-canvas-header
+        title: Canvas
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: anp-canvas-dark-bg
+        title: Darker canvas background
+        type: class-toggle
+    - 
         id: anp-custom-checkboxes-header
         title: Custom checkboxes
         type: heading
