@@ -19,6 +19,7 @@
   -webkit-mask-repeat: no-repeat;
 }
 .anp-file-icons .nav-file .nav-file-title[data-path$=".jpg"]::before,
+.anp-file-icons .nav-file .nav-file-title[data-path$=".gif"]::before,
 .anp-file-icons .nav-file .nav-file-title[data-path$=".webp"]::before,
 .anp-file-icons .nav-file .nav-file-title[data-path$=".jpeg"]::before,
 .anp-file-icons .nav-file .nav-file-title[data-path$=".png"]::before {

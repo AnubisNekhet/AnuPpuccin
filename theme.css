@@ -2017,6 +2017,20 @@ body {
   border: 2px solid var(--color-accent);
 }
 
+.canvas-node.is-themed .canvas-node-label {
+  color: rgb(var(--canvas-color));
+}
+
+.canvas-node-placeholder {
+  color: rgb(var(--canvas-color));
+}
+.canvas-node-placeholder::after {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
 /*----------FILE PREVIEW MARGINS--------------*/
 .anp-toggle-preview .markdown-preview-section {
   width: var(--anp-preview-width-pct);
@@ -4238,6 +4252,7 @@ None of the original code was used and the feature was implemented from scratch.
 }
 
 .anp-file-icons .nav-file .nav-file-title[data-path$=".jpg"]::before,
+.anp-file-icons .nav-file .nav-file-title[data-path$=".gif"]::before,
 .anp-file-icons .nav-file .nav-file-title[data-path$=".webp"]::before,
 .anp-file-icons .nav-file .nav-file-title[data-path$=".jpeg"]::before,
 .anp-file-icons .nav-file .nav-file-title[data-path$=".png"]::before {

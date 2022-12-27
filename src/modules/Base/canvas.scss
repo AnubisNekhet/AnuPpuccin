@@ -32,3 +32,15 @@
   background-color: rgba(var(--ctp-accent), 0.1);
   border: 2px solid var(--color-accent);
 }
+.canvas-node.is-themed .canvas-node-label {
+  color: rgb(var(--canvas-color));
+}
+.canvas-node-placeholder {
+  color: rgb(var(--canvas-color));
+  &::after {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+}
