@@ -2287,9 +2287,9 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
   width: unset;
 }
 
-.anp-card-layout .mod-stacked .workspace-tab-header {
+.anp-card-layout .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
   border-style: solid;
-  border-radius: var(--anp-card-radius, var(--radius-xl)) 0px 0px var(--anp-card-radius, var(--radius-xl)) !important;
+  border-radius: var(--anp-card-radius, var(--radius-xl)) 0px 0px var(--anp-card-radius, var(--radius-xl));
   border-width: var(--tab-outline-width);
   border-color: var(--tab-outline-color);
   border-right: var(--tab-outline-width) dashed var(--tab-outline-color);
@@ -2420,6 +2420,23 @@ body.is-translucent {
 /*-Blockquote spacing-*/
 .markdown-rendered blockquote {
   padding: 5px 5px 5px 10px;
+}
+
+.frontmatter-section-data-item {
+  background-color: var(--background-secondary);
+  padding: 0 4px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  font-family: var(--font-monospace);
+  font-size: 80%;
+}
+
+.frontmatter-container .frontmatter-section-label {
+  text-transform: uppercase;
+  font-size: 70%;
+}
+.frontmatter-container .frontmatter-section-label::first-letter {
+  font-size: 120%;
 }
 
 .anp-list-toggle ul.has-list-bullet > li > ul.has-list-bullet > li .list-bullet::after {

@@ -120,9 +120,9 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
 .anp-card-layout .workspace-split.mod-horizontal > * {
     width: unset;
 }
-.anp-card-layout .mod-stacked .workspace-tab-header {
+.anp-card-layout .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
     border-style: solid;
-    border-radius: var(--anp-card-radius, var(--radius-xl)) 0px 0px var(--anp-card-radius, var(--radius-xl)) !important;
+    border-radius: var(--anp-card-radius, var(--radius-xl)) 0px 0px var(--anp-card-radius, var(--radius-xl));
     border-width: var(--tab-outline-width);
     border-color: var(--tab-outline-color);
     border-right: var(--tab-outline-width) dashed var(--tab-outline-color);
