@@ -1,0 +1,47 @@
+.anp-autohide-titlebar:not(.is-mobile) {
+
+  --title-bar-delay: 150ms;
+  --title-bar-duration: 300ms;
+  --title-bar-target-translate-y: 18px;
+  --title-bar-translate-y: 40px;
+
+  .workspace-leaf-content .view-header {
+    margin-top: calc(var(--title-bar-translate-y) * -1);
+    position: relative;
+    transition-delay: var(--title-bar-delay);
+    transition-duration: var(--title-bar-duration);
+    transition-property: transform;
+  }
+  .workspace-leaf-content .view-header::before {
+    bottom: calc(var(--title-bar-target-translate-y) * -1);
+    content: '';
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition-delay: var(--title-bar-delay);
+    transition-duration: var(--title-bar-duration);
+    transition-property: transform;
+    width: 100%;
+  }
+  .workspace-leaf-content .view-content {
+    transition-delay: var(--title-bar-delay);
+    transition-duration: var(--title-bar-duration);
+    transition-property: transform;
+  }
+  .workspace-leaf-content .view-header:is(:hover,:focus-within)::before {
+    transform: translateY(var(--title-bar-target-translate-y));
+  }
+  .workspace-leaf-content .view-header:is(:hover,:focus-within),
+  .workspace-leaf-content .view-header:is(:hover,:focus-within) + .view-content {
+    transform: translateY(var(--title-bar-translate-y));
+  }
+  .view-header::before {
+    z-index: 0;
+  }
+  .view-header > div {
+    z-index: 1;
+  }
+  .view-header-title {
+    --file-header-font-size: var(--font-ui-medium);
+  }
+}

@@ -295,6 +295,10 @@ settings:
         level: 2
         collapsed: true
     - 
+        id: anp-autohide-titlebar
+        title: Auto-hide tab title bar
+        type: class-toggle
+    - 
         id: anp-toggle-metadata
         title: Hide metadata
         type: class-toggle
@@ -2934,6 +2938,52 @@ table.dataview.table-view-table > tbody > tr:hover {
   width: var(--anp-table-width-pct);
   margin-left: calc(50% - var(--anp-table-width-pct) / 2);
   margin-right: calc(50% - var(--anp-table-width-pct) / 2);
+}
+
+.anp-autohide-titlebar:not(.is-mobile) {
+  --title-bar-delay: 150ms;
+  --title-bar-duration: 300ms;
+  --title-bar-target-translate-y: 18px;
+  --title-bar-translate-y: 40px;
+}
+.anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header {
+  margin-top: calc(var(--title-bar-translate-y) * -1);
+  position: relative;
+  transition-delay: var(--title-bar-delay);
+  transition-duration: var(--title-bar-duration);
+  transition-property: transform;
+}
+.anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header::before {
+  bottom: calc(var(--title-bar-target-translate-y) * -1);
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition-delay: var(--title-bar-delay);
+  transition-duration: var(--title-bar-duration);
+  transition-property: transform;
+  width: 100%;
+}
+.anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-content {
+  transition-delay: var(--title-bar-delay);
+  transition-duration: var(--title-bar-duration);
+  transition-property: transform;
+}
+.anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:is(:hover, :focus-within)::before {
+  transform: translateY(var(--title-bar-target-translate-y));
+}
+.anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:is(:hover, :focus-within),
+.anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:is(:hover, :focus-within) + .view-content {
+  transform: translateY(var(--title-bar-translate-y));
+}
+.anp-autohide-titlebar:not(.is-mobile) .view-header::before {
+  z-index: 0;
+}
+.anp-autohide-titlebar:not(.is-mobile) .view-header > div {
+  z-index: 1;
+}
+.anp-autohide-titlebar:not(.is-mobile) .view-header-title {
+  --file-header-font-size: var(--font-ui-medium);
 }
 
 body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-split.mod-vertical .workspace-tab-header-spacer {
