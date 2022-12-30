@@ -1,6 +1,7 @@
 .PHONY: build
 build: ## Build CSS
 	sass src/base.scss theme.css
+	sass src/base.scss obsidian.css
 
 .PHONY: help
 help: ## Display help
