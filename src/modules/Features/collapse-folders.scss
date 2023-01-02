@@ -9,6 +9,6 @@
 .anp-collapse-folders .nav-folder.is-collapsed .nav-folder-collapse-indicator {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linejoin='round' stroke-linecap='round' stroke-width='2'%3E%3Cpath d='M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2z'/%3E%3Cpath d='M2 10h20' /%3E%3C/svg%3E%0A");
 }
-.anp-collapse-folders .collapse-icon svg.svg-icon {
+.anp-collapse-folders .nav-folder-collapse-indicator svg.svg-icon {
   color: transparent !important;
 }
