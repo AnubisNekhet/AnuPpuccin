@@ -13,6 +13,9 @@ I do not intend to publish this theme on the obsidian theme store since I don't 
 I've made this theme primarily for my own purposes and it's completely free, but if you do like it enough to consider throwing a few coins in my hat, here's a link.<br>
 <a href="https://www.buymeacoffee.com/anubisnekhet" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
+## License
+AnuPpuccin is licensed under the GPL-3.0 license which allows you to modify the code freely, however the Copyright and license notices must be preserved in your CSS. If you redistribute a part of my code, please credit my theme in your CSS file, and specify which code you are using. **Please keep my <a href="https://www.buymeacoffee.com/anubisnekhet">Buy Me a Coffee link</a> in your README if you do so.**
+
 <details>
 <summary><h2>Installation</h2></summary>
 <h3>Normal Installation</h3>
