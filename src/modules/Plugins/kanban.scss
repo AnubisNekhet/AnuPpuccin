@@ -19,6 +19,9 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
 
 /* Kanban lanes */
 .kanban-plugin {
+  &__lane-form-wrapper {
+    border-color: var(--interactive-accent);
+  }
   &__lane-grip {
     color: var(--background-modifier-border);
   }
