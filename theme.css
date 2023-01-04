@@ -4454,7 +4454,7 @@ body.theme-dark {
   backdrop-filter: brightness(var(--anp-custom-bg-brightness, 0.5)) blur(var(--anp-custom-bg-blur, 5px));
   background-color: transparent;
 }
-.anp-background-image-toggle:not(.anp-colorful-frame) .workspace-split.mod-root .view-content {
+.anp-background-image-toggle:not(.anp-colorful-frame).anp-card-layout .workspace-split.mod-root .view-content {
   background: transparent;
 }
 .anp-background-image-toggle:not(.anp-colorful-frame).anp-alternate-tab-toggle .workspace-tabs:not(.mod-stacked), .anp-background-image-toggle:not(.anp-colorful-frame).anp-safari-tab-toggle .workspace-tabs:not(.mod-stacked) {
@@ -4467,18 +4467,17 @@ body.theme-dark {
 }
 .anp-background-image-toggle:not(.anp-colorful-frame).anp-canvas-dark-bg .canvas-wrapper,
 .anp-background-image-toggle:not(.anp-colorful-frame) .canvas-wrapper,
-.anp-background-image-toggle:not(.anp-colorful-frame) .mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right,
-.anp-background-image-toggle:not(.anp-colorful-frame) .workspace-ribbon.mod-left:before, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-tab-header-container,
+.anp-background-image-toggle:not(.anp-colorful-frame) .mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout).mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right, .anp-background-image-toggle:not(.anp-colorful-frame).anp-card-layout .workspace-ribbon.mod-left:before,
+.anp-background-image-toggle:not(.anp-colorful-frame) .anp-card-layout .workspace-tab-header-container,
 .anp-background-image-toggle:not(.anp-colorful-frame) .workspace-split.mod-root {
   background-color: transparent;
 }
-.anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-tabs .workspace-leaf,
+.anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-tab-header-container, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-tabs .workspace-leaf, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-split.mod-root .view-content, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-ribbon, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-ribbon.mod-left:before,
 .anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin__lane,
 .anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin__item-content-wrapper {
   background-color: var(--card-foreground-color);
 }
-.anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin__item-title-wrapper,
-.anp-background-image-toggle:not(.anp-colorful-frame) .workspace-ribbon {
+.anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin__item-title-wrapper, .anp-background-image-toggle:not(.anp-colorful-frame).anp-card-layout .workspace-ribbon {
   background: transparent;
 }
 .anp-background-image-toggle:not(.anp-colorful-frame) .workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
