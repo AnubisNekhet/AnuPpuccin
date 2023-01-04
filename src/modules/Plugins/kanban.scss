@@ -48,3 +48,11 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
   border-color: var(--background-modifier-border);
 }
 
+/* Kanban cards */
+.kanban-plugin {
+  &__item {
+    &:hover {
+      border-color: var(--interactive-accent);
+    }
+  }
+}
