@@ -1,20 +1,3 @@
-body {
-  --card-background-color: rgb(var(--ctp-crust));
-  --card-foreground-color: rgb(var(--ctp-base));
-  --tab-inactive-color: rgb(var(--ctp-mantle));
-  &.theme-light {
-    --anp-background-image: var(--anp-background-image-light);
-    --anp-custom-bg-brightness: var(--anp-custom-bg-brightness-light);
-    --anp-custom-bg-blur: var(--anp-custom-bg-blur-light);
-    --anp-custom-bg-card-fg-opacity: var(--anp-custom-bg-card-fg-opacity-light);
-  }
-  &.theme-dark {
-    --anp-background-image: var(--anp-background-image-dark)
-    --anp-custom-bg-brightness: var(--anp-custom-bg-brightness-dark);
-    --anp-custom-bg-blur: var(--anp-custom-bg-blur-dark);
-    --anp-custom-bg-card-fg-opacity: var(--anp-custom-bg-card-fg-opacity-dark);
-  }
-}
 .anp-background-image-toggle:not(.anp-colorful-frame) {
   .horizontal-main-container, 
   &.anp-bg-fix .horizontal-main-container {

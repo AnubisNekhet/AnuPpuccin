@@ -2008,6 +2008,21 @@ body {
   --tab-stacked-pane-width: calc(var(--anp-tab-stacked-pane-width, 1)*var(--file-line-width));
   --anp-table-width-pct: 100%;
   --canvas-color: var(--ctp-overlay2);
+  --card-background-color: rgb(var(--ctp-crust));
+  --card-foreground-color: rgb(var(--ctp-base));
+  --tab-inactive-color: rgb(var(--ctp-mantle));
+}
+body.theme-light {
+  --anp-background-image: var(--anp-background-image-light);
+  --anp-custom-bg-brightness: var(--anp-custom-bg-brightness-light);
+  --anp-custom-bg-blur: var(--anp-custom-bg-blur-light);
+  --anp-custom-bg-card-fg-opacity: var(--anp-custom-bg-card-fg-opacity-light);
+}
+body.theme-dark {
+  --anp-background-image: var(--anp-background-image-dark)
+  --anp-custom-bg-brightness: var(--anp-custom-bg-brightness-dark);
+  --anp-custom-bg-blur: var(--anp-custom-bg-blur-dark);
+  --anp-custom-bg-card-fg-opacity: var(--anp-custom-bg-card-fg-opacity-dark);
 }
 
 /*-Highlight current line-*/
@@ -4423,24 +4438,6 @@ None of the original code was used and the feature was implemented from scratch.
 
 .anp-file-icons .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {
   padding-left: var(--size-4-2);
-}
-
-body {
-  --card-background-color: rgb(var(--ctp-crust));
-  --card-foreground-color: rgb(var(--ctp-base));
-  --tab-inactive-color: rgb(var(--ctp-mantle));
-}
-body.theme-light {
-  --anp-background-image: var(--anp-background-image-light);
-  --anp-custom-bg-brightness: var(--anp-custom-bg-brightness-light);
-  --anp-custom-bg-blur: var(--anp-custom-bg-blur-light);
-  --anp-custom-bg-card-fg-opacity: var(--anp-custom-bg-card-fg-opacity-light);
-}
-body.theme-dark {
-  --anp-background-image: var(--anp-background-image-dark)
-  --anp-custom-bg-brightness: var(--anp-custom-bg-brightness-dark);
-  --anp-custom-bg-blur: var(--anp-custom-bg-blur-dark);
-  --anp-custom-bg-card-fg-opacity: var(--anp-custom-bg-card-fg-opacity-dark);
 }
 
 .anp-background-image-toggle:not(.anp-colorful-frame) {
