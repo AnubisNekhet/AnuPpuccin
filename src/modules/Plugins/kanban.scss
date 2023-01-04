@@ -59,6 +59,14 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
       text-decoration-line: line-through;
       opacity: .75;
     }
+    .markdown-preview-view .tag {
+      --tag-border-width: 0;
+      --tag-padding-y: 0;
+      --tag-padding-x: 0;
+      --tag-background: transparent;
+      --tag-color: var(--link-color);
+      --tag-size: reset;
+    }
   }
   &__item-title-wrapper {
     padding: 8px;
@@ -93,5 +101,36 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
 .kanban-plugin__drag-container {
   p, code {
     overflow: hidden;
+  }
+}
+
+/* Kanban card meta and tags */
+.kanban-plugin,
+.kanban-plugin__drag-container {
+  --tag-color: var(--text-faint);
+
+  .kanban-plugin__item-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+    &:not(:empty) {
+      padding-top: 8px;
+    }
+  }
+  .kanban-plugin__item-metadata-date-wrapper {
+    line-height: var(--line-height-tight);
+  }
+  .kanban-plugin__item-tags {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 4px;
+    &:not(:empty) {
+      padding-top: 0;
+    }
+  }
+  .kanban-plugin__item-tag {
+    margin: 0;
   }
 }
