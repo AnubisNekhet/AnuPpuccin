@@ -71,3 +71,26 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
     }
   }
 }
+
+/* Kanban card content */
+.kanban-plugin,
+.kanban-plugin__drag-container {
+  --checkbox-size: 16px;
+
+  code[class*="language-"] {
+    font-size: .875em;
+    padding: .75em;
+    white-space: pre; // don't wrap code!
+  }
+  button.copy-code-button {
+    display: none; // because it doesn't work
+  }
+  textarea {
+    background-color: transparent; 
+  }
+}
+.kanban-plugin__drag-container {
+  p, code {
+    overflow: hidden;
+  }
+}
