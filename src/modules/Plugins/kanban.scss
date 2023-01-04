@@ -54,5 +54,10 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
     &:hover {
       border-color: var(--interactive-accent);
     }
+    &.is-complete .kanban-plugin__item-markdown {
+      color: var(--text-muted);
+      text-decoration-line: line-through;
+      opacity: .75;
+    }
   }
 }
