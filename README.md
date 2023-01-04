@@ -7,7 +7,7 @@
 Please do note that I've made this theme for myself, and it may not fit your use cases. However, I've made most of the configuration completely optional so that the experience remains as close to vanilla if you choose to do so. Most of the in-application variables are recolored so that your custom snippets can be used easily with the theme.
 This theme makes heavy use of the <a href="https://github.com/mgmeyers/obsidian-style-settings">style settings</a> plugin, which controls most of the features in the theme. The theme is perfectly usable even without style settings, but it's only a fraction of what it actually is with the plugin.
 <br><br>
-I do not intend to publish this theme on the obsidian theme store since I don't want to deal with allegations of IP infringement and the like, and I will respond to feature/code removal only if there is substantial evidence of it being a direct copy of the original code and not just a simple imitation. (Please keep this point in mind before accusing me of being a low-effort theme developer.)
+I will respond to feature/code removal only if there is substantial evidence of it being a direct copy of the original code and not just a simple imitation. (Please keep this point in mind before accusing me of being a low-effort theme developer.)
 
 ### If you like my theme:
 I've made this theme primarily for my own purposes and it's completely free, but if you do like it enough to consider throwing a few coins in my hat, here's a link.<br>
