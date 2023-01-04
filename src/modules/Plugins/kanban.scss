@@ -32,3 +32,19 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
     margin-right: 5px;
   }
 }
+
+/* Kanban card placeholder */
+.kanban-plugin,
+.kanban-plugin__drag-container {
+  .kanban-plugin__lane-items > .kanban-plugin__placeholder {
+    border: 2px dashed rgba(var(--text-muted-rgb),.1);
+    width: auto;
+    &:not(:only-child) {
+      border-width: 0;
+    }
+  }
+}
+.is-sorting .kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
+  border-color: var(--background-modifier-border);
+}
+
