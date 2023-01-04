@@ -208,6 +208,91 @@ settings:
         title: Darker canvas background
         type: class-toggle
     - 
+        id: anp-custom-background-header
+        title: Custom background
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: anp-background-image-toggle
+        title: Enable custom background (WIP)
+        description: Not compatible with colorful frame
+        type: class-toggle
+    - 
+        id: anp-custom-background-light-header
+        title: Light Mode
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: anp-background-image-light
+        title: Custom Background Image URL
+        description: 'Formatted as url("https://link-to-image.png")'
+        type: variable-text
+        default: url("https://link-to-image.png")
+    - 
+        id: anp-custom-bg-brightness-light
+        title: Background brightness
+        type: variable-number-slider
+        min: 0
+        max: 2
+        step: 0.05
+        default: 0.7
+    - 
+        id: anp-custom-bg-blur-light
+        title: Background blur
+        type: variable-number-slider
+        min: 0
+        max: 20
+        step: 1
+        default: 5
+        format: px
+    - 
+        id: anp-custom-bg-card-fg-opacity-light
+        title: Container opacity
+        type: variable-number-slider
+        min: 0
+        max: 1
+        step: 0.05
+        default: 0.4
+    - 
+        id: anp-custom-background-dark-header
+        title: Dark Mode
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: anp-background-image-dark
+        title: Custom Background Image URL
+        description: 'Formatted as url("https://link-to-image.png")'
+        type: variable-text
+        default: url("https://link-to-image.png")
+    - 
+        id: anp-custom-bg-brightness-dark
+        title: Background brightness
+        type: variable-number-slider
+        min: 0
+        max: 1
+        step: 0.05
+        default: 0.7
+    - 
+        id: anp-custom-bg-blur-dark
+        title: Background blur
+        type: variable-number-slider
+        min: 0
+        max: 20
+        step: 1
+        default: 5
+        format: px
+    - 
+        id: anp-custom-bg-card-fg-opacity-dark
+        title: Container opacity
+        type: variable-number-slider
+        min: 0
+        max: 1
+        step: 0.05
+        default: 0.4
+    - 
         id: anp-custom-checkboxes-header
         title: Custom checkboxes
         type: heading
@@ -2131,7 +2216,7 @@ body {
 
 .workspace, .horizontal-main-container,
 .anp-card-layout .mod-vertical .workspace-tabs {
-  background-color: var(--background-secondary-alt);
+  background-color: var(--tab-container-background);
 }
 
 .workspace-split:not(.mod-root) .graph-controls.is-close,
@@ -2149,17 +2234,22 @@ body {
   background-color: rgb(var(--ctp-mantle));
 }
 
+body {
+  --card-background-color: rgb(var(--ctp-crust));
+  --card-foreground-color: var(--background-primary);
+}
+
 body.anp-card-layout,
 .anp-card-layout .sidebar-toggle-button,
 .anp-card-layout .workspace-tabs.mod-top {
-  --tab-container-background: rgb(var(--ctp-crust));
+  --tab-container-background: var(--card-background-color);
   --file-header-border: var(--border-width) dashed var(--background-modifier-border);
 }
 
 body.is-focused.anp-card-layout,
 body.is-focused.anp-card-layout .sidebar-toggle-button,
 body.is-focused.anp-card-layout .workspace-tabs.mod-top {
-  --tab-container-background: rgb(var(--ctp-crust));
+  --tab-container-background: var(--card-background-color);
 }
 
 .anp-card-layout .mod-left-split .workspace-tab-header-container {
@@ -2199,14 +2289,14 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
 .anp-card-layout-actions.anp-card-layout .side-dock-actions {
   border-radius: 0px var(--anp-card-radius, var(--radius-xl)) var(--anp-card-radius, var(--radius-xl)) 0px;
   border: 1px solid var(--tab-outline-color);
-  background-color: var(--background-primary);
+  background-color: var(--card-foreground-color);
   margin-top: 2px;
 }
 
 .anp-card-layout-actions.anp-card-layout .side-dock-settings {
   border-radius: 0px var(--anp-card-radius, var(--radius-xl)) 0px 0px;
   border: 1px solid var(--tab-outline-color);
-  background-color: var(--background-primary);
+  background-color: var(--card-foreground-color);
 }
 
 .anp-card-layout .side-dock-settings {
@@ -2257,7 +2347,7 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
 
 .anp-card-layout .workspace-split .workspace-leaf-content {
   border-radius: var(--anp-card-radius, var(--radius-xl));
-  background-color: var(--background-primary);
+  background-color: var(--card-foreground-color);
   border: 1px solid var(--tab-outline-color);
   margin-bottom: var(--anp-card-layout-padding, 10px);
 }
@@ -2276,7 +2366,7 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
 }
 
 .anp-card-layout.anp-card-layout-filebrowser .workspace-split .workspace-leaf-content[data-type=file-explorer] {
-  background-color: var(--background-primary);
+  background-color: var(--card-foreground-color);
   border-width: 1px;
 }
 
@@ -4329,6 +4419,79 @@ None of the original code was used and the feature was implemented from scratch.
 
 .anp-file-icons .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {
   padding-left: var(--size-4-2);
+}
+
+body {
+  --card-background-color: rgb(var(--ctp-crust));
+  --card-foreground-color: rgb(var(--ctp-base));
+  --tab-inactive-color: rgb(var(--ctp-mantle));
+}
+body.theme-light {
+  --anp-background-image: var(--anp-background-image-light);
+  --anp-custom-bg-brightness: var(--anp-custom-bg-brightness-light);
+  --anp-custom-bg-blur: var(--anp-custom-bg-blur-light);
+  --anp-custom-bg-card-fg-opacity: var(--anp-custom-bg-card-fg-opacity-light);
+}
+body.theme-dark {
+  --anp-background-image: var(--anp-background-image-dark)
+  --anp-custom-bg-brightness: var(--anp-custom-bg-brightness-dark);
+  --anp-custom-bg-blur: var(--anp-custom-bg-blur-dark);
+  --anp-custom-bg-card-fg-opacity: var(--anp-custom-bg-card-fg-opacity-dark);
+}
+
+.anp-background-image-toggle:not(.anp-colorful-frame) {
+  --card-background-color: transparent;
+  --card-foreground-color: rgba(var(--ctp-base), var(--anp-custom-bg-card-fg-opacity, 0.4));
+  --tab-inactive-color: rgba(var(--ctp-mantle), var(--anp-custom-bg-card-fg-opacity, 0.4));
+  --code-background: var(--card-foreground-color);
+}
+.anp-background-image-toggle:not(.anp-colorful-frame) .horizontal-main-container, .anp-background-image-toggle:not(.anp-colorful-frame).anp-bg-fix .horizontal-main-container {
+  background: var(--anp-background-image, url("https://i.redd.it/m23bwh4n0x151.png"));
+  background-size: cover;
+  background-color: transparent;
+}
+.anp-background-image-toggle:not(.anp-colorful-frame) .workspace, .anp-background-image-toggle:not(.anp-colorful-frame).anp-bg-fix .workspace {
+  backdrop-filter: brightness(var(--anp-custom-bg-brightness, 0.5)) blur(var(--anp-custom-bg-blur, 5px));
+  background-color: transparent;
+}
+.anp-background-image-toggle:not(.anp-colorful-frame) .workspace-split.mod-root .view-content {
+  background: transparent;
+}
+.anp-background-image-toggle:not(.anp-colorful-frame).anp-alternate-tab-toggle .workspace-tabs:not(.mod-stacked), .anp-background-image-toggle:not(.anp-colorful-frame).anp-safari-tab-toggle .workspace-tabs:not(.mod-stacked) {
+  --tab-background: var(--tab-inactive-color);
+  --tab-background-active: var(--card-foreground-color);
+  --tab-background-inactive: var(--tab-inactive-color);
+}
+.anp-background-image-toggle:not(.anp-colorful-frame).anp-floating-header .nav-folder.mod-root > .nav-folder-title {
+  background-color: var(--tab-inactive-color);
+}
+.anp-background-image-toggle:not(.anp-colorful-frame).anp-canvas-dark-bg .canvas-wrapper,
+.anp-background-image-toggle:not(.anp-colorful-frame) .canvas-wrapper,
+.anp-background-image-toggle:not(.anp-colorful-frame) .mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right,
+.anp-background-image-toggle:not(.anp-colorful-frame) .workspace-ribbon.mod-left:before, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-tab-header-container,
+.anp-background-image-toggle:not(.anp-colorful-frame) .workspace-split.mod-root {
+  background-color: transparent;
+}
+.anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-tabs .workspace-leaf,
+.anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin__lane,
+.anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin__item-content-wrapper {
+  background-color: var(--card-foreground-color);
+}
+.anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin__item-title-wrapper,
+.anp-background-image-toggle:not(.anp-colorful-frame) .workspace-ribbon {
+  background: transparent;
+}
+.anp-background-image-toggle:not(.anp-colorful-frame) .workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
+.anp-background-image-toggle:not(.anp-colorful-frame) .mod-root .workspace-tabs .workspace-leaf,
+.anp-background-image-toggle:not(.anp-colorful-frame) .view-header,
+.anp-background-image-toggle:not(.anp-colorful-frame) .is-focused .workspace-leaf.mod-active .view-header {
+  background-color: transparent;
+}
+.anp-background-image-toggle:not(.anp-colorful-frame) .view-header-title-container:not(.mod-at-end):after {
+  display: none;
+}
+.anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin .kanban-plugin__lane button:hover {
+  background-color: var(--card-foreground-color);
 }
 
 .style-settings-container [data-level="1"].setting-item-heading .setting-item-name,

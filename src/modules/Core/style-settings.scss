@@ -207,6 +207,91 @@ settings:
         title: Darker canvas background
         type: class-toggle
     - 
+        id: anp-custom-background-header
+        title: Custom background
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: anp-background-image-toggle
+        title: Enable custom background (WIP)
+        description: Not compatible with colorful frame
+        type: class-toggle
+    - 
+        id: anp-custom-background-light-header
+        title: Light Mode
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: anp-background-image-light
+        title: Custom Background Image URL
+        description: 'Formatted as url("https://link-to-image.png")'
+        type: variable-text
+        default: url("https://link-to-image.png")
+    - 
+        id: anp-custom-bg-brightness-light
+        title: Background brightness
+        type: variable-number-slider
+        min: 0
+        max: 2
+        step: 0.05
+        default: 0.7
+    - 
+        id: anp-custom-bg-blur-light
+        title: Background blur
+        type: variable-number-slider
+        min: 0
+        max: 20
+        step: 1
+        default: 5
+        format: px
+    - 
+        id: anp-custom-bg-card-fg-opacity-light
+        title: Container opacity
+        type: variable-number-slider
+        min: 0
+        max: 1
+        step: 0.05
+        default: 0.4
+    - 
+        id: anp-custom-background-dark-header
+        title: Dark Mode
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: anp-background-image-dark
+        title: Custom Background Image URL
+        description: 'Formatted as url("https://link-to-image.png")'
+        type: variable-text
+        default: url("https://link-to-image.png")
+    - 
+        id: anp-custom-bg-brightness-dark
+        title: Background brightness
+        type: variable-number-slider
+        min: 0
+        max: 1
+        step: 0.05
+        default: 0.7
+    - 
+        id: anp-custom-bg-blur-dark
+        title: Background blur
+        type: variable-number-slider
+        min: 0
+        max: 20
+        step: 1
+        default: 5
+        format: px
+    - 
+        id: anp-custom-bg-card-fg-opacity-dark
+        title: Container opacity
+        type: variable-number-slider
+        min: 0
+        max: 1
+        step: 0.05
+        default: 0.4
+    - 
         id: anp-custom-checkboxes-header
         title: Custom checkboxes
         type: heading
