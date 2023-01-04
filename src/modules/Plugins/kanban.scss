@@ -1,7 +1,9 @@
-/* Fix the bottom padding of kanban boards on mobile/when status bar is visible */
+/* Fix bottom padding of kanban board on mobile */
 body.is-mobile .kanban-plugin__board > div {
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
 }
+
+/* Fix bottom padding of kanban board when status bar is visible */
 body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
   padding-bottom: 2.5rem;
 }
