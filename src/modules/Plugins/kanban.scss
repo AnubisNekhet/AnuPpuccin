@@ -11,10 +11,11 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
 /* Kanban background */
 .kanban-plugin__board > div {
   --kanban-dot-color: var(--canvas-dot-pattern);
+  --kanban-dot-offset: 7px;
   --kanban-dot-spacing: 20px;
   --kanban-dot-size: 0.7px;
   background-image: radial-gradient(circle, var(--kanban-dot-color) var(--kanban-dot-size),transparent var(--kanban-dot-size));
-  background-position: 7px 7px;
+  background-position: var(--kanban-dot-offset) var(--kanban-dot-offset);
   background-size: var(--kanban-dot-spacing) var(--kanban-dot-spacing);
   flex-grow: 1;
 }
