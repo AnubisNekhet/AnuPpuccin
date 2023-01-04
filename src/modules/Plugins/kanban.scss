@@ -61,6 +61,7 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
     }
   }
   &__item-title-wrapper {
+    padding: 8px;
     div:first-child > a.clickable-icon {
       position: relative;
       left: -2px;
