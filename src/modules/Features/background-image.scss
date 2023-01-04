@@ -1,0 +1,80 @@
+body {
+  --card-background-color: rgb(var(--ctp-crust));
+  --card-foreground-color: rgb(var(--ctp-base));
+  --tab-inactive-color: rgb(var(--ctp-mantle));
+  &.theme-light {
+    --anp-background-image: var(--anp-background-image-light);
+    --anp-custom-bg-brightness: var(--anp-custom-bg-brightness-light);
+    --anp-custom-bg-blur: var(--anp-custom-bg-blur-light);
+    --anp-custom-bg-card-fg-opacity: var(--anp-custom-bg-card-fg-opacity-light);
+  }
+  &.theme-dark {
+    --anp-background-image: var(--anp-background-image-dark)
+    --anp-custom-bg-brightness: var(--anp-custom-bg-brightness-dark);
+    --anp-custom-bg-blur: var(--anp-custom-bg-blur-dark);
+    --anp-custom-bg-card-fg-opacity: var(--anp-custom-bg-card-fg-opacity-dark);
+  }
+}
+.anp-background-image-toggle:not(.anp-colorful-frame) {
+  .horizontal-main-container, 
+  &.anp-bg-fix .horizontal-main-container {
+    background: var(--anp-background-image, url("https://i.redd.it/m23bwh4n0x151.png"));
+    background-size: cover;
+    background-color: transparent;
+  }
+  .workspace,
+  &.anp-bg-fix .workspace {
+    backdrop-filter: brightness(var(--anp-custom-bg-brightness, 0.5)) blur(var(--anp-custom-bg-blur,5px));
+    background-color: transparent;
+  }
+  --card-background-color: transparent;
+  --card-foreground-color: rgba(var(--ctp-base), var(--anp-custom-bg-card-fg-opacity, 0.4));
+  --tab-inactive-color: rgba(var(--ctp-mantle), var(--anp-custom-bg-card-fg-opacity, 0.4));
+  --code-background: var(--card-foreground-color);
+  &.anp-card-layout .workspace-split.mod-root .view-content {
+    background: transparent;
+  }
+  &.anp-alternate-tab-toggle .workspace-tabs:not(.mod-stacked),
+  &.anp-safari-tab-toggle .workspace-tabs:not(.mod-stacked) {
+      --tab-background: var(--tab-inactive-color);
+      --tab-background-active: var(--card-foreground-color);
+      --tab-background-inactive: var(--tab-inactive-color);
+  }
+  &.anp-floating-header .nav-folder.mod-root > .nav-folder-title {
+    background-color: var(--tab-inactive-color);
+  }
+  &.anp-canvas-dark-bg .canvas-wrapper,
+  .canvas-wrapper,
+  .mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right,
+  &:not(.anp-card-layout).mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right,
+  &.anp-card-layout .workspace-ribbon.mod-left:before,
+  .anp-card-layout .workspace-tab-header-container,
+  .workspace-split.mod-root {
+    background-color: transparent;
+  }
+  &:not(.anp-card-layout) .workspace-tab-header-container,
+  &:not(.anp-card-layout) .workspace-tabs .workspace-leaf,
+  &:not(.anp-card-layout) .workspace-split.mod-root .view-content,
+  &:not(.anp-card-layout) .workspace-ribbon,
+  &:not(.anp-card-layout) .workspace-ribbon.mod-left:before,
+  .kanban-plugin__lane,
+  .kanban-plugin__item-content-wrapper {
+    background-color: var(--card-foreground-color);
+  }
+  .kanban-plugin__item-title-wrapper,
+  &.anp-card-layout .workspace-ribbon {
+    background: transparent;
+  }
+  .workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
+  .mod-root .workspace-tabs .workspace-leaf,
+  .view-header,
+  .is-focused .workspace-leaf.mod-active .view-header {
+    background-color: transparent;
+  }
+  .view-header-title-container:not(.mod-at-end):after {
+    display: none;
+  }
+  .kanban-plugin .kanban-plugin__lane button:hover {
+    background-color: var(--card-foreground-color);
+  }
+}

@@ -59,6 +59,9 @@ You can toggle if the recolor applies to the title, the collapse border, the col
 <p align="center"> <img src="assets/gh-decorations-preview.webp"> </p>
 Bold and italic colors can be toggled on and off and can be customised according to the palette as well.
 
+### Custom Backgrounds
+<p align="center"> <img src="assets/bg-image-preview.webp"> </p>
+
 ### Callouts
 <p align="center"> <img src="assets/gh-callout-preview.webp"> </p>
 The theme comes with many custom callout styles (which can be toggled so they won't interfere with your own callout snippet).<br>
