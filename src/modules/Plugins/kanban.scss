@@ -134,3 +134,39 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
     margin: 0;
   }
 }
+
+/* Kanban date button and date picker */
+.kanban-plugin {
+  &__item-metadata-date.is-button {
+    position: relative;
+    display: inline-block;
+  }
+  &__item-metadata-date.is-button:hover::before {
+    position: absolute;
+    display: inline-flex;
+    top: -3px;
+    left: -5px;
+    right: -5px;
+    bottom: -3px;
+    content: '';
+    z-index: 0;
+    background-color: var(--background-modifier-hover);
+    border-radius: var(--clickable-icon-radius);
+  }
+}
+.kanban-plugin__date-picker {
+  --background-primary-alt: var(--background-modifier-hover);
+  --input-shadow: none;
+  --input-shadow-hover: none;
+
+  .flatpickr-current-month input,
+  .flatpickr-monthDropdown-months {
+    &:hover, &:focus {
+      background-color: var(--background-modifier-hover);
+      box-shadow: none;
+    }
+  }
+  .flatpickr-day:not(.today):hover {
+    border-width: 0;
+  }
+}
