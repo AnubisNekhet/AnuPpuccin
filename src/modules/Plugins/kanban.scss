@@ -60,4 +60,14 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
       opacity: .75;
     }
   }
+  &__item-title-wrapper {
+    div:first-child > a.clickable-icon {
+      position: relative;
+      left: -2px;
+    }
+    div:last-child > a.clickable-icon {
+      position: relative;
+      right: -2px;
+    }
+  }
 }
