@@ -16,3 +16,16 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
   background-size: var(--kanban-dot-spacing) var(--kanban-dot-spacing);
   flex-grow: 1;
 }
+
+/* Kanban lanes */
+.kanban-plugin {
+  &__lane-grip {
+    color: var(--background-modifier-border);
+  }
+  &__lane-header-wrapper {
+    padding-right: 8px;
+  }
+  &__lane-title-count {
+    margin-right: 5px;
+  }
+}
