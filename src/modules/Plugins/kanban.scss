@@ -170,3 +170,16 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
     border-width: 0;
   }
 }
+
+/* Kanban buttons */
+.kanban-plugin,
+.kanban-plugin__drag-container {
+  button {
+    box-shadow: none;
+    &:hover {
+      background-color: var(--background-modifier-hover);
+      color: var(--text-normal);
+      transition: background-color 0.1s;
+    }
+  }
+}
