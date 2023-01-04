@@ -57,17 +57,20 @@ body {
   &:not(.anp-card-layout) .workspace-split.mod-root .view-content,
   &:not(.anp-card-layout) .workspace-ribbon,
   &:not(.anp-card-layout) .workspace-ribbon.mod-left:before,
+  &:not(.anp-card-layout) .view-header,
+  &.is-focused:not(.anp-card-layout) .workspace-leaf.mod-active .view-header,
   .kanban-plugin__lane,
   .kanban-plugin__item-content-wrapper {
     background-color: var(--card-foreground-color);
   }
   .kanban-plugin__item-title-wrapper,
+  &.is-focused.anp-card-layout .workspace-leaf.mod-active .view-header,
   &.anp-card-layout .workspace-ribbon {
     background: transparent;
   }
   .workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
   .mod-root .workspace-tabs .workspace-leaf,
-  .view-header,
+  &.anp-card-layout .view-header,
   .is-focused .workspace-leaf.mod-active .view-header {
     background-color: transparent;
   }

@@ -2120,6 +2120,10 @@ body {
   left: 0;
 }
 
+.anuppuccin-accent-toggle .canvas-placeholder-message {
+  background: rgba(var(--ctp-accent), 0.1);
+}
+
 /*----------FILE PREVIEW MARGINS--------------*/
 .anp-toggle-preview .markdown-preview-section {
   width: var(--anp-preview-width-pct);
@@ -4472,17 +4476,16 @@ body.theme-dark {
 .anp-background-image-toggle:not(.anp-colorful-frame) .workspace-split.mod-root {
   background-color: transparent;
 }
-.anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-tab-header-container, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-tabs .workspace-leaf, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-split.mod-root .view-content, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-ribbon, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-ribbon.mod-left:before,
+.anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-tab-header-container, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-tabs .workspace-leaf, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-split.mod-root .view-content, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-ribbon, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-ribbon.mod-left:before, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .view-header, .anp-background-image-toggle:not(.anp-colorful-frame).is-focused:not(.anp-card-layout) .workspace-leaf.mod-active .view-header,
 .anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin__lane,
 .anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin__item-content-wrapper {
   background-color: var(--card-foreground-color);
 }
-.anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin__item-title-wrapper, .anp-background-image-toggle:not(.anp-colorful-frame).anp-card-layout .workspace-ribbon {
+.anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin__item-title-wrapper, .anp-background-image-toggle:not(.anp-colorful-frame).is-focused.anp-card-layout .workspace-leaf.mod-active .view-header, .anp-background-image-toggle:not(.anp-colorful-frame).anp-card-layout .workspace-ribbon {
   background: transparent;
 }
 .anp-background-image-toggle:not(.anp-colorful-frame) .workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
-.anp-background-image-toggle:not(.anp-colorful-frame) .mod-root .workspace-tabs .workspace-leaf,
-.anp-background-image-toggle:not(.anp-colorful-frame) .view-header,
+.anp-background-image-toggle:not(.anp-colorful-frame) .mod-root .workspace-tabs .workspace-leaf, .anp-background-image-toggle:not(.anp-colorful-frame).anp-card-layout .view-header,
 .anp-background-image-toggle:not(.anp-colorful-frame) .is-focused .workspace-leaf.mod-active .view-header {
   background-color: transparent;
 }
