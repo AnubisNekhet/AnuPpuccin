@@ -208,6 +208,91 @@ settings:
         title: Darker canvas background
         type: class-toggle
     - 
+        id: anp-custom-background-header
+        title: Custom background
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: anp-background-image-toggle
+        title: Enable custom background (WIP)
+        description: Not compatible with colorful frame
+        type: class-toggle
+    - 
+        id: anp-custom-background-light-header
+        title: Light Mode
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: anp-background-image-light
+        title: Custom Background Image URL
+        description: 'Formatted as url("https://link-to-image.png")'
+        type: variable-text
+        default: url("https://link-to-image.png")
+    - 
+        id: anp-custom-bg-brightness-light
+        title: Background brightness
+        type: variable-number-slider
+        min: 0
+        max: 2
+        step: 0.05
+        default: 0.7
+    - 
+        id: anp-custom-bg-blur-light
+        title: Background blur
+        type: variable-number-slider
+        min: 0
+        max: 20
+        step: 1
+        default: 5
+        format: px
+    - 
+        id: anp-custom-bg-card-fg-opacity-light
+        title: Container opacity
+        type: variable-number-slider
+        min: 0
+        max: 1
+        step: 0.05
+        default: 0.4
+    - 
+        id: anp-custom-background-dark-header
+        title: Dark Mode
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: anp-background-image-dark
+        title: Custom Background Image URL
+        description: 'Formatted as url("https://link-to-image.png")'
+        type: variable-text
+        default: url("https://link-to-image.png")
+    - 
+        id: anp-custom-bg-brightness-dark
+        title: Background brightness
+        type: variable-number-slider
+        min: 0
+        max: 1
+        step: 0.05
+        default: 0.7
+    - 
+        id: anp-custom-bg-blur-dark
+        title: Background blur
+        type: variable-number-slider
+        min: 0
+        max: 20
+        step: 1
+        default: 5
+        format: px
+    - 
+        id: anp-custom-bg-card-fg-opacity-dark
+        title: Container opacity
+        type: variable-number-slider
+        min: 0
+        max: 1
+        step: 0.05
+        default: 0.4
+    - 
         id: anp-custom-checkboxes-header
         title: Custom checkboxes
         type: heading
@@ -1923,6 +2008,21 @@ body {
   --tab-stacked-pane-width: calc(var(--anp-tab-stacked-pane-width, 1)*var(--file-line-width));
   --anp-table-width-pct: 100%;
   --canvas-color: var(--ctp-overlay2);
+  --card-background-color: rgb(var(--ctp-crust));
+  --card-foreground-color: rgb(var(--ctp-base));
+  --tab-inactive-color: rgb(var(--ctp-mantle));
+}
+body.theme-light {
+  --anp-background-image: var(--anp-background-image-light);
+  --anp-custom-bg-brightness: var(--anp-custom-bg-brightness-light);
+  --anp-custom-bg-blur: var(--anp-custom-bg-blur-light);
+  --anp-custom-bg-card-fg-opacity: var(--anp-custom-bg-card-fg-opacity-light);
+}
+body.theme-dark {
+  --anp-background-image: var(--anp-background-image-dark);
+  --anp-custom-bg-brightness: var(--anp-custom-bg-brightness-dark);
+  --anp-custom-bg-blur: var(--anp-custom-bg-blur-dark);
+  --anp-custom-bg-card-fg-opacity: var(--anp-custom-bg-card-fg-opacity-dark);
 }
 
 /*-Highlight current line-*/
@@ -2035,6 +2135,10 @@ body {
   left: 0;
 }
 
+.anuppuccin-accent-toggle .canvas-placeholder-message {
+  background: rgba(var(--ctp-accent), 0.1);
+}
+
 /*----------FILE PREVIEW MARGINS--------------*/
 .anp-toggle-preview .markdown-preview-section {
   width: var(--anp-preview-width-pct);
@@ -2131,7 +2235,7 @@ body {
 
 .workspace, .horizontal-main-container,
 .anp-card-layout .mod-vertical .workspace-tabs {
-  background-color: var(--background-secondary-alt);
+  background-color: var(--tab-container-background);
 }
 
 .workspace-split:not(.mod-root) .graph-controls.is-close,
@@ -2149,17 +2253,22 @@ body {
   background-color: rgb(var(--ctp-mantle));
 }
 
+body {
+  --card-background-color: rgb(var(--ctp-crust));
+  --card-foreground-color: var(--background-primary);
+}
+
 body.anp-card-layout,
 .anp-card-layout .sidebar-toggle-button,
 .anp-card-layout .workspace-tabs.mod-top {
-  --tab-container-background: rgb(var(--ctp-crust));
+  --tab-container-background: var(--card-background-color);
   --file-header-border: var(--border-width) dashed var(--background-modifier-border);
 }
 
 body.is-focused.anp-card-layout,
 body.is-focused.anp-card-layout .sidebar-toggle-button,
 body.is-focused.anp-card-layout .workspace-tabs.mod-top {
-  --tab-container-background: rgb(var(--ctp-crust));
+  --tab-container-background: var(--card-background-color);
 }
 
 .anp-card-layout .mod-left-split .workspace-tab-header-container {
@@ -2199,14 +2308,14 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
 .anp-card-layout-actions.anp-card-layout .side-dock-actions {
   border-radius: 0px var(--anp-card-radius, var(--radius-xl)) var(--anp-card-radius, var(--radius-xl)) 0px;
   border: 1px solid var(--tab-outline-color);
-  background-color: var(--background-primary);
+  background-color: var(--card-foreground-color);
   margin-top: 2px;
 }
 
 .anp-card-layout-actions.anp-card-layout .side-dock-settings {
   border-radius: 0px var(--anp-card-radius, var(--radius-xl)) 0px 0px;
   border: 1px solid var(--tab-outline-color);
-  background-color: var(--background-primary);
+  background-color: var(--card-foreground-color);
 }
 
 .anp-card-layout .side-dock-settings {
@@ -2257,7 +2366,7 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
 
 .anp-card-layout .workspace-split .workspace-leaf-content {
   border-radius: var(--anp-card-radius, var(--radius-xl));
-  background-color: var(--background-primary);
+  background-color: var(--card-foreground-color);
   border: 1px solid var(--tab-outline-color);
   margin-bottom: var(--anp-card-layout-padding, 10px);
 }
@@ -2276,7 +2385,7 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
 }
 
 .anp-card-layout.anp-card-layout-filebrowser .workspace-split .workspace-leaf-content[data-type=file-explorer] {
-  background-color: var(--background-primary);
+  background-color: var(--card-foreground-color);
   border-width: 1px;
 }
 
@@ -4331,6 +4440,59 @@ None of the original code was used and the feature was implemented from scratch.
   padding-left: var(--size-4-2);
 }
 
+.anp-background-image-toggle:not(.anp-colorful-frame) {
+  --card-background-color: transparent;
+  --card-foreground-color: rgba(var(--ctp-base), var(--anp-custom-bg-card-fg-opacity, 0.4));
+  --tab-inactive-color: rgba(var(--ctp-mantle), var(--anp-custom-bg-card-fg-opacity, 0.4));
+  --code-background: var(--card-foreground-color);
+}
+.anp-background-image-toggle:not(.anp-colorful-frame) .horizontal-main-container, .anp-background-image-toggle:not(.anp-colorful-frame).anp-bg-fix .horizontal-main-container {
+  background: var(--anp-background-image, url("https://i.redd.it/m23bwh4n0x151.png"));
+  background-size: cover;
+  background-color: transparent;
+}
+.anp-background-image-toggle:not(.anp-colorful-frame) .workspace, .anp-background-image-toggle:not(.anp-colorful-frame).anp-bg-fix .workspace {
+  backdrop-filter: brightness(var(--anp-custom-bg-brightness, 0.5)) blur(var(--anp-custom-bg-blur, 5px));
+  background-color: transparent;
+}
+.anp-background-image-toggle:not(.anp-colorful-frame).anp-card-layout .workspace-split.mod-root .view-content {
+  background: transparent;
+}
+.anp-background-image-toggle:not(.anp-colorful-frame).anp-alternate-tab-toggle .workspace-tabs:not(.mod-stacked), .anp-background-image-toggle:not(.anp-colorful-frame).anp-safari-tab-toggle .workspace-tabs:not(.mod-stacked) {
+  --tab-background: var(--tab-inactive-color);
+  --tab-background-active: var(--card-foreground-color);
+  --tab-background-inactive: var(--tab-inactive-color);
+}
+.anp-background-image-toggle:not(.anp-colorful-frame).anp-floating-header .nav-folder.mod-root > .nav-folder-title {
+  background-color: var(--tab-inactive-color);
+}
+.anp-background-image-toggle:not(.anp-colorful-frame).anp-canvas-dark-bg .canvas-wrapper,
+.anp-background-image-toggle:not(.anp-colorful-frame) .canvas-wrapper,
+.anp-background-image-toggle:not(.anp-colorful-frame) .mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout).mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right, .anp-background-image-toggle:not(.anp-colorful-frame).anp-card-layout .workspace-ribbon.mod-left:before,
+.anp-background-image-toggle:not(.anp-colorful-frame) .anp-card-layout .workspace-tab-header-container,
+.anp-background-image-toggle:not(.anp-colorful-frame) .workspace-split.mod-root {
+  background-color: transparent;
+}
+.anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-tab-header-container, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-tabs .workspace-leaf, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-split.mod-root .view-content, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-ribbon, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-ribbon.mod-left:before, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .view-header, .anp-background-image-toggle:not(.anp-colorful-frame).is-focused:not(.anp-card-layout) .workspace-leaf.mod-active .view-header,
+.anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin__lane,
+.anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin__item-content-wrapper {
+  background-color: var(--card-foreground-color);
+}
+.anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin__item-title-wrapper, .anp-background-image-toggle:not(.anp-colorful-frame).is-focused.anp-card-layout .workspace-leaf.mod-active .view-header, .anp-background-image-toggle:not(.anp-colorful-frame).anp-card-layout .workspace-ribbon {
+  background: transparent;
+}
+.anp-background-image-toggle:not(.anp-colorful-frame) .workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
+.anp-background-image-toggle:not(.anp-colorful-frame) .mod-root .workspace-tabs .workspace-leaf, .anp-background-image-toggle:not(.anp-colorful-frame).anp-card-layout .view-header,
+.anp-background-image-toggle:not(.anp-colorful-frame) .is-focused .workspace-leaf.mod-active .view-header {
+  background-color: transparent;
+}
+.anp-background-image-toggle:not(.anp-colorful-frame) .view-header-title-container:not(.mod-at-end):after {
+  display: none;
+}
+.anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin .kanban-plugin__lane button:hover {
+  background-color: var(--card-foreground-color);
+}
+
 .style-settings-container [data-level="1"].setting-item-heading .setting-item-name,
 .style-settings-container [data-level="2"].setting-item-heading .setting-item-name,
 .style-settings-container [data-level="3"].setting-item-heading .setting-item-name,
@@ -4368,25 +4530,13 @@ None of the original code was used and the feature was implemented from scratch.
 .style-settings-container .setting-item-heading[data-id=anuppuccin-theme-credits-link] {
   border-bottom-width: 0px !important;
 }
-.style-settings-container[data-id=anp-rainbow-section-header], .style-settings-container[data-id=anp-full-rainbow-folder-settings], .style-settings-container[data-id=anp-simple-rainbow-folder-settings] {
-  background: linear-gradient(to right, rgba(var(--ctp-red), 1), rgba(var(--ctp-peach), 1), rgba(var(--ctp-yellow), 1), rgba(var(--ctp-green), 1), rgba(var(--ctp-teal), 1), rgba(var(--ctp-blue), 1), rgba(var(--ctp-mauve), 1), rgba(var(--ctp-pink), 1)) !important;
-  padding-bottom: 3px;
-  padding-top: 0px;
-  height: 37px;
-  border-bottom-width: 0 !important;
-  margin-top: 3px;
-}
-.style-settings-container[data-id=anp-rainbow-section-header] .setting-item-info, .style-settings-container[data-id=anp-full-rainbow-folder-settings] .setting-item-info, .style-settings-container[data-id=anp-simple-rainbow-folder-settings] .setting-item-info {
-  background-color: var(--background-primary);
-}
-.style-settings-container[data-id=anp-rainbow-section-header] .setting-item-name, .style-settings-container[data-id=anp-full-rainbow-folder-settings] .setting-item-name, .style-settings-container[data-id=anp-simple-rainbow-folder-settings] .setting-item-name {
-  line-height: 37px;
-}
-.style-settings-container[data-id=anp-rainbow-section-header] .setting-item-control, .style-settings-container[data-id=anp-full-rainbow-folder-settings] .setting-item-control, .style-settings-container[data-id=anp-simple-rainbow-folder-settings] .setting-item-control {
-  background-color: var(--background-primary);
-  height: 37px;
-}
 
+.style-settings-heading[data-id=anuppuccin-theme-settings], .style-settings-heading[data-id=anuppuccin-theme-settings-extended] {
+  border-color: hsla(var(--color-accent-hsl), 0.2);
+}
+.style-settings-heading[data-id=anuppuccin-theme-settings] .setting-item-name, .style-settings-heading[data-id=anuppuccin-theme-settings-extended] .setting-item-name {
+  color: var(--color-accent);
+}
 .style-settings-heading[data-level="0"] {
   margin-bottom: 15px;
 }
@@ -4408,12 +4558,6 @@ None of the original code was used and the feature was implemented from scratch.
   width: fit-content;
   padding: 4px 6px;
   border-radius: 5px;
-}
-.style-settings-heading[data-id=anuppuccin-theme-settings], .style-settings-heading[data-id=anuppuccin-theme-settings-extended] {
-  border-color: hsla(var(--color-accent-hsl), 0.2);
-}
-.style-settings-heading[data-id=anuppuccin-theme-settings] .setting-item-name, .style-settings-heading[data-id=anuppuccin-theme-settings-extended] .setting-item-name {
-  color: var(--color-accent);
 }
 .style-settings-heading[data-id=anuppuccin-extended-colorschemes-link] {
   margin-bottom: 0px;
@@ -4472,30 +4616,195 @@ None of the original code was used and the feature was implemented from scratch.
   padding-left: 8px;
 }
 
-.kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
-  border: 2px dashed rgba(var(--text-muted-rgb), 0.1);
+/* Fix bottom padding of kanban board on mobile */
+body.is-mobile .kanban-plugin__board > div {
+  padding-bottom: 5rem;
 }
-.kanban-plugin__new-item-button, .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover, .kanban-plugin__lane-settings-button:hover {
-  box-shadow: none;
-  background-color: rgb(var(--ctp-crust));
+
+/* Fix bottom padding of kanban board when status bar is visible */
+body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
+  padding-bottom: 2.5rem;
 }
-.kanban-plugin button {
-  box-shadow: none;
+
+/* Kanban background */
+.kanban-plugin__board > div {
+  --kanban-dot-color: var(--canvas-dot-pattern);
+  --kanban-dot-offset: 7px;
+  --kanban-dot-spacing: 20px;
+  --kanban-dot-size: 0.7px;
+  background-image: radial-gradient(circle, var(--kanban-dot-color) var(--kanban-dot-size), transparent var(--kanban-dot-size));
+  background-position: var(--kanban-dot-offset) var(--kanban-dot-offset);
+  background-size: var(--kanban-dot-spacing) var(--kanban-dot-spacing);
+  flex-grow: 1;
 }
-.kanban-plugin button:hover {
-  background-color: rgb(var(--ctp-crust));
-  color: var(--text-normal);
-  transition: background-color 0.1s;
+
+/* Kanban lanes */
+.kanban-plugin__lane-form-wrapper {
+  border-color: var(--interactive-accent);
 }
 .kanban-plugin__lane-grip {
-  background-color: rgb(var(--ctp-crust));
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border-radius: 4px;
+  color: var(--background-modifier-border);
+}
+.kanban-plugin__lane-header-wrapper {
+  padding-right: 8px;
+}
+.kanban-plugin__lane-title-count {
+  margin-right: 5px;
+}
+.kanban-plugin__lane-setting-wrapper > div:last-child {
+  margin-bottom: 0;
+}
+.kanban-plugin__action-confirm-wrapper {
+  margin: 8px 8px 0;
+}
+
+/* Kanban card placeholder */
+.kanban-plugin .kanban-plugin__lane-items > .kanban-plugin__placeholder,
+.kanban-plugin__drag-container .kanban-plugin__lane-items > .kanban-plugin__placeholder {
+  border: 2px dashed rgba(var(--text-muted-rgb), 0.1);
+  width: auto;
+}
+.kanban-plugin .kanban-plugin__lane-items > .kanban-plugin__placeholder:not(:only-child),
+.kanban-plugin__drag-container .kanban-plugin__lane-items > .kanban-plugin__placeholder:not(:only-child) {
+  border-width: 0;
+}
+
+.is-sorting .kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
+  border-color: var(--background-modifier-border);
+}
+
+/* Kanban cards */
+.kanban-plugin__item:hover {
+  border-color: var(--interactive-accent);
 }
 .kanban-plugin__item.is-complete .kanban-plugin__item-markdown {
   color: var(--text-muted);
   text-decoration-line: line-through;
+  opacity: 0.75;
+}
+.kanban-plugin__item .markdown-preview-view .tag {
+  --tag-border-width: 0;
+  --tag-padding-y: 0;
+  --tag-padding-x: 0;
+  --tag-background: transparent;
+  --tag-color: var(--link-color);
+  --tag-size: reset;
+}
+.kanban-plugin__item-title-wrapper {
+  padding: 8px;
+}
+.kanban-plugin__item-title-wrapper div:first-child > a.clickable-icon {
+  position: relative;
+  left: -2px;
+}
+.kanban-plugin__item-title-wrapper div:last-child > a.clickable-icon {
+  position: relative;
+  right: -2px;
+}
+
+/* Kanban card content */
+.kanban-plugin,
+.kanban-plugin__drag-container {
+  --checkbox-size: 16px;
+}
+.kanban-plugin code[class*=language-],
+.kanban-plugin__drag-container code[class*=language-] {
+  font-size: 0.875em;
+  padding: 0.75em;
+  white-space: pre;
+}
+.kanban-plugin button.copy-code-button,
+.kanban-plugin__drag-container button.copy-code-button {
+  display: none;
+}
+.kanban-plugin textarea,
+.kanban-plugin__drag-container textarea {
+  background-color: transparent;
+}
+
+.kanban-plugin__drag-container p, .kanban-plugin__drag-container code {
+  overflow: hidden;
+}
+
+/* Kanban card meta and tags */
+.kanban-plugin,
+.kanban-plugin__drag-container {
+  --tag-color: var(--text-faint);
+}
+.kanban-plugin .kanban-plugin__item-metadata,
+.kanban-plugin__drag-container .kanban-plugin__item-metadata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+.kanban-plugin .kanban-plugin__item-metadata:not(:empty),
+.kanban-plugin__drag-container .kanban-plugin__item-metadata:not(:empty) {
+  padding-top: 8px;
+}
+.kanban-plugin .kanban-plugin__item-metadata-date-wrapper,
+.kanban-plugin__drag-container .kanban-plugin__item-metadata-date-wrapper {
+  line-height: var(--line-height-tight);
+}
+.kanban-plugin .kanban-plugin__item-tags,
+.kanban-plugin__drag-container .kanban-plugin__item-tags {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.kanban-plugin .kanban-plugin__item-tags:not(:empty),
+.kanban-plugin__drag-container .kanban-plugin__item-tags:not(:empty) {
+  padding-top: 0;
+}
+.kanban-plugin .kanban-plugin__item-tag,
+.kanban-plugin__drag-container .kanban-plugin__item-tag {
+  margin: 0;
+}
+
+/* Kanban date button and date picker */
+.kanban-plugin__item-metadata-date.is-button {
+  position: relative;
+  display: inline-block;
+}
+.kanban-plugin__item-metadata-date.is-button:hover::before {
+  position: absolute;
+  display: inline-flex;
+  top: -3px;
+  left: -5px;
+  right: -5px;
+  bottom: -3px;
+  content: "";
+  z-index: 0;
+  background-color: var(--background-modifier-hover);
+  border-radius: var(--clickable-icon-radius);
+}
+
+.kanban-plugin__date-picker {
+  --background-primary-alt: var(--background-modifier-hover);
+  --input-shadow: none;
+  --input-shadow-hover: none;
+}
+.kanban-plugin__date-picker .flatpickr-current-month input:hover, .kanban-plugin__date-picker .flatpickr-current-month input:focus,
+.kanban-plugin__date-picker .flatpickr-monthDropdown-months:hover,
+.kanban-plugin__date-picker .flatpickr-monthDropdown-months:focus {
+  background-color: var(--background-modifier-hover);
+  box-shadow: none;
+}
+.kanban-plugin__date-picker .flatpickr-day:not(.today):hover {
+  border-width: 0;
+}
+
+/* Kanban buttons */
+.kanban-plugin button,
+.kanban-plugin__drag-container button {
+  box-shadow: none;
+}
+.kanban-plugin button:hover,
+.kanban-plugin__drag-container button:hover {
+  background-color: var(--background-modifier-hover);
+  color: var(--text-normal);
+  transition: background-color 0.1s;
 }
 
 .theme-dark .excalidraw, .theme-dark .excalidraw.theme--dark, .theme-light .excalidraw, .theme-light .excalidraw.theme--dark {

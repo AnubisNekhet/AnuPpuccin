@@ -4530,25 +4530,13 @@ None of the original code was used and the feature was implemented from scratch.
 .style-settings-container .setting-item-heading[data-id=anuppuccin-theme-credits-link] {
   border-bottom-width: 0px !important;
 }
-.style-settings-container[data-id=anp-rainbow-section-header], .style-settings-container[data-id=anp-full-rainbow-folder-settings], .style-settings-container[data-id=anp-simple-rainbow-folder-settings] {
-  background: linear-gradient(to right, rgba(var(--ctp-red), 1), rgba(var(--ctp-peach), 1), rgba(var(--ctp-yellow), 1), rgba(var(--ctp-green), 1), rgba(var(--ctp-teal), 1), rgba(var(--ctp-blue), 1), rgba(var(--ctp-mauve), 1), rgba(var(--ctp-pink), 1)) !important;
-  padding-bottom: 3px;
-  padding-top: 0px;
-  height: 37px;
-  border-bottom-width: 0 !important;
-  margin-top: 3px;
-}
-.style-settings-container[data-id=anp-rainbow-section-header] .setting-item-info, .style-settings-container[data-id=anp-full-rainbow-folder-settings] .setting-item-info, .style-settings-container[data-id=anp-simple-rainbow-folder-settings] .setting-item-info {
-  background-color: var(--background-primary);
-}
-.style-settings-container[data-id=anp-rainbow-section-header] .setting-item-name, .style-settings-container[data-id=anp-full-rainbow-folder-settings] .setting-item-name, .style-settings-container[data-id=anp-simple-rainbow-folder-settings] .setting-item-name {
-  line-height: 37px;
-}
-.style-settings-container[data-id=anp-rainbow-section-header] .setting-item-control, .style-settings-container[data-id=anp-full-rainbow-folder-settings] .setting-item-control, .style-settings-container[data-id=anp-simple-rainbow-folder-settings] .setting-item-control {
-  background-color: var(--background-primary);
-  height: 37px;
-}
 
+.style-settings-heading[data-id=anuppuccin-theme-settings], .style-settings-heading[data-id=anuppuccin-theme-settings-extended] {
+  border-color: hsla(var(--color-accent-hsl), 0.2);
+}
+.style-settings-heading[data-id=anuppuccin-theme-settings] .setting-item-name, .style-settings-heading[data-id=anuppuccin-theme-settings-extended] .setting-item-name {
+  color: var(--color-accent);
+}
 .style-settings-heading[data-level="0"] {
   margin-bottom: 15px;
 }
@@ -4570,12 +4558,6 @@ None of the original code was used and the feature was implemented from scratch.
   width: fit-content;
   padding: 4px 6px;
   border-radius: 5px;
-}
-.style-settings-heading[data-id=anuppuccin-theme-settings], .style-settings-heading[data-id=anuppuccin-theme-settings-extended] {
-  border-color: hsla(var(--color-accent-hsl), 0.2);
-}
-.style-settings-heading[data-id=anuppuccin-theme-settings] .setting-item-name, .style-settings-heading[data-id=anuppuccin-theme-settings-extended] .setting-item-name {
-  color: var(--color-accent);
 }
 .style-settings-heading[data-id=anuppuccin-extended-colorschemes-link] {
   margin-bottom: 0px;
@@ -4634,30 +4616,195 @@ None of the original code was used and the feature was implemented from scratch.
   padding-left: 8px;
 }
 
-.kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
-  border: 2px dashed rgba(var(--text-muted-rgb), 0.1);
+/* Fix bottom padding of kanban board on mobile */
+body.is-mobile .kanban-plugin__board > div {
+  padding-bottom: 5rem;
 }
-.kanban-plugin__new-item-button, .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover, .kanban-plugin__lane-settings-button:hover {
-  box-shadow: none;
-  background-color: rgb(var(--ctp-crust));
+
+/* Fix bottom padding of kanban board when status bar is visible */
+body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
+  padding-bottom: 2.5rem;
 }
-.kanban-plugin button {
-  box-shadow: none;
+
+/* Kanban background */
+.kanban-plugin__board > div {
+  --kanban-dot-color: var(--canvas-dot-pattern);
+  --kanban-dot-offset: 7px;
+  --kanban-dot-spacing: 20px;
+  --kanban-dot-size: 0.7px;
+  background-image: radial-gradient(circle, var(--kanban-dot-color) var(--kanban-dot-size), transparent var(--kanban-dot-size));
+  background-position: var(--kanban-dot-offset) var(--kanban-dot-offset);
+  background-size: var(--kanban-dot-spacing) var(--kanban-dot-spacing);
+  flex-grow: 1;
 }
-.kanban-plugin button:hover {
-  background-color: rgb(var(--ctp-crust));
-  color: var(--text-normal);
-  transition: background-color 0.1s;
+
+/* Kanban lanes */
+.kanban-plugin__lane-form-wrapper {
+  border-color: var(--interactive-accent);
 }
 .kanban-plugin__lane-grip {
-  background-color: rgb(var(--ctp-crust));
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border-radius: 4px;
+  color: var(--background-modifier-border);
+}
+.kanban-plugin__lane-header-wrapper {
+  padding-right: 8px;
+}
+.kanban-plugin__lane-title-count {
+  margin-right: 5px;
+}
+.kanban-plugin__lane-setting-wrapper > div:last-child {
+  margin-bottom: 0;
+}
+.kanban-plugin__action-confirm-wrapper {
+  margin: 8px 8px 0;
+}
+
+/* Kanban card placeholder */
+.kanban-plugin .kanban-plugin__lane-items > .kanban-plugin__placeholder,
+.kanban-plugin__drag-container .kanban-plugin__lane-items > .kanban-plugin__placeholder {
+  border: 2px dashed rgba(var(--text-muted-rgb), 0.1);
+  width: auto;
+}
+.kanban-plugin .kanban-plugin__lane-items > .kanban-plugin__placeholder:not(:only-child),
+.kanban-plugin__drag-container .kanban-plugin__lane-items > .kanban-plugin__placeholder:not(:only-child) {
+  border-width: 0;
+}
+
+.is-sorting .kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
+  border-color: var(--background-modifier-border);
+}
+
+/* Kanban cards */
+.kanban-plugin__item:hover {
+  border-color: var(--interactive-accent);
 }
 .kanban-plugin__item.is-complete .kanban-plugin__item-markdown {
   color: var(--text-muted);
   text-decoration-line: line-through;
+  opacity: 0.75;
+}
+.kanban-plugin__item .markdown-preview-view .tag {
+  --tag-border-width: 0;
+  --tag-padding-y: 0;
+  --tag-padding-x: 0;
+  --tag-background: transparent;
+  --tag-color: var(--link-color);
+  --tag-size: reset;
+}
+.kanban-plugin__item-title-wrapper {
+  padding: 8px;
+}
+.kanban-plugin__item-title-wrapper div:first-child > a.clickable-icon {
+  position: relative;
+  left: -2px;
+}
+.kanban-plugin__item-title-wrapper div:last-child > a.clickable-icon {
+  position: relative;
+  right: -2px;
+}
+
+/* Kanban card content */
+.kanban-plugin,
+.kanban-plugin__drag-container {
+  --checkbox-size: 16px;
+}
+.kanban-plugin code[class*=language-],
+.kanban-plugin__drag-container code[class*=language-] {
+  font-size: 0.875em;
+  padding: 0.75em;
+  white-space: pre;
+}
+.kanban-plugin button.copy-code-button,
+.kanban-plugin__drag-container button.copy-code-button {
+  display: none;
+}
+.kanban-plugin textarea,
+.kanban-plugin__drag-container textarea {
+  background-color: transparent;
+}
+
+.kanban-plugin__drag-container p, .kanban-plugin__drag-container code {
+  overflow: hidden;
+}
+
+/* Kanban card meta and tags */
+.kanban-plugin,
+.kanban-plugin__drag-container {
+  --tag-color: var(--text-faint);
+}
+.kanban-plugin .kanban-plugin__item-metadata,
+.kanban-plugin__drag-container .kanban-plugin__item-metadata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+.kanban-plugin .kanban-plugin__item-metadata:not(:empty),
+.kanban-plugin__drag-container .kanban-plugin__item-metadata:not(:empty) {
+  padding-top: 8px;
+}
+.kanban-plugin .kanban-plugin__item-metadata-date-wrapper,
+.kanban-plugin__drag-container .kanban-plugin__item-metadata-date-wrapper {
+  line-height: var(--line-height-tight);
+}
+.kanban-plugin .kanban-plugin__item-tags,
+.kanban-plugin__drag-container .kanban-plugin__item-tags {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.kanban-plugin .kanban-plugin__item-tags:not(:empty),
+.kanban-plugin__drag-container .kanban-plugin__item-tags:not(:empty) {
+  padding-top: 0;
+}
+.kanban-plugin .kanban-plugin__item-tag,
+.kanban-plugin__drag-container .kanban-plugin__item-tag {
+  margin: 0;
+}
+
+/* Kanban date button and date picker */
+.kanban-plugin__item-metadata-date.is-button {
+  position: relative;
+  display: inline-block;
+}
+.kanban-plugin__item-metadata-date.is-button:hover::before {
+  position: absolute;
+  display: inline-flex;
+  top: -3px;
+  left: -5px;
+  right: -5px;
+  bottom: -3px;
+  content: "";
+  z-index: 0;
+  background-color: var(--background-modifier-hover);
+  border-radius: var(--clickable-icon-radius);
+}
+
+.kanban-plugin__date-picker {
+  --background-primary-alt: var(--background-modifier-hover);
+  --input-shadow: none;
+  --input-shadow-hover: none;
+}
+.kanban-plugin__date-picker .flatpickr-current-month input:hover, .kanban-plugin__date-picker .flatpickr-current-month input:focus,
+.kanban-plugin__date-picker .flatpickr-monthDropdown-months:hover,
+.kanban-plugin__date-picker .flatpickr-monthDropdown-months:focus {
+  background-color: var(--background-modifier-hover);
+  box-shadow: none;
+}
+.kanban-plugin__date-picker .flatpickr-day:not(.today):hover {
+  border-width: 0;
+}
+
+/* Kanban buttons */
+.kanban-plugin button,
+.kanban-plugin__drag-container button {
+  box-shadow: none;
+}
+.kanban-plugin button:hover,
+.kanban-plugin__drag-container button:hover {
+  background-color: var(--background-modifier-hover);
+  color: var(--text-normal);
+  transition: background-color 0.1s;
 }
 
 .theme-dark .excalidraw, .theme-dark .excalidraw.theme--dark, .theme-light .excalidraw, .theme-light .excalidraw.theme--dark {
