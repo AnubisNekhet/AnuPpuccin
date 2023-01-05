@@ -34,6 +34,9 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
   &__lane-title-count {
     margin-right: 5px;
   }
+  &__lane-setting-wrapper > div:last-child {
+    margin-bottom: 0;
+  }
 }
 
 /* Kanban card placeholder */
