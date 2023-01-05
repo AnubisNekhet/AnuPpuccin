@@ -1,31 +1,194 @@
+/* Fix bottom padding of kanban board on mobile */
+body.is-mobile .kanban-plugin__board > div {
+  padding-bottom: 5rem;
+}
+
+/* Fix bottom padding of kanban board when status bar is visible */
+body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
+  padding-bottom: 2.5rem;
+}
+
+/* Kanban background */
+.kanban-plugin__board > div {
+  --kanban-dot-color: var(--canvas-dot-pattern);
+  --kanban-dot-offset: 7px;
+  --kanban-dot-spacing: 20px;
+  --kanban-dot-size: 0.7px;
+  background-image: radial-gradient(circle, var(--kanban-dot-color) var(--kanban-dot-size),transparent var(--kanban-dot-size));
+  background-position: var(--kanban-dot-offset) var(--kanban-dot-offset);
+  background-size: var(--kanban-dot-spacing) var(--kanban-dot-spacing);
+  flex-grow: 1;
+}
+
+/* Kanban lanes */
 .kanban-plugin {
-  &__lane-items>.kanban-plugin__placeholder:only-child {
+  &__lane-form-wrapper {
+    border-color: var(--interactive-accent);
+  }
+  &__lane-grip {
+    color: var(--background-modifier-border);
+  }
+  &__lane-header-wrapper {
+    padding-right: 8px;
+  }
+  &__lane-title-count {
+    margin-right: 5px;
+  }
+  &__lane-setting-wrapper > div:last-child {
+    margin-bottom: 0;
+  }
+  &__action-confirm-wrapper {
+    margin: 8px 8px 0;
+  }
+}
+
+/* Kanban card placeholder */
+.kanban-plugin,
+.kanban-plugin__drag-container {
+  .kanban-plugin__lane-items > .kanban-plugin__placeholder {
     border: 2px dashed rgba(var(--text-muted-rgb),.1);
+    width: auto;
+    &:not(:only-child) {
+      border-width: 0;
+    }
   }
-  &__new-item-button, &__lane button.kanban-plugin__lane-settings-button:hover, &__lane-settings-button:hover {
-    box-shadow: none;
-    background-color: rgb(var(--ctp-crust));
+}
+.is-sorting .kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
+  border-color: var(--background-modifier-border);
+}
+
+/* Kanban cards */
+.kanban-plugin {
+  &__item {
+    &:hover {
+      border-color: var(--interactive-accent);
+    }
+    &.is-complete .kanban-plugin__item-markdown {
+      color: var(--text-muted);
+      text-decoration-line: line-through;
+      opacity: .75;
+    }
+    .markdown-preview-view .tag {
+      --tag-border-width: 0;
+      --tag-padding-y: 0;
+      --tag-padding-x: 0;
+      --tag-background: transparent;
+      --tag-color: var(--link-color);
+      --tag-size: reset;
+    }
   }
+  &__item-title-wrapper {
+    padding: 8px;
+    div:first-child > a.clickable-icon {
+      position: relative;
+      left: -2px;
+    }
+    div:last-child > a.clickable-icon {
+      position: relative;
+      right: -2px;
+    }
+  }
+}
+
+/* Kanban card content */
+.kanban-plugin,
+.kanban-plugin__drag-container {
+  --checkbox-size: 16px;
+
+  code[class*="language-"] {
+    font-size: .875em;
+    padding: .75em;
+    white-space: pre; // don't wrap code!
+  }
+  button.copy-code-button {
+    display: none; // because it doesn't work
+  }
+  textarea {
+    background-color: transparent; 
+  }
+}
+.kanban-plugin__drag-container {
+  p, code {
+    overflow: hidden;
+  }
+}
+
+/* Kanban card meta and tags */
+.kanban-plugin,
+.kanban-plugin__drag-container {
+  --tag-color: var(--text-faint);
+
+  .kanban-plugin__item-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+    &:not(:empty) {
+      padding-top: 8px;
+    }
+  }
+  .kanban-plugin__item-metadata-date-wrapper {
+    line-height: var(--line-height-tight);
+  }
+  .kanban-plugin__item-tags {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 4px;
+    &:not(:empty) {
+      padding-top: 0;
+    }
+  }
+  .kanban-plugin__item-tag {
+    margin: 0;
+  }
+}
+
+/* Kanban date button and date picker */
+.kanban-plugin {
+  &__item-metadata-date.is-button {
+    position: relative;
+    display: inline-block;
+  }
+  &__item-metadata-date.is-button:hover::before {
+    position: absolute;
+    display: inline-flex;
+    top: -3px;
+    left: -5px;
+    right: -5px;
+    bottom: -3px;
+    content: '';
+    z-index: 0;
+    background-color: var(--background-modifier-hover);
+    border-radius: var(--clickable-icon-radius);
+  }
+}
+.kanban-plugin__date-picker {
+  --background-primary-alt: var(--background-modifier-hover);
+  --input-shadow: none;
+  --input-shadow-hover: none;
+
+  .flatpickr-current-month input,
+  .flatpickr-monthDropdown-months {
+    &:hover, &:focus {
+      background-color: var(--background-modifier-hover);
+      box-shadow: none;
+    }
+  }
+  .flatpickr-day:not(.today):hover {
+    border-width: 0;
+  }
+}
+
+/* Kanban buttons */
+.kanban-plugin,
+.kanban-plugin__drag-container {
   button {
     box-shadow: none;
     &:hover {
-      background-color: rgb(var(--ctp-crust));
+      background-color: var(--background-modifier-hover);
       color: var(--text-normal);
       transition: background-color 0.1s;
-    }
-  }
-  &__lane-grip {
-    background-color: rgb(var(--ctp-crust));
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 4px;
-  }
-  &__item{
-    &.is-complete {
-      .kanban-plugin__item-markdown {
-        color: var(--text-muted);
-        text-decoration-line: line-through
-      }
     }
   }
 }
