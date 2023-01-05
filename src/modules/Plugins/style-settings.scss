@@ -26,28 +26,15 @@
   .setting-item-heading[data-id="anuppuccin-theme-credits-link"] {
     border-bottom-width: 0px !important;
   }
-  &[data-id="anp-rainbow-section-header"],
-  &[data-id="anp-full-rainbow-folder-settings"],
-  &[data-id="anp-simple-rainbow-folder-settings"] {
-    .setting-item-info {
-      background-color: var(--background-primary);
-    }
-    .setting-item-name {
-      line-height: 37px;
-    }
-    .setting-item-control {
-      background-color: var(--background-primary);
-      height: 37px;
-    }
-    background: linear-gradient(to right, rgba(var(--ctp-red), 1), rgba(var(--ctp-peach), 1), rgba(var(--ctp-yellow), 1), rgba(var(--ctp-green), 1), rgba(var(--ctp-teal), 1), rgba(var(--ctp-blue), 1), rgba(var(--ctp-mauve), 1), rgba(var(--ctp-pink), 1)) !important;
-    padding-bottom: 3px;
-    padding-top: 0px;
-    height: 37px;
-    border-bottom-width: 0 !important;
-    margin-top: 3px;
-  }
 }
 .style-settings-heading {
+  &[data-id="anuppuccin-theme-settings"],
+  &[data-id="anuppuccin-theme-settings-extended"] {
+    .setting-item-name {
+      color: var(--color-accent);
+    }
+    border-color: hsla(var(--color-accent-hsl), 0.2);
+  }
   &[data-level="0"] {
     margin-bottom: 15px;
     &.is-collapsed {
@@ -69,13 +56,6 @@
       padding: 4px 6px;
       border-radius: 5px;
     }
-  }
-  &[data-id="anuppuccin-theme-settings"],
-  &[data-id="anuppuccin-theme-settings-extended"] {
-    .setting-item-name {
-      color: var(--color-accent);
-    }
-    border-color: hsla(var(--color-accent-hsl), 0.2);
   }
   &[data-id="anuppuccin-extended-colorschemes-link"] {
     margin-bottom: 0px;

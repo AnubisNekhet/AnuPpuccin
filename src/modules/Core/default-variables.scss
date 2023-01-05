@@ -203,7 +203,7 @@ body {
     --anp-custom-bg-card-fg-opacity: var(--anp-custom-bg-card-fg-opacity-light);
   }
   &.theme-dark {
-    --anp-background-image: var(--anp-background-image-dark)
+    --anp-background-image: var(--anp-background-image-dark);
     --anp-custom-bg-brightness: var(--anp-custom-bg-brightness-dark);
     --anp-custom-bg-blur: var(--anp-custom-bg-blur-dark);
     --anp-custom-bg-card-fg-opacity: var(--anp-custom-bg-card-fg-opacity-dark);
