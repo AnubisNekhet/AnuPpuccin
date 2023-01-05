@@ -37,6 +37,9 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
   &__lane-setting-wrapper > div:last-child {
     margin-bottom: 0;
   }
+  &__action-confirm-wrapper {
+    margin: 8px 8px 0;
+  }
 }
 
 /* Kanban card placeholder */
