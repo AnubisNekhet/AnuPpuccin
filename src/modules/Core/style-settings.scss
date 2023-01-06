@@ -129,8 +129,12 @@ settings:
         title: "Toggle colorful frame (WIP)"
         type: class-toggle
     - 
-        id: anp-colorful-frame-icon-toggle
-        title: "Invert icon colors"
+        id: anp-colorful-frame-icon-toggle-light
+        title: "Invert icon colors - Light"
+        type: class-toggle
+    - 
+        id: anp-colorful-frame-icon-toggle-dark
+        title: "Invert icon colors - Dark"
         type: class-toggle
     - 
         id: anp-colorful-frame-opacity
