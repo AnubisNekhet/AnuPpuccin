@@ -11,7 +11,7 @@
     color: var(--text-faint);
     content: counter(line-numbers);
     counter-increment: line-numbers;
-    display: flex;
+    display: table-caption;
     font-size: .8em;
     height: 100%;
     justify-content: flex-end;

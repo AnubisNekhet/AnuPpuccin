@@ -129,6 +129,10 @@ settings:
         title: "Toggle colorful frame (WIP)"
         type: class-toggle
     - 
+        id: anp-colorful-frame-icon-toggle
+        title: "Invert icon colors"
+        type: class-toggle
+    - 
         id: anp-colorful-frame-opacity
         title: Colorful frame opacity
         type: variable-number-slider
@@ -206,6 +210,25 @@ settings:
         id: anp-canvas-dark-bg
         title: Darker canvas background
         type: class-toggle
+    - 
+        id: anp-codeblock-header
+        title: Codeblocks
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: anp-codeblock-wrap
+        title: Codeblock line wrap
+        description: Works only in Live Preview and Source Mode
+        type: variable-select
+        default: nowrap
+        options:
+            -
+                label: Wrap
+                value: normal
+            -
+                label: No Wrap
+                value: nowrap
     - 
         id: anp-custom-background-header
         title: Custom background
