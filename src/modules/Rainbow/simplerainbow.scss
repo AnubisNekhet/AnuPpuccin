@@ -3,6 +3,8 @@
     .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title {
       transition: color 0.4s;
       color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
+      --nav-item-background-hover: rgba(var(--rainbow-folder-color), 0.1);
+      --nav-item-background-active: rgba(var(--rainbow-folder-color), 0.1)
     }
   }
   &.anp-simple-rainbow-icon-toggle  .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:after {

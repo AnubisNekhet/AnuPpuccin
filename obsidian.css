@@ -3550,6 +3550,10 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
   background-color: rgb(var(--ctp-yellow));
 }
 
+/*-----------------------------------
+Rainbow tags is a snippet by @raisabelatrix
+Link: https://gist.github.com/raisabelatrix/eb383f7e19b59f951430c2f3c6ed80b0
+-----------------------------------*/
 body.rainbow-tags {
   --rainbow-tags-opacity: 0.3;
   --r1-color: rgb(var(--ctp-red));
@@ -5154,6 +5158,8 @@ body .excalidraw .library-menu-items-container .library-actions--load, body .exc
 .anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title {
   transition: color 0.4s;
   color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
+  --nav-item-background-hover: rgba(var(--rainbow-folder-color), 0.1);
+  --nav-item-background-active: rgba(var(--rainbow-folder-color), 0.1) ;
 }
 .anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:after {
   transition: color 0.4s;
