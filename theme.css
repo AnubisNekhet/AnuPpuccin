@@ -3824,6 +3824,18 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
   --colorful-icon-color-alt: var(--text-muted);
 }
 
+.anp-colorful-frame.is-focused .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner .workspace-tab-header-inner-title, .anp-colorful-frame.is-focused .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner .workspace-tab-header-inner-close-button {
+  color: var(--text-muted);
+}
+
+.anp-colorful-frame .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner .workspace-tab-header-inner-close-button {
+  color: var(--text-muted);
+}
+
+.anp-colorful-frame.is-focused .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active .workspace-tab-header-inner .workspace-tab-header-inner-title, .anp-colorful-frame.is-focused .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active .workspace-tab-header-inner .workspace-tab-header-inner-close-button {
+  color: var(--color-accent);
+}
+
 .anp-colorful-frame:not(.anp-card-layout) .mod-top .workspace-tab-header-container,
 body.anp-colorful-frame.anp-card-layout,
 body.anp-colorful-frame.anp-card-layout .workspace-tabs.mod-top,
