@@ -70,6 +70,9 @@ settings:
             label: Gruvbox
             value: ctp-gruvbox-dark
         -
+            label: Kanagawa
+            value: ctp-kanagawa-dark
+        -
             label: Nord
             value: ctp-nord-dark
         -
@@ -634,4 +637,34 @@ settings:
   --ctp-crust: 230, 223, 216;
   --ctp-mantle: 237, 231, 224;
   --ctp-base: 240, 234, 226;
+}
+.theme-dark.anp-theme-ext-dark.ctp-kanagawa-dark {
+  --ctp-rosewater: 255, 200, 148;
+  --ctp-flamingo: 210, 126, 129;
+  --ctp-pink: 210, 126, 153;
+  --ctp-mauve: 149, 127, 184;
+  --ctp-red: 255, 93, 98;
+  --ctp-maroon: 228, 104, 118;
+  --ctp-peach: 255, 160, 102;
+  --ctp-yellow: 230, 195, 132;
+  --ctp-green: 152, 187, 108;
+  --ctp-teal: 122, 168, 159;
+  --ctp-sky: 163, 212, 213;
+  --ctp-sapphire: 127, 180, 202;
+  --ctp-blue: 126, 156, 216;
+  --ctp-lavender: 147, 138, 169;
+  --ctp-text: 220, 215, 186;
+  --ctp-subtext1: 212, 206, 170;
+  --ctp-subtext0: 200, 192, 147;
+  --ctp-overlay2: 95, 95, 124;
+  --ctp-overlay1: 84, 84, 109;
+  --ctp-overlay0: 73, 73, 95;
+  --ctp-surface2: 62, 62, 81;
+  --ctp-surface1: 54, 54, 69;
+  --ctp-surface0: 42, 42, 55;
+  --ctp-crust: 11, 11, 15;
+  --ctp-mantle: 22, 22, 29;
+  --ctp-base: 31, 31, 40;
+  --text-muted: rgb(var(--ctp-subtext1));
+  --text-faint: rgb(var(--ctp-subtext0));
 }
