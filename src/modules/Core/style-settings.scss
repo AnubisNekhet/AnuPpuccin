@@ -425,6 +425,18 @@ settings:
         id: anp-toggle-scrollbars
         title: Disable scrollbars
         type: class-toggle
+    -
+        id: anp-file-label-align
+        title: File label alignment
+        type: variable-select
+        default: "0"
+        options:
+            -
+                label: Right
+                value: 1
+            -
+                label: Left
+                value: 0
     - 
         id: anp-header-header
         title: Headings

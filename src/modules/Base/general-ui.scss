@@ -56,7 +56,9 @@
   background-color: var(--tab-container-background);
 }
 /* Align file extension labels to the right in sidebar */
-.nav-file-title-content,
+.nav-file-title-content {
+  flex-grow: var(--anp-file-label-align);
+}
 .nav-folder-title-content {
   flex-grow: 1;
 }
