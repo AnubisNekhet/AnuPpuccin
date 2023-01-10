@@ -55,3 +55,8 @@
 .anp-card-layout .mod-vertical .workspace-tabs {
   background-color: var(--tab-container-background);
 }
+/* Align file extension labels to the right in sidebar */
+.nav-file-title-content,
+.nav-folder-title-content {
+  flex-grow: 1;
+}
