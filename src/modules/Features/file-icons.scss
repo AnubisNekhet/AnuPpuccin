@@ -18,6 +18,8 @@
  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' data-darkreader-inline-stroke='' style='--darkreader-inline-stroke:currentColor;'%3E%3Crect x='3' y='3' width='7' height='9'%3E%3C/rect%3E%3Crect x='14' y='3' width='7' height='5'%3E%3C/rect%3E%3Crect x='14' y='12' width='7' height='9'%3E%3C/rect%3E%3Crect x='3' y='16' width='7' height='5'%3E%3C/rect%3E%3C/svg%3E");
   -webkit-mask-repeat: no-repeat;
 }
+.anp-file-icons .nav-file .nav-file-title[data-path$=".svg"]::before,
+.anp-file-icons .nav-file .nav-file-title[data-path$=".bmp"]::before,
 .anp-file-icons .nav-file .nav-file-title[data-path$=".jpg"]::before,
 .anp-file-icons .nav-file .nav-file-title[data-path$=".gif"]::before,
 .anp-file-icons .nav-file .nav-file-title[data-path$=".webp"]::before,
