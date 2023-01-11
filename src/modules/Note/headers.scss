@@ -1,7 +1,6 @@
 /*--------------HEADERS----------------*/
 /*-Custom header font-*/
 .anp-header-color-toggle {
-	/*--------------H1 Colors-------------*/
 	&.anp-h1-rosewater { --h1-color: rgb(var(--ctp-rosewater)); }
 	&.anp-h1-flamingo { --h1-color: rgb(var(--ctp-flamingo)); }
 	&.anp-h1-pink { --h1-color: rgb(var(--ctp-pink)); }
@@ -16,7 +15,6 @@
 	&.anp-h1-sapphire { --h1-color: rgb(var(--ctp-sapphire)); }
 	&.anp-h1-blue { --h1-color: rgb(var(--ctp-blue)); }
 	&.anp-h1-lavender { --h1-color: rgb(var(--ctp-lavender)); }
-	/*--------------H2 Colors-------------*/
 	&.anp-h2-rosewater { --h2-color: rgb(var(--ctp-rosewater)); }
 	&.anp-h2-flamingo { --h2-color: rgb(var(--ctp-flamingo)); }
 	&.anp-h2-pink { --h2-color: rgb(var(--ctp-pink)); }
@@ -31,7 +29,6 @@
 	&.anp-h2-sapphire { --h2-color: rgb(var(--ctp-sapphire)); }
 	&.anp-h2-blue { --h2-color: rgb(var(--ctp-blue)); }
 	&.anp-h2-lavender { --h2-color: rgb(var(--ctp-lavender)); }
-	/*--------------H3 Colors-------------*/
 	&.anp-h3-rosewater { --h3-color: rgb(var(--ctp-rosewater)); }
 	&.anp-h3-flamingo { --h3-color: rgb(var(--ctp-flamingo)); }
 	&.anp-h3-pink { --h3-color: rgb(var(--ctp-pink)); }
@@ -46,7 +43,6 @@
 	&.anp-h3-sapphire { --h3-color: rgb(var(--ctp-sapphire)); }
 	&.anp-h3-blue { --h3-color: rgb(var(--ctp-blue)); }
 	&.anp-h3-lavender { --h3-color: rgb(var(--ctp-lavender)); }
-	/*--------------H4 Colors-------------*/
 	&.anp-h4-rosewater { --h4-color: rgb(var(--ctp-rosewater)); }
 	&.anp-h4-flamingo { --h4-color: rgb(var(--ctp-flamingo)); }
 	&.anp-h4-pink { --h4-color: rgb(var(--ctp-pink)); }
@@ -61,7 +57,6 @@
 	&.anp-h4-sapphire { --h4-color: rgb(var(--ctp-sapphire)); }
 	&.anp-h4-blue { --h4-color: rgb(var(--ctp-blue)); }
 	&.anp-h4-lavender { --h4-color: rgb(var(--ctp-lavender)); }
-	/*--------------H5 Colors-------------*/
 	&.anp-h5-rosewater { --h5-color: rgb(var(--ctp-rosewater)); }
 	&.anp-h5-flamingo { --h5-color: rgb(var(--ctp-flamingo)); }
 	&.anp-h5-pink { --h5-color: rgb(var(--ctp-pink)); }
@@ -76,7 +71,6 @@
 	&.anp-h5-sapphire { --h5-color: rgb(var(--ctp-sapphire)); }
 	&.anp-h5-blue { --h5-color: rgb(var(--ctp-blue)); }
 	&.anp-h5-lavender { --h5-color: rgb(var(--ctp-lavender)); }
-	/*--------------H6 Colors-------------*/
 	&.anp-h6-rosewater { --h6-color: rgb(var(--ctp-rosewater)); }
 	&.anp-h6-flamingo { --h6-color: rgb(var(--ctp-flamingo)); }
 	&.anp-h6-pink { --h6-color: rgb(var(--ctp-pink)); }

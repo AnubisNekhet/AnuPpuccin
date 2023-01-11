@@ -224,13 +224,13 @@ settings:
     -
         id: anp-codeblock-wrap
         title: Codeblock line wrap
-        description: Works only in Live Preview and Source Mode
+        description: Does not work for codeblocks with syntax highlighting
         type: variable-select
         default: nowrap
         options:
             -
                 label: Wrap
-                value: normal
+                value: prewrap
             -
                 label: No Wrap
                 value: nowrap
@@ -1083,6 +1083,13 @@ settings:
     - 
         id: anp-plugin-style-settings
         title: Style settings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: anp-snippet-minimal-cards-disclaimer
+        title: Minimal Cards is a feature of Minimal by Kepano and this theme does not come with the snippet.
+        description: "https://github.com/kepano/obsidian-minimal"
         type: heading
         level: 3
         collapsed: true
@@ -2050,6 +2057,8 @@ body {
   --card-background-color: rgb(var(--ctp-crust));
   --card-foreground-color: rgb(var(--ctp-base));
   --tab-inactive-color: rgb(var(--ctp-mantle));
+  --code-background: rgb(var(--anp-custom-code-bg, var(--ctp-mantle)));
+  --code-normal: rgb(var(--anp-custom-code-normal, var(--ctp-text)));
 }
 body.theme-light {
   --anp-background-image: var(--anp-background-image-light);
@@ -2584,8 +2593,24 @@ body.is-translucent {
 }
 
 .markdown-source-view.mod-cm6 .HyperMD-codeblock.cm-line {
-  white-space: var(--anp-codeblock-wrap);
-  overflow-x: hidden;
+  white-space: var(--anp-codeblock-wrap, prewrap);
+  overflow-x: scroll;
+}
+
+.markdown-rendered pre {
+  white-space: var(--anp-codeblock-wrap, prewrap);
+  overflow-x: auto;
+}
+.markdown-rendered pre code {
+  overflow-x: scroll;
+}
+
+.markdown-rendered :not(pre) > code {
+  --code-normal: var(--anp-code-text-color);
+}
+
+.markdown-rendered code:not([class*=language]) {
+  --code-normal: var(--anp-code-text-color);
 }
 
 .frontmatter-section-data-item {
@@ -2657,11 +2682,11 @@ body.is-translucent {
   color: var(--italic-color);
 }
 
-.internal-embed[alt*=seamless] > .markdown-embed {
+.internal-embed[alt*=seamless].markdown-embed {
   --embed-padding: 0;
   border-width: 0px;
 }
-.internal-embed[alt*=seamless] > .markdown-embed > .markdown-embed-title {
+.internal-embed[alt*=seamless].markdown-embed > .markdown-embed-title {
   width: fit-content;
   position: absolute;
   left: unset;
@@ -2670,25 +2695,17 @@ body.is-translucent {
   opacity: 0;
   transition: opacity 0.1s;
 }
-.internal-embed[alt*=seamless] > .markdown-embed > .markdown-embed-link {
+.internal-embed[alt*=seamless].markdown-embed > .markdown-embed-link {
   opacity: 0;
   transition: opacity 0.1s;
 }
-.internal-embed[alt*=seamless] > .markdown-embed:hover > .markdown-embed-title, .internal-embed[alt*=seamless] > .markdown-embed:hover > .markdown-embed-link {
+.internal-embed[alt*=seamless].markdown-embed:hover > .markdown-embed-title, .internal-embed[alt*=seamless].markdown-embed:hover > .markdown-embed-link {
   opacity: 1;
   transition: opacity 0.1s;
 }
 
 /*--------------HEADERS----------------*/
 /*-Custom header font-*/
-.anp-header-color-toggle {
-  /*--------------H1 Colors-------------*/
-  /*--------------H2 Colors-------------*/
-  /*--------------H3 Colors-------------*/
-  /*--------------H4 Colors-------------*/
-  /*--------------H5 Colors-------------*/
-  /*--------------H6 Colors-------------*/
-}
 .anp-header-color-toggle.anp-h1-rosewater {
   --h1-color: rgb(var(--ctp-rosewater));
 }
