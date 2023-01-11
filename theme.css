@@ -234,6 +234,25 @@ settings:
             -
                 label: No Wrap
                 value: nowrap
+    -
+        id: anp-code-text-color
+        title: Codeblock Text Color
+        type: variable-themed-color
+        description: Applies to codeblocks without syntax highlighting
+        allowEmpty: true
+        format: hex
+        opacity: false
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: anp-code-bg-color
+        title: Codeblock Background Color
+        type: variable-themed-color
+        allowEmpty: true
+        format: hex
+        opacity: false
+        default-light: '#'
+        default-dark: '#'
     - 
         id: anp-custom-background-header
         title: Custom background
@@ -2053,6 +2072,7 @@ body {
   --anp-header-font: "Noto Serif";
   --tab-stacked-pane-width: calc(var(--anp-tab-stacked-pane-width, 1)*var(--file-line-width));
   --anp-table-width-pct: 100%;
+  --code-background: var(--anp-code-bg-color, var(--background-secondary-alt));
   --canvas-color: var(--ctp-overlay2);
   --card-background-color: rgb(var(--ctp-crust));
   --card-foreground-color: rgb(var(--ctp-base));
@@ -2606,11 +2626,11 @@ body.is-translucent {
 }
 
 .markdown-rendered :not(pre) > code {
-  --code-normal: var(--anp-code-text-color);
+  --code-normal: var(--anp-code-text-color, var(--text-normal));
 }
 
 .markdown-rendered code:not([class*=language]) {
-  --code-normal: var(--anp-code-text-color);
+  --code-normal: var(--anp-code-text-color, var(--text-normal));
 }
 
 .frontmatter-section-data-item {

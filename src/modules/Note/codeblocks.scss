@@ -10,8 +10,8 @@
   overflow-x: auto;
 }
 .markdown-rendered :not(pre) > code {
-  --code-normal: var(--anp-code-text-color);
+  --code-normal: var(--anp-code-text-color, var(--text-normal));
 }
 .markdown-rendered code:not([class*="language"]) {
-  --code-normal: var(--anp-code-text-color);
+  --code-normal: var(--anp-code-text-color, var(--text-normal));
 }
