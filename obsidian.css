@@ -3489,9 +3489,6 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
   padding: var(--callout-title-padding);
   cursor: pointer;
 }
-.anp-callout-toggle.anp-callout-sleek .callout:not([data-callout-metadata*=revert]).is-collapsible.is-collapsed > .callout-content {
-  display: none;
-}
 .anp-callout-toggle.anp-callout-sleek .callout:not([data-callout-metadata*=revert]).is-collapsible:not(.is-collapsed) {
   padding: 0px 0px var(--callout-title-padding) 0px;
 }

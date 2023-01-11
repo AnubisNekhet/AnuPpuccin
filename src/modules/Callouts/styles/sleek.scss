@@ -54,9 +54,6 @@
           padding: var(--callout-title-padding);
           cursor: pointer;
         }
-        & > .callout-content {
-          display: none;
-        }
       }
       &:not(.is-collapsed) {
         padding: 0px 0px var(--callout-title-padding) 0px;
