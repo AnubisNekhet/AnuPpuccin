@@ -1106,18 +1106,18 @@ settings:
         level: 3
         collapsed: true
     - 
-        id: anp-snippet-minimal-cards-disclaimer
-        title: Minimal Cards is a feature of Minimal by Kepano and this theme does not come with the snippet.
-        description: "https://github.com/kepano/obsidian-minimal"
-        type: heading
-        level: 3
-        collapsed: true
-    - 
         id: anp-snippet-minimal-cards
         title: Minimal Cards
         description: "The snippet is available at: https://github.com/kepano/obsidian-minimal/blob/master/src/scss/features/cards.scss"
         type: heading
         level: 3
+        collapsed: true
+    - 
+        id: anp-snippet-minimal-cards-disclaimer
+        title: Minimal Cards is a feature of Minimal by Kepano and this theme does not come with the snippet.
+        description: "https://github.com/kepano/obsidian-minimal"
+        type: heading
+        level: 4
         collapsed: true
     -
         id: cards-min-width
