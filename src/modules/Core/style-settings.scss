@@ -1111,13 +1111,6 @@ settings:
         type: heading
         level: 3
         collapsed: true
-    - 
-        id: anp-snippet-minimal-cards-disclaimer
-        title: Minimal Cards is a feature of Minimal by Kepano and this theme does not come with the snippet.
-        description: "https://github.com/kepano/obsidian-minimal"
-        type: heading
-        level: 4
-        collapsed: true
     -
         id: cards-min-width
         title: Card minimum width
@@ -1149,6 +1142,13 @@ settings:
         title: Card border width
         type: variable-text
         default: 1px
+    - 
+        id: anp-snippet-minimal-cards-disclaimer
+        title: Minimal Cards is a feature of Minimal by Kepano and this theme does not come with the snippet.
+        description: "https://github.com/kepano/obsidian-minimal"
+        type: heading
+        level: 4
+        collapsed: true
     -
         id: anp-rainbow-section-header
         title: Rainbow folder
