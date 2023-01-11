@@ -62,3 +62,7 @@
 .nav-folder-title-content {
   flex-grow: 1;
 }
+/* Hide empty frontmatter (uses :has()) */
+.frontmatter-container:not(:has(.frontmatter-section)) {
+  display: none;
+}

@@ -2321,6 +2321,11 @@ body.theme-dark {
   flex-grow: 1;
 }
 
+/* Hide empty frontmatter (uses :has()) */
+.frontmatter-container:not(:has(.frontmatter-section)) {
+  display: none;
+}
+
 .workspace-split:not(.mod-root) .graph-controls.is-close,
 .workspace-split:not(.mod-root) .graph-controls,
 .workspace-split:not(.mod-root) .graph-controls:not(.is-close) {
