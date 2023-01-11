@@ -1356,6 +1356,9 @@ settings:
                 label: Default
                 value: anp-default-tab
             - 
+                label: Depth
+                value: anp-depth-tab-toggle
+            - 
                 label: Minimalistic
                 value: anp-mini-tab-toggle
             - 
@@ -1375,6 +1378,30 @@ settings:
         id: anp-disable-newtab-align
         title: Disable new tab button right alignment
         type: class-toggle
+    - 
+        id: anp-depth-tab-header
+        title: Depth Tab settings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: anp-depth-tab-text-invert
+        title: Invert tab text color
+        type: class-toggle
+    -
+        id: anp-depth-tab-opacity
+        title: Tab opacity
+        type: variable-number-slider
+        default: 0.6
+        max: 1
+        min: 0
+        step: 0.1
+    -
+        id: anp-depth-tab-gap
+        title: Tab gap
+        type: variable-number
+        default: 10
+        format: px
     - 
         id: anp-mini-tab-header
         title: Minimalistic Tab settings
