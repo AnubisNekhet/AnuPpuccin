@@ -12,8 +12,11 @@
   }
 }
 /*-Custom editor font-*/
-.anp-editor-font-toggle .markdown-source-view.mod-cm6:not(.is-live-preview) .cm-scroller {
-  font-family: var(--anp-editor-font);
+.markdown-source-view:not(.is-live-preview) {
+  --font-text: var(--anp-editor-font-source, var(--font-text-override)), var(--font-text-theme), var(--font-interface);
+}
+.markdown-source-view.is-live-preview {
+  --font-text: var(--anp-editor-font-lp, var(--font-text-override)), var(--font-text-theme), var(--font-interface);
 }
 /*-Highlighted gutter number-*/
 .cm-lineNumbers .cm-gutterElement.cm-active {    

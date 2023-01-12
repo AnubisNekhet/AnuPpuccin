@@ -362,12 +362,13 @@ settings:
         level: 2
         collapsed: true
     - 
-        id: anp-editor-font-toggle
-        title: Enable custom source editor font
-        type: class-toggle
+        id: anp-editor-font-source
+        title: Source editor font
+        type: variable-text
+        default: Iosevka Comfy Duo
     - 
-        id: anp-editor-font
-        title: Editor font
+        id: anp-editor-font-lp
+        title: Live Preview editor font
         type: variable-text
         default: Iosevka Comfy Duo
     - 
@@ -1381,6 +1382,7 @@ settings:
     - 
         id: anp-depth-tab-header
         title: Depth Tab settings
+        description: Only applies to inactive tabs
         type: heading
         level: 3
         collapsed: true

@@ -363,12 +363,13 @@ settings:
         level: 2
         collapsed: true
     - 
-        id: anp-editor-font-toggle
-        title: Enable custom source editor font
-        type: class-toggle
+        id: anp-editor-font-source
+        title: Source editor font
+        type: variable-text
+        default: Iosevka Comfy Duo
     - 
-        id: anp-editor-font
-        title: Editor font
+        id: anp-editor-font-lp
+        title: Live Preview editor font
         type: variable-text
         default: Iosevka Comfy Duo
     - 
@@ -1382,6 +1383,7 @@ settings:
     - 
         id: anp-depth-tab-header
         title: Depth Tab settings
+        description: Only applies to inactive tabs
         type: heading
         level: 3
         collapsed: true
@@ -2138,8 +2140,12 @@ body.theme-dark {
 }
 
 /*-Custom editor font-*/
-.anp-editor-font-toggle .markdown-source-view.mod-cm6:not(.is-live-preview) .cm-scroller {
-  font-family: var(--anp-editor-font);
+.markdown-source-view:not(.is-live-preview) {
+  --font-text: var(--anp-editor-font-source, var(--font-text-override)), var(--font-text-theme), var(--font-interface);
+}
+
+.markdown-source-view.is-live-preview {
+  --font-text: var(--anp-editor-font-lp, var(--font-text-override)), var(--font-text-theme), var(--font-interface);
 }
 
 /*-Highlighted gutter number-*/
