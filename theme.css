@@ -5282,6 +5282,17 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
   transition: background-color 0.1s;
 }
 
+/* Kanban Autocomplete Fix */
+.kanban-plugin__autocomplete-item-active em {
+  color: var(--text-on-accent);
+}
+
+/* Notion-Styled Kanban Fix */
+body.theme-dark.theme-dark {
+  --notion-kanban-card: rgb(var(--ctp-surface0));
+  --notion-kanban-card-hover: rgb(var(--ctp-surface1));
+}
+
 .theme-dark .excalidraw, .theme-dark .excalidraw.theme--dark, .theme-light .excalidraw, .theme-light .excalidraw.theme--dark {
   --button-destructive-bg-color: rgba(var(--ctp-red), 0.2);
   --button-destructive-color: rgb(var(--ctp-red));
