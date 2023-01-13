@@ -415,7 +415,7 @@ settings:
         options:
             -
                 label: Wrap
-                value: prewrap
+                value: pre-wrap
             -
                 label: No Wrap
                 value: nowrap
@@ -591,6 +591,18 @@ settings:
         id: anp-custom-vault-toggle
         title: Enable custom vault title
         type: class-toggle
+    -
+        id: anp-file-label-align
+        title: File label alignment
+        type: variable-select
+        default: "0"
+        options:
+            -
+                label: Right
+                value: 1
+            -
+                label: Left
+                value: 0
     - 
         id: anp-preview-header
         title: File preview
@@ -653,18 +665,6 @@ settings:
         id: anp-toggle-scrollbars
         title: Disable scrollbars
         type: class-toggle
-    -
-        id: anp-file-label-align
-        title: File label alignment
-        type: variable-select
-        default: "0"
-        options:
-            -
-                label: Right
-                value: 1
-            -
-                label: Left
-                value: 0
     - 
         id: anp-header-header
         title: Headings
@@ -1372,17 +1372,15 @@ settings:
         desc: Recolors files to match the folders
         type: class-toggle
     - 
+        id: anp-full-rainbow-text-color-toggle
+        title: Invert title colors
+        type: class-toggle
+    - 
         id: anp-rainbow-folder-bg-opacity
         title: Folder background color opacity
         description: Uses decimal
         type: variable-number
         default: 0.7
-    - 
-        id: anp-rainbow-folder-border-opacity
-        title: Folder border opacity
-        description: Uses decimal
-        type: variable-number
-        default: 1
     - 
         id: anp-simple-rainbow-folder-settings
         title: Simple folder theme settings
@@ -2838,12 +2836,12 @@ body.is-translucent {
 }
 
 .markdown-source-view.mod-cm6 .HyperMD-codeblock.cm-line {
-  white-space: var(--anp-codeblock-wrap, prewrap);
+  white-space: var(--anp-codeblock-wrap, pre-wrap);
   overflow-x: scroll;
 }
 
 .markdown-rendered pre {
-  white-space: var(--anp-codeblock-wrap, prewrap);
+  white-space: var(--anp-codeblock-wrap, pre-wrap);
   overflow-x: auto;
 }
 .markdown-rendered pre code {
@@ -3444,6 +3442,10 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
   color: var(--text-muted);
   max-width: var(--tab-max-width);
 }
+.anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header:not(.is-active) {
+  --icon-color: var(--text-muted);
+  --icon-color-hover: var(--text-muted);
+}
 .anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header .workspace-tab-header-inner .workspace-tab-header-inner-title {
   margin-top: 3px;
 }
@@ -3626,6 +3628,8 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
 }
 .anp-depth-tab-toggle .workspace .mod-root .workspace-tab-header:not(.is-active) {
   --tab-text-color: rgb(var(--anp-depth-tab-text));
+  --icon-color: rgb(var(--anp-depth-tab-text));
+  --icon-color-hover: rgb(var(--anp-depth-tab-text));
   background-color: rgba(var(--ctp-mantle), var(--anp-depth-tab-opacity, 0.6));
 }
 .anp-depth-tab-toggle .workspace .mod-root .workspace-tab-header:not(.is-active)::before, .anp-depth-tab-toggle .workspace .mod-root .workspace-tab-header:not(.is-active)::after {
@@ -4035,6 +4039,24 @@ body.rainbow-tags {
 }
 
 /*-Button for metadata-*/
+.anp-button-metadata-toggle.anuppuccin-accent-toggle .frontmatter-container .frontmatter-container-header {
+  background-color: rgba(var(--ctp-accent), 0.8);
+}
+.anp-button-metadata-toggle.anuppuccin-accent-toggle .frontmatter-container .frontmatter-container-header:hover {
+  background-color: rgba(var(--ctp-accent), 0.7);
+}
+.anp-button-metadata-toggle.anuppuccin-accent-toggle .frontmatter-container .frontmatter-container-header:active {
+  background-color: rgba(var(--ctp-accent), 0.6);
+}
+.anp-button-metadata-toggle:not(.anuppuccin-accent-toggle) .frontmatter-container .frontmatter-container-header {
+  background-color: hsla(var(--color-accent-hsl), 0.8);
+}
+.anp-button-metadata-toggle:not(.anuppuccin-accent-toggle) .frontmatter-container .frontmatter-container-header:hover {
+  background-color: hsla(var(--color-accent-hsl), 0.7);
+}
+.anp-button-metadata-toggle:not(.anuppuccin-accent-toggle) .frontmatter-container .frontmatter-container-header:active {
+  background-color: hsla(var(--color-accent-hsl), 0.6);
+}
 .anp-button-metadata-toggle .frontmatter-container {
   padding: 0;
 }
@@ -4046,7 +4068,6 @@ body.rainbow-tags {
   overflow: hidden;
   color: transparent !important;
   position: absolute;
-  background-color: rgba(var(--ctp-accent), 0.8);
   left: calc(100% - 32px);
   border-radius: 6px;
 }
@@ -4064,12 +4085,6 @@ body.rainbow-tags {
   height: 22px;
   margin-left: 5px;
   margin-top: 5px;
-}
-.anp-button-metadata-toggle .frontmatter-container .frontmatter-container-header:hover {
-  background-color: rgba(var(--ctp-accent), 0.7);
-}
-.anp-button-metadata-toggle .frontmatter-container .frontmatter-container-header:active {
-  background-color: rgba(var(--ctp-accent), 0.6);
 }
 
 /*-------Tweak for Minimal Cards--------------
@@ -5020,6 +5035,10 @@ None of the original code was used and the feature was implemented from scratch.
   display: none;
 }
 
+body:not(.anuppuccin-accent-toggle) .style-settings-heading[data-id=anuppuccin-theme-settings], body:not(.anuppuccin-accent-toggle) .style-settings-heading[data-id=anuppuccin-theme-settings-extended] {
+  border-color: hsla(var(--color-accent-hsl), 0.2);
+}
+
 .modal {
   --h1-font: var(--interface-font);
 }
@@ -5439,11 +5458,14 @@ body .excalidraw .library-menu-items-container .library-actions--load, body .exc
 }
 
 /*-Full rainbow theme-*/
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title, .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title, .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title, .anp-full-rainbow-color-toggle .nav-folder-collapse-indicator svg, .anp-full-rainbow-color-toggle .is-collapsed .nav-folder-collapse-indicator svg {
-  color: var(--background-primary);
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title,
+.anp-full-rainbow-color-toggle .nav-folder-collapse-indicator svg,
+.anp-full-rainbow-color-toggle .is-collapsed .nav-folder-collapse-indicator svg {
+  color: var(--anp-full-rainbow-text-inverted, var(--background-primary));
 }
 .anp-full-rainbow-color-toggle.anp-rainbow-file-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {
-  color: var(--background-primary);
+  color: var(--anp-full-rainbow-text-inverted, var(--background-primary));
 }
 .anp-full-rainbow-color-toggle.anp-rainbow-file-toggle.theme-dark .nav-folder.mod-root > .nav-folder-children > .nav-file {
   background-color: rgba(var(--ctp-text), var(--anp-rainbow-folder-bg-opacity));
@@ -5485,7 +5507,6 @@ body .excalidraw .library-menu-items-container .library-actions--load, body .exc
 .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder {
   transition: background-color 0.4s;
   background-color: rgba(var(--rainbow-folder-color), var(--anp-rainbow-folder-bg-opacity));
-  border-color: rgba(var(--rainbow-folder-color), var(--anp-rainbow-folder-border-opacity));
   margin-bottom: 2px;
   border-radius: 5px;
 }
@@ -5502,6 +5523,10 @@ body .excalidraw .library-menu-items-container .library-actions--load, body .exc
 }
 .anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title:focus-within, .anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title:focus-within, .anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title, .anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title {
   box-shadow: none;
+}
+
+.anp-full-rainbow-text-color-toggle {
+  --anp-full-rainbow-text-inverted: rgb(var(--ctp-text));
 }
 
 /*-Simple rainbow theme-*/

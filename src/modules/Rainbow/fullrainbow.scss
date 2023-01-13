@@ -1,10 +1,13 @@
 .anp-full-rainbow-color-toggle {
-  .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title, .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title, .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title, .nav-folder-collapse-indicator svg, .is-collapsed .nav-folder-collapse-indicator svg {
-    color: var(--background-primary);
+  .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
+  .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title,
+  .nav-folder-collapse-indicator svg,
+  .is-collapsed .nav-folder-collapse-indicator svg {
+    color: var(--anp-full-rainbow-text-inverted, var(--background-primary));
   }
   &.anp-rainbow-file-toggle {
     .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {
-      color: var(--background-primary);
+      color: var(--anp-full-rainbow-text-inverted, var(--background-primary));
     }
     &.theme-dark  .nav-folder.mod-root > .nav-folder-children > .nav-file {
       background-color: rgba(var(--ctp-text), var(--anp-rainbow-folder-bg-opacity));
@@ -51,7 +54,6 @@
         > .nav-folder {
           transition: background-color 0.4s;
           background-color: rgba(var(--rainbow-folder-color), var(--anp-rainbow-folder-bg-opacity));
-          border-color: rgba(var(--rainbow-folder-color), var(--anp-rainbow-folder-border-opacity));
           margin-bottom: 2px;
           border-radius: 5px;
           .nav-folder-children {
@@ -72,4 +74,7 @@
   .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title:focus-within, .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title:focus-within, .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title, .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title {
     box-shadow: none;
   }
+}
+.anp-full-rainbow-text-color-toggle {
+  --anp-full-rainbow-text-inverted: rgb(var(--ctp-text));
 }

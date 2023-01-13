@@ -76,6 +76,9 @@ settings:
             label: Nord
             value: ctp-nord-dark
         -
+            label: Notion
+            value: ctp-notion-dark
+        -
             label: Nord Dark (Custom palette)
             value: ctp-nord-darker
         -
@@ -667,4 +670,32 @@ settings:
   --ctp-ext-base: 31, 31, 40;
   --text-muted: rgb(var(--ctp-ext-subtext1));
   --text-faint: rgb(var(--ctp-ext-subtext0));
+}
+.theme-dark.anp-theme-ext-dark.ctp-notion-dark {
+  --ctp-ext-rosewater: 231, 198, 155;
+  --ctp-ext-flamingo: 224, 186, 207;
+  --ctp-ext-pink: 227, 150, 174;
+  --ctp-ext-mauve: 184, 123, 157;
+  --ctp-ext-red: 218, 99, 98;
+  --ctp-ext-maroon: 218, 116, 98;
+  --ctp-ext-peach: 215, 127, 72;
+  --ctp-ext-yellow: 191, 152, 61;
+  --ctp-ext-green: 137, 156, 64;
+  --ctp-ext-teal: 86, 157, 121;
+  --ctp-ext-sky: 86, 157, 144;
+  --ctp-ext-sapphire: 86, 156, 157;
+  --ctp-ext-blue: 90, 147, 162;
+  --ctp-ext-lavender: 180, 144, 202;
+  --ctp-ext-text: 227, 230, 232;
+  --ctp-ext-subtext1: 222, 225, 227;
+  --ctp-ext-subtext0: 200, 205, 208;
+  --ctp-ext-overlay2: 178, 185, 189;
+  --ctp-ext-overlay1: 156, 165, 171;
+  --ctp-ext-overlay0: 134, 145, 152;
+  --ctp-ext-surface2: 113, 125, 132;
+  --ctp-ext-surface1: 94, 104, 110;
+  --ctp-ext-surface0: 75, 83, 88;
+  --ctp-ext-base: 61, 68, 72;
+  --ctp-ext-mantle: 54, 60, 63;
+  --ctp-ext-crust: 47, 52, 55;
 }

@@ -5,6 +5,8 @@
   }
   .workspace-tab-header:not(.is-active) {
     --tab-text-color: rgb(var(--anp-depth-tab-text));
+    --icon-color: rgb(var(--anp-depth-tab-text));
+    --icon-color-hover: rgb(var(--anp-depth-tab-text));
     background-color: rgba(var(--ctp-mantle), var(--anp-depth-tab-opacity, 0.6));
     &::before, &::after {
       box-shadow: inset 0 0 0 var(--tab-outline-width) transparent, 0 0 0 calc(var(--tab-curve) * 4) rgba(var(--ctp-mantle), var(--anp-depth-tab-opacity, 0.6));

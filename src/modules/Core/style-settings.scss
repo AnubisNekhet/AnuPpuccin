@@ -414,7 +414,7 @@ settings:
         options:
             -
                 label: Wrap
-                value: prewrap
+                value: pre-wrap
             -
                 label: No Wrap
                 value: nowrap
@@ -590,6 +590,18 @@ settings:
         id: anp-custom-vault-toggle
         title: Enable custom vault title
         type: class-toggle
+    -
+        id: anp-file-label-align
+        title: File label alignment
+        type: variable-select
+        default: "0"
+        options:
+            -
+                label: Right
+                value: 1
+            -
+                label: Left
+                value: 0
     - 
         id: anp-preview-header
         title: File preview
@@ -652,18 +664,6 @@ settings:
         id: anp-toggle-scrollbars
         title: Disable scrollbars
         type: class-toggle
-    -
-        id: anp-file-label-align
-        title: File label alignment
-        type: variable-select
-        default: "0"
-        options:
-            -
-                label: Right
-                value: 1
-            -
-                label: Left
-                value: 0
     - 
         id: anp-header-header
         title: Headings
@@ -1371,17 +1371,15 @@ settings:
         desc: Recolors files to match the folders
         type: class-toggle
     - 
+        id: anp-full-rainbow-text-color-toggle
+        title: Invert title colors
+        type: class-toggle
+    - 
         id: anp-rainbow-folder-bg-opacity
         title: Folder background color opacity
         description: Uses decimal
         type: variable-number
         default: 0.7
-    - 
-        id: anp-rainbow-folder-border-opacity
-        title: Folder border opacity
-        description: Uses decimal
-        type: variable-number
-        default: 1
     - 
         id: anp-simple-rainbow-folder-settings
         title: Simple folder theme settings

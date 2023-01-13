@@ -1,5 +1,27 @@
 /*-Button for metadata-*/
 .anp-button-metadata-toggle {
+  &.anuppuccin-accent-toggle {
+    .frontmatter-container .frontmatter-container-header {
+      background-color: rgba(var(--ctp-accent), 0.8);
+      &:hover {
+        background-color: rgba(var(--ctp-accent), 0.7);
+      }
+      &:active {
+        background-color: rgba(var(--ctp-accent), 0.6);
+      }
+    }
+  }
+  &:not(.anuppuccin-accent-toggle) {
+    .frontmatter-container .frontmatter-container-header {
+      background-color: hsla(var(--color-accent-hsl), 0.8);
+      &:hover {
+        background-color: hsla(var(--color-accent-hsl), 0.7);
+      }
+      &:active {
+        background-color: hsla(var(--color-accent-hsl), 0.6);
+      }
+    }
+  }
   .frontmatter-container {
     padding: 0;
     .frontmatter-container-header {
@@ -10,7 +32,6 @@
       overflow: hidden;
       color: transparent !important;
       position: absolute;
-      background-color: rgba(var(--ctp-accent), 0.8);
       left: calc(100% - 32px);
       border-radius: 6px;
     }
@@ -28,12 +49,6 @@
       height: 22px;
       margin-left: 5px;
       margin-top: 5px;
-    }
-    .frontmatter-container-header:hover {
-      background-color: rgba(var(--ctp-accent), 0.7);
-    }
-    .frontmatter-container-header:active {
-      background-color: rgba(var(--ctp-accent), 0.6);
     }
   }
 }

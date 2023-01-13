@@ -73,6 +73,11 @@
   }
 }
 .style-settings-container:empty { display: none; }
+body:not(.anuppuccin-accent-toggle) .style-settings-heading {
+  &[data-id="anuppuccin-theme-settings"], &[data-id="anuppuccin-theme-settings-extended"] {
+    border-color: hsla(var(--color-accent-hsl), 0.2);
+  }
+}
 .modal {
   --h1-font: var(--interface-font);
 }

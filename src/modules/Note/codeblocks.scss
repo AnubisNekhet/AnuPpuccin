@@ -1,9 +1,9 @@
 .markdown-source-view.mod-cm6 .HyperMD-codeblock.cm-line {
-  white-space: var(--anp-codeblock-wrap, prewrap);
+  white-space: var(--anp-codeblock-wrap, pre-wrap);
   overflow-x: scroll;
 }
 .markdown-rendered pre {
-  white-space: var(--anp-codeblock-wrap, prewrap);
+  white-space: var(--anp-codeblock-wrap, pre-wrap);
   & code {
     overflow-x: scroll;
   }

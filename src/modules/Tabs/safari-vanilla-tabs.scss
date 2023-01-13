@@ -19,6 +19,10 @@
         .workspace-tab-header-container-inner {
           margin: 5px 0 !important;
           .workspace-tab-header {
+            &:not(.is-active) {
+              --icon-color: var(--text-muted);
+              --icon-color-hover: var(--text-muted);
+            }
             .workspace-tab-header-inner {
               .workspace-tab-header-inner-title {
                 margin-top: 3px;
