@@ -407,8 +407,21 @@ settings:
         title: Enable codeblock numbering
         type: class-toggle
     -
-        id: anp-codeblock-wrap
-        title: Codeblock line wrap
+        id: anp-codeblock-wrap-preview
+        title: Codeblock line wrap (Preview mode)
+        description: Does not work for codeblocks with syntax highlighting
+        type: variable-select
+        default: wrap
+        options:
+            -
+                label: Wrap
+                value: pre-wrap
+            -
+                label: No Wrap
+                value: nowrap
+    -
+        id: anp-codeblock-wrap-edit
+        title: Codeblock line wrap (Editing mode)
         description: Does not work for codeblocks with syntax highlighting
         type: variable-select
         default: wrap
@@ -2836,12 +2849,12 @@ body.is-translucent {
 }
 
 .markdown-source-view.mod-cm6 .HyperMD-codeblock.cm-line {
-  white-space: var(--anp-codeblock-wrap, pre-wrap);
+  white-space: var(--anp-codeblock-wrap-edit, pre-wrap);
   overflow-x: scroll;
 }
 
 .markdown-rendered pre {
-  white-space: var(--anp-codeblock-wrap, pre-wrap);
+  white-space: var(--anp-codeblock-wrap-preview, pre-wrap);
   overflow-x: auto;
 }
 .markdown-rendered pre code {

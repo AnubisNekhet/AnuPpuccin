@@ -406,8 +406,21 @@ settings:
         title: Enable codeblock numbering
         type: class-toggle
     -
-        id: anp-codeblock-wrap
-        title: Codeblock line wrap
+        id: anp-codeblock-wrap-preview
+        title: Codeblock line wrap (Preview mode)
+        description: Does not work for codeblocks with syntax highlighting
+        type: variable-select
+        default: wrap
+        options:
+            -
+                label: Wrap
+                value: pre-wrap
+            -
+                label: No Wrap
+                value: nowrap
+    -
+        id: anp-codeblock-wrap-edit
+        title: Codeblock line wrap (Editing mode)
         description: Does not work for codeblocks with syntax highlighting
         type: variable-select
         default: wrap
