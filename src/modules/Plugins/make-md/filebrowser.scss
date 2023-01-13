@@ -1,0 +1,27 @@
+/* Recolor Colors */
+.mk-tree-item {
+  &:has(.mk-file-icon > button[style*="--label-color:#eb3b5a"]) {
+    --label-color: rgb(var(--ctp-red)) !important;
+  }
+  &:has(.mk-file-icon > button[style*="--label-color:#fa8231"]) {
+    --label-color: rgb(var(--ctp-peach)) !important;
+  }
+  &:has(.mk-file-icon > button[style*="--label-color:#f7b731"]) {
+    --label-color: rgb(var(--ctp-yellow)) !important;
+  }
+  &:has(.mk-file-icon > button[style*="--label-color:#0fb9b1"]) {
+    --label-color: rgb(var(--ctp-teal)) !important;
+  }
+  &:has(.mk-file-icon > button[style*="--label-color:#2d98da"]) {
+    --label-color: rgb(var(--ctp-blue)) !important;
+  }
+  &:has(.mk-file-icon > button[style*="--icon-color:#ffffff"]) {
+    --icon-color: rgb(var(--ctp-base)) !important;
+  }
+}
+.mk-tree-text.nav-file-title-content {
+  color: var(--label-color);
+}
+.mk-table th:hover {
+  background-color: var(--background-modifier-hover);
+}

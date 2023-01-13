@@ -663,6 +663,19 @@ settings:
         title: Auto-hide tab title bar
         type: class-toggle
     - 
+        id: anp-inline-title-vis
+        title: Inline Title Visibility
+        description: Make.md requires inline titles to be enabled to show folder titles, hence this toggle exists to disable it on notes elsewhere.
+        type: variable-select
+        default: block
+        options:
+            -
+                label: Visible
+                value: block
+            -
+                label: Invisible
+                value: none
+    - 
         id: anp-toggle-metadata
         title: Hide metadata
         type: class-toggle
@@ -2207,12 +2220,12 @@ settings:
   --color-base-100: rgb(var(--ctp-text));
   --text-highlight-bg: rgba(var(--ctp-yellow), 0.2);
   --text-highlight-bg-active: rgba(var(--ctp-yellow), 0.4);
-  --input-shadow: inset 0 0.5px 0.5px 0.5px rgba(var(--ctp-text), 0.09),
+  --input-shadow: inset 0 0.5px 0.5px 0.5px rgba(var(255, 255, 255), 0.09),
   0 2px 4px 0 rgba(var(--ctp-crust),.15),
   0 1px 1.5px 0 rgba(var(--ctp-crust),.1),
   0 1px 2px 0 rgba(var(--ctp-crust),.2),
   0 0 0 0 transparent;
-  --input-shadow-hover: inset 0 0.5px 1px 0.5px rgba(var(--ctp-text), 0.16),
+  --input-shadow-hover: inset 0 0.5px 1px 0.5px rgba(var(255, 255, 255), 0.16),
   0 2px 3px 0 rgba(var(--ctp-crust),.3),
   0 1px 1.5px 0 rgba(var(--ctp-crust),.2),
   0 1px 2px 0 rgba(var(--ctp-crust),.4),
@@ -2549,6 +2562,11 @@ body.theme-dark {
 /* Hide empty frontmatter (uses :has()) */
 .frontmatter-container:not(:has(.frontmatter-section)) {
   display: none;
+}
+
+/* Inline title visibility */
+.inline-title {
+  display: var(--anp-inline-title-vis, block);
 }
 
 .workspace-split:not(.mod-root) .graph-controls.is-close,
@@ -5439,6 +5457,146 @@ body .excalidraw .library-menu-items-container .library-actions--load, body .exc
 }
 .calendar .day.svelte-q3wqg9:hover {
   background-color: rgb(var(--ctp-crust));
+}
+
+/* Recolor Colors */
+div[class*=mk-] [style*="--label-color:#eb3b5a"] {
+  --label-color: rgb(var(--ctp-red)) !important;
+}
+div[class*=mk-] [style*="--label-color:#fa8231"] {
+  --label-color: rgb(var(--ctp-peach)) !important;
+}
+div[class*=mk-] [style*="--label-color:#f7b731"] {
+  --label-color: rgb(var(--ctp-yellow)) !important;
+}
+div[class*=mk-] [style*="--label-color:#0fb9b1"] {
+  --label-color: rgb(var(--ctp-teal)) !important;
+}
+div[class*=mk-] [style*="--label-color:#2d98da"] {
+  --label-color: rgb(var(--ctp-blue)) !important;
+}
+div[class*=mk-] [style*="--icon-color:#ffffff"] {
+  --icon-color: rgb(var(--ctp-base)) !important;
+}
+
+/* Context card view */
+.mk-cards-grid .mk-list-group > ul {
+  justify-content: center;
+}
+.mk-cards-grid .mk-list-group > ul > .mk-list-item {
+  box-shadow: none;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+}
+.mk-cards-grid .mk-list-group > ul > .mk-list-item > .mk-file-preview {
+  margin-bottom: 0px;
+}
+.mk-cards-grid .mk-list-group > ul > .mk-list-item > .mk-list-content {
+  border-top: 1px dashed var(--background-modifier-border);
+}
+
+/* Folder Header */
+.mk-folder-header .inline-title {
+  --inline-title-color: var(--text-normal);
+  --inline-title-font: var(--font-interface);
+  display: block;
+}
+
+.mk-list-container .mk-list-view .mk-list-group .mk-list-item .mk-list-content {
+  border-bottom: thin dashed var(--divider-color);
+}
+
+/* FIlter Button */
+.mk-filter-bar .mk-filter {
+  -webkit-app-region: no-drag;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-normal);
+  font-size: var(--font-ui-small);
+  border-radius: var(--button-radius);
+  border: 0;
+  height: var(--input-height);
+  font-weight: var(--input-font-weight);
+  cursor: var(--cursor);
+  font-family: inherit;
+  outline: none;
+  user-select: none;
+  white-space: nowrap;
+  background-color: var(--interactive-normal);
+  box-shadow: var(--input-shadow);
+}
+.mk-filter-bar .mk-filter > span, .mk-filter-bar .mk-filter > div {
+  background-color: transparent;
+  border-right: 1px solid var(--background-modifier-border);
+}
+.mk-filter-bar .mk-filter > span:hover, .mk-filter-bar .mk-filter > div:hover {
+  background-color: var(--interactive-hover);
+}
+.mk-filter-bar .mk-filter > div {
+  height: 100%;
+  width: 100%;
+  padding: 0 7px;
+}
+
+/* Recolor Colors */
+.mk-tree-item:has(.mk-file-icon > button[style*="--label-color:#eb3b5a"]) {
+  --label-color: rgb(var(--ctp-red)) !important;
+}
+.mk-tree-item:has(.mk-file-icon > button[style*="--label-color:#fa8231"]) {
+  --label-color: rgb(var(--ctp-peach)) !important;
+}
+.mk-tree-item:has(.mk-file-icon > button[style*="--label-color:#f7b731"]) {
+  --label-color: rgb(var(--ctp-yellow)) !important;
+}
+.mk-tree-item:has(.mk-file-icon > button[style*="--label-color:#0fb9b1"]) {
+  --label-color: rgb(var(--ctp-teal)) !important;
+}
+.mk-tree-item:has(.mk-file-icon > button[style*="--label-color:#2d98da"]) {
+  --label-color: rgb(var(--ctp-blue)) !important;
+}
+.mk-tree-item:has(.mk-file-icon > button[style*="--icon-color:#ffffff"]) {
+  --icon-color: rgb(var(--ctp-base)) !important;
+}
+
+.mk-tree-text.nav-file-title-content {
+  color: var(--label-color);
+}
+
+.mk-table th:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+.mk-filter-bar .mk-filter {
+  -webkit-app-region: no-drag;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-normal);
+  font-size: var(--font-ui-small);
+  border-radius: var(--button-radius);
+  border: 0;
+  height: var(--input-height);
+  font-weight: var(--input-font-weight);
+  cursor: var(--cursor);
+  font-family: inherit;
+  outline: none;
+  user-select: none;
+  white-space: nowrap;
+  background-color: var(--interactive-normal);
+  box-shadow: var(--input-shadow);
+}
+.mk-filter-bar .mk-filter > span, .mk-filter-bar .mk-filter > div {
+  background-color: transparent;
+  border-right: 1px solid var(--background-modifier-border);
+}
+.mk-filter-bar .mk-filter > span:hover, .mk-filter-bar .mk-filter > div:hover {
+  background-color: var(--interactive-hover);
+}
+.mk-filter-bar .mk-filter > div {
+  height: 100%;
+  width: 100%;
+  padding: 0 7px;
 }
 
 /*------------RAINBOW FOLDERS-------------*/

@@ -103,12 +103,12 @@
     --color-base-100: rgb(var(--ctp-text));
     --text-highlight-bg: rgba(var(--ctp-yellow), 0.2);
     --text-highlight-bg-active: rgba(var(--ctp-yellow), 0.4);
-    --input-shadow: inset 0 0.5px 0.5px 0.5px rgba(var(--ctp-text), 0.09),
+    --input-shadow: inset 0 0.5px 0.5px 0.5px rgba(var(255, 255, 255), 0.09),
 		0 2px 4px 0 rgba(var(--ctp-crust),.15),
 		0 1px 1.5px 0 rgba(var(--ctp-crust),.1),
 		0 1px 2px 0 rgba(var(--ctp-crust),.2),
 		0 0 0 0 transparent;
-    --input-shadow-hover: inset 0 0.5px 1px 0.5px rgba(var(--ctp-text), 0.16),
+    --input-shadow-hover: inset 0 0.5px 1px 0.5px rgba(var(255, 255, 255), 0.16),
 		0 2px 3px 0 rgba(var(--ctp-crust),.3),
 		0 1px 1.5px 0 rgba(var(--ctp-crust),.2),
 		0 1px 2px 0 rgba(var(--ctp-crust),.4),

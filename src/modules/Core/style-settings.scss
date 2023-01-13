@@ -662,6 +662,19 @@ settings:
         title: Auto-hide tab title bar
         type: class-toggle
     - 
+        id: anp-inline-title-vis
+        title: Inline Title Visibility
+        description: Make.md requires inline titles to be enabled to show folder titles, hence this toggle exists to disable it on notes elsewhere.
+        type: variable-select
+        default: block
+        options:
+            -
+                label: Visible
+                value: block
+            -
+                label: Invisible
+                value: none
+    - 
         id: anp-toggle-metadata
         title: Hide metadata
         type: class-toggle

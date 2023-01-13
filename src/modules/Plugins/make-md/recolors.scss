@@ -1,0 +1,21 @@
+/* Recolor Colors */
+div[class*="mk-"] {
+  [style*="--label-color:#eb3b5a"] {
+    --label-color: rgb(var(--ctp-red)) !important;
+  }
+  [style*="--label-color:#fa8231"] {
+    --label-color: rgb(var(--ctp-peach)) !important;
+  }
+  [style*="--label-color:#f7b731"] {
+    --label-color: rgb(var(--ctp-yellow)) !important;
+  }
+  [style*="--label-color:#0fb9b1"] {
+    --label-color: rgb(var(--ctp-teal)) !important;
+  }
+  [style*="--label-color:#2d98da"] {
+    --label-color: rgb(var(--ctp-blue)) !important;
+  }
+  [style*="--icon-color:#ffffff"] {
+    --icon-color: rgb(var(--ctp-base)) !important;
+  }
+}

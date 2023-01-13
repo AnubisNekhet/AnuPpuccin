@@ -57,6 +57,9 @@ body .kanban-plugin__lane:has(.kanban-plugin__placeholder:only-child):not(:has(.
 body .kanban-plugin__lane:has(.kanban-plugin__placeholder:only-child):not(:has(.kanban-plugin__item)) .kanban-plugin__item-button-wrapper .kanban-plugin__new-item-button {
   padding: 0 10px;
 }
+body .kanban-plugin__lane .kanban-plugin__lane-items.kanban-plugin__scroll-container.kanban-plugin__vertical {
+  background-color: transparent;
+}
 body .kanban-plugin__lane .kanban-plugin__lane-items .kanban-plugin__placeholder {
   border: none;
   height: 5px;
