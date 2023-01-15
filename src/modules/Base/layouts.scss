@@ -37,7 +37,7 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
 }
 .anp-card-layout .workspace-ribbon.mod-left:before {
     border-bottom: none;
-    background-color: var(--tab-container-background) !important;
+    background-color: var(--tab-container-background);
 }
 .anp-card-layout .side-dock-actions {
     padding: var(--ribbon-padding);
@@ -57,7 +57,7 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
     padding: var(--ribbon-padding);
 }
 .anp-card-layout .workspace-ribbon.mod-left {
-    margin-top: calc(var(--header-height) - 1px) !important;
+    margin-top: calc(var(--header-height) - 1px);
 }
 .anp-card-layout .workspace-tab-header-container {
     border-bottom: none;

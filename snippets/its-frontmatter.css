@@ -37,6 +37,11 @@ body:not(.anp-button-metadata-toggle) .frontmatter-container {
   padding: var(--size-4-3);
   border-radius: var(--radius-l);
 }
+body:not(.anp-button-metadata-toggle) .frontmatter-container.is-collapsed .frontmatter-container-header {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 .frontmatter-section-data.frontmatter-section-aliases {
   background-color: var(--background-secondary-alt);
   padding: var(--size-4-1);

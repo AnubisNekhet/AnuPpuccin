@@ -7,7 +7,7 @@
 .anp-current-line-border .markdown-source-view {
   .cm-active.cm-line {
     border-left: 2px solid var(--interactive-accent);
-    margin-left: -2px !important;
+    margin-left: -2px !important; //this !important is necessary since the app.css file uses one too ;_;
     background-color: rgba(var(--ctp-surface1), 0.4);
   }
 }
@@ -20,7 +20,7 @@
 }
 /*-Highlighted gutter number-*/
 .cm-lineNumbers .cm-gutterElement.cm-active {    
-  color:  var(--interactive-accent) !important;
+  color:  var(--interactive-accent);
 }
 /*-ZWSP Highlight-*/
 .ͼ2 .cm-specialChar {

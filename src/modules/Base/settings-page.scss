@@ -1,8 +1,8 @@
-.mod-community-theme summary {
+.mod-community-theme .modal-content .community-modal-details .community-modal-info summary {
   h1, h2, h3, h4, h5, h6 {
     &:first-child {
-      margin-top: -24px !important;
-      margin-left: 24px !important;
+      margin-block: 0;
+      display: inline;
     }
   }
 }

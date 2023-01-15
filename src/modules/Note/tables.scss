@@ -25,7 +25,7 @@
 //dataview table
 table.dataview.table-view-table {
    > tbody > tr:hover {
-    background-color: rgba(var(--ctp-surface1), 0.1) !important;
+    background-color: rgba(var(--ctp-surface1), 0.1) !important; //!important needed since dataview uses the same
   }
 }
 .anp-table-toggle {

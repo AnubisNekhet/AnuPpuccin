@@ -2355,7 +2355,7 @@ body.theme-dark {
 
 /*-Highlighted gutter number-*/
 .cm-lineNumbers .cm-gutterElement.cm-active {
-  color: var(--interactive-accent) !important;
+  color: var(--interactive-accent);
 }
 
 /*-ZWSP Highlight-*/
@@ -2495,8 +2495,8 @@ body.theme-dark {
 }
 
 /*-Banners are always sharp-*/
-.banner-image {
-  border-radius: 0px !important;
+.obsidian-banner-wrapper .obsidian-banner .banner-image.banner-image.banner-image.banner-image {
+  border-radius: 0px;
 }
 
 /*-Padding for banner pages-*/
@@ -2629,7 +2629,7 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
 
 .anp-card-layout .workspace-ribbon.mod-left:before {
   border-bottom: none;
-  background-color: var(--tab-container-background) !important;
+  background-color: var(--tab-container-background);
 }
 
 .anp-card-layout .side-dock-actions {
@@ -2654,7 +2654,7 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
 }
 
 .anp-card-layout .workspace-ribbon.mod-left {
-  margin-top: calc(var(--header-height) - 1px) !important;
+  margin-top: calc(var(--header-height) - 1px);
 }
 
 .anp-card-layout .workspace-tab-header-container {
@@ -2794,9 +2794,9 @@ body.anp-disable-borders {
   margin-right: -22px;
 }
 
-.mod-community-theme summary h1:first-child, .mod-community-theme summary h2:first-child, .mod-community-theme summary h3:first-child, .mod-community-theme summary h4:first-child, .mod-community-theme summary h5:first-child, .mod-community-theme summary h6:first-child {
-  margin-top: -24px !important;
-  margin-left: 24px !important;
+.mod-community-theme .modal-content .community-modal-details .community-modal-info summary h1:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h2:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h3:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h4:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h5:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h6:first-child {
+  margin-block: 0;
+  display: inline;
 }
 
 .modal.mod-settings, .modal.mod-community-theme, .modal.kanban-plugin__board-settings-modal, .modal.mod-community-plugin {
@@ -5565,38 +5565,6 @@ div[class*=mk-] [style*="--icon-color:#ffffff"] {
 
 .mk-table th:hover {
   background-color: var(--background-modifier-hover);
-}
-
-.mk-filter-bar .mk-filter {
-  -webkit-app-region: no-drag;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-normal);
-  font-size: var(--font-ui-small);
-  border-radius: var(--button-radius);
-  border: 0;
-  height: var(--input-height);
-  font-weight: var(--input-font-weight);
-  cursor: var(--cursor);
-  font-family: inherit;
-  outline: none;
-  user-select: none;
-  white-space: nowrap;
-  background-color: var(--interactive-normal);
-  box-shadow: var(--input-shadow);
-}
-.mk-filter-bar .mk-filter > span, .mk-filter-bar .mk-filter > div {
-  background-color: transparent;
-  border-right: 1px solid var(--background-modifier-border);
-}
-.mk-filter-bar .mk-filter > span:hover, .mk-filter-bar .mk-filter > div:hover {
-  background-color: var(--interactive-hover);
-}
-.mk-filter-bar .mk-filter > div {
-  height: 100%;
-  width: 100%;
-  padding: 0 7px;
 }
 
 /*------------RAINBOW FOLDERS-------------*/
