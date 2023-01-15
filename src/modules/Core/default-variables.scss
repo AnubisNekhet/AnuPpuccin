@@ -177,7 +177,7 @@
     --background-modifier-border-hover: rgb(var(--ctp-surface2));
     --background-modifier-border-focus: rgb(var(--ctp-overlay0));
     --anp-speech-bubble-opacity: var(--anp-sp-op-light, 0.5);
-    --background-modifier-cover: #00000022
+    --background-modifier-cover: #00000022;
     &.theme-light {
         --canvas-color: var(--ctp-overlay0);
     }
