@@ -15,3 +15,7 @@
 .markdown-rendered code:not([class*="language"]) {
   --code-normal: var(--anp-code-text-color, var(--text-normal));
 }
+/* Show language in LP always */
+.markdown-source-view.mod-cm6 .HyperMD-codeblock.cm-line.HyperMD-codeblock-begin {
+  overflow-x: visible;
+}

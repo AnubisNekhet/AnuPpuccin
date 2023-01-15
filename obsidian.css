@@ -2887,6 +2887,11 @@ body.is-translucent {
   --code-normal: var(--anp-code-text-color, var(--text-normal));
 }
 
+/* Show language in LP always */
+.markdown-source-view.mod-cm6 .HyperMD-codeblock.cm-line.HyperMD-codeblock-begin {
+  overflow-x: visible;
+}
+
 .frontmatter-section-data-item {
   background-color: var(--background-secondary);
   padding: 0 4px;
