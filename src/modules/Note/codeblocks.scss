@@ -1,14 +1,3 @@
-.markdown-source-view.mod-cm6 .HyperMD-codeblock.cm-line {
-  white-space: var(--anp-codeblock-wrap-edit, pre-wrap);
-  overflow-x: scroll;
-}
-.markdown-rendered pre {
-  white-space: var(--anp-codeblock-wrap-preview, pre-wrap);
-  & code {
-    overflow-x: scroll;
-  }
-  overflow-x: auto;
-}
 .markdown-rendered :not(pre) > code {
   --code-normal: var(--anp-code-text-color, var(--text-normal));
 }
@@ -18,4 +7,25 @@
 /* Show language in LP always */
 .markdown-source-view.mod-cm6 .HyperMD-codeblock.cm-line.HyperMD-codeblock-begin {
   overflow-x: visible;
+}
+.anp-codeblock-edit-nowrap {
+  .markdown-source-view.mod-cm6 .HyperMD-codeblock.cm-line {
+    white-space: nowrap;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+.anp-codeblock-preview-nowrap {
+  .markdown-rendered pre {
+    white-space: nowrap;
+    & code {
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    overflow-x: auto;
+  }
 }

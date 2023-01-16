@@ -409,28 +409,28 @@ settings:
         id: anp-codeblock-wrap-preview
         title: Codeblock line wrap (Preview mode)
         description: Does not work for codeblocks with syntax highlighting
-        type: variable-select
-        default: wrap
+        type: class-select
+        default: anp-codeblock-preview-wrap
         options:
             -
                 label: Wrap
-                value: pre-wrap
+                value: anp-codeblock-preview-wrap
             -
                 label: No Wrap
-                value: nowrap
+                value: anp-codeblock-preview-nowrap
     -
         id: anp-codeblock-wrap-edit
-        title: Codeblock line wrap (Editing mode)
+        title: Codeblock line wrap (Preview mode)
         description: Does not work for codeblocks with syntax highlighting
-        type: variable-select
-        default: wrap
+        type: class-select
+        default: anp-codeblock-edit-wrap
         options:
             -
                 label: Wrap
-                value: pre-wrap
+                value: anp-codeblock-edit-wrap
             -
                 label: No Wrap
-                value: nowrap
+                value: anp-codeblock-edit-nowrap
     -
         id: anp-code-text-color
         title: Codeblock Text Color

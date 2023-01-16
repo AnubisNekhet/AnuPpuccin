@@ -410,28 +410,28 @@ settings:
         id: anp-codeblock-wrap-preview
         title: Codeblock line wrap (Preview mode)
         description: Does not work for codeblocks with syntax highlighting
-        type: variable-select
-        default: wrap
+        type: class-select
+        default: anp-codeblock-preview-wrap
         options:
             -
                 label: Wrap
-                value: pre-wrap
+                value: anp-codeblock-preview-wrap
             -
                 label: No Wrap
-                value: nowrap
+                value: anp-codeblock-preview-nowrap
     -
         id: anp-codeblock-wrap-edit
-        title: Codeblock line wrap (Editing mode)
+        title: Codeblock line wrap (Preview mode)
         description: Does not work for codeblocks with syntax highlighting
-        type: variable-select
-        default: wrap
+        type: class-select
+        default: anp-codeblock-edit-wrap
         options:
             -
                 label: Wrap
-                value: pre-wrap
+                value: anp-codeblock-edit-wrap
             -
                 label: No Wrap
-                value: nowrap
+                value: anp-codeblock-edit-nowrap
     -
         id: anp-code-text-color
         title: Codeblock Text Color
@@ -2866,19 +2866,6 @@ body.is-translucent {
   padding: 5px 5px 5px 10px;
 }
 
-.markdown-source-view.mod-cm6 .HyperMD-codeblock.cm-line {
-  white-space: var(--anp-codeblock-wrap-edit, pre-wrap);
-  overflow-x: scroll;
-}
-
-.markdown-rendered pre {
-  white-space: var(--anp-codeblock-wrap-preview, pre-wrap);
-  overflow-x: auto;
-}
-.markdown-rendered pre code {
-  overflow-x: scroll;
-}
-
 .markdown-rendered :not(pre) > code {
   --code-normal: var(--anp-code-text-color, var(--text-normal));
 }
@@ -2890,6 +2877,25 @@ body.is-translucent {
 /* Show language in LP always */
 .markdown-source-view.mod-cm6 .HyperMD-codeblock.cm-line.HyperMD-codeblock-begin {
   overflow-x: visible;
+}
+
+.anp-codeblock-edit-nowrap .markdown-source-view.mod-cm6 .HyperMD-codeblock.cm-line {
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+.anp-codeblock-edit-nowrap .markdown-source-view.mod-cm6 .HyperMD-codeblock.cm-line::-webkit-scrollbar {
+  display: none;
+}
+
+.anp-codeblock-preview-nowrap .markdown-rendered pre {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.anp-codeblock-preview-nowrap .markdown-rendered pre code {
+  overflow-x: scroll;
+}
+.anp-codeblock-preview-nowrap .markdown-rendered pre code::-webkit-scrollbar {
+  display: none;
 }
 
 .frontmatter-section-data-item {
