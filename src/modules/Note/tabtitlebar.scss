@@ -35,7 +35,7 @@
   .workspace-leaf-content .view-header:is(:hover,:focus-within) + .view-content {
     transform: translateY(var(--title-bar-translate-y));
   }
-  .workspace-leaf-content .view-header:not(:hover,:focus-within) .view-actions .clickable-icon {
+  .workspace-leaf-content .view-header:not(:hover,:focus-within) .clickable-icon {
     app-region: drag;
   }
   .view-header::before {
