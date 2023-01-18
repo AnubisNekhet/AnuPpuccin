@@ -3594,6 +3594,9 @@ table.dataview.table-view-table > tbody > tr:hover {
 .anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:is(:hover, :focus-within) + .view-content {
   transform: translateY(var(--title-bar-translate-y));
 }
+.anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:not(:hover, :focus-within) .clickable-icon {
+  app-region: drag;
+}
 .anp-autohide-titlebar:not(.is-mobile) .view-header::before {
   z-index: 0;
 }
