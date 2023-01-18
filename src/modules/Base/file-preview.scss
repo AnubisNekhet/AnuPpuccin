@@ -22,3 +22,13 @@
   mix-blend-mode: var(--highlight-mix-blend-mode);
   border-radius: 2px;
 }
+/* Font weights */
+.markdown-preview-view {
+  font-weight: var(--anp-font-preview-wt, 400);
+}
+.markdown-source-view {
+  font-weight: var(--anp-font-editor-wt, 400);
+}
+.is-live-preview {
+  font-weight: var(--anp-font-live-preview-wt, 400);
+}

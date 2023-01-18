@@ -691,6 +691,147 @@ settings:
         title: Disable scrollbars
         type: class-toggle
     - 
+        id: anp-font-weight-header
+        title: Font weights
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: anp-font-preview-wt
+        title: Reading mode weight
+        type: variable-select
+        default: '400'
+        options:
+            -
+                label: Lightest
+                value: 100
+            -
+                label: Lighter
+                value: 200
+            -
+                label: Light
+                value: 300
+            -
+                label: Normal
+                value: 400
+            -
+                label: Bold
+                value: 500
+            -
+                label: Bolder
+                value: 600
+            -
+                label: Extrabold
+                value: 700
+            -
+                label: Extra-extrabold
+                value: 800
+            -
+                label: Black
+                value: 900
+    -
+        id: anp-font-editor-wt
+        title: Source mode weight
+        type: variable-select
+        default: '400'
+        options:
+            -
+                label: Lightest
+                value: 100
+            -
+                label: Lighter
+                value: 200
+            -
+                label: Light
+                value: 300
+            -
+                label: Normal
+                value: 400
+            -
+                label: Bold
+                value: 500
+            -
+                label: Bolder
+                value: 600
+            -
+                label: Extrabold
+                value: 700
+            -
+                label: Extra-extrabold
+                value: 800
+            -
+                label: Black
+                value: 900
+    -
+        id: anp-font-live-preview-wt
+        title: Live Preview mode weight
+        type: variable-select
+        default: '400'
+        options:
+            -
+                label: Lightest
+                value: 100
+            -
+                label: Lighter
+                value: 200
+            -
+                label: Light
+                value: 300
+            -
+                label: Normal
+                value: 400
+            -
+                label: Bold
+                value: 500
+            -
+                label: Bolder
+                value: 600
+            -
+                label: Extrabold
+                value: 700
+            -
+                label: Extra-extrabold
+                value: 800
+            -
+                label: Black
+                value: 900
+    -
+        id: bold-weight
+        title: Bold weight
+        type: variable-select
+        default: '600'
+        options:
+            -
+                label: 'Bolder (Relative)'
+                value: bolder
+            -
+                label: Lightest
+                value: 100
+            -
+                label: Lighter
+                value: 200
+            -
+                label: Light
+                value: 300
+            -
+                label: Normal
+                value: 400
+            -
+                label: Bold
+                value: 500
+            -
+                label: Bolder
+                value: 600
+            -
+                label: Extrabold
+                value: 700
+            -
+                label: Extra-extrabold
+                value: 800
+            -
+                label: Black
+                value: 900
+    - 
         id: anp-header-header
         title: Headings
         type: heading
