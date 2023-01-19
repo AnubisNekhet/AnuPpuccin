@@ -2622,15 +2622,15 @@ body.theme-dark {
 
 /* Font weights */
 .markdown-preview-view {
-  font-weight: var(--anp-font-preview-wt, 400);
+  font-weight: var(--anp-font-preview-wt, normal);
 }
 
 .markdown-source-view {
-  font-weight: var(--anp-font-editor-wt, 400);
+  font-weight: var(--anp-font-editor-wt, normal);
 }
 
 .is-live-preview {
-  font-weight: var(--anp-font-live-preview-wt, 400);
+  font-weight: var(--anp-font-live-preview-wt, normal);
 }
 
 /*-Slider checkboxes-*/
@@ -4886,6 +4886,11 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   border-radius: 0;
   --text-normal: rgb(var(--ctp-text));
   background: rgba(var(--ctp-surface1), 0.4);
+}
+
+/* Dirty Speech Bubble Fix */
+.anp-speech-bubble .HyperMD-task-line[data-task="0"], .anp-speech-bubble .HyperMD-task-line[data-task="1"], .anp-speech-bubble .HyperMD-task-line[data-task="2"], .anp-speech-bubble .HyperMD-task-line[data-task="3"], .anp-speech-bubble .HyperMD-task-line[data-task="4"], .anp-speech-bubble .HyperMD-task-line[data-task="5"], .anp-speech-bubble .HyperMD-task-line[data-task="6"], .anp-speech-bubble .HyperMD-task-line[data-task="7"], .anp-speech-bubble .HyperMD-task-line[data-task="8"], .anp-speech-bubble .HyperMD-task-line[data-task="9"] {
+  text-indent: 0px !important;
 }
 
 .anp-speech-bubble [data-task="0"] {

@@ -24,11 +24,11 @@
 }
 /* Font weights */
 .markdown-preview-view {
-  font-weight: var(--anp-font-preview-wt, 400);
+  font-weight: var(--anp-font-preview-wt, normal);
 }
 .markdown-source-view {
-  font-weight: var(--anp-font-editor-wt, 400);
+  font-weight: var(--anp-font-editor-wt, normal);
 }
 .is-live-preview {
-  font-weight: var(--anp-font-live-preview-wt, 400);
+  font-weight: var(--anp-font-live-preview-wt, normal);
 }
