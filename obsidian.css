@@ -2977,6 +2977,71 @@ body {
   background-color: var(--background-primary);
 }
 
+.print.theme-light, .print.theme-dark {
+  --ctp-crust: inherit;
+  --ctp-mantle: inherit;
+  --ctp-base: inherit;
+  --ctp-surface0: inherit;
+  --ctp-surface1: inherit;
+  --ctp-surface2: inherit;
+  --ctp-overlay0: inherit;
+  --ctp-overlay1: inherit;
+  --ctp-overlay2: inherit;
+  --ctp-subtext0: inherit;
+  --ctp-subtext1: inherit;
+  --ctp-text: inherit;
+  --ctp-rosewater: inherit;
+  --ctp-flamingo: inherit;
+  --ctp-red: inherit;
+  --ctp-maroon: inherit;
+  --ctp-mauve: inherit;
+  --ctp-pink: inherit;
+  --ctp-peach: inherit;
+  --ctp-yellow: inherit;
+  --ctp-green: inherit;
+  --ctp-teal: inherit;
+  --ctp-sky: inherit;
+  --ctp-sapphire: inherit;
+  --ctp-blue: inherit;
+  --ctp-lavender: inherit;
+}
+
+@media print {
+  .print {
+    --ctp-crust: inherit;
+    --ctp-mantle: inherit;
+    --ctp-base: inherit;
+    --ctp-surface0: inherit;
+    --ctp-surface1: inherit;
+    --ctp-surface2: inherit;
+    --ctp-overlay0: inherit;
+    --ctp-overlay1: inherit;
+    --ctp-overlay2: inherit;
+    --ctp-subtext0: inherit;
+    --ctp-subtext1: inherit;
+    --ctp-text: inherit;
+    --ctp-rosewater: inherit;
+    --ctp-flamingo: inherit;
+    --ctp-red: inherit;
+    --ctp-maroon: inherit;
+    --ctp-mauve: inherit;
+    --ctp-pink: inherit;
+    --ctp-peach: inherit;
+    --ctp-yellow: inherit;
+    --ctp-green: inherit;
+    --ctp-teal: inherit;
+    --ctp-sky: inherit;
+    --ctp-sapphire: inherit;
+    --ctp-blue: inherit;
+    --ctp-lavender: inherit;
+  }
+  .print, body, .markdown-rendered, :root {
+    background-color: rgb(var(--ctp-base));
+  }
+  .print .markdown-preview-view {
+    color: rgb(var(--ctp-text));
+  }
+}
 body.is-translucent {
   background-color: transparent;
   --workspace-background-translucent: rgba(var(--ctp-crust), var(--anp-translucency-opacity));
