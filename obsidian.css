@@ -3029,7 +3029,7 @@ body.is-translucent {
 }
 
 /* Show language in LP always */
-.markdown-source-view.mod-cm6 .HyperMD-codeblock.cm-line.HyperMD-codeblock-begin {
+.markdown-source-view.mod-cm6 .HyperMD-codeblock.cm-line.cm-line.cm-line.HyperMD-codeblock-begin {
   overflow-x: visible;
 }
 
@@ -4857,7 +4857,7 @@ Icons were taken from Font Awesome: https://fontawesome.com/
 .theme-dark.anp-speech-bubble [data-task="8"],
 .theme-dark.anp-speech-bubble [data-task="9"] {
   --text-normal: var(--background-primary);
-  transition: background-color 0.2s, background 0.2s;
+  transition: background-color 0.2s, background 0.2s, border-radius 0.2s;
 }
 .theme-dark.anp-speech-bubble [data-task="0"]::selection,
 .theme-dark.anp-speech-bubble [data-task="1"]::selection,

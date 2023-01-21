@@ -260,7 +260,7 @@ Icons were taken from Font Awesome: https://fontawesome.com/
             background-color: rgba(var(--ctp-crust), 0.2);
             background: rgba(var(--ctp-crust), 0.2);
         }
-        transition: background-color 0.2s, background 0.2s;
+        transition: background-color 0.2s, background 0.2s, border-radius 0.2s;
     }
 }
 .anp-speech-bubble .is-live-preview {
