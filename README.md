@@ -224,6 +224,9 @@ Note: Themes are toggled via style settings, the default themes are **Latte** fo
 - Excalidraw
 - Kanban
 - Style Settings
+#### Minimal Features
+AnuPpuccin does not come with any code provided by [Minimal](https://github.com/kepano/obsidian-minimal), however it does contain styling and style settings support for certain features that can be compiled via CSS. You can buy Kepano a coffee here:
+<a href="https://www.buymeacoffee.com/kepano" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ### Recommended Fonts
 - **Interface**: [Overpass](https://fonts.google.com/specimen/Overpass)
