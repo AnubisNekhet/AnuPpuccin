@@ -5,7 +5,6 @@
  * All credits go to SlRvb and their theme for inspiration.
  * Donate to SlRvb here: https://ko-fi.com/slrvb
 ------------------------------------------*/
-
 /* @settings
 name: AnuPpuccin ITS Frontmatter Snippet
 id: anp-its-frontmatter-settings
@@ -22,36 +21,41 @@ settings:
 body {
   --frontmatter-background-opacity: 0.5;
 }
-.anp-button-metadata-toggle .frontmatter-container:not(.is-collapsed) {
+
+.anp-button-metadata-toggle .frontmatter-container:not(.is-collapsed), .markdown-rendered.metadata-button .frontmatter-container:not(.is-collapsed) {
   background-color: rgba(var(--ctp-mantle), var(--frontmatter-background-opacity));
   border: 1px solid var(--background-modifier-border);
   padding: var(--size-4-3);
   border-radius: var(--radius-l);
 }
-.anp-button-metadata-toggle .frontmatter-container:not(.is-collapsed) .frontmatter-container-header {
+.anp-button-metadata-toggle .frontmatter-container:not(.is-collapsed) .frontmatter-container-header, .markdown-rendered.metadata-button .frontmatter-container:not(.is-collapsed) .frontmatter-container-header {
   top: 0;
 }
-body:not(.anp-button-metadata-toggle) .frontmatter-container {
+
+body:not(.anp-button-metadata-toggle) .frontmatter-container, .markdown-rendered:not(.metadata-button) .frontmatter-container {
   background-color: rgba(var(--ctp-mantle), var(--frontmatter-background-opacity));
   border: 1px solid var(--background-modifier-border);
   padding: var(--size-4-3);
   border-radius: var(--radius-l);
 }
-body:not(.anp-button-metadata-toggle) .frontmatter-container.is-collapsed .frontmatter-container-header {
+body:not(.anp-button-metadata-toggle) .frontmatter-container.is-collapsed .frontmatter-container-header, .markdown-rendered:not(.metadata-button) .frontmatter-container.is-collapsed .frontmatter-container-header {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
 }
+
 .frontmatter-section-data.frontmatter-section-aliases {
   background-color: var(--background-secondary-alt);
   padding: var(--size-4-1);
   border-radius: var(--tag-radius);
 }
+
 .frontmatter-section-data .frontmatter-section-data-item {
   border: none;
   background-color: var(--background-secondary-alt);
   border-radius: var(--tag-radius);
 }
+
 .frontmatter-container:not(:has(.frontmatter-section)) {
   display: none;
 }

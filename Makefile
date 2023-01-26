@@ -6,6 +6,7 @@ build: ## Build CSS
 .PHONY: snippets
 snippets: ## Build CSS for snippets
 	sass snippets/src/notion-cards.scss snippets/notion-cards.css --no-source-map
+	sass snippets/src/its-frontmatter.scss snippets/its-frontmatter.css --no-source-map
 
 .PHONY: help
 help: ## Display help
