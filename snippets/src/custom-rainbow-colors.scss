@@ -1,0 +1,652 @@
+/* AGPLv3 License
+Custom Rainbow Folder Colors
+Author: AnubisNekhet
+Note: If you decide to implement it in your theme or redistribute it, please keep this comment (Especially for *certain* individuals who may try to rebrand it as their own :))
+Support me: https://buymeacoffee.com/AnubisNekhet
+*/
+
+/* @settings
+name: AnuPpuccin Custom Rainbow Folder Colors
+id: anp-custom-rainbow-colors
+settings:
+    - 
+        id: rainbow-color-repeat
+        title: Repeating color count
+        type: class-select
+        allowEmpty: false
+        default: rainbow-repeat-11
+        options:
+            - 
+                label: 1
+                value: rainbow-repeat-1
+            - 
+                label: 2
+                value: rainbow-repeat-2
+            - 
+                label: 3
+                value: rainbow-repeat-3
+            - 
+                label: 4
+                value: rainbow-repeat-4
+            - 
+                label: 5
+                value: rainbow-repeat-5
+            - 
+                label: 6
+                value: rainbow-repeat-6
+            - 
+                label: 7
+                value: rainbow-repeat-7
+            - 
+                label: 8
+                value: rainbow-repeat-8
+            - 
+                label: 9
+                value: rainbow-repeat-9
+            - 
+                label: 10
+                value: rainbow-repeat-10
+            - 
+                label: 11
+                value: rainbow-repeat-11
+    - 
+        id: rainbow-color-1-default
+        title: Rainbow Color 1
+        type: class-select
+        allowEmpty: false
+        default: rainbow-color-1-rosewater
+        options:
+            - 
+                label: Rosewater
+                value: rainbow-color-1-rosewater
+            - 
+                label: Flamingo
+                value: rainbow-color-1-flamingo
+            - 
+                label: Pink
+                value: rainbow-color-1-pink
+            - 
+                label: Mauve
+                value: rainbow-color-1-mauve
+            - 
+                label: Red
+                value: rainbow-color-1-red
+            - 
+                label: Maroon
+                value: rainbow-color-1-maroon
+            - 
+                label: Peach
+                value: rainbow-color-1-peach
+            - 
+                label: Yellow
+                value: rainbow-color-1-yellow
+            - 
+                label: Green
+                value: rainbow-color-1-green
+            - 
+                label: Teal
+                value: rainbow-color-1-teal
+            - 
+                label: Sky
+                value: rainbow-color-1-sky
+            - 
+                label: Sapphire
+                value: rainbow-color-1-sapphire
+            - 
+                label: Blue
+                value: rainbow-color-1-blue
+            - 
+                label: Lavender
+                value: rainbow-color-1-lavender
+    - 
+        id: rainbow-color-2-default
+        title: Rainbow Color 2
+        type: class-select
+        allowEmpty: false
+        default: rainbow-color-2-rosewater
+        options:
+            - 
+                label: Rosewater
+                value: rainbow-color-2-rosewater
+            - 
+                label: Flamingo
+                value: rainbow-color-2-flamingo
+            - 
+                label: Pink
+                value: rainbow-color-2-pink
+            - 
+                label: Mauve
+                value: rainbow-color-2-mauve
+            - 
+                label: Red
+                value: rainbow-color-2-red
+            - 
+                label: Maroon
+                value: rainbow-color-2-maroon
+            - 
+                label: Peach
+                value: rainbow-color-2-peach
+            - 
+                label: Yellow
+                value: rainbow-color-2-yellow
+            - 
+                label: Green
+                value: rainbow-color-2-green
+            - 
+                label: Teal
+                value: rainbow-color-2-teal
+            - 
+                label: Sky
+                value: rainbow-color-2-sky
+            - 
+                label: Sapphire
+                value: rainbow-color-2-sapphire
+            - 
+                label: Blue
+                value: rainbow-color-2-blue
+            - 
+                label: Lavender
+                value: rainbow-color-2-lavender
+    - 
+        id: rainbow-color-3-default
+        title: Rainbow Color 3
+        type: class-select
+        allowEmpty: false
+        default: rainbow-color-3-rosewater
+        options:
+            - 
+                label: Rosewater
+                value: rainbow-color-3-rosewater
+            - 
+                label: Flamingo
+                value: rainbow-color-3-flamingo
+            - 
+                label: Pink
+                value: rainbow-color-3-pink
+            - 
+                label: Mauve
+                value: rainbow-color-3-mauve
+            - 
+                label: Red
+                value: rainbow-color-3-red
+            - 
+                label: Maroon
+                value: rainbow-color-3-maroon
+            - 
+                label: Peach
+                value: rainbow-color-3-peach
+            - 
+                label: Yellow
+                value: rainbow-color-3-yellow
+            - 
+                label: Green
+                value: rainbow-color-3-green
+            - 
+                label: Teal
+                value: rainbow-color-3-teal
+            - 
+                label: Sky
+                value: rainbow-color-3-sky
+            - 
+                label: Sapphire
+                value: rainbow-color-3-sapphire
+            - 
+                label: Blue
+                value: rainbow-color-3-blue
+            - 
+                label: Lavender
+                value: rainbow-color-3-lavender
+    - 
+        id: rainbow-color-4-default
+        title: Rainbow Color 4
+        type: class-select
+        allowEmpty: false
+        default: rainbow-color-4-rosewater
+        options:
+            - 
+                label: Rosewater
+                value: rainbow-color-4-rosewater
+            - 
+                label: Flamingo
+                value: rainbow-color-4-flamingo
+            - 
+                label: Pink
+                value: rainbow-color-4-pink
+            - 
+                label: Mauve
+                value: rainbow-color-4-mauve
+            - 
+                label: Red
+                value: rainbow-color-4-red
+            - 
+                label: Maroon
+                value: rainbow-color-4-maroon
+            - 
+                label: Peach
+                value: rainbow-color-4-peach
+            - 
+                label: Yellow
+                value: rainbow-color-4-yellow
+            - 
+                label: Green
+                value: rainbow-color-4-green
+            - 
+                label: Teal
+                value: rainbow-color-4-teal
+            - 
+                label: Sky
+                value: rainbow-color-4-sky
+            - 
+                label: Sapphire
+                value: rainbow-color-4-sapphire
+            - 
+                label: Blue
+                value: rainbow-color-4-blue
+            - 
+                label: Lavender
+                value: rainbow-color-4-lavender
+    - 
+        id: rainbow-color-5-default
+        title: Rainbow Color 5
+        type: class-select
+        allowEmpty: false
+        default: rainbow-color-5-rosewater
+        options:
+            - 
+                label: Rosewater
+                value: rainbow-color-5-rosewater
+            - 
+                label: Flamingo
+                value: rainbow-color-5-flamingo
+            - 
+                label: Pink
+                value: rainbow-color-5-pink
+            - 
+                label: Mauve
+                value: rainbow-color-5-mauve
+            - 
+                label: Red
+                value: rainbow-color-5-red
+            - 
+                label: Maroon
+                value: rainbow-color-5-maroon
+            - 
+                label: Peach
+                value: rainbow-color-5-peach
+            - 
+                label: Yellow
+                value: rainbow-color-5-yellow
+            - 
+                label: Green
+                value: rainbow-color-5-green
+            - 
+                label: Teal
+                value: rainbow-color-5-teal
+            - 
+                label: Sky
+                value: rainbow-color-5-sky
+            - 
+                label: Sapphire
+                value: rainbow-color-5-sapphire
+            - 
+                label: Blue
+                value: rainbow-color-5-blue
+            - 
+                label: Lavender
+                value: rainbow-color-5-lavender
+    - 
+        id: rainbow-color-6-default
+        title: Rainbow Color 6
+        type: class-select
+        allowEmpty: false
+        default: rainbow-color-6-rosewater
+        options:
+            - 
+                label: Rosewater
+                value: rainbow-color-6-rosewater
+            - 
+                label: Flamingo
+                value: rainbow-color-6-flamingo
+            - 
+                label: Pink
+                value: rainbow-color-6-pink
+            - 
+                label: Mauve
+                value: rainbow-color-6-mauve
+            - 
+                label: Red
+                value: rainbow-color-6-red
+            - 
+                label: Maroon
+                value: rainbow-color-6-maroon
+            - 
+                label: Peach
+                value: rainbow-color-6-peach
+            - 
+                label: Yellow
+                value: rainbow-color-6-yellow
+            - 
+                label: Green
+                value: rainbow-color-6-green
+            - 
+                label: Teal
+                value: rainbow-color-6-teal
+            - 
+                label: Sky
+                value: rainbow-color-6-sky
+            - 
+                label: Sapphire
+                value: rainbow-color-6-sapphire
+            - 
+                label: Blue
+                value: rainbow-color-6-blue
+            - 
+                label: Lavender
+                value: rainbow-color-6-lavender
+    - 
+        id: rainbow-color-7-default
+        title: Rainbow Color 7
+        type: class-select
+        allowEmpty: false
+        default: rainbow-color-7-rosewater
+        options:
+            - 
+                label: Rosewater
+                value: rainbow-color-7-rosewater
+            - 
+                label: Flamingo
+                value: rainbow-color-7-flamingo
+            - 
+                label: Pink
+                value: rainbow-color-7-pink
+            - 
+                label: Mauve
+                value: rainbow-color-7-mauve
+            - 
+                label: Red
+                value: rainbow-color-7-red
+            - 
+                label: Maroon
+                value: rainbow-color-7-maroon
+            - 
+                label: Peach
+                value: rainbow-color-7-peach
+            - 
+                label: Yellow
+                value: rainbow-color-7-yellow
+            - 
+                label: Green
+                value: rainbow-color-7-green
+            - 
+                label: Teal
+                value: rainbow-color-7-teal
+            - 
+                label: Sky
+                value: rainbow-color-7-sky
+            - 
+                label: Sapphire
+                value: rainbow-color-7-sapphire
+            - 
+                label: Blue
+                value: rainbow-color-7-blue
+            - 
+                label: Lavender
+                value: rainbow-color-7-lavender
+    - 
+        id: rainbow-color-8-default
+        title: Rainbow Color 8
+        type: class-select
+        allowEmpty: false
+        default: rainbow-color-8-rosewater
+        options:
+            - 
+                label: Rosewater
+                value: rainbow-color-8-rosewater
+            - 
+                label: Flamingo
+                value: rainbow-color-8-flamingo
+            - 
+                label: Pink
+                value: rainbow-color-8-pink
+            - 
+                label: Mauve
+                value: rainbow-color-8-mauve
+            - 
+                label: Red
+                value: rainbow-color-8-red
+            - 
+                label: Maroon
+                value: rainbow-color-8-maroon
+            - 
+                label: Peach
+                value: rainbow-color-8-peach
+            - 
+                label: Yellow
+                value: rainbow-color-8-yellow
+            - 
+                label: Green
+                value: rainbow-color-8-green
+            - 
+                label: Teal
+                value: rainbow-color-8-teal
+            - 
+                label: Sky
+                value: rainbow-color-8-sky
+            - 
+                label: Sapphire
+                value: rainbow-color-8-sapphire
+            - 
+                label: Blue
+                value: rainbow-color-8-blue
+            - 
+                label: Lavender
+                value: rainbow-color-8-lavender
+    - 
+        id: rainbow-color-9-default
+        title: Rainbow Color 9
+        type: class-select
+        allowEmpty: false
+        default: rainbow-color-9-rosewater
+        options:
+            - 
+                label: Rosewater
+                value: rainbow-color-9-rosewater
+            - 
+                label: Flamingo
+                value: rainbow-color-9-flamingo
+            - 
+                label: Pink
+                value: rainbow-color-9-pink
+            - 
+                label: Mauve
+                value: rainbow-color-9-mauve
+            - 
+                label: Red
+                value: rainbow-color-9-red
+            - 
+                label: Maroon
+                value: rainbow-color-9-maroon
+            - 
+                label: Peach
+                value: rainbow-color-9-peach
+            - 
+                label: Yellow
+                value: rainbow-color-9-yellow
+            - 
+                label: Green
+                value: rainbow-color-9-green
+            - 
+                label: Teal
+                value: rainbow-color-9-teal
+            - 
+                label: Sky
+                value: rainbow-color-9-sky
+            - 
+                label: Sapphire
+                value: rainbow-color-9-sapphire
+            - 
+                label: Blue
+                value: rainbow-color-9-blue
+            - 
+                label: Lavender
+                value: rainbow-color-9-lavender
+    - 
+        id: rainbow-color-10-default
+        title: Rainbow Color 10
+        type: class-select
+        allowEmpty: false
+        default: rainbow-color-10-rosewater
+        options:
+            - 
+                label: Rosewater
+                value: rainbow-color-10-rosewater
+            - 
+                label: Flamingo
+                value: rainbow-color-10-flamingo
+            - 
+                label: Pink
+                value: rainbow-color-10-pink
+            - 
+                label: Mauve
+                value: rainbow-color-10-mauve
+            - 
+                label: Red
+                value: rainbow-color-10-red
+            - 
+                label: Maroon
+                value: rainbow-color-10-maroon
+            - 
+                label: Peach
+                value: rainbow-color-10-peach
+            - 
+                label: Yellow
+                value: rainbow-color-10-yellow
+            - 
+                label: Green
+                value: rainbow-color-10-green
+            - 
+                label: Teal
+                value: rainbow-color-10-teal
+            - 
+                label: Sky
+                value: rainbow-color-10-sky
+            - 
+                label: Sapphire
+                value: rainbow-color-10-sapphire
+            - 
+                label: Blue
+                value: rainbow-color-10-blue
+            - 
+                label: Lavender
+                value: rainbow-color-10-lavender
+    - 
+        id: rainbow-color-11-default
+        title: Rainbow Color 11
+        type: class-select
+        allowEmpty: false
+        default: rainbow-color-11-rosewater
+        options:
+            - 
+                label: Rosewater
+                value: rainbow-color-11-rosewater
+            - 
+                label: Flamingo
+                value: rainbow-color-11-flamingo
+            - 
+                label: Pink
+                value: rainbow-color-11-pink
+            - 
+                label: Mauve
+                value: rainbow-color-11-mauve
+            - 
+                label: Red
+                value: rainbow-color-11-red
+            - 
+                label: Maroon
+                value: rainbow-color-11-maroon
+            - 
+                label: Peach
+                value: rainbow-color-11-peach
+            - 
+                label: Yellow
+                value: rainbow-color-11-yellow
+            - 
+                label: Green
+                value: rainbow-color-11-green
+            - 
+                label: Teal
+                value: rainbow-color-11-teal
+            - 
+                label: Sky
+                value: rainbow-color-11-sky
+            - 
+                label: Sapphire
+                value: rainbow-color-11-sapphire
+            - 
+                label: Blue
+                value: rainbow-color-11-blue
+            - 
+                label: Lavender
+                value: rainbow-color-11-lavender
+
+*/
+
+$accents: rosewater, flamingo, pink, mauve, red, maroon, peach, yellow, green, teal, sky, sapphire, blue, lavender;
+
+%rainbow-flamingo {
+    --rainbow-folder-color: var(--ctp-flamingo);
+}
+%rainbow-rosewater {
+    --rainbow-folder-color: var(--ctp-rosewater);
+}
+%rainbow-pink {
+    --rainbow-folder-color: var(--ctp-pink);
+}
+%rainbow-mauve {
+    --rainbow-folder-color: var(--ctp-mauve);
+}
+%rainbow-red {
+    --rainbow-folder-color: var(--ctp-red);
+}
+%rainbow-maroon {
+    --rainbow-folder-color: var(--ctp-maroon);
+}
+%rainbow-peach {
+    --rainbow-folder-color: var(--ctp-peach);
+}
+%rainbow-yellow {
+    --rainbow-folder-color: var(--ctp-yellow);
+}
+%rainbow-green {
+    --rainbow-folder-color: var(--ctp-green);
+}
+%rainbow-teal {
+    --rainbow-folder-color: var(--ctp-teal);
+}
+%rainbow-sky {
+    --rainbow-folder-color: var(--ctp-sky);
+}
+%rainbow-sapphire {
+    --rainbow-folder-color: var(--ctp-sapphire);
+}
+%rainbow-blue {
+    --rainbow-folder-color: var(--ctp-blue);
+}
+%rainbow-lavender {
+    --rainbow-folder-color: var(--ctp-lavender);
+}
+@mixin rainbow-colors($arg) {
+    @extend %rainbow-#{"" + $arg};
+}
+
+@for $a from 1 through 11 {
+    body.rainbow-repeat-#{$a} {
+        @for $i from 1 through $a {
+            @each $accent in $accents {
+                &.rainbow-color-#{$i}-#{"" + $accent} .nav-folder-children > .nav-folder {
+                    &:nth-child(#{$a}n + #{$i + 1}) { @include rainbow-colors($accent)};
+                }
+            }
+        }
+    }
+}
