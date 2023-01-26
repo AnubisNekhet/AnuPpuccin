@@ -28,6 +28,9 @@ Go to your AnuPuccin folder (<code>.obsidian/themes/Anuppuccin</code>) and run:<
 Clone the github repo and run <code>sass src/base.scss theme.css</code> in the root folder.
 </details>
 
+## Community Contributions
+AnuPpuccin has a [Discussions](https://github.com/AnubisNekhet/AnuPpuccin/discussions/categories/snippets) page dedicated to snippets that add a personal touch to your obsidian setup. If you want to share your customizations, feel free to do so!
+
 ## Features
 
 ### Custom palette

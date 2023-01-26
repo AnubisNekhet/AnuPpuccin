@@ -1,6 +1,6 @@
 /*-Button for metadata-*/
-.anp-button-metadata-toggle {
-  &.anuppuccin-accent-toggle {
+body.anuppuccin-accent-toggle {
+  &.anp-button-metadata-toggle, .markdown-rendered.metadata-button {
     .frontmatter-container .frontmatter-container-header {
       background-color: rgba(var(--ctp-accent), 0.8);
       &:hover {
@@ -11,7 +11,9 @@
       }
     }
   }
-  &:not(.anuppuccin-accent-toggle) {
+}
+body:not(.anuppuccin-accent-toggle) {
+  &.anp-button-metadata-toggle, .markdown-rendered.metadata-button {
     .frontmatter-container .frontmatter-container-header {
       background-color: hsla(var(--color-accent-hsl), 0.8);
       &:hover {
@@ -22,6 +24,8 @@
       }
     }
   }
+}
+.anp-button-metadata-toggle, .markdown-rendered.metadata-button {
   .frontmatter-container {
     padding: 0;
     .frontmatter-container-header {
