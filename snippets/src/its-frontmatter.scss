@@ -1,0 +1,61 @@
+/*------------------------------------------
+ * ITS is a theme by @SlRvb
+ * https://github.com/SlRvb/Obsidian--ITS-Theme
+ * This snippet is a simple imitation which tries to emulate the look of frontmatter in ITS.
+ * All credits go to SlRvb and their theme for inspiration.
+ * Donate to SlRvb here: https://ko-fi.com/slrvb
+------------------------------------------*/
+
+/* @settings
+name: AnuPpuccin ITS Frontmatter Snippet
+id: anp-its-frontmatter-settings
+settings:
+    - 
+        id: frontmatter-background-opacity
+        title: Frontmatter background opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05
+*/
+body {
+  --frontmatter-background-opacity: 0.5;
+}
+.anp-button-metadata-toggle, .markdown-rendered.metadata-button {
+  .frontmatter-container:not(.is-collapsed) {
+    background-color: rgba(var(--ctp-mantle), var(--frontmatter-background-opacity));
+    border: 1px solid var(--background-modifier-border);
+    padding: var(--size-4-3);
+    border-radius: var(--radius-l);
+    .frontmatter-container-header {
+      top: 0;
+    }
+  }
+}
+body:not(.anp-button-metadata-toggle), .markdown-rendered:not(.metadata-button) {
+  .frontmatter-container {
+    background-color: rgba(var(--ctp-mantle), var(--frontmatter-background-opacity));
+    border: 1px solid var(--background-modifier-border);
+    padding: var(--size-4-3);
+    border-radius: var(--radius-l);
+  }
+  .frontmatter-container.is-collapsed .frontmatter-container-header {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+.frontmatter-section-data.frontmatter-section-aliases {
+  background-color: var(--background-secondary-alt);
+  padding: var(--size-4-1);
+  border-radius: var(--tag-radius);
+}
+.frontmatter-section-data .frontmatter-section-data-item {
+  border: none;
+  background-color: var(--background-secondary-alt);
+  border-radius: var(--tag-radius);
+}
+.frontmatter-container:not(:has(.frontmatter-section)) {
+  display: none;
+}

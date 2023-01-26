@@ -223,6 +223,18 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 
 Note: Themes are toggled via style settings, the default themes are **Latte** for light mode and **Mocha** for dark mode.
 
+### Custom CSS Classes
+Inserting these css classes into your note frontmatter will style your notes individually.
+
+| CSS Class | Function |
+| ----- | ----- |
+| `heading-normal-toggle` | Disables color in headings |
+| `decorations-normal-toggle` | Disables color in text decorations like **bold** and *italic* |
+| `hide-metadata` | Hides metadata |
+| `metadata-button` | Enables custom metadata button |
+
+
+
 ### Integrations
 - Excalidraw
 - Kanban
