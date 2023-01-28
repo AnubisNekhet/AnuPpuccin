@@ -5388,6 +5388,10 @@ None of the original code was used and the feature was implemented from scratch.
   border-bottom: none;
 }
 
+.style-settings-heading[data-level="1"] {
+  border-top-color: var(--background-modifier-border);
+}
+
 .style-settings-heading:not([data-level="0"]):nth-child(-n+2),
 .style-settings-heading:not([data-level="0"], .is-collapsed) + .style-settings-container + .style-settings-heading,
 .style-settings-container .setting-item + .setting-item-heading {
