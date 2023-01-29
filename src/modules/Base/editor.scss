@@ -58,3 +58,83 @@
 .ͼp .cm-vim-panel {
   font-family: var(--font-monospace);
 }
+/*-LaTeX color implementation-*/
+/* Syntax highlighting */
+.cm-math {
+  &.token.comment,
+  &.token.prolog,
+  &.token.doctype,
+  &.token.cdata,
+  &.cm-comment,
+  &.cm-meta {
+    color: var(--code-comment);
+  }
+  &.token.namespace {
+    opacity: 0.7;
+  }
+  &.token.tag,
+  &.token.constant,
+  &.token.symbol,
+  &.token.deleted,
+  &.cm-tag {
+    color: var(--code-tag);
+  }
+  &.token.punctuation,
+  &.cm-punctuation,
+  &.cm-bracket,
+  &.cm-hr {
+    color: var(--code-punctuation);
+  }
+  &.token.boolean,
+  &.token.number,
+  &.cm-number {
+    color: var(--code-value);
+  }
+  &.token.selector,
+  &.token.attr-name,
+  &.token.string,
+  &.token.char,
+  &.token.inserted,
+  &.cm-qualifier,
+  &.cm-string,
+  &.cm-string-2 {
+    color: var(--code-string);
+  }
+  &.token.operator,
+  &.cm-operator {
+    color: var(--code-operator);
+  }
+  &.token.entity,
+  &.token.parameter,
+  &.token.property,
+  &.token.url,
+  &.language-css .token.string,
+  &.style .token.string,
+  &.token.variable,
+  &.cm-link,
+  &.cm-variable,
+  &.cm-variable-2,
+  &.cm-variable-3 {
+    color: var(--code-property);
+  }
+  &.token.atrule,
+  &.token.attr-value,
+  &.token.builtin,
+  &.token.function,
+  &.token.class-name,
+  &.token.property-access,
+  &.cm-builtin,
+  &.cm-property,
+  &.cm-attribute,
+  &.cm-type {
+   color: var(--code-function);
+  }
+  &.token.keyword,
+  &.cm-keyword {
+    color: var(--code-keyword);
+  }
+  &.token.regex,
+  &.token.important {
+    color: var(--code-important);
+  }
+}

@@ -2713,6 +2713,42 @@ body.theme-dark {
   font-family: var(--font-monospace);
 }
 
+/*-LaTeX color implementation-*/
+/* Syntax highlighting */
+.cm-math.token.comment, .cm-math.token.prolog, .cm-math.token.doctype, .cm-math.token.cdata, .cm-math.cm-comment, .cm-math.cm-meta {
+  color: var(--code-comment);
+}
+.cm-math.token.namespace {
+  opacity: 0.7;
+}
+.cm-math.token.tag, .cm-math.token.constant, .cm-math.token.symbol, .cm-math.token.deleted, .cm-math.cm-tag {
+  color: var(--code-tag);
+}
+.cm-math.token.punctuation, .cm-math.cm-punctuation, .cm-math.cm-bracket, .cm-math.cm-hr {
+  color: var(--code-punctuation);
+}
+.cm-math.token.boolean, .cm-math.token.number, .cm-math.cm-number {
+  color: var(--code-value);
+}
+.cm-math.token.selector, .cm-math.token.attr-name, .cm-math.token.string, .cm-math.token.char, .cm-math.token.inserted, .cm-math.cm-qualifier, .cm-math.cm-string, .cm-math.cm-string-2 {
+  color: var(--code-string);
+}
+.cm-math.token.operator, .cm-math.cm-operator {
+  color: var(--code-operator);
+}
+.cm-math.token.entity, .cm-math.token.parameter, .cm-math.token.property, .cm-math.token.url, .cm-math.language-css .token.string, .cm-math.style .token.string, .cm-math.token.variable, .cm-math.cm-link, .cm-math.cm-variable, .cm-math.cm-variable-2, .cm-math.cm-variable-3 {
+  color: var(--code-property);
+}
+.cm-math.token.atrule, .cm-math.token.attr-value, .cm-math.token.builtin, .cm-math.token.function, .cm-math.token.class-name, .cm-math.token.property-access, .cm-math.cm-builtin, .cm-math.cm-property, .cm-math.cm-attribute, .cm-math.cm-type {
+  color: var(--code-function);
+}
+.cm-math.token.keyword, .cm-math.cm-keyword {
+  color: var(--code-keyword);
+}
+.cm-math.token.regex, .cm-math.token.important {
+  color: var(--code-important);
+}
+
 .canvas-card-menu {
   box-shadow: none;
   border: 1px solid var(--background-modifier-border);
@@ -5693,6 +5729,11 @@ None of the original code was used and the feature was implemented from scratch.
 .style-settings-container .setting-item:is([data-id=anp-preview-width-pct],
 [data-id=anp-table-width-pct]) .setting-item-control::after {
   content: "%";
+}
+
+.setting-item[data-id=anp-colors-section-header] > .setting-item-info > .setting-item-name {
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, rgb(var(--ctp-rosewater)) 7%, rgb(var(--ctp-flamingo)) 7%, rgb(var(--ctp-flamingo)) 14%, rgb(var(--ctp-mauve)) 14%, rgb(var(--ctp-mauve)) 21%, rgb(var(--ctp-pink)) 21%, rgb(var(--ctp-pink)) 28%, rgb(var(--ctp-red)) 28%, rgb(var(--ctp-red)) 35%, rgb(var(--ctp-maroon)) 35%, rgb(var(--ctp-maroon)) 42%, rgb(var(--ctp-peach)) 42%, rgb(var(--ctp-peach)) 49%, rgb(var(--ctp-yellow)) 49%, rgb(var(--ctp-yellow)) 56%, rgb(var(--ctp-green)) 56%, rgb(var(--ctp-green)) 63%, rgb(var(--ctp-teal)) 63%, rgb(var(--ctp-teal)) 70%, rgb(var(--ctp-sky)) 70%, rgb(var(--ctp-sky)) 77%, rgb(var(--ctp-sapphire)) 77%, rgb(var(--ctp-sapphire)) 85%, rgb(var(--ctp-blue)) 85%, rgb(var(--ctp-blue)) 92%, rgb(var(--ctp-lavender))) 5;
 }
 
 /*-Fix dataview table header size-*/
