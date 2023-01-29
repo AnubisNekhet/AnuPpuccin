@@ -56,6 +56,9 @@ settings:
         default: rainbow-color-1-rosewater
         options:
             - 
+                label: Accent
+                value: rainbow-color-1-accent
+            - 
                 label: Rosewater
                 value: rainbow-color-1-rosewater
             - 
@@ -104,6 +107,9 @@ settings:
         allowEmpty: false
         default: rainbow-color-2-rosewater
         options:
+            - 
+                label: Accent
+                value: rainbow-color-2-accent
             - 
                 label: Rosewater
                 value: rainbow-color-2-rosewater
@@ -154,6 +160,9 @@ settings:
         default: rainbow-color-3-rosewater
         options:
             - 
+                label: Accent
+                value: rainbow-color-3-accent
+            - 
                 label: Rosewater
                 value: rainbow-color-3-rosewater
             - 
@@ -202,6 +211,9 @@ settings:
         allowEmpty: false
         default: rainbow-color-4-rosewater
         options:
+            - 
+                label: Accent
+                value: rainbow-color-4-accent
             - 
                 label: Rosewater
                 value: rainbow-color-4-rosewater
@@ -252,6 +264,9 @@ settings:
         default: rainbow-color-5-rosewater
         options:
             - 
+                label: Accent
+                value: rainbow-color-5-accent
+            - 
                 label: Rosewater
                 value: rainbow-color-5-rosewater
             - 
@@ -300,6 +315,9 @@ settings:
         allowEmpty: false
         default: rainbow-color-6-rosewater
         options:
+            - 
+                label: Accent
+                value: rainbow-color-6-accent
             - 
                 label: Rosewater
                 value: rainbow-color-6-rosewater
@@ -350,6 +368,9 @@ settings:
         default: rainbow-color-7-rosewater
         options:
             - 
+                label: Accent
+                value: rainbow-color-7-accent
+            - 
                 label: Rosewater
                 value: rainbow-color-7-rosewater
             - 
@@ -398,6 +419,9 @@ settings:
         allowEmpty: false
         default: rainbow-color-8-rosewater
         options:
+            - 
+                label: Accent
+                value: rainbow-color-8-accent
             - 
                 label: Rosewater
                 value: rainbow-color-8-rosewater
@@ -448,6 +472,9 @@ settings:
         default: rainbow-color-9-rosewater
         options:
             - 
+                label: Accent
+                value: rainbow-color-9-accent
+            - 
                 label: Rosewater
                 value: rainbow-color-9-rosewater
             - 
@@ -496,6 +523,9 @@ settings:
         allowEmpty: false
         default: rainbow-color-10-rosewater
         options:
+            - 
+                label: Accent
+                value: rainbow-color-10-accent
             - 
                 label: Rosewater
                 value: rainbow-color-10-rosewater
@@ -546,6 +576,9 @@ settings:
         default: rainbow-color-11-rosewater
         options:
             - 
+                label: Accent
+                value: rainbow-color-11-accent
+            - 
                 label: Rosewater
                 value: rainbow-color-11-rosewater
             - 
@@ -589,6 +622,10 @@ settings:
                 value: rainbow-color-11-lavender
 
 */
+body.rainbow-repeat-11.rainbow-color-11-accent .nav-folder-children > .nav-folder:nth-child(11n+12), body.rainbow-repeat-11.rainbow-color-10-accent .nav-folder-children > .nav-folder:nth-child(11n+11), body.rainbow-repeat-11.rainbow-color-9-accent .nav-folder-children > .nav-folder:nth-child(11n+10), body.rainbow-repeat-11.rainbow-color-8-accent .nav-folder-children > .nav-folder:nth-child(11n+9), body.rainbow-repeat-11.rainbow-color-7-accent .nav-folder-children > .nav-folder:nth-child(11n+8), body.rainbow-repeat-11.rainbow-color-6-accent .nav-folder-children > .nav-folder:nth-child(11n+7), body.rainbow-repeat-11.rainbow-color-5-accent .nav-folder-children > .nav-folder:nth-child(11n+6), body.rainbow-repeat-11.rainbow-color-4-accent .nav-folder-children > .nav-folder:nth-child(11n+5), body.rainbow-repeat-11.rainbow-color-3-accent .nav-folder-children > .nav-folder:nth-child(11n+4), body.rainbow-repeat-11.rainbow-color-2-accent .nav-folder-children > .nav-folder:nth-child(11n+3), body.rainbow-repeat-11.rainbow-color-1-accent .nav-folder-children > .nav-folder:nth-child(11n+2), body.rainbow-repeat-10.rainbow-color-10-accent .nav-folder-children > .nav-folder:nth-child(10n+11), body.rainbow-repeat-10.rainbow-color-9-accent .nav-folder-children > .nav-folder:nth-child(10n+10), body.rainbow-repeat-10.rainbow-color-8-accent .nav-folder-children > .nav-folder:nth-child(10n+9), body.rainbow-repeat-10.rainbow-color-7-accent .nav-folder-children > .nav-folder:nth-child(10n+8), body.rainbow-repeat-10.rainbow-color-6-accent .nav-folder-children > .nav-folder:nth-child(10n+7), body.rainbow-repeat-10.rainbow-color-5-accent .nav-folder-children > .nav-folder:nth-child(10n+6), body.rainbow-repeat-10.rainbow-color-4-accent .nav-folder-children > .nav-folder:nth-child(10n+5), body.rainbow-repeat-10.rainbow-color-3-accent .nav-folder-children > .nav-folder:nth-child(10n+4), body.rainbow-repeat-10.rainbow-color-2-accent .nav-folder-children > .nav-folder:nth-child(10n+3), body.rainbow-repeat-10.rainbow-color-1-accent .nav-folder-children > .nav-folder:nth-child(10n+2), body.rainbow-repeat-9.rainbow-color-9-accent .nav-folder-children > .nav-folder:nth-child(9n+10), body.rainbow-repeat-9.rainbow-color-8-accent .nav-folder-children > .nav-folder:nth-child(9n+9), body.rainbow-repeat-9.rainbow-color-7-accent .nav-folder-children > .nav-folder:nth-child(9n+8), body.rainbow-repeat-9.rainbow-color-6-accent .nav-folder-children > .nav-folder:nth-child(9n+7), body.rainbow-repeat-9.rainbow-color-5-accent .nav-folder-children > .nav-folder:nth-child(9n+6), body.rainbow-repeat-9.rainbow-color-4-accent .nav-folder-children > .nav-folder:nth-child(9n+5), body.rainbow-repeat-9.rainbow-color-3-accent .nav-folder-children > .nav-folder:nth-child(9n+4), body.rainbow-repeat-9.rainbow-color-2-accent .nav-folder-children > .nav-folder:nth-child(9n+3), body.rainbow-repeat-9.rainbow-color-1-accent .nav-folder-children > .nav-folder:nth-child(9n+2), body.rainbow-repeat-8.rainbow-color-8-accent .nav-folder-children > .nav-folder:nth-child(8n+9), body.rainbow-repeat-8.rainbow-color-7-accent .nav-folder-children > .nav-folder:nth-child(8n+8), body.rainbow-repeat-8.rainbow-color-6-accent .nav-folder-children > .nav-folder:nth-child(8n+7), body.rainbow-repeat-8.rainbow-color-5-accent .nav-folder-children > .nav-folder:nth-child(8n+6), body.rainbow-repeat-8.rainbow-color-4-accent .nav-folder-children > .nav-folder:nth-child(8n+5), body.rainbow-repeat-8.rainbow-color-3-accent .nav-folder-children > .nav-folder:nth-child(8n+4), body.rainbow-repeat-8.rainbow-color-2-accent .nav-folder-children > .nav-folder:nth-child(8n+3), body.rainbow-repeat-8.rainbow-color-1-accent .nav-folder-children > .nav-folder:nth-child(8n+2), body.rainbow-repeat-7.rainbow-color-7-accent .nav-folder-children > .nav-folder:nth-child(7n+8), body.rainbow-repeat-7.rainbow-color-6-accent .nav-folder-children > .nav-folder:nth-child(7n+7), body.rainbow-repeat-7.rainbow-color-5-accent .nav-folder-children > .nav-folder:nth-child(7n+6), body.rainbow-repeat-7.rainbow-color-4-accent .nav-folder-children > .nav-folder:nth-child(7n+5), body.rainbow-repeat-7.rainbow-color-3-accent .nav-folder-children > .nav-folder:nth-child(7n+4), body.rainbow-repeat-7.rainbow-color-2-accent .nav-folder-children > .nav-folder:nth-child(7n+3), body.rainbow-repeat-7.rainbow-color-1-accent .nav-folder-children > .nav-folder:nth-child(7n+2), body.rainbow-repeat-6.rainbow-color-6-accent .nav-folder-children > .nav-folder:nth-child(6n+7), body.rainbow-repeat-6.rainbow-color-5-accent .nav-folder-children > .nav-folder:nth-child(6n+6), body.rainbow-repeat-6.rainbow-color-4-accent .nav-folder-children > .nav-folder:nth-child(6n+5), body.rainbow-repeat-6.rainbow-color-3-accent .nav-folder-children > .nav-folder:nth-child(6n+4), body.rainbow-repeat-6.rainbow-color-2-accent .nav-folder-children > .nav-folder:nth-child(6n+3), body.rainbow-repeat-6.rainbow-color-1-accent .nav-folder-children > .nav-folder:nth-child(6n+2), body.rainbow-repeat-5.rainbow-color-5-accent .nav-folder-children > .nav-folder:nth-child(5n+6), body.rainbow-repeat-5.rainbow-color-4-accent .nav-folder-children > .nav-folder:nth-child(5n+5), body.rainbow-repeat-5.rainbow-color-3-accent .nav-folder-children > .nav-folder:nth-child(5n+4), body.rainbow-repeat-5.rainbow-color-2-accent .nav-folder-children > .nav-folder:nth-child(5n+3), body.rainbow-repeat-5.rainbow-color-1-accent .nav-folder-children > .nav-folder:nth-child(5n+2), body.rainbow-repeat-4.rainbow-color-4-accent .nav-folder-children > .nav-folder:nth-child(4n+5), body.rainbow-repeat-4.rainbow-color-3-accent .nav-folder-children > .nav-folder:nth-child(4n+4), body.rainbow-repeat-4.rainbow-color-2-accent .nav-folder-children > .nav-folder:nth-child(4n+3), body.rainbow-repeat-4.rainbow-color-1-accent .nav-folder-children > .nav-folder:nth-child(4n+2), body.rainbow-repeat-3.rainbow-color-3-accent .nav-folder-children > .nav-folder:nth-child(3n+4), body.rainbow-repeat-3.rainbow-color-2-accent .nav-folder-children > .nav-folder:nth-child(3n+3), body.rainbow-repeat-3.rainbow-color-1-accent .nav-folder-children > .nav-folder:nth-child(3n+2), body.rainbow-repeat-2.rainbow-color-2-accent .nav-folder-children > .nav-folder:nth-child(2n+3), body.rainbow-repeat-2.rainbow-color-1-accent .nav-folder-children > .nav-folder:nth-child(2n+2), body.rainbow-repeat-1.rainbow-color-1-accent .nav-folder-children > .nav-folder:nth-child(1n+2) {
+  --rainbow-folder-color: var(--ctp-accent);
+}
+
 body.rainbow-repeat-11.rainbow-color-11-flamingo .nav-folder-children > .nav-folder:nth-child(11n+12), body.rainbow-repeat-11.rainbow-color-10-flamingo .nav-folder-children > .nav-folder:nth-child(11n+11), body.rainbow-repeat-11.rainbow-color-9-flamingo .nav-folder-children > .nav-folder:nth-child(11n+10), body.rainbow-repeat-11.rainbow-color-8-flamingo .nav-folder-children > .nav-folder:nth-child(11n+9), body.rainbow-repeat-11.rainbow-color-7-flamingo .nav-folder-children > .nav-folder:nth-child(11n+8), body.rainbow-repeat-11.rainbow-color-6-flamingo .nav-folder-children > .nav-folder:nth-child(11n+7), body.rainbow-repeat-11.rainbow-color-5-flamingo .nav-folder-children > .nav-folder:nth-child(11n+6), body.rainbow-repeat-11.rainbow-color-4-flamingo .nav-folder-children > .nav-folder:nth-child(11n+5), body.rainbow-repeat-11.rainbow-color-3-flamingo .nav-folder-children > .nav-folder:nth-child(11n+4), body.rainbow-repeat-11.rainbow-color-2-flamingo .nav-folder-children > .nav-folder:nth-child(11n+3), body.rainbow-repeat-11.rainbow-color-1-flamingo .nav-folder-children > .nav-folder:nth-child(11n+2), body.rainbow-repeat-10.rainbow-color-10-flamingo .nav-folder-children > .nav-folder:nth-child(10n+11), body.rainbow-repeat-10.rainbow-color-9-flamingo .nav-folder-children > .nav-folder:nth-child(10n+10), body.rainbow-repeat-10.rainbow-color-8-flamingo .nav-folder-children > .nav-folder:nth-child(10n+9), body.rainbow-repeat-10.rainbow-color-7-flamingo .nav-folder-children > .nav-folder:nth-child(10n+8), body.rainbow-repeat-10.rainbow-color-6-flamingo .nav-folder-children > .nav-folder:nth-child(10n+7), body.rainbow-repeat-10.rainbow-color-5-flamingo .nav-folder-children > .nav-folder:nth-child(10n+6), body.rainbow-repeat-10.rainbow-color-4-flamingo .nav-folder-children > .nav-folder:nth-child(10n+5), body.rainbow-repeat-10.rainbow-color-3-flamingo .nav-folder-children > .nav-folder:nth-child(10n+4), body.rainbow-repeat-10.rainbow-color-2-flamingo .nav-folder-children > .nav-folder:nth-child(10n+3), body.rainbow-repeat-10.rainbow-color-1-flamingo .nav-folder-children > .nav-folder:nth-child(10n+2), body.rainbow-repeat-9.rainbow-color-9-flamingo .nav-folder-children > .nav-folder:nth-child(9n+10), body.rainbow-repeat-9.rainbow-color-8-flamingo .nav-folder-children > .nav-folder:nth-child(9n+9), body.rainbow-repeat-9.rainbow-color-7-flamingo .nav-folder-children > .nav-folder:nth-child(9n+8), body.rainbow-repeat-9.rainbow-color-6-flamingo .nav-folder-children > .nav-folder:nth-child(9n+7), body.rainbow-repeat-9.rainbow-color-5-flamingo .nav-folder-children > .nav-folder:nth-child(9n+6), body.rainbow-repeat-9.rainbow-color-4-flamingo .nav-folder-children > .nav-folder:nth-child(9n+5), body.rainbow-repeat-9.rainbow-color-3-flamingo .nav-folder-children > .nav-folder:nth-child(9n+4), body.rainbow-repeat-9.rainbow-color-2-flamingo .nav-folder-children > .nav-folder:nth-child(9n+3), body.rainbow-repeat-9.rainbow-color-1-flamingo .nav-folder-children > .nav-folder:nth-child(9n+2), body.rainbow-repeat-8.rainbow-color-8-flamingo .nav-folder-children > .nav-folder:nth-child(8n+9), body.rainbow-repeat-8.rainbow-color-7-flamingo .nav-folder-children > .nav-folder:nth-child(8n+8), body.rainbow-repeat-8.rainbow-color-6-flamingo .nav-folder-children > .nav-folder:nth-child(8n+7), body.rainbow-repeat-8.rainbow-color-5-flamingo .nav-folder-children > .nav-folder:nth-child(8n+6), body.rainbow-repeat-8.rainbow-color-4-flamingo .nav-folder-children > .nav-folder:nth-child(8n+5), body.rainbow-repeat-8.rainbow-color-3-flamingo .nav-folder-children > .nav-folder:nth-child(8n+4), body.rainbow-repeat-8.rainbow-color-2-flamingo .nav-folder-children > .nav-folder:nth-child(8n+3), body.rainbow-repeat-8.rainbow-color-1-flamingo .nav-folder-children > .nav-folder:nth-child(8n+2), body.rainbow-repeat-7.rainbow-color-7-flamingo .nav-folder-children > .nav-folder:nth-child(7n+8), body.rainbow-repeat-7.rainbow-color-6-flamingo .nav-folder-children > .nav-folder:nth-child(7n+7), body.rainbow-repeat-7.rainbow-color-5-flamingo .nav-folder-children > .nav-folder:nth-child(7n+6), body.rainbow-repeat-7.rainbow-color-4-flamingo .nav-folder-children > .nav-folder:nth-child(7n+5), body.rainbow-repeat-7.rainbow-color-3-flamingo .nav-folder-children > .nav-folder:nth-child(7n+4), body.rainbow-repeat-7.rainbow-color-2-flamingo .nav-folder-children > .nav-folder:nth-child(7n+3), body.rainbow-repeat-7.rainbow-color-1-flamingo .nav-folder-children > .nav-folder:nth-child(7n+2), body.rainbow-repeat-6.rainbow-color-6-flamingo .nav-folder-children > .nav-folder:nth-child(6n+7), body.rainbow-repeat-6.rainbow-color-5-flamingo .nav-folder-children > .nav-folder:nth-child(6n+6), body.rainbow-repeat-6.rainbow-color-4-flamingo .nav-folder-children > .nav-folder:nth-child(6n+5), body.rainbow-repeat-6.rainbow-color-3-flamingo .nav-folder-children > .nav-folder:nth-child(6n+4), body.rainbow-repeat-6.rainbow-color-2-flamingo .nav-folder-children > .nav-folder:nth-child(6n+3), body.rainbow-repeat-6.rainbow-color-1-flamingo .nav-folder-children > .nav-folder:nth-child(6n+2), body.rainbow-repeat-5.rainbow-color-5-flamingo .nav-folder-children > .nav-folder:nth-child(5n+6), body.rainbow-repeat-5.rainbow-color-4-flamingo .nav-folder-children > .nav-folder:nth-child(5n+5), body.rainbow-repeat-5.rainbow-color-3-flamingo .nav-folder-children > .nav-folder:nth-child(5n+4), body.rainbow-repeat-5.rainbow-color-2-flamingo .nav-folder-children > .nav-folder:nth-child(5n+3), body.rainbow-repeat-5.rainbow-color-1-flamingo .nav-folder-children > .nav-folder:nth-child(5n+2), body.rainbow-repeat-4.rainbow-color-4-flamingo .nav-folder-children > .nav-folder:nth-child(4n+5), body.rainbow-repeat-4.rainbow-color-3-flamingo .nav-folder-children > .nav-folder:nth-child(4n+4), body.rainbow-repeat-4.rainbow-color-2-flamingo .nav-folder-children > .nav-folder:nth-child(4n+3), body.rainbow-repeat-4.rainbow-color-1-flamingo .nav-folder-children > .nav-folder:nth-child(4n+2), body.rainbow-repeat-3.rainbow-color-3-flamingo .nav-folder-children > .nav-folder:nth-child(3n+4), body.rainbow-repeat-3.rainbow-color-2-flamingo .nav-folder-children > .nav-folder:nth-child(3n+3), body.rainbow-repeat-3.rainbow-color-1-flamingo .nav-folder-children > .nav-folder:nth-child(3n+2), body.rainbow-repeat-2.rainbow-color-2-flamingo .nav-folder-children > .nav-folder:nth-child(2n+3), body.rainbow-repeat-2.rainbow-color-1-flamingo .nav-folder-children > .nav-folder:nth-child(2n+2), body.rainbow-repeat-1.rainbow-color-1-flamingo .nav-folder-children > .nav-folder:nth-child(1n+2) {
   --rainbow-folder-color: var(--ctp-flamingo);
 }
@@ -644,5 +681,3 @@ body.rainbow-repeat-11.rainbow-color-11-blue .nav-folder-children > .nav-folder:
 body.rainbow-repeat-11.rainbow-color-11-lavender .nav-folder-children > .nav-folder:nth-child(11n+12), body.rainbow-repeat-11.rainbow-color-10-lavender .nav-folder-children > .nav-folder:nth-child(11n+11), body.rainbow-repeat-11.rainbow-color-9-lavender .nav-folder-children > .nav-folder:nth-child(11n+10), body.rainbow-repeat-11.rainbow-color-8-lavender .nav-folder-children > .nav-folder:nth-child(11n+9), body.rainbow-repeat-11.rainbow-color-7-lavender .nav-folder-children > .nav-folder:nth-child(11n+8), body.rainbow-repeat-11.rainbow-color-6-lavender .nav-folder-children > .nav-folder:nth-child(11n+7), body.rainbow-repeat-11.rainbow-color-5-lavender .nav-folder-children > .nav-folder:nth-child(11n+6), body.rainbow-repeat-11.rainbow-color-4-lavender .nav-folder-children > .nav-folder:nth-child(11n+5), body.rainbow-repeat-11.rainbow-color-3-lavender .nav-folder-children > .nav-folder:nth-child(11n+4), body.rainbow-repeat-11.rainbow-color-2-lavender .nav-folder-children > .nav-folder:nth-child(11n+3), body.rainbow-repeat-11.rainbow-color-1-lavender .nav-folder-children > .nav-folder:nth-child(11n+2), body.rainbow-repeat-10.rainbow-color-10-lavender .nav-folder-children > .nav-folder:nth-child(10n+11), body.rainbow-repeat-10.rainbow-color-9-lavender .nav-folder-children > .nav-folder:nth-child(10n+10), body.rainbow-repeat-10.rainbow-color-8-lavender .nav-folder-children > .nav-folder:nth-child(10n+9), body.rainbow-repeat-10.rainbow-color-7-lavender .nav-folder-children > .nav-folder:nth-child(10n+8), body.rainbow-repeat-10.rainbow-color-6-lavender .nav-folder-children > .nav-folder:nth-child(10n+7), body.rainbow-repeat-10.rainbow-color-5-lavender .nav-folder-children > .nav-folder:nth-child(10n+6), body.rainbow-repeat-10.rainbow-color-4-lavender .nav-folder-children > .nav-folder:nth-child(10n+5), body.rainbow-repeat-10.rainbow-color-3-lavender .nav-folder-children > .nav-folder:nth-child(10n+4), body.rainbow-repeat-10.rainbow-color-2-lavender .nav-folder-children > .nav-folder:nth-child(10n+3), body.rainbow-repeat-10.rainbow-color-1-lavender .nav-folder-children > .nav-folder:nth-child(10n+2), body.rainbow-repeat-9.rainbow-color-9-lavender .nav-folder-children > .nav-folder:nth-child(9n+10), body.rainbow-repeat-9.rainbow-color-8-lavender .nav-folder-children > .nav-folder:nth-child(9n+9), body.rainbow-repeat-9.rainbow-color-7-lavender .nav-folder-children > .nav-folder:nth-child(9n+8), body.rainbow-repeat-9.rainbow-color-6-lavender .nav-folder-children > .nav-folder:nth-child(9n+7), body.rainbow-repeat-9.rainbow-color-5-lavender .nav-folder-children > .nav-folder:nth-child(9n+6), body.rainbow-repeat-9.rainbow-color-4-lavender .nav-folder-children > .nav-folder:nth-child(9n+5), body.rainbow-repeat-9.rainbow-color-3-lavender .nav-folder-children > .nav-folder:nth-child(9n+4), body.rainbow-repeat-9.rainbow-color-2-lavender .nav-folder-children > .nav-folder:nth-child(9n+3), body.rainbow-repeat-9.rainbow-color-1-lavender .nav-folder-children > .nav-folder:nth-child(9n+2), body.rainbow-repeat-8.rainbow-color-8-lavender .nav-folder-children > .nav-folder:nth-child(8n+9), body.rainbow-repeat-8.rainbow-color-7-lavender .nav-folder-children > .nav-folder:nth-child(8n+8), body.rainbow-repeat-8.rainbow-color-6-lavender .nav-folder-children > .nav-folder:nth-child(8n+7), body.rainbow-repeat-8.rainbow-color-5-lavender .nav-folder-children > .nav-folder:nth-child(8n+6), body.rainbow-repeat-8.rainbow-color-4-lavender .nav-folder-children > .nav-folder:nth-child(8n+5), body.rainbow-repeat-8.rainbow-color-3-lavender .nav-folder-children > .nav-folder:nth-child(8n+4), body.rainbow-repeat-8.rainbow-color-2-lavender .nav-folder-children > .nav-folder:nth-child(8n+3), body.rainbow-repeat-8.rainbow-color-1-lavender .nav-folder-children > .nav-folder:nth-child(8n+2), body.rainbow-repeat-7.rainbow-color-7-lavender .nav-folder-children > .nav-folder:nth-child(7n+8), body.rainbow-repeat-7.rainbow-color-6-lavender .nav-folder-children > .nav-folder:nth-child(7n+7), body.rainbow-repeat-7.rainbow-color-5-lavender .nav-folder-children > .nav-folder:nth-child(7n+6), body.rainbow-repeat-7.rainbow-color-4-lavender .nav-folder-children > .nav-folder:nth-child(7n+5), body.rainbow-repeat-7.rainbow-color-3-lavender .nav-folder-children > .nav-folder:nth-child(7n+4), body.rainbow-repeat-7.rainbow-color-2-lavender .nav-folder-children > .nav-folder:nth-child(7n+3), body.rainbow-repeat-7.rainbow-color-1-lavender .nav-folder-children > .nav-folder:nth-child(7n+2), body.rainbow-repeat-6.rainbow-color-6-lavender .nav-folder-children > .nav-folder:nth-child(6n+7), body.rainbow-repeat-6.rainbow-color-5-lavender .nav-folder-children > .nav-folder:nth-child(6n+6), body.rainbow-repeat-6.rainbow-color-4-lavender .nav-folder-children > .nav-folder:nth-child(6n+5), body.rainbow-repeat-6.rainbow-color-3-lavender .nav-folder-children > .nav-folder:nth-child(6n+4), body.rainbow-repeat-6.rainbow-color-2-lavender .nav-folder-children > .nav-folder:nth-child(6n+3), body.rainbow-repeat-6.rainbow-color-1-lavender .nav-folder-children > .nav-folder:nth-child(6n+2), body.rainbow-repeat-5.rainbow-color-5-lavender .nav-folder-children > .nav-folder:nth-child(5n+6), body.rainbow-repeat-5.rainbow-color-4-lavender .nav-folder-children > .nav-folder:nth-child(5n+5), body.rainbow-repeat-5.rainbow-color-3-lavender .nav-folder-children > .nav-folder:nth-child(5n+4), body.rainbow-repeat-5.rainbow-color-2-lavender .nav-folder-children > .nav-folder:nth-child(5n+3), body.rainbow-repeat-5.rainbow-color-1-lavender .nav-folder-children > .nav-folder:nth-child(5n+2), body.rainbow-repeat-4.rainbow-color-4-lavender .nav-folder-children > .nav-folder:nth-child(4n+5), body.rainbow-repeat-4.rainbow-color-3-lavender .nav-folder-children > .nav-folder:nth-child(4n+4), body.rainbow-repeat-4.rainbow-color-2-lavender .nav-folder-children > .nav-folder:nth-child(4n+3), body.rainbow-repeat-4.rainbow-color-1-lavender .nav-folder-children > .nav-folder:nth-child(4n+2), body.rainbow-repeat-3.rainbow-color-3-lavender .nav-folder-children > .nav-folder:nth-child(3n+4), body.rainbow-repeat-3.rainbow-color-2-lavender .nav-folder-children > .nav-folder:nth-child(3n+3), body.rainbow-repeat-3.rainbow-color-1-lavender .nav-folder-children > .nav-folder:nth-child(3n+2), body.rainbow-repeat-2.rainbow-color-2-lavender .nav-folder-children > .nav-folder:nth-child(2n+3), body.rainbow-repeat-2.rainbow-color-1-lavender .nav-folder-children > .nav-folder:nth-child(2n+2), body.rainbow-repeat-1.rainbow-color-1-lavender .nav-folder-children > .nav-folder:nth-child(1n+2) {
   --rainbow-folder-color: var(--ctp-lavender);
 }
-
-/*# sourceMappingURL=custom-rainbow-colors.css.map */
