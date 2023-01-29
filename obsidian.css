@@ -4225,6 +4225,22 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
   border-left: var(--size-2-3) solid rgb(var(--callout-color));
 }
 
+.anp-callout-vanilla-plus .callout {
+  background-color: transparent;
+  border-radius: var(--radius-s);
+  padding: 0;
+}
+.anp-callout-vanilla-plus .callout > .callout-title {
+  background-color: rgba(var(--callout-color), 0.1);
+}
+.anp-callout-vanilla-plus .callout > .callout-content {
+  padding: var(--callout-padding);
+  background-color: rgb(var(--ctp-mantle));
+}
+.anp-callout-vanilla-plus .callout > .callout-title {
+  border-left: var(--size-2-3) solid rgb(var(--callout-color));
+}
+
 /*---------------CALLOUT COLORS----------------*/
 .anp-callout-color-toggle .callout[data-callout=note] {
   --callout-color: var(--ctp-blue);
@@ -4841,6 +4857,7 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   --checkbox-color: rgb(var(--ctp-green));
   --checkbox-color-hover: rgb(var(--ctp-green)) ;
 }
+
 .anp-custom-checkboxes [data-task="!"] input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="!"][type=checkbox]:checked {
   --checkbox-color: rgb(var(--ctp-yellow));
   --checkbox-color-hover: rgb(var(--ctp-yellow));
@@ -4848,6 +4865,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
 .anp-custom-checkboxes [data-task="!"] input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="!"][type=checkbox]:checked:after {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M96 64c0-17.7-14.3-32-32-32S32 46.3 32 64V320c0 17.7 14.3 32 32 32s32-14.3 32-32V64zM64 480c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40s17.9 40 40 40z'/%3E%3C/svg%3E");
   -webkit-mask-size: 20%;
+}
+.anp-custom-checkboxes [data-task="!"] input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="!"][type=checkbox]:checked:before {
+  color: var(--checkbox-color);
+  margin: 0 3px;
+  position: absolute;
+  left: calc(var(--checkbox-size) * 1);
+  font-weight: bold;
 }
 
 .anp-custom-checkboxes [data-task="?"] input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="?"][type=checkbox]:checked {
@@ -4860,6 +4884,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   -webkit-mask-size: contain;
   background-color: rgb(var(--ctp-peach));
   left: 0px;
+}
+.anp-custom-checkboxes [data-task="?"] input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="?"][type=checkbox]:checked:before {
+  color: rgb(var(--ctp-peach));
+  margin: 0 3px;
+  position: absolute;
+  left: calc(var(--checkbox-size) * 1);
+  font-weight: bold;
 }
 
 .anp-custom-checkboxes [data-task="-"] {
@@ -4874,6 +4905,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z'/%3E%3C/svg%3E");
   -webkit-mask-size: 50%;
 }
+.anp-custom-checkboxes [data-task="-"] input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="-"][type=checkbox]:checked:before {
+  color: var(--checkbox-color);
+  margin: 0 3px;
+  position: absolute;
+  left: calc(var(--checkbox-size) * 1);
+  font-weight: bold;
+}
 
 .anp-custom-checkboxes [data-task=b] input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=b][type=checkbox]:checked {
   --checkbox-color: transparent;
@@ -4885,6 +4923,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   -webkit-mask-size: contain;
   background-color: rgb(var(--ctp-red));
   left: 0px;
+}
+.anp-custom-checkboxes [data-task=b] input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=b][type=checkbox]:checked:before {
+  color: rgb(var(--ctp-red));
+  margin: 0 3px;
+  position: absolute;
+  left: calc(var(--checkbox-size) * 1);
+  font-weight: bold;
 }
 
 .anp-custom-checkboxes [data-task=I] input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=I][type=checkbox]:checked {
@@ -4898,6 +4943,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   background-color: rgb(var(--ctp-yellow));
   left: 0px;
 }
+.anp-custom-checkboxes [data-task=I] input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=I][type=checkbox]:checked:before {
+  color: rgb(var(--ctp-yellow));
+  margin: 0 3px;
+  position: absolute;
+  left: calc(var(--checkbox-size) * 1);
+  font-weight: bold;
+}
 
 .anp-custom-checkboxes [data-task=p] input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=p][type=checkbox]:checked {
   --checkbox-color: transparent;
@@ -4909,6 +4961,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   -webkit-mask-size: contain;
   background-color: rgb(var(--ctp-green));
   left: 0px;
+}
+.anp-custom-checkboxes [data-task=p] input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=p][type=checkbox]:checked:before {
+  color: rgb(var(--ctp-green));
+  margin: 0 3px;
+  position: absolute;
+  left: calc(var(--checkbox-size) * 1);
+  font-weight: bold;
 }
 
 .anp-custom-checkboxes [data-task=c] input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=c][type=checkbox]:checked {
@@ -4922,6 +4981,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   background-color: rgb(var(--ctp-red));
   left: 0px;
 }
+.anp-custom-checkboxes [data-task=c] input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=c][type=checkbox]:checked:before {
+  color: var(--checkbox-color);
+  margin: 0 3px;
+  position: absolute;
+  left: calc(var(--checkbox-size) * 1);
+  font-weight: bold;
+}
 
 .anp-custom-checkboxes [data-task=i] input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=i][type=checkbox]:checked {
   --checkbox-color: transparent;
@@ -4933,6 +4999,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   -webkit-mask-size: contain;
   background-color: rgb(var(--ctp-blue));
   left: 0px;
+}
+.anp-custom-checkboxes [data-task=i] input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=i][type=checkbox]:checked:before {
+  color: rgb(var(--ctp-blue));
+  margin: 0 3px;
+  position: absolute;
+  left: calc(var(--checkbox-size) * 1);
+  font-weight: bold;
 }
 
 .anp-custom-checkboxes [data-task=l] input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=l][type=checkbox]:checked {
@@ -4946,6 +5019,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   background-color: rgb(var(--ctp-mauve));
   left: 0px;
 }
+.anp-custom-checkboxes [data-task=l] input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=l][type=checkbox]:checked:before {
+  color: rgb(var(--ctp-mauve));
+  margin: 0 3px;
+  position: absolute;
+  left: calc(var(--checkbox-size) * 1);
+  font-weight: bold;
+}
 
 .anp-custom-checkboxes [data-task="*"] input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="*"][type=checkbox]:checked {
   --checkbox-color: transparent;
@@ -4957,6 +5037,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   -webkit-mask-size: contain;
   background-color: rgb(var(--ctp-yellow));
   left: 0px;
+}
+.anp-custom-checkboxes [data-task="*"] input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="*"][type=checkbox]:checked:before {
+  color: rgb(var(--ctp-yellow));
+  margin: 0 3px;
+  position: absolute;
+  left: calc(var(--checkbox-size) * 1);
+  font-weight: bold;
 }
 
 .anp-custom-checkboxes [data-task=n] input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=n][type=checkbox]:checked {
@@ -4970,6 +5057,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   background-color: rgb(var(--ctp-maroon));
   left: 0px;
 }
+.anp-custom-checkboxes [data-task=n] input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=n][type=checkbox]:checked:before {
+  color: rgb(var(--ctp-maroon));
+  margin: 0 3px;
+  position: absolute;
+  left: calc(var(--checkbox-size) * 1);
+  font-weight: bold;
+}
 
 .anp-custom-checkboxes [data-task=S] input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=S][type=checkbox]:checked {
   --checkbox-color: transparent;
@@ -4982,6 +5076,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   background-color: rgb(var(--ctp-green));
   left: 0px;
 }
+.anp-custom-checkboxes [data-task=S] input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=S][type=checkbox]:checked:before {
+  color: rgb(var(--ctp-green));
+  margin: 0 3px;
+  position: absolute;
+  left: calc(var(--checkbox-size) * 1);
+  font-weight: bold;
+}
 
 .anp-custom-checkboxes [data-task="/"] input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="/"][type=checkbox]:checked {
   --checkbox-color: rgba(var(--ctp-subtext0), 0.3);
@@ -4990,6 +5091,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
 }
 .anp-custom-checkboxes [data-task="/"] input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="/"][type=checkbox]:checked:after {
   background-color: transparent;
+}
+.anp-custom-checkboxes [data-task="/"] input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="/"][type=checkbox]:checked:before {
+  color: rgb(var(--ctp-subtext0));
+  margin: 0 3px;
+  position: absolute;
+  left: calc(var(--checkbox-size) * 1);
+  font-weight: bold;
 }
 
 .anp-custom-checkboxes [data-task="<"] input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="<"][type=checkbox]:checked {
@@ -5003,6 +5111,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   background-color: rgb(var(--ctp-teal));
   left: 0px;
 }
+.anp-custom-checkboxes [data-task="<"] input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="<"][type=checkbox]:checked:before {
+  color: rgb(var(--ctp-teal));
+  margin: 0 3px;
+  position: absolute;
+  left: calc(var(--checkbox-size) * 1);
+  font-weight: bold;
+}
 
 .anp-custom-checkboxes [data-task=">"] input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=">"][type=checkbox]:checked {
   --checkbox-color: transparent;
@@ -5015,6 +5130,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   background-color: rgb(var(--ctp-sapphire));
   left: 0px;
 }
+.anp-custom-checkboxes [data-task=">"] input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=">"][type=checkbox]:checked:before {
+  color: rgb(var(--ctp-sapphire));
+  margin: 0 3px;
+  position: absolute;
+  left: calc(var(--checkbox-size) * 1);
+  font-weight: bold;
+}
 
 .anp-custom-checkboxes [data-task='"'] input[type=checkbox]:checked, .anp-custom-checkboxes [data-task='"'][type=checkbox]:checked {
   --checkbox-color: transparent;
@@ -5026,6 +5148,80 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   -webkit-mask-size: contain;
   background-color: rgb(var(--ctp-subtext0));
   left: 0px;
+}
+.anp-custom-checkboxes [data-task='"'] input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task='"'][type=checkbox]:checked:before {
+  color: rgb(var(--ctp-subtext0));
+  margin: 0 3px;
+  position: absolute;
+  left: calc(var(--checkbox-size) * 1);
+  font-weight: bold;
+}
+
+.anp-custom-checkboxes-labels [data-task="!"] input[type=checkbox]:checked:before, .anp-custom-checkboxes-labels [data-task="!"][type=checkbox]:checked:before {
+  content: "IMP";
+}
+
+.anp-custom-checkboxes-labels [data-task=">"] input[type=checkbox]:checked:before, .anp-custom-checkboxes-labels [data-task=">"][type=checkbox]:checked:before {
+  content: "RSCH";
+}
+
+.anp-custom-checkboxes-labels [data-task="<"] input[type=checkbox]:checked:before, .anp-custom-checkboxes-labels [data-task="<"][type=checkbox]:checked:before {
+  content: "SCH";
+}
+
+.anp-custom-checkboxes-labels [data-task="-"] input[type=checkbox]:checked:before, .anp-custom-checkboxes-labels [data-task="-"][type=checkbox]:checked:before {
+  content: "CNCL";
+}
+
+.anp-custom-checkboxes-labels [data-task="/"] input[type=checkbox]:checked:before, .anp-custom-checkboxes-labels [data-task="/"][type=checkbox]:checked:before {
+  content: "PRG";
+}
+
+.anp-custom-checkboxes-labels [data-task="?"] input[type=checkbox]:checked:before, .anp-custom-checkboxes-labels [data-task="?"][type=checkbox]:checked:before {
+  content: "QUE";
+}
+
+.anp-custom-checkboxes-labels [data-task="*"] input[type=checkbox]:checked:before, .anp-custom-checkboxes-labels [data-task="*"][type=checkbox]:checked:before {
+  content: "STAR";
+}
+
+.anp-custom-checkboxes-labels [data-task=n] input[type=checkbox]:checked:before, .anp-custom-checkboxes-labels [data-task=n][type=checkbox]:checked:before {
+  content: "NOTE";
+}
+
+.anp-custom-checkboxes-labels [data-task=l] input[type=checkbox]:checked:before, .anp-custom-checkboxes-labels [data-task=l][type=checkbox]:checked:before {
+  content: "LCTN";
+}
+
+.anp-custom-checkboxes-labels [data-task=i] input[type=checkbox]:checked:before, .anp-custom-checkboxes-labels [data-task=i][type=checkbox]:checked:before {
+  content: "INFO";
+}
+
+.anp-custom-checkboxes-labels [data-task=I] input[type=checkbox]:checked:before, .anp-custom-checkboxes-labels [data-task=I][type=checkbox]:checked:before {
+  content: "IDEA";
+}
+
+.anp-custom-checkboxes-labels [data-task=S] input[type=checkbox]:checked:before, .anp-custom-checkboxes-labels [data-task=S][type=checkbox]:checked:before {
+  content: "AMT";
+}
+
+.anp-custom-checkboxes-labels [data-task=p] input[type=checkbox]:checked:before, .anp-custom-checkboxes-labels [data-task=p][type=checkbox]:checked:before {
+  content: "PRO";
+}
+
+.anp-custom-checkboxes-labels [data-task=c] input[type=checkbox]:checked:before, .anp-custom-checkboxes-labels [data-task=c][type=checkbox]:checked:before {
+  content: "CON";
+}
+
+.anp-custom-checkboxes-labels [data-task=b] input[type=checkbox]:checked:before, .anp-custom-checkboxes-labels [data-task=b][type=checkbox]:checked:before {
+  content: "BKMK";
+}
+
+.anp-custom-checkboxes-labels [data-task='"'] input[type=checkbox]:checked:before, .anp-custom-checkboxes-labels [data-task='"'][type=checkbox]:checked:before {
+  content: "QUOT";
+}
+.anp-custom-checkboxes-labels .task-list-item .task-list-item-checkbox {
+  margin-right: calc(var(--checkbox-size) * 2.7);
 }
 
 .anp-speech-bubble [data-task="0"],
