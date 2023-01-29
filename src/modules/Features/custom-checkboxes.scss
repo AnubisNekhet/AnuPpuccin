@@ -6,8 +6,6 @@ Icons were taken from Font Awesome: https://fontawesome.com/
 ----------------------------------*/
 .anp-custom-checkboxes [data-task="x"] {
     input[type=checkbox]:checked, &[type=checkbox]:checked {
-        &:after {
-        }
         --checkbox-color: rgb(var(--ctp-green));
         --checkbox-color-hover: rgb(var(--ctp-green))
     }
@@ -17,6 +15,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
         &:after {
             -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M96 64c0-17.7-14.3-32-32-32S32 46.3 32 64V320c0 17.7 14.3 32 32 32s32-14.3 32-32V64zM64 480c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40s17.9 40 40 40z'/%3E%3C/svg%3E");
             -webkit-mask-size: 20%;
+        }
+        &:before {
+            color: var(--checkbox-color);
+            margin: 0 3px;
+            position: absolute;
+            left: calc(var(--checkbox-size) * 1);
+            font-weight: bold;
         }
         --checkbox-color: rgb(var(--ctp-yellow));
         --checkbox-color-hover: rgb(var(--ctp-yellow));
@@ -30,6 +35,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
             background-color: rgb(var(--ctp-peach));
             left: 0px;
         }
+        &:before {
+            color: rgb(var(--ctp-peach));
+            margin: 0 3px;
+            position: absolute;
+            left: calc(var(--checkbox-size) * 1);
+            font-weight: bold;
+        }
         --checkbox-color: transparent;
         --checkbox-color-hover: transparent;
         border-width: 0;
@@ -40,6 +52,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
         &:after {
             -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z'/%3E%3C/svg%3E");
             -webkit-mask-size: 50%;
+        }
+        &:before {
+            color: var(--checkbox-color);
+            margin: 0 3px;
+            position: absolute;
+            left: calc(var(--checkbox-size) * 1);
+            font-weight: bold;
         }
         --checkbox-color: rgb(var(--ctp-red));
         --checkbox-color-hover: rgb(var(--ctp-red));
@@ -55,6 +74,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
             background-color: rgb(var(--ctp-red));
             left: 0px;
         }
+        &:before {
+            color: rgb(var(--ctp-red));
+            margin: 0 3px;
+            position: absolute;
+            left: calc(var(--checkbox-size) * 1);
+            font-weight: bold;
+        }
         --checkbox-color: transparent;
         --checkbox-color-hover: transparent;
         border-width: 0;
@@ -67,6 +93,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
             -webkit-mask-size: contain;
             background-color: rgb(var(--ctp-yellow));
             left: 0px;
+        }
+        &:before {
+            color: rgb(var(--ctp-yellow));
+            margin: 0 3px;
+            position: absolute;
+            left: calc(var(--checkbox-size) * 1);
+            font-weight: bold;
         }
         --checkbox-color: transparent;
         --checkbox-color-hover: transparent;
@@ -81,6 +114,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
             background-color: rgb(var(--ctp-green));
             left: 0px;
         }
+        &:before {
+            color: rgb(var(--ctp-green));
+            margin: 0 3px;
+            position: absolute;
+            left: calc(var(--checkbox-size) * 1);
+            font-weight: bold;
+        }
         --checkbox-color: transparent;
         --checkbox-color-hover: transparent;
         border-width: 0;
@@ -93,6 +133,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
             -webkit-mask-size: 100%;
             background-color: rgb(var(--ctp-red));
             left: 0px;
+        }
+        &:before {
+            color: var(--checkbox-color);
+            margin: 0 3px;
+            position: absolute;
+            left: calc(var(--checkbox-size) * 1);
+            font-weight: bold;
         }
         --checkbox-color: transparent;
         --checkbox-color-hover: transparent;
@@ -107,6 +154,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
             background-color: rgb(var(--ctp-blue));
             left: 0px;
         }
+        &:before {
+            color: rgb(var(--ctp-blue));
+            margin: 0 3px;
+            position: absolute;
+            left: calc(var(--checkbox-size) * 1);
+            font-weight: bold;
+        }
         --checkbox-color: transparent;
         --checkbox-color-hover: transparent;
         border-width: 0;
@@ -119,6 +173,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
             -webkit-mask-size: contain;
             background-color: rgb(var(--ctp-mauve));
             left: 0px;
+        }
+        &:before {
+            color: rgb(var(--ctp-mauve));
+            margin: 0 3px;
+            position: absolute;
+            left: calc(var(--checkbox-size) * 1);
+            font-weight: bold;
         }
         --checkbox-color: transparent;
         --checkbox-color-hover: transparent;
@@ -133,6 +194,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
             background-color: rgb(var(--ctp-yellow));
             left: 0px;
         }
+        &:before {
+            color: rgb(var(--ctp-yellow));
+            margin: 0 3px;
+            position: absolute;
+            left: calc(var(--checkbox-size) * 1);
+            font-weight: bold;
+        }
         --checkbox-color: transparent;
         --checkbox-color-hover: transparent;
         border-width: 0;
@@ -145,6 +213,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
             -webkit-mask-size: contain;
             background-color: rgb(var(--ctp-maroon));
             left: 0px;
+        }
+        &:before {
+            color: rgb(var(--ctp-maroon));
+            margin: 0 3px;
+            position: absolute;
+            left: calc(var(--checkbox-size) * 1);
+            font-weight: bold;
         }
         --checkbox-color: transparent;
         --checkbox-color-hover: transparent;
@@ -159,6 +234,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
             background-color: rgb(var(--ctp-green));
             left: 0px;
         }
+        &:before {
+            color: rgb(var(--ctp-green));
+            margin: 0 3px;
+            position: absolute;
+            left: calc(var(--checkbox-size) * 1);
+            font-weight: bold;
+        }
         --checkbox-color: transparent;
         --checkbox-color-hover: transparent;
         border-width: 0;
@@ -168,6 +250,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
     input[type=checkbox]:checked, &[type=checkbox]:checked {
         &:after {
             background-color: transparent;
+        }
+        &:before {
+            color: rgb(var(--ctp-subtext0));
+            margin: 0 3px;
+            position: absolute;
+            left: calc(var(--checkbox-size) * 1);
+            font-weight: bold;
         }
         --checkbox-color: rgba(var(--ctp-subtext0), 0.3);
         --checkbox-color-hover: rgba(var(--ctp-subtext0), 0.3);
@@ -182,6 +271,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
             background-color: rgb(var(--ctp-teal));
             left: 0px;
         }
+        &:before {
+            color: rgb(var(--ctp-teal));
+            margin: 0 3px;
+            position: absolute;
+            left: calc(var(--checkbox-size) * 1);
+            font-weight: bold;
+        }
         --checkbox-color: transparent;
         --checkbox-color-hover: transparent;
         border-width: 0;
@@ -194,6 +290,13 @@ Icons were taken from Font Awesome: https://fontawesome.com/
             -webkit-mask-size: contain;
             background-color: rgb(var(--ctp-sapphire));
             left: 0px;
+        }
+        &:before {
+            color: rgb(var(--ctp-sapphire));
+            margin: 0 3px;
+            position: absolute;
+            left: calc(var(--checkbox-size) * 1);
+            font-weight: bold;
         }
         --checkbox-color: transparent;
         --checkbox-color-hover: transparent;
@@ -208,9 +311,60 @@ Icons were taken from Font Awesome: https://fontawesome.com/
             background-color: rgb(var(--ctp-subtext0));
             left: 0px;
         }
+        &:before {
+            color: rgb(var(--ctp-subtext0));
+            margin: 0 3px;
+            position: absolute;
+            left: calc(var(--checkbox-size) * 1);
+            font-weight: bold;
+        }
         --checkbox-color: transparent;
         --checkbox-color-hover: transparent;
         border-width: 0;
+    }
+}
+
+$labels: (
+    '!': 'IMP',
+    '>': 'RSCH',
+    '<': 'SCH',
+    '-': 'CNCL',
+    '/': 'PRG',
+    '?': 'QUE',
+    '*': 'STAR',
+    'n': 'NOTE',
+    'l': 'LCTN',
+    'i': 'INFO',
+    'I': 'IDEA',
+    'S': 'AMT',
+    'p': 'PRO',
+    'c': 'CON',
+    'b': 'BKMK',
+);
+@each $label, $content in $labels {
+    .anp-custom-checkboxes-labels {
+        [data-task='#{$label}'] {
+            input[type=checkbox]:checked, &[type=checkbox]:checked {
+                &:before {
+                    content: $content;
+                }
+            }
+        }
+    }
+}
+
+.anp-custom-checkboxes-labels {
+    [data-task='"'] {
+        input[type=checkbox]:checked, &[type=checkbox]:checked {
+            &:before {
+                content: "QUOT";
+            }
+        }
+    }
+    .task-list-item {
+        .task-list-item-checkbox {
+            margin-right: calc(var(--checkbox-size) * 2.7);
+        }
     }
 }
 

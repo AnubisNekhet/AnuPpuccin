@@ -31,14 +31,22 @@ body {
 .anp-button-metadata-toggle .frontmatter-container:not(.is-collapsed) .frontmatter-container-header, .markdown-rendered.metadata-button .frontmatter-container:not(.is-collapsed) .frontmatter-container-header {
   top: 0;
 }
+.anp-button-metadata-toggle .frontmatter-container.is-collapsed, .markdown-rendered.metadata-button .frontmatter-container.is-collapsed {
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
+.anp-button-metadata-toggle .frontmatter-container.is-collapsed .frontmatter-container-header, .markdown-rendered.metadata-button .frontmatter-container.is-collapsed .frontmatter-container-header {
+  top: 0;
+}
 
-body:not(.anp-button-metadata-toggle) .frontmatter-container, .markdown-rendered:not(.metadata-button) .frontmatter-container {
+body:not(.anp-button-metadata-toggle) .frontmatter-container {
   background-color: rgba(var(--ctp-mantle), var(--frontmatter-background-opacity));
   border: 1px solid var(--background-modifier-border);
   padding: var(--size-4-3);
   border-radius: var(--radius-l);
 }
-body:not(.anp-button-metadata-toggle) .frontmatter-container.is-collapsed .frontmatter-container-header, .markdown-rendered:not(.metadata-button) .frontmatter-container.is-collapsed .frontmatter-container-header {
+body:not(.anp-button-metadata-toggle) .frontmatter-container.is-collapsed .frontmatter-container-header {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
