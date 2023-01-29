@@ -4245,35 +4245,35 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
   padding-right: 3px;
 }
 
-.anp-callout-vanilla .callout {
+.anp-callout-vanilla.anp-callout-toggle .callout {
   background-color: transparent;
   border-radius: var(--radius-s);
   padding: 0;
 }
-.anp-callout-vanilla .callout .callout-title {
+.anp-callout-vanilla.anp-callout-toggle .callout .callout-title {
   background-color: rgba(var(--callout-color), 0.1);
 }
-.anp-callout-vanilla .callout .callout-content {
+.anp-callout-vanilla.anp-callout-toggle .callout .callout-content {
   padding: var(--callout-padding);
   background-color: rgb(var(--ctp-mantle));
 }
-.anp-callout-vanilla .callout .callout-title, .anp-callout-vanilla .callout .callout-content {
+.anp-callout-vanilla.anp-callout-toggle .callout .callout-title, .anp-callout-vanilla.anp-callout-toggle .callout .callout-content {
   border-left: var(--size-2-3) solid rgb(var(--callout-color));
 }
 
-.anp-callout-vanilla-plus .callout {
+.anp-callout-vanilla-plus.anp-callout-toggle .callout {
   background-color: transparent;
   border-radius: var(--radius-s);
   padding: 0;
 }
-.anp-callout-vanilla-plus .callout > .callout-title {
+.anp-callout-vanilla-plus.anp-callout-toggle .callout > .callout-title {
   background-color: rgba(var(--callout-color), 0.1);
 }
-.anp-callout-vanilla-plus .callout > .callout-content {
+.anp-callout-vanilla-plus.anp-callout-toggle .callout > .callout-content {
   padding: var(--callout-padding);
   background-color: rgb(var(--ctp-mantle));
 }
-.anp-callout-vanilla-plus .callout > .callout-title {
+.anp-callout-vanilla-plus.anp-callout-toggle .callout > .callout-title {
   border-left: var(--size-2-3) solid rgb(var(--callout-color));
 }
 
@@ -6265,7 +6265,7 @@ div[class*=mk-] [style*="--icon-color:#ffffff"] {
   --rainbow-folder-color: var(--ctp-mauve);
 }
 
-.anp-rainbow-subfolder-color-toggle .nav-folder.mod-root .nav-folder .nav-folder {
+.anp-rainbow-subfolder-color-toggle .nav-folder.mod-root .nav-folder.nav-folder .nav-folder {
   --rainbow-folder-color: inherit;
 }
 
