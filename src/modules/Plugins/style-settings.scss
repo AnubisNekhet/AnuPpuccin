@@ -99,7 +99,7 @@
     text-align: center;
     position: absolute;
     top: 8px;
-    left: 128px;
+    left: calc(100% - 65px);
     width: 28px;
   }
 }
