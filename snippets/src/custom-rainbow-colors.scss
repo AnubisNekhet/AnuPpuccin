@@ -57,9 +57,6 @@ settings:
         default: rainbow-color-1-rosewater
         options:
             - 
-                label: Accent
-                value: rainbow-color-1-accent
-            - 
                 label: Rosewater
                 value: rainbow-color-1-rosewater
             - 
@@ -108,9 +105,6 @@ settings:
         allowEmpty: false
         default: rainbow-color-2-rosewater
         options:
-            - 
-                label: Accent
-                value: rainbow-color-2-accent
             - 
                 label: Rosewater
                 value: rainbow-color-2-rosewater
@@ -161,9 +155,6 @@ settings:
         default: rainbow-color-3-rosewater
         options:
             - 
-                label: Accent
-                value: rainbow-color-3-accent
-            - 
                 label: Rosewater
                 value: rainbow-color-3-rosewater
             - 
@@ -212,9 +203,6 @@ settings:
         allowEmpty: false
         default: rainbow-color-4-rosewater
         options:
-            - 
-                label: Accent
-                value: rainbow-color-4-accent
             - 
                 label: Rosewater
                 value: rainbow-color-4-rosewater
@@ -265,9 +253,6 @@ settings:
         default: rainbow-color-5-rosewater
         options:
             - 
-                label: Accent
-                value: rainbow-color-5-accent
-            - 
                 label: Rosewater
                 value: rainbow-color-5-rosewater
             - 
@@ -316,9 +301,6 @@ settings:
         allowEmpty: false
         default: rainbow-color-6-rosewater
         options:
-            - 
-                label: Accent
-                value: rainbow-color-6-accent
             - 
                 label: Rosewater
                 value: rainbow-color-6-rosewater
@@ -369,9 +351,6 @@ settings:
         default: rainbow-color-7-rosewater
         options:
             - 
-                label: Accent
-                value: rainbow-color-7-accent
-            - 
                 label: Rosewater
                 value: rainbow-color-7-rosewater
             - 
@@ -420,9 +399,6 @@ settings:
         allowEmpty: false
         default: rainbow-color-8-rosewater
         options:
-            - 
-                label: Accent
-                value: rainbow-color-8-accent
             - 
                 label: Rosewater
                 value: rainbow-color-8-rosewater
@@ -473,9 +449,6 @@ settings:
         default: rainbow-color-9-rosewater
         options:
             - 
-                label: Accent
-                value: rainbow-color-9-accent
-            - 
                 label: Rosewater
                 value: rainbow-color-9-rosewater
             - 
@@ -524,9 +497,6 @@ settings:
         allowEmpty: false
         default: rainbow-color-10-rosewater
         options:
-            - 
-                label: Accent
-                value: rainbow-color-10-accent
             - 
                 label: Rosewater
                 value: rainbow-color-10-rosewater
@@ -577,9 +547,6 @@ settings:
         default: rainbow-color-11-rosewater
         options:
             - 
-                label: Accent
-                value: rainbow-color-11-accent
-            - 
                 label: Rosewater
                 value: rainbow-color-11-rosewater
             - 
@@ -624,10 +591,8 @@ settings:
 
 */
 
+$accents: rosewater, flamingo, pink, mauve, red, maroon, peach, yellow, green, teal, sky, sapphire, blue, lavender;
 
-%rainbow-accent {
-    --rainbow-folder-color: var(--ctp-accent);
-}
 %rainbow-flamingo {
     --rainbow-folder-color: var(--ctp-flamingo);
 }
@@ -670,19 +635,10 @@ settings:
 %rainbow-lavender {
     --rainbow-folder-color: var(--ctp-lavender);
 }
-
-//---------------------------------------------------
-// This is where the magic happens
-//---------------------------------------------------
-// Accent list 
-$accents: rosewater, flamingo, pink, mauve, red, maroon, peach, yellow, green, teal, sky, sapphire, blue, lavender, accent;
-// Function rainbow-colors(x) gives --rainbow-folder-color as --ctp-color */
 @mixin rainbow-colors($arg) {
     @extend %rainbow-#{"" + $arg};
 }
-// variable a is the repeat count, it varies from 1 to 11
-// variable i is the color position count, it varies from 1 to a
-// the function runs 3 loops: once for repetition counts, once for position, and once for the different colors available
+
 @for $a from 1 through 11 {
     body.rainbow-repeat-#{$a} {
         @for $i from 1 through $a {

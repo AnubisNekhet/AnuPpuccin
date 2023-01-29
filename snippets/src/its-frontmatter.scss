@@ -32,16 +32,8 @@ body {
       top: 0;
     }
   }
-  .frontmatter-container.is-collapsed {
-    border: none;
-    padding: 0;
-    border-radius: 0;
-    .frontmatter-container-header {
-      top: 0;
-    }
-  }
 }
-body:not(.anp-button-metadata-toggle) {
+body:not(.anp-button-metadata-toggle), .markdown-rendered:not(.metadata-button) {
   .frontmatter-container {
     background-color: rgba(var(--ctp-mantle), var(--frontmatter-background-opacity));
     border: 1px solid var(--background-modifier-border);
