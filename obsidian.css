@@ -4,20 +4,6 @@ name: AnuPpuccin
 id: anuppuccin-theme-settings
 settings:
 
-# Canvas
-
-  -
-    id: anp-canvas-header
-    title: Canvas
-    description: Darken Canvas Background
-    type: heading
-    level: 1
-    collapsed: true
-  -
-    id: anp-canvas-dark-bg
-    title: Darker Canvas Background
-    type: class-toggle
-
 # Colors
 
   -
@@ -113,8 +99,8 @@ settings:
         value: ctp-accent-lavender
   -
     id: anuppuccin-accent-toggle
-    title: Force Catppuccin Accents
-    description: Forces catppuccin accents to be utilised instead of default obsidian accent
+    title: Force Custom Accents
+    description: Forces colorscheme-specific custom accents to be utilised instead of default obsidian accent
     type: class-toggle
     default: true
   -
@@ -313,7 +299,7 @@ settings:
 
   -
     id: anp-editor-header
-    title: File Editor
+    title: File Editor & Markdown Elements
     description: Active Line Highlight, Callouts, Checkboxes, Codeblocks, Lists, Tables
     type: heading
     level: 1
@@ -335,11 +321,11 @@ settings:
         label: Highlight + Border
         value: anp-current-line-border
 
-# File Editor :: Callouts
+# File Editor & Markdown Elements :: Callouts
   -
     id: anp-callout-header
     title: Callouts
-    description: 
+    description: Callout styles, border radius, custom colors
     type: heading
     level: 2
     collapsed: true
@@ -366,6 +352,9 @@ settings:
       - 
         label: Vanilla
         value: anp-callout-vanilla
+      - 
+        label: Vanilla
+        value: anp-callout-vanilla-plus
   -
     id: callout-radius
     title: Callout Radius
@@ -385,12 +374,12 @@ settings:
     title: Toggle Callout Fold Position
     type: class-toggle
 
-# File Editor :: Checkboxes
+# File Editor & Markdown Elements :: Checkboxes
 
   -
     id: anp-custom-checkboxes-header
     title: Checkboxes
-    description: 
+    description: Custom checkboxes and speech bubbles
     type: heading
     level: 2
     collapsed: true
@@ -403,12 +392,12 @@ settings:
     title: Enable Speech Bubbles
     type: class-toggle
 
-# File Editor :: Codeblocks
+# File Editor & Markdown Elements :: Codeblocks
 
   -
     id: anp-codeblock-header
     title: Codeblocks
-    description: 
+    description: Codeblock wrapping, line numbering
     type: heading
     level: 2
     collapsed: true
@@ -462,12 +451,12 @@ settings:
     default-light: '#'
     default-dark: '#'
 
-# File Editor :: Lists
+# File Editor & Markdown Elements :: Lists
 
   -
     id: anp-list-header
     title: Lists
-    description: 
+    description: Styling, indent, spacing
     type: heading
     level: 2
     collapsed: true
@@ -488,12 +477,12 @@ settings:
     default: 0.075
     format: em
 
-# File Editor :: Tables
+# File Editor & Markdown Elements :: Tables
 
   -
     id: anp-table-header
     title: Tables
-    description: 
+    description: Table width, alignment, table element highlight and alignment, border width
     type: heading
     level: 2
     collapsed: true
@@ -587,6 +576,31 @@ settings:
     type: variable-number
     default: 100
     format: "%"
+
+# File Editor & Markdown Elements :: Tags
+
+  -
+    id: anp-tags-header
+    title: Tags
+    description: Border Width and Border Radius of Tags
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: tag-border-width
+    title: Tag Border Width
+    type: variable-number
+    default: 0
+    format: px
+  -
+    id: tag-radius
+    title: Tag Radius
+    type: variable-number-slider
+    default: 2
+    max: 2
+    min: 0
+    step: 0.1
+    format: em
 
 # File Preview
 
@@ -748,31 +762,6 @@ settings:
     id: anp-tooltip-toggle
     title: Hide Tooltips
     type: class-toggle
-
-# Tags
-
-  -
-    id: anp-tags-header
-    title: Tags
-    description: Border Width and Border Radius of Tags
-    type: heading
-    level: 1
-    collapsed: true
-  -
-    id: tag-border-width
-    title: Tag Border Width
-    type: variable-number
-    default: 0
-    format: px
-  -
-    id: tag-radius
-    title: Tag Radius
-    type: variable-number-slider
-    default: 2
-    max: 2
-    min: 0
-    step: 0.1
-    format: em
 
 # Typography
 
@@ -1603,12 +1592,26 @@ settings:
     level: 1
     collapsed: true
 
-# Workspace :: Background
+# Workspace :: Canvas
+
+  -
+    id: anp-canvas-header
+    title: Canvas
+    description: Darken Canvas Background
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-canvas-dark-bg
+    title: Darker Canvas Background
+    type: class-toggle
+
+# Workspace :: Custom Background
 
   -
     id: anp-custom-background-header
     title: Background
-    description: 
+    description: Custom workspace bacgkrounds
     type: heading
     level: 2
     collapsed: true
@@ -1618,7 +1621,7 @@ settings:
     description: Not compatible with colorful frame
     type: class-toggle
 
-# Workspace :: Background :: Light Mode
+# Workspace :: Custom Background :: Light Mode
 
   -
     id: anp-custom-background-light-header
@@ -1659,7 +1662,7 @@ settings:
     step: 0.05
     default: 0.4
 
-# Workspace :: Background :: Dark Mode
+# Workspace :: Custom Background :: Dark Mode
 
   -
     id: anp-custom-background-dark-header
@@ -1747,7 +1750,7 @@ settings:
   -
     id: anp-filebrowser-header
     title: File Browser
-    description: 
+    description: 'Enable/Disable File Browser elements'
     type: heading
     level: 2
     collapsed: true
@@ -1779,77 +1782,6 @@ settings:
       -
         label: Left
         value: 0
-
-# Workspace :: Layout
-
-  -
-    id: anp-layout-header
-    title: Layout
-    description: 
-    type: heading
-    level: 2
-    collapsed: true
-  -
-    id: anp-layout-select
-    title: Layout variant
-    type: class-select
-    allowEmpty: false
-    default: anp-default-layout
-    options:
-      -
-        label: Default
-        value: anp-default-layout
-      -
-        label: Cards
-        value: anp-card-layout
-  -
-    id: anp-disable-borders
-    title: Disable borders
-    type: class-toggle
-  -
-    id: anp-bg-fix
-    title: Background fix for applying colors
-    type: class-toggle
-
-# Workspace :: Layout :: Card Layout
-
-  -
-    id: anp-layout-card
-    title: Card Layout Settings
-    description: 
-    type: heading
-    level: 3
-    collapsed: true
-  -
-    id: anp-card-radius
-    title: Card radius
-    type: variable-number
-    default: 16
-    format: px
-  -
-    id: anp-card-layout-padding
-    title: Card padding
-    type: variable-number
-    default: 10
-    format: px
-  -
-    id: anp-card-header-left-padding
-    title: Tab left padding
-    type: variable-number
-    default: 20
-    format: px
-  -
-    id: anp-card-shadows
-    title: Enable shadows
-    type: class-toggle
-  -
-    id: anp-card-layout-actions
-    title: Enable card format for actions
-    type: class-toggle
-  -
-    id: anp-card-layout-filebrowser
-    title: Enable card format for file browser
-    type: class-toggle
 
 # Workspace :: Rainbow Folders
 
@@ -2103,6 +2035,77 @@ settings:
     title: Window opacity
     type: variable-number
     default: 0.15
+
+# Workspace :: Workspace Layout
+
+  -
+    id: anp-layout-header
+    title: Workspace Layout
+    description: 
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-layout-select
+    title: Workspace Layout variant
+    type: class-select
+    allowEmpty: false
+    default: anp-default-layout
+    options:
+      -
+        label: Default
+        value: anp-default-layout
+      -
+        label: Cards
+        value: anp-card-layout
+  -
+    id: anp-disable-borders
+    title: Disable borders
+    type: class-toggle
+  -
+    id: anp-bg-fix
+    title: Background fix for applying colors
+    type: class-toggle
+
+# Workspace :: Workspace Layout :: Card Layout
+
+  -
+    id: anp-layout-card
+    title: Card Layout Settings
+    description: 
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: anp-card-radius
+    title: Card radius
+    type: variable-number
+    default: 16
+    format: px
+  -
+    id: anp-card-layout-padding
+    title: Card padding
+    type: variable-number
+    default: 10
+    format: px
+  -
+    id: anp-card-header-left-padding
+    title: Tab left padding
+    type: variable-number
+    default: 20
+    format: px
+  -
+    id: anp-card-shadows
+    title: Enable shadows
+    type: class-toggle
+  -
+    id: anp-card-layout-actions
+    title: Enable card format for actions
+    type: class-toggle
+  -
+    id: anp-card-layout-filebrowser
+    title: Enable card format for file browser
+    type: class-toggle
 
 # Credits
 
@@ -5459,7 +5462,7 @@ None of the original code was used and the feature was implemented from scratch.
   text-align: center;
   position: absolute;
   top: 8px;
-  left: 128px;
+  left: calc(100% - 65px);
   width: 28px;
 }
 
