@@ -5682,20 +5682,25 @@ None of the original code was used and the feature was implemented from scratch.
   position: relative;
 }
 .style-settings-container .setting-item-control:has(input[type=text])::after {
-  align-self: center;
+  align-items: center;
   background-color: var(--background-modifier-hover);
   border-radius: var(--radius-s);
+  display: flex;
   font-size: 10px;
   font-weight: var(--font-semibold);
+  height: calc(var(--input-height) - 12px);
+  justify-content: center;
+  left: calc(100% - 68px);
   letter-spacing: 0.05em;
   line-height: var(--line-height-normal);
   padding: 0;
-  text-transform: uppercase;
-  text-align: center;
   position: absolute;
-  top: 8px;
-  left: calc(100% - 65px);
+  text-transform: uppercase;
+  top: 6px;
   width: 28px;
+}
+.is-mobile .style-settings-container .setting-item-control:has(input[type=text])::after {
+  top: 4px;
 }
 
 .style-settings-container .setting-item:is([data-id=tag-border-width],
