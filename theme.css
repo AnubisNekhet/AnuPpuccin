@@ -5753,7 +5753,7 @@ None of the original code was used and the feature was implemented from scratch.
   font-size: var(--font-ui-small);
   margin-top: var(--size-4-1);
   padding: 0;
-  user-select: all;
+  -webkit-user-select: all;
 }
 .setting-item:is([data-id^=anuppuccin-url-]) .setting-item-description > div {
   display: none;

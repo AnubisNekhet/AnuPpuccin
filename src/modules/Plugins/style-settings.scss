@@ -169,7 +169,7 @@
     font-size: var(--font-ui-small);
     margin-top: var(--size-4-1);
     padding: 0;
-    user-select: all;
+    -webkit-user-select: all;
     > div {
       display: none;
     }
