@@ -170,6 +170,9 @@
     margin-top: var(--size-4-1);
     padding: 0;
     user-select: all;
+    > div {
+      display: none;
+    }
   }
 }
 .setting-item[data-id="anuppuccin-url-donate"] .setting-item-name::before {
