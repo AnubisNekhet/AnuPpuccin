@@ -60,7 +60,7 @@
   }
 }
 
-.style-settings-container .style-settings-heading[data-id="anuppuccin-theme-credits"] .setting-item-name {
+.style-settings-container .style-settings-heading[data-id="anuppuccin-support"] .setting-item-name {
   color: var(--color-accent) !important;
 }
 
@@ -148,4 +148,39 @@
 .setting-item[data-id="anp-colors-section-header"] > .setting-item-info > .setting-item-name {
   border-bottom: 2px solid;
   border-image: linear-gradient(to right, rgb(var(--ctp-rosewater)) 7%, rgb(var(--ctp-flamingo)) 7%, rgb(var(--ctp-flamingo)) 14%, rgb(var(--ctp-mauve)) 14%, rgb(var(--ctp-mauve)) 21%, rgb(var(--ctp-pink)) 21%, rgb(var(--ctp-pink)) 28%, rgb(var(--ctp-red)) 28%, rgb(var(--ctp-red)) 35%, rgb(var(--ctp-maroon)) 35%, rgb(var(--ctp-maroon)) 42%, rgb(var(--ctp-peach)) 42%, rgb(var(--ctp-peach)) 49%, rgb(var(--ctp-yellow)) 49%, rgb(var(--ctp-yellow)) 56%, rgb(var(--ctp-green)) 56%, rgb(var(--ctp-green)) 63%, rgb(var(--ctp-teal)) 63%, rgb(var(--ctp-teal)) 70%, rgb(var(--ctp-sky)) 70%, rgb(var(--ctp-sky)) 77%, rgb(var(--ctp-sapphire)) 77%, rgb(var(--ctp-sapphire)) 85%, rgb(var(--ctp-blue)) 85%, rgb(var(--ctp-blue)) 92%, rgb( var(--ctp-lavender))) 5;
+}
+
+.setting-item:is([data-id^="anuppuccin-url-"]) {
+  .setting-item-control {
+    display: none;
+  }
+  .setting-item-name::before {
+    display: inline-flex;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    height: fit-content;
+    padding-right: var(--size-4-2);
+    width: var(--size-4-4);
+  }
+  .setting-item-description {
+    align-items: center;
+    color: var(--color-accent);
+    cursor: text;
+    display: flex;
+    font-size: var(--font-ui-small);
+    margin-top: var(--size-4-1);
+    padding: 0;
+    -webkit-user-select: all;
+    > div {
+      display: none;
+    }
+  }
+}
+.setting-item[data-id="anuppuccin-url-donate"] .setting-item-name::before {
+  content: '\2615'; // coffee
+}
+.setting-item[data-id="anuppuccin-url-star-repo"] .setting-item-name::before {
+  content: '\2b50'; // star
+}
+.setting-item[data-id="anuppuccin-url-submit-issue"] .setting-item-name::before {
+  content: '\1f41e'; // bug
 }

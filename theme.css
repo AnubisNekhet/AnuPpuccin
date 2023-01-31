@@ -104,11 +104,11 @@ settings:
     type: class-toggle
     default: true
   -
-    id: anuppuccin-extended-colorschemes-links
-    title: Extended Color Schemes
-    description: "Download the extended color schemes snippet from here"
+    id: anuppuccin-url-extended-colorschemes
+    title: Download the Extended Color Schemes
+    description: https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/extended-colorschemes.css
     type: variable-text
-    default: https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/extended-colorschemes.css
+    default: '0'
 
 # Colors :: Color Overrides
 
@@ -677,11 +677,11 @@ settings:
     level: 2
     collapsed: true
   -
-    id: anp-snippet-minimal-cards-disclaimer
-    title: Minimal Cards Snippet
-    description: "Download the Minimal Cards snippet from here"
+    id: anuppuccin-url-minimal-cards-snippet
+    title: Download the Minimal Cards Snippet
+    description: https://github.com/kepano/obsidian-minimal/blob/master/src/scss/features/cards.scss
     type: variable-text
-    default: https://github.com/kepano/obsidian-minimal/blob/master/src/scss/features/cards.scss
+    default: '0'
   -
     id: cards-min-width
     title: Card minimum width
@@ -2110,24 +2110,30 @@ settings:
 # Credits
 
   -
-    id: anuppuccin-theme-credits
+    id: anuppuccin-support
     title: Support AnuPpuccin
-    description: If you like the theme, you can buy me a coffee!
+    description: If you like the theme, here are some ways to support development
     type: heading
     level: 1
     collapsed: true
   -
-    id: anuppuccin-theme-donate
-    title: Donate Link
-    description: "Buy me a coffee here:"
+    id: anuppuccin-url-donate
+    title: Buy Me a Coffee
+    description: https://www.buymeacoffee.com/anubisnekhet
     type: variable-text
-    default: https://www.buymeacoffee.com/anubisnekhet
+    default: '0'
   -
-    id: anuppuccin-theme-source
-    title: Source Code
-    description: "View and contribute to the theme here:"
+    id: anuppuccin-url-star-repo
+    title: Star the Theme on GitHub
+    description: https://github.com/anubisnekhet/anuppuccin
     type: variable-text
-    default: https://github.com/anubisnekhet/anuppuccin
+    default: '0'
+  -
+    id: anuppuccin-url-submit-issue
+    title: Submit an Issue on GitHub
+    description: https://github.com/anubisnekhet/anuppuccin/issues
+    type: variable-text
+    default: '0'
 
 */
 /*------------------Defining Colorschemes-------------------*/
@@ -5643,7 +5649,7 @@ None of the original code was used and the feature was implemented from scratch.
   border-color: rgba(var(--ctp-accent), 0.2);
 }
 
-.style-settings-container .style-settings-heading[data-id=anuppuccin-theme-credits] .setting-item-name {
+.style-settings-container .style-settings-heading[data-id=anuppuccin-support] .setting-item-name {
   color: var(--color-accent) !important;
 }
 
@@ -5727,6 +5733,42 @@ None of the original code was used and the feature was implemented from scratch.
 .setting-item[data-id=anp-colors-section-header] > .setting-item-info > .setting-item-name {
   border-bottom: 2px solid;
   border-image: linear-gradient(to right, rgb(var(--ctp-rosewater)) 7%, rgb(var(--ctp-flamingo)) 7%, rgb(var(--ctp-flamingo)) 14%, rgb(var(--ctp-mauve)) 14%, rgb(var(--ctp-mauve)) 21%, rgb(var(--ctp-pink)) 21%, rgb(var(--ctp-pink)) 28%, rgb(var(--ctp-red)) 28%, rgb(var(--ctp-red)) 35%, rgb(var(--ctp-maroon)) 35%, rgb(var(--ctp-maroon)) 42%, rgb(var(--ctp-peach)) 42%, rgb(var(--ctp-peach)) 49%, rgb(var(--ctp-yellow)) 49%, rgb(var(--ctp-yellow)) 56%, rgb(var(--ctp-green)) 56%, rgb(var(--ctp-green)) 63%, rgb(var(--ctp-teal)) 63%, rgb(var(--ctp-teal)) 70%, rgb(var(--ctp-sky)) 70%, rgb(var(--ctp-sky)) 77%, rgb(var(--ctp-sapphire)) 77%, rgb(var(--ctp-sapphire)) 85%, rgb(var(--ctp-blue)) 85%, rgb(var(--ctp-blue)) 92%, rgb(var(--ctp-lavender))) 5;
+}
+
+.setting-item:is([data-id^=anuppuccin-url-]) .setting-item-control {
+  display: none;
+}
+.setting-item:is([data-id^=anuppuccin-url-]) .setting-item-name::before {
+  display: inline-flex;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  height: fit-content;
+  padding-right: var(--size-4-2);
+  width: var(--size-4-4);
+}
+.setting-item:is([data-id^=anuppuccin-url-]) .setting-item-description {
+  align-items: center;
+  color: var(--color-accent);
+  cursor: text;
+  display: flex;
+  font-size: var(--font-ui-small);
+  margin-top: var(--size-4-1);
+  padding: 0;
+  -webkit-user-select: all;
+}
+.setting-item:is([data-id^=anuppuccin-url-]) .setting-item-description > div {
+  display: none;
+}
+
+.setting-item[data-id=anuppuccin-url-donate] .setting-item-name::before {
+  content: "☕";
+}
+
+.setting-item[data-id=anuppuccin-url-star-repo] .setting-item-name::before {
+  content: "⭐";
+}
+
+.setting-item[data-id=anuppuccin-url-submit-issue] .setting-item-name::before {
+  content: "🐞";
 }
 
 /*-Fix dataview table header size-*/
