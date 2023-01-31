@@ -1,5 +1,12 @@
 /*--------------HEADERS----------------*/
-/*-Custom header font-*/
+
+// Fix fold indicators of headings in edit mode when using em font sizes (match reading mode)
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
+  margin-left: -22px;
+  padding: 0px 6px;
+}
+
+// Custom header font
 .anp-header-color-toggle {
 	&.anp-h1-rosewater { --h1-color: rgb(var(--ctp-rosewater)); }
 	&.anp-h1-flamingo { --h1-color: rgb(var(--ctp-flamingo)); }
