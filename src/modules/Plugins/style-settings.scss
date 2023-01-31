@@ -154,6 +154,13 @@
   .setting-item-control {
     display: none;
   }
+  .setting-item-name::before {
+    display: inline-flex;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    height: fit-content;
+    padding-right: var(--size-4-2);
+    width: var(--size-4-4);
+  }
   .setting-item-description {
     align-items: center;
     color: var(--color-accent);
@@ -164,4 +171,13 @@
     padding: 0;
     user-select: all;
   }
+}
+.setting-item[data-id="anuppuccin-url-donate"] .setting-item-name::before {
+  content: '\2615'; // coffee
+}
+.setting-item[data-id="anuppuccin-url-star-repo"] .setting-item-name::before {
+  content: '\2b50'; // star
+}
+.setting-item[data-id="anuppuccin-url-submit-issue"] .setting-item-name::before {
+  content: '\1f41e'; // bug
 }
