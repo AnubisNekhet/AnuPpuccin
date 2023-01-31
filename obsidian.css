@@ -3418,7 +3418,11 @@ body.is-translucent {
 }
 
 /*--------------HEADERS----------------*/
-/*-Custom header font-*/
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
+  margin-left: -22px;
+  padding: 0px 6px;
+}
+
 .anp-header-color-toggle.anp-h1-rosewater {
   --h1-color: rgb(var(--ctp-rosewater));
 }
@@ -3672,23 +3676,12 @@ body.is-translucent {
   --h6-color: rgb(var(--ctp-lavender));
 }
 
-.anp-h1-divider .markdown-rendered h1,
-.anp-h1-divider .HyperMD-header-1,
-.anp-h2-divider .markdown-rendered h2,
-.anp-h2-divider .HyperMD-header-2,
-.anp-h3-divider .markdown-rendered h3,
-.anp-h3-divider .HyperMD-header-3,
-.anp-h4-divider .markdown-rendered h4,
-.anp-h4-divider .HyperMD-header-4,
-.anp-h5-divider .markdown-rendered h5,
-.anp-h5-divider .HyperMD-header-5,
-.anp-h6-divider .HyperMD-header-6,
-.anp-h6-divider .markdown-rendered h6 {
+.anp-h1-divider .markdown-rendered :is(h1, h2, h3, h4, h5, h6),
+.anp-h1-divider .HyperMD-header {
   border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
   padding-bottom: 2px;
 }
 
-/*-Source editor recolor application-*/
 .cm-formatting-header-1 {
   color: var(--h1-color);
 }
@@ -3713,12 +3706,7 @@ body.is-translucent {
   color: var(--h6-color);
 }
 
-.anp-header-toggle.anp-header-margin-toggle h1,
-.anp-header-toggle.anp-header-margin-toggle h2,
-.anp-header-toggle.anp-header-margin-toggle h3,
-.anp-header-toggle.anp-header-margin-toggle h4,
-.anp-header-toggle.anp-header-margin-toggle h5,
-.anp-header-toggle.anp-header-margin-toggle h6 {
+.anp-header-toggle.anp-header-margin-toggle :is(h1, h2, h3, h4, h5, h6) {
   margin-block-start: var(--anp-header-margin-value);
   margin-block-end: var(--anp-header-margin-value);
 }
