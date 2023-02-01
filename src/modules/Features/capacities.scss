@@ -18,7 +18,7 @@
   --highlight-mix-blend-mode: none;
   margin-left: 10px;
 }
-.anp-callout-toggle.anp-callout-sleek {
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek {
   &, &.anp-callout-normal-toggle {
    div.callout:not([data-callout-metadata*=revert]) {
       &[data-callout=capacities-card] {
@@ -109,7 +109,7 @@
     }
   }
 }
-.anp-callout-toggle.anp-callout-vanilla {
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-vanilla {
   &, &.anp-callout-normal-toggle {
     div.callout:not([data-callout-metadata*=revert]) {
       &[data-callout=capacities-index],
@@ -129,7 +129,7 @@
     }
   }
 }
-.anp-card-layout.anp-callout-toggle.anp-callout-sleek {
+.anp-card-layout.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek {
   --capacities-sidebar-bottom: calc(var(--anp-card-layout-padding, 10px) + 80px);
 }
 .markdown-reading-view .markdown-preview-view.capacities-card {

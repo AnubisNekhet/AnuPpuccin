@@ -4428,18 +4428,18 @@ body.rainbow-tags {
   margin-left: 10px;
 }
 
-.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card], .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card] {
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card] {
   background-color: var(--background-primary);
   border-radius: 6px;
   mix-blend-mode: normal;
   overflow-y: hidden;
 }
-.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card] > .callout-content, .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card] > .callout-content {
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card] > .callout-content {
   padding: 0;
   background-color: var(--background-primary);
   overflow-y: hidden;
 }
-.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop], .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop] {
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop] {
   border-radius: 0;
   top: -1px;
   padding-top: 1px;
@@ -4447,14 +4447,14 @@ body.rainbow-tags {
   padding-right: 1px;
   height: calc(100% + 6px);
 }
-.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop] > .callout-content, .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop] > .callout-content {
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop] > .callout-content {
   padding: 0;
 }
-.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop], .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] {
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] {
   border: none;
   padding: 0;
 }
-.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] > .callout-content, .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] > .callout-content {
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] > .callout-content {
   margin: 0 10px 7px 10px;
   background-color: var(--background-primary);
   border-color: var(--background-modifier-border);
@@ -4462,61 +4462,61 @@ body.rainbow-tags {
   border-top-style: solid;
   border-radius: 6px;
 }
-.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] > .callout-title, .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] > .callout-title {
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] > .callout-title, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] > .callout-title {
   text-transform: uppercase;
   background-color: transparent;
 }
-.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] > .callout-title > .callout-title-inner, .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] > .callout-title > .callout-title-inner {
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] > .callout-title > .callout-title-inner, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] > .callout-title > .callout-title-inner {
   color: rgba(var(--ctp-text), 0.7);
   font-size: 80%;
 }
-.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index], .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] {
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] {
   border-radius: 0;
   margin: -1px;
 }
-.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] > .callout-content, .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] > .callout-content {
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] > .callout-content {
   padding: 0;
 }
-.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] p:first-child, .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] p:first-child {
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] p:first-child, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] p:first-child {
   margin-bottom: 0;
 }
-.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar], .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar] {
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar] {
   background-color: var(--background-secondary);
 }
-.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar] > .callout-content, .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar] > .callout-content {
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar] > .callout-content {
   padding-right: 0;
   padding-left: 0;
   background-color: var(--background-secondary);
 }
-.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop-image] > .callout-content, .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop-image] > .callout-content {
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop-image] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop-image] > .callout-content {
   padding: 0;
 }
-.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body], .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body] {
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body] {
   border-width: 0 1px 0 0;
   background-color: var(--background-primary);
   mix-blend-mode: normal;
 }
-.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body] > .callout-content, .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body] > .callout-content {
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body] > .callout-content {
   padding: var(--callout-padding);
   background-color: var(--background-primary);
 }
-.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index], .anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop], .anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop-image], .anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar], .anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body], .anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card], .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index], .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop], .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop-image], .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar], .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body], .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card] {
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop-image], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop-image], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body], .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card] {
   border-color: var(--background-modifier-border);
 }
-.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] > .callout-content, .anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop] > .callout-content, .anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop-image] > .callout-content, .anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar] > .callout-content, .anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body] > .callout-content, .anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card] > .callout-content, .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] > .callout-content, .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop] > .callout-content, .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop-image] > .callout-content, .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar] > .callout-content, .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body] > .callout-content, .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card] > .callout-content {
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop-image] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop-image] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-body] > .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card] > .callout-content {
   border-top: none;
 }
 
-.anp-callout-toggle.anp-callout-vanilla div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] .callout-content, .anp-callout-toggle.anp-callout-vanilla div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop] .callout-content, .anp-callout-toggle.anp-callout-vanilla div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar] .callout-content, .anp-callout-toggle.anp-callout-vanilla.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] .callout-content, .anp-callout-toggle.anp-callout-vanilla.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop] .callout-content, .anp-callout-toggle.anp-callout-vanilla.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar] .callout-content {
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-vanilla div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-vanilla div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop] .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-vanilla div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar] .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-vanilla.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-index] .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-vanilla.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-card-prop] .callout-content, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-vanilla.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-sidebar] .callout-content {
   border-left: none;
   padding: 0;
 }
-.anp-callout-toggle.anp-callout-vanilla div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] .callout-title, .anp-callout-toggle.anp-callout-vanilla.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] .callout-title {
+.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-vanilla div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] .callout-title, .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-vanilla.anp-callout-normal-toggle div.callout:not([data-callout-metadata*=revert])[data-callout=capacities-prop] .callout-title {
   border-left: none;
   background-color: transparent;
 }
 
-.anp-card-layout.anp-callout-toggle.anp-callout-sleek {
+.anp-card-layout.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek {
   --capacities-sidebar-bottom: calc(var(--anp-card-layout-padding, 10px) + 80px);
 }
 
