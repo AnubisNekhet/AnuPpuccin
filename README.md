@@ -130,6 +130,7 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 | [Dracula](https://github.com/dracula/dracula-theme) | No | Yes | - |
 | [Gruvbox](https://github.com/morhetz/gruvbox) | Yes | Yes | - |
 | [Nord](https://github.com/arcticicestudio/nord) | Yes | Yes | A custom darker variant of the dark theme is included as well. <br> Accent value is hardcoded into the theme.|
+| Notion | Yes | Yes | - |
 | [Kanagawa](https://github.com/rebelot/kanagawa.nvim) | No | Yes | - |
 | [Rosé Pine](https://github.com/rose-pine/rose-pine-theme) | Yes | Yes | The second variant of the dark theme, namely Rosé Pine dawn hasn't been implemented yet. |
 | [Rosebox](https://github.com/KraXen72/rosebox) | No | Yes | Accent value is hardcoded into the theme. |
@@ -190,6 +191,11 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 <img src="assets/colorschemes/nord-dark.webp"/>
 <h4 align="center">Nord Darker (Custom Palette)</h4>
 <img src="assets/colorschemes/nord-darker.webp"/>
+</details>
+<details>
+<summary><h4>Notion</h4></summary>
+<img src="assets/colorschemes/notion-light.webp"/>
+<img src="assets/colorschemes/notion-dark.webp"/>
 </details>
 <details>
 <summary><h4>Kanagawa</h4></summary>
