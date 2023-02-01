@@ -61,6 +61,7 @@
     --interactive-accent-rgb: var(--ctp-accent);
     --interactive-accent-hover: rgb(var(--ctp-accent));
     --blockquote-border-color: rgb(var(--ctp-accent));
+    --background-modifier-active: rgba(var(--ctp-accent), 0.1);
     --background-modifier-active-hover: rgba(var(--ctp-accent), 0.15);
     --link-unresolved-decoration-color: rgba(var(--ctp-accent), 0.3);
     --tag-background: rgba(var(--ctp-accent), 0.1);
@@ -199,6 +200,7 @@ body {
   --tab-inactive-color: rgb(var(--ctp-mantle));
   --code-background: rgb(var(--anp-custom-code-bg, var(--ctp-mantle)));
   --code-normal: rgb(var(--anp-custom-code-normal, var(--ctp-text)));
+  --background-modifier-active: hsla(var(--color-accent-hsl), 0.1);
   &.theme-light {
     --anp-background-image: var(--anp-background-image-light);
     --anp-custom-bg-brightness: var(--anp-custom-bg-brightness-light);
