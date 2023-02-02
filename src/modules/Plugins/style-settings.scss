@@ -25,6 +25,7 @@
   padding: var(--size-4-2);
   padding-left: var(--size-4-6);
   background-color: rgba(var(--ctp-crust), 0.3);
+  overflow-x: hidden;
 }
 .style-settings-heading[data-level="0"]:not(.is-collapsed) + .style-settings-container {
   border-bottom: 1px solid var(--background-modifier-border);

@@ -1809,6 +1809,12 @@ settings:
     level: 2
     collapsed: true
   -
+    id: anuppuccin-url-custom-rainbow-colors
+    title: Custom rainbow folder colors snippet
+    description: https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/custom-rainbow-colors.css
+    type: variable-text
+    default: '0'
+  -
     id: anp-alt-rainbow-style
     title: Rainbow style
     type: class-select
@@ -5726,6 +5732,7 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   padding: var(--size-4-2);
   padding-left: var(--size-4-6);
   background-color: rgba(var(--ctp-crust), 0.3);
+  overflow-x: hidden;
 }
 
 .style-settings-heading[data-level="0"]:not(.is-collapsed) + .style-settings-container {
