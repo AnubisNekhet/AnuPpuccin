@@ -747,6 +747,11 @@ settings:
     title: Autohide Title Bar
     type: class-toggle
   -
+    id: anp-disable-cursors
+    title: Disable pointer cursors
+    type: class-toggle
+    default: true
+  -
     id: anp-floating-status-bar
     title: Floating Status Bar
     type: class-toggle
@@ -2771,6 +2776,23 @@ body.theme-dark {
 }
 .cm-math.token.regex, .cm-math.token.important {
   color: var(--code-important);
+}
+
+body:not(.anp-disable-cursors) .workspace-tab-header,
+body:not(.anp-disable-cursors) .clickable-icon,
+body:not(.anp-disable-cursors) .dropdown,
+body:not(.anp-disable-cursors) .checkbox-container,
+body:not(.anp-disable-cursors) input.slider,
+body:not(.anp-disable-cursors) .task-list-item-checkbox,
+body:not(.anp-disable-cursors) .vertical-tab-nav-item,
+body:not(.anp-disable-cursors) .nav-folder-title,
+body:not(.anp-disable-cursors) .nav-file-title,
+body:not(.anp-disable-cursors) .tree-item,
+body:not(.anp-disable-cursors) .tree-item-self.is-clickable,
+body:not(.anp-disable-cursors) .workspace-tab-header-inner-close-button,
+body:not(.anp-disable-cursors) .tree-item-inner,
+body:not(.anp-disable-cursors) .modal-close-button {
+  cursor: pointer;
 }
 
 .canvas-card-menu {
