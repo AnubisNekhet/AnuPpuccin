@@ -746,10 +746,17 @@ settings:
     title: Autohide Title Bar
     type: class-toggle
   -
-    id: anp-disable-cursors
-    title: Disable pointer cursors
-    type: class-toggle
-    default: true
+    id: anp-cursor
+    title: Pointer cursor
+    type: variable-select
+    default: pointer
+    options:
+      -
+        label: Pointer
+        value: pointer
+      -
+        label: Normal
+        value: initial
   -
     id: anp-floating-status-bar
     title: Floating Status Bar

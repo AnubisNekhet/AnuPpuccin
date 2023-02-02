@@ -747,10 +747,17 @@ settings:
     title: Autohide Title Bar
     type: class-toggle
   -
-    id: anp-disable-cursors
-    title: Disable pointer cursors
-    type: class-toggle
-    default: true
+    id: anp-cursor
+    title: Pointer cursor
+    type: variable-select
+    default: pointer
+    options:
+      -
+        label: Pointer
+        value: pointer
+      -
+        label: Normal
+        value: initial
   -
     id: anp-floating-status-bar
     title: Floating Status Bar
@@ -2778,21 +2785,47 @@ body.theme-dark {
   color: var(--code-important);
 }
 
-body:not(.anp-disable-cursors) .workspace-tab-header,
-body:not(.anp-disable-cursors) .clickable-icon,
-body:not(.anp-disable-cursors) .dropdown,
-body:not(.anp-disable-cursors) .checkbox-container,
-body:not(.anp-disable-cursors) input.slider,
-body:not(.anp-disable-cursors) .task-list-item-checkbox,
-body:not(.anp-disable-cursors) .vertical-tab-nav-item,
-body:not(.anp-disable-cursors) .nav-folder-title,
-body:not(.anp-disable-cursors) .nav-file-title,
-body:not(.anp-disable-cursors) .tree-item,
-body:not(.anp-disable-cursors) .tree-item-self.is-clickable,
-body:not(.anp-disable-cursors) .workspace-tab-header-inner-close-button,
-body:not(.anp-disable-cursors) .tree-item-inner,
-body:not(.anp-disable-cursors) .modal-close-button {
-  cursor: pointer;
+.workspace-tab-header,
+.clickable-icon,
+.dropdown,
+.checkbox-container,
+input.slider,
+.task-list-item-checkbox,
+.vertical-tab-nav-item,
+.nav-folder-title,
+.nav-file-title,
+.tree-item,
+.tree-item-self.is-clickable,
+.workspace-tab-header-status-icon,
+.workspace-tab-header-inner-close-button,
+.CodeMirror-foldmarker,
+.CodeMirror-foldgutter-open,
+.CodeMirror-foldgutter-folded,
+.markdown-source-view.mod-cm6 .edit-block-button,
+.empty-state-action,
+.setting-hotkey-icon,
+.setting-add-hotkey-button,
+.setting-restore-hotkey-button,
+.spellchecker-dictionary-remove-button,
+.community-item,
+.status-bar-item.mod-clickable,
+.titlebar-button,
+.button,
+.frontmatter-container .frontmatter-container-header,
+.card.u-clickable,
+.list-item-part.clickable-icon,
+.u-clickable,
+.document-search-close-button,
+.markdown-preview-view .collapse-indicator,
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator,
+.input[type=color],
+.menu-item,
+.modal-checkbox-label,
+.view-header-breadcrumb,
+.nav-action-button,
+.tree-item-inner,
+.modal-close-button {
+  cursor: var(--anp-cursor, var(--cursor));
 }
 
 .canvas-card-menu {
@@ -5669,14 +5702,6 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   display: none;
 }
 
-.style-settings-container:not([data-level="0"]) {
-  border: 1px solid rgba(var(--ctp-text), 0.2);
-  border-radius: var(--radius-s);
-  padding: var(--size-4-2);
-  padding-left: var(--size-4-6);
-  background-color: rgba(var(--ctp-crust), 0.3);
-}
-
 .style-settings-heading[data-level] {
   padding-top: var(--size-4-2);
   padding-bottom: var(--size-4-2);
@@ -5686,17 +5711,25 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   margin-bottom: var(--size-4-2);
 }
 
+.style-settings-heading:not([data-level="0"]) {
+  border-top: 1px solid rgba(var(--ctp-text), 0.2);
+  border-bottom: none;
+}
+
 .style-settings-heading:not([data-level="0"], .is-collapsed) {
   margin-bottom: 0;
 }
 
-.style-settings-heading[data-level="0"]:not(.is-collapsed) + .style-settings-container {
-  border-bottom: 1px solid var(--background-modifier-border);
+.style-settings-heading:not([data-level="0"]) + .style-settings-container {
+  border: 1px solid rgba(var(--ctp-text), 0.2);
+  border-radius: var(--radius-s);
+  padding: var(--size-4-2);
+  padding-left: var(--size-4-6);
+  background-color: rgba(var(--ctp-crust), 0.3);
 }
 
-.style-settings-heading:not([data-level="0"]) {
-  border-top: 1px solid rgba(var(--ctp-text), 0.2);
-  border-bottom: none;
+.style-settings-heading[data-level="0"]:not(.is-collapsed) + .style-settings-container {
+  border-bottom: 1px solid var(--background-modifier-border);
 }
 
 .style-settings-heading[data-level="1"] {
