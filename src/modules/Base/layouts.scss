@@ -97,7 +97,7 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
     margin-bottom: var(--anp-card-layout-padding, 10px);
 }
 .anp-card-layout.anp-card-shadows {
-    .workspace-split .workspace-leaf-content, .side-dock-actions {
+    .workspace-split .workspace-leaf-content, &.anp-card-layout-actions .side-dock-actions {
         box-shadow: 0 3px 4px 0px rgba(0,0,0,0.05);
     }
     &.anp-card-layout-filebrowser {
