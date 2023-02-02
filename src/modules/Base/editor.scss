@@ -14,9 +14,21 @@
 /*-Custom editor font-*/
 .markdown-source-view:not(.is-live-preview) {
   --font-text: var(--anp-editor-font-source, var(--font-text-override)), var(--font-text-theme), var(--font-interface);
+  --h1-font: var(--font-text, inherit);
+  --h2-font: var(--font-text, inherit);
+  --h3-font: var(--font-text, inherit);
+  --h4-font: var(--font-text, inherit);
+  --h5-font: var(--font-text, inherit);
+  --h6-font: var(--font-text, inherit);
 }
 .markdown-source-view.is-live-preview {
   --font-text: var(--anp-editor-font-lp, var(--font-text-override)), var(--font-text-theme), var(--font-interface);
+  --h1-font: var(--font-text, inherit);
+  --h2-font: var(--font-text, inherit);
+  --h3-font: var(--font-text, inherit);
+  --h4-font: var(--font-text, inherit);
+  --h5-font: var(--font-text, inherit);
+  --h6-font: var(--font-text, inherit);
 }
 /*-Highlighted gutter number-*/
 .cm-lineNumbers .cm-gutterElement.cm-active {    
