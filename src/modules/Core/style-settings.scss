@@ -48,7 +48,7 @@ settings:
         value: ctp-mocha-old
   -
     id: anuppuccin-theme-accents
-    title: Theme Accent
+    title: Dark Theme Accent
     description: Select your preferred accent
     type: class-select
     allowEmpty: false
@@ -96,6 +96,59 @@ settings:
       - 
         label: Lavender
         value: ctp-accent-lavender
+  -
+    id: anuppuccin-theme-light-accents
+    title: Light Theme Accent
+    description: Select your preferred accent
+    type: class-select
+    allowEmpty: false
+    default: none
+    options:
+      - 
+        label: Same as dark
+        value: none
+      - 
+        label: Rosewater
+        value: ctp-accent-light-rosewater
+      - 
+        label: Flamingo
+        value: ctp-accent-light-flamingo
+      - 
+        label: Pink
+        value: ctp-accent-light-pink
+      - 
+        label: Mauve
+        value: ctp-accent-light-mauve
+      - 
+        label: Red
+        value: ctp-accent-light-red
+      - 
+        label: Maroon
+        value: ctp-accent-light-maroon
+      - 
+        label: Peach
+        value: ctp-accent-light-peach
+      - 
+        label: Yellow
+        value: ctp-accent-light-yellow
+      - 
+        label: Green
+        value: ctp-accent-light-green
+      - 
+        label: Teal
+        value: ctp-accent-light-teal
+      - 
+        label: Sky
+        value: ctp-accent-light-sky
+      - 
+        label: Sapphire
+        value: ctp-accent-light-sapphire
+      - 
+        label: Blue
+        value: ctp-accent-light-blue
+      - 
+        label: Lavender
+        value: ctp-accent-light-lavender
   -
     id: anuppuccin-accent-toggle
     title: Force Custom Accents
