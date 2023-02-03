@@ -7,10 +7,16 @@
 
   .workspace-leaf-content .view-header {
     margin-top: calc(var(--title-bar-translate-y) * -1);
+    margin-right: 50px;
     position: relative;
-    transition-delay: var(--title-bar-delay);
-    transition-duration: var(--title-bar-duration);
-    transition-property: transform;
+    transition: transform var(--title-bar-duration) var(--title-bar-delay), margin-right 0s calc(var(--title-bar-duration) + var(--title-bar-delay));
+  }
+  &:not(.mod-macos) .workspace-tabs.mod-top-right-space .workspace-leaf-content .view-header {
+    margin-right: var(--frame-right-space);
+    &:is(:hover,:focus-within) {
+      margin-right: 0;
+      transition: transform var(--title-bar-duration) var(--title-bar-delay), margin-right 0s;
+    }
   }
   .workspace-leaf-content .view-header::before {
     bottom: calc(var(--title-bar-target-translate-y) * -1);
@@ -18,15 +24,11 @@
     left: 0;
     position: absolute;
     top: 0;
-    transition-delay: var(--title-bar-delay);
-    transition-duration: var(--title-bar-duration);
-    transition-property: transform;
+    transition: transform var(--title-bar-duration) var(--title-bar-delay);
     width: 100%;
   }
   .workspace-leaf-content .view-content {
-    transition-delay: var(--title-bar-delay);
-    transition-duration: var(--title-bar-duration);
-    transition-property: transform;
+    transition: transform var(--title-bar-duration) var(--title-bar-delay);
   }
   .workspace-leaf-content .view-header:is(:hover,:focus-within)::before {
     transform: translateY(var(--title-bar-target-translate-y));
