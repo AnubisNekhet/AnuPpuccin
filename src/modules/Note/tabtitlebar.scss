@@ -17,6 +17,10 @@
       margin-right: 0;
       transition: transform var(--title-bar-duration) var(--title-bar-delay), margin-right 0s;
     }
+    &::before {
+      width: calc(100% + var(--frame-right-space));
+      top: var(--header-height);
+    }
   }
   .workspace-leaf-content .view-header::before {
     bottom: calc(var(--title-bar-target-translate-y) * -1);

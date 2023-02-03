@@ -4112,6 +4112,10 @@ table.dataview.table-view-table > tbody > tr:hover {
   margin-right: 0;
   transition: transform var(--title-bar-duration) var(--title-bar-delay), margin-right 0s;
 }
+.anp-autohide-titlebar:not(.is-mobile):not(.mod-macos) .workspace-tabs.mod-top-right-space .workspace-leaf-content .view-header::before {
+  width: calc(100% + var(--frame-right-space));
+  top: var(--header-height);
+}
 .anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header::before {
   bottom: calc(var(--title-bar-target-translate-y) * -1);
   content: "";
