@@ -4,21 +4,21 @@
   --title-bar-duration: 300ms;
   --title-bar-target-translate-y: 18px;
   --title-bar-translate-y: 40px;
+  --title-bar-windows-fix: 0;
 
   .workspace-leaf-content .view-header {
     margin-top: calc(var(--title-bar-translate-y) * -1);
-    margin-right: 50px;
     position: relative;
     transition: transform var(--title-bar-duration) var(--title-bar-delay), margin-right 0s calc(var(--title-bar-duration) + var(--title-bar-delay));
   }
   &:not(.mod-macos) .workspace-tabs.mod-top-right-space .workspace-leaf-content .view-header {
-    margin-right: var(--frame-right-space);
+    margin-right: calc(var(--title-bar-windows-fix)*var(--frame-right-space));
     &:is(:hover,:focus-within) {
       margin-right: 0;
       transition: transform var(--title-bar-duration) var(--title-bar-delay), margin-right 0s;
     }
     &::before {
-      width: calc(100% + var(--frame-right-space));
+      width: calc(100% + var(--title-bar-windows-fix)*var(--frame-right-space));
       top: var(--header-height);
     }
   }
