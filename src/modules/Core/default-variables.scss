@@ -1,64 +1,20 @@
 /*------------------Selecting Accents-------------------*/
-.anuppuccin-accent-toggle.ctp-accent-rosewater { --ctp-accent: var(--ctp-rosewater); }
-.anuppuccin-accent-toggle.ctp-accent-flamingo { --ctp-accent: var(--ctp-flamingo); }
-.anuppuccin-accent-toggle.ctp-accent-pink { --ctp-accent: var(--ctp-pink); }
-.anuppuccin-accent-toggle.ctp-accent-mauve { --ctp-accent: var(--ctp-mauve); }
-.anuppuccin-accent-toggle.ctp-accent-red { --ctp-accent: var(--ctp-red); }
-.anuppuccin-accent-toggle.ctp-accent-maroon { --ctp-accent: var(--ctp-maroon); }
-.anuppuccin-accent-toggle.ctp-accent-peach { --ctp-accent: var(--ctp-peach); }
-.anuppuccin-accent-toggle.ctp-accent-yellow { --ctp-accent: var(--ctp-yellow); }
-.anuppuccin-accent-toggle.ctp-accent-green { --ctp-accent: var(--ctp-green); }
-.anuppuccin-accent-toggle.ctp-accent-teal { --ctp-accent: var(--ctp-teal); }
-.anuppuccin-accent-toggle.ctp-accent-sky { --ctp-accent: var(--ctp-sky); }
-.anuppuccin-accent-toggle.ctp-accent-sapphire { --ctp-accent: var(--ctp-sapphire); }
-.anuppuccin-accent-toggle.ctp-accent-blue { --ctp-accent: var(--ctp-blue); }
-.anuppuccin-accent-toggle.ctp-accent-lavender { --ctp-accent: var(--ctp-lavender); }
+$accents: "rosewater", "flamingo", "pink", "mauve", "red", "maroon", "peach", "yellow", "green", "teal", "sky", "sapphire", "blue", "lavender";
 
-.theme-light.anuppuccin-accent-toggle.ctp-accent-light-rosewater { --ctp-accent: var(--ctp-rosewater); }
-.theme-light.anuppuccin-accent-toggle.ctp-accent-light-flamingo { --ctp-accent: var(--ctp-flamingo); }
-.theme-light.anuppuccin-accent-toggle.ctp-accent-light-pink { --ctp-accent: var(--ctp-pink); }
-.theme-light.anuppuccin-accent-toggle.ctp-accent-light-mauve { --ctp-accent: var(--ctp-mauve); }
-.theme-light.anuppuccin-accent-toggle.ctp-accent-light-red { --ctp-accent: var(--ctp-red); }
-.theme-light.anuppuccin-accent-toggle.ctp-accent-light-maroon { --ctp-accent: var(--ctp-maroon); }
-.theme-light.anuppuccin-accent-toggle.ctp-accent-light-peach { --ctp-accent: var(--ctp-peach); }
-.theme-light.anuppuccin-accent-toggle.ctp-accent-light-yellow { --ctp-accent: var(--ctp-yellow); }
-.theme-light.anuppuccin-accent-toggle.ctp-accent-light-green { --ctp-accent: var(--ctp-green); }
-.theme-light.anuppuccin-accent-toggle.ctp-accent-light-teal { --ctp-accent: var(--ctp-teal); }
-.theme-light.anuppuccin-accent-toggle.ctp-accent-light-sky { --ctp-accent: var(--ctp-sky); }
-.theme-light.anuppuccin-accent-toggle.ctp-accent-light-sapphire { --ctp-accent: var(--ctp-sapphire); }
-.theme-light.anuppuccin-accent-toggle.ctp-accent-light-blue { --ctp-accent: var(--ctp-blue); }
-.theme-light.anuppuccin-accent-toggle.ctp-accent-light-lavender { --ctp-accent: var(--ctp-lavender); }
-
-/*------------------------Bold/Italic Colors------------------------*/
-.anp-bold-rosewater { --anp-bold-color: var(--ctp-rosewater); }
-.anp-bold-flamingo { --anp-bold-color: var(--ctp-flamingo); }
-.anp-bold-pink { --anp-bold-color: var(--ctp-pink); }
-.anp-bold-mauve { --anp-bold-color: var(--ctp-mauve); }
-.anp-bold-red { --anp-bold-color: var(--ctp-red); }
-.anp-bold-maroon { --anp-bold-color: var(--ctp-maroon); }
-.anp-bold-peach { --anp-bold-color: var(--ctp-peach); }
-.anp-bold-yellow { --anp-bold-color: var(--ctp-yellow); }
-.anp-bold-green { --anp-bold-color: var(--ctp-green); }
-.anp-bold-teal { --anp-bold-color: var(--ctp-teal); }
-.anp-bold-sky { --anp-bold-color: var(--ctp-sky); }
-.anp-bold-sapphire { --anp-bold-color: var(--ctp-sapphire); }
-.anp-bold-blue { --anp-bold-color: var(--ctp-blue); }
-.anp-bold-lavender { --anp-bold-color: var(--ctp-lavender); }
-
-.anp-italic-rosewater { --anp-italic-color: var(--ctp-rosewater); }
-.anp-italic-flamingo { --anp-italic-color: var(--ctp-flamingo); }
-.anp-italic-pink { --anp-italic-color: var(--ctp-pink); }
-.anp-italic-mauve { --anp-italic-color: var(--ctp-mauve); }
-.anp-italic-red { --anp-italic-color: var(--ctp-red); }
-.anp-italic-maroon { --anp-italic-color: var(--ctp-maroon); }
-.anp-italic-peach { --anp-italic-color: var(--ctp-peach); }
-.anp-italic-yellow { --anp-italic-color: var(--ctp-yellow); }
-.anp-italic-green { --anp-italic-color: var(--ctp-green); }
-.anp-italic-teal { --anp-italic-color: var(--ctp-teal); }
-.anp-italic-sky { --anp-italic-color: var(--ctp-sky); }
-.anp-italic-sapphire { --anp-italic-color: var(--ctp-sapphire); }
-.anp-italic-blue { --anp-italic-color: var(--ctp-blue); }
-.anp-italic-lavender { --anp-italic-color: var(--ctp-lavender); }
+@each $accent in $accents {
+    .anuppuccin-accent-toggle.ctp-accent-#{$accent} {
+        --ctp-accent: var(--ctp-#{$accent});
+    }
+    .theme-light.anuppuccin-accent-toggle.ctp-accent-light-#{$accent} {
+        --ctp-accent: var(--ctp-#{$accent});
+    }
+    .anp-bold-#{$accent} {
+        --anp-bold-color: var(--ctp-#{$accent});
+    }
+    .anp-italic-#{$accent} {
+        --anp-italic-color: var(--ctp-#{$accent});
+    }
+}
 
 /*------------------Actual Configs--------------------*/
 .anuppuccin-accent-toggle {
