@@ -48,8 +48,58 @@ settings:
         label: Mocha Old
         value: ctp-mocha-old
   -
+    id: anuppuccin-light-theme-accents
+    title: Light Theme Accent
+    description: Select your preferred light theme accent (Defaults to dark theme accent if left empty)
+    type: class-select
+    allowEmpty: true
+    default: none
+    options:
+      - 
+        label: Rosewater
+        value: ctp-accent-light-rosewater
+      - 
+        label: Flamingo
+        value: ctp-accent-light-flamingo
+      - 
+        label: Pink
+        value: ctp-accent-light-pink
+      - 
+        label: Mauve
+        value: ctp-accent-light-mauve
+      - 
+        label: Red
+        value: ctp-accent-light-red
+      - 
+        label: Maroon
+        value: ctp-accent-light-maroon
+      - 
+        label: Peach
+        value: ctp-accent-light-peach
+      - 
+        label: Yellow
+        value: ctp-accent-light-yellow
+      - 
+        label: Green
+        value: ctp-accent-light-green
+      - 
+        label: Teal
+        value: ctp-accent-light-teal
+      - 
+        label: Sky
+        value: ctp-accent-light-sky
+      - 
+        label: Sapphire
+        value: ctp-accent-light-sapphire
+      - 
+        label: Blue
+        value: ctp-accent-light-blue
+      - 
+        label: Lavender
+        value: ctp-accent-light-lavender
+  -
     id: anuppuccin-theme-accents
-    title: Theme Accent
+    title: Dark Theme Accent
     description: Select your preferred accent
     type: class-select
     allowEmpty: false
@@ -2165,7 +2215,7 @@ settings:
   --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 236, 131, 208));
   --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 136, 57, 239));
   --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 210, 15, 57));
-  --ctp-maroon: var(--ctp-custom-marron, var(--ctp-ext-marron, 230, 69, 83));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 230, 69, 83));
   --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 254, 100, 11));
   --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 228, 147, 32));
   --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 64, 160, 43));
@@ -2194,7 +2244,7 @@ settings:
   --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 144, 122, 169));
   --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 144, 122, 169));
   --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 180, 99, 122));
-  --ctp-maroon: var(--ctp-custom-marron, var(--ctp-ext-marron, 180, 99, 122));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 180, 99, 122));
   --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 214, 129, 125));
   --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 234, 157, 52));
   --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 86, 148, 159));
@@ -2223,7 +2273,7 @@ settings:
   --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 244, 184, 228));
   --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 202, 158, 230));
   --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 231, 130, 132));
-  --ctp-maroon: var(--ctp-custom-marron, var(--ctp-ext-marron, 234, 153, 156));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 234, 153, 156));
   --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 239, 159, 118));
   --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 229, 200, 144));
   --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 166, 209, 137));
@@ -2252,7 +2302,7 @@ settings:
   --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 245, 189, 230));
   --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 198, 160, 246));
   --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 237, 135, 150));
-  --ctp-maroon: var(--ctp-custom-marron, var(--ctp-ext-marron, 238, 153, 160));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 238, 153, 160));
   --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 245, 169, 127));
   --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 238, 212, 159));
   --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 166, 218, 149));
@@ -2281,7 +2331,7 @@ settings:
   --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 245, 194, 231));
   --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 203, 166, 247));
   --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 243, 139, 168));
-  --ctp-maroon: var(--ctp-custom-marron, var(--ctp-ext-marron, 235, 160, 172));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 235, 160, 172));
   --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 250, 179, 135));
   --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 249, 226, 175));
   --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 166, 227, 161));
@@ -2310,7 +2360,7 @@ settings:
   --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 245, 194, 231));
   --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 203, 166, 247));
   --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 243, 139, 168));
-  --ctp-maroon: var(--ctp-custom-marron, var(--ctp-ext-marron, 235, 160, 172));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 235, 160, 172));
   --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 250, 179, 135));
   --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 249, 226, 175));
   --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 166, 227, 161));
@@ -2338,165 +2388,220 @@ settings:
   --ctp-accent: var(--ctp-rosewater);
 }
 
-.anuppuccin-accent-toggle.ctp-accent-flamingo {
-  --ctp-accent: var(--ctp-flamingo);
+.theme-light.anuppuccin-accent-toggle.ctp-accent-light-rosewater {
+  --ctp-accent: var(--ctp-rosewater);
 }
 
-.anuppuccin-accent-toggle.ctp-accent-pink {
-  --ctp-accent: var(--ctp-pink);
-}
-
-.anuppuccin-accent-toggle.ctp-accent-mauve {
-  --ctp-accent: var(--ctp-mauve);
-}
-
-.anuppuccin-accent-toggle.ctp-accent-red {
-  --ctp-accent: var(--ctp-red);
-}
-
-.anuppuccin-accent-toggle.ctp-accent-maroon {
-  --ctp-accent: var(--ctp-maroon);
-}
-
-.anuppuccin-accent-toggle.ctp-accent-peach {
-  --ctp-accent: var(--ctp-peach);
-}
-
-.anuppuccin-accent-toggle.ctp-accent-yellow {
-  --ctp-accent: var(--ctp-yellow);
-}
-
-.anuppuccin-accent-toggle.ctp-accent-green {
-  --ctp-accent: var(--ctp-green);
-}
-
-.anuppuccin-accent-toggle.ctp-accent-teal {
-  --ctp-accent: var(--ctp-teal);
-}
-
-.anuppuccin-accent-toggle.ctp-accent-sky {
-  --ctp-accent: var(--ctp-sky);
-}
-
-.anuppuccin-accent-toggle.ctp-accent-sapphire {
-  --ctp-accent: var(--ctp-sapphire);
-}
-
-.anuppuccin-accent-toggle.ctp-accent-blue {
-  --ctp-accent: var(--ctp-blue);
-}
-
-.anuppuccin-accent-toggle.ctp-accent-lavender {
-  --ctp-accent: var(--ctp-lavender);
-}
-
-/*------------------------Bold/Italic Colors------------------------*/
 .anp-bold-rosewater {
   --anp-bold-color: var(--ctp-rosewater);
-}
-
-.anp-bold-flamingo {
-  --anp-bold-color: var(--ctp-flamingo);
-}
-
-.anp-bold-pink {
-  --anp-bold-color: var(--ctp-pink);
-}
-
-.anp-bold-mauve {
-  --anp-bold-color: var(--ctp-mauve);
-}
-
-.anp-bold-red {
-  --anp-bold-color: var(--ctp-red);
-}
-
-.anp-bold-maroon {
-  --anp-bold-color: var(--ctp-maroon);
-}
-
-.anp-bold-peach {
-  --anp-bold-color: var(--ctp-peach);
-}
-
-.anp-bold-yellow {
-  --anp-bold-color: var(--ctp-yellow);
-}
-
-.anp-bold-green {
-  --anp-bold-color: var(--ctp-green);
-}
-
-.anp-bold-teal {
-  --anp-bold-color: var(--ctp-teal);
-}
-
-.anp-bold-sky {
-  --anp-bold-color: var(--ctp-sky);
-}
-
-.anp-bold-sapphire {
-  --anp-bold-color: var(--ctp-sapphire);
-}
-
-.anp-bold-blue {
-  --anp-bold-color: var(--ctp-blue);
-}
-
-.anp-bold-lavender {
-  --anp-bold-color: var(--ctp-lavender);
 }
 
 .anp-italic-rosewater {
   --anp-italic-color: var(--ctp-rosewater);
 }
 
+.anuppuccin-accent-toggle.ctp-accent-flamingo {
+  --ctp-accent: var(--ctp-flamingo);
+}
+
+.theme-light.anuppuccin-accent-toggle.ctp-accent-light-flamingo {
+  --ctp-accent: var(--ctp-flamingo);
+}
+
+.anp-bold-flamingo {
+  --anp-bold-color: var(--ctp-flamingo);
+}
+
 .anp-italic-flamingo {
   --anp-italic-color: var(--ctp-flamingo);
+}
+
+.anuppuccin-accent-toggle.ctp-accent-pink {
+  --ctp-accent: var(--ctp-pink);
+}
+
+.theme-light.anuppuccin-accent-toggle.ctp-accent-light-pink {
+  --ctp-accent: var(--ctp-pink);
+}
+
+.anp-bold-pink {
+  --anp-bold-color: var(--ctp-pink);
 }
 
 .anp-italic-pink {
   --anp-italic-color: var(--ctp-pink);
 }
 
+.anuppuccin-accent-toggle.ctp-accent-mauve {
+  --ctp-accent: var(--ctp-mauve);
+}
+
+.theme-light.anuppuccin-accent-toggle.ctp-accent-light-mauve {
+  --ctp-accent: var(--ctp-mauve);
+}
+
+.anp-bold-mauve {
+  --anp-bold-color: var(--ctp-mauve);
+}
+
 .anp-italic-mauve {
   --anp-italic-color: var(--ctp-mauve);
+}
+
+.anuppuccin-accent-toggle.ctp-accent-red {
+  --ctp-accent: var(--ctp-red);
+}
+
+.theme-light.anuppuccin-accent-toggle.ctp-accent-light-red {
+  --ctp-accent: var(--ctp-red);
+}
+
+.anp-bold-red {
+  --anp-bold-color: var(--ctp-red);
 }
 
 .anp-italic-red {
   --anp-italic-color: var(--ctp-red);
 }
 
+.anuppuccin-accent-toggle.ctp-accent-maroon {
+  --ctp-accent: var(--ctp-maroon);
+}
+
+.theme-light.anuppuccin-accent-toggle.ctp-accent-light-maroon {
+  --ctp-accent: var(--ctp-maroon);
+}
+
+.anp-bold-maroon {
+  --anp-bold-color: var(--ctp-maroon);
+}
+
 .anp-italic-maroon {
   --anp-italic-color: var(--ctp-maroon);
+}
+
+.anuppuccin-accent-toggle.ctp-accent-peach {
+  --ctp-accent: var(--ctp-peach);
+}
+
+.theme-light.anuppuccin-accent-toggle.ctp-accent-light-peach {
+  --ctp-accent: var(--ctp-peach);
+}
+
+.anp-bold-peach {
+  --anp-bold-color: var(--ctp-peach);
 }
 
 .anp-italic-peach {
   --anp-italic-color: var(--ctp-peach);
 }
 
+.anuppuccin-accent-toggle.ctp-accent-yellow {
+  --ctp-accent: var(--ctp-yellow);
+}
+
+.theme-light.anuppuccin-accent-toggle.ctp-accent-light-yellow {
+  --ctp-accent: var(--ctp-yellow);
+}
+
+.anp-bold-yellow {
+  --anp-bold-color: var(--ctp-yellow);
+}
+
 .anp-italic-yellow {
   --anp-italic-color: var(--ctp-yellow);
+}
+
+.anuppuccin-accent-toggle.ctp-accent-green {
+  --ctp-accent: var(--ctp-green);
+}
+
+.theme-light.anuppuccin-accent-toggle.ctp-accent-light-green {
+  --ctp-accent: var(--ctp-green);
+}
+
+.anp-bold-green {
+  --anp-bold-color: var(--ctp-green);
 }
 
 .anp-italic-green {
   --anp-italic-color: var(--ctp-green);
 }
 
+.anuppuccin-accent-toggle.ctp-accent-teal {
+  --ctp-accent: var(--ctp-teal);
+}
+
+.theme-light.anuppuccin-accent-toggle.ctp-accent-light-teal {
+  --ctp-accent: var(--ctp-teal);
+}
+
+.anp-bold-teal {
+  --anp-bold-color: var(--ctp-teal);
+}
+
 .anp-italic-teal {
   --anp-italic-color: var(--ctp-teal);
+}
+
+.anuppuccin-accent-toggle.ctp-accent-sky {
+  --ctp-accent: var(--ctp-sky);
+}
+
+.theme-light.anuppuccin-accent-toggle.ctp-accent-light-sky {
+  --ctp-accent: var(--ctp-sky);
+}
+
+.anp-bold-sky {
+  --anp-bold-color: var(--ctp-sky);
 }
 
 .anp-italic-sky {
   --anp-italic-color: var(--ctp-sky);
 }
 
+.anuppuccin-accent-toggle.ctp-accent-sapphire {
+  --ctp-accent: var(--ctp-sapphire);
+}
+
+.theme-light.anuppuccin-accent-toggle.ctp-accent-light-sapphire {
+  --ctp-accent: var(--ctp-sapphire);
+}
+
+.anp-bold-sapphire {
+  --anp-bold-color: var(--ctp-sapphire);
+}
+
 .anp-italic-sapphire {
   --anp-italic-color: var(--ctp-sapphire);
 }
 
+.anuppuccin-accent-toggle.ctp-accent-blue {
+  --ctp-accent: var(--ctp-blue);
+}
+
+.theme-light.anuppuccin-accent-toggle.ctp-accent-light-blue {
+  --ctp-accent: var(--ctp-blue);
+}
+
+.anp-bold-blue {
+  --anp-bold-color: var(--ctp-blue);
+}
+
 .anp-italic-blue {
   --anp-italic-color: var(--ctp-blue);
+}
+
+.anuppuccin-accent-toggle.ctp-accent-lavender {
+  --ctp-accent: var(--ctp-lavender);
+}
+
+.theme-light.anuppuccin-accent-toggle.ctp-accent-light-lavender {
+  --ctp-accent: var(--ctp-lavender);
+}
+
+.anp-bold-lavender {
+  --anp-bold-color: var(--ctp-lavender);
 }
 
 .anp-italic-lavender {
@@ -3511,252 +3616,335 @@ body.is-translucent {
 .anp-header-color-toggle.anp-h1-rosewater {
   --h1-color: rgb(var(--ctp-rosewater));
 }
+
 .anp-header-color-toggle.anp-h1-flamingo {
   --h1-color: rgb(var(--ctp-flamingo));
 }
+
 .anp-header-color-toggle.anp-h1-pink {
   --h1-color: rgb(var(--ctp-pink));
 }
+
 .anp-header-color-toggle.anp-h1-mauve {
   --h1-color: rgb(var(--ctp-mauve));
 }
+
 .anp-header-color-toggle.anp-h1-red {
   --h1-color: rgb(var(--ctp-red));
 }
+
 .anp-header-color-toggle.anp-h1-maroon {
   --h1-color: rgb(var(--ctp-maroon));
 }
+
 .anp-header-color-toggle.anp-h1-peach {
   --h1-color: rgb(var(--ctp-peach));
 }
+
 .anp-header-color-toggle.anp-h1-yellow {
   --h1-color: rgb(var(--ctp-yellow));
 }
+
 .anp-header-color-toggle.anp-h1-green {
   --h1-color: rgb(var(--ctp-green));
 }
+
 .anp-header-color-toggle.anp-h1-teal {
   --h1-color: rgb(var(--ctp-teal));
 }
+
 .anp-header-color-toggle.anp-h1-sky {
   --h1-color: rgb(var(--ctp-sky));
 }
+
 .anp-header-color-toggle.anp-h1-sapphire {
   --h1-color: rgb(var(--ctp-sapphire));
 }
+
 .anp-header-color-toggle.anp-h1-blue {
   --h1-color: rgb(var(--ctp-blue));
 }
+
 .anp-header-color-toggle.anp-h1-lavender {
   --h1-color: rgb(var(--ctp-lavender));
 }
+
 .anp-header-color-toggle.anp-h2-rosewater {
   --h2-color: rgb(var(--ctp-rosewater));
 }
+
 .anp-header-color-toggle.anp-h2-flamingo {
   --h2-color: rgb(var(--ctp-flamingo));
 }
+
 .anp-header-color-toggle.anp-h2-pink {
   --h2-color: rgb(var(--ctp-pink));
 }
+
 .anp-header-color-toggle.anp-h2-mauve {
   --h2-color: rgb(var(--ctp-mauve));
 }
+
 .anp-header-color-toggle.anp-h2-red {
   --h2-color: rgb(var(--ctp-red));
 }
+
 .anp-header-color-toggle.anp-h2-maroon {
   --h2-color: rgb(var(--ctp-maroon));
 }
+
 .anp-header-color-toggle.anp-h2-peach {
   --h2-color: rgb(var(--ctp-peach));
 }
+
 .anp-header-color-toggle.anp-h2-yellow {
   --h2-color: rgb(var(--ctp-yellow));
 }
+
 .anp-header-color-toggle.anp-h2-green {
   --h2-color: rgb(var(--ctp-green));
 }
+
 .anp-header-color-toggle.anp-h2-teal {
   --h2-color: rgb(var(--ctp-teal));
 }
+
 .anp-header-color-toggle.anp-h2-sky {
   --h2-color: rgb(var(--ctp-sky));
 }
+
 .anp-header-color-toggle.anp-h2-sapphire {
   --h2-color: rgb(var(--ctp-sapphire));
 }
+
 .anp-header-color-toggle.anp-h2-blue {
   --h2-color: rgb(var(--ctp-blue));
 }
+
 .anp-header-color-toggle.anp-h2-lavender {
   --h2-color: rgb(var(--ctp-lavender));
 }
+
 .anp-header-color-toggle.anp-h3-rosewater {
   --h3-color: rgb(var(--ctp-rosewater));
 }
+
 .anp-header-color-toggle.anp-h3-flamingo {
   --h3-color: rgb(var(--ctp-flamingo));
 }
+
 .anp-header-color-toggle.anp-h3-pink {
   --h3-color: rgb(var(--ctp-pink));
 }
+
 .anp-header-color-toggle.anp-h3-mauve {
   --h3-color: rgb(var(--ctp-mauve));
 }
+
 .anp-header-color-toggle.anp-h3-red {
   --h3-color: rgb(var(--ctp-red));
 }
+
 .anp-header-color-toggle.anp-h3-maroon {
   --h3-color: rgb(var(--ctp-maroon));
 }
+
 .anp-header-color-toggle.anp-h3-peach {
   --h3-color: rgb(var(--ctp-peach));
 }
+
 .anp-header-color-toggle.anp-h3-yellow {
   --h3-color: rgb(var(--ctp-yellow));
 }
+
 .anp-header-color-toggle.anp-h3-green {
   --h3-color: rgb(var(--ctp-green));
 }
+
 .anp-header-color-toggle.anp-h3-teal {
   --h3-color: rgb(var(--ctp-teal));
 }
+
 .anp-header-color-toggle.anp-h3-sky {
   --h3-color: rgb(var(--ctp-sky));
 }
+
 .anp-header-color-toggle.anp-h3-sapphire {
   --h3-color: rgb(var(--ctp-sapphire));
 }
+
 .anp-header-color-toggle.anp-h3-blue {
   --h3-color: rgb(var(--ctp-blue));
 }
+
 .anp-header-color-toggle.anp-h3-lavender {
   --h3-color: rgb(var(--ctp-lavender));
 }
+
 .anp-header-color-toggle.anp-h4-rosewater {
   --h4-color: rgb(var(--ctp-rosewater));
 }
+
 .anp-header-color-toggle.anp-h4-flamingo {
   --h4-color: rgb(var(--ctp-flamingo));
 }
+
 .anp-header-color-toggle.anp-h4-pink {
   --h4-color: rgb(var(--ctp-pink));
 }
+
 .anp-header-color-toggle.anp-h4-mauve {
   --h4-color: rgb(var(--ctp-mauve));
 }
+
 .anp-header-color-toggle.anp-h4-red {
   --h4-color: rgb(var(--ctp-red));
 }
+
 .anp-header-color-toggle.anp-h4-maroon {
   --h4-color: rgb(var(--ctp-maroon));
 }
+
 .anp-header-color-toggle.anp-h4-peach {
   --h4-color: rgb(var(--ctp-peach));
 }
+
 .anp-header-color-toggle.anp-h4-yellow {
   --h4-color: rgb(var(--ctp-yellow));
 }
+
 .anp-header-color-toggle.anp-h4-green {
   --h4-color: rgb(var(--ctp-green));
 }
+
 .anp-header-color-toggle.anp-h4-teal {
   --h4-color: rgb(var(--ctp-teal));
 }
+
 .anp-header-color-toggle.anp-h4-sky {
   --h4-color: rgb(var(--ctp-sky));
 }
+
 .anp-header-color-toggle.anp-h4-sapphire {
   --h4-color: rgb(var(--ctp-sapphire));
 }
+
 .anp-header-color-toggle.anp-h4-blue {
   --h4-color: rgb(var(--ctp-blue));
 }
+
 .anp-header-color-toggle.anp-h4-lavender {
   --h4-color: rgb(var(--ctp-lavender));
 }
+
 .anp-header-color-toggle.anp-h5-rosewater {
   --h5-color: rgb(var(--ctp-rosewater));
 }
+
 .anp-header-color-toggle.anp-h5-flamingo {
   --h5-color: rgb(var(--ctp-flamingo));
 }
+
 .anp-header-color-toggle.anp-h5-pink {
   --h5-color: rgb(var(--ctp-pink));
 }
+
 .anp-header-color-toggle.anp-h5-mauve {
   --h5-color: rgb(var(--ctp-mauve));
 }
+
 .anp-header-color-toggle.anp-h5-red {
   --h5-color: rgb(var(--ctp-red));
 }
+
 .anp-header-color-toggle.anp-h5-maroon {
   --h5-color: rgb(var(--ctp-maroon));
 }
+
 .anp-header-color-toggle.anp-h5-peach {
   --h5-color: rgb(var(--ctp-peach));
 }
+
 .anp-header-color-toggle.anp-h5-yellow {
   --h5-color: rgb(var(--ctp-yellow));
 }
+
 .anp-header-color-toggle.anp-h5-green {
   --h5-color: rgb(var(--ctp-green));
 }
+
 .anp-header-color-toggle.anp-h5-teal {
   --h5-color: rgb(var(--ctp-teal));
 }
+
 .anp-header-color-toggle.anp-h5-sky {
   --h5-color: rgb(var(--ctp-sky));
 }
+
 .anp-header-color-toggle.anp-h5-sapphire {
   --h5-color: rgb(var(--ctp-sapphire));
 }
+
 .anp-header-color-toggle.anp-h5-blue {
   --h5-color: rgb(var(--ctp-blue));
 }
+
 .anp-header-color-toggle.anp-h5-lavender {
   --h5-color: rgb(var(--ctp-lavender));
 }
+
 .anp-header-color-toggle.anp-h6-rosewater {
   --h6-color: rgb(var(--ctp-rosewater));
 }
+
 .anp-header-color-toggle.anp-h6-flamingo {
   --h6-color: rgb(var(--ctp-flamingo));
 }
+
 .anp-header-color-toggle.anp-h6-pink {
   --h6-color: rgb(var(--ctp-pink));
 }
+
 .anp-header-color-toggle.anp-h6-mauve {
   --h6-color: rgb(var(--ctp-mauve));
 }
+
 .anp-header-color-toggle.anp-h6-red {
   --h6-color: rgb(var(--ctp-red));
 }
+
 .anp-header-color-toggle.anp-h6-maroon {
   --h6-color: rgb(var(--ctp-maroon));
 }
+
 .anp-header-color-toggle.anp-h6-peach {
   --h6-color: rgb(var(--ctp-peach));
 }
+
 .anp-header-color-toggle.anp-h6-yellow {
   --h6-color: rgb(var(--ctp-yellow));
 }
+
 .anp-header-color-toggle.anp-h6-green {
   --h6-color: rgb(var(--ctp-green));
 }
+
 .anp-header-color-toggle.anp-h6-teal {
   --h6-color: rgb(var(--ctp-teal));
 }
+
 .anp-header-color-toggle.anp-h6-sky {
   --h6-color: rgb(var(--ctp-sky));
 }
+
 .anp-header-color-toggle.anp-h6-sapphire {
   --h6-color: rgb(var(--ctp-sapphire));
 }
+
 .anp-header-color-toggle.anp-h6-blue {
   --h6-color: rgb(var(--ctp-blue));
 }
+
 .anp-header-color-toggle.anp-h6-lavender {
   --h6-color: rgb(var(--ctp-lavender));
 }
