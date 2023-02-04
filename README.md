@@ -260,6 +260,7 @@ AnuPpuccin does not come with any code provided by [Minimal](https://github.com/
 - [melnhh](https://github.com/melnhh) for their amazing colorscheme.
 - [EdualcLaiv](https://github.com/EdualcLaiv) for porting Royal Velvet to AnuPppuccin.
 - [xotea](https://github.com/xotea) for theming framework tweaks.
+- [raisabelatrix](https://github.com/raisabelatrix) for [rainbow tags](https://gist.github.com/raisabelatrix/eb383f7e19b59f951430c2f3c6ed80b0) variables.
 
 ## Credits and Acknowledgements
 - [@kepano's](https://github.com/kepano) [Minimal](https://github.com/kepano/obsidian-minimal) for the inspiration for [colorful frames](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/src/modules/Features/colorful-frame.scss) and partial inspiration for style settings menus design, as well as style settings for the Minimal Cards snippet
