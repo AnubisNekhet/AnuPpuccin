@@ -258,7 +258,8 @@ AnuPpuccin does not come with any code provided by [Minimal](https://github.com/
 - [Paul Ryley](https://github.com/pryley) for countless contributions to the theme and amazing sense of design in general.
 - [Chuck Harmston](https://github.com/chuckharmston) for his amazing alternate tabs snippet.
 - [melnhh](https://github.com/melnhh) for their amazing colorscheme.
-- [EdualcLaiv](https://github.com/EdualcLaiv)
+- [EdualcLaiv](https://github.com/EdualcLaiv) for porting Royal Velvet to AnuPppuccin.
+- [xotea](https://github.com/xotea) for theming framework tweaks.
 
 ## Credits and Acknowledgements
 - [@kepano's](https://github.com/kepano) [Minimal](https://github.com/kepano/obsidian-minimal) for the inspiration for [colorful frames](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/src/modules/Features/colorful-frame.scss) and partial inspiration for style settings menus design, as well as style settings for the Minimal Cards snippet
