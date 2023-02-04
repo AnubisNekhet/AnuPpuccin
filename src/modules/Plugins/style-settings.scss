@@ -161,26 +161,43 @@
     padding-right: var(--size-4-2);
     width: var(--size-4-4);
   }
-  .setting-item-description {
-    align-items: center;
-    color: var(--color-accent);
-    cursor: text;
-    display: flex;
-    font-size: var(--font-ui-small);
-    margin-top: var(--size-4-1);
-    padding: 0;
-    -webkit-user-select: all;
-    > div {
-      display: none;
-    }
+}
+.setting-item-heading > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator{
+  &::after {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    height: fit-content;
+    margin-left: var(--size-4-3);
+    width: var(--size-4-4);
   }
 }
-.setting-item[data-id="anuppuccin-url-donate"] .setting-item-name::before {
-  content: '\2615'; // coffee
+$linkEmojis: (
+  "anuppuccin-url-donate": '\2615', //coffee
+  "anuppuccin-url-star-repo": '\2b50', // star
+  "anuppuccin-url-submit-issue": '\1f41e', // bug
+  "anuppuccin-url-minimal-cards-snippet": '\2b07', //down
+);
+@each $link-data, $link-emoji in $linkEmojis {
+  .setting-item[data-id="#{$link-data}"] .setting-item-name::before {
+    content: "#{"" + $link-emoji}";
+  }
 }
-.setting-item[data-id="anuppuccin-url-star-repo"] .setting-item-name::before {
-  content: '\2b50'; // star
+
+/*
+$headingEmojis: 
+  "anp-colors-section-header": '\1f3a8',
+  "anp-editor-header": '\1f5d2',
+  "anp-preview-header": '\1f4c4',
+  "anp-plugin-header": '\1f50c',
+  "anp-misc-element-header": '\1f4a1',
+  "anp-show-hide-elements-header": '\1fa84',
+  "anp-typography-header": '\1f520',
+  "anp-workspace-header": '\1f5c3',
+  "anuppuccin-support": '\2764'
+);
+
+each $link-data, $link-emoji in $headingEmojis {
+  .setting-item-heading[data-id="#{link-data}"] > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
+    content: "#{"" + link-emoji}";
+  }
 }
-.setting-item[data-id="anuppuccin-url-submit-issue"] .setting-item-name::before {
-  content: '\1f41e'; // bug
-}
+*/

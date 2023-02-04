@@ -154,10 +154,10 @@ settings:
     default: true
   -
     id: anuppuccin-url-extended-colorschemes
-    title: Download the Extended Color Schemes
-    description: https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/extended-colorschemes.css
-    type: variable-text
-    default: '0'
+    title: Extended Color Schemes Snippet
+    description: "Download the snippet by clicking on [this link](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/extended-colorschemes.css)."
+    type: info-text
+    markdown: true
 
 # Colors :: Color Overrides
 
@@ -721,16 +721,21 @@ settings:
   -
     id: anp-snippet-minimal-cards
     title: Minimal Cards
-    description: Minimal Cards is a feature of Minimal by Kepano and this theme does not come with the snippet
     type: heading
     level: 2
     collapsed: true
   -
+    id: anp-snippet-minimal-cards-disc
+    title: Usage
+    description: "Minimal Cards is a feature of [Minimal](https://github.com/kepano/obsidian-minimal). AnuPpuccin does not come compiled with the snippet, however you can use a compiled version with this theme."
+    type: info-text
+    markdown: true
+  -
     id: anuppuccin-url-minimal-cards-snippet
-    title: Download the Minimal Cards Snippet
-    description: https://github.com/kepano/obsidian-minimal/blob/master/src/scss/features/cards.scss
-    type: variable-text
-    default: '0'
+    title: Minimal Cards Snippet
+    description: "Download the snippet from [kepano](https://github.com/kepano/)'s github via [this link](https://github.com/kepano/obsidian-minimal/blob/master/src/scss/features/cards.scss)."
+    type: info-text
+    markdown: true
   -
     id: cards-min-width
     title: Card minimum width
@@ -1860,9 +1865,9 @@ settings:
   -
     id: anuppuccin-url-custom-rainbow-colors
     title: Custom rainbow folder colors snippet
-    description: https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/custom-rainbow-colors.css
-    type: variable-text
-    default: '0'
+    description: "Download the snippet through [this link](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/custom-rainbow-colors.css)."
+    type: info-text
+    markdown: true
   -
     id: anp-alt-rainbow-style
     title: Rainbow style
@@ -2190,20 +2195,20 @@ settings:
   -
     id: anuppuccin-url-donate
     title: Buy Me a Coffee
-    description: https://www.buymeacoffee.com/anubisnekhet
-    type: variable-text
-    default: '0'
+    description: "[https://www.buymeacoffee.com/anubisnekhet](https://www.buymeacoffee.com/anubisnekhet)"
+    type: info-text
+    markdown: true
   -
     id: anuppuccin-url-star-repo
     title: Star the Theme on GitHub
-    description: https://github.com/anubisnekhet/anuppuccin
-    type: variable-text
-    default: '0'
+    description: "[https://github.com/anubisnekhet/anuppuccin](https://github.com/anubisnekhet/anuppuccin)"
+    type: info-text
+    markdown: true
   -
     id: anuppuccin-url-submit-issue
     title: Submit an Issue on GitHub
-    description: https://github.com/anubisnekhet/anuppuccin/issues
-    type: variable-text
-    default: '0'
+    description: "[https://github.com/anubisnekhet/anuppuccin/issues](https://github.com/anubisnekhet/anuppuccin/issues)"
+    type: info-text
+    markdown: true
 
 */
