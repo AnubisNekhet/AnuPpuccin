@@ -5,26 +5,19 @@ None of the original code was used and the feature was implemented from scratch.
 ----------------------------------*/
 .anp-floating-header .nav-folder.mod-root > .nav-folder-title {
   background-color: var(--background-secondary);
-  position: fixed;
-  z-index: 1;
-  margin-left: calc(-0.5*var(--size-4-3));
-  width: calc(100% - 1.22*var(--size-4-3));
+  position: sticky;
+  top: 0;
+  z-index: var(--layer-popover);
+  width: 100%;
   border: 1px solid var(--background-modifier-border);
   border-radius: var(--radius-s);
+  box-shadow: 0 3px 4px 0px rgb(0 0 0 / 5%);
 }
-.anp-floating-header .nav-folder.mod-root > .nav-folder-title:hover {
-  background-color: var(--background-secondary);
-  width: calc(100% - 1.2*var(--size-4-3));
-  margin-left: calc(-0.5*var(--size-4-3));
-}
-.anp-floating-header .nav-folder.mod-root > .nav-folder-children {
-  padding-top: 32px; //Might change this later
+.anp-floating-header.anp-card-layout .nav-folder.mod-root > .nav-folder-title {
+  background-color: var(--card-foreground-color, var(--background-primary));
 }
 .anp-floating-header.anp-custom-vault-toggle {
   .nav-folder.mod-root > .nav-folder-title {
     padding-top: 10px;
-  }
-  .nav-folder.mod-root > .nav-folder-children {
-    padding-top: 45px;
   }
 }

@@ -11,6 +11,7 @@
     position: relative;
     transition: transform var(--title-bar-duration) var(--title-bar-delay), margin-right 0s calc(var(--title-bar-duration) + var(--title-bar-delay));
   }
+  //hacky windows fix
   &:not(.mod-macos) .workspace-tabs.mod-top-right-space .workspace-leaf-content .view-header {
     margin-right: calc(var(--title-bar-windows-fix)*var(--frame-right-space));
     &:is(:hover,:focus-within) {

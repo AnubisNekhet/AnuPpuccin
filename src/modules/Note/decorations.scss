@@ -36,3 +36,7 @@
     color: var(--italic-color);
   }
 }
+/*-Footnote-*/
+sup[data-footnote-id] {
+  font-size: var(--font-smallest);
+}
