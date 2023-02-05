@@ -6089,25 +6089,42 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   content: "⬇";
 }
 
-/*
-$headingEmojis: 
-  "anp-colors-section-header": '\1f3a8',
-  "anp-editor-header": '\1f5d2',
-  "anp-preview-header": '\1f4c4',
-  "anp-plugin-header": '\1f50c',
-  "anp-misc-element-header": '\1f4a1',
-  "anp-show-hide-elements-header": '\1fa84',
-  "anp-typography-header": '\1f520',
-  "anp-workspace-header": '\1f5c3',
-  "anuppuccin-support": '\2764'
-);
-
-each $link-data, $link-emoji in $headingEmojis {
-  .setting-item-heading[data-id="link-data"] > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
-    content: "link-emoji";
-  }
+.setting-item-heading[data-id=anp-colors-section-header] > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
+  content: "🎨";
 }
-*/
+
+.setting-item-heading[data-id=anp-editor-header] > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
+  content: "🗒";
+}
+
+.setting-item-heading[data-id=anp-preview-header] > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
+  content: "📄";
+}
+
+.setting-item-heading[data-id=anp-plugin-header] > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
+  content: "🔌";
+}
+
+.setting-item-heading[data-id=anp-misc-element-header] > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
+  content: "💡";
+}
+
+.setting-item-heading[data-id=anp-show-hide-elements-header] > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
+  content: "🪄";
+}
+
+.setting-item-heading[data-id=anp-typography-header] > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
+  content: "🔠";
+}
+
+.setting-item-heading[data-id=anp-workspace-header] > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
+  content: "🗃";
+}
+
+.setting-item-heading[data-id=anuppuccin-support] > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
+  content: "❤";
+}
+
 /*-Fix dataview table header size-*/
 .table-view-table > thead > tr > th {
   font-size: medium;

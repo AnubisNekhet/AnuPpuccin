@@ -182,8 +182,7 @@ $linkEmojis: (
   }
 }
 
-/*
-$headingEmojis: 
+$headingEmojis: (
   "anp-colors-section-header": '\1f3a8',
   "anp-editor-header": '\1f5d2',
   "anp-preview-header": '\1f4c4',
@@ -195,9 +194,8 @@ $headingEmojis:
   "anuppuccin-support": '\2764'
 );
 
-each $link-data, $link-emoji in $headingEmojis {
-  .setting-item-heading[data-id="#{link-data}"] > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
-    content: "#{"" + link-emoji}";
+@each $link-data, $link-emoji in $headingEmojis {
+  .setting-item-heading[data-id="#{$link-data}"] > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
+    content: "#{"" + $link-emoji}";
   }
 }
-*/
