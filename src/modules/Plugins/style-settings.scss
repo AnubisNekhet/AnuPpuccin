@@ -199,3 +199,36 @@ $headingEmojis: (
     content: "#{"" + $link-emoji}";
   }
 }
+.setting-item:is([data-id="anuppuccin-theme-settings"], [data-id="anuppuccin-theme-settings-extended"]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
+  &::after {
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    background-color: var(--color-accent);
+    content: " ";
+    display: inline-flex;
+    flex-shrink: 0;
+    height: calc(var(--font-ui-medium) + 3px);
+    width: calc(var(--font-ui-medium) + 3px);
+    margin-left: calc(-0.5*var(--size-4-1));
+    margin-right: calc(var(--size-4-2) - 3px);
+    transition: transform 0.1s;
+    vertical-align: text-top;
+  }
+  & > svg {
+    display: none;
+  }
+}
+.setting-item:is([data-id="anuppuccin-theme-settings"]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' data-darkreader-inline-stroke='' style='--darkreader-inline-stroke:currentColor;'%3E%3Ccircle cx='13.5' cy='6.5' r='.5'%3E%3C/circle%3E%3Ccircle cx='17.5' cy='10.5' r='.5'%3E%3C/circle%3E%3Ccircle cx='8.5' cy='7.5' r='.5'%3E%3C/circle%3E%3Ccircle cx='6.5' cy='12.5' r='.5'%3E%3C/circle%3E%3Cpath d='M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z'%3E%3C/path%3E%3C/svg%3E");
+}
+.setting-item:is([data-id="anuppuccin-theme-settings-extended"]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3Z'%3E%3C/path%3E%3Cpath d='M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7'%3E%3C/path%3E%3Cpath d='M14.5 17.5 4.5 15'%3E%3C/path%3E%3C/svg%3E");
+}
+.setting-item:is([data-id="anuppuccin-theme-settings"]):not(.is-collapsed) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
+  transform: rotate(90deg);
+  transition: transform 0.1s;
+}
+.setting-item:is([data-id="anuppuccin-theme-settings-extended"]):not(.is-collapsed) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
+  transform: rotate(-90deg);
+  transition: transform 0.1s;
+}
