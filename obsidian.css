@@ -6455,31 +6455,6 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   display: none;
 }
 
-.setting-item:is([data-id*=modular-css-layout-mc]) > .setting-item-info > .setting-item-name {
-  margin-left: -3px;
-}
-.setting-item:is([data-id*=modular-css-layout-mc]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator {
-  margin-right: 4px;
-}
-.setting-item:is([data-id*=modular-css-layout-mc]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  background-color: var(--color-accent);
-  content: " ";
-  display: inline-flex;
-  flex-shrink: 0;
-  height: calc(var(--font-ui-medium) + 3px);
-  width: calc(var(--font-ui-medium) + 3px);
-  margin-left: calc(-0.5 * var(--size-4-1));
-  margin-right: calc(var(--size-4-2) - 3px);
-  transition: transform 0.1s;
-  vertical-align: text-top;
-  margin-right: 0;
-}
-.setting-item:is([data-id*=modular-css-layout-mc]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator > svg {
-  display: none;
-}
-
 .setting-item:is([data-id=anuppuccin-theme-settings],
 [data-id=anp-colors-section-header],
 [data-id=anp-editor-header],
@@ -6488,8 +6463,7 @@ Support me: https://buymeacoffee.com/AnubisNekhet
 [data-id=anp-typography-header],
 [data-id=anp-plugin-header],
 [data-id=anp-workspace-header],
-[data-id=anuppuccin-support],
-[data-id=modular-css-layout-mc]):not(.is-collapsed) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
+[data-id=anuppuccin-support]):not(.is-collapsed) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
   transform: rotate(90deg);
   transition: transform 0.1s;
 }
@@ -6542,10 +6516,6 @@ Support me: https://buymeacoffee.com/AnubisNekhet
 
 .setting-item:is([data-id=anuppuccin-support]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z'%3E%3C/path%3E%3C/svg%3E");
-}
-
-.setting-item:is([data-id=modular-css-layout-mc]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='7' height='9'%3E%3C/rect%3E%3Crect x='14' y='3' width='7' height='5'%3E%3C/rect%3E%3Crect x='14' y='12' width='7' height='9'%3E%3C/rect%3E%3Crect x='3' y='16' width='7' height='5'%3E%3C/rect%3E%3C/svg%3E");
 }
 
 /*-Fix dataview table header size-*/
