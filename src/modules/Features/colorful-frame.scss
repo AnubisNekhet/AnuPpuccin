@@ -160,6 +160,9 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
 .anp-colorful-frame:not(.anp-card-layout) .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   height: calc(100% - var(--header-height));
 }
+.anp-colorful-frame .sidebar-toggle-button.sidebar-toggle-button {
+  background-color: var(--background-primary) !important;
+}
 .anp-colorful-frame .sidebar-toggle-button {
   padding: var(--size-4-1) !important;
   background-color: var(--background-primary);
@@ -275,6 +278,19 @@ body.anp-colorful-frame.anp-card-layout .workspace,
     }
   }
 }
+.anp-colorful-frame.anp-card-layout {
+  .mod-left-split, .mod-right-split {
+    .workspace-tab-container {
+      background-color: transparent;
+    }
+  }
+  .mod-left-split {
+    background-color: transparent;
+  }
+  .mod-vertical .workspace-tab-container {
+    background-color: transparent;
+  }
+}
 .anp-colorful-frame.anp-card-layout .mod-right-split .workspace-tab-header.is-active,
 .anp-colorful-frame.anp-card-layout .mod-left-split  .workspace-tab-header.is-active {
   background-color: rgba(var(--ctp-crust), 0.2);
@@ -308,8 +324,8 @@ body.anp-colorful-frame.anp-card-layout .workspace,
   opacity: 0.5;
 }
 .anp-colorful-frame {
-  --titlebar-background: var(--color-accent);
-  --titlebar-background-focused: var(--color-accent);
+  --titlebar-background: var(--anp-colorful-frame-color, var(--color-accent));
+  --titlebar-background-focused: var(--anp-colorful-frame-color, var(--color-accent));
   --titlebar-text-color: var(--background-primary);
   --titlebar-text-color-focused: var(--background-secondary-alt);
 }

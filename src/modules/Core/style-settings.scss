@@ -2103,10 +2103,6 @@ settings:
     level: 2
     collapsed: true
   -
-    id: anp-translucent-left
-    title: Enable translucency styling
-    type: class-toggle
-  -
     id: anp-translucency-opacity
     title: Window opacity
     type: variable-number
@@ -2117,7 +2113,7 @@ settings:
   -
     id: anp-layout-header
     title: Workspace Layout
-    description: 
+    description: Workspace layout and arrangement
     type: heading
     level: 2
     collapsed: true
