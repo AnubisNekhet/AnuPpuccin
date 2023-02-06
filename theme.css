@@ -2105,6 +2105,7 @@ settings:
     collapsed: true
   -
     id: anp-translucency-opacity
+    description: Drag to change background opacity
     title: Window opacity
     type: variable-number
     default: 0.15
@@ -5265,8 +5266,8 @@ body.anp-colorful-frame.anp-card-layout .workspace,
 }
 
 .anp-colorful-frame {
-  --titlebar-background: var(--color-accent);
-  --titlebar-background-focused: var(--color-accent);
+  --titlebar-background: var(--anp-colorful-frame-color, var(--color-accent));
+  --titlebar-background-focused: var(--anp-colorful-frame-color, var(--color-accent));
   --titlebar-text-color: var(--background-primary);
   --titlebar-text-color-focused: var(--background-secondary-alt);
 }
