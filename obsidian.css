@@ -3771,6 +3771,16 @@ sup[data-footnote-id] {
   --h1-color: rgb(var(--ctp-lavender));
 }
 
+.anp-h1-divider .markdown-rendered h1,
+.anp-h1-divider .HyperMD-header-1 {
+  border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
+  padding-bottom: 2px;
+}
+
+.cm-formatting-header-1 {
+  color: var(--h1-color);
+}
+
 .anp-header-color-toggle.anp-h2-rosewater {
   --h2-color: rgb(var(--ctp-rosewater));
 }
@@ -3825,6 +3835,16 @@ sup[data-footnote-id] {
 
 .anp-header-color-toggle.anp-h2-lavender {
   --h2-color: rgb(var(--ctp-lavender));
+}
+
+.anp-h2-divider .markdown-rendered h2,
+.anp-h2-divider .HyperMD-header-2 {
+  border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
+  padding-bottom: 2px;
+}
+
+.cm-formatting-header-2 {
+  color: var(--h2-color);
 }
 
 .anp-header-color-toggle.anp-h3-rosewater {
@@ -3883,6 +3903,16 @@ sup[data-footnote-id] {
   --h3-color: rgb(var(--ctp-lavender));
 }
 
+.anp-h3-divider .markdown-rendered h3,
+.anp-h3-divider .HyperMD-header-3 {
+  border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
+  padding-bottom: 2px;
+}
+
+.cm-formatting-header-3 {
+  color: var(--h3-color);
+}
+
 .anp-header-color-toggle.anp-h4-rosewater {
   --h4-color: rgb(var(--ctp-rosewater));
 }
@@ -3937,6 +3967,16 @@ sup[data-footnote-id] {
 
 .anp-header-color-toggle.anp-h4-lavender {
   --h4-color: rgb(var(--ctp-lavender));
+}
+
+.anp-h4-divider .markdown-rendered h4,
+.anp-h4-divider .HyperMD-header-4 {
+  border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
+  padding-bottom: 2px;
+}
+
+.cm-formatting-header-4 {
+  color: var(--h4-color);
 }
 
 .anp-header-color-toggle.anp-h5-rosewater {
@@ -3995,6 +4035,16 @@ sup[data-footnote-id] {
   --h5-color: rgb(var(--ctp-lavender));
 }
 
+.anp-h5-divider .markdown-rendered h5,
+.anp-h5-divider .HyperMD-header-5 {
+  border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
+  padding-bottom: 2px;
+}
+
+.cm-formatting-header-5 {
+  color: var(--h5-color);
+}
+
 .anp-header-color-toggle.anp-h6-rosewater {
   --h6-color: rgb(var(--ctp-rosewater));
 }
@@ -4051,30 +4101,10 @@ sup[data-footnote-id] {
   --h6-color: rgb(var(--ctp-lavender));
 }
 
-.anp-h1-divider .markdown-rendered :is(h1, h2, h3, h4, h5, h6),
-.anp-h1-divider .HyperMD-header {
+.anp-h6-divider .markdown-rendered h6,
+.anp-h6-divider .HyperMD-header-6 {
   border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
   padding-bottom: 2px;
-}
-
-.cm-formatting-header-1 {
-  color: var(--h1-color);
-}
-
-.cm-formatting-header-2 {
-  color: var(--h2-color);
-}
-
-.cm-formatting-header-3 {
-  color: var(--h3-color);
-}
-
-.cm-formatting-header-4 {
-  color: var(--h4-color);
-}
-
-.cm-formatting-header-5 {
-  color: var(--h5-color);
 }
 
 .cm-formatting-header-6 {
