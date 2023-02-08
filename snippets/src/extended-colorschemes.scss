@@ -1,0 +1,185 @@
+/* @settings
+name: AnuPpuccin Themes Extended
+id: anuppuccin-theme-settings-extended
+settings:
+  -
+    id: anp-theme-ext-light
+    title: Toggle extended light theme
+    type: class-toggle
+  -
+    id: anp-theme-ext-dark
+    title: Toggle extended dark theme
+    type: class-toggle
+  -
+    id: anp-theme-ext-amoled
+    title: Toggle amoled black on all themes
+    type: class-toggle
+  - 
+    id: catppuccin-theme-extended
+    title: Light theme flavor
+    description: Select your preferred light mode flavor
+    type: class-select
+    allowEmpty: false
+    default: ctp-nord-light
+    options:
+        - 
+            label: Atom
+            value: ctp-atom-light
+        - 
+            label: Everforest
+            value: ctp-everforest-light
+        - 
+            label: Gruvbox
+            value: ctp-gruvbox-light
+        - 
+            label: Nord
+            value: ctp-nord-light
+        - 
+            label: Notion
+            value: ctp-notion-light
+        - 
+            label: Sandy Beaches
+            value: ctp-sandy-beaches-light
+        - 
+            label: Solarized
+            value: ctp-solarized-light
+  - 
+    id: catppuccin-theme-dark-extended
+    title: Dark theme flavor
+    description: Select your preferred dark mode flavor
+    type: class-select
+    allowEmpty: false
+    default: ctp-nord-dark
+    options:
+        -
+            label: AMOLED Dark
+            value: ctp-amoled-dark
+        -
+            label: Atom
+            value: ctp-atom-dark
+        -
+            label: Coffee
+            value: ctp-coffee-dark
+        -
+            label: Dark (Generic)
+            value: ctp-generic-dark
+        -
+            label: Dracula
+            value: ctp-dracula
+        -
+            label: Everforest
+            value: ctp-everforest-dark
+        -
+            label: Gruvbox
+            value: ctp-gruvbox-dark
+        -
+            label: Kanagawa
+            value: ctp-kanagawa-dark
+        -
+            label: Nord
+            value: ctp-nord-dark
+        -
+            label: Notion
+            value: ctp-notion-dark
+        -
+            label: Nord Dark (Custom palette)
+            value: ctp-nord-darker
+        -
+            label: Rosé Pine
+            value: ctp-rosepine-dark
+        -
+            label: Rosebox
+            value: ctp-rosebox
+        -
+            label: Royal Velvet
+            value: ctp-royal-velvet
+        -
+            label: Solarized
+            value: ctp-solarized-dark
+*/
+
+@import "ext-colorschemes/amoled-dark.scss";
+@import "ext-colorschemes/atom-dark.scss";
+@import "ext-colorschemes/atom-light.scss";
+@import "ext-colorschemes/coffee-dark.scss";
+@import "ext-colorschemes/dracula.scss";
+@import "ext-colorschemes/everforest-light.scss";
+@import "ext-colorschemes/everforest-dark.scss";
+@import "ext-colorschemes/generic-dark.scss";
+@import "ext-colorschemes/gruvbox-dark.scss";
+@import "ext-colorschemes/gruvbox-light.scss";
+@import "ext-colorschemes/kanagawa-dark.scss";
+@import "ext-colorschemes/nord-dark.scss";
+@import "ext-colorschemes/nord-light.scss";
+@import "ext-colorschemes/nord-darker.scss";
+@import "ext-colorschemes/notion-light.scss";
+@import "ext-colorschemes/notion-dark.scss";
+@import "ext-colorschemes/rosebox.scss";
+@import "ext-colorschemes/rosepine-dark.scss";
+@import "ext-colorschemes/royal-velvet.scss";
+@import "ext-colorschemes/sandy-beaches-light.scss";
+@import "ext-colorschemes/solarized-dark.scss";
+@import "ext-colorschemes/solarized-light.scss";
+
+$ext-color-list: "rosewater", "flamingo", "pink", "mauve", "red", "maroon", "peach", "yellow", "green", "teal", "sky", "sapphire", "blue", "lavender", "text", "subtext1", "subtext0", "overlay2", "overlay1", "overlay0", "surface2", "surface1", "surface0", "base", "mantle", "crust";
+
+$ext-theme-list:
+  $theme-atom-light,
+  $theme-amoled-dark,
+  $theme-atom-dark,
+  $theme-coffee-dark,
+  $theme-dracula,
+  $theme-everforest-light,
+  $theme-everforest-dark,
+  $theme-generic-dark,
+  $theme-gruvbox-dark,
+  $theme-gruvbox-light,
+  $theme-kanagawa-dark,
+  $theme-nord-dark,
+  $theme-nord-darker,
+  $theme-nord-light,
+  $theme-notion-light,
+  $theme-notion-dark,
+  $theme-rosebox,
+  $theme-rosepine-dark,
+  $theme-royal-velvet,
+  $theme-sandy-beaches-light,
+  $theme-solarized-dark,
+  $theme-solarized-light
+;
+
+.theme-dark.anp-theme-ext-dark.ctp-rosebox {
+  --ctp-accent: 165, 117, 98;
+  --background-modifier-border: rgb(51, 51, 51);
+}
+.theme-light.anp-theme-ext-light.ctp-nord-light {
+  --ctp-accent: 136, 192, 208;
+}
+.theme-dark.anp-theme-ext-dark.ctp-nord-dark {
+  --ctp-accent: 136, 192, 208;
+}
+.theme-dark.anp-theme-ext-dark.ctp-nord-darker {
+  --ctp-accent: 136, 192, 208;
+}
+.theme-light.anp-theme-ext-light.ctp-atom-light {
+  --ctp-accent: var(--ctp-blue);
+}
+.theme-dark.anp-theme-ext-dark.ctp-atom-dark {
+  --ctp-accent: var(--ctp-blue);
+}
+.theme-dark.anp-theme-ext-amoled {
+  --ctp-ext-surface2: 80, 80, 80 !important;
+  --ctp-ext-surface1: 50, 50, 50 !important;
+  --ctp-ext-surface0: 30, 30, 30 !important;
+  --ctp-ext-base: 10, 10, 10 !important;
+  --ctp-ext-mantle: 5, 5, 5 !important;
+  --ctp-ext-crust: 0, 0, 0 !important;
+}
+
+@each $theme-name in $ext-theme-list {
+  .theme-#{map-get($theme-name, theme-mode)}.anp-theme-ext-#{map-get($theme-name, theme-mode)}.ctp-#{map-get($theme-name, theme-name)}, .anp-theme-ext-#{map-get($theme-name, theme-mode)}.ctp-#{map-get($theme-name, theme-name)} .themed-color-wrapper > .theme-#{map-get($theme-name, theme-mode)} {
+    @each $color-name in $ext-color-list {
+      --ctp-ext-#{$color-name}: #{red(map-get($theme-name, ctp-#{$color-name}))}, #{green(map-get($theme-name, ctp-#{$color-name}))}, #{blue(map-get($theme-name, ctp-#{$color-name}))};
+    }
+  }
+}

@@ -11,7 +11,7 @@ $color-list: "rosewater", "flamingo", "pink", "mauve", "red", "maroon", "peach",
 @each $theme-name in $theme-list {
   .theme-#{map-get($theme-name, theme-mode)}.ctp-#{map-get($theme-name, theme-name)}, .ctp-#{map-get($theme-name, theme-name)} .themed-color-wrapper > .theme-#{map-get($theme-name, theme-mode)} {
     @each $color-name in $color-list {
-      --ctp-#{$color-name}: var(--ctp-custom-#{$color-name},  #{red(map-get($theme-name, ctp-#{$color-name}))}, #{green(map-get($theme-name, ctp-#{$color-name}))}, #{blue(map-get($theme-name, ctp-#{$color-name}))});
+      --ctp-#{$color-name}: var(--ctp-custom-#{$color-name}, var(--ct-ext-#{$color-name}, #{red(map-get($theme-name, ctp-#{$color-name}))}, #{green(map-get($theme-name, ctp-#{$color-name}))}, #{blue(map-get($theme-name, ctp-#{$color-name}))}));
     }
   }
 }
