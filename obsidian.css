@@ -2857,8 +2857,7 @@ body {
   --card-background-color: rgb(var(--ctp-crust));
   --card-foreground-color: rgb(var(--ctp-base));
   --tab-inactive-color: rgb(var(--ctp-mantle));
-  --code-background: rgb(var(--anp-custom-code-bg, var(--ctp-mantle)));
-  --code-normal: rgb(var(--anp-custom-code-normal, var(--ctp-text)));
+  --code-normal: var(--anp-code-text-color, var(--text-normal));
   --background-modifier-active: hsla(var(--color-accent-hsl), 0.1);
 }
 body.theme-light {
@@ -5870,7 +5869,7 @@ None of the original code was used and the feature was implemented from scratch.
 .anp-codeblock-numbers .HyperMD-codeblock.cm-line:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end)::before {
   align-items: flex-end;
   border-right: 1px solid var(--scrollbar-thumb-bg);
-  color: var(--text-faint);
+  color: var(--anp-code-text-color, var(--text-faint));
   content: counter(line-numbers);
   counter-increment: line-numbers;
   display: table-caption;

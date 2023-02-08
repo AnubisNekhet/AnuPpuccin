@@ -8,7 +8,7 @@
 .anp-codeblock-numbers .HyperMD-codeblock.cm-line:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end)::before {
     align-items: flex-end;
     border-right: 1px solid var(--scrollbar-thumb-bg);
-    color: var(--text-faint);
+    color: var(--anp-code-text-color, var(--text-faint));
     content: counter(line-numbers);
     counter-increment: line-numbers;
     display: table-caption;

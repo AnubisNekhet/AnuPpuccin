@@ -169,8 +169,7 @@ body {
   --card-background-color: rgb(var(--ctp-crust));
   --card-foreground-color: rgb(var(--ctp-base));
   --tab-inactive-color: rgb(var(--ctp-mantle));
-  --code-background: rgb(var(--anp-custom-code-bg, var(--ctp-mantle)));
-  --code-normal: rgb(var(--anp-custom-code-normal, var(--ctp-text)));
+  --code-normal: var(--anp-code-text-color, var(--text-normal));
   --background-modifier-active: hsla(var(--color-accent-hsl), 0.1);
   &.theme-light {
     --anp-background-image: var(--anp-background-image-light);
