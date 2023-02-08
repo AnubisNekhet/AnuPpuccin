@@ -683,7 +683,7 @@ settings:
   --ctp-ext-crust: 20, 20, 25;
 }
 
-.theme-sandy-beaches-light.anp-theme-ext-sandy-beaches-light.ctp-light, .anp-theme-ext-sandy-beaches-light.ctp-light .themed-color-wrapper > .theme-sandy-beaches-light {
+.theme-light.anp-theme-ext-light.ctp-sandy-beaches-light, .anp-theme-ext-light.ctp-sandy-beaches-light .themed-color-wrapper > .theme-light {
   --ctp-ext-rosewater: 228, 212, 196;
   --ctp-ext-flamingo: 214, 188, 174;
   --ctp-ext-pink: 200, 164, 152;
