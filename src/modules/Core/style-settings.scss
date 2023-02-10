@@ -21,8 +21,14 @@ settings:
     default: ctp-latte
     options:
       - 
-        label: Latte
+        label: Catppuccin Latte
         value: ctp-latte
+      - 
+        label: Gruvbox
+        value: ctp-gruvbox-light
+      - 
+        label: Nord
+        value: ctp-nord-light
       - 
         label: Rosé Pine
         value: ctp-rosepine-light
@@ -35,17 +41,29 @@ settings:
     default: ctp-mocha
     options:
       - 
-        label: Frappe
+        label: Catppuccin Frappe
         value: ctp-frappe
       - 
-        label: Macchiato
+        label: Catppuccin Macchiato
         value: ctp-macchiato
       - 
-        label: Mocha
+        label: Catppuccin Mocha
         value: ctp-mocha
       - 
-        label: Mocha Old
+        label: Catppuccin Mocha Old
         value: ctp-mocha-old
+      - 
+        label: Nord
+        value: ctp-gruvbox-dark
+      - 
+        label: Nord
+        value: ctp-nord-dark
+      - 
+        label: 'Nord Dark (Custom Colorscheme)'
+        value: ctp-nord-darker
+      - 
+        label: Rosé Pine
+        value: ctp-rosepine-light
   -
     id: anuppuccin-light-theme-accents
     title: Light Theme Accent

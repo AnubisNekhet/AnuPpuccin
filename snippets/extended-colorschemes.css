@@ -21,7 +21,7 @@ settings:
     description: Select your preferred light mode flavor
     type: class-select
     allowEmpty: false
-    default: ctp-nord-light
+    default: ctp-atom-light
     options:
         - 
             label: Atom
@@ -30,17 +30,8 @@ settings:
             label: Everforest
             value: ctp-everforest-light
         - 
-            label: Gruvbox
-            value: ctp-gruvbox-light
-        - 
-            label: Nord
-            value: ctp-nord-light
-        - 
             label: Notion
             value: ctp-notion-light
-        - 
-            label: Sandy Beaches
-            value: ctp-sandy-beaches-light
         - 
             label: Solarized
             value: ctp-solarized-light
@@ -50,7 +41,7 @@ settings:
     description: Select your preferred dark mode flavor
     type: class-select
     allowEmpty: false
-    default: ctp-nord-dark
+    default: ctp-atom-dark
     options:
         -
             label: AMOLED Dark
@@ -71,20 +62,11 @@ settings:
             label: Everforest
             value: ctp-everforest-dark
         -
-            label: Gruvbox
-            value: ctp-gruvbox-dark
-        -
             label: Kanagawa
             value: ctp-kanagawa-dark
         -
-            label: Nord
-            value: ctp-nord-dark
-        -
             label: Notion
             value: ctp-notion-dark
-        -
-            label: Nord Dark (Custom palette)
-            value: ctp-nord-darker
         -
             label: Rosé Pine
             value: ctp-rosepine-dark
@@ -101,18 +83,6 @@ settings:
 .theme-dark.anp-theme-ext-dark.ctp-rosebox {
   --ctp-accent: 165, 117, 98;
   --background-modifier-border: rgb(51, 51, 51);
-}
-
-.theme-light.anp-theme-ext-light.ctp-nord-light {
-  --ctp-accent: 136, 192, 208;
-}
-
-.theme-dark.anp-theme-ext-dark.ctp-nord-dark {
-  --ctp-accent: 136, 192, 208;
-}
-
-.theme-dark.anp-theme-ext-dark.ctp-nord-darker {
-  --ctp-accent: 136, 192, 208;
 }
 
 .theme-light.anp-theme-ext-light.ctp-atom-light {
@@ -364,64 +334,6 @@ settings:
   --ctp-ext-crust: 0, 0, 0;
 }
 
-.theme-dark.anp-theme-ext-dark.ctp-gruvbox-dark, .anp-theme-ext-dark.ctp-gruvbox-dark .themed-color-wrapper > .theme-dark {
-  --ctp-ext-rosewater: 243, 128, 25;
-  --ctp-ext-flamingo: 207, 162, 174;
-  --ctp-ext-pink: 177, 98, 118;
-  --ctp-ext-mauve: 177, 98, 134;
-  --ctp-ext-red: 204, 36, 29;
-  --ctp-ext-maroon: 204, 49, 29;
-  --ctp-ext-peach: 214, 93, 14;
-  --ctp-ext-yellow: 215, 153, 33;
-  --ctp-ext-green: 152, 151, 26;
-  --ctp-ext-teal: 102, 152, 26;
-  --ctp-ext-sky: 26, 152, 76;
-  --ctp-ext-sapphire: 26, 133, 152;
-  --ctp-ext-blue: 69, 133, 136;
-  --ctp-ext-lavender: 146, 111, 175;
-  --ctp-ext-text: 251, 241, 199;
-  --ctp-ext-subtext1: 213, 196, 161;
-  --ctp-ext-subtext0: 189, 174, 147;
-  --ctp-ext-overlay2: 151, 137, 125;
-  --ctp-ext-overlay1: 124, 111, 100;
-  --ctp-ext-overlay0: 102, 92, 84;
-  --ctp-ext-surface2: 80, 73, 69;
-  --ctp-ext-surface1: 60, 56, 54;
-  --ctp-ext-surface0: 50, 48, 47;
-  --ctp-ext-base: 40, 40, 40;
-  --ctp-ext-mantle: 29, 32, 33;
-  --ctp-ext-crust: 19, 21, 22;
-}
-
-.theme-light.anp-theme-ext-light.ctp-gruvbox-light, .anp-theme-ext-light.ctp-gruvbox-light .themed-color-wrapper > .theme-light {
-  --ctp-ext-rosewater: 243, 128, 25;
-  --ctp-ext-flamingo: 207, 162, 174;
-  --ctp-ext-pink: 177, 98, 118;
-  --ctp-ext-mauve: 177, 98, 134;
-  --ctp-ext-red: 204, 36, 29;
-  --ctp-ext-maroon: 204, 49, 29;
-  --ctp-ext-peach: 214, 93, 14;
-  --ctp-ext-yellow: 215, 153, 33;
-  --ctp-ext-green: 152, 151, 26;
-  --ctp-ext-teal: 102, 152, 26;
-  --ctp-ext-sky: 26, 152, 76;
-  --ctp-ext-sapphire: 26, 133, 152;
-  --ctp-ext-blue: 69, 133, 136;
-  --ctp-ext-lavender: 146, 111, 175;
-  --ctp-ext-text: 40, 40, 40;
-  --ctp-ext-subtext1: 80, 73, 69;
-  --ctp-ext-subtext0: 102, 92, 84;
-  --ctp-ext-overlay2: 149, 131, 106;
-  --ctp-ext-overlay1: 168, 153, 133;
-  --ctp-ext-overlay0: 189, 174, 147;
-  --ctp-ext-surface2: 214, 196, 161;
-  --ctp-ext-surface1: 235, 219, 179;
-  --ctp-ext-surface0: 242, 229, 188;
-  --ctp-ext-base: 249, 245, 215;
-  --ctp-ext-mantle: 236, 225, 196;
-  --ctp-ext-crust: 230, 215, 178;
-}
-
 .theme-dark.anp-theme-ext-dark.ctp-kanagawa-dark, .anp-theme-ext-dark.ctp-kanagawa-dark .themed-color-wrapper > .theme-dark {
   --ctp-ext-rosewater: 255, 200, 148;
   --ctp-ext-flamingo: 210, 126, 129;
@@ -449,93 +361,6 @@ settings:
   --ctp-ext-base: 31, 31, 40;
   --ctp-ext-mantle: 22, 22, 29;
   --ctp-ext-crust: 11, 11, 15;
-}
-
-.theme-dark.anp-theme-ext-dark.ctp-nord-dark, .anp-theme-ext-dark.ctp-nord-dark .themed-color-wrapper > .theme-dark {
-  --ctp-ext-rosewater: 226, 191, 169;
-  --ctp-ext-flamingo: 239, 171, 150;
-  --ctp-ext-pink: 214, 163, 222;
-  --ctp-ext-mauve: 180, 142, 173;
-  --ctp-ext-red: 191, 97, 106;
-  --ctp-ext-maroon: 191, 108, 97;
-  --ctp-ext-peach: 208, 135, 112;
-  --ctp-ext-yellow: 235, 203, 139;
-  --ctp-ext-green: 163, 190, 140;
-  --ctp-ext-teal: 143, 188, 187;
-  --ctp-ext-sky: 136, 192, 208;
-  --ctp-ext-sapphire: 129, 161, 193;
-  --ctp-ext-blue: 94, 129, 172;
-  --ctp-ext-lavender: 192, 167, 187;
-  --ctp-ext-text: 236, 239, 244;
-  --ctp-ext-subtext1: 229, 233, 240;
-  --ctp-ext-subtext0: 217, 222, 232;
-  --ctp-ext-overlay2: 196, 201, 212;
-  --ctp-ext-overlay1: 172, 180, 195;
-  --ctp-ext-overlay0: 149, 158, 178;
-  --ctp-ext-surface2: 125, 137, 161;
-  --ctp-ext-surface1: 103, 116, 142;
-  --ctp-ext-surface0: 77, 87, 106;
-  --ctp-ext-base: 67, 76, 94;
-  --ctp-ext-mantle: 59, 66, 82;
-  --ctp-ext-crust: 46, 52, 64;
-}
-
-.theme-dark.anp-theme-ext-dark.ctp-nord-darker, .anp-theme-ext-dark.ctp-nord-darker .themed-color-wrapper > .theme-dark {
-  --ctp-ext-rosewater: 226, 191, 169;
-  --ctp-ext-flamingo: 239, 171, 150;
-  --ctp-ext-pink: 214, 163, 222;
-  --ctp-ext-mauve: 180, 142, 173;
-  --ctp-ext-red: 191, 97, 106;
-  --ctp-ext-maroon: 191, 108, 97;
-  --ctp-ext-peach: 208, 135, 112;
-  --ctp-ext-yellow: 235, 203, 139;
-  --ctp-ext-green: 163, 190, 140;
-  --ctp-ext-teal: 143, 188, 187;
-  --ctp-ext-sky: 136, 192, 208;
-  --ctp-ext-sapphire: 129, 161, 193;
-  --ctp-ext-blue: 94, 129, 172;
-  --ctp-ext-lavender: 192, 167, 187;
-  --ctp-ext-text: 236, 239, 244;
-  --ctp-ext-subtext1: 229, 233, 240;
-  --ctp-ext-subtext0: 217, 222, 232;
-  --ctp-ext-overlay2: 196, 201, 212;
-  --ctp-ext-overlay1: 172, 180, 195;
-  --ctp-ext-overlay0: 149, 158, 178;
-  --ctp-ext-surface2: 125, 137, 161;
-  --ctp-ext-surface1: 67, 76, 94;
-  --ctp-ext-surface0: 59, 66, 82;
-  --ctp-ext-base: 46, 52, 64;
-  --ctp-ext-mantle: 39, 43, 53;
-  --ctp-ext-crust: 30, 34, 41;
-}
-
-.theme-light.anp-theme-ext-light.ctp-nord-light, .anp-theme-ext-light.ctp-nord-light .themed-color-wrapper > .theme-light {
-  --ctp-ext-rosewater: 209, 135, 112;
-  --ctp-ext-flamingo: 180, 142, 173;
-  --ctp-ext-pink: 180, 142, 173;
-  --ctp-ext-mauve: 180, 142, 173;
-  --ctp-ext-red: 191, 97, 106;
-  --ctp-ext-maroon: 191, 97, 106;
-  --ctp-ext-peach: 208, 135, 112;
-  --ctp-ext-yellow: 216, 172, 84;
-  --ctp-ext-green: 136, 167, 108;
-  --ctp-ext-teal: 121, 191, 142;
-  --ctp-ext-sky: 143, 188, 187;
-  --ctp-ext-sapphire: 136, 192, 208;
-  --ctp-ext-blue: 94, 129, 172;
-  --ctp-ext-lavender: 94, 129, 172;
-  --ctp-ext-text: 46, 52, 64;
-  --ctp-ext-subtext1: 59, 66, 82;
-  --ctp-ext-subtext0: 67, 76, 94;
-  --ctp-ext-overlay2: 76, 86, 106;
-  --ctp-ext-overlay1: 86, 97, 118;
-  --ctp-ext-overlay0: 143, 188, 187;
-  --ctp-ext-surface2: 216, 222, 233;
-  --ctp-ext-surface1: 216, 222, 233;
-  --ctp-ext-surface0: 229, 233, 240;
-  --ctp-ext-base: 236, 239, 244;
-  --ctp-ext-mantle: 231, 235, 241;
-  --ctp-ext-crust: 229, 233, 240;
 }
 
 .theme-light.anp-theme-ext-light.ctp-notion-light, .anp-theme-ext-light.ctp-notion-light .themed-color-wrapper > .theme-light {
@@ -625,35 +450,6 @@ settings:
   --ctp-ext-crust: 25, 25, 25;
 }
 
-.theme-dark.anp-theme-ext-dark.ctp-rosepine-dark, .anp-theme-ext-dark.ctp-rosepine-dark .themed-color-wrapper > .theme-dark {
-  --ctp-ext-rosewater: 243, 215, 204;
-  --ctp-ext-flamingo: 235, 188, 186;
-  --ctp-ext-pink: 223, 167, 231;
-  --ctp-ext-mauve: 196, 167, 231;
-  --ctp-ext-red: 235, 111, 146;
-  --ctp-ext-maroon: 235, 122, 111;
-  --ctp-ext-peach: 235, 159, 111;
-  --ctp-ext-yellow: 246, 193, 119;
-  --ctp-ext-green: 114, 182, 156;
-  --ctp-ext-teal: 156, 207, 216;
-  --ctp-ext-sky: 49, 116, 143;
-  --ctp-ext-sapphire: 68, 132, 171;
-  --ctp-ext-blue: 76, 127, 169;
-  --ctp-ext-lavender: 210, 193, 231;
-  --ctp-ext-text: 224, 222, 244;
-  --ctp-ext-subtext1: 144, 140, 170;
-  --ctp-ext-subtext0: 110, 106, 134;
-  --ctp-ext-overlay2: 82, 79, 103;
-  --ctp-ext-overlay1: 64, 61, 82;
-  --ctp-ext-overlay0: 54, 50, 83;
-  --ctp-ext-surface2: 46, 42, 70;
-  --ctp-ext-surface1: 33, 32, 46;
-  --ctp-ext-surface0: 31, 29, 46;
-  --ctp-ext-base: 25, 23, 36;
-  --ctp-ext-mantle: 17, 16, 25;
-  --ctp-ext-crust: 11, 10, 16;
-}
-
 .theme-dark.anp-theme-ext-dark.ctp-royal-velvet, .anp-theme-ext-dark.ctp-royal-velvet .themed-color-wrapper > .theme-dark {
   --ctp-ext-rosewater: 246, 201, 153;
   --ctp-ext-flamingo: 245, 189, 166;
@@ -681,35 +477,6 @@ settings:
   --ctp-ext-base: 30, 30, 36;
   --ctp-ext-mantle: 25, 25, 30;
   --ctp-ext-crust: 20, 20, 25;
-}
-
-.theme-light.anp-theme-ext-light.ctp-sandy-beaches-light, .anp-theme-ext-light.ctp-sandy-beaches-light .themed-color-wrapper > .theme-light {
-  --ctp-ext-rosewater: 228, 212, 196;
-  --ctp-ext-flamingo: 214, 188, 174;
-  --ctp-ext-pink: 200, 164, 152;
-  --ctp-ext-mauve: 149, 136, 138;
-  --ctp-ext-red: 166, 137, 123;
-  --ctp-ext-maroon: 186, 144, 123;
-  --ctp-ext-peach: 199, 161, 135;
-  --ctp-ext-yellow: 212, 187, 160;
-  --ctp-ext-green: 152, 150, 134;
-  --ctp-ext-teal: 149, 156, 153;
-  --ctp-ext-sky: 138, 155, 163;
-  --ctp-ext-sapphire: 124, 133, 143;
-  --ctp-ext-blue: 109, 111, 123;
-  --ctp-ext-lavender: 135, 128, 142;
-  --ctp-ext-text: 104, 88, 80;
-  --ctp-ext-subtext1: 108, 92, 84;
-  --ctp-ext-subtext0: 111, 96, 88;
-  --ctp-ext-overlay2: 118, 103, 96;
-  --ctp-ext-overlay1: 124, 110, 103;
-  --ctp-ext-overlay0: 130, 117, 110;
-  --ctp-ext-surface2: 205, 197, 193;
-  --ctp-ext-surface1: 212, 205, 200;
-  --ctp-ext-surface0: 222, 216, 209;
-  --ctp-ext-base: 240, 234, 226;
-  --ctp-ext-mantle: 237, 231, 224;
-  --ctp-ext-crust: 230, 223, 216;
 }
 
 .theme-dark.anp-theme-ext-dark.ctp-solarized-dark, .anp-theme-ext-dark.ctp-solarized-dark .themed-color-wrapper > .theme-dark {

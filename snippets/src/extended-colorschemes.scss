@@ -20,7 +20,7 @@ settings:
     description: Select your preferred light mode flavor
     type: class-select
     allowEmpty: false
-    default: ctp-nord-light
+    default: ctp-atom-light
     options:
         - 
             label: Atom
@@ -29,17 +29,8 @@ settings:
             label: Everforest
             value: ctp-everforest-light
         - 
-            label: Gruvbox
-            value: ctp-gruvbox-light
-        - 
-            label: Nord
-            value: ctp-nord-light
-        - 
             label: Notion
             value: ctp-notion-light
-        - 
-            label: Sandy Beaches
-            value: ctp-sandy-beaches-light
         - 
             label: Solarized
             value: ctp-solarized-light
@@ -49,7 +40,7 @@ settings:
     description: Select your preferred dark mode flavor
     type: class-select
     allowEmpty: false
-    default: ctp-nord-dark
+    default: ctp-atom-dark
     options:
         -
             label: AMOLED Dark
@@ -70,20 +61,11 @@ settings:
             label: Everforest
             value: ctp-everforest-dark
         -
-            label: Gruvbox
-            value: ctp-gruvbox-dark
-        -
             label: Kanagawa
             value: ctp-kanagawa-dark
         -
-            label: Nord
-            value: ctp-nord-dark
-        -
             label: Notion
             value: ctp-notion-dark
-        -
-            label: Nord Dark (Custom palette)
-            value: ctp-nord-darker
         -
             label: Rosé Pine
             value: ctp-rosepine-dark
@@ -106,18 +88,11 @@ settings:
 @import "ext-colorschemes/everforest-light.scss";
 @import "ext-colorschemes/everforest-dark.scss";
 @import "ext-colorschemes/generic-dark.scss";
-@import "ext-colorschemes/gruvbox-dark.scss";
-@import "ext-colorschemes/gruvbox-light.scss";
 @import "ext-colorschemes/kanagawa-dark.scss";
-@import "ext-colorschemes/nord-dark.scss";
-@import "ext-colorschemes/nord-light.scss";
-@import "ext-colorschemes/nord-darker.scss";
 @import "ext-colorschemes/notion-light.scss";
 @import "ext-colorschemes/notion-dark.scss";
 @import "ext-colorschemes/rosebox.scss";
-@import "ext-colorschemes/rosepine-dark.scss";
 @import "ext-colorschemes/royal-velvet.scss";
-@import "ext-colorschemes/sandy-beaches-light.scss";
 @import "ext-colorschemes/solarized-dark.scss";
 @import "ext-colorschemes/solarized-light.scss";
 
@@ -132,18 +107,11 @@ $ext-theme-list:
   $theme-everforest-light,
   $theme-everforest-dark,
   $theme-generic-dark,
-  $theme-gruvbox-dark,
-  $theme-gruvbox-light,
   $theme-kanagawa-dark,
-  $theme-nord-dark,
-  $theme-nord-darker,
-  $theme-nord-light,
   $theme-notion-light,
   $theme-notion-dark,
   $theme-rosebox,
-  $theme-rosepine-dark,
   $theme-royal-velvet,
-  $theme-sandy-beaches-light,
   $theme-solarized-dark,
   $theme-solarized-light
 ;
@@ -151,15 +119,6 @@ $ext-theme-list:
 .theme-dark.anp-theme-ext-dark.ctp-rosebox {
   --ctp-accent: 165, 117, 98;
   --background-modifier-border: rgb(51, 51, 51);
-}
-.theme-light.anp-theme-ext-light.ctp-nord-light {
-  --ctp-accent: 136, 192, 208;
-}
-.theme-dark.anp-theme-ext-dark.ctp-nord-dark {
-  --ctp-accent: 136, 192, 208;
-}
-.theme-dark.anp-theme-ext-dark.ctp-nord-darker {
-  --ctp-accent: 136, 192, 208;
 }
 .theme-light.anp-theme-ext-light.ctp-atom-light {
   --ctp-accent: var(--ctp-blue);

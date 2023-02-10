@@ -1,17 +1,43 @@
 /*------------------Defining Colorschemes-------------------*/
 @import "colorschemes/latte.scss";
 @import "colorschemes/rosepine-light.scss";
+@import "colorschemes/rosepine-dark.scss";
 @import "colorschemes/frappe.scss";
 @import "colorschemes/macchiato.scss";
 @import "colorschemes/mocha.scss";
 @import "colorschemes/mocha-old.scss";
-$theme-list: $theme-latte, $theme-rosepine-light, $theme-frappe, $theme-macchiato, $theme-mocha, $theme-mocha-old;
+@import "colorschemes/nord-dark.scss";
+@import "colorschemes/nord-light.scss";
+@import "colorschemes/nord-darker.scss";
+@import "colorschemes/sandy-beaches-light.scss";
+@import "colorschemes/gruvbox-dark.scss";
+@import "colorschemes/gruvbox-light.scss";
+$theme-list:
+  $theme-latte,
+  $theme-frappe,
+  $theme-macchiato,
+  $theme-mocha,
+  $theme-mocha-old,
+  $theme-gruvbox-dark,
+  $theme-gruvbox-light,
+  $theme-nord-dark,
+  $theme-nord-light,
+  $theme-nord-darker,
+  $theme-rosepine-dark,
+  $theme-rosepine-light,
+  $theme-sandy-beaches-light
+;
 $color-list: "rosewater", "flamingo", "pink", "mauve", "red", "maroon", "peach", "yellow", "green", "teal", "sky", "sapphire", "blue", "lavender", "text", "subtext1", "subtext0", "overlay2", "overlay1", "overlay0", "surface2", "surface1", "surface0", "base", "mantle", "crust";
 
 @each $theme-name in $theme-list {
   .theme-#{map-get($theme-name, theme-mode)}.ctp-#{map-get($theme-name, theme-name)}, .ctp-#{map-get($theme-name, theme-name)} .themed-color-wrapper > .theme-#{map-get($theme-name, theme-mode)} {
     @each $color-name in $color-list {
       --ctp-#{$color-name}: var(--ctp-custom-#{$color-name}, var(--ctp-ext-#{$color-name}, #{red(map-get($theme-name, ctp-#{$color-name}))}, #{green(map-get($theme-name, ctp-#{$color-name}))}, #{blue(map-get($theme-name, ctp-#{$color-name}))}));
+    }
+  }
+  @if(map-get($theme-name, ctp-accent)) {
+    .theme-#{map-get($theme-name, theme-mode)}.ctp-#{map-get($theme-name, theme-name)}.anuppuccin-accent-toggle.anuppuccin-accent-toggle , .ctp-#{map-get($theme-name, theme-name)}.anuppuccin-accent-toggle.anuppuccin-accent-toggle .themed-color-wrapper > .theme-#{map-get($theme-name, theme-mode)} {
+      --ctp-accent: #{red(map-get($theme-name, ctp-accent))}, #{green(map-get($theme-name, ctp-accent))}, #{blue(map-get($theme-name, ctp-accent))};
     }
   }
 }
