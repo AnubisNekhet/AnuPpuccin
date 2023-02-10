@@ -3175,6 +3175,11 @@ input.slider,
   display: var(--anp-inline-title-vis, block);
 }
 
+/* Search page hover item fix */
+.search-result-file-match:hover {
+  background-color: var(--background-modifier-hover);
+}
+
 .workspace-split:not(.mod-root) .graph-controls.is-close,
 .workspace-split:not(.mod-root) .graph-controls,
 .workspace-split:not(.mod-root) .graph-controls:not(.is-close) {
@@ -5799,7 +5804,7 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   background: linear-gradient(to left, rgba(var(--ctp-lavender), var(--anp-speech-bubble-opacity)), rgba(var(--ctp-mauve), var(--anp-speech-bubble-opacity)));
 }
 
-/*------------FLOATING VAULT TITLE-----------*/
+/*------------FLOATING SIDEBAR ELEMENTS-----------*/
 /*----------------------------------
 This feature is inspired by Cecilia May's Primary theme: https://github.com/ceciliamay/obsidianmd-theme-primary
 None of the original code was used and the feature was implemented from scratch.
@@ -5987,6 +5992,7 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   transition: transform 300ms 150ms;
   bottom: 5px;
   right: 5px;
+  box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.05);
 }
 .anp-floating-status-bar .status-bar::before {
   width: 100%;

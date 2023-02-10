@@ -71,3 +71,7 @@
 .inline-title {
   display: var(--anp-inline-title-vis, block);
 }
+/* Search page hover item fix */
+.search-result-file-match:hover {
+  background-color: var(--background-modifier-hover);
+}
