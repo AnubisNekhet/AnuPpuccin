@@ -1,0 +1,47 @@
+/* AGPLv3 License
+Notion-Styled Kanban
+Author: AnubisNekhet
+Note: If you decide to implement it in your theme or redistribute it, please keep this comment (Especially for *certain* individuals who may try to rebrand it as their own :))
+Support me: https://buymeacoffee.com/AnubisNekhet
+*/
+.workspace-leaf-content[data-type=search] .nav-header {
+  z-index: var(--layer-popover);
+  padding: 0;
+  background: var(--background-secondary);
+}
+.workspace-leaf-content[data-type=search] .nav-header .nav-buttons-container {
+  padding: var(--size-4-2);
+}
+.workspace-leaf-content[data-type=search] .nav-header ~ .search-input-container {
+  background: var(--background-secondary);
+  padding: 0;
+  width: calc(100% - var(--size-4-3));
+  margin: 4px auto;
+  box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.05);
+  z-index: var(--layer-popover);
+}
+.workspace-leaf-content[data-type=search] .search-info-container {
+  box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.05);
+  color: var(--text-muted);
+  padding: var(--size-4-1) var(--size-4-4) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  border: var(--input-border-width) solid var(--background-modifier-border);
+  width: fit-content;
+  max-width: calc(100% - var(--size-4-3));
+  margin-left: calc(0.5 * var(--size-4-3));
+  margin-right: calc(0.5 * var(--size-4-3));
+  border-radius: var(--input-radius);
+  background: var(--background-secondary);
+  z-index: var(--layer-popover);
+  overflow-x: clip;
+}
+.workspace-leaf-content[data-type=search] .search-info-container:empty {
+  display: none;
+}
+.workspace-leaf-content[data-type=search] .search-result-container.mod-global-search {
+  overflow-y: auto;
+  margin-bottom: calc(-1 * var(--padx));
+  top: calc(-1 * var(--padx));
+  --padx: 50px;
+  padding-top: calc(var(--padx) + 10px);
+}
