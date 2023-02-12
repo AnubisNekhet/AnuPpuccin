@@ -3518,7 +3518,6 @@ body.is-translucent {
 .is-translucent:not(.is-fullscreen) .workspace-tabs .workspace-leaf,
 .is-translucent:not(.is-fullscreen) .workspace-ribbon.mod-left:before,
 .is-translucent:not(.is-fullscreen) .workspace-split.mod-root,
-.is-translucent:not(.is-fullscreen) .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header,
 .is-translucent:not(.is-fullscreen) .workspace-split.mod-root.mod-left-split .view-content,
 .is-translucent:not(.is-fullscreen) .view-header,
 .is-translucent:not(.is-fullscreen) .horizontal-main-container {
@@ -3540,6 +3539,10 @@ body.is-translucent {
 
 .is-translucent.anp-card-layout {
   --card-background-color: transparent;
+}
+
+.is-translucent:not(.is-fullscreen) .workspace-tabs.mod-stacked .workspace-tab-header, .is-translucent:not(.is-fullscreen) .workspace-tabs.mod-stacked .view-header {
+  background-color: var(--background-primary);
 }
 
 /*-Blockquote spacing-*/
@@ -5804,7 +5807,7 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   background: linear-gradient(to left, rgba(var(--ctp-lavender), var(--anp-speech-bubble-opacity)), rgba(var(--ctp-mauve), var(--anp-speech-bubble-opacity)));
 }
 
-/*------------FLOATING SIDEBAR ELEMENTS-----------*/
+/*------------FLOATING VAULT TITLE-----------*/
 /*----------------------------------
 This feature is inspired by Cecilia May's Primary theme: https://github.com/ceciliamay/obsidianmd-theme-primary
 None of the original code was used and the feature was implemented from scratch.
