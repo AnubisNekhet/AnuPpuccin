@@ -3752,7 +3752,6 @@ body.is-translucent {
 .is-translucent:not(.is-fullscreen) .workspace-tabs .workspace-leaf,
 .is-translucent:not(.is-fullscreen) .workspace-ribbon.mod-left:before,
 .is-translucent:not(.is-fullscreen) .workspace-split.mod-root,
-.is-translucent:not(.is-fullscreen) .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header,
 .is-translucent:not(.is-fullscreen) .workspace-split.mod-root.mod-left-split .view-content,
 .is-translucent:not(.is-fullscreen) .view-header,
 .is-translucent:not(.is-fullscreen) .horizontal-main-container {
@@ -3774,6 +3773,10 @@ body.is-translucent {
 
 .is-translucent.anp-card-layout {
   --card-background-color: transparent;
+}
+
+.is-translucent:not(.is-fullscreen) .workspace-tabs.mod-stacked .workspace-tab-header, .is-translucent:not(.is-fullscreen) .workspace-tabs.mod-stacked .view-header {
+  background-color: var(--background-primary);
 }
 
 /*-Blockquote spacing-*/
