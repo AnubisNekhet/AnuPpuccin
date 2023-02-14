@@ -3688,59 +3688,59 @@ sup[data-footnote-id] {
   padding: 0px 6px;
 }
 
-.anp-header-color-toggle.anp-h1-rosewater {
+.anp-header-color-toggle.anp-h1-rosewater .app-container {
   --h1-color: rgb(var(--ctp-rosewater));
 }
 
-.anp-header-color-toggle.anp-h1-flamingo {
+.anp-header-color-toggle.anp-h1-flamingo .app-container {
   --h1-color: rgb(var(--ctp-flamingo));
 }
 
-.anp-header-color-toggle.anp-h1-pink {
+.anp-header-color-toggle.anp-h1-pink .app-container {
   --h1-color: rgb(var(--ctp-pink));
 }
 
-.anp-header-color-toggle.anp-h1-mauve {
+.anp-header-color-toggle.anp-h1-mauve .app-container {
   --h1-color: rgb(var(--ctp-mauve));
 }
 
-.anp-header-color-toggle.anp-h1-red {
+.anp-header-color-toggle.anp-h1-red .app-container {
   --h1-color: rgb(var(--ctp-red));
 }
 
-.anp-header-color-toggle.anp-h1-maroon {
+.anp-header-color-toggle.anp-h1-maroon .app-container {
   --h1-color: rgb(var(--ctp-maroon));
 }
 
-.anp-header-color-toggle.anp-h1-peach {
+.anp-header-color-toggle.anp-h1-peach .app-container {
   --h1-color: rgb(var(--ctp-peach));
 }
 
-.anp-header-color-toggle.anp-h1-yellow {
+.anp-header-color-toggle.anp-h1-yellow .app-container {
   --h1-color: rgb(var(--ctp-yellow));
 }
 
-.anp-header-color-toggle.anp-h1-green {
+.anp-header-color-toggle.anp-h1-green .app-container {
   --h1-color: rgb(var(--ctp-green));
 }
 
-.anp-header-color-toggle.anp-h1-teal {
+.anp-header-color-toggle.anp-h1-teal .app-container {
   --h1-color: rgb(var(--ctp-teal));
 }
 
-.anp-header-color-toggle.anp-h1-sky {
+.anp-header-color-toggle.anp-h1-sky .app-container {
   --h1-color: rgb(var(--ctp-sky));
 }
 
-.anp-header-color-toggle.anp-h1-sapphire {
+.anp-header-color-toggle.anp-h1-sapphire .app-container {
   --h1-color: rgb(var(--ctp-sapphire));
 }
 
-.anp-header-color-toggle.anp-h1-blue {
+.anp-header-color-toggle.anp-h1-blue .app-container {
   --h1-color: rgb(var(--ctp-blue));
 }
 
-.anp-header-color-toggle.anp-h1-lavender {
+.anp-header-color-toggle.anp-h1-lavender .app-container {
   --h1-color: rgb(var(--ctp-lavender));
 }
 
@@ -3754,59 +3754,59 @@ sup[data-footnote-id] {
   color: var(--h1-color);
 }
 
-.anp-header-color-toggle.anp-h2-rosewater {
+.anp-header-color-toggle.anp-h2-rosewater .app-container {
   --h2-color: rgb(var(--ctp-rosewater));
 }
 
-.anp-header-color-toggle.anp-h2-flamingo {
+.anp-header-color-toggle.anp-h2-flamingo .app-container {
   --h2-color: rgb(var(--ctp-flamingo));
 }
 
-.anp-header-color-toggle.anp-h2-pink {
+.anp-header-color-toggle.anp-h2-pink .app-container {
   --h2-color: rgb(var(--ctp-pink));
 }
 
-.anp-header-color-toggle.anp-h2-mauve {
+.anp-header-color-toggle.anp-h2-mauve .app-container {
   --h2-color: rgb(var(--ctp-mauve));
 }
 
-.anp-header-color-toggle.anp-h2-red {
+.anp-header-color-toggle.anp-h2-red .app-container {
   --h2-color: rgb(var(--ctp-red));
 }
 
-.anp-header-color-toggle.anp-h2-maroon {
+.anp-header-color-toggle.anp-h2-maroon .app-container {
   --h2-color: rgb(var(--ctp-maroon));
 }
 
-.anp-header-color-toggle.anp-h2-peach {
+.anp-header-color-toggle.anp-h2-peach .app-container {
   --h2-color: rgb(var(--ctp-peach));
 }
 
-.anp-header-color-toggle.anp-h2-yellow {
+.anp-header-color-toggle.anp-h2-yellow .app-container {
   --h2-color: rgb(var(--ctp-yellow));
 }
 
-.anp-header-color-toggle.anp-h2-green {
+.anp-header-color-toggle.anp-h2-green .app-container {
   --h2-color: rgb(var(--ctp-green));
 }
 
-.anp-header-color-toggle.anp-h2-teal {
+.anp-header-color-toggle.anp-h2-teal .app-container {
   --h2-color: rgb(var(--ctp-teal));
 }
 
-.anp-header-color-toggle.anp-h2-sky {
+.anp-header-color-toggle.anp-h2-sky .app-container {
   --h2-color: rgb(var(--ctp-sky));
 }
 
-.anp-header-color-toggle.anp-h2-sapphire {
+.anp-header-color-toggle.anp-h2-sapphire .app-container {
   --h2-color: rgb(var(--ctp-sapphire));
 }
 
-.anp-header-color-toggle.anp-h2-blue {
+.anp-header-color-toggle.anp-h2-blue .app-container {
   --h2-color: rgb(var(--ctp-blue));
 }
 
-.anp-header-color-toggle.anp-h2-lavender {
+.anp-header-color-toggle.anp-h2-lavender .app-container {
   --h2-color: rgb(var(--ctp-lavender));
 }
 
@@ -3820,59 +3820,59 @@ sup[data-footnote-id] {
   color: var(--h2-color);
 }
 
-.anp-header-color-toggle.anp-h3-rosewater {
+.anp-header-color-toggle.anp-h3-rosewater .app-container {
   --h3-color: rgb(var(--ctp-rosewater));
 }
 
-.anp-header-color-toggle.anp-h3-flamingo {
+.anp-header-color-toggle.anp-h3-flamingo .app-container {
   --h3-color: rgb(var(--ctp-flamingo));
 }
 
-.anp-header-color-toggle.anp-h3-pink {
+.anp-header-color-toggle.anp-h3-pink .app-container {
   --h3-color: rgb(var(--ctp-pink));
 }
 
-.anp-header-color-toggle.anp-h3-mauve {
+.anp-header-color-toggle.anp-h3-mauve .app-container {
   --h3-color: rgb(var(--ctp-mauve));
 }
 
-.anp-header-color-toggle.anp-h3-red {
+.anp-header-color-toggle.anp-h3-red .app-container {
   --h3-color: rgb(var(--ctp-red));
 }
 
-.anp-header-color-toggle.anp-h3-maroon {
+.anp-header-color-toggle.anp-h3-maroon .app-container {
   --h3-color: rgb(var(--ctp-maroon));
 }
 
-.anp-header-color-toggle.anp-h3-peach {
+.anp-header-color-toggle.anp-h3-peach .app-container {
   --h3-color: rgb(var(--ctp-peach));
 }
 
-.anp-header-color-toggle.anp-h3-yellow {
+.anp-header-color-toggle.anp-h3-yellow .app-container {
   --h3-color: rgb(var(--ctp-yellow));
 }
 
-.anp-header-color-toggle.anp-h3-green {
+.anp-header-color-toggle.anp-h3-green .app-container {
   --h3-color: rgb(var(--ctp-green));
 }
 
-.anp-header-color-toggle.anp-h3-teal {
+.anp-header-color-toggle.anp-h3-teal .app-container {
   --h3-color: rgb(var(--ctp-teal));
 }
 
-.anp-header-color-toggle.anp-h3-sky {
+.anp-header-color-toggle.anp-h3-sky .app-container {
   --h3-color: rgb(var(--ctp-sky));
 }
 
-.anp-header-color-toggle.anp-h3-sapphire {
+.anp-header-color-toggle.anp-h3-sapphire .app-container {
   --h3-color: rgb(var(--ctp-sapphire));
 }
 
-.anp-header-color-toggle.anp-h3-blue {
+.anp-header-color-toggle.anp-h3-blue .app-container {
   --h3-color: rgb(var(--ctp-blue));
 }
 
-.anp-header-color-toggle.anp-h3-lavender {
+.anp-header-color-toggle.anp-h3-lavender .app-container {
   --h3-color: rgb(var(--ctp-lavender));
 }
 
@@ -3886,59 +3886,59 @@ sup[data-footnote-id] {
   color: var(--h3-color);
 }
 
-.anp-header-color-toggle.anp-h4-rosewater {
+.anp-header-color-toggle.anp-h4-rosewater .app-container {
   --h4-color: rgb(var(--ctp-rosewater));
 }
 
-.anp-header-color-toggle.anp-h4-flamingo {
+.anp-header-color-toggle.anp-h4-flamingo .app-container {
   --h4-color: rgb(var(--ctp-flamingo));
 }
 
-.anp-header-color-toggle.anp-h4-pink {
+.anp-header-color-toggle.anp-h4-pink .app-container {
   --h4-color: rgb(var(--ctp-pink));
 }
 
-.anp-header-color-toggle.anp-h4-mauve {
+.anp-header-color-toggle.anp-h4-mauve .app-container {
   --h4-color: rgb(var(--ctp-mauve));
 }
 
-.anp-header-color-toggle.anp-h4-red {
+.anp-header-color-toggle.anp-h4-red .app-container {
   --h4-color: rgb(var(--ctp-red));
 }
 
-.anp-header-color-toggle.anp-h4-maroon {
+.anp-header-color-toggle.anp-h4-maroon .app-container {
   --h4-color: rgb(var(--ctp-maroon));
 }
 
-.anp-header-color-toggle.anp-h4-peach {
+.anp-header-color-toggle.anp-h4-peach .app-container {
   --h4-color: rgb(var(--ctp-peach));
 }
 
-.anp-header-color-toggle.anp-h4-yellow {
+.anp-header-color-toggle.anp-h4-yellow .app-container {
   --h4-color: rgb(var(--ctp-yellow));
 }
 
-.anp-header-color-toggle.anp-h4-green {
+.anp-header-color-toggle.anp-h4-green .app-container {
   --h4-color: rgb(var(--ctp-green));
 }
 
-.anp-header-color-toggle.anp-h4-teal {
+.anp-header-color-toggle.anp-h4-teal .app-container {
   --h4-color: rgb(var(--ctp-teal));
 }
 
-.anp-header-color-toggle.anp-h4-sky {
+.anp-header-color-toggle.anp-h4-sky .app-container {
   --h4-color: rgb(var(--ctp-sky));
 }
 
-.anp-header-color-toggle.anp-h4-sapphire {
+.anp-header-color-toggle.anp-h4-sapphire .app-container {
   --h4-color: rgb(var(--ctp-sapphire));
 }
 
-.anp-header-color-toggle.anp-h4-blue {
+.anp-header-color-toggle.anp-h4-blue .app-container {
   --h4-color: rgb(var(--ctp-blue));
 }
 
-.anp-header-color-toggle.anp-h4-lavender {
+.anp-header-color-toggle.anp-h4-lavender .app-container {
   --h4-color: rgb(var(--ctp-lavender));
 }
 
@@ -3952,59 +3952,59 @@ sup[data-footnote-id] {
   color: var(--h4-color);
 }
 
-.anp-header-color-toggle.anp-h5-rosewater {
+.anp-header-color-toggle.anp-h5-rosewater .app-container {
   --h5-color: rgb(var(--ctp-rosewater));
 }
 
-.anp-header-color-toggle.anp-h5-flamingo {
+.anp-header-color-toggle.anp-h5-flamingo .app-container {
   --h5-color: rgb(var(--ctp-flamingo));
 }
 
-.anp-header-color-toggle.anp-h5-pink {
+.anp-header-color-toggle.anp-h5-pink .app-container {
   --h5-color: rgb(var(--ctp-pink));
 }
 
-.anp-header-color-toggle.anp-h5-mauve {
+.anp-header-color-toggle.anp-h5-mauve .app-container {
   --h5-color: rgb(var(--ctp-mauve));
 }
 
-.anp-header-color-toggle.anp-h5-red {
+.anp-header-color-toggle.anp-h5-red .app-container {
   --h5-color: rgb(var(--ctp-red));
 }
 
-.anp-header-color-toggle.anp-h5-maroon {
+.anp-header-color-toggle.anp-h5-maroon .app-container {
   --h5-color: rgb(var(--ctp-maroon));
 }
 
-.anp-header-color-toggle.anp-h5-peach {
+.anp-header-color-toggle.anp-h5-peach .app-container {
   --h5-color: rgb(var(--ctp-peach));
 }
 
-.anp-header-color-toggle.anp-h5-yellow {
+.anp-header-color-toggle.anp-h5-yellow .app-container {
   --h5-color: rgb(var(--ctp-yellow));
 }
 
-.anp-header-color-toggle.anp-h5-green {
+.anp-header-color-toggle.anp-h5-green .app-container {
   --h5-color: rgb(var(--ctp-green));
 }
 
-.anp-header-color-toggle.anp-h5-teal {
+.anp-header-color-toggle.anp-h5-teal .app-container {
   --h5-color: rgb(var(--ctp-teal));
 }
 
-.anp-header-color-toggle.anp-h5-sky {
+.anp-header-color-toggle.anp-h5-sky .app-container {
   --h5-color: rgb(var(--ctp-sky));
 }
 
-.anp-header-color-toggle.anp-h5-sapphire {
+.anp-header-color-toggle.anp-h5-sapphire .app-container {
   --h5-color: rgb(var(--ctp-sapphire));
 }
 
-.anp-header-color-toggle.anp-h5-blue {
+.anp-header-color-toggle.anp-h5-blue .app-container {
   --h5-color: rgb(var(--ctp-blue));
 }
 
-.anp-header-color-toggle.anp-h5-lavender {
+.anp-header-color-toggle.anp-h5-lavender .app-container {
   --h5-color: rgb(var(--ctp-lavender));
 }
 
@@ -4018,59 +4018,59 @@ sup[data-footnote-id] {
   color: var(--h5-color);
 }
 
-.anp-header-color-toggle.anp-h6-rosewater {
+.anp-header-color-toggle.anp-h6-rosewater .app-container {
   --h6-color: rgb(var(--ctp-rosewater));
 }
 
-.anp-header-color-toggle.anp-h6-flamingo {
+.anp-header-color-toggle.anp-h6-flamingo .app-container {
   --h6-color: rgb(var(--ctp-flamingo));
 }
 
-.anp-header-color-toggle.anp-h6-pink {
+.anp-header-color-toggle.anp-h6-pink .app-container {
   --h6-color: rgb(var(--ctp-pink));
 }
 
-.anp-header-color-toggle.anp-h6-mauve {
+.anp-header-color-toggle.anp-h6-mauve .app-container {
   --h6-color: rgb(var(--ctp-mauve));
 }
 
-.anp-header-color-toggle.anp-h6-red {
+.anp-header-color-toggle.anp-h6-red .app-container {
   --h6-color: rgb(var(--ctp-red));
 }
 
-.anp-header-color-toggle.anp-h6-maroon {
+.anp-header-color-toggle.anp-h6-maroon .app-container {
   --h6-color: rgb(var(--ctp-maroon));
 }
 
-.anp-header-color-toggle.anp-h6-peach {
+.anp-header-color-toggle.anp-h6-peach .app-container {
   --h6-color: rgb(var(--ctp-peach));
 }
 
-.anp-header-color-toggle.anp-h6-yellow {
+.anp-header-color-toggle.anp-h6-yellow .app-container {
   --h6-color: rgb(var(--ctp-yellow));
 }
 
-.anp-header-color-toggle.anp-h6-green {
+.anp-header-color-toggle.anp-h6-green .app-container {
   --h6-color: rgb(var(--ctp-green));
 }
 
-.anp-header-color-toggle.anp-h6-teal {
+.anp-header-color-toggle.anp-h6-teal .app-container {
   --h6-color: rgb(var(--ctp-teal));
 }
 
-.anp-header-color-toggle.anp-h6-sky {
+.anp-header-color-toggle.anp-h6-sky .app-container {
   --h6-color: rgb(var(--ctp-sky));
 }
 
-.anp-header-color-toggle.anp-h6-sapphire {
+.anp-header-color-toggle.anp-h6-sapphire .app-container {
   --h6-color: rgb(var(--ctp-sapphire));
 }
 
-.anp-header-color-toggle.anp-h6-blue {
+.anp-header-color-toggle.anp-h6-blue .app-container {
   --h6-color: rgb(var(--ctp-blue));
 }
 
-.anp-header-color-toggle.anp-h6-lavender {
+.anp-header-color-toggle.anp-h6-lavender .app-container {
   --h6-color: rgb(var(--ctp-lavender));
 }
 
