@@ -12,7 +12,7 @@ $accents: "rosewater", "flamingo", "pink", "mauve", "red", "maroon", "peach", "y
 @for $i from 1 through 6 {
   @each $accent in $accents {
     .anp-header-color-toggle {
-      &.anp-h#{$i}-#{$accent} {
+      &.anp-h#{$i}-#{$accent} .app-container {
         --h#{$i}-color: rgb(var(--ctp-#{$accent}));
       }
     }
