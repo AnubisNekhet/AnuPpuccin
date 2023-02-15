@@ -24,6 +24,9 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
       --titlebar-background: rgba(var(--anp-colorful-frame-color, var(--ctp-accent)), var(--anp-colorful-frame-opacity, 1));
       --background-modifier-hover: rgba(var(--ctp-crust), 0.075);
     }
+    &.anp-card-layout .prompt {
+      --background-modifier-hover: rgba(var(--ctp-text), 0.075)
+    }
   }
   &.anuppuccin-accent-toggle.anp-colorful-frame, &.anp-colorful-frame.anp-colorful-frame.anp-colorful-frame {
     .sidebar-toggle-button {
