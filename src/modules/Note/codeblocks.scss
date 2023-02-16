@@ -12,6 +12,7 @@
   .markdown-source-view.mod-cm6 .HyperMD-codeblock.cm-line {
     white-space: nowrap;
     overflow-x: scroll;
+    overflow-y: hidden;
     &::-webkit-scrollbar {
       display: none;
     }
