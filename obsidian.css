@@ -3566,6 +3566,7 @@ body.is-translucent {
 .anp-codeblock-edit-nowrap .markdown-source-view.mod-cm6 .HyperMD-codeblock.cm-line {
   white-space: nowrap;
   overflow-x: scroll;
+  overflow-y: hidden;
 }
 .anp-codeblock-edit-nowrap .markdown-source-view.mod-cm6 .HyperMD-codeblock.cm-line::-webkit-scrollbar {
   display: none;
