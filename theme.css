@@ -3180,6 +3180,10 @@ input.slider,
   background-color: var(--background-modifier-hover);
 }
 
+.anuppuccin-accent-toggle .drag-ghost-hidden:before {
+  background-color: rgba(var(--ctp-accent), 0.3);
+}
+
 .workspace-split:not(.mod-root) .graph-controls.is-close,
 .workspace-split:not(.mod-root) .graph-controls,
 .workspace-split:not(.mod-root) .graph-controls:not(.is-close) {
