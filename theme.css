@@ -4957,9 +4957,6 @@ body:not(.anuppuccin-accent-toggle).anp-button-metadata-toggle .frontmatter-cont
 Minimal cards are a snippet designed by Kepano for the Minimal theme.
 None of the original code was used in this theme, and the following code is merely some tweaks to the snippet.
 --------------------------------------------*/
-.cards .table-view-table > tbody > tr > td {
-  border-bottom: 1px dashed var(--background-modifier-border) !important; /*-Dashed borders for all cells-*/
-}
 .cards .table-view-table > tbody > tr > td:last-child {
   border-bottom-color: transparent !important; /*-No border for last cell-*/
 }
@@ -4972,6 +4969,9 @@ None of the original code was used in this theme, and the following code is mere
 }
 .cards .table-view-table > tbody > tr > td:first-child span a {
   padding: 0 !important; /*-0 padding on link-*/
+}
+.cards .table-view-table > tbody > tr > td:not(:last-child):not(:first-child) > .el-p.el-p.el-p:not(.el-embed-image) {
+  border-bottom: 1px dashed var(--background-modifier-border);
 }
 .cards:not([class*=cards-cols-]) {
   --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width))); /*-force card width to be obeyed on notes not having cards-cols css class-*/

@@ -5,7 +5,6 @@ None of the original code was used in this theme, and the following code is mere
 .cards {
     .table-view-table {
         > tbody > tr> td {
-            border-bottom: 1px dashed var(--background-modifier-border) !important;/*-Dashed borders for all cells-*/
             &:last-child {
                 border-bottom-color: transparent !important;/*-No border for last cell-*/
             }
@@ -17,6 +16,11 @@ None of the original code was used in this theme, and the following code is mere
                     a {
                     padding: 0 !important;/*-0 padding on link-*/
                     }
+                }
+            }
+            &:not(:last-child):not(:first-child) {
+                & > .el-p.el-p.el-p:not(.el-embed-image) {
+                    border-bottom: 1px dashed var(--background-modifier-border); //use minimal's styling itself for borders between fields
                 }
             }
         }
