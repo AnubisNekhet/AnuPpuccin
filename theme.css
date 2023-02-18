@@ -3693,59 +3693,59 @@ sup[data-footnote-id] {
   padding: 0px 6px;
 }
 
-.anp-header-color-toggle.anp-h1-rosewater .app-container {
+.anp-header-color-toggle.anp-h1-rosewater .app-container, .anp-header-color-toggle.anp-h1-rosewater .print {
   --h1-color: rgb(var(--ctp-rosewater));
 }
 
-.anp-header-color-toggle.anp-h1-flamingo .app-container {
+.anp-header-color-toggle.anp-h1-flamingo .app-container, .anp-header-color-toggle.anp-h1-flamingo .print {
   --h1-color: rgb(var(--ctp-flamingo));
 }
 
-.anp-header-color-toggle.anp-h1-pink .app-container {
+.anp-header-color-toggle.anp-h1-pink .app-container, .anp-header-color-toggle.anp-h1-pink .print {
   --h1-color: rgb(var(--ctp-pink));
 }
 
-.anp-header-color-toggle.anp-h1-mauve .app-container {
+.anp-header-color-toggle.anp-h1-mauve .app-container, .anp-header-color-toggle.anp-h1-mauve .print {
   --h1-color: rgb(var(--ctp-mauve));
 }
 
-.anp-header-color-toggle.anp-h1-red .app-container {
+.anp-header-color-toggle.anp-h1-red .app-container, .anp-header-color-toggle.anp-h1-red .print {
   --h1-color: rgb(var(--ctp-red));
 }
 
-.anp-header-color-toggle.anp-h1-maroon .app-container {
+.anp-header-color-toggle.anp-h1-maroon .app-container, .anp-header-color-toggle.anp-h1-maroon .print {
   --h1-color: rgb(var(--ctp-maroon));
 }
 
-.anp-header-color-toggle.anp-h1-peach .app-container {
+.anp-header-color-toggle.anp-h1-peach .app-container, .anp-header-color-toggle.anp-h1-peach .print {
   --h1-color: rgb(var(--ctp-peach));
 }
 
-.anp-header-color-toggle.anp-h1-yellow .app-container {
+.anp-header-color-toggle.anp-h1-yellow .app-container, .anp-header-color-toggle.anp-h1-yellow .print {
   --h1-color: rgb(var(--ctp-yellow));
 }
 
-.anp-header-color-toggle.anp-h1-green .app-container {
+.anp-header-color-toggle.anp-h1-green .app-container, .anp-header-color-toggle.anp-h1-green .print {
   --h1-color: rgb(var(--ctp-green));
 }
 
-.anp-header-color-toggle.anp-h1-teal .app-container {
+.anp-header-color-toggle.anp-h1-teal .app-container, .anp-header-color-toggle.anp-h1-teal .print {
   --h1-color: rgb(var(--ctp-teal));
 }
 
-.anp-header-color-toggle.anp-h1-sky .app-container {
+.anp-header-color-toggle.anp-h1-sky .app-container, .anp-header-color-toggle.anp-h1-sky .print {
   --h1-color: rgb(var(--ctp-sky));
 }
 
-.anp-header-color-toggle.anp-h1-sapphire .app-container {
+.anp-header-color-toggle.anp-h1-sapphire .app-container, .anp-header-color-toggle.anp-h1-sapphire .print {
   --h1-color: rgb(var(--ctp-sapphire));
 }
 
-.anp-header-color-toggle.anp-h1-blue .app-container {
+.anp-header-color-toggle.anp-h1-blue .app-container, .anp-header-color-toggle.anp-h1-blue .print {
   --h1-color: rgb(var(--ctp-blue));
 }
 
-.anp-header-color-toggle.anp-h1-lavender .app-container {
+.anp-header-color-toggle.anp-h1-lavender .app-container, .anp-header-color-toggle.anp-h1-lavender .print {
   --h1-color: rgb(var(--ctp-lavender));
 }
 
@@ -3759,59 +3759,59 @@ sup[data-footnote-id] {
   color: var(--h1-color);
 }
 
-.anp-header-color-toggle.anp-h2-rosewater .app-container {
+.anp-header-color-toggle.anp-h2-rosewater .app-container, .anp-header-color-toggle.anp-h2-rosewater .print {
   --h2-color: rgb(var(--ctp-rosewater));
 }
 
-.anp-header-color-toggle.anp-h2-flamingo .app-container {
+.anp-header-color-toggle.anp-h2-flamingo .app-container, .anp-header-color-toggle.anp-h2-flamingo .print {
   --h2-color: rgb(var(--ctp-flamingo));
 }
 
-.anp-header-color-toggle.anp-h2-pink .app-container {
+.anp-header-color-toggle.anp-h2-pink .app-container, .anp-header-color-toggle.anp-h2-pink .print {
   --h2-color: rgb(var(--ctp-pink));
 }
 
-.anp-header-color-toggle.anp-h2-mauve .app-container {
+.anp-header-color-toggle.anp-h2-mauve .app-container, .anp-header-color-toggle.anp-h2-mauve .print {
   --h2-color: rgb(var(--ctp-mauve));
 }
 
-.anp-header-color-toggle.anp-h2-red .app-container {
+.anp-header-color-toggle.anp-h2-red .app-container, .anp-header-color-toggle.anp-h2-red .print {
   --h2-color: rgb(var(--ctp-red));
 }
 
-.anp-header-color-toggle.anp-h2-maroon .app-container {
+.anp-header-color-toggle.anp-h2-maroon .app-container, .anp-header-color-toggle.anp-h2-maroon .print {
   --h2-color: rgb(var(--ctp-maroon));
 }
 
-.anp-header-color-toggle.anp-h2-peach .app-container {
+.anp-header-color-toggle.anp-h2-peach .app-container, .anp-header-color-toggle.anp-h2-peach .print {
   --h2-color: rgb(var(--ctp-peach));
 }
 
-.anp-header-color-toggle.anp-h2-yellow .app-container {
+.anp-header-color-toggle.anp-h2-yellow .app-container, .anp-header-color-toggle.anp-h2-yellow .print {
   --h2-color: rgb(var(--ctp-yellow));
 }
 
-.anp-header-color-toggle.anp-h2-green .app-container {
+.anp-header-color-toggle.anp-h2-green .app-container, .anp-header-color-toggle.anp-h2-green .print {
   --h2-color: rgb(var(--ctp-green));
 }
 
-.anp-header-color-toggle.anp-h2-teal .app-container {
+.anp-header-color-toggle.anp-h2-teal .app-container, .anp-header-color-toggle.anp-h2-teal .print {
   --h2-color: rgb(var(--ctp-teal));
 }
 
-.anp-header-color-toggle.anp-h2-sky .app-container {
+.anp-header-color-toggle.anp-h2-sky .app-container, .anp-header-color-toggle.anp-h2-sky .print {
   --h2-color: rgb(var(--ctp-sky));
 }
 
-.anp-header-color-toggle.anp-h2-sapphire .app-container {
+.anp-header-color-toggle.anp-h2-sapphire .app-container, .anp-header-color-toggle.anp-h2-sapphire .print {
   --h2-color: rgb(var(--ctp-sapphire));
 }
 
-.anp-header-color-toggle.anp-h2-blue .app-container {
+.anp-header-color-toggle.anp-h2-blue .app-container, .anp-header-color-toggle.anp-h2-blue .print {
   --h2-color: rgb(var(--ctp-blue));
 }
 
-.anp-header-color-toggle.anp-h2-lavender .app-container {
+.anp-header-color-toggle.anp-h2-lavender .app-container, .anp-header-color-toggle.anp-h2-lavender .print {
   --h2-color: rgb(var(--ctp-lavender));
 }
 
@@ -3825,59 +3825,59 @@ sup[data-footnote-id] {
   color: var(--h2-color);
 }
 
-.anp-header-color-toggle.anp-h3-rosewater .app-container {
+.anp-header-color-toggle.anp-h3-rosewater .app-container, .anp-header-color-toggle.anp-h3-rosewater .print {
   --h3-color: rgb(var(--ctp-rosewater));
 }
 
-.anp-header-color-toggle.anp-h3-flamingo .app-container {
+.anp-header-color-toggle.anp-h3-flamingo .app-container, .anp-header-color-toggle.anp-h3-flamingo .print {
   --h3-color: rgb(var(--ctp-flamingo));
 }
 
-.anp-header-color-toggle.anp-h3-pink .app-container {
+.anp-header-color-toggle.anp-h3-pink .app-container, .anp-header-color-toggle.anp-h3-pink .print {
   --h3-color: rgb(var(--ctp-pink));
 }
 
-.anp-header-color-toggle.anp-h3-mauve .app-container {
+.anp-header-color-toggle.anp-h3-mauve .app-container, .anp-header-color-toggle.anp-h3-mauve .print {
   --h3-color: rgb(var(--ctp-mauve));
 }
 
-.anp-header-color-toggle.anp-h3-red .app-container {
+.anp-header-color-toggle.anp-h3-red .app-container, .anp-header-color-toggle.anp-h3-red .print {
   --h3-color: rgb(var(--ctp-red));
 }
 
-.anp-header-color-toggle.anp-h3-maroon .app-container {
+.anp-header-color-toggle.anp-h3-maroon .app-container, .anp-header-color-toggle.anp-h3-maroon .print {
   --h3-color: rgb(var(--ctp-maroon));
 }
 
-.anp-header-color-toggle.anp-h3-peach .app-container {
+.anp-header-color-toggle.anp-h3-peach .app-container, .anp-header-color-toggle.anp-h3-peach .print {
   --h3-color: rgb(var(--ctp-peach));
 }
 
-.anp-header-color-toggle.anp-h3-yellow .app-container {
+.anp-header-color-toggle.anp-h3-yellow .app-container, .anp-header-color-toggle.anp-h3-yellow .print {
   --h3-color: rgb(var(--ctp-yellow));
 }
 
-.anp-header-color-toggle.anp-h3-green .app-container {
+.anp-header-color-toggle.anp-h3-green .app-container, .anp-header-color-toggle.anp-h3-green .print {
   --h3-color: rgb(var(--ctp-green));
 }
 
-.anp-header-color-toggle.anp-h3-teal .app-container {
+.anp-header-color-toggle.anp-h3-teal .app-container, .anp-header-color-toggle.anp-h3-teal .print {
   --h3-color: rgb(var(--ctp-teal));
 }
 
-.anp-header-color-toggle.anp-h3-sky .app-container {
+.anp-header-color-toggle.anp-h3-sky .app-container, .anp-header-color-toggle.anp-h3-sky .print {
   --h3-color: rgb(var(--ctp-sky));
 }
 
-.anp-header-color-toggle.anp-h3-sapphire .app-container {
+.anp-header-color-toggle.anp-h3-sapphire .app-container, .anp-header-color-toggle.anp-h3-sapphire .print {
   --h3-color: rgb(var(--ctp-sapphire));
 }
 
-.anp-header-color-toggle.anp-h3-blue .app-container {
+.anp-header-color-toggle.anp-h3-blue .app-container, .anp-header-color-toggle.anp-h3-blue .print {
   --h3-color: rgb(var(--ctp-blue));
 }
 
-.anp-header-color-toggle.anp-h3-lavender .app-container {
+.anp-header-color-toggle.anp-h3-lavender .app-container, .anp-header-color-toggle.anp-h3-lavender .print {
   --h3-color: rgb(var(--ctp-lavender));
 }
 
@@ -3891,59 +3891,59 @@ sup[data-footnote-id] {
   color: var(--h3-color);
 }
 
-.anp-header-color-toggle.anp-h4-rosewater .app-container {
+.anp-header-color-toggle.anp-h4-rosewater .app-container, .anp-header-color-toggle.anp-h4-rosewater .print {
   --h4-color: rgb(var(--ctp-rosewater));
 }
 
-.anp-header-color-toggle.anp-h4-flamingo .app-container {
+.anp-header-color-toggle.anp-h4-flamingo .app-container, .anp-header-color-toggle.anp-h4-flamingo .print {
   --h4-color: rgb(var(--ctp-flamingo));
 }
 
-.anp-header-color-toggle.anp-h4-pink .app-container {
+.anp-header-color-toggle.anp-h4-pink .app-container, .anp-header-color-toggle.anp-h4-pink .print {
   --h4-color: rgb(var(--ctp-pink));
 }
 
-.anp-header-color-toggle.anp-h4-mauve .app-container {
+.anp-header-color-toggle.anp-h4-mauve .app-container, .anp-header-color-toggle.anp-h4-mauve .print {
   --h4-color: rgb(var(--ctp-mauve));
 }
 
-.anp-header-color-toggle.anp-h4-red .app-container {
+.anp-header-color-toggle.anp-h4-red .app-container, .anp-header-color-toggle.anp-h4-red .print {
   --h4-color: rgb(var(--ctp-red));
 }
 
-.anp-header-color-toggle.anp-h4-maroon .app-container {
+.anp-header-color-toggle.anp-h4-maroon .app-container, .anp-header-color-toggle.anp-h4-maroon .print {
   --h4-color: rgb(var(--ctp-maroon));
 }
 
-.anp-header-color-toggle.anp-h4-peach .app-container {
+.anp-header-color-toggle.anp-h4-peach .app-container, .anp-header-color-toggle.anp-h4-peach .print {
   --h4-color: rgb(var(--ctp-peach));
 }
 
-.anp-header-color-toggle.anp-h4-yellow .app-container {
+.anp-header-color-toggle.anp-h4-yellow .app-container, .anp-header-color-toggle.anp-h4-yellow .print {
   --h4-color: rgb(var(--ctp-yellow));
 }
 
-.anp-header-color-toggle.anp-h4-green .app-container {
+.anp-header-color-toggle.anp-h4-green .app-container, .anp-header-color-toggle.anp-h4-green .print {
   --h4-color: rgb(var(--ctp-green));
 }
 
-.anp-header-color-toggle.anp-h4-teal .app-container {
+.anp-header-color-toggle.anp-h4-teal .app-container, .anp-header-color-toggle.anp-h4-teal .print {
   --h4-color: rgb(var(--ctp-teal));
 }
 
-.anp-header-color-toggle.anp-h4-sky .app-container {
+.anp-header-color-toggle.anp-h4-sky .app-container, .anp-header-color-toggle.anp-h4-sky .print {
   --h4-color: rgb(var(--ctp-sky));
 }
 
-.anp-header-color-toggle.anp-h4-sapphire .app-container {
+.anp-header-color-toggle.anp-h4-sapphire .app-container, .anp-header-color-toggle.anp-h4-sapphire .print {
   --h4-color: rgb(var(--ctp-sapphire));
 }
 
-.anp-header-color-toggle.anp-h4-blue .app-container {
+.anp-header-color-toggle.anp-h4-blue .app-container, .anp-header-color-toggle.anp-h4-blue .print {
   --h4-color: rgb(var(--ctp-blue));
 }
 
-.anp-header-color-toggle.anp-h4-lavender .app-container {
+.anp-header-color-toggle.anp-h4-lavender .app-container, .anp-header-color-toggle.anp-h4-lavender .print {
   --h4-color: rgb(var(--ctp-lavender));
 }
 
@@ -3957,59 +3957,59 @@ sup[data-footnote-id] {
   color: var(--h4-color);
 }
 
-.anp-header-color-toggle.anp-h5-rosewater .app-container {
+.anp-header-color-toggle.anp-h5-rosewater .app-container, .anp-header-color-toggle.anp-h5-rosewater .print {
   --h5-color: rgb(var(--ctp-rosewater));
 }
 
-.anp-header-color-toggle.anp-h5-flamingo .app-container {
+.anp-header-color-toggle.anp-h5-flamingo .app-container, .anp-header-color-toggle.anp-h5-flamingo .print {
   --h5-color: rgb(var(--ctp-flamingo));
 }
 
-.anp-header-color-toggle.anp-h5-pink .app-container {
+.anp-header-color-toggle.anp-h5-pink .app-container, .anp-header-color-toggle.anp-h5-pink .print {
   --h5-color: rgb(var(--ctp-pink));
 }
 
-.anp-header-color-toggle.anp-h5-mauve .app-container {
+.anp-header-color-toggle.anp-h5-mauve .app-container, .anp-header-color-toggle.anp-h5-mauve .print {
   --h5-color: rgb(var(--ctp-mauve));
 }
 
-.anp-header-color-toggle.anp-h5-red .app-container {
+.anp-header-color-toggle.anp-h5-red .app-container, .anp-header-color-toggle.anp-h5-red .print {
   --h5-color: rgb(var(--ctp-red));
 }
 
-.anp-header-color-toggle.anp-h5-maroon .app-container {
+.anp-header-color-toggle.anp-h5-maroon .app-container, .anp-header-color-toggle.anp-h5-maroon .print {
   --h5-color: rgb(var(--ctp-maroon));
 }
 
-.anp-header-color-toggle.anp-h5-peach .app-container {
+.anp-header-color-toggle.anp-h5-peach .app-container, .anp-header-color-toggle.anp-h5-peach .print {
   --h5-color: rgb(var(--ctp-peach));
 }
 
-.anp-header-color-toggle.anp-h5-yellow .app-container {
+.anp-header-color-toggle.anp-h5-yellow .app-container, .anp-header-color-toggle.anp-h5-yellow .print {
   --h5-color: rgb(var(--ctp-yellow));
 }
 
-.anp-header-color-toggle.anp-h5-green .app-container {
+.anp-header-color-toggle.anp-h5-green .app-container, .anp-header-color-toggle.anp-h5-green .print {
   --h5-color: rgb(var(--ctp-green));
 }
 
-.anp-header-color-toggle.anp-h5-teal .app-container {
+.anp-header-color-toggle.anp-h5-teal .app-container, .anp-header-color-toggle.anp-h5-teal .print {
   --h5-color: rgb(var(--ctp-teal));
 }
 
-.anp-header-color-toggle.anp-h5-sky .app-container {
+.anp-header-color-toggle.anp-h5-sky .app-container, .anp-header-color-toggle.anp-h5-sky .print {
   --h5-color: rgb(var(--ctp-sky));
 }
 
-.anp-header-color-toggle.anp-h5-sapphire .app-container {
+.anp-header-color-toggle.anp-h5-sapphire .app-container, .anp-header-color-toggle.anp-h5-sapphire .print {
   --h5-color: rgb(var(--ctp-sapphire));
 }
 
-.anp-header-color-toggle.anp-h5-blue .app-container {
+.anp-header-color-toggle.anp-h5-blue .app-container, .anp-header-color-toggle.anp-h5-blue .print {
   --h5-color: rgb(var(--ctp-blue));
 }
 
-.anp-header-color-toggle.anp-h5-lavender .app-container {
+.anp-header-color-toggle.anp-h5-lavender .app-container, .anp-header-color-toggle.anp-h5-lavender .print {
   --h5-color: rgb(var(--ctp-lavender));
 }
 
@@ -4023,59 +4023,59 @@ sup[data-footnote-id] {
   color: var(--h5-color);
 }
 
-.anp-header-color-toggle.anp-h6-rosewater .app-container {
+.anp-header-color-toggle.anp-h6-rosewater .app-container, .anp-header-color-toggle.anp-h6-rosewater .print {
   --h6-color: rgb(var(--ctp-rosewater));
 }
 
-.anp-header-color-toggle.anp-h6-flamingo .app-container {
+.anp-header-color-toggle.anp-h6-flamingo .app-container, .anp-header-color-toggle.anp-h6-flamingo .print {
   --h6-color: rgb(var(--ctp-flamingo));
 }
 
-.anp-header-color-toggle.anp-h6-pink .app-container {
+.anp-header-color-toggle.anp-h6-pink .app-container, .anp-header-color-toggle.anp-h6-pink .print {
   --h6-color: rgb(var(--ctp-pink));
 }
 
-.anp-header-color-toggle.anp-h6-mauve .app-container {
+.anp-header-color-toggle.anp-h6-mauve .app-container, .anp-header-color-toggle.anp-h6-mauve .print {
   --h6-color: rgb(var(--ctp-mauve));
 }
 
-.anp-header-color-toggle.anp-h6-red .app-container {
+.anp-header-color-toggle.anp-h6-red .app-container, .anp-header-color-toggle.anp-h6-red .print {
   --h6-color: rgb(var(--ctp-red));
 }
 
-.anp-header-color-toggle.anp-h6-maroon .app-container {
+.anp-header-color-toggle.anp-h6-maroon .app-container, .anp-header-color-toggle.anp-h6-maroon .print {
   --h6-color: rgb(var(--ctp-maroon));
 }
 
-.anp-header-color-toggle.anp-h6-peach .app-container {
+.anp-header-color-toggle.anp-h6-peach .app-container, .anp-header-color-toggle.anp-h6-peach .print {
   --h6-color: rgb(var(--ctp-peach));
 }
 
-.anp-header-color-toggle.anp-h6-yellow .app-container {
+.anp-header-color-toggle.anp-h6-yellow .app-container, .anp-header-color-toggle.anp-h6-yellow .print {
   --h6-color: rgb(var(--ctp-yellow));
 }
 
-.anp-header-color-toggle.anp-h6-green .app-container {
+.anp-header-color-toggle.anp-h6-green .app-container, .anp-header-color-toggle.anp-h6-green .print {
   --h6-color: rgb(var(--ctp-green));
 }
 
-.anp-header-color-toggle.anp-h6-teal .app-container {
+.anp-header-color-toggle.anp-h6-teal .app-container, .anp-header-color-toggle.anp-h6-teal .print {
   --h6-color: rgb(var(--ctp-teal));
 }
 
-.anp-header-color-toggle.anp-h6-sky .app-container {
+.anp-header-color-toggle.anp-h6-sky .app-container, .anp-header-color-toggle.anp-h6-sky .print {
   --h6-color: rgb(var(--ctp-sky));
 }
 
-.anp-header-color-toggle.anp-h6-sapphire .app-container {
+.anp-header-color-toggle.anp-h6-sapphire .app-container, .anp-header-color-toggle.anp-h6-sapphire .print {
   --h6-color: rgb(var(--ctp-sapphire));
 }
 
-.anp-header-color-toggle.anp-h6-blue .app-container {
+.anp-header-color-toggle.anp-h6-blue .app-container, .anp-header-color-toggle.anp-h6-blue .print {
   --h6-color: rgb(var(--ctp-blue));
 }
 
-.anp-header-color-toggle.anp-h6-lavender .app-container {
+.anp-header-color-toggle.anp-h6-lavender .app-container, .anp-header-color-toggle.anp-h6-lavender .print {
   --h6-color: rgb(var(--ctp-lavender));
 }
 
