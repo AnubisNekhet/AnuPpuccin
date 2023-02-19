@@ -20,8 +20,21 @@
 }
 .anp-codeblock-preview-nowrap {
   .markdown-rendered pre {
-    white-space: nowrap;
+    white-space: pre;
     & code {
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    overflow-x: auto;
+  }
+}
+.anp-codeblock-preview-hl-nowrap {
+  .markdown-rendered pre[class*="language-"] {
+    white-space: pre;
+    & code {
+      white-space: pre !important;
       overflow-x: scroll;
       &::-webkit-scrollbar {
         display: none;

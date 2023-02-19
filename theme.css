@@ -460,11 +460,11 @@ settings:
     title: Codeblock Line Wrap (Edit Mode)
     description: Does not work for codeblocks with syntax highlighting
     type: class-select
-    default: anp-codeblock-edit-wrap
+    default: none
     options:
       -
         label: Wrap
-        value: anp-codeblock-edit-wrap
+        value: none
       -
         label: No Wrap
         value: anp-codeblock-edit-nowrap
@@ -473,14 +473,26 @@ settings:
     title: Codeblock Line Wrap (Preview Mode)
     description: Does not work for codeblocks with syntax highlighting
     type: class-select
-    default: anp-codeblock-preview-wrap
+    default: none
     options:
       -
         label: Wrap
-        value: anp-codeblock-preview-wrap
+        value: none
       -
         label: No Wrap
         value: anp-codeblock-preview-nowrap
+  -
+    id: anp-codeblock-wrap-hl-preview
+    title: Syntax Highlighted Codeblock Line Wrap (Preview Mode)
+    type: class-select
+    default: none
+    options:
+      -
+        label: Wrap
+        value: none
+      -
+        label: No Wrap
+        value: anp-codeblock-preview-hl-nowrap
   -
     id: anp-code-bg-color
     title: Codeblock Background Color
@@ -3577,13 +3589,25 @@ body.is-translucent {
 }
 
 .anp-codeblock-preview-nowrap .markdown-rendered pre {
-  white-space: nowrap;
+  white-space: pre;
   overflow-x: auto;
 }
 .anp-codeblock-preview-nowrap .markdown-rendered pre code {
   overflow-x: scroll;
 }
 .anp-codeblock-preview-nowrap .markdown-rendered pre code::-webkit-scrollbar {
+  display: none;
+}
+
+.anp-codeblock-preview-hl-nowrap .markdown-rendered pre[class*=language-] {
+  white-space: pre;
+  overflow-x: auto;
+}
+.anp-codeblock-preview-hl-nowrap .markdown-rendered pre[class*=language-] code {
+  white-space: pre !important;
+  overflow-x: scroll;
+}
+.anp-codeblock-preview-hl-nowrap .markdown-rendered pre[class*=language-] code::-webkit-scrollbar {
   display: none;
 }
 
