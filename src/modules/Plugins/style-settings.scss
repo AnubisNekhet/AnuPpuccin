@@ -145,6 +145,27 @@
 ) .setting-item-control::after {
   content: '%';
 }
+
+.style-settings-container .setting-item:is(
+  [data-id*="anp-kanban-card-"],
+  [data-id*="anp-kanban-lane-"]
+) {
+  .setting-item-description {
+    width: fit-content;
+    display: flex;
+    &::after {
+      content: 'px';
+      margin-left: 2px;
+      padding: 2px;
+      margin-top: -1px;
+      border-radius: 4px;
+      background: var(--background-secondary-alt);
+      font-size: smaller;
+    }
+  }
+}
+
+
 .setting-item[data-id="anp-colors-section-header"] > .setting-item-info > .setting-item-name {
   border-bottom: 2px solid;
   border-image: linear-gradient(to right, rgb(var(--ctp-rosewater)) 7%, rgb(var(--ctp-flamingo)) 7%, rgb(var(--ctp-flamingo)) 14%, rgb(var(--ctp-mauve)) 14%, rgb(var(--ctp-mauve)) 21%, rgb(var(--ctp-pink)) 21%, rgb(var(--ctp-pink)) 28%, rgb(var(--ctp-red)) 28%, rgb(var(--ctp-red)) 35%, rgb(var(--ctp-maroon)) 35%, rgb(var(--ctp-maroon)) 42%, rgb(var(--ctp-peach)) 42%, rgb(var(--ctp-peach)) 49%, rgb(var(--ctp-yellow)) 49%, rgb(var(--ctp-yellow)) 56%, rgb(var(--ctp-green)) 56%, rgb(var(--ctp-green)) 63%, rgb(var(--ctp-teal)) 63%, rgb(var(--ctp-teal)) 70%, rgb(var(--ctp-sky)) 70%, rgb(var(--ctp-sky)) 77%, rgb(var(--ctp-sapphire)) 77%, rgb(var(--ctp-sapphire)) 85%, rgb(var(--ctp-blue)) 85%, rgb(var(--ctp-blue)) 92%, rgb( var(--ctp-lavender))) 5;

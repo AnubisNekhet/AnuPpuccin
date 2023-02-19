@@ -718,6 +718,7 @@ settings:
   -
     id: anp-kanban-lanes
     title: Enable Full Height Lanes
+    description: Toggles maximum height for Kanban lanes
     type: class-toggle
   -
     id: anp-kanban-hide-card-menus
@@ -6267,6 +6268,22 @@ Support me: https://buymeacoffee.com/AnubisNekhet
 .style-settings-container .setting-item:is([data-id=anp-preview-width-pct],
 [data-id=anp-table-width-pct]) .setting-item-control::after {
   content: "%";
+}
+
+.style-settings-container .setting-item:is([data-id*=anp-kanban-card-],
+[data-id*=anp-kanban-lane-]) .setting-item-description {
+  width: fit-content;
+  display: flex;
+}
+.style-settings-container .setting-item:is([data-id*=anp-kanban-card-],
+[data-id*=anp-kanban-lane-]) .setting-item-description::after {
+  content: "px";
+  margin-left: 2px;
+  padding: 2px;
+  margin-top: -1px;
+  border-radius: 4px;
+  background: var(--background-secondary-alt);
+  font-size: smaller;
 }
 
 .setting-item[data-id=anp-colors-section-header] > .setting-item-info > .setting-item-name {
