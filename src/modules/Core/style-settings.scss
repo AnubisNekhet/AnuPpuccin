@@ -700,10 +700,85 @@ settings:
   -
     id: anp-plugin-header
     title: Integrations
-    description: MAKE.md, Minimal Cards Snippet, etc.
+    description: Kanban, MAKE.md, Minimal Cards Snippet, etc.
     type: heading
     level: 1
     collapsed: true
+
+# Integrations :: Kanban
+
+  -
+    id: anp-plugin-kanban
+    title: Kanban
+    description: 
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-kanban-lanes
+    title: Enable Full Height Lanes
+    description: Toggles maximum height for Kanban lanes
+    type: class-toggle
+  -
+    id: anp-kanban-hide-card-menus
+    title: Hide the Card Menu Button
+    type: class-toggle
+  -
+    id: anp-kanban-archive-btn
+    title: Hide the Archive Card Button
+    type: class-toggle
+  -
+    id: anp-kanban-card-opacity
+    title: Card Opacity
+    type: variable-number-slider
+    default: 1
+    min: 0
+    max: 1
+    step: 0.05
+  -
+    id: anp-kanban-card-radius
+    title: Card Radius
+    type: variable-number-slider
+    default: 6
+    format: px
+    min: 0
+    max: 10
+    step: 1
+  -
+    id: anp-kanban-card-spacing
+    title: Card Spacing
+    type: variable-number-slider
+    default: 8
+    format: px
+    min: -1
+    max: 8
+    step: 1
+  -
+    id: anp-kanban-lane-opacity
+    title: Lane Opacity
+    type: variable-number-slider
+    default: 1
+    min: 0
+    max: 1
+    step: 0.05
+  -
+    id: anp-kanban-lane-radius
+    title: Lane Radius
+    type: variable-number-slider
+    default: 6
+    format: px
+    min: 0
+    max: 10
+    step: 1
+  -
+    id: anp-kanban-lane-spacing
+    title: Lane Spacing
+    type: variable-number-slider
+    default: 10
+    format: px
+    min: -1
+    max: 20
+    step: 1
 
 # Integrations :: MAKE.md
 

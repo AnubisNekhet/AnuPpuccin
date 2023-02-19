@@ -1,0 +1,30 @@
+.anp-kanban-hide-card-menus:not(.is-mobile) {
+  .kanban-plugin__item-title + .kanban-plugin__item-postfix-button-wrapper {
+    display: none;
+  }
+}
+
+.setting-item[data-id="anp-kanban-hide-card-menus"]:not(:has(.is-enabled)) + [data-id="anp-kanban-archive-btn"] {
+  display: none;
+}
+.anp-kanban-hide-card-menus.anp-kanban-archive-btn {
+  &:not(.is-mobile) .kanban-plugin__item-title-wrapper {
+    padding: 8px;
+    position: relative;
+  }
+  &:not(.is-mobile) .kanban-plugin__item-prefix-button-wrapper {
+    background-color: var(--background-primary);
+    display: none;
+    padding: 5px;
+    position: absolute;
+    right: -2px;
+    top: 0;
+    z-index: 1;
+  }
+  &:not(.is-mobile) .kanban-plugin__item:hover .kanban-plugin__item-prefix-button-wrapper {
+    display: flex;
+  }
+  &.is-mobile .kanban-plugin__item-prefix-button-wrapper {
+    display: none;
+  }
+}
