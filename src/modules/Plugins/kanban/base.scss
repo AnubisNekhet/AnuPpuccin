@@ -100,7 +100,7 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
   }
   &__item {
     &:hover {
-      border-color: var(--interactive-accent);
+      border-color: var(--background-modifier-border-hover);
     }
     &.is-complete .kanban-plugin__item-markdown {
       color: var(--text-muted);
