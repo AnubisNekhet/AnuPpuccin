@@ -715,18 +715,27 @@ settings:
     type: heading
     level: 2
     collapsed: true
+
+# Integrations :: Kanban :: Card Settings
+
   -
-    id: anp-kanban-lanes
-    title: Enable Full Height Lanes
-    description: Toggles maximum height for Kanban lanes
-    type: class-toggle
+    id: anp-plugin-card-settings
+    title: Card Settings
+    description: 
+    type: heading
+    level: 3
+    collapsed: true
   -
     id: anp-kanban-hide-card-menus
     title: Hide the Card Menu Button
     type: class-toggle
   -
-    id: anp-kanban-archive-btn
+    id: anp-kanban-hide-archive-btn
     title: Hide the Archive Card Button
+    type: class-toggle
+  -
+    id: anp-kanban-hide-card-border
+    title: Disable Card Borders
     type: class-toggle
   -
     id: anp-kanban-card-opacity
@@ -754,6 +763,25 @@ settings:
     min: -1
     max: 8
     step: 1
+
+# Integrations :: Kanban :: Lane Settings
+
+  -
+    id: anp-plugin-lane-settings
+    title: Lane Settings
+    description: 
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: anp-kanban-lanes
+    title: Enable Full Height Lanes
+    description: Toggles maximum height for Kanban lanes
+    type: class-toggle
+  -
+    id: anp-kanban-hide-lane-border
+    title: Disable Lane Borders
+    type: class-toggle
   -
     id: anp-kanban-lane-opacity
     title: Lane Opacity
@@ -7042,7 +7070,7 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
 
 /* Kanban lane card counts */
 .kanban-plugin .kanban-plugin__lane-title-count {
-  background-color: var(--background-modifier-border);
+  background-color: var(--background-modifier-hover);
   border-radius: 2em;
   flex-shrink: 0;
   font-size: 12px;
@@ -7235,15 +7263,15 @@ body.theme-dark.theme-dark {
   display: none;
 }
 
-.setting-item[data-id=anp-kanban-hide-card-menus]:not(:has(.is-enabled)) + [data-id=anp-kanban-archive-btn] {
+.setting-item[data-id=anp-kanban-hide-card-menus]:not(:has(.is-enabled)) + [data-id=anp-kanban-hide-archive-btn] {
   display: none;
 }
 
-.anp-kanban-hide-card-menus.anp-kanban-archive-btn:not(.is-mobile) .kanban-plugin__item-title-wrapper {
+.anp-kanban-hide-card-menus.anp-kanban-hide-archive-btn:not(.is-mobile) .kanban-plugin__item-title-wrapper {
   padding: 8px;
   position: relative;
 }
-.anp-kanban-hide-card-menus.anp-kanban-archive-btn:not(.is-mobile) .kanban-plugin__item-prefix-button-wrapper {
+.anp-kanban-hide-card-menus.anp-kanban-hide-archive-btn:not(.is-mobile) .kanban-plugin__item-prefix-button-wrapper {
   background-color: var(--background-primary);
   display: none;
   padding: 5px;
@@ -7252,11 +7280,27 @@ body.theme-dark.theme-dark {
   top: 0;
   z-index: 1;
 }
-.anp-kanban-hide-card-menus.anp-kanban-archive-btn:not(.is-mobile) .kanban-plugin__item:hover .kanban-plugin__item-prefix-button-wrapper {
+.anp-kanban-hide-card-menus.anp-kanban-hide-archive-btn:not(.is-mobile) .kanban-plugin__item:hover .kanban-plugin__item-prefix-button-wrapper {
   display: flex;
 }
-.anp-kanban-hide-card-menus.anp-kanban-archive-btn.is-mobile .kanban-plugin__item-prefix-button-wrapper {
+.anp-kanban-hide-card-menus.anp-kanban-hide-archive-btn.is-mobile .kanban-plugin__item-prefix-button-wrapper {
   display: none;
+}
+
+.anp-kanban-hide-card-border .kanban-plugin .kanban-plugin__item {
+  border-width: 0;
+}
+.anp-kanban-hide-card-border .kanban-plugin .kanban-plugin__item:hover .kanban-plugin__item-content-wrapper {
+  border-radius: var(--anp-kanban-card-radius, 6px);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border-hover);
+}
+.anp-kanban-hide-card-border .kanban-plugin__drag-container > .kanban-plugin__item-wrapper .kanban-plugin__item {
+  border-width: 0;
+  box-shadow: var(--shadow-s);
+}
+.anp-kanban-hide-card-border .kanban-plugin__drag-container > .kanban-plugin__item-wrapper .kanban-plugin__item-content-wrapper {
+  border-radius: var(--anp-kanban-card-radius, 6px);
+  box-shadow: inset 0 0 0 1px var(--interactive-accent);
 }
 
 .anp-kanban-lanes .kanban-plugin__lane-wrapper {
@@ -7265,6 +7309,17 @@ body.theme-dark.theme-dark {
 
 .anp-kanban-lanes .kanban-plugin__scroll-container.kanban-plugin__vertical {
   flex-grow: 1;
+}
+
+.anp-kanban-hide-lane-border .kanban-plugin .kanban-plugin__lane,
+.anp-kanban-hide-lane-border .kanban-plugin .kanban-plugin__lane-header-wrapper,
+.anp-kanban-hide-lane-border .kanban-plugin .kanban-plugin__item-button-wrapper,
+.anp-kanban-hide-lane-border .kanban-plugin .kanban-plugin__item-form {
+  border-width: 0;
+}
+.anp-kanban-hide-lane-border .kanban-plugin .kanban-plugin__lane-items {
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
 /*------------RAINBOW FOLDERS-------------*/
