@@ -56,16 +56,16 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
   }
 }
 .kanban-plugin button.kanban-plugin__new-item-button {
-    font-size: .875rem;
-    gap: 0.25em;
-    height: auto;
-    line-height: var(--line-height-tight);
-    padding: 7px 10px;
-  }
+  font-size: .875rem;
+  gap: 0.25em;
+  height: auto;
+  line-height: var(--line-height-tight);
+  padding: 7px 10px;
+}
 
 /* Kanban lane card counts */
 .kanban-plugin .kanban-plugin__lane-title-count {
-  background-color: var(--background-modifier-border);
+  background-color: var(--background-modifier-hover);
   border-radius: 2em;
   flex-shrink: 0;
   font-size: 12px;
