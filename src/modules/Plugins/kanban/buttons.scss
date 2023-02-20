@@ -4,10 +4,10 @@
   }
 }
 
-.setting-item[data-id="anp-kanban-hide-card-menus"]:not(:has(.is-enabled)) + [data-id="anp-kanban-archive-btn"] {
+.setting-item[data-id="anp-kanban-hide-card-menus"]:not(:has(.is-enabled)) + [data-id="anp-kanban-hide-archive-btn"] {
   display: none;
 }
-.anp-kanban-hide-card-menus.anp-kanban-archive-btn {
+.anp-kanban-hide-card-menus.anp-kanban-hide-archive-btn {
   &:not(.is-mobile) .kanban-plugin__item-title-wrapper {
     padding: 8px;
     position: relative;

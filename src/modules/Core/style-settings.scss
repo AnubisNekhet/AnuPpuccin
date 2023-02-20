@@ -714,18 +714,27 @@ settings:
     type: heading
     level: 2
     collapsed: true
+
+# Integrations :: Kanban :: Card Settings
+
   -
-    id: anp-kanban-lanes
-    title: Enable Full Height Lanes
-    description: Toggles maximum height for Kanban lanes
-    type: class-toggle
+    id: anp-plugin-card-settings
+    title: Card Settings
+    description: 
+    type: heading
+    level: 3
+    collapsed: true
   -
     id: anp-kanban-hide-card-menus
     title: Hide the Card Menu Button
     type: class-toggle
   -
-    id: anp-kanban-archive-btn
+    id: anp-kanban-hide-archive-btn
     title: Hide the Archive Card Button
+    type: class-toggle
+  -
+    id: anp-kanban-hide-card-border
+    title: Disable Card Borders
     type: class-toggle
   -
     id: anp-kanban-card-opacity
@@ -753,6 +762,25 @@ settings:
     min: -1
     max: 8
     step: 1
+
+# Integrations :: Kanban :: Lane Settings
+
+  -
+    id: anp-plugin-lane-settings
+    title: Lane Settings
+    description: 
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: anp-kanban-lanes
+    title: Enable Full Height Lanes
+    description: Toggles maximum height for Kanban lanes
+    type: class-toggle
+  -
+    id: anp-kanban-hide-lane-border
+    title: Disable Lane Borders
+    type: class-toggle
   -
     id: anp-kanban-lane-opacity
     title: Lane Opacity

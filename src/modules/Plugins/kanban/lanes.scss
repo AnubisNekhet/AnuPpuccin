@@ -4,3 +4,17 @@
 .anp-kanban-lanes .kanban-plugin__scroll-container.kanban-plugin__vertical {
   flex-grow: 1;
 }
+.anp-kanban-hide-lane-border {
+  .kanban-plugin {
+    .kanban-plugin__lane,
+    .kanban-plugin__lane-header-wrapper,
+    .kanban-plugin__item-button-wrapper,
+    .kanban-plugin__item-form {
+        border-width: 0;
+    }
+    .kanban-plugin__lane-items {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+  }
+}
