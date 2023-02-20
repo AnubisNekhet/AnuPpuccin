@@ -146,23 +146,8 @@
   content: '%';
 }
 
-.style-settings-container .setting-item:is(
-  [data-id*="anp-kanban-card-"],
-  [data-id*="anp-kanban-lane-"]
-) {
-  .setting-item-description {
-    width: fit-content;
-    display: flex;
-    &::after {
-      content: 'px';
-      margin-left: 2px;
-      padding: 2px;
-      margin-top: -1px;
-      border-radius: 4px;
-      background: var(--background-secondary-alt);
-      font-size: smaller;
-    }
-  }
+.setting-item[data-id*="anp-kanban-"]:is([data-id$="spacing"],[data-id$="radius"]) .setting-item-description small::after {
+  content: 'px';
 }
 
 
