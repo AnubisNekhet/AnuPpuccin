@@ -3107,6 +3107,149 @@ input.slider,
   cursor: var(--anp-cursor, var(--cursor));
 }
 
+/*----------FILE PREVIEW MARGINS--------------*/
+.anp-toggle-preview .markdown-preview-section {
+  width: var(--anp-preview-width-pct);
+  margin: 0 auto;
+}
+
+/*---------------HIGHLIGHTS-----------------*/
+.markdown-rendered .search-highlight > div {
+  box-shadow: none;
+  opacity: 0.3;
+  background-color: rgba(var(--ctp-text), 0.4);
+  mix-blend-mode: var(--highlight-mix-blend-mode);
+  border-radius: 2px;
+}
+
+.markdown-rendered .search-highlight > div.is-active {
+  box-shadow: 0 0 0px 2px rgba(var(--ctp-yellow), 0.5);
+  background-color: rgba(var(--ctp-yellow), 0.2);
+  opacity: 1;
+}
+
+.cm-s-obsidian span.obsidian-search-match-highlight {
+  box-shadow: 0 0 0px 2px rgba(var(--ctp-yellow), 0.5);
+  background-color: rgba(var(--ctp-yellow), 0.2);
+  mix-blend-mode: var(--highlight-mix-blend-mode);
+  border-radius: 2px;
+}
+
+/* Font weights */
+.markdown-preview-view {
+  font-weight: var(--anp-font-preview-wt, normal);
+}
+
+.markdown-source-view {
+  font-weight: var(--anp-font-editor-wt, normal);
+}
+
+.is-live-preview {
+  font-weight: var(--anp-font-live-preview-wt, normal);
+}
+
+.workspace-split:not(.mod-root) .graph-controls.is-close,
+.workspace-split:not(.mod-root) .graph-controls,
+.workspace-split:not(.mod-root) .graph-controls:not(.is-close) {
+  background-color: rgb(var(--ctp-crust));
+}
+
+.anp-card-layout .workspace-split:not(.mod-root) .graph-controls.is-close,
+.anp-card-layout .workspace-split:not(.mod-root) .graph-controls,
+.anp-card-layout .workspace-split:not(.mod-root) .graph-controls:not(.is-close),
+.workspace-leaf .graph-controls.is-close,
+.workspace-leaf .graph-controls,
+.workspace-leaf .graph-controls:not(.is-close) {
+  background-color: rgb(var(--ctp-mantle));
+}
+
+.markdown-rendered.rtl .list-bullet {
+  float: right;
+  margin-right: -12px;
+}
+.anp-button-metadata-toggle .markdown-rendered.rtl .frontmatter-container .frontmatter-container-header {
+  left: unset;
+  right: calc(100% - 32px);
+}
+.anp-button-metadata-toggle .markdown-rendered.rtl .frontmatter-container .frontmatter-container-header:after {
+  margin-left: unset;
+  margin-right: 7px;
+}
+.markdown-rendered.rtl blockquote {
+  border-right: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
+  border-left: none;
+}
+.markdown-rendered.rtl .collapse-indicator {
+  float: right;
+  margin-left: unset;
+  margin-right: -22px;
+}
+
+.print.theme-light, .print.theme-dark {
+  --ctp-crust: inherit;
+  --ctp-mantle: inherit;
+  --ctp-base: inherit;
+  --ctp-surface0: inherit;
+  --ctp-surface1: inherit;
+  --ctp-surface2: inherit;
+  --ctp-overlay0: inherit;
+  --ctp-overlay1: inherit;
+  --ctp-overlay2: inherit;
+  --ctp-subtext0: inherit;
+  --ctp-subtext1: inherit;
+  --ctp-text: inherit;
+  --ctp-rosewater: inherit;
+  --ctp-flamingo: inherit;
+  --ctp-red: inherit;
+  --ctp-maroon: inherit;
+  --ctp-mauve: inherit;
+  --ctp-pink: inherit;
+  --ctp-peach: inherit;
+  --ctp-yellow: inherit;
+  --ctp-green: inherit;
+  --ctp-teal: inherit;
+  --ctp-sky: inherit;
+  --ctp-sapphire: inherit;
+  --ctp-blue: inherit;
+  --ctp-lavender: inherit;
+}
+
+@media print {
+  .print {
+    --ctp-crust: inherit;
+    --ctp-mantle: inherit;
+    --ctp-base: inherit;
+    --ctp-surface0: inherit;
+    --ctp-surface1: inherit;
+    --ctp-surface2: inherit;
+    --ctp-overlay0: inherit;
+    --ctp-overlay1: inherit;
+    --ctp-overlay2: inherit;
+    --ctp-subtext0: inherit;
+    --ctp-subtext1: inherit;
+    --ctp-text: inherit;
+    --ctp-rosewater: inherit;
+    --ctp-flamingo: inherit;
+    --ctp-red: inherit;
+    --ctp-maroon: inherit;
+    --ctp-mauve: inherit;
+    --ctp-pink: inherit;
+    --ctp-peach: inherit;
+    --ctp-yellow: inherit;
+    --ctp-green: inherit;
+    --ctp-teal: inherit;
+    --ctp-sky: inherit;
+    --ctp-sapphire: inherit;
+    --ctp-blue: inherit;
+    --ctp-lavender: inherit;
+  }
+  .print, body, .markdown-rendered, :root {
+    background-color: rgb(var(--ctp-base));
+  }
+  .print .markdown-preview-view {
+    color: rgb(var(--ctp-text));
+  }
+}
 .canvas-card-menu {
   box-shadow: none;
   border: 1px solid var(--background-modifier-border);
@@ -3157,47 +3300,6 @@ input.slider,
 
 .anuppuccin-accent-toggle .canvas-placeholder-message {
   background: rgba(var(--ctp-accent), 0.1);
-}
-
-/*----------FILE PREVIEW MARGINS--------------*/
-.anp-toggle-preview .markdown-preview-section {
-  width: var(--anp-preview-width-pct);
-  margin: 0 auto;
-}
-
-/*---------------HIGHLIGHTS-----------------*/
-.markdown-rendered .search-highlight > div {
-  box-shadow: none;
-  opacity: 0.3;
-  background-color: rgba(var(--ctp-text), 0.4);
-  mix-blend-mode: var(--highlight-mix-blend-mode);
-  border-radius: 2px;
-}
-
-.markdown-rendered .search-highlight > div.is-active {
-  box-shadow: 0 0 0px 2px rgba(var(--ctp-yellow), 0.5);
-  background-color: rgba(var(--ctp-yellow), 0.2);
-  opacity: 1;
-}
-
-.cm-s-obsidian span.obsidian-search-match-highlight {
-  box-shadow: 0 0 0px 2px rgba(var(--ctp-yellow), 0.5);
-  background-color: rgba(var(--ctp-yellow), 0.2);
-  mix-blend-mode: var(--highlight-mix-blend-mode);
-  border-radius: 2px;
-}
-
-/* Font weights */
-.markdown-preview-view {
-  font-weight: var(--anp-font-preview-wt, normal);
-}
-
-.markdown-source-view {
-  font-weight: var(--anp-font-editor-wt, normal);
-}
-
-.is-live-preview {
-  font-weight: var(--anp-font-live-preview-wt, normal);
 }
 
 /*-Slider checkboxes-*/
@@ -3297,21 +3399,6 @@ input.slider,
 
 .anuppuccin-accent-toggle .drag-ghost-hidden:before {
   background-color: rgba(var(--ctp-accent), 0.3);
-}
-
-.workspace-split:not(.mod-root) .graph-controls.is-close,
-.workspace-split:not(.mod-root) .graph-controls,
-.workspace-split:not(.mod-root) .graph-controls:not(.is-close) {
-  background-color: rgb(var(--ctp-crust));
-}
-
-.anp-card-layout .workspace-split:not(.mod-root) .graph-controls.is-close,
-.anp-card-layout .workspace-split:not(.mod-root) .graph-controls,
-.anp-card-layout .workspace-split:not(.mod-root) .graph-controls:not(.is-close),
-.workspace-leaf .graph-controls.is-close,
-.workspace-leaf .graph-controls,
-.workspace-leaf .graph-controls:not(.is-close) {
-  background-color: rgb(var(--ctp-mantle));
 }
 
 body {
@@ -3502,28 +3589,6 @@ body.anp-disable-borders {
   background-color: var(--tab-container-background);
 }
 
-.markdown-rendered.rtl .list-bullet {
-  float: right;
-  margin-right: -12px;
-}
-.anp-button-metadata-toggle .markdown-rendered.rtl .frontmatter-container .frontmatter-container-header {
-  left: unset;
-  right: calc(100% - 32px);
-}
-.anp-button-metadata-toggle .markdown-rendered.rtl .frontmatter-container .frontmatter-container-header:after {
-  margin-left: unset;
-  margin-right: 7px;
-}
-.markdown-rendered.rtl blockquote {
-  border-right: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
-  border-left: none;
-}
-.markdown-rendered.rtl .collapse-indicator {
-  float: right;
-  margin-left: unset;
-  margin-right: -22px;
-}
-
 .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h1:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h2:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h3:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h4:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h5:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h6:first-child {
   margin-block: 0;
   display: inline;
@@ -3553,71 +3618,6 @@ body {
   background-color: var(--background-primary);
 }
 
-.print.theme-light, .print.theme-dark {
-  --ctp-crust: inherit;
-  --ctp-mantle: inherit;
-  --ctp-base: inherit;
-  --ctp-surface0: inherit;
-  --ctp-surface1: inherit;
-  --ctp-surface2: inherit;
-  --ctp-overlay0: inherit;
-  --ctp-overlay1: inherit;
-  --ctp-overlay2: inherit;
-  --ctp-subtext0: inherit;
-  --ctp-subtext1: inherit;
-  --ctp-text: inherit;
-  --ctp-rosewater: inherit;
-  --ctp-flamingo: inherit;
-  --ctp-red: inherit;
-  --ctp-maroon: inherit;
-  --ctp-mauve: inherit;
-  --ctp-pink: inherit;
-  --ctp-peach: inherit;
-  --ctp-yellow: inherit;
-  --ctp-green: inherit;
-  --ctp-teal: inherit;
-  --ctp-sky: inherit;
-  --ctp-sapphire: inherit;
-  --ctp-blue: inherit;
-  --ctp-lavender: inherit;
-}
-
-@media print {
-  .print {
-    --ctp-crust: inherit;
-    --ctp-mantle: inherit;
-    --ctp-base: inherit;
-    --ctp-surface0: inherit;
-    --ctp-surface1: inherit;
-    --ctp-surface2: inherit;
-    --ctp-overlay0: inherit;
-    --ctp-overlay1: inherit;
-    --ctp-overlay2: inherit;
-    --ctp-subtext0: inherit;
-    --ctp-subtext1: inherit;
-    --ctp-text: inherit;
-    --ctp-rosewater: inherit;
-    --ctp-flamingo: inherit;
-    --ctp-red: inherit;
-    --ctp-maroon: inherit;
-    --ctp-mauve: inherit;
-    --ctp-pink: inherit;
-    --ctp-peach: inherit;
-    --ctp-yellow: inherit;
-    --ctp-green: inherit;
-    --ctp-teal: inherit;
-    --ctp-sky: inherit;
-    --ctp-sapphire: inherit;
-    --ctp-blue: inherit;
-    --ctp-lavender: inherit;
-  }
-  .print, body, .markdown-rendered, :root {
-    background-color: rgb(var(--ctp-base));
-  }
-  .print .markdown-preview-view {
-    color: rgb(var(--ctp-text));
-  }
-}
 body.is-translucent {
   background-color: transparent;
   --workspace-background-translucent: rgba(var(--ctp-crust), var(--anp-translucency-opacity));
@@ -3662,672 +3662,6 @@ body.is-translucent {
 
 .is-translucent:not(.is-fullscreen) .workspace-tabs.mod-stacked .workspace-tab-header, .is-translucent:not(.is-fullscreen) .workspace-tabs.mod-stacked .view-header {
   background-color: var(--background-primary);
-}
-
-/*-Blockquote spacing-*/
-.markdown-rendered blockquote {
-  padding: 5px 5px 5px 10px;
-}
-
-.markdown-rendered :not(pre) > code {
-  --code-normal: var(--anp-code-text-color, var(--text-normal));
-}
-
-.markdown-rendered code:not([class*=language]) {
-  --code-normal: var(--anp-code-text-color, var(--text-normal));
-}
-
-/* Show language in LP always */
-.markdown-source-view.mod-cm6 .HyperMD-codeblock.cm-line.cm-line.cm-line.HyperMD-codeblock-begin {
-  overflow-x: visible;
-}
-
-.anp-codeblock-edit-nowrap .markdown-source-view.mod-cm6 .HyperMD-codeblock.cm-line {
-  white-space: nowrap;
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
-.anp-codeblock-edit-nowrap .markdown-source-view.mod-cm6 .HyperMD-codeblock.cm-line::-webkit-scrollbar {
-  display: none;
-}
-
-.anp-codeblock-preview-nowrap .markdown-rendered pre {
-  white-space: pre;
-  overflow-x: auto;
-}
-.anp-codeblock-preview-nowrap .markdown-rendered pre code {
-  overflow-x: scroll;
-}
-.anp-codeblock-preview-nowrap .markdown-rendered pre code::-webkit-scrollbar {
-  display: none;
-}
-
-.anp-codeblock-preview-hl-nowrap .markdown-rendered pre[class*=language-] {
-  white-space: pre;
-  overflow-x: auto;
-}
-.anp-codeblock-preview-hl-nowrap .markdown-rendered pre[class*=language-] code {
-  white-space: pre !important;
-  overflow-x: scroll;
-}
-.anp-codeblock-preview-hl-nowrap .markdown-rendered pre[class*=language-] code::-webkit-scrollbar {
-  display: none;
-}
-
-.frontmatter-section-data-item {
-  background-color: var(--background-secondary);
-  padding: 0 4px;
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--radius-m);
-  font-family: var(--font-monospace);
-  font-size: 80%;
-}
-
-.frontmatter-container .frontmatter-section-label {
-  text-transform: uppercase;
-  font-size: 70%;
-}
-.frontmatter-container .frontmatter-section-label::first-letter {
-  font-size: 120%;
-}
-
-.anp-list-toggle div.el-ul > ul.has-list-bullet > li > ul.has-list-bullet > li > .list-bullet::after {
-  border: 1px solid var(--list-marker-color);
-  background-color: transparent;
-  width: calc(var(--list-bullet-size) - 1px);
-  height: calc(var(--list-bullet-size) - 1px);
-}
-.anp-list-toggle div.el-ul > ul.has-list-bullet > li > ul.has-list-bullet > li > ul.has-list-bullet > li > .list-bullet::after {
-  border-radius: 0;
-  background-color: var(--list-marker-color);
-}
-.anp-list-toggle div.el-ul > ul.has-list-bullet > li > ul.has-list-bullet > li > ul.has-list-bullet > li > ul.has-list-bullet > li > .list-bullet::after {
-  width: calc(var(--list-bullet-size) - 1px);
-  height: calc(var(--list-bullet-size) - 1px);
-  border-radius: 0;
-  border: 1px solid var(--list-marker-color);
-  background-color: transparent;
-}
-
-/*-Decorations for bold and italics-*/
-.anp-decoration-toggle {
-  --italic-color: rgb(var(--anp-italic-color, var(--ctp-green)));
-  --bold-color: rgb(var(--anp-bold-color, var(--ctp-red)));
-}
-
-/*-Make it so that mark overwrites italic and bold colors-*/
-.markdown-rendered mark {
-  --italic-color: rgb(var(--ctp-text));
-  --bold-color: rgb(var(--ctp-text));
-  border-radius: 4px;
-  padding: 2px;
-}
-
-.markdown-rendered .internal-link {
-  text-decoration-line: none;
-}
-.markdown-rendered .internal-link:hover, .markdown-rendered .internal-link:active, .markdown-rendered .internal-link.is-unresolved:hover, .markdown-rendered .internal-link.is-unresolved {
-  text-decoration-line: none;
-}
-
-.cm-formatting-link-string {
-  color: var(--text-normal);
-}
-
-.external-link,
-.external-link:hover {
-  background-image: none;
-  padding-right: 0px;
-}
-
-.cm-s-obsidian span.cm-formatting-strong, .cm-s-obsidian span.cm-strong {
-  color: var(--bold-color);
-}
-.cm-s-obsidian span.cm-formatting-em, .cm-s-obsidian span.cm-em {
-  color: var(--italic-color);
-}
-
-/*-Footnote-*/
-sup[data-footnote-id] {
-  font-size: var(--font-smallest);
-}
-
-.internal-embed[alt*=seamless].markdown-embed {
-  --embed-padding: 0;
-  border-width: 0px;
-}
-.internal-embed[alt*=seamless].markdown-embed > .markdown-embed-title {
-  width: fit-content;
-  position: absolute;
-  left: unset;
-  right: 33px;
-  top: 5px;
-  opacity: 0;
-  transition: opacity 0.1s;
-}
-.internal-embed[alt*=seamless].markdown-embed > .markdown-embed-link {
-  opacity: 0;
-  transition: opacity 0.1s;
-}
-.internal-embed[alt*=seamless].markdown-embed:hover > .markdown-embed-title, .internal-embed[alt*=seamless].markdown-embed:hover > .markdown-embed-link {
-  opacity: 1;
-  transition: opacity 0.1s;
-}
-
-/*--------------HEADERS----------------*/
-.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
-  margin-left: -22px;
-  padding: 0px 6px;
-}
-
-.anp-header-color-toggle.anp-h1-rosewater .app-container, .anp-header-color-toggle.anp-h1-rosewater .print {
-  --h1-color: rgb(var(--ctp-rosewater));
-}
-
-.anp-header-color-toggle.anp-h1-flamingo .app-container, .anp-header-color-toggle.anp-h1-flamingo .print {
-  --h1-color: rgb(var(--ctp-flamingo));
-}
-
-.anp-header-color-toggle.anp-h1-pink .app-container, .anp-header-color-toggle.anp-h1-pink .print {
-  --h1-color: rgb(var(--ctp-pink));
-}
-
-.anp-header-color-toggle.anp-h1-mauve .app-container, .anp-header-color-toggle.anp-h1-mauve .print {
-  --h1-color: rgb(var(--ctp-mauve));
-}
-
-.anp-header-color-toggle.anp-h1-red .app-container, .anp-header-color-toggle.anp-h1-red .print {
-  --h1-color: rgb(var(--ctp-red));
-}
-
-.anp-header-color-toggle.anp-h1-maroon .app-container, .anp-header-color-toggle.anp-h1-maroon .print {
-  --h1-color: rgb(var(--ctp-maroon));
-}
-
-.anp-header-color-toggle.anp-h1-peach .app-container, .anp-header-color-toggle.anp-h1-peach .print {
-  --h1-color: rgb(var(--ctp-peach));
-}
-
-.anp-header-color-toggle.anp-h1-yellow .app-container, .anp-header-color-toggle.anp-h1-yellow .print {
-  --h1-color: rgb(var(--ctp-yellow));
-}
-
-.anp-header-color-toggle.anp-h1-green .app-container, .anp-header-color-toggle.anp-h1-green .print {
-  --h1-color: rgb(var(--ctp-green));
-}
-
-.anp-header-color-toggle.anp-h1-teal .app-container, .anp-header-color-toggle.anp-h1-teal .print {
-  --h1-color: rgb(var(--ctp-teal));
-}
-
-.anp-header-color-toggle.anp-h1-sky .app-container, .anp-header-color-toggle.anp-h1-sky .print {
-  --h1-color: rgb(var(--ctp-sky));
-}
-
-.anp-header-color-toggle.anp-h1-sapphire .app-container, .anp-header-color-toggle.anp-h1-sapphire .print {
-  --h1-color: rgb(var(--ctp-sapphire));
-}
-
-.anp-header-color-toggle.anp-h1-blue .app-container, .anp-header-color-toggle.anp-h1-blue .print {
-  --h1-color: rgb(var(--ctp-blue));
-}
-
-.anp-header-color-toggle.anp-h1-lavender .app-container, .anp-header-color-toggle.anp-h1-lavender .print {
-  --h1-color: rgb(var(--ctp-lavender));
-}
-
-.anp-h1-divider .markdown-rendered h1,
-.anp-h1-divider .HyperMD-header-1 {
-  border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
-  padding-bottom: 2px;
-}
-
-.cm-formatting-header-1 {
-  color: var(--h1-color);
-}
-
-.anp-header-color-toggle.anp-h2-rosewater .app-container, .anp-header-color-toggle.anp-h2-rosewater .print {
-  --h2-color: rgb(var(--ctp-rosewater));
-}
-
-.anp-header-color-toggle.anp-h2-flamingo .app-container, .anp-header-color-toggle.anp-h2-flamingo .print {
-  --h2-color: rgb(var(--ctp-flamingo));
-}
-
-.anp-header-color-toggle.anp-h2-pink .app-container, .anp-header-color-toggle.anp-h2-pink .print {
-  --h2-color: rgb(var(--ctp-pink));
-}
-
-.anp-header-color-toggle.anp-h2-mauve .app-container, .anp-header-color-toggle.anp-h2-mauve .print {
-  --h2-color: rgb(var(--ctp-mauve));
-}
-
-.anp-header-color-toggle.anp-h2-red .app-container, .anp-header-color-toggle.anp-h2-red .print {
-  --h2-color: rgb(var(--ctp-red));
-}
-
-.anp-header-color-toggle.anp-h2-maroon .app-container, .anp-header-color-toggle.anp-h2-maroon .print {
-  --h2-color: rgb(var(--ctp-maroon));
-}
-
-.anp-header-color-toggle.anp-h2-peach .app-container, .anp-header-color-toggle.anp-h2-peach .print {
-  --h2-color: rgb(var(--ctp-peach));
-}
-
-.anp-header-color-toggle.anp-h2-yellow .app-container, .anp-header-color-toggle.anp-h2-yellow .print {
-  --h2-color: rgb(var(--ctp-yellow));
-}
-
-.anp-header-color-toggle.anp-h2-green .app-container, .anp-header-color-toggle.anp-h2-green .print {
-  --h2-color: rgb(var(--ctp-green));
-}
-
-.anp-header-color-toggle.anp-h2-teal .app-container, .anp-header-color-toggle.anp-h2-teal .print {
-  --h2-color: rgb(var(--ctp-teal));
-}
-
-.anp-header-color-toggle.anp-h2-sky .app-container, .anp-header-color-toggle.anp-h2-sky .print {
-  --h2-color: rgb(var(--ctp-sky));
-}
-
-.anp-header-color-toggle.anp-h2-sapphire .app-container, .anp-header-color-toggle.anp-h2-sapphire .print {
-  --h2-color: rgb(var(--ctp-sapphire));
-}
-
-.anp-header-color-toggle.anp-h2-blue .app-container, .anp-header-color-toggle.anp-h2-blue .print {
-  --h2-color: rgb(var(--ctp-blue));
-}
-
-.anp-header-color-toggle.anp-h2-lavender .app-container, .anp-header-color-toggle.anp-h2-lavender .print {
-  --h2-color: rgb(var(--ctp-lavender));
-}
-
-.anp-h2-divider .markdown-rendered h2,
-.anp-h2-divider .HyperMD-header-2 {
-  border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
-  padding-bottom: 2px;
-}
-
-.cm-formatting-header-2 {
-  color: var(--h2-color);
-}
-
-.anp-header-color-toggle.anp-h3-rosewater .app-container, .anp-header-color-toggle.anp-h3-rosewater .print {
-  --h3-color: rgb(var(--ctp-rosewater));
-}
-
-.anp-header-color-toggle.anp-h3-flamingo .app-container, .anp-header-color-toggle.anp-h3-flamingo .print {
-  --h3-color: rgb(var(--ctp-flamingo));
-}
-
-.anp-header-color-toggle.anp-h3-pink .app-container, .anp-header-color-toggle.anp-h3-pink .print {
-  --h3-color: rgb(var(--ctp-pink));
-}
-
-.anp-header-color-toggle.anp-h3-mauve .app-container, .anp-header-color-toggle.anp-h3-mauve .print {
-  --h3-color: rgb(var(--ctp-mauve));
-}
-
-.anp-header-color-toggle.anp-h3-red .app-container, .anp-header-color-toggle.anp-h3-red .print {
-  --h3-color: rgb(var(--ctp-red));
-}
-
-.anp-header-color-toggle.anp-h3-maroon .app-container, .anp-header-color-toggle.anp-h3-maroon .print {
-  --h3-color: rgb(var(--ctp-maroon));
-}
-
-.anp-header-color-toggle.anp-h3-peach .app-container, .anp-header-color-toggle.anp-h3-peach .print {
-  --h3-color: rgb(var(--ctp-peach));
-}
-
-.anp-header-color-toggle.anp-h3-yellow .app-container, .anp-header-color-toggle.anp-h3-yellow .print {
-  --h3-color: rgb(var(--ctp-yellow));
-}
-
-.anp-header-color-toggle.anp-h3-green .app-container, .anp-header-color-toggle.anp-h3-green .print {
-  --h3-color: rgb(var(--ctp-green));
-}
-
-.anp-header-color-toggle.anp-h3-teal .app-container, .anp-header-color-toggle.anp-h3-teal .print {
-  --h3-color: rgb(var(--ctp-teal));
-}
-
-.anp-header-color-toggle.anp-h3-sky .app-container, .anp-header-color-toggle.anp-h3-sky .print {
-  --h3-color: rgb(var(--ctp-sky));
-}
-
-.anp-header-color-toggle.anp-h3-sapphire .app-container, .anp-header-color-toggle.anp-h3-sapphire .print {
-  --h3-color: rgb(var(--ctp-sapphire));
-}
-
-.anp-header-color-toggle.anp-h3-blue .app-container, .anp-header-color-toggle.anp-h3-blue .print {
-  --h3-color: rgb(var(--ctp-blue));
-}
-
-.anp-header-color-toggle.anp-h3-lavender .app-container, .anp-header-color-toggle.anp-h3-lavender .print {
-  --h3-color: rgb(var(--ctp-lavender));
-}
-
-.anp-h3-divider .markdown-rendered h3,
-.anp-h3-divider .HyperMD-header-3 {
-  border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
-  padding-bottom: 2px;
-}
-
-.cm-formatting-header-3 {
-  color: var(--h3-color);
-}
-
-.anp-header-color-toggle.anp-h4-rosewater .app-container, .anp-header-color-toggle.anp-h4-rosewater .print {
-  --h4-color: rgb(var(--ctp-rosewater));
-}
-
-.anp-header-color-toggle.anp-h4-flamingo .app-container, .anp-header-color-toggle.anp-h4-flamingo .print {
-  --h4-color: rgb(var(--ctp-flamingo));
-}
-
-.anp-header-color-toggle.anp-h4-pink .app-container, .anp-header-color-toggle.anp-h4-pink .print {
-  --h4-color: rgb(var(--ctp-pink));
-}
-
-.anp-header-color-toggle.anp-h4-mauve .app-container, .anp-header-color-toggle.anp-h4-mauve .print {
-  --h4-color: rgb(var(--ctp-mauve));
-}
-
-.anp-header-color-toggle.anp-h4-red .app-container, .anp-header-color-toggle.anp-h4-red .print {
-  --h4-color: rgb(var(--ctp-red));
-}
-
-.anp-header-color-toggle.anp-h4-maroon .app-container, .anp-header-color-toggle.anp-h4-maroon .print {
-  --h4-color: rgb(var(--ctp-maroon));
-}
-
-.anp-header-color-toggle.anp-h4-peach .app-container, .anp-header-color-toggle.anp-h4-peach .print {
-  --h4-color: rgb(var(--ctp-peach));
-}
-
-.anp-header-color-toggle.anp-h4-yellow .app-container, .anp-header-color-toggle.anp-h4-yellow .print {
-  --h4-color: rgb(var(--ctp-yellow));
-}
-
-.anp-header-color-toggle.anp-h4-green .app-container, .anp-header-color-toggle.anp-h4-green .print {
-  --h4-color: rgb(var(--ctp-green));
-}
-
-.anp-header-color-toggle.anp-h4-teal .app-container, .anp-header-color-toggle.anp-h4-teal .print {
-  --h4-color: rgb(var(--ctp-teal));
-}
-
-.anp-header-color-toggle.anp-h4-sky .app-container, .anp-header-color-toggle.anp-h4-sky .print {
-  --h4-color: rgb(var(--ctp-sky));
-}
-
-.anp-header-color-toggle.anp-h4-sapphire .app-container, .anp-header-color-toggle.anp-h4-sapphire .print {
-  --h4-color: rgb(var(--ctp-sapphire));
-}
-
-.anp-header-color-toggle.anp-h4-blue .app-container, .anp-header-color-toggle.anp-h4-blue .print {
-  --h4-color: rgb(var(--ctp-blue));
-}
-
-.anp-header-color-toggle.anp-h4-lavender .app-container, .anp-header-color-toggle.anp-h4-lavender .print {
-  --h4-color: rgb(var(--ctp-lavender));
-}
-
-.anp-h4-divider .markdown-rendered h4,
-.anp-h4-divider .HyperMD-header-4 {
-  border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
-  padding-bottom: 2px;
-}
-
-.cm-formatting-header-4 {
-  color: var(--h4-color);
-}
-
-.anp-header-color-toggle.anp-h5-rosewater .app-container, .anp-header-color-toggle.anp-h5-rosewater .print {
-  --h5-color: rgb(var(--ctp-rosewater));
-}
-
-.anp-header-color-toggle.anp-h5-flamingo .app-container, .anp-header-color-toggle.anp-h5-flamingo .print {
-  --h5-color: rgb(var(--ctp-flamingo));
-}
-
-.anp-header-color-toggle.anp-h5-pink .app-container, .anp-header-color-toggle.anp-h5-pink .print {
-  --h5-color: rgb(var(--ctp-pink));
-}
-
-.anp-header-color-toggle.anp-h5-mauve .app-container, .anp-header-color-toggle.anp-h5-mauve .print {
-  --h5-color: rgb(var(--ctp-mauve));
-}
-
-.anp-header-color-toggle.anp-h5-red .app-container, .anp-header-color-toggle.anp-h5-red .print {
-  --h5-color: rgb(var(--ctp-red));
-}
-
-.anp-header-color-toggle.anp-h5-maroon .app-container, .anp-header-color-toggle.anp-h5-maroon .print {
-  --h5-color: rgb(var(--ctp-maroon));
-}
-
-.anp-header-color-toggle.anp-h5-peach .app-container, .anp-header-color-toggle.anp-h5-peach .print {
-  --h5-color: rgb(var(--ctp-peach));
-}
-
-.anp-header-color-toggle.anp-h5-yellow .app-container, .anp-header-color-toggle.anp-h5-yellow .print {
-  --h5-color: rgb(var(--ctp-yellow));
-}
-
-.anp-header-color-toggle.anp-h5-green .app-container, .anp-header-color-toggle.anp-h5-green .print {
-  --h5-color: rgb(var(--ctp-green));
-}
-
-.anp-header-color-toggle.anp-h5-teal .app-container, .anp-header-color-toggle.anp-h5-teal .print {
-  --h5-color: rgb(var(--ctp-teal));
-}
-
-.anp-header-color-toggle.anp-h5-sky .app-container, .anp-header-color-toggle.anp-h5-sky .print {
-  --h5-color: rgb(var(--ctp-sky));
-}
-
-.anp-header-color-toggle.anp-h5-sapphire .app-container, .anp-header-color-toggle.anp-h5-sapphire .print {
-  --h5-color: rgb(var(--ctp-sapphire));
-}
-
-.anp-header-color-toggle.anp-h5-blue .app-container, .anp-header-color-toggle.anp-h5-blue .print {
-  --h5-color: rgb(var(--ctp-blue));
-}
-
-.anp-header-color-toggle.anp-h5-lavender .app-container, .anp-header-color-toggle.anp-h5-lavender .print {
-  --h5-color: rgb(var(--ctp-lavender));
-}
-
-.anp-h5-divider .markdown-rendered h5,
-.anp-h5-divider .HyperMD-header-5 {
-  border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
-  padding-bottom: 2px;
-}
-
-.cm-formatting-header-5 {
-  color: var(--h5-color);
-}
-
-.anp-header-color-toggle.anp-h6-rosewater .app-container, .anp-header-color-toggle.anp-h6-rosewater .print {
-  --h6-color: rgb(var(--ctp-rosewater));
-}
-
-.anp-header-color-toggle.anp-h6-flamingo .app-container, .anp-header-color-toggle.anp-h6-flamingo .print {
-  --h6-color: rgb(var(--ctp-flamingo));
-}
-
-.anp-header-color-toggle.anp-h6-pink .app-container, .anp-header-color-toggle.anp-h6-pink .print {
-  --h6-color: rgb(var(--ctp-pink));
-}
-
-.anp-header-color-toggle.anp-h6-mauve .app-container, .anp-header-color-toggle.anp-h6-mauve .print {
-  --h6-color: rgb(var(--ctp-mauve));
-}
-
-.anp-header-color-toggle.anp-h6-red .app-container, .anp-header-color-toggle.anp-h6-red .print {
-  --h6-color: rgb(var(--ctp-red));
-}
-
-.anp-header-color-toggle.anp-h6-maroon .app-container, .anp-header-color-toggle.anp-h6-maroon .print {
-  --h6-color: rgb(var(--ctp-maroon));
-}
-
-.anp-header-color-toggle.anp-h6-peach .app-container, .anp-header-color-toggle.anp-h6-peach .print {
-  --h6-color: rgb(var(--ctp-peach));
-}
-
-.anp-header-color-toggle.anp-h6-yellow .app-container, .anp-header-color-toggle.anp-h6-yellow .print {
-  --h6-color: rgb(var(--ctp-yellow));
-}
-
-.anp-header-color-toggle.anp-h6-green .app-container, .anp-header-color-toggle.anp-h6-green .print {
-  --h6-color: rgb(var(--ctp-green));
-}
-
-.anp-header-color-toggle.anp-h6-teal .app-container, .anp-header-color-toggle.anp-h6-teal .print {
-  --h6-color: rgb(var(--ctp-teal));
-}
-
-.anp-header-color-toggle.anp-h6-sky .app-container, .anp-header-color-toggle.anp-h6-sky .print {
-  --h6-color: rgb(var(--ctp-sky));
-}
-
-.anp-header-color-toggle.anp-h6-sapphire .app-container, .anp-header-color-toggle.anp-h6-sapphire .print {
-  --h6-color: rgb(var(--ctp-sapphire));
-}
-
-.anp-header-color-toggle.anp-h6-blue .app-container, .anp-header-color-toggle.anp-h6-blue .print {
-  --h6-color: rgb(var(--ctp-blue));
-}
-
-.anp-header-color-toggle.anp-h6-lavender .app-container, .anp-header-color-toggle.anp-h6-lavender .print {
-  --h6-color: rgb(var(--ctp-lavender));
-}
-
-.anp-h6-divider .markdown-rendered h6,
-.anp-h6-divider .HyperMD-header-6 {
-  border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
-  padding-bottom: 2px;
-}
-
-.cm-formatting-header-6 {
-  color: var(--h6-color);
-}
-
-.anp-header-toggle.anp-header-margin-toggle :is(h1, h2, h3, h4, h5, h6) {
-  margin-block-start: var(--anp-header-margin-value);
-  margin-block-end: var(--anp-header-margin-value);
-}
-
-.anp-editor-font-toggle .markdown-source-view:not(.is-live-preview) {
-  --h1-font: var(--anp-editor-font);
-  --h2-font: var(--anp-editor-font);
-  --h3-font: var(--anp-editor-font);
-  --h4-font: var(--anp-editor-font);
-  --h5-font: var(--anp-editor-font);
-  --h6-font: var(--anp-editor-font);
-}
-
-/*-Custom hr margins-*/
-hr {
-  margin-block-start: 5px;
-  margin-block-end: 5px;
-}
-
-.anp-toggle-metadata .frontmatter-container, .markdown-rendered.hide-metadata .frontmatter-container {
-  display: none;
-}
-
-/*-Recolor table borders-*/
-.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table,
-.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table td,
-.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table th,
-.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th:first-child,
-.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th,
-.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th:last-child,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table td,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table th,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:first-child,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:last-child,
-.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview),
-.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
-.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) th,
-.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead tr > th:first-child,
-.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead tr > th,
-.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead tr > th:last-child {
-  border: var(--anp-table-thickness, 1px) solid var(--table-border-color);
-}
-.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table th,
-.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th:first-child,
-.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th,
-.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th:last-child,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table th,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:first-child,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:last-child,
-.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) th,
-.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead tr > th:first-child,
-.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead tr > th,
-.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead tr > th:last-child {
-  text-align: var(--anp-table-align-th, center);
-}
-.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table td,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table td,
-.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) td {
-  text-align: var(--anp-table-align-td, center);
-}
-
-table.dataview.table-view-table > tbody > tr:hover {
-  background-color: rgba(var(--ctp-surface1), 0.1) !important;
-}
-
-.anp-table-toggle.anp-th-highlight .markdown-preview-view:not(.cards):not(.table-disable) th, .anp-table-toggle.anp-th-highlight .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th, .anp-table-toggle.anp-th-highlight .is-live-preview:not(.cards):not(.table-disable) th, .anp-table-toggle.anp-th-highlight .is-live-preview.cards:not(.table-disable) table:not(.dataview) th {
-  background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
-}
-.anp-table-toggle.anp-td-alt-rows .markdown-preview-view:not(.cards):not(.table-disable) table tr:nth-child(2n) td, .anp-table-toggle.anp-td-alt-rows .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td, .anp-table-toggle.anp-td-alt-rows .is-live-preview:not(.cards):not(.table-disable) table tr:nth-child(2n) td, .anp-table-toggle.anp-td-alt-rows .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td {
-  background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
-}
-.anp-table-toggle.anp-td-alt-cols .markdown-preview-view:not(.cards):not(.table-disable) table tr td:nth-child(2n), .anp-table-toggle.anp-td-alt-cols .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n), .anp-table-toggle.anp-td-alt-cols .is-live-preview:not(.cards):not(.table-disable) table tr td:nth-child(2n), .anp-table-toggle.anp-td-alt-cols .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n) {
-  background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
-}
-.anp-table-toggle.anp-td-checkered .markdown-preview-view:not(.cards):not(.table-disable) table tr td:nth-child(2n),
-.anp-table-toggle.anp-td-checkered .markdown-preview-view:not(.cards):not(.table-disable) table tr:nth-child(2n) td, .anp-table-toggle.anp-td-checkered .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n),
-.anp-table-toggle.anp-td-checkered .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td, .anp-table-toggle.anp-td-checkered .is-live-preview:not(.cards):not(.table-disable) table tr td:nth-child(2n),
-.anp-table-toggle.anp-td-checkered .is-live-preview:not(.cards):not(.table-disable) table tr:nth-child(2n) td, .anp-table-toggle.anp-td-checkered .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n),
-.anp-table-toggle.anp-td-checkered .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td {
-  background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
-}
-.anp-table-toggle.anp-td-checkered .markdown-preview-view:not(.cards):not(.table-disable) table tr:nth-child(2n) td:nth-child(2n), .anp-table-toggle.anp-td-checkered .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td:nth-child(2n), .anp-table-toggle.anp-td-checkered .is-live-preview:not(.cards):not(.table-disable) table tr:nth-child(2n) td:nth-child(2n), .anp-table-toggle.anp-td-checkered .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td:nth-child(2n) {
-  background-color: rgba(var(--ctp-crust), var(--anp-table-highlight-opacity, 0.5));
-}
-.anp-table-toggle.anp-td-full .markdown-preview-view:not(.cards):not(.table-disable) table td, .anp-table-toggle.anp-td-full .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td, .anp-table-toggle.anp-td-full .is-live-preview:not(.cards:not(.table-disable)) table td, .anp-table-toggle.anp-td-full .is-live-preview.cards:not(.table-disable) table:not(.dataview) td {
-  background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
-}
-
-.anp-table-auto.markdown-rendered:not(.cards):not(.table-disable) table,
-.anp-table-auto.markdown-rendered.cards:not(.table-disable) table:not(.dataview) {
-  margin: 0 auto;
-}
-
-.anp-table-width.markdown-rendered:not(.cards):not(.table-disable) table,
-.anp-table-width.markdown-rendered.cards:not(.table-disable) table:not(.dataview) {
-  width: var(--anp-table-width-pct);
-}
-
-.anp-table-auto.anp-table-toggle .markdown-rendered:not(.cards):not(.table-disable) table,
-.anp-table-auto.anp-table-toggle .markdown-rendered.cards:not(.table-disable) table:not(.dataview) {
-  margin: 0 auto;
-}
-
-.anp-table-width.anp-table-toggle .markdown-rendered:not(.cards):not(.table-disable) table,
-.anp-table-width.anp-table-toggle .markdown-rendered.cards:not(.table-disable) table:not(.dataview) {
-  width: var(--anp-table-width-pct);
-  margin-left: calc(50% - var(--anp-table-width-pct) / 2);
-  margin-right: calc(50% - var(--anp-table-width-pct) / 2);
 }
 
 .anp-autohide-titlebar:not(.is-mobile) {
@@ -4835,6 +4169,627 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
 }
 .callout[data-callout=formula] .callout-content ul, .callout[data-callout=formula] .callout-content ol {
   padding-inline-start: 12px;
+}
+
+/*-Blockquote spacing-*/
+.markdown-rendered blockquote {
+  padding: 5px 5px 5px 10px;
+}
+
+/*-Decorations for bold and italics-*/
+.anp-decoration-toggle {
+  --italic-color: rgb(var(--anp-italic-color, var(--ctp-green)));
+  --bold-color: rgb(var(--anp-bold-color, var(--ctp-red)));
+}
+
+/*-Make it so that mark overwrites italic and bold colors-*/
+.markdown-rendered mark {
+  --italic-color: rgb(var(--ctp-text));
+  --bold-color: rgb(var(--ctp-text));
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.markdown-rendered .internal-link {
+  text-decoration-line: none;
+}
+.markdown-rendered .internal-link:hover, .markdown-rendered .internal-link:active, .markdown-rendered .internal-link.is-unresolved:hover, .markdown-rendered .internal-link.is-unresolved {
+  text-decoration-line: none;
+}
+
+.cm-formatting-link-string {
+  color: var(--text-normal);
+}
+
+.external-link,
+.external-link:hover {
+  background-image: none;
+  padding-right: 0px;
+}
+
+.cm-s-obsidian span.cm-formatting-strong, .cm-s-obsidian span.cm-strong {
+  color: var(--bold-color);
+}
+.cm-s-obsidian span.cm-formatting-em, .cm-s-obsidian span.cm-em {
+  color: var(--italic-color);
+}
+
+/*-Footnote-*/
+sup[data-footnote-id] {
+  font-size: var(--font-smallest);
+}
+
+.internal-embed[alt*=seamless].markdown-embed {
+  --embed-padding: 0;
+  border-width: 0px;
+}
+.internal-embed[alt*=seamless].markdown-embed > .markdown-embed-title {
+  width: fit-content;
+  position: absolute;
+  left: unset;
+  right: 33px;
+  top: 5px;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+.internal-embed[alt*=seamless].markdown-embed > .markdown-embed-link {
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+.internal-embed[alt*=seamless].markdown-embed:hover > .markdown-embed-title, .internal-embed[alt*=seamless].markdown-embed:hover > .markdown-embed-link {
+  opacity: 1;
+  transition: opacity 0.1s;
+}
+
+.frontmatter-section-data-item {
+  background-color: var(--background-secondary);
+  padding: 0 4px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  font-family: var(--font-monospace);
+  font-size: 80%;
+}
+
+.frontmatter-container .frontmatter-section-label {
+  text-transform: uppercase;
+  font-size: 70%;
+}
+.frontmatter-container .frontmatter-section-label::first-letter {
+  font-size: 120%;
+}
+
+/*--------------HEADERS----------------*/
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
+  margin-left: -22px;
+  padding: 0px 6px;
+}
+
+.anp-header-color-toggle.anp-h1-rosewater .app-container, .anp-header-color-toggle.anp-h1-rosewater .print {
+  --h1-color: rgb(var(--ctp-rosewater));
+}
+
+.anp-header-color-toggle.anp-h1-flamingo .app-container, .anp-header-color-toggle.anp-h1-flamingo .print {
+  --h1-color: rgb(var(--ctp-flamingo));
+}
+
+.anp-header-color-toggle.anp-h1-pink .app-container, .anp-header-color-toggle.anp-h1-pink .print {
+  --h1-color: rgb(var(--ctp-pink));
+}
+
+.anp-header-color-toggle.anp-h1-mauve .app-container, .anp-header-color-toggle.anp-h1-mauve .print {
+  --h1-color: rgb(var(--ctp-mauve));
+}
+
+.anp-header-color-toggle.anp-h1-red .app-container, .anp-header-color-toggle.anp-h1-red .print {
+  --h1-color: rgb(var(--ctp-red));
+}
+
+.anp-header-color-toggle.anp-h1-maroon .app-container, .anp-header-color-toggle.anp-h1-maroon .print {
+  --h1-color: rgb(var(--ctp-maroon));
+}
+
+.anp-header-color-toggle.anp-h1-peach .app-container, .anp-header-color-toggle.anp-h1-peach .print {
+  --h1-color: rgb(var(--ctp-peach));
+}
+
+.anp-header-color-toggle.anp-h1-yellow .app-container, .anp-header-color-toggle.anp-h1-yellow .print {
+  --h1-color: rgb(var(--ctp-yellow));
+}
+
+.anp-header-color-toggle.anp-h1-green .app-container, .anp-header-color-toggle.anp-h1-green .print {
+  --h1-color: rgb(var(--ctp-green));
+}
+
+.anp-header-color-toggle.anp-h1-teal .app-container, .anp-header-color-toggle.anp-h1-teal .print {
+  --h1-color: rgb(var(--ctp-teal));
+}
+
+.anp-header-color-toggle.anp-h1-sky .app-container, .anp-header-color-toggle.anp-h1-sky .print {
+  --h1-color: rgb(var(--ctp-sky));
+}
+
+.anp-header-color-toggle.anp-h1-sapphire .app-container, .anp-header-color-toggle.anp-h1-sapphire .print {
+  --h1-color: rgb(var(--ctp-sapphire));
+}
+
+.anp-header-color-toggle.anp-h1-blue .app-container, .anp-header-color-toggle.anp-h1-blue .print {
+  --h1-color: rgb(var(--ctp-blue));
+}
+
+.anp-header-color-toggle.anp-h1-lavender .app-container, .anp-header-color-toggle.anp-h1-lavender .print {
+  --h1-color: rgb(var(--ctp-lavender));
+}
+
+.anp-h1-divider .markdown-rendered h1,
+.anp-h1-divider .HyperMD-header-1 {
+  border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
+  padding-bottom: 2px;
+}
+
+.cm-formatting-header-1 {
+  color: var(--h1-color);
+}
+
+.anp-header-color-toggle.anp-h2-rosewater .app-container, .anp-header-color-toggle.anp-h2-rosewater .print {
+  --h2-color: rgb(var(--ctp-rosewater));
+}
+
+.anp-header-color-toggle.anp-h2-flamingo .app-container, .anp-header-color-toggle.anp-h2-flamingo .print {
+  --h2-color: rgb(var(--ctp-flamingo));
+}
+
+.anp-header-color-toggle.anp-h2-pink .app-container, .anp-header-color-toggle.anp-h2-pink .print {
+  --h2-color: rgb(var(--ctp-pink));
+}
+
+.anp-header-color-toggle.anp-h2-mauve .app-container, .anp-header-color-toggle.anp-h2-mauve .print {
+  --h2-color: rgb(var(--ctp-mauve));
+}
+
+.anp-header-color-toggle.anp-h2-red .app-container, .anp-header-color-toggle.anp-h2-red .print {
+  --h2-color: rgb(var(--ctp-red));
+}
+
+.anp-header-color-toggle.anp-h2-maroon .app-container, .anp-header-color-toggle.anp-h2-maroon .print {
+  --h2-color: rgb(var(--ctp-maroon));
+}
+
+.anp-header-color-toggle.anp-h2-peach .app-container, .anp-header-color-toggle.anp-h2-peach .print {
+  --h2-color: rgb(var(--ctp-peach));
+}
+
+.anp-header-color-toggle.anp-h2-yellow .app-container, .anp-header-color-toggle.anp-h2-yellow .print {
+  --h2-color: rgb(var(--ctp-yellow));
+}
+
+.anp-header-color-toggle.anp-h2-green .app-container, .anp-header-color-toggle.anp-h2-green .print {
+  --h2-color: rgb(var(--ctp-green));
+}
+
+.anp-header-color-toggle.anp-h2-teal .app-container, .anp-header-color-toggle.anp-h2-teal .print {
+  --h2-color: rgb(var(--ctp-teal));
+}
+
+.anp-header-color-toggle.anp-h2-sky .app-container, .anp-header-color-toggle.anp-h2-sky .print {
+  --h2-color: rgb(var(--ctp-sky));
+}
+
+.anp-header-color-toggle.anp-h2-sapphire .app-container, .anp-header-color-toggle.anp-h2-sapphire .print {
+  --h2-color: rgb(var(--ctp-sapphire));
+}
+
+.anp-header-color-toggle.anp-h2-blue .app-container, .anp-header-color-toggle.anp-h2-blue .print {
+  --h2-color: rgb(var(--ctp-blue));
+}
+
+.anp-header-color-toggle.anp-h2-lavender .app-container, .anp-header-color-toggle.anp-h2-lavender .print {
+  --h2-color: rgb(var(--ctp-lavender));
+}
+
+.anp-h2-divider .markdown-rendered h2,
+.anp-h2-divider .HyperMD-header-2 {
+  border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
+  padding-bottom: 2px;
+}
+
+.cm-formatting-header-2 {
+  color: var(--h2-color);
+}
+
+.anp-header-color-toggle.anp-h3-rosewater .app-container, .anp-header-color-toggle.anp-h3-rosewater .print {
+  --h3-color: rgb(var(--ctp-rosewater));
+}
+
+.anp-header-color-toggle.anp-h3-flamingo .app-container, .anp-header-color-toggle.anp-h3-flamingo .print {
+  --h3-color: rgb(var(--ctp-flamingo));
+}
+
+.anp-header-color-toggle.anp-h3-pink .app-container, .anp-header-color-toggle.anp-h3-pink .print {
+  --h3-color: rgb(var(--ctp-pink));
+}
+
+.anp-header-color-toggle.anp-h3-mauve .app-container, .anp-header-color-toggle.anp-h3-mauve .print {
+  --h3-color: rgb(var(--ctp-mauve));
+}
+
+.anp-header-color-toggle.anp-h3-red .app-container, .anp-header-color-toggle.anp-h3-red .print {
+  --h3-color: rgb(var(--ctp-red));
+}
+
+.anp-header-color-toggle.anp-h3-maroon .app-container, .anp-header-color-toggle.anp-h3-maroon .print {
+  --h3-color: rgb(var(--ctp-maroon));
+}
+
+.anp-header-color-toggle.anp-h3-peach .app-container, .anp-header-color-toggle.anp-h3-peach .print {
+  --h3-color: rgb(var(--ctp-peach));
+}
+
+.anp-header-color-toggle.anp-h3-yellow .app-container, .anp-header-color-toggle.anp-h3-yellow .print {
+  --h3-color: rgb(var(--ctp-yellow));
+}
+
+.anp-header-color-toggle.anp-h3-green .app-container, .anp-header-color-toggle.anp-h3-green .print {
+  --h3-color: rgb(var(--ctp-green));
+}
+
+.anp-header-color-toggle.anp-h3-teal .app-container, .anp-header-color-toggle.anp-h3-teal .print {
+  --h3-color: rgb(var(--ctp-teal));
+}
+
+.anp-header-color-toggle.anp-h3-sky .app-container, .anp-header-color-toggle.anp-h3-sky .print {
+  --h3-color: rgb(var(--ctp-sky));
+}
+
+.anp-header-color-toggle.anp-h3-sapphire .app-container, .anp-header-color-toggle.anp-h3-sapphire .print {
+  --h3-color: rgb(var(--ctp-sapphire));
+}
+
+.anp-header-color-toggle.anp-h3-blue .app-container, .anp-header-color-toggle.anp-h3-blue .print {
+  --h3-color: rgb(var(--ctp-blue));
+}
+
+.anp-header-color-toggle.anp-h3-lavender .app-container, .anp-header-color-toggle.anp-h3-lavender .print {
+  --h3-color: rgb(var(--ctp-lavender));
+}
+
+.anp-h3-divider .markdown-rendered h3,
+.anp-h3-divider .HyperMD-header-3 {
+  border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
+  padding-bottom: 2px;
+}
+
+.cm-formatting-header-3 {
+  color: var(--h3-color);
+}
+
+.anp-header-color-toggle.anp-h4-rosewater .app-container, .anp-header-color-toggle.anp-h4-rosewater .print {
+  --h4-color: rgb(var(--ctp-rosewater));
+}
+
+.anp-header-color-toggle.anp-h4-flamingo .app-container, .anp-header-color-toggle.anp-h4-flamingo .print {
+  --h4-color: rgb(var(--ctp-flamingo));
+}
+
+.anp-header-color-toggle.anp-h4-pink .app-container, .anp-header-color-toggle.anp-h4-pink .print {
+  --h4-color: rgb(var(--ctp-pink));
+}
+
+.anp-header-color-toggle.anp-h4-mauve .app-container, .anp-header-color-toggle.anp-h4-mauve .print {
+  --h4-color: rgb(var(--ctp-mauve));
+}
+
+.anp-header-color-toggle.anp-h4-red .app-container, .anp-header-color-toggle.anp-h4-red .print {
+  --h4-color: rgb(var(--ctp-red));
+}
+
+.anp-header-color-toggle.anp-h4-maroon .app-container, .anp-header-color-toggle.anp-h4-maroon .print {
+  --h4-color: rgb(var(--ctp-maroon));
+}
+
+.anp-header-color-toggle.anp-h4-peach .app-container, .anp-header-color-toggle.anp-h4-peach .print {
+  --h4-color: rgb(var(--ctp-peach));
+}
+
+.anp-header-color-toggle.anp-h4-yellow .app-container, .anp-header-color-toggle.anp-h4-yellow .print {
+  --h4-color: rgb(var(--ctp-yellow));
+}
+
+.anp-header-color-toggle.anp-h4-green .app-container, .anp-header-color-toggle.anp-h4-green .print {
+  --h4-color: rgb(var(--ctp-green));
+}
+
+.anp-header-color-toggle.anp-h4-teal .app-container, .anp-header-color-toggle.anp-h4-teal .print {
+  --h4-color: rgb(var(--ctp-teal));
+}
+
+.anp-header-color-toggle.anp-h4-sky .app-container, .anp-header-color-toggle.anp-h4-sky .print {
+  --h4-color: rgb(var(--ctp-sky));
+}
+
+.anp-header-color-toggle.anp-h4-sapphire .app-container, .anp-header-color-toggle.anp-h4-sapphire .print {
+  --h4-color: rgb(var(--ctp-sapphire));
+}
+
+.anp-header-color-toggle.anp-h4-blue .app-container, .anp-header-color-toggle.anp-h4-blue .print {
+  --h4-color: rgb(var(--ctp-blue));
+}
+
+.anp-header-color-toggle.anp-h4-lavender .app-container, .anp-header-color-toggle.anp-h4-lavender .print {
+  --h4-color: rgb(var(--ctp-lavender));
+}
+
+.anp-h4-divider .markdown-rendered h4,
+.anp-h4-divider .HyperMD-header-4 {
+  border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
+  padding-bottom: 2px;
+}
+
+.cm-formatting-header-4 {
+  color: var(--h4-color);
+}
+
+.anp-header-color-toggle.anp-h5-rosewater .app-container, .anp-header-color-toggle.anp-h5-rosewater .print {
+  --h5-color: rgb(var(--ctp-rosewater));
+}
+
+.anp-header-color-toggle.anp-h5-flamingo .app-container, .anp-header-color-toggle.anp-h5-flamingo .print {
+  --h5-color: rgb(var(--ctp-flamingo));
+}
+
+.anp-header-color-toggle.anp-h5-pink .app-container, .anp-header-color-toggle.anp-h5-pink .print {
+  --h5-color: rgb(var(--ctp-pink));
+}
+
+.anp-header-color-toggle.anp-h5-mauve .app-container, .anp-header-color-toggle.anp-h5-mauve .print {
+  --h5-color: rgb(var(--ctp-mauve));
+}
+
+.anp-header-color-toggle.anp-h5-red .app-container, .anp-header-color-toggle.anp-h5-red .print {
+  --h5-color: rgb(var(--ctp-red));
+}
+
+.anp-header-color-toggle.anp-h5-maroon .app-container, .anp-header-color-toggle.anp-h5-maroon .print {
+  --h5-color: rgb(var(--ctp-maroon));
+}
+
+.anp-header-color-toggle.anp-h5-peach .app-container, .anp-header-color-toggle.anp-h5-peach .print {
+  --h5-color: rgb(var(--ctp-peach));
+}
+
+.anp-header-color-toggle.anp-h5-yellow .app-container, .anp-header-color-toggle.anp-h5-yellow .print {
+  --h5-color: rgb(var(--ctp-yellow));
+}
+
+.anp-header-color-toggle.anp-h5-green .app-container, .anp-header-color-toggle.anp-h5-green .print {
+  --h5-color: rgb(var(--ctp-green));
+}
+
+.anp-header-color-toggle.anp-h5-teal .app-container, .anp-header-color-toggle.anp-h5-teal .print {
+  --h5-color: rgb(var(--ctp-teal));
+}
+
+.anp-header-color-toggle.anp-h5-sky .app-container, .anp-header-color-toggle.anp-h5-sky .print {
+  --h5-color: rgb(var(--ctp-sky));
+}
+
+.anp-header-color-toggle.anp-h5-sapphire .app-container, .anp-header-color-toggle.anp-h5-sapphire .print {
+  --h5-color: rgb(var(--ctp-sapphire));
+}
+
+.anp-header-color-toggle.anp-h5-blue .app-container, .anp-header-color-toggle.anp-h5-blue .print {
+  --h5-color: rgb(var(--ctp-blue));
+}
+
+.anp-header-color-toggle.anp-h5-lavender .app-container, .anp-header-color-toggle.anp-h5-lavender .print {
+  --h5-color: rgb(var(--ctp-lavender));
+}
+
+.anp-h5-divider .markdown-rendered h5,
+.anp-h5-divider .HyperMD-header-5 {
+  border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
+  padding-bottom: 2px;
+}
+
+.cm-formatting-header-5 {
+  color: var(--h5-color);
+}
+
+.anp-header-color-toggle.anp-h6-rosewater .app-container, .anp-header-color-toggle.anp-h6-rosewater .print {
+  --h6-color: rgb(var(--ctp-rosewater));
+}
+
+.anp-header-color-toggle.anp-h6-flamingo .app-container, .anp-header-color-toggle.anp-h6-flamingo .print {
+  --h6-color: rgb(var(--ctp-flamingo));
+}
+
+.anp-header-color-toggle.anp-h6-pink .app-container, .anp-header-color-toggle.anp-h6-pink .print {
+  --h6-color: rgb(var(--ctp-pink));
+}
+
+.anp-header-color-toggle.anp-h6-mauve .app-container, .anp-header-color-toggle.anp-h6-mauve .print {
+  --h6-color: rgb(var(--ctp-mauve));
+}
+
+.anp-header-color-toggle.anp-h6-red .app-container, .anp-header-color-toggle.anp-h6-red .print {
+  --h6-color: rgb(var(--ctp-red));
+}
+
+.anp-header-color-toggle.anp-h6-maroon .app-container, .anp-header-color-toggle.anp-h6-maroon .print {
+  --h6-color: rgb(var(--ctp-maroon));
+}
+
+.anp-header-color-toggle.anp-h6-peach .app-container, .anp-header-color-toggle.anp-h6-peach .print {
+  --h6-color: rgb(var(--ctp-peach));
+}
+
+.anp-header-color-toggle.anp-h6-yellow .app-container, .anp-header-color-toggle.anp-h6-yellow .print {
+  --h6-color: rgb(var(--ctp-yellow));
+}
+
+.anp-header-color-toggle.anp-h6-green .app-container, .anp-header-color-toggle.anp-h6-green .print {
+  --h6-color: rgb(var(--ctp-green));
+}
+
+.anp-header-color-toggle.anp-h6-teal .app-container, .anp-header-color-toggle.anp-h6-teal .print {
+  --h6-color: rgb(var(--ctp-teal));
+}
+
+.anp-header-color-toggle.anp-h6-sky .app-container, .anp-header-color-toggle.anp-h6-sky .print {
+  --h6-color: rgb(var(--ctp-sky));
+}
+
+.anp-header-color-toggle.anp-h6-sapphire .app-container, .anp-header-color-toggle.anp-h6-sapphire .print {
+  --h6-color: rgb(var(--ctp-sapphire));
+}
+
+.anp-header-color-toggle.anp-h6-blue .app-container, .anp-header-color-toggle.anp-h6-blue .print {
+  --h6-color: rgb(var(--ctp-blue));
+}
+
+.anp-header-color-toggle.anp-h6-lavender .app-container, .anp-header-color-toggle.anp-h6-lavender .print {
+  --h6-color: rgb(var(--ctp-lavender));
+}
+
+.anp-h6-divider .markdown-rendered h6,
+.anp-h6-divider .HyperMD-header-6 {
+  border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
+  padding-bottom: 2px;
+}
+
+.cm-formatting-header-6 {
+  color: var(--h6-color);
+}
+
+.anp-header-toggle.anp-header-margin-toggle :is(h1, h2, h3, h4, h5, h6) {
+  margin-block-start: var(--anp-header-margin-value);
+  margin-block-end: var(--anp-header-margin-value);
+}
+
+.anp-editor-font-toggle .markdown-source-view:not(.is-live-preview) {
+  --h1-font: var(--anp-editor-font);
+  --h2-font: var(--anp-editor-font);
+  --h3-font: var(--anp-editor-font);
+  --h4-font: var(--anp-editor-font);
+  --h5-font: var(--anp-editor-font);
+  --h6-font: var(--anp-editor-font);
+}
+
+/*-Custom hr margins-*/
+hr {
+  margin-block-start: 5px;
+  margin-block-end: 5px;
+}
+
+.anp-list-toggle div.el-ul > ul.has-list-bullet > li > ul.has-list-bullet > li > .list-bullet::after {
+  border: 1px solid var(--list-marker-color);
+  background-color: transparent;
+  width: calc(var(--list-bullet-size) - 1px);
+  height: calc(var(--list-bullet-size) - 1px);
+}
+.anp-list-toggle div.el-ul > ul.has-list-bullet > li > ul.has-list-bullet > li > ul.has-list-bullet > li > .list-bullet::after {
+  border-radius: 0;
+  background-color: var(--list-marker-color);
+}
+.anp-list-toggle div.el-ul > ul.has-list-bullet > li > ul.has-list-bullet > li > ul.has-list-bullet > li > ul.has-list-bullet > li > .list-bullet::after {
+  width: calc(var(--list-bullet-size) - 1px);
+  height: calc(var(--list-bullet-size) - 1px);
+  border-radius: 0;
+  border: 1px solid var(--list-marker-color);
+  background-color: transparent;
+}
+
+.anp-toggle-metadata .frontmatter-container, .markdown-rendered.hide-metadata .frontmatter-container {
+  display: none;
+}
+
+/*-Recolor table borders-*/
+.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table,
+.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table td,
+.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table th,
+.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th:first-child,
+.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th,
+.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th:last-child,
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table,
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table td,
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table th,
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:first-child,
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th,
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:last-child,
+.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview),
+.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
+.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) th,
+.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead tr > th:first-child,
+.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead tr > th,
+.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead tr > th:last-child {
+  border: var(--anp-table-thickness, 1px) solid var(--table-border-color);
+}
+.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table th,
+.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th:first-child,
+.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th,
+.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th:last-child,
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table th,
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:first-child,
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th,
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:last-child,
+.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) th,
+.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead tr > th:first-child,
+.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead tr > th,
+.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead tr > th:last-child {
+  text-align: var(--anp-table-align-th, center);
+}
+.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table td,
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table td,
+.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) td {
+  text-align: var(--anp-table-align-td, center);
+}
+
+table.dataview.table-view-table > tbody > tr:hover {
+  background-color: rgba(var(--ctp-surface1), 0.1) !important;
+}
+
+.anp-table-toggle.anp-th-highlight .markdown-preview-view:not(.cards):not(.table-disable) th, .anp-table-toggle.anp-th-highlight .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th, .anp-table-toggle.anp-th-highlight .is-live-preview:not(.cards):not(.table-disable) th, .anp-table-toggle.anp-th-highlight .is-live-preview.cards:not(.table-disable) table:not(.dataview) th {
+  background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
+}
+.anp-table-toggle.anp-td-alt-rows .markdown-preview-view:not(.cards):not(.table-disable) table tr:nth-child(2n) td, .anp-table-toggle.anp-td-alt-rows .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td, .anp-table-toggle.anp-td-alt-rows .is-live-preview:not(.cards):not(.table-disable) table tr:nth-child(2n) td, .anp-table-toggle.anp-td-alt-rows .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td {
+  background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
+}
+.anp-table-toggle.anp-td-alt-cols .markdown-preview-view:not(.cards):not(.table-disable) table tr td:nth-child(2n), .anp-table-toggle.anp-td-alt-cols .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n), .anp-table-toggle.anp-td-alt-cols .is-live-preview:not(.cards):not(.table-disable) table tr td:nth-child(2n), .anp-table-toggle.anp-td-alt-cols .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n) {
+  background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
+}
+.anp-table-toggle.anp-td-checkered .markdown-preview-view:not(.cards):not(.table-disable) table tr td:nth-child(2n),
+.anp-table-toggle.anp-td-checkered .markdown-preview-view:not(.cards):not(.table-disable) table tr:nth-child(2n) td, .anp-table-toggle.anp-td-checkered .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n),
+.anp-table-toggle.anp-td-checkered .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td, .anp-table-toggle.anp-td-checkered .is-live-preview:not(.cards):not(.table-disable) table tr td:nth-child(2n),
+.anp-table-toggle.anp-td-checkered .is-live-preview:not(.cards):not(.table-disable) table tr:nth-child(2n) td, .anp-table-toggle.anp-td-checkered .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n),
+.anp-table-toggle.anp-td-checkered .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td {
+  background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
+}
+.anp-table-toggle.anp-td-checkered .markdown-preview-view:not(.cards):not(.table-disable) table tr:nth-child(2n) td:nth-child(2n), .anp-table-toggle.anp-td-checkered .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td:nth-child(2n), .anp-table-toggle.anp-td-checkered .is-live-preview:not(.cards):not(.table-disable) table tr:nth-child(2n) td:nth-child(2n), .anp-table-toggle.anp-td-checkered .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td:nth-child(2n) {
+  background-color: rgba(var(--ctp-crust), var(--anp-table-highlight-opacity, 0.5));
+}
+.anp-table-toggle.anp-td-full .markdown-preview-view:not(.cards):not(.table-disable) table td, .anp-table-toggle.anp-td-full .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td, .anp-table-toggle.anp-td-full .is-live-preview:not(.cards:not(.table-disable)) table td, .anp-table-toggle.anp-td-full .is-live-preview.cards:not(.table-disable) table:not(.dataview) td {
+  background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
+}
+
+.anp-table-auto.markdown-rendered:not(.cards):not(.table-disable) table,
+.anp-table-auto.markdown-rendered.cards:not(.table-disable) table:not(.dataview) {
+  margin: 0 auto;
+}
+
+.anp-table-width.markdown-rendered:not(.cards):not(.table-disable) table,
+.anp-table-width.markdown-rendered.cards:not(.table-disable) table:not(.dataview) {
+  width: var(--anp-table-width-pct);
+}
+
+.anp-table-auto.anp-table-toggle .markdown-rendered:not(.cards):not(.table-disable) table,
+.anp-table-auto.anp-table-toggle .markdown-rendered.cards:not(.table-disable) table:not(.dataview) {
+  margin: 0 auto;
+}
+
+.anp-table-width.anp-table-toggle .markdown-rendered:not(.cards):not(.table-disable) table,
+.anp-table-width.anp-table-toggle .markdown-rendered.cards:not(.table-disable) table:not(.dataview) {
+  width: var(--anp-table-width-pct);
+  margin-left: calc(50% - var(--anp-table-width-pct) / 2);
+  margin-right: calc(50% - var(--anp-table-width-pct) / 2);
 }
 
 /*-Custom folder title-*/
@@ -6146,6 +6101,165 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   transition: transform 300ms 150ms;
 }
 
+/*--------------DISABLING IN-FRONTMATTER---------------*/
+.heading-normal-toggle {
+  --h1-color: var(--text-normal) !important;
+  --h2-color: var(--text-normal) !important;
+  --h3-color: var(--text-normal) !important;
+  --h4-color: var(--text-normal) !important;
+  --h5-color: var(--text-normal) !important;
+  --h6-color: var(--text-normal) !important;
+}
+
+.decorations-normal-toggle,
+.decorations-normal-toggle.markdown-rendered {
+  --bold-color: var(--text-normal) !important;
+  --italic-color: var(--text-normal) !important;
+}
+
+.decorations-normal-toggle.markdown-rendered .table-view-table,
+.decorations-normal-toggle.is-live-preview .table-view-table {
+  --bold-color: var(--text-muted) !important;
+  --italic-color: var(--text-muted) !important;
+}
+
+/*------------RAINBOW FOLDERS-------------*/
+/* Rainbow colors */
+.nav-folder-children > .nav-folder:nth-child(11n+2) {
+  --rainbow-folder-color: var(--ctp-red);
+}
+.nav-folder-children > .nav-folder:nth-child(11n+3) {
+  --rainbow-folder-color: var(--ctp-maroon);
+}
+.nav-folder-children > .nav-folder:nth-child(11n+4) {
+  --rainbow-folder-color: var(--ctp-peach);
+}
+.nav-folder-children > .nav-folder:nth-child(11n+5) {
+  --rainbow-folder-color: var(--ctp-yellow);
+}
+.nav-folder-children > .nav-folder:nth-child(11n+6) {
+  --rainbow-folder-color: var(--ctp-green);
+}
+.nav-folder-children > .nav-folder:nth-child(11n+7) {
+  --rainbow-folder-color: var(--ctp-teal);
+}
+.nav-folder-children > .nav-folder:nth-child(11n+8) {
+  --rainbow-folder-color: var(--ctp-sky);
+}
+.nav-folder-children > .nav-folder:nth-child(11n+9) {
+  --rainbow-folder-color: var(--ctp-sapphire);
+}
+.nav-folder-children > .nav-folder:nth-child(11n+10) {
+  --rainbow-folder-color: var(--ctp-blue);
+}
+.nav-folder-children > .nav-folder:nth-child(11n+11) {
+  --rainbow-folder-color: var(--ctp-lavender);
+}
+.nav-folder-children > .nav-folder:nth-child(11n+12) {
+  --rainbow-folder-color: var(--ctp-mauve);
+}
+
+.anp-rainbow-subfolder-color-toggle .nav-folder.mod-root .nav-folder.nav-folder .nav-folder {
+  --rainbow-folder-color: inherit;
+}
+
+/*-Full rainbow theme-*/
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title,
+.anp-full-rainbow-color-toggle .nav-folder-collapse-indicator svg,
+.anp-full-rainbow-color-toggle .is-collapsed .nav-folder-collapse-indicator svg {
+  color: var(--anp-full-rainbow-text-inverted, var(--background-primary));
+}
+.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {
+  color: var(--anp-full-rainbow-text-inverted, var(--background-primary));
+}
+.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle.theme-dark .nav-folder.mod-root > .nav-folder-children > .nav-file {
+  background-color: rgba(var(--ctp-text), var(--anp-rainbow-folder-bg-opacity));
+}
+.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle.theme-light .nav-folder.mod-root > .nav-folder-children > .nav-file {
+  background-color: rgba(var(--ctp-overlay1), var(--anp-rainbow-folder-bg-opacity));
+}
+.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file {
+  border-radius: 5px;
+  margin-bottom: 2px;
+}
+.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:hover {
+  background-color: rgba(var(--ctp-text), 0.1);
+}
+.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title.is-active {
+  border-color: rgba(var(--ctp-text), 0.2);
+  background-color: rgba(var(--ctp-text), 0.2);
+}
+.anp-full-rainbow-color-toggle .nav-file {
+  overflow-y: hidden;
+}
+.anp-full-rainbow-color-toggle .nav-file-title-content.is-being-renamed, .anp-full-rainbow-color-toggle .nav-folder-title-content.is-being-renamed {
+  cursor: text;
+  border-color: var(--interactive-accent);
+  background-color: rgba(var(--ctp-crust), 0.2);
+}
+.anp-full-rainbow-color-toggle .nav-file-title-content.is-being-renamed::selection, .anp-full-rainbow-color-toggle .nav-folder-title-content.is-being-renamed::selection {
+  background-color: hsla(var(--color-accent-hsl), 0.2);
+}
+.anp-full-rainbow-color-toggle .nav-file-title-content.is-being-renamed::selection {
+  background-color: rgba(var(--ctp-accent), 0.2);
+}
+.anp-full-rainbow-color-toggle .nav-folder.mod-root .nav-folder > .nav-folder-children {
+  padding: 0 5px 0 5px;
+}
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder {
+  transition: background-color 0.4s;
+  background-color: rgba(var(--rainbow-folder-color), var(--anp-rainbow-folder-bg-opacity));
+  margin-bottom: 2px;
+  border-radius: 5px;
+}
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-children {
+  border-color: rgba(var(--ctp-crust), 0.4);
+}
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file.has-focus {
+  background-color: rgba(var(--ctp-text), var(--anp-rainbow-folder-bg-opacity));
+  border-left: none;
+  border-color: rgb(var(--ctp-accent));
+}
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file.has-focus > .nav-file-title, .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file > .nav-file-title {
+  margin-bottom: 0;
+}
+.anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title:focus-within, .anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title:focus-within, .anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title, .anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title {
+  box-shadow: none;
+}
+
+.anp-full-rainbow-text-color-toggle {
+  --anp-full-rainbow-text-inverted: rgb(var(--ctp-text));
+}
+
+/*-Simple rainbow theme-*/
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title {
+  transition: color 0.4s;
+  color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
+  --nav-item-background-hover: rgba(var(--rainbow-folder-color), 0.1);
+  --nav-item-background-active: rgba(var(--rainbow-folder-color), 0.1) ;
+}
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:after {
+  transition: color 0.4s;
+  color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
+  content: "⬤";
+  position: relative;
+  margin-left: 4px;
+  top: 1px;
+  opacity: 0.5;
+}
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle .nav-folder.mod-root .nav-folder > .nav-folder-children {
+  transition: color 0.4s;
+  border-color: rgba(var(--rainbow-folder-color), 0.5);
+}
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-collapse-toggle .nav-folder.is-collapsed .collapse-icon svg.svg-icon, .anp-simple-rainbow-color-toggle.anp-simple-rainbow-collapse-toggle .nav-folder-collapse-indicator.collapse-icon svg.svg-icon {
+  transition: color 0.4s;
+  color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
+}
+
 .modal {
   --h1-font: var(--interface-font);
 }
@@ -7320,165 +7434,6 @@ body.theme-dark.theme-dark {
 .anp-kanban-hide-lane-border .kanban-plugin .kanban-plugin__lane-items {
   padding-bottom: 0;
   padding-top: 0;
-}
-
-/*------------RAINBOW FOLDERS-------------*/
-/* Rainbow colors */
-.nav-folder-children > .nav-folder:nth-child(11n+2) {
-  --rainbow-folder-color: var(--ctp-red);
-}
-.nav-folder-children > .nav-folder:nth-child(11n+3) {
-  --rainbow-folder-color: var(--ctp-maroon);
-}
-.nav-folder-children > .nav-folder:nth-child(11n+4) {
-  --rainbow-folder-color: var(--ctp-peach);
-}
-.nav-folder-children > .nav-folder:nth-child(11n+5) {
-  --rainbow-folder-color: var(--ctp-yellow);
-}
-.nav-folder-children > .nav-folder:nth-child(11n+6) {
-  --rainbow-folder-color: var(--ctp-green);
-}
-.nav-folder-children > .nav-folder:nth-child(11n+7) {
-  --rainbow-folder-color: var(--ctp-teal);
-}
-.nav-folder-children > .nav-folder:nth-child(11n+8) {
-  --rainbow-folder-color: var(--ctp-sky);
-}
-.nav-folder-children > .nav-folder:nth-child(11n+9) {
-  --rainbow-folder-color: var(--ctp-sapphire);
-}
-.nav-folder-children > .nav-folder:nth-child(11n+10) {
-  --rainbow-folder-color: var(--ctp-blue);
-}
-.nav-folder-children > .nav-folder:nth-child(11n+11) {
-  --rainbow-folder-color: var(--ctp-lavender);
-}
-.nav-folder-children > .nav-folder:nth-child(11n+12) {
-  --rainbow-folder-color: var(--ctp-mauve);
-}
-
-.anp-rainbow-subfolder-color-toggle .nav-folder.mod-root .nav-folder.nav-folder .nav-folder {
-  --rainbow-folder-color: inherit;
-}
-
-/*-Full rainbow theme-*/
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title,
-.anp-full-rainbow-color-toggle .nav-folder-collapse-indicator svg,
-.anp-full-rainbow-color-toggle .is-collapsed .nav-folder-collapse-indicator svg {
-  color: var(--anp-full-rainbow-text-inverted, var(--background-primary));
-}
-.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {
-  color: var(--anp-full-rainbow-text-inverted, var(--background-primary));
-}
-.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle.theme-dark .nav-folder.mod-root > .nav-folder-children > .nav-file {
-  background-color: rgba(var(--ctp-text), var(--anp-rainbow-folder-bg-opacity));
-}
-.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle.theme-light .nav-folder.mod-root > .nav-folder-children > .nav-file {
-  background-color: rgba(var(--ctp-overlay1), var(--anp-rainbow-folder-bg-opacity));
-}
-.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file {
-  border-radius: 5px;
-  margin-bottom: 2px;
-}
-.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:hover {
-  background-color: rgba(var(--ctp-text), 0.1);
-}
-.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title.is-active {
-  border-color: rgba(var(--ctp-text), 0.2);
-  background-color: rgba(var(--ctp-text), 0.2);
-}
-.anp-full-rainbow-color-toggle .nav-file {
-  overflow-y: hidden;
-}
-.anp-full-rainbow-color-toggle .nav-file-title-content.is-being-renamed, .anp-full-rainbow-color-toggle .nav-folder-title-content.is-being-renamed {
-  cursor: text;
-  border-color: var(--interactive-accent);
-  background-color: rgba(var(--ctp-crust), 0.2);
-}
-.anp-full-rainbow-color-toggle .nav-file-title-content.is-being-renamed::selection, .anp-full-rainbow-color-toggle .nav-folder-title-content.is-being-renamed::selection {
-  background-color: hsla(var(--color-accent-hsl), 0.2);
-}
-.anp-full-rainbow-color-toggle .nav-file-title-content.is-being-renamed::selection {
-  background-color: rgba(var(--ctp-accent), 0.2);
-}
-.anp-full-rainbow-color-toggle .nav-folder.mod-root .nav-folder > .nav-folder-children {
-  padding: 0 5px 0 5px;
-}
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder {
-  transition: background-color 0.4s;
-  background-color: rgba(var(--rainbow-folder-color), var(--anp-rainbow-folder-bg-opacity));
-  margin-bottom: 2px;
-  border-radius: 5px;
-}
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-children {
-  border-color: rgba(var(--ctp-crust), 0.4);
-}
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file.has-focus {
-  background-color: rgba(var(--ctp-text), var(--anp-rainbow-folder-bg-opacity));
-  border-left: none;
-  border-color: rgb(var(--ctp-accent));
-}
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file.has-focus > .nav-file-title, .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file > .nav-file-title {
-  margin-bottom: 0;
-}
-.anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title:focus-within, .anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title:focus-within, .anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title, .anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title {
-  box-shadow: none;
-}
-
-.anp-full-rainbow-text-color-toggle {
-  --anp-full-rainbow-text-inverted: rgb(var(--ctp-text));
-}
-
-/*-Simple rainbow theme-*/
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title {
-  transition: color 0.4s;
-  color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
-  --nav-item-background-hover: rgba(var(--rainbow-folder-color), 0.1);
-  --nav-item-background-active: rgba(var(--rainbow-folder-color), 0.1) ;
-}
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:after {
-  transition: color 0.4s;
-  color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
-  content: "⬤";
-  position: relative;
-  margin-left: 4px;
-  top: 1px;
-  opacity: 0.5;
-}
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle .nav-folder.mod-root .nav-folder > .nav-folder-children {
-  transition: color 0.4s;
-  border-color: rgba(var(--rainbow-folder-color), 0.5);
-}
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-collapse-toggle .nav-folder.is-collapsed .collapse-icon svg.svg-icon, .anp-simple-rainbow-color-toggle.anp-simple-rainbow-collapse-toggle .nav-folder-collapse-indicator.collapse-icon svg.svg-icon {
-  transition: color 0.4s;
-  color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
-}
-
-/*--------------DISABLING IN-FRONTMATTER---------------*/
-.heading-normal-toggle {
-  --h1-color: var(--text-normal) !important;
-  --h2-color: var(--text-normal) !important;
-  --h3-color: var(--text-normal) !important;
-  --h4-color: var(--text-normal) !important;
-  --h5-color: var(--text-normal) !important;
-  --h6-color: var(--text-normal) !important;
-}
-
-.decorations-normal-toggle,
-.decorations-normal-toggle.markdown-rendered {
-  --bold-color: var(--text-normal) !important;
-  --italic-color: var(--text-normal) !important;
-}
-
-.decorations-normal-toggle.markdown-rendered .table-view-table,
-.decorations-normal-toggle.is-live-preview .table-view-table {
-  --bold-color: var(--text-muted) !important;
-  --italic-color: var(--text-muted) !important;
 }
 
 /*# sourceMappingURL=obsidian.css.map */
