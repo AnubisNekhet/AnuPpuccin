@@ -13,7 +13,7 @@
     --callout-border-width: 1px;
     background-color: rgba(var(--ctp-mantle), 0.4);
     & > .callout-title {
-      background-color: rgba(var(--ctp-accent), var(--callout-title-opacity, 0.1));
+      background-color: rgba(var(--callout-color), var(--callout-title-opacity, 0.1));
     }
     & > .callout-content {
       border-top: var(--callout-border-width) dashed rgba(var(--callout-color), var(--callout-border-opacity));

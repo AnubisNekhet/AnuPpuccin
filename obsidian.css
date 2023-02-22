@@ -4060,7 +4060,7 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
 .callout[data-callout-metadata*=anp-sleek]:not([data-callout-metadata*=revert],
 [data-callout=blank-container],
 [data-callout=multi-column]) > .callout-title {
-  background-color: rgba(var(--ctp-accent), var(--callout-title-opacity, 0.1));
+  background-color: rgba(var(--callout-color), var(--callout-title-opacity, 0.1));
 }
 .anp-callout-sleek .callout:not([data-callout-metadata*=anp-block],
 [data-callout-metadata*=anp-vanilla-normal],
