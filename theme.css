@@ -7056,6 +7056,20 @@ body .excalidraw .library-menu-items-container .library-actions--load, body .exc
   background-color: rgb(var(--ctp-crust));
 }
 
+.cMenuToolbarDefaultAesthetic {
+  margin: 5px 10px 0 10px;
+  box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.05);
+  background-color: var(--background-primary);
+}
+
+#cMenuToolbarModalBar.top button.cMenuToolbarCommandItem:hover {
+  background-color: var(--background-secondary);
+}
+
+#cMenuToolbarModalBar.top :is(.cMenuToolbarCommandItem, button[class^=cMenuToolbarCommandsubItem]):not(.cMenuToolbar-Divider-Line) {
+  transition: all 0s linear;
+}
+
 /* Recolor Colors */
 div[class*=mk-] [style*="--label-color:#eb3b5a"] {
   --label-color: rgb(var(--ctp-red)) !important;
