@@ -170,6 +170,9 @@ body {
   --card-foreground-color: rgb(var(--ctp-base));
   --tab-inactive-color: rgb(var(--ctp-mantle));
   --code-normal: var(--anp-code-text-color, var(--text-normal));
+  --callout-padding: 0;
+  --callout-title-padding: var(--size-4-2);
+  --callout-content-padding: var(--size-4-2);
   --background-modifier-active: hsla(var(--color-accent-hsl), 0.1);
   &.theme-light {
     --anp-background-image: var(--anp-background-image-light);

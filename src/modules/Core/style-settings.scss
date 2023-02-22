@@ -379,14 +379,10 @@ settings:
     level: 2
     collapsed: true
   -
-    id: anp-callout-toggle
-    title: Enable Callout Styling
-    type: class-toggle
-  -
     id: anp-callout-select
     title: Callout Style
     type: class-select
-    default: anp-callout-default
+    default: none
     allowEmpty: false
     options:
       - 
@@ -399,11 +395,15 @@ settings:
         label: Block
         value: anp-callout-block
       - 
-        label: Vanilla
-        value: anp-callout-vanilla
+        label: vanilla
+        value: anp-callout-vanilla-normal
       - 
-        label: Vanilla Plus
+        label: vanilla plus
         value: anp-callout-vanilla-plus
+  -
+    id: anp-callout-color-toggle
+    title: Enable Custom Callout Colors
+    type: class-toggle
   -
     id: callout-radius
     title: Callout Radius
@@ -411,17 +411,38 @@ settings:
     default: 4
     format: px
   -
-    id: anp-callout-normal-toggle
-    title: Enable Styling For Non-collapsible Callouts
-    type: class-toggle
+    id: callout-title-padding
+    title: Callout Title Padding
+    type: variable-number
+    default: 8
+    format: px
   -
-    id: anp-callout-color-toggle
-    title: Enable Custom Callout Colors
-    type: class-toggle
+    id: callout-title-opacity
+    title: Callout Title Background Opacity
+    description: Applies to Sleek, Vanilla and Vanilla Plus callouts
+    type: variable-number-slider
+    default: 0.1
+    min: 0
+    max: 1
+    step: 0.05
+  -
+    id: callout-content-padding
+    title: Callout Content Padding
+    type: variable-number
+    default: 8
+    format: px
   -
     id: anp-callout-fold-position
-    title: Toggle Callout Fold Position
-    type: class-toggle
+    title: Callout Fold Position
+    type: variable-select
+    default: '0'
+    options:
+      - 
+        label: Left
+        value: 0
+      - 
+        label: Right
+        value: 1
 
 # File Editor & Markdown Elements :: Checkboxes
 

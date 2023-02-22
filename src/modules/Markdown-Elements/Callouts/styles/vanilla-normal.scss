@@ -1,19 +1,21 @@
-.anp-callout-vanilla-plus .callout:not(
+.anp-callout-vanilla-normal .callout:not(
   [data-callout-metadata*="anp-sleek"],
-  [data-callout-metadata*="anp-vanilla-normal"],
+  [data-callout-metadata*="anp-vanilla-plus"],
   [data-callout-metadata*="anp-block"]
 ),
-.callout[data-callout-metadata*="anp-vanilla-plus"] {
+.callout[data-callout-metadata*="anp-vanilla-normal"] {
   &:not([data-callout-metadata*="revert"],
         [data-callout="blank-container"],
         [data-callout="multi-column"]) {
     background-color: transparent;
     > .callout-title {
       background-color: rgba(var(--callout-color), var(--callout-title-opacity, 0.1));
-      border-left: var(--size-2-3) solid rgb(var(--callout-color));
     }
     > .callout-content {
       background-color: rgb(var(--ctp-mantle));
+    }
+    > .callout-title, > .callout-content {
+      border-left: var(--size-2-3) solid rgb(var(--callout-color));
     }
   }
 }
