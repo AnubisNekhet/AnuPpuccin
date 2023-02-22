@@ -4783,9 +4783,9 @@ hr {
 .anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead tr > th:last-child {
   text-align: var(--anp-table-align-th, center);
 }
-.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table td,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table td,
-.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) td {
+.anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table td:not([align]),
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table td:not([align]),
+.anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) td:not([align]) {
   text-align: var(--anp-table-align-td, center);
 }
 
