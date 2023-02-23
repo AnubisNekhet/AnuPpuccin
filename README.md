@@ -1,5 +1,6 @@
 <h1 align="center">AnuPpuccin</h1>
 <h3 align="center">Sanitized theme for <a href="https://obsidian.md">Obsidian</a> :3</h3><br>
+Voted **Best Theme** in [Gems of the Year 2022](https://forum.obsidian.md/t/gems-of-the-year-2022-winners/54903) awards 🎉
 
 <p align="center"> <img src="assets/gh-preview.webp"> </p>
 
