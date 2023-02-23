@@ -1,5 +1,5 @@
 <h1 align="center">AnuPpuccin</h1>
-<h3 align="center">Sanitized theme for <a href="https://obsidian.md">Obsidian</a> :3</h3><br>
+<h3 align="center">Personal theme for <a href="https://obsidian.md">Obsidian</a> :3</h3><br>
 
 
 <p align="center"> <img src="assets/gh-preview.webp"> </p>
@@ -263,7 +263,7 @@ AnuPpuccin does not come with any code provided by [Minimal](https://github.com/
 - [Paul Ryley](https://github.com/pryley) for countless contributions to the theme and amazing sense of design in general.
 - [Chuck Harmston](https://github.com/chuckharmston) for his amazing alternate tabs snippet.
 - [melnhh](https://github.com/melnhh) for their amazing colorscheme.
-- [EdualcLaiv](https://github.com/EdualcLaiv) for porting Royal Velvet to AnuPppuccin.
+- [EdualcLaiv](https://github.com/EdualcLaiv) for porting Royal Velvet to AnuPpuccin.
 - [xotea](https://github.com/xotea) for theming framework tweaks.
 - [raisabelatrix](https://github.com/raisabelatrix) for [rainbow tags](https://gist.github.com/raisabelatrix/eb383f7e19b59f951430c2f3c6ed80b0) variables.
 
