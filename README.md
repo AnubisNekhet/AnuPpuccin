@@ -1,8 +1,12 @@
 <h1 align="center">AnuPpuccin</h1>
 <h3 align="center">Sanitized theme for <a href="https://obsidian.md">Obsidian</a> :3</h3><br>
-Voted **Best Theme** in [Gems of the Year 2022](https://forum.obsidian.md/t/gems-of-the-year-2022-winners/54903) awards 🎉
+
 
 <p align="center"> <img src="assets/gh-preview.webp"> </p>
+
+<br>
+<h3 align="center">Voted <b>Best Theme</b> in <a href="https://forum.obsidian.md/t/gems-of-the-year-2022-winners/54903">Gems of the Year 2022</a> awards 🎉
+</h3>
 
 ## Preface
 Please do note that I've made this theme for myself, and it may not fit your use cases. However, I've made most of the configuration completely optional so that the experience remains as close to vanilla if you choose to do so. Most of the in-application variables are recolored so that your custom snippets can be used easily with the theme.
