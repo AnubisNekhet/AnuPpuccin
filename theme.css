@@ -1788,6 +1788,55 @@ settings:
       - 
         label: Lavender
         value: anp-italic-lavender
+  -
+    id: anp-highlight-custom
+    title: Highlight Color
+    type: class-select
+    allowEmpty: true
+    default: anp-highlight-yellow
+    options:
+      - 
+        label: Rosewater
+        value: anp-highlight-rosewater
+      - 
+        label: Flamingo
+        value: anp-highlight-flamingo
+      - 
+        label: Pink
+        value: anp-highlight-pink
+      - 
+        label: Mauve
+        value: anp-highlight-mauve
+      - 
+        label: Red
+        value: anp-highlight-red
+      - 
+        label: Maroon
+        value: anp-highlight-maroon
+      - 
+        label: Peach
+        value: anp-highlight-peach
+      - 
+        label: Yellow
+        value: anp-highlight-yellow
+      - 
+        label: Green
+        value: anp-highlight-green
+      - 
+        label: Teal
+        value: anp-highlight-teal
+      - 
+        label: Sky
+        value: anp-highlight-sky
+      - 
+        label: Sapphire
+        value: anp-highlight-sapphire
+      - 
+        label: Blue
+        value: anp-highlight-blue
+      - 
+        label: Lavender
+        value: anp-highlight-lavender
 
 # Workspace
 
@@ -2596,6 +2645,10 @@ settings:
   --anp-italic-color: var(--ctp-rosewater);
 }
 
+.anp-highlight-rosewater {
+  --anp-highlight-color: var(--ctp-rosewater);
+}
+
 .anuppuccin-accent-toggle.ctp-accent-flamingo {
   --ctp-accent: var(--ctp-flamingo);
 }
@@ -2610,6 +2663,10 @@ settings:
 
 .anp-italic-flamingo {
   --anp-italic-color: var(--ctp-flamingo);
+}
+
+.anp-highlight-flamingo {
+  --anp-highlight-color: var(--ctp-flamingo);
 }
 
 .anuppuccin-accent-toggle.ctp-accent-pink {
@@ -2628,6 +2685,10 @@ settings:
   --anp-italic-color: var(--ctp-pink);
 }
 
+.anp-highlight-pink {
+  --anp-highlight-color: var(--ctp-pink);
+}
+
 .anuppuccin-accent-toggle.ctp-accent-mauve {
   --ctp-accent: var(--ctp-mauve);
 }
@@ -2642,6 +2703,10 @@ settings:
 
 .anp-italic-mauve {
   --anp-italic-color: var(--ctp-mauve);
+}
+
+.anp-highlight-mauve {
+  --anp-highlight-color: var(--ctp-mauve);
 }
 
 .anuppuccin-accent-toggle.ctp-accent-red {
@@ -2660,6 +2725,10 @@ settings:
   --anp-italic-color: var(--ctp-red);
 }
 
+.anp-highlight-red {
+  --anp-highlight-color: var(--ctp-red);
+}
+
 .anuppuccin-accent-toggle.ctp-accent-maroon {
   --ctp-accent: var(--ctp-maroon);
 }
@@ -2674,6 +2743,10 @@ settings:
 
 .anp-italic-maroon {
   --anp-italic-color: var(--ctp-maroon);
+}
+
+.anp-highlight-maroon {
+  --anp-highlight-color: var(--ctp-maroon);
 }
 
 .anuppuccin-accent-toggle.ctp-accent-peach {
@@ -2692,6 +2765,10 @@ settings:
   --anp-italic-color: var(--ctp-peach);
 }
 
+.anp-highlight-peach {
+  --anp-highlight-color: var(--ctp-peach);
+}
+
 .anuppuccin-accent-toggle.ctp-accent-yellow {
   --ctp-accent: var(--ctp-yellow);
 }
@@ -2706,6 +2783,10 @@ settings:
 
 .anp-italic-yellow {
   --anp-italic-color: var(--ctp-yellow);
+}
+
+.anp-highlight-yellow {
+  --anp-highlight-color: var(--ctp-yellow);
 }
 
 .anuppuccin-accent-toggle.ctp-accent-green {
@@ -2724,6 +2805,10 @@ settings:
   --anp-italic-color: var(--ctp-green);
 }
 
+.anp-highlight-green {
+  --anp-highlight-color: var(--ctp-green);
+}
+
 .anuppuccin-accent-toggle.ctp-accent-teal {
   --ctp-accent: var(--ctp-teal);
 }
@@ -2738,6 +2823,10 @@ settings:
 
 .anp-italic-teal {
   --anp-italic-color: var(--ctp-teal);
+}
+
+.anp-highlight-teal {
+  --anp-highlight-color: var(--ctp-teal);
 }
 
 .anuppuccin-accent-toggle.ctp-accent-sky {
@@ -2756,6 +2845,10 @@ settings:
   --anp-italic-color: var(--ctp-sky);
 }
 
+.anp-highlight-sky {
+  --anp-highlight-color: var(--ctp-sky);
+}
+
 .anuppuccin-accent-toggle.ctp-accent-sapphire {
   --ctp-accent: var(--ctp-sapphire);
 }
@@ -2770,6 +2863,10 @@ settings:
 
 .anp-italic-sapphire {
   --anp-italic-color: var(--ctp-sapphire);
+}
+
+.anp-highlight-sapphire {
+  --anp-highlight-color: var(--ctp-sapphire);
 }
 
 .anuppuccin-accent-toggle.ctp-accent-blue {
@@ -2788,6 +2885,10 @@ settings:
   --anp-italic-color: var(--ctp-blue);
 }
 
+.anp-highlight-blue {
+  --anp-highlight-color: var(--ctp-blue);
+}
+
 .anuppuccin-accent-toggle.ctp-accent-lavender {
   --ctp-accent: var(--ctp-lavender);
 }
@@ -2802,6 +2903,10 @@ settings:
 
 .anp-italic-lavender {
   --anp-italic-color: var(--ctp-lavender);
+}
+
+.anp-highlight-lavender {
+  --anp-highlight-color: var(--ctp-lavender);
 }
 
 /*------------------Actual Configs--------------------*/
@@ -4227,6 +4332,7 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
 .anp-decoration-toggle {
   --italic-color: rgb(var(--anp-italic-color, var(--ctp-green)));
   --bold-color: rgb(var(--anp-bold-color, var(--ctp-red)));
+  --text-highlight-bg: rgba(var(--anp-highlight-color), 0.2);
 }
 
 /*-Make it so that mark overwrites italic and bold colors-*/

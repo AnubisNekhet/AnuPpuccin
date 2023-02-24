@@ -1787,6 +1787,55 @@ settings:
       - 
         label: Lavender
         value: anp-italic-lavender
+  -
+    id: anp-highlight-custom
+    title: Highlight Color
+    type: class-select
+    allowEmpty: true
+    default: anp-highlight-yellow
+    options:
+      - 
+        label: Rosewater
+        value: anp-highlight-rosewater
+      - 
+        label: Flamingo
+        value: anp-highlight-flamingo
+      - 
+        label: Pink
+        value: anp-highlight-pink
+      - 
+        label: Mauve
+        value: anp-highlight-mauve
+      - 
+        label: Red
+        value: anp-highlight-red
+      - 
+        label: Maroon
+        value: anp-highlight-maroon
+      - 
+        label: Peach
+        value: anp-highlight-peach
+      - 
+        label: Yellow
+        value: anp-highlight-yellow
+      - 
+        label: Green
+        value: anp-highlight-green
+      - 
+        label: Teal
+        value: anp-highlight-teal
+      - 
+        label: Sky
+        value: anp-highlight-sky
+      - 
+        label: Sapphire
+        value: anp-highlight-sapphire
+      - 
+        label: Blue
+        value: anp-highlight-blue
+      - 
+        label: Lavender
+        value: anp-highlight-lavender
 
 # Workspace
 
