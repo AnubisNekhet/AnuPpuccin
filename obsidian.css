@@ -3543,6 +3543,13 @@ body.anp-card-layout,
   --file-header-border: var(--border-width) dashed var(--background-modifier-border);
 }
 
+body.anp-card-layout {
+  --divider-color: transparent;
+  --divider-color-hover: var(--backgrouund-modifier-border);
+  --divider-width: 4px;
+  --divider-width-hover: 4px;
+}
+
 body.is-focused.anp-card-layout,
 body.is-focused.anp-card-layout .sidebar-toggle-button,
 body.is-focused.anp-card-layout .workspace-tabs.mod-top {
@@ -3627,19 +3634,6 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
   padding-left: var(--anp-card-layout-padding, 10px);
   padding-right: var(--anp-card-layout-padding, 10px);
   background-color: var(--tab-container-background);
-}
-
-.anp-card-layout .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
-.anp-card-layout .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
-  border-style: solid;
-  border-width: 2px;
-  border-color: transparent;
-}
-
-.anp-card-layout .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
-  border-style: solid;
-  border-color: transparent;
-  border-width: 2px;
 }
 
 .anp-card-layout .workspace-split .workspace-leaf-content {
