@@ -3531,6 +3531,11 @@ input.slider,
   background-color: rgba(var(--ctp-accent), 0.3);
 }
 
+/*-Suggestion selected item bg fix-*/
+.suggestion-item.is-selected {
+  background-color: var(--background-secondary);
+}
+
 body {
   --card-background-color: rgb(var(--ctp-crust));
   --card-foreground-color: var(--background-primary);
@@ -5245,7 +5250,7 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
 .anp-colorful-frame.anuppuccin-accent-toggle.anp-colorful-frame:not(.anp-card-layout) .mod-top .workspace-tab-header-container, .anp-colorful-frame.anuppuccin-accent-toggle.anp-colorful-frame:not(.anp-card-layout) .workspace-ribbon.mod-left:before, .anp-colorful-frame.anuppuccin-accent-toggle.anp-colorful-frame.anp-card-layout, .anp-colorful-frame.anuppuccin-accent-toggle.anp-colorful-frame.anp-card-layout .workspace-tabs.mod-top, .anp-colorful-frame.anuppuccin-accent-toggle.anp-colorful-frame.anp-card-layout .sidebar-toggle-button, .anp-colorful-frame.anuppuccin-accent-toggle.anp-colorful-frame.anp-card-layout .workspace-ribbon.mod-left:before {
   --tab-container-background: rgba(var(--anp-colorful-frame-color, var(--ctp-accent)), var(--anp-colorful-frame-opacity, 1));
   --titlebar-background: rgba(var(--anp-colorful-frame-color, var(--ctp-accent)), var(--anp-colorful-frame-opacity, 1));
-  --background-modifier-hover: rgba(var(--ctp-crust), 0.075);
+  --background-modifier-hover: rgba(var(--ctp-mantle));
 }
 .anp-colorful-frame.anuppuccin-accent-toggle.anp-colorful-frame.anp-card-layout .prompt {
   --background-modifier-hover: rgba(var(--ctp-text), 0.075) ;

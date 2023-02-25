@@ -79,3 +79,7 @@
 .anuppuccin-accent-toggle .drag-ghost-hidden:before {
   background-color: rgba(var(--ctp-accent), 0.3)
 }
+/*-Suggestion selected item bg fix-*/
+.suggestion-item.is-selected {
+  background-color: var(--background-secondary);
+}
