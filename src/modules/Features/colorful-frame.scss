@@ -13,6 +13,11 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
   --colorful-icon-color-alt: var(--text-muted);
 }
 .anp-colorful-frame {
+  &.is-frameless.is-frameless:not(.is-hidden-frameless) {
+    .sidebar-toggle-button.mod-left {
+      border-radius: 0 var(--radius-m) var(--radius-m) 0;
+    }
+  }
   &.anuppuccin-accent-toggle.anp-colorful-frame {
     &:not(.anp-card-layout) .mod-top .workspace-tab-header-container,
     &:not(.anp-card-layout) .workspace-ribbon.mod-left:before,

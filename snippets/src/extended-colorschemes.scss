@@ -32,6 +32,9 @@ settings:
             label: Gruvbox
             value: ctp-gruvbox-light
         - 
+            label: Notion
+            value: ctp-luminescence-light
+        - 
             label: Nord
             value: ctp-nord-light
         - 
@@ -109,6 +112,7 @@ settings:
 @import "ext-colorschemes/gruvbox-dark.scss";
 @import "ext-colorschemes/gruvbox-light.scss";
 @import "ext-colorschemes/kanagawa-dark.scss";
+@import "ext-colorschemes/luminscence-light.scss";
 @import "ext-colorschemes/nord-dark.scss";
 @import "ext-colorschemes/nord-light.scss";
 @import "ext-colorschemes/nord-darker.scss";
@@ -135,6 +139,7 @@ $ext-theme-list:
   $theme-gruvbox-dark,
   $theme-gruvbox-light,
   $theme-kanagawa-dark,
+  $theme-luminescence-light,
   $theme-nord-dark,
   $theme-nord-darker,
   $theme-nord-light,

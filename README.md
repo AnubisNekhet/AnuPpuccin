@@ -262,7 +262,7 @@ AnuPpuccin does not come with any code provided by [Minimal](https://github.com/
 ### Special thanks to:
 - [Paul Ryley](https://github.com/pryley) for countless contributions to the theme and amazing sense of design in general.
 - [Chuck Harmston](https://github.com/chuckharmston) for his amazing alternate tabs snippet.
-- [melnhh](https://github.com/melnhh) for their amazing colorscheme.
+- [melnhh](https://github.com/melnhh) and Lunairee for their amazing colorschemes.
 - [EdualcLaiv](https://github.com/EdualcLaiv) for porting Royal Velvet to AnuPpuccin.
 - [xotea](https://github.com/xotea) for theming framework tweaks.
 - [raisabelatrix](https://github.com/raisabelatrix) for [rainbow tags](https://gist.github.com/raisabelatrix/eb383f7e19b59f951430c2f3c6ed80b0) variables.
