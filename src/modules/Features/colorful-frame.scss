@@ -27,7 +27,6 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
     &.anp-card-layout .workspace-ribbon.mod-left:before {
       --tab-container-background: rgba(var(--anp-colorful-frame-color, var(--ctp-accent)), var(--anp-colorful-frame-opacity, 1));
       --titlebar-background: rgba(var(--anp-colorful-frame-color, var(--ctp-accent)), var(--anp-colorful-frame-opacity, 1));
-      --background-modifier-hover: rgba(var(--ctp-mantle));
     }
     &.anp-card-layout .prompt {
       --background-modifier-hover: rgba(var(--ctp-text), 0.075)
