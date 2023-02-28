@@ -5247,6 +5247,9 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
   --colorful-icon-color-alt: var(--text-muted);
 }
 
+.anp-colorful-frame.anp-card-layout .workspace-split.mod-right-split .workspace-tabs .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner, .anp-colorful-frame.anp-card-layout .workspace-split.mod-left-split .workspace-tabs .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner, .anp-colorful-frame:not(.anp-card-layout) .workspace-split.mod-left-split .workspace-tabs.mod-top .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner, .anp-colorful-frame:not(.anp-card-layout) .workspace-split.mod-right-split .workspace-tabs.mod-top .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+  background-color: rgba(var(--ctp-crust), 0.2);
+}
 .anp-colorful-frame.is-frameless.is-frameless:not(.is-hidden-frameless) .sidebar-toggle-button.mod-left {
   border-radius: 0 var(--radius-m) var(--radius-m) 0;
 }
