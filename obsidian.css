@@ -2114,11 +2114,11 @@ settings:
     type: class-toggle
   -
     id: anp-simple-rainbow-indentation-toggle
-    title: Enable collpase indent recolor
+    title: Enable collapse indent recolor
     type: class-toggle
   -
     id: anp-simple-rainbow-collapse-toggle
-    title: Enable collpase indicator
+    title: Enable collapse indicator
     type: class-toggle
   -
     id: anp-simple-rainbow-icon-toggle
