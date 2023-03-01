@@ -8,6 +8,9 @@ body.anp-card-layout,
     --tab-container-background: var(--card-background-color);
     --file-header-border: var(--border-width) dashed var(--background-modifier-border);
 }
+.anp-card-layout .workspace-tabs.mod-top:has(.obsidian-banner-wrapper) {
+    --file-header-border: none;
+}
 body.anp-card-layout {
     --divider-color: transparent;
     --divider-color-hover: var(--backgrouund-modifier-border);
@@ -126,6 +129,7 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
     border-color: var(--tab-outline-color);
     border-right: var(--tab-outline-width) dashed var(--tab-outline-color);
 }
+
 .anp-card-layout .mod-stacked .workspace-leaf {
     border-left-width: 0px;
     border-top-width: var(--tab-outline-width);

@@ -3548,6 +3548,10 @@ body.anp-card-layout,
   --file-header-border: var(--border-width) dashed var(--background-modifier-border);
 }
 
+.anp-card-layout .workspace-tabs.mod-top:has(.obsidian-banner-wrapper) {
+  --file-header-border: none;
+}
+
 body.anp-card-layout {
   --divider-color: transparent;
   --divider-color-hover: var(--backgrouund-modifier-border);
