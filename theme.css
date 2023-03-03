@@ -5946,6 +5946,18 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   --text-normal: rgb(var(--ctp-text));
   background: rgba(var(--ctp-surface1), 0.4);
 }
+.anp-speech-bubble .is-live-preview [data-task="0"]:not(.cm-active),
+.anp-speech-bubble .is-live-preview [data-task="1"]:not(.cm-active),
+.anp-speech-bubble .is-live-preview [data-task="2"]:not(.cm-active),
+.anp-speech-bubble .is-live-preview [data-task="3"]:not(.cm-active),
+.anp-speech-bubble .is-live-preview [data-task="4"]:not(.cm-active),
+.anp-speech-bubble .is-live-preview [data-task="5"]:not(.cm-active),
+.anp-speech-bubble .is-live-preview [data-task="6"]:not(.cm-active),
+.anp-speech-bubble .is-live-preview [data-task="7"]:not(.cm-active),
+.anp-speech-bubble .is-live-preview [data-task="8"]:not(.cm-active),
+.anp-speech-bubble .is-live-preview [data-task="9"]:not(.cm-active) {
+  max-width: max-content;
+}
 
 /* Dirty Speech Bubble Fix */
 .anp-speech-bubble .HyperMD-task-line[data-task="0"], .anp-speech-bubble .HyperMD-task-line[data-task="1"], .anp-speech-bubble .HyperMD-task-line[data-task="2"], .anp-speech-bubble .HyperMD-task-line[data-task="3"], .anp-speech-bubble .HyperMD-task-line[data-task="4"], .anp-speech-bubble .HyperMD-task-line[data-task="5"], .anp-speech-bubble .HyperMD-task-line[data-task="6"], .anp-speech-bubble .HyperMD-task-line[data-task="7"], .anp-speech-bubble .HyperMD-task-line[data-task="8"], .anp-speech-bubble .HyperMD-task-line[data-task="9"] {

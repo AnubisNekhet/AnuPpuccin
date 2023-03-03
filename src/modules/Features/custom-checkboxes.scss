@@ -433,6 +433,9 @@ $labels: (
            --text-normal: rgb(var(--ctp-text));
             background: rgba(var(--ctp-surface1), 0.4);
         }
+        &:not(.cm-active) {
+            max-width: max-content;
+        }
     }
 }
 /* Dirty Speech Bubble Fix */
