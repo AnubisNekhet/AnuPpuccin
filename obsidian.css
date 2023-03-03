@@ -3532,12 +3532,9 @@ input.slider,
   background-color: var(--background-secondary);
 }
 
-body {
+body.anp-card-layout {
   --card-background-color: rgb(var(--ctp-crust));
   --card-foreground-color: var(--background-primary);
-}
-
-body.anp-card-layout {
   --divider-color: transparent;
   --divider-color-hover: var(--backgrouund-modifier-border);
   --divider-width: 4px;
@@ -3584,7 +3581,8 @@ body.anp-card-layout.anp-card-layout-actions .side-dock-settings {
   border-width: 1px 1px 0px 0px;
   border-radius: 0px var(--anp-card-radius, var(--radius-xl)) 0px 0px;
 }
-body.anp-card-layout .side-dock-actions, body.anp-card-layout .side-dock-settings {
+body.anp-card-layout .side-dock-actions,
+body.anp-card-layout .side-dock-settings {
   padding: var(--size-4-2) var(--size-4-1) var(--size-4-3);
 }
 body.anp-card-layout .workspace-ribbon.mod-left {
@@ -3701,7 +3699,7 @@ body.is-translucent {
 .is-translucent:not(.is-fullscreen) .workspace-ribbon.mod-left,
 .is-translucent:not(.is-fullscreen) .workspace-tabs,
 .is-translucent:not(.is-fullscreen) .mod-left-split .workspace-tab-header-container,
-.is-translucent.anp-translucent-right:not(.is-fullscreen) .mod-right-split .workspace-tab-header-container,
+.is-translucent:not(.is-fullscreen) .mod-right-split .workspace-tab-header-container,
 .is-translucent:not(.is-fullscreen) .mod-top .workspace-tab-header-container,
 .is-translucent:not(.is-fullscreen) .workspace-tabs .workspace-leaf,
 .is-translucent:not(.is-fullscreen) .workspace-ribbon.mod-left:before,
@@ -3711,13 +3709,15 @@ body.is-translucent {
 .is-translucent:not(.is-fullscreen) .horizontal-main-container {
   background-color: transparent;
 }
+.is-translucent:not(.is-fullscreen) .view-header-title-container:not(.mod-at-end):after {
+  background-image: none;
+}
+.is-translucent:not(.is-fullscreen) .workspace-tabs.mod-stacked .workspace-tab-header, .is-translucent:not(.is-fullscreen) .workspace-tabs.mod-stacked .view-header {
+  background-color: var(--background-primary);
+}
 
 .is-translucent .workspace {
   background-color: transparent;
-}
-
-.is-translucent:not(.is-fullscreen) .view-header-title-container:not(.mod-at-end):after {
-  background-image: none;
 }
 
 .is-translucent .workspace-split.mod-left-split.is-sidedock-collapsed .workspace-tabs,
@@ -3727,10 +3727,6 @@ body.is-translucent {
 
 .is-translucent.anp-card-layout {
   --card-background-color: transparent;
-}
-
-.is-translucent:not(.is-fullscreen) .workspace-tabs.mod-stacked .workspace-tab-header, .is-translucent:not(.is-fullscreen) .workspace-tabs.mod-stacked .view-header {
-  background-color: var(--background-primary);
 }
 
 .anp-autohide-titlebar:not(.is-mobile) {
@@ -6934,6 +6930,47 @@ Support me: https://buymeacoffee.com/AnubisNekhet
 
 .setting-item:is([data-id=anp-custom-rainbow-colors]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 19.9V16h3a2 2 0 0 0 2-2v-2H5v2c0 1.1.9 2 2 2h3v3.9a2 2 0 1 0 4 0Z'%3E%3C/path%3E%3Cpath d='M6 12V2h12v10'%3E%3C/path%3E%3Cpath d='M14 2v4'%3E%3C/path%3E%3Cpath d='M10 2v2'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.excalibrain-searchinput,
+.multiselect-wrapper {
+  --background-modifier-form-field: rgb(var(--ctp-crust));
+}
+
+.multiselect-wrapper {
+  -webkit-app-region: no-drag;
+  background: var(--background-modifier-form-field);
+  border: var(--input-border-width) solid var(--background-modifier-border);
+  color: var(--text-normal);
+  font-family: inherit;
+  padding: var(--size-4-1) var(--size-4-2);
+  font-size: var(--font-ui-small);
+  border-radius: var(--input-radius);
+  outline: none;
+}
+
+.multiselect-container .multiselect-wrapper .options-wrapper {
+  background: var(--background-modifier-form-field);
+  margin-top: -4px;
+  border-radius: 0 0 var(--input-radius) var(--input-radius);
+  border-top: none;
+  width: calc(100% + 2px);
+  margin-left: -1px;
+}
+
+.excalidraw-dirty {
+  color: rgb(var(--ctp-red));
+}
+
+.excalibrain-button.on {
+  background-color: rgb(var(--ctp-base));
+  border-color: var(--color-accent);
+  --input-shadow: inset 0 0 0 2px var(--color-accent);
+  --input-shadow-hover: inset 0 0 0 2px var(--color-accent);
+}
+
+.excalibrain-button.off {
+  background-color: rgb(var(--ctp-crust));
 }
 
 /*-Fix dataview table header size-*/

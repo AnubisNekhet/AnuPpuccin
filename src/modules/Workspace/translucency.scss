@@ -7,24 +7,31 @@ body.is-translucent {
   --nav-collapse-icon-color-collapsed: rgba(var(--mono-rgb-100), 0.3);
   --divider-color: rgba(var(--ctp-surface0), 0.15);
 }
-.is-translucent:not(.is-fullscreen) .workspace-ribbon.mod-left,
-.is-translucent:not(.is-fullscreen) .workspace-tabs,
-.is-translucent:not(.is-fullscreen) .mod-left-split .workspace-tab-header-container,
-.is-translucent.anp-translucent-right:not(.is-fullscreen) .mod-right-split .workspace-tab-header-container,
-.is-translucent:not(.is-fullscreen) .mod-top .workspace-tab-header-container,
-.is-translucent:not(.is-fullscreen) .workspace-tabs .workspace-leaf,
-.is-translucent:not(.is-fullscreen) .workspace-ribbon.mod-left:before,
-.is-translucent:not(.is-fullscreen) .workspace-split.mod-root,
-.is-translucent:not(.is-fullscreen) .workspace-split.mod-root.mod-left-split .view-content,
-.is-translucent:not(.is-fullscreen) .view-header,
-.is-translucent:not(.is-fullscreen) .horizontal-main-container {
-  background-color: transparent;
+.is-translucent:not(.is-fullscreen) {
+  .workspace-ribbon.mod-left,
+  .workspace-tabs,
+  .mod-left-split .workspace-tab-header-container,
+  .mod-right-split .workspace-tab-header-container,
+  .mod-top .workspace-tab-header-container,
+  .workspace-tabs .workspace-leaf,
+  .workspace-ribbon.mod-left:before,
+  .workspace-split.mod-root,
+  .workspace-split.mod-root.mod-left-split .view-content,
+  .view-header,
+  .horizontal-main-container {
+    background-color: transparent;
+  }
+  .view-header-title-container:not(.mod-at-end):after {
+    background-image: none;
+  }
+  .workspace-tabs.mod-stacked {
+    .workspace-tab-header, .view-header {
+      background-color: var(--background-primary);
+    }
+  }
 }
 .is-translucent .workspace {
   background-color: transparent;
-}
-.is-translucent:not(.is-fullscreen) .view-header-title-container:not(.mod-at-end):after {
-  background-image: none;
 }
 .is-translucent .workspace-split.mod-left-split.is-sidedock-collapsed .workspace-tabs,
 .is-translucent .workspace-split.mod-right-split.is-sidedock-collapsed .workspace-tabs {
@@ -32,11 +39,4 @@ body.is-translucent {
 }
 .is-translucent.anp-card-layout {
   --card-background-color: transparent;
-}
-.is-translucent:not(.is-fullscreen) {
-  .workspace-tabs.mod-stacked {
-    .workspace-tab-header, .view-header {
-      background-color: var(--background-primary);
-    }
-  }
 }

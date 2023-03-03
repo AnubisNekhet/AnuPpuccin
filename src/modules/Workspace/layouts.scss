@@ -1,8 +1,6 @@
-body {
+body.anp-card-layout {
     --card-background-color: rgb(var(--ctp-crust));
     --card-foreground-color: var(--background-primary);
-}
-body.anp-card-layout {
     --divider-color: transparent;
     --divider-color-hover: var(--backgrouund-modifier-border);
     --divider-width: 4px;
@@ -52,7 +50,8 @@ body.anp-card-layout {
             border-radius: 0px var(--anp-card-radius, var(--radius-xl)) 0px 0px;
         }
     }
-    .side-dock-actions, .side-dock-settings {
+    .side-dock-actions,
+    .side-dock-settings {
         padding: var(--size-4-2) var(--size-4-1) var(--size-4-3);
     }
     .workspace-ribbon.mod-left {
