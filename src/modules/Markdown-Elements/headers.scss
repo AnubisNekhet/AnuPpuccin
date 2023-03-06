@@ -19,10 +19,18 @@ $accents: "rosewater", "flamingo", "pink", "mauve", "red", "maroon", "peach", "y
       }
     }
   }
-  .anp-h#{$i}-divider .markdown-rendered h#{$i},
-  .anp-h#{$i}-divider .HyperMD-header-#{$i} {
-    border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
-    padding-bottom: 2px;
+  .anp-h#{$i}-divider {
+    .markdown-rendered h#{$i},
+    .HyperMD-header-#{$i} {
+      border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
+      padding-bottom: 2px;
+    }
+    &.anp-header-divider-color-toggle {
+      .markdown-rendered h#{$i},
+      .HyperMD-header-#{$i} {
+        border-bottom-color: currentColor;
+      }
+    }
   }
   .cm-formatting-header-#{$i} { color: var(--h#{$i}-color); }
 }

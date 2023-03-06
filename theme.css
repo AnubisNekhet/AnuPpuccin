@@ -1163,6 +1163,10 @@ settings:
     title: Enable Custom Heading Margin
     type: class-toggle
   -
+    id: anp-header-divider-color-toggle
+    title: Inherit Divider Color from Heading Color
+    type: class-toggle
+  -
     id: anp-header-margin-value
     title: Heading margin value
     description: Size unit is px
@@ -4413,6 +4417,10 @@ sup[data-footnote-id] {
   border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
   padding-bottom: 2px;
 }
+.anp-h1-divider.anp-header-divider-color-toggle .markdown-rendered h1,
+.anp-h1-divider.anp-header-divider-color-toggle .HyperMD-header-1 {
+  border-bottom-color: currentColor;
+}
 
 .cm-formatting-header-1 {
   color: var(--h1-color);
@@ -4478,6 +4486,10 @@ sup[data-footnote-id] {
 .anp-h2-divider .HyperMD-header-2 {
   border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
   padding-bottom: 2px;
+}
+.anp-h2-divider.anp-header-divider-color-toggle .markdown-rendered h2,
+.anp-h2-divider.anp-header-divider-color-toggle .HyperMD-header-2 {
+  border-bottom-color: currentColor;
 }
 
 .cm-formatting-header-2 {
@@ -4545,6 +4557,10 @@ sup[data-footnote-id] {
   border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
   padding-bottom: 2px;
 }
+.anp-h3-divider.anp-header-divider-color-toggle .markdown-rendered h3,
+.anp-h3-divider.anp-header-divider-color-toggle .HyperMD-header-3 {
+  border-bottom-color: currentColor;
+}
 
 .cm-formatting-header-3 {
   color: var(--h3-color);
@@ -4610,6 +4626,10 @@ sup[data-footnote-id] {
 .anp-h4-divider .HyperMD-header-4 {
   border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
   padding-bottom: 2px;
+}
+.anp-h4-divider.anp-header-divider-color-toggle .markdown-rendered h4,
+.anp-h4-divider.anp-header-divider-color-toggle .HyperMD-header-4 {
+  border-bottom-color: currentColor;
 }
 
 .cm-formatting-header-4 {
@@ -4677,6 +4697,10 @@ sup[data-footnote-id] {
   border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
   padding-bottom: 2px;
 }
+.anp-h5-divider.anp-header-divider-color-toggle .markdown-rendered h5,
+.anp-h5-divider.anp-header-divider-color-toggle .HyperMD-header-5 {
+  border-bottom-color: currentColor;
+}
 
 .cm-formatting-header-5 {
   color: var(--h5-color);
@@ -4742,6 +4766,10 @@ sup[data-footnote-id] {
 .anp-h6-divider .HyperMD-header-6 {
   border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
   padding-bottom: 2px;
+}
+.anp-h6-divider.anp-header-divider-color-toggle .markdown-rendered h6,
+.anp-h6-divider.anp-header-divider-color-toggle .HyperMD-header-6 {
+  border-bottom-color: currentColor;
 }
 
 .cm-formatting-header-6 {
