@@ -1,0 +1,7 @@
+@import 'cards.scss';
+@import 'border.scss';
+.anp-bg-fix .workspace,
+.anp-bg-fix .app-container,
+.anp-bg-fix .horizontal-main-container {
+    background-color: var(--tab-container-background);
+}

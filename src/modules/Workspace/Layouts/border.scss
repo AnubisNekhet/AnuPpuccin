@@ -1,0 +1,172 @@
+/*--------------------------
+Inspired by https://github.com/Akifyss/obsidian-border
+---------------------------*/
+body.anp-border-layout {
+    --card-background-color: rgb(var(--ctp-crust));
+    --card-foreground-color: var(--background-primary);
+    --border-border-style: 1px solid var(--background-modifier-border);
+    .horizontal-main-container {
+        background-color: var(--card-background-color);
+        --titlebar-background: var(--card-background-color);
+        --ribbon-background: var(--card-background-color);
+        --ribbon-background-collapsed: var(--card-background-color);
+    }
+    .workspace {
+        margin-right: var(--anp-border-padding, 20px);
+        &:not(.is-left-sidedock-open) {
+            .workspace-split.mod-vertical {
+                .workspace-tabs {
+                    .workspace-tab-container {
+                        border-left: var(--border-border-style);
+                    }
+                    &.mod-top {
+                        .workspace-tab-container {
+                            border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
+                        }
+                    }
+                    &:last-child {
+                        .workspace-tab-container {
+                            border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+                        }
+                    }
+                    &:not(.mod-top) {
+                        .workspace-tab-header-container {
+                            border-left: var(--border-border-style);
+                        }
+                    }
+                }
+            }
+        }
+        &:not(.is-right-sidedock-open) {
+            .workspace-split.mod-vertical {
+                .workspace-tabs {
+                    .workspace-tab-container {
+                        border-right: var(--border-border-style);
+                    }
+                    &.mod-top {
+                        .workspace-tab-container {
+                            border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
+                        }
+                    }
+                    &:last-child {
+                        .workspace-tab-container {
+                            border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+                        }
+                    }
+                    &:not(.mod-top) {
+                        .workspace-tab-header-container {
+                            border-right: var(--border-border-style);
+                        }
+                    }
+                }
+            }
+        }
+        .workspace-split.mod-left-split {
+            background-color: var(--card-background-color);
+            padding-left: calc(var(--anp-border-padding, 20px) - 20px);
+            padding-bottom: var(--anp-border-padding, 20px);
+            .workspace-tabs {
+                background-color: var(--card-background-color);
+                .workspace-tab-container {
+                    .workspace-leaf {
+                        background-color: var(--card-foreground-color);
+                    }
+                    border-left: var(--border-border-style);
+                }
+                &:not(.mod-top) {
+                    .workspace-tab-header-container {
+                        border-left: var(--border-border-style);
+                    }
+                }
+                &:last-child {
+                    .workspace-tab-container {
+                        border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+                        border-bottom: var(--border-border-style);
+                    }
+                }
+                &.mod-top-left-space {
+                    .workspace-tab-container {
+                        border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
+                        border-top: var(--border-border-style);
+                        border-left: var(--border-border-style);
+                    }
+                }
+            }
+        }
+        .workspace-split.mod-right-split {
+            padding-bottom: var(--anp-border-padding, 20px);
+            background-color: var(--card-background-color);
+            .workspace-tabs {
+                background-color: var(--card-background-color);
+                .workspace-tab-container {
+                    .workspace-leaf {
+                        background-color: var(--card-foreground-color);
+                    }
+                    border-right: var(--border-border-style);
+                }
+                &:not(.mod-top) {
+                    .workspace-tab-header-container {
+                        border-right: var(--border-border-style);
+                    }
+                }
+                &:last-child {
+                    .workspace-tab-container {
+                        border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+                        border-bottom: var(--border-border-style);
+                    }
+                }
+                &.mod-top-right-space {
+                    .workspace-tab-container {
+                        border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
+                        border-top: var(--border-border-style);
+                        border-right: var(--border-border-style);
+                    }
+                }
+            }
+        }
+        .workspace-split:not(.mod-right-split):not(.mod-left-split) {
+            > .workspace-split {
+                padding-bottom: 0;
+            }
+            background-color: var(--card-background-color);
+            .workspace-tabs {
+                background-color: var(--card-background-color);
+                &:last-child {
+                    .workspace-tab-container {
+                        border-bottom: var(--border-border-style);
+                    }
+                }
+                &.mod-top {
+                    .workspace-tab-container {
+                        border-top: var(--border-border-style);
+                    }
+                }
+            }
+            padding-bottom: var(--anp-border-padding, 20px);
+        }
+        .workspace-tabs:not(.mod-top) {
+            .workspace-tab-header-container {
+                background-color: var(--card-foreground-color);
+            }
+        }
+        .workspace-tabs.mod-top {
+            .workspace-tab-header-container {
+                border-bottom: none;
+            }
+        }
+    }
+    .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+    .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+        height: calc(100% + -1*var(--header-height) + -1*var(--anp-border-padding, 20px));
+        bottom: var(--anp-border-padding, 20px);
+    }
+    .workspace-split {
+                    box-shadow: 0 3px 4px 0px rgba(0,0,0,0.05);
+    }
+    .workspace-ribbon.mod-left:before {
+        border-bottom: 1px solid var(--card-background-color);
+    }
+    .workspace-ribbon.mod-left, .workspace-ribbon.mod-left.is-focused {
+        border-right-color: var(--card-background-color);
+    }
+}

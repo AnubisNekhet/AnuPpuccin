@@ -37,6 +37,6 @@ body.is-translucent {
 .is-translucent .workspace-split.mod-right-split.is-sidedock-collapsed .workspace-tabs {
   visibility: hidden;
 }
-.is-translucent.anp-card-layout {
+.is-translucent.anp-card-layout, .is-translucent.anp-border-layout {
   --card-background-color: transparent;
 }

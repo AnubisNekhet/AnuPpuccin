@@ -2318,6 +2318,9 @@ settings:
         label: Default
         value: none
       -
+        label: Border
+        value: anp-border-layout
+      -
         label: Cards
         value: anp-card-layout
   -
@@ -2364,6 +2367,25 @@ settings:
     id: anp-card-layout-filebrowser
     title: Enable card format for file browser
     type: class-toggle
+  -
+    id: anp-layout-border
+    title: Border Layout Settings
+    description: 
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: anp-border-radius
+    title: Border Layout Radius
+    type: variable-number
+    default: 16
+    format: px
+  -
+    id: anp-border-padding
+    title: Border Layout Padding
+    type: variable-number
+    default: 20
+    format: px
 
 # Credits
 

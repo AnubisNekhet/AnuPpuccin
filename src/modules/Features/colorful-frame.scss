@@ -6,6 +6,7 @@ None of the original code was used, and was written from scratch.
 body {
   --colorful-icon-color: var(--background-secondary);
   --colorful-icon-color-alt: var(--background-secondary-alt);
+  --colorful-frame-color: rgba(var(--anp-colorful-frame-color, var(--ctp-accent)), var(--anp-colorful-frame-opacity, 1));
 }
 body.anp-colorful-frame-icon-toggle-light.theme-light,
 body.anp-colorful-frame-icon-toggle-dark.theme-dark {
@@ -15,8 +16,8 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
 .anp-colorful-frame {
   &.anp-card-layout .workspace-split.mod-right-split .workspace-tabs,
   &.anp-card-layout .workspace-split.mod-left-split .workspace-tabs,
-  &:not(.anp-card-layout) .workspace-split.mod-left-split .workspace-tabs.mod-top,
-  &:not(.anp-card-layout) .workspace-split.mod-right-split .workspace-tabs.mod-top {
+  &:not(.anp-card-layout, .anp-border-layout) .workspace-split.mod-left-split .workspace-tabs.mod-top,
+  &:not(.anp-card-layout, .anp-border-layout) .workspace-split.mod-right-split .workspace-tabs.mod-top {
     .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
       background-color: rgba(var(--ctp-crust), 0.2);
     }
@@ -27,8 +28,8 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
     }
   }
   &.anuppuccin-accent-toggle.anp-colorful-frame {
-    &:not(.anp-card-layout) .mod-top .workspace-tab-header-container,
-    &:not(.anp-card-layout) .workspace-ribbon.mod-left:before,
+    &:not(.anp-card-layout, .anp-border-layout) .mod-top .workspace-tab-header-container,
+    &:not(.anp-card-layout, .anp-border-layout) .workspace-ribbon.mod-left:before,
     &.anp-card-layout,
     &.anp-card-layout .workspace-tabs.mod-top,
     &.anp-card-layout .sidebar-toggle-button,
@@ -66,20 +67,20 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
       }
     }
   }
-  &:not(.anp-card-layout) .mod-top .workspace-tab-header-container,
+  &:not(.anp-card-layout, .anp-border-layout) .mod-top .workspace-tab-header-container,
   &.anp-colorful-frame.anp-card-layout,
   &.anp-colorful-frame.anp-card-layout .workspace-tabs.mod-top,
   &.anp-colorful-frame.anp-card-layout .sidebar-toggle-button,
   &.anp-colorful-frame.anp-card-layout .workspace-ribbon.mod-left:before,
-  &:not(.anp-card-layout) .workspace-ribbon.mod-left:before {
+  &:not(.anp-card-layout, .anp-border-layout) .workspace-ribbon.mod-left:before {
     --tab-container-background: hsla(var(--anp-colorful-frame-color-hsl, var(--color-accent-hsl)), var(--anp-colorful-frame-opacity, 1));
     --titlebar-background: hsla(var(--anp-colorful-frame-color-hsl, var(--color-accent-hsl)), var(--anp-colorful-frame-opacity, 1));;
   }
   &.anp-card-layout {
     --divider-color-hover: var(--background-secondary-alt);
   }
-  &:not(.anp-card-layout),
-  &:not(.anp-card-layout).is-focused {
+  &:not(.anp-card-layout, .anp-border-layout),
+  &:not(.anp-card-layout, .anp-border-layout).is-focused {
     .mod-top {
       &:not(.mod-stacked) {
         .workspace-tab-header,
@@ -121,7 +122,7 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
       }
     }
   }
-  &:not(.anp-card-layout) {
+  &:not(.anp-card-layout, .anp-border-layout) {
     .mod-right-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
     .mod-left-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
     .mod-top .workspace-tab-header-container .clickable-icon.has-active-menu,
@@ -165,14 +166,14 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
     background-color: var(--tab-container-background);
   }
 }
-.anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-top:not(.mod-stacked) .workspace-tab-header:not(.is-active),
-.anp-colorful-frame:not(.anp-card-layout).anp-mini-tab-toggle .mod-top:not(.mod-stacked) .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-close-button {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top:not(.mod-stacked) .workspace-tab-header:not(.is-active),
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle .mod-top:not(.mod-stacked) .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-close-button {
     color: var(--colorful-icon-color-alt);
     --tab-text-color-focused-active-current: var(--colorful-icon-color-alt);
 }
-.anp-colorful-frame:not(.anp-card-layout) .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
-.anp-colorful-frame:not(.anp-card-layout) .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
-.anp-colorful-frame:not(.anp-card-layout) .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   height: calc(100% - var(--header-height));
 }
 .anp-colorful-frame .sidebar-toggle-button.sidebar-toggle-button {
@@ -200,8 +201,8 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
   }
 }
 
-.anp-colorful-frame:not(.anp-card-layout).anp-mini-tab-toggle.is-focused .mod-active.mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
-.anp-colorful-frame:not(.anp-card-layout).anp-mini-tab-toggle.is-focused .mod-active.mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle.is-focused .mod-active.mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle.is-focused .mod-active.mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-title {
     color: var(--background-primary);
 }
 
@@ -352,5 +353,55 @@ body.anp-colorful-frame.anp-card-layout .workspace,
 .anp-colorful-frame:not(.is-frameless) {
   .sidebar-toggle-button.mod-right, .sidebar-toggle-button.mod-left {
     border-radius: var(--radius-m);
+  }
+}
+body.anp-colorful-frame.anp-border-layout {
+  .horizontal-main-container {
+    background-color: var(--colorful-frame-color);
+    --titlebar-background: var(--colorful-frame-color);
+    --ribbon-background: var(--colorful-frame-color);
+    --ribbon-background-collapsed: var(--colorful-frame-color);
+    --card-background-color: var(--colorful-frame-color);
+  }
+  .workspace .workspace-split .workspace-tabs.mod-top .workspace-tab-container {
+    --border-border-style: none;
+  }
+  .workspace .workspace-split .workspace-tabs:last-child .workspace-tab-container {
+    --border-border-style: none;
+  }
+  .workspace-ribbon {
+    --icon-color: var(--colorful-icon-color);
+    --icon-color-hover: var(--colorful-icon-color-alt);
+    --icon-color-active: var(--colorful-icon-color-alt);
+    --icon-color-focused: var(--colorful-icon-color);
+    .clickable-icon:hover {
+      background-color: rgba(var(--ctp-crust), 0.2);
+    }
+    .clickable-icon:active {
+      background-color: rgba(var(--ctp-crust), 0.3);
+    }
+  }
+  .workspace-tabs.mod-top {
+    > .workspace-tab-header-container {
+      --icon-color: var(--colorful-icon-color);
+      --icon-color-hover: var(--colorful-icon-color-alt);
+      --icon-color-active: var(--colorful-icon-color-alt);
+      --icon-color-focused: var(--colorful-icon-color);
+      .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+        background-color: rgba(var(--ctp-crust), 0.2);
+      }
+      .workspace-tab-header.is-active .workspace-tab-header-inner {
+        background-color: rgba(var(--ctp-crust), 0.3);
+      }
+      .clickable-icon:hover {
+        background-color: rgba(var(--ctp-crust), 0.2);
+      }
+      .clickable-icon:active {
+        background-color: rgba(var(--ctp-crust), 0.3);
+      }
+      .workspace-tab-header.is-active .workspace-tab-header-inner-icon, .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+        color: var(--colorful-icon-color);
+      }
+    }
   }
 }

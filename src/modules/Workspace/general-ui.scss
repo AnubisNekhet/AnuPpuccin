@@ -52,7 +52,8 @@
   display: none;
 }
 .workspace, .horizontal-main-container,
-.anp-card-layout .mod-vertical .workspace-tabs {
+.anp-card-layout .mod-vertical .workspace-tabs,
+.anp-border-layout .mod-vertical .workspace-tabs {
   background-color: var(--tab-container-background);
 }
 /* Align file extension labels to the right in sidebar */

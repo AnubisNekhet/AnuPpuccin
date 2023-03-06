@@ -123,7 +123,9 @@
   [data-id="anp-safari-tab-radius"],
   [data-id="anp-safari-tab-gap"],
   [data-id="anp-safari-border-width"],
-  [data-id="anp-stacked-header-width"]
+  [data-id="anp-stacked-header-width"],
+  [data-id="anp-border-radius"],
+  [data-id="anp-border-padding"]
 ) .setting-item-control::after {
   content: 'px';
 }

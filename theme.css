@@ -2319,6 +2319,9 @@ settings:
         label: Default
         value: none
       -
+        label: Border
+        value: anp-border-layout
+      -
         label: Cards
         value: anp-card-layout
   -
@@ -2365,6 +2368,25 @@ settings:
     id: anp-card-layout-filebrowser
     title: Enable card format for file browser
     type: class-toggle
+  -
+    id: anp-layout-border
+    title: Border Layout Settings
+    description: 
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: anp-border-radius
+    title: Border Layout Radius
+    type: variable-number
+    default: 16
+    format: px
+  -
+    id: anp-border-padding
+    title: Border Layout Padding
+    type: variable-number
+    default: 20
+    format: px
 
 # Credits
 
@@ -3287,6 +3309,9 @@ input.slider,
 .anp-card-layout .workspace-split:not(.mod-root) .graph-controls.is-close,
 .anp-card-layout .workspace-split:not(.mod-root) .graph-controls,
 .anp-card-layout .workspace-split:not(.mod-root) .graph-controls:not(.is-close),
+.anp-border-layout .workspace-split:not(.mod-root) .graph-controls.is-close,
+.anp-border-layout .workspace-split:not(.mod-root) .graph-controls,
+.anp-border-layout .workspace-split:not(.mod-root) .graph-controls:not(.is-close),
 .workspace-leaf .graph-controls.is-close,
 .workspace-leaf .graph-controls,
 .workspace-leaf .graph-controls:not(.is-close) {
@@ -3499,7 +3524,8 @@ input.slider,
 }
 
 .workspace, .horizontal-main-container,
-.anp-card-layout .mod-vertical .workspace-tabs {
+.anp-card-layout .mod-vertical .workspace-tabs,
+.anp-border-layout .mod-vertical .workspace-tabs {
   background-color: var(--tab-container-background);
 }
 
@@ -3534,130 +3560,6 @@ input.slider,
 /*-Suggestion selected item bg fix-*/
 .suggestion-item.is-selected {
   background-color: var(--background-secondary);
-}
-
-body.anp-card-layout {
-  --card-background-color: rgb(var(--ctp-crust));
-  --card-foreground-color: var(--background-primary);
-  --divider-color: transparent;
-  --divider-color-hover: var(--backgrouund-modifier-border);
-  --divider-width: 4px;
-  --divider-width-hover: 4px;
-  --tab-container-background: var(--card-background-color);
-  --file-header-border: var(--border-width) dashed var(--background-modifier-border);
-  --ribbon-padding: 0;
-}
-body.anp-card-layout .workspace-tabs.mod-top:has(.obsidian-banner-wrapper) {
-  --file-header-border: none;
-}
-body.anp-card-layout.is-focused,
-body.anp-card-layout.is-focused .sidebar-toggle-button,
-body.anp-card-layout.is-focused .workspace-tabs.mod-top {
-  --tab-container-background: var(--card-background-color);
-}
-body.anp-card-layout .mod-left-split .workspace-tabs .workspace-leaf,
-body.anp-card-layout .mod-right-split .workspace-tabs .workspace-leaf,
-body.anp-card-layout .mod-left-split,
-body.anp-card-layout .mod-vertical .workspace-tab-container,
-body.anp-card-layout .mod-vertical,
-body.anp-card-layout .workspace-split.mod-vertical,
-body.anp-card-layout .workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
-body.anp-card-layout .mod-root .workspace-tabs .workspace-leaf,
-body.anp-card-layout .workspace-ribbon.mod-left,
-body.anp-card-layout .workspace-ribbon.mod-left:before {
-  background-color: var(--tab-container-background);
-  --tab-outline-color: var(--background-modifier-border);
-}
-body.anp-card-layout.anp-card-layout-actions .workspace-ribbon.mod-left {
-  margin-right: var(--anp-card-layout-padding, 10px);
-}
-body.anp-card-layout.anp-card-layout-actions .side-dock-actions {
-  border-radius: 0px var(--anp-card-radius, var(--radius-xl)) var(--anp-card-radius, var(--radius-xl)) 0px;
-  margin-top: 2px;
-  border-width: 1px 1px 0px 1px;
-}
-body.anp-card-layout.anp-card-layout-actions .side-dock-actions, body.anp-card-layout.anp-card-layout-actions .side-dock-settings {
-  border-style: solid;
-  border-color: var(--tab-outline-color);
-  background-color: var(--card-foreground-color);
-}
-body.anp-card-layout.anp-card-layout-actions .side-dock-settings {
-  border-width: 1px 1px 0px 0px;
-  border-radius: 0px var(--anp-card-radius, var(--radius-xl)) 0px 0px;
-}
-body.anp-card-layout .side-dock-actions,
-body.anp-card-layout .side-dock-settings {
-  padding: var(--size-4-2) var(--size-4-1) var(--size-4-3);
-}
-body.anp-card-layout .workspace-ribbon.mod-left {
-  margin-top: calc(var(--header-height) - 1px);
-}
-body.anp-card-layout .workspace-tab-header-container, body.anp-card-layout .workspace-ribbon.mod-left:before {
-  border-bottom: none;
-}
-body.anp-card-layout .mod-vertical .workspace-tabs {
-  padding-left: var(--anp-card-layout-padding, 10px);
-  padding-right: var(--anp-card-layout-padding, 10px);
-}
-body.anp-card-layout .mod-vertical .workspace-tabs .workspace-tab-header-container {
-  padding-left: var(--anp-card-header-left-padding, 20px);
-}
-body.anp-card-layout .mod-vertical .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner {
-  margin: 6px -5px calc(var(--tab-outline-width) * -1);
-  z-index: 1;
-}
-body.anp-card-layout .mod-left-split .workspace-tab-container,
-body.anp-card-layout .mod-right-split .workspace-tab-container {
-  padding-left: var(--anp-card-layout-padding, 10px);
-  padding-right: var(--anp-card-layout-padding, 10px);
-  background-color: var(--tab-container-background);
-}
-body.anp-card-layout .workspace-split .workspace-leaf-content:not([data-type=file-explorer]), body.anp-card-layout.anp-card-layout-filebrowser .workspace-leaf-content[data-type=file-explorer] {
-  border-radius: var(--anp-card-radius, var(--radius-xl));
-  background-color: var(--card-foreground-color);
-  border: 1px solid var(--tab-outline-color);
-  margin-bottom: var(--anp-card-layout-padding, 10px);
-}
-body.anp-card-layout.anp-card-shadows .workspace-split .workspace-leaf-content, body.anp-card-layout.anp-card-shadows.anp-card-layout-actions .side-dock-actions, body.anp-card-layout.anp-card-shadows.anp-card-layout-filebrowser .workspace-split .workspace-leaf-content[data-type=file-explorer] {
-  box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.05);
-}
-body.anp-card-layout .workspace-split .mod-stacked .workspace-leaf-content {
-  border-radius: 0;
-  border: none;
-  margin-bottom: 0px;
-  border-left: none;
-}
-body.anp-card-layout .workspace-split.mod-horizontal > * {
-  width: unset;
-}
-body.anp-card-layout .workspace .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
-  border-style: solid;
-  border-radius: var(--anp-card-radius, var(--radius-xl)) 0px 0px var(--anp-card-radius, var(--radius-xl));
-  border-width: var(--tab-outline-width);
-  border-color: var(--tab-outline-color);
-  border-right: var(--tab-outline-width) dashed var(--tab-outline-color);
-}
-body.anp-card-layout .workspace .workspace-tabs.mod-stacked .workspace-leaf {
-  border-left-width: 0px;
-  border-top-width: var(--tab-outline-width);
-  border-bottom-width: var(--tab-outline-width);
-  border-style: solid;
-  border-color: var(--tab-outline-color);
-  border-radius: 0 var(--anp-card-radius, var(--radius-xl)) var(--anp-card-radius, var(--radius-xl)) 0;
-}
-body.anp-card-layout .workspace .workspace-tabs.mod-stacked .workspace-tab-container {
-  padding-bottom: var(--anp-card-layout-padding, 10px);
-}
-body.anp-card-layout .workspace-drop-overlay:before {
-  width: calc(100% - 6px - var(--anp-card-layout-padding, 0) * 2);
-  height: calc(100% - 6px - var(--anp-card-layout-padding, 0) * 2);
-  margin: auto;
-}
-
-.anp-bg-fix .workspace,
-.anp-bg-fix .app-container,
-.anp-bg-fix .horizontal-main-container {
-  background-color: var(--tab-container-background);
 }
 
 .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h1:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h2:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h3:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h4:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h5:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h6:first-child {
@@ -3729,7 +3631,7 @@ body.is-translucent {
   visibility: hidden;
 }
 
-.is-translucent.anp-card-layout {
+.is-translucent.anp-card-layout, .is-translucent.anp-border-layout {
   --card-background-color: transparent;
 }
 
@@ -4038,6 +3940,258 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
 
 .anp-depth-tab-toggle.anp-depth-tab-text-invert {
   --anp-depth-tab-text: var(--ctp-crust);
+}
+
+body.anp-card-layout {
+  --card-background-color: rgb(var(--ctp-crust));
+  --card-foreground-color: var(--background-primary);
+  --divider-color: transparent;
+  --divider-color-hover: var(--backgrouund-modifier-border);
+  --divider-width: 4px;
+  --divider-width-hover: 4px;
+  --tab-container-background: var(--card-background-color);
+  --file-header-border: var(--border-width) dashed var(--background-modifier-border);
+  --ribbon-padding: 0;
+}
+body.anp-card-layout .workspace-tabs.mod-top:has(.obsidian-banner-wrapper) {
+  --file-header-border: none;
+}
+body.anp-card-layout.is-focused,
+body.anp-card-layout.is-focused .sidebar-toggle-button,
+body.anp-card-layout.is-focused .workspace-tabs.mod-top {
+  --tab-container-background: var(--card-background-color);
+}
+body.anp-card-layout .mod-left-split .workspace-tabs .workspace-leaf,
+body.anp-card-layout .mod-right-split .workspace-tabs .workspace-leaf,
+body.anp-card-layout .mod-left-split,
+body.anp-card-layout .mod-vertical .workspace-tab-container,
+body.anp-card-layout .mod-vertical,
+body.anp-card-layout .workspace-split.mod-vertical,
+body.anp-card-layout .workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
+body.anp-card-layout .mod-root .workspace-tabs .workspace-leaf,
+body.anp-card-layout .workspace-ribbon.mod-left,
+body.anp-card-layout .workspace-ribbon.mod-left:before {
+  background-color: var(--tab-container-background);
+  --tab-outline-color: var(--background-modifier-border);
+}
+body.anp-card-layout.anp-card-layout-actions .workspace-ribbon.mod-left {
+  margin-right: var(--anp-card-layout-padding, 10px);
+}
+body.anp-card-layout.anp-card-layout-actions .side-dock-actions {
+  border-radius: 0px var(--anp-card-radius, var(--radius-xl)) var(--anp-card-radius, var(--radius-xl)) 0px;
+  margin-top: 2px;
+  border-width: 1px 1px 0px 1px;
+}
+body.anp-card-layout.anp-card-layout-actions .side-dock-actions, body.anp-card-layout.anp-card-layout-actions .side-dock-settings {
+  border-style: solid;
+  border-color: var(--tab-outline-color);
+  background-color: var(--card-foreground-color);
+}
+body.anp-card-layout.anp-card-layout-actions .side-dock-settings {
+  border-width: 1px 1px 0px 0px;
+  border-radius: 0px var(--anp-card-radius, var(--radius-xl)) 0px 0px;
+}
+body.anp-card-layout .side-dock-actions,
+body.anp-card-layout .side-dock-settings {
+  padding: var(--size-4-2) var(--size-4-1) var(--size-4-3);
+}
+body.anp-card-layout .workspace-ribbon.mod-left {
+  margin-top: calc(var(--header-height) - 1px);
+}
+body.anp-card-layout .workspace-tab-header-container, body.anp-card-layout .workspace-ribbon.mod-left:before {
+  border-bottom: none;
+}
+body.anp-card-layout .mod-vertical .workspace-tabs {
+  padding-left: var(--anp-card-layout-padding, 10px);
+  padding-right: var(--anp-card-layout-padding, 10px);
+}
+body.anp-card-layout .mod-vertical .workspace-tabs .workspace-tab-header-container {
+  padding-left: var(--anp-card-header-left-padding, 20px);
+}
+body.anp-card-layout .mod-vertical .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner {
+  margin: 6px -5px calc(var(--tab-outline-width) * -1);
+  z-index: 1;
+}
+body.anp-card-layout .mod-left-split .workspace-tab-container,
+body.anp-card-layout .mod-right-split .workspace-tab-container {
+  padding-left: var(--anp-card-layout-padding, 10px);
+  padding-right: var(--anp-card-layout-padding, 10px);
+  background-color: var(--tab-container-background);
+}
+body.anp-card-layout .workspace-split .workspace-leaf-content:not([data-type=file-explorer]), body.anp-card-layout.anp-card-layout-filebrowser .workspace-leaf-content[data-type=file-explorer] {
+  border-radius: var(--anp-card-radius, var(--radius-xl));
+  background-color: var(--card-foreground-color);
+  border: 1px solid var(--tab-outline-color);
+  margin-bottom: var(--anp-card-layout-padding, 10px);
+}
+body.anp-card-layout.anp-card-shadows .workspace-split .workspace-leaf-content, body.anp-card-layout.anp-card-shadows.anp-card-layout-actions .side-dock-actions, body.anp-card-layout.anp-card-shadows.anp-card-layout-filebrowser .workspace-split .workspace-leaf-content[data-type=file-explorer] {
+  box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.05);
+}
+body.anp-card-layout .workspace-split .mod-stacked .workspace-leaf-content {
+  border-radius: 0;
+  border: none;
+  margin-bottom: 0px;
+  border-left: none;
+}
+body.anp-card-layout .workspace-split.mod-horizontal > * {
+  width: unset;
+}
+body.anp-card-layout .workspace .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
+  border-style: solid;
+  border-radius: var(--anp-card-radius, var(--radius-xl)) 0px 0px var(--anp-card-radius, var(--radius-xl));
+  border-width: var(--tab-outline-width);
+  border-color: var(--tab-outline-color);
+  border-right: var(--tab-outline-width) dashed var(--tab-outline-color);
+}
+body.anp-card-layout .workspace .workspace-tabs.mod-stacked .workspace-leaf {
+  border-left-width: 0px;
+  border-top-width: var(--tab-outline-width);
+  border-bottom-width: var(--tab-outline-width);
+  border-style: solid;
+  border-color: var(--tab-outline-color);
+  border-radius: 0 var(--anp-card-radius, var(--radius-xl)) var(--anp-card-radius, var(--radius-xl)) 0;
+}
+body.anp-card-layout .workspace .workspace-tabs.mod-stacked .workspace-tab-container {
+  padding-bottom: var(--anp-card-layout-padding, 10px);
+}
+body.anp-card-layout .workspace-drop-overlay:before {
+  width: calc(100% - 6px - var(--anp-card-layout-padding, 0) * 2);
+  height: calc(100% - 6px - var(--anp-card-layout-padding, 0) * 2);
+  margin: auto;
+}
+
+/*--------------------------
+---------------------------*/
+body.anp-border-layout {
+  --card-background-color: rgb(var(--ctp-crust));
+  --card-foreground-color: var(--background-primary);
+  --border-border-style: 1px solid var(--background-modifier-border);
+}
+body.anp-border-layout .horizontal-main-container {
+  background-color: var(--card-background-color);
+  --titlebar-background: var(--card-background-color);
+  --ribbon-background: var(--card-background-color);
+  --ribbon-background-collapsed: var(--card-background-color);
+}
+body.anp-border-layout .workspace {
+  margin-right: var(--anp-border-padding, 20px);
+}
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs .workspace-tab-container {
+  border-left: var(--border-border-style);
+}
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top .workspace-tab-container {
+  border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+  border-left: var(--border-border-style);
+}
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs .workspace-tab-container {
+  border-right: var(--border-border-style);
+}
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top .workspace-tab-container {
+  border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+  border-right: var(--border-border-style);
+}
+body.anp-border-layout .workspace .workspace-split.mod-left-split {
+  background-color: var(--card-background-color);
+  padding-left: calc(var(--anp-border-padding, 20px) - 20px);
+  padding-bottom: var(--anp-border-padding, 20px);
+}
+body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs {
+  background-color: var(--card-background-color);
+}
+body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs .workspace-tab-container {
+  border-left: var(--border-border-style);
+}
+body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs .workspace-tab-container .workspace-leaf {
+  background-color: var(--card-foreground-color);
+}
+body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+  border-left: var(--border-border-style);
+}
+body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+  border-bottom: var(--border-border-style);
+}
+body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-container {
+  border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
+  border-top: var(--border-border-style);
+  border-left: var(--border-border-style);
+}
+body.anp-border-layout .workspace .workspace-split.mod-right-split {
+  padding-bottom: var(--anp-border-padding, 20px);
+  background-color: var(--card-background-color);
+}
+body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs {
+  background-color: var(--card-background-color);
+}
+body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs .workspace-tab-container {
+  border-right: var(--border-border-style);
+}
+body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs .workspace-tab-container .workspace-leaf {
+  background-color: var(--card-foreground-color);
+}
+body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+  border-right: var(--border-border-style);
+}
+body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+  border-bottom: var(--border-border-style);
+}
+body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-container {
+  border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
+  border-top: var(--border-border-style);
+  border-right: var(--border-border-style);
+}
+body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) {
+  background-color: var(--card-background-color);
+  padding-bottom: var(--anp-border-padding, 20px);
+}
+body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) > .workspace-split {
+  padding-bottom: 0;
+}
+body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) .workspace-tabs {
+  background-color: var(--card-background-color);
+}
+body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom: var(--border-border-style);
+}
+body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) .workspace-tabs.mod-top .workspace-tab-container {
+  border-top: var(--border-border-style);
+}
+body.anp-border-layout .workspace .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+  background-color: var(--card-foreground-color);
+}
+body.anp-border-layout .workspace .workspace-tabs.mod-top .workspace-tab-header-container {
+  border-bottom: none;
+}
+body.anp-border-layout .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+body.anp-border-layout .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  height: calc(100% + -1 * var(--header-height) + -1 * var(--anp-border-padding, 20px));
+  bottom: var(--anp-border-padding, 20px);
+}
+body.anp-border-layout .workspace-split {
+  box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.05);
+}
+body.anp-border-layout .workspace-ribbon.mod-left:before {
+  border-bottom: 1px solid var(--card-background-color);
+}
+body.anp-border-layout .workspace-ribbon.mod-left, body.anp-border-layout .workspace-ribbon.mod-left.is-focused {
+  border-right-color: var(--card-background-color);
+}
+
+.anp-bg-fix .workspace,
+.anp-bg-fix .app-container,
+.anp-bg-fix .horizontal-main-container {
+  background-color: var(--tab-container-background);
 }
 
 /*----------------CALLOUTS-------------------*/
@@ -5203,6 +5357,7 @@ None of the original code was used, and was written from scratch.
 body {
   --colorful-icon-color: var(--background-secondary);
   --colorful-icon-color-alt: var(--background-secondary-alt);
+  --colorful-frame-color: rgba(var(--anp-colorful-frame-color, var(--ctp-accent)), var(--anp-colorful-frame-opacity, 1));
 }
 
 body.anp-colorful-frame-icon-toggle-light.theme-light,
@@ -5211,13 +5366,13 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
   --colorful-icon-color-alt: var(--text-muted);
 }
 
-.anp-colorful-frame.anp-card-layout .workspace-split.mod-right-split .workspace-tabs .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner, .anp-colorful-frame.anp-card-layout .workspace-split.mod-left-split .workspace-tabs .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner, .anp-colorful-frame:not(.anp-card-layout) .workspace-split.mod-left-split .workspace-tabs.mod-top .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner, .anp-colorful-frame:not(.anp-card-layout) .workspace-split.mod-right-split .workspace-tabs.mod-top .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+.anp-colorful-frame.anp-card-layout .workspace-split.mod-right-split .workspace-tabs .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner, .anp-colorful-frame.anp-card-layout .workspace-split.mod-left-split .workspace-tabs .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .workspace-split.mod-left-split .workspace-tabs.mod-top .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .workspace-split.mod-right-split .workspace-tabs.mod-top .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
   background-color: rgba(var(--ctp-crust), 0.2);
 }
 .anp-colorful-frame.is-frameless.is-frameless:not(.is-hidden-frameless) .sidebar-toggle-button.mod-left {
   border-radius: 0 var(--radius-m) var(--radius-m) 0;
 }
-.anp-colorful-frame.anuppuccin-accent-toggle.anp-colorful-frame:not(.anp-card-layout) .mod-top .workspace-tab-header-container, .anp-colorful-frame.anuppuccin-accent-toggle.anp-colorful-frame:not(.anp-card-layout) .workspace-ribbon.mod-left:before, .anp-colorful-frame.anuppuccin-accent-toggle.anp-colorful-frame.anp-card-layout, .anp-colorful-frame.anuppuccin-accent-toggle.anp-colorful-frame.anp-card-layout .workspace-tabs.mod-top, .anp-colorful-frame.anuppuccin-accent-toggle.anp-colorful-frame.anp-card-layout .sidebar-toggle-button, .anp-colorful-frame.anuppuccin-accent-toggle.anp-colorful-frame.anp-card-layout .workspace-ribbon.mod-left:before {
+.anp-colorful-frame.anuppuccin-accent-toggle.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-top .workspace-tab-header-container, .anp-colorful-frame.anuppuccin-accent-toggle.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .workspace-ribbon.mod-left:before, .anp-colorful-frame.anuppuccin-accent-toggle.anp-colorful-frame.anp-card-layout, .anp-colorful-frame.anuppuccin-accent-toggle.anp-colorful-frame.anp-card-layout .workspace-tabs.mod-top, .anp-colorful-frame.anuppuccin-accent-toggle.anp-colorful-frame.anp-card-layout .sidebar-toggle-button, .anp-colorful-frame.anuppuccin-accent-toggle.anp-colorful-frame.anp-card-layout .workspace-ribbon.mod-left:before {
   --tab-container-background: rgba(var(--anp-colorful-frame-color, var(--ctp-accent)), var(--anp-colorful-frame-opacity, 1));
   --titlebar-background: rgba(var(--anp-colorful-frame-color, var(--ctp-accent)), var(--anp-colorful-frame-opacity, 1));
 }
@@ -5236,92 +5391,92 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
 .anp-colorful-frame.is-focused .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active .workspace-tab-header-inner .workspace-tab-header-inner-title, .anp-colorful-frame.is-focused .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active .workspace-tab-header-inner .workspace-tab-header-inner-close-button {
   color: var(--color-accent);
 }
-.anp-colorful-frame:not(.anp-card-layout) .mod-top .workspace-tab-header-container, .anp-colorful-frame.anp-colorful-frame.anp-card-layout, .anp-colorful-frame.anp-colorful-frame.anp-card-layout .workspace-tabs.mod-top, .anp-colorful-frame.anp-colorful-frame.anp-card-layout .sidebar-toggle-button, .anp-colorful-frame.anp-colorful-frame.anp-card-layout .workspace-ribbon.mod-left:before, .anp-colorful-frame:not(.anp-card-layout) .workspace-ribbon.mod-left:before {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-top .workspace-tab-header-container, .anp-colorful-frame.anp-colorful-frame.anp-card-layout, .anp-colorful-frame.anp-colorful-frame.anp-card-layout .workspace-tabs.mod-top, .anp-colorful-frame.anp-colorful-frame.anp-card-layout .sidebar-toggle-button, .anp-colorful-frame.anp-colorful-frame.anp-card-layout .workspace-ribbon.mod-left:before, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .workspace-ribbon.mod-left:before {
   --tab-container-background: hsla(var(--anp-colorful-frame-color-hsl, var(--color-accent-hsl)), var(--anp-colorful-frame-opacity, 1));
   --titlebar-background: hsla(var(--anp-colorful-frame-color-hsl, var(--color-accent-hsl)), var(--anp-colorful-frame-opacity, 1));
 }
 .anp-colorful-frame.anp-card-layout {
   --divider-color-hover: var(--background-secondary-alt);
 }
-.anp-colorful-frame:not(.anp-card-layout) .mod-top:not(.mod-stacked) .workspace-tab-header,
-.anp-colorful-frame:not(.anp-card-layout) .mod-top:not(.mod-stacked) .workspace-tab-header.is-active,
-.anp-colorful-frame:not(.anp-card-layout) .mod-top:not(.mod-stacked) .is-focused.workspace-tab-header,
-.anp-colorful-frame:not(.anp-card-layout) .mod-top:not(.mod-stacked) .workspace-tab-header-container, .anp-colorful-frame:not(.anp-card-layout).is-focused .mod-top:not(.mod-stacked) .workspace-tab-header,
-.anp-colorful-frame:not(.anp-card-layout).is-focused .mod-top:not(.mod-stacked) .workspace-tab-header.is-active,
-.anp-colorful-frame:not(.anp-card-layout).is-focused .mod-top:not(.mod-stacked) .is-focused.workspace-tab-header,
-.anp-colorful-frame:not(.anp-card-layout).is-focused .mod-top:not(.mod-stacked) .workspace-tab-header-container {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-top:not(.mod-stacked) .workspace-tab-header,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-top:not(.mod-stacked) .workspace-tab-header.is-active,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-top:not(.mod-stacked) .is-focused.workspace-tab-header,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-top:not(.mod-stacked) .workspace-tab-header-container, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused .mod-top:not(.mod-stacked) .workspace-tab-header,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused .mod-top:not(.mod-stacked) .workspace-tab-header.is-active,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused .mod-top:not(.mod-stacked) .is-focused.workspace-tab-header,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused .mod-top:not(.mod-stacked) .workspace-tab-header-container {
   --tab-text-color: var(--colorful-icon-color-alt);
   --icon-color: var(--colorful-icon-color-alt);
   --icon-color-hover: var(--colorful-icon-color);
   --tab-text-color-focused: var(--colorful-icon-color-alt);
 }
-.anp-colorful-frame:not(.anp-card-layout) .mod-top.mod-stacked .workspace-tab-header-new-tab .clickable-icon, .anp-colorful-frame:not(.anp-card-layout).is-focused .mod-top.mod-stacked .workspace-tab-header-new-tab .clickable-icon {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-top.mod-stacked .workspace-tab-header-new-tab .clickable-icon, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused .mod-top.mod-stacked .workspace-tab-header-new-tab .clickable-icon {
   --icon-color: var(--colorful-icon-color-alt);
   --icon-color-hover: var(--colorful-icon-color);
 }
-.anp-colorful-frame:not(.anp-card-layout) .mod-top .workspace-tab-header-tab-list .clickable-icon, .anp-colorful-frame:not(.anp-card-layout) .mod-top .workspace-tab-header-tab-list .clickable-icon:hover, .anp-colorful-frame:not(.anp-card-layout) .mod-top .workspace-tab-header-new-tab .clickable-icon, .anp-colorful-frame:not(.anp-card-layout) .mod-top .workspace-tab-header-new-tab .clickable-icon:hover, .anp-colorful-frame:not(.anp-card-layout).is-focused .mod-top .workspace-tab-header-tab-list .clickable-icon, .anp-colorful-frame:not(.anp-card-layout).is-focused .mod-top .workspace-tab-header-tab-list .clickable-icon:hover, .anp-colorful-frame:not(.anp-card-layout).is-focused .mod-top .workspace-tab-header-new-tab .clickable-icon, .anp-colorful-frame:not(.anp-card-layout).is-focused .mod-top .workspace-tab-header-new-tab .clickable-icon:hover {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-top .workspace-tab-header-tab-list .clickable-icon, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-top .workspace-tab-header-tab-list .clickable-icon:hover, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-top .workspace-tab-header-new-tab .clickable-icon, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-top .workspace-tab-header-new-tab .clickable-icon:hover, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused .mod-top .workspace-tab-header-tab-list .clickable-icon, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused .mod-top .workspace-tab-header-tab-list .clickable-icon:hover, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused .mod-top .workspace-tab-header-new-tab .clickable-icon, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused .mod-top .workspace-tab-header-new-tab .clickable-icon:hover {
   color: var(--colorful-icon-color-alt);
 }
-.anp-colorful-frame:not(.anp-card-layout).anp-mini-tab-toggle .mod-top, .anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-top, .anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-top, .anp-colorful-frame:not(.anp-card-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle .mod-top, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top {
   --tab-text-color-focused-active-current: var(--colorful-icon-color-alt);
 }
-.anp-colorful-frame:not(.anp-card-layout).anp-mini-tab-toggle .mod-top .workspace-tab-header, .anp-colorful-frame:not(.anp-card-layout).anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active, .anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header, .anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active, .anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header, .anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active, .anp-colorful-frame:not(.anp-card-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header, .anp-colorful-frame:not(.anp-card-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle .mod-top .workspace-tab-header, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active {
   --tab-text-color-focused-active: var(--colorful-icon-color-alt);
   --tab-text-color-active: var(--colorful-icon-color-alt);
   --tab-text-color-focused: var(--colorful-icon-color-alt);
   --tab-text-color-focused-active-current: var(--colorful-icon-color-alt);
 }
-.anp-colorful-frame:not(.anp-card-layout).anp-mini-tab-toggle .mod-top .workspace-tab-header .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout).anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle .mod-top .workspace-tab-header .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
   --tab-text-color-focused: var(--colorful-icon-color-alt);
   --tab-text-color-focused-active-current: var(--colorful-icon-color-alt);
 }
-.anp-colorful-frame:not(.anp-card-layout) .mod-right-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
-.anp-colorful-frame:not(.anp-card-layout) .mod-left-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
-.anp-colorful-frame:not(.anp-card-layout) .mod-top .workspace-tab-header-container .clickable-icon.has-active-menu,
-.anp-colorful-frame:not(.anp-card-layout) .mod-top .workspace-tab-header-container .clickable-icon:active {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-right-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-left-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-top .workspace-tab-header-container .clickable-icon.has-active-menu,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-top .workspace-tab-header-container .clickable-icon:active {
   --icon-color-focused: var(--colorful-icon-color-alt);
 }
-.anp-colorful-frame:not(.anp-card-layout) .workspace-tab-header,
-.anp-colorful-frame:not(.anp-card-layout) .workspace-tab-header .workspace-tab-header-inner-close-button {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .workspace-tab-header,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .workspace-tab-header .workspace-tab-header-inner-close-button {
   --tab-text-color-focused: var(--colorful-icon-color-alt);
   --tab-text-color-focused-active-current: var(--colorful-icon-color-alt);
 }
-.anp-colorful-frame:not(.anp-card-layout) .workspace-tab-header.is-active,
-.anp-colorful-frame:not(.anp-card-layout) .workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .workspace-tab-header.is-active,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
   --tab-text-color-focused: var(--text-faint);
   --tab-text-color-focused-active-current: var(--text-normal);
 }
-.anp-colorful-frame:not(.anp-card-layout) .mod-left-split .mod-top .workspace-tab-header.is-active,
-.anp-colorful-frame:not(.anp-card-layout) .mod-right-split .mod-top .workspace-tab-header.is-active {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-left-split .mod-top .workspace-tab-header.is-active,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-right-split .mod-top .workspace-tab-header.is-active {
   background-color: rgba(var(--ctp-crust), 0.2);
 }
-.anp-colorful-frame:not(.anp-card-layout) .mod-left-split .mod-top .workspace-tab-header.is-active:hover,
-.anp-colorful-frame:not(.anp-card-layout) .mod-right-split .mod-top .workspace-tab-header.is-active:hover {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-left-split .mod-top .workspace-tab-header.is-active:hover,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-right-split .mod-top .workspace-tab-header.is-active:hover {
   background-color: rgba(var(--ctp-crust), 0.3);
 }
-.anp-colorful-frame:not(.anp-card-layout).anp-colorful-frame-icon-toggle-light.theme-light .mod-left-split .mod-top .workspace-tab-header.is-active,
-.anp-colorful-frame:not(.anp-card-layout).anp-colorful-frame-icon-toggle-light.theme-light .mod-right-split .mod-top .workspace-tab-header.is-active, .anp-colorful-frame:not(.anp-card-layout).anp-colorful-frame-icon-toggle-dark.theme-dark .mod-left-split .mod-top .workspace-tab-header.is-active,
-.anp-colorful-frame:not(.anp-card-layout).anp-colorful-frame-icon-toggle-dark.theme-dark .mod-right-split .mod-top .workspace-tab-header.is-active {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-colorful-frame-icon-toggle-light.theme-light .mod-left-split .mod-top .workspace-tab-header.is-active,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-colorful-frame-icon-toggle-light.theme-light .mod-right-split .mod-top .workspace-tab-header.is-active, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-colorful-frame-icon-toggle-dark.theme-dark .mod-left-split .mod-top .workspace-tab-header.is-active,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-colorful-frame-icon-toggle-dark.theme-dark .mod-right-split .mod-top .workspace-tab-header.is-active {
   background-color: rgba(var(--ctp-text), 0.3);
 }
-.anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon, .anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title, .anp-colorful-frame:not(.anp-card-layout).is-focused .mod-active:not(.mod-stacked).mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon, .anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
-.anp-colorful-frame:not(.anp-card-layout) .mod-left-split .mod-top .workspace-tab-header:active .workspace-tab-header-inner-icon,
-.anp-colorful-frame:not(.anp-card-layout) .mod-right-split .mod-top .workspace-tab-header:active .workspace-tab-header-inner-icon {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused .mod-active:not(.mod-stacked).mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-left-split .mod-top .workspace-tab-header:active .workspace-tab-header-inner-icon,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-right-split .mod-top .workspace-tab-header:active .workspace-tab-header-inner-icon {
   color: var(--colorful-icon-color-alt);
 }
 .anp-colorful-frame.anp-card-layout .mod-vertical .workspace-tabs {
   background-color: var(--tab-container-background);
 }
 
-.anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-top:not(.mod-stacked) .workspace-tab-header:not(.is-active),
-.anp-colorful-frame:not(.anp-card-layout).anp-mini-tab-toggle .mod-top:not(.mod-stacked) .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-close-button {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top:not(.mod-stacked) .workspace-tab-header:not(.is-active),
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle .mod-top:not(.mod-stacked) .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-close-button {
   color: var(--colorful-icon-color-alt);
   --tab-text-color-focused-active-current: var(--colorful-icon-color-alt);
 }
 
-.anp-colorful-frame:not(.anp-card-layout) .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
-.anp-colorful-frame:not(.anp-card-layout) .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
-.anp-colorful-frame:not(.anp-card-layout) .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   height: calc(100% - var(--header-height));
 }
 
@@ -5351,8 +5506,8 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
   --icon-color-focused: var(--text-normal) !important;
 }
 
-.anp-colorful-frame:not(.anp-card-layout).anp-mini-tab-toggle.is-focused .mod-active.mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
-.anp-colorful-frame:not(.anp-card-layout).anp-mini-tab-toggle.is-focused .mod-active.mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle.is-focused .mod-active.mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle.is-focused .mod-active.mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-title {
   color: var(--background-primary);
 }
 
@@ -5492,6 +5647,53 @@ body.anp-colorful-frame.anp-card-layout .workspace,
 
 .anp-colorful-frame:not(.is-frameless) .sidebar-toggle-button.mod-right, .anp-colorful-frame:not(.is-frameless) .sidebar-toggle-button.mod-left {
   border-radius: var(--radius-m);
+}
+
+body.anp-colorful-frame.anp-border-layout .horizontal-main-container {
+  background-color: var(--colorful-frame-color);
+  --titlebar-background: var(--colorful-frame-color);
+  --ribbon-background: var(--colorful-frame-color);
+  --ribbon-background-collapsed: var(--colorful-frame-color);
+  --card-background-color: var(--colorful-frame-color);
+}
+body.anp-colorful-frame.anp-border-layout .workspace .workspace-split .workspace-tabs.mod-top .workspace-tab-container {
+  --border-border-style: none;
+}
+body.anp-colorful-frame.anp-border-layout .workspace .workspace-split .workspace-tabs:last-child .workspace-tab-container {
+  --border-border-style: none;
+}
+body.anp-colorful-frame.anp-border-layout .workspace-ribbon {
+  --icon-color: var(--colorful-icon-color);
+  --icon-color-hover: var(--colorful-icon-color-alt);
+  --icon-color-active: var(--colorful-icon-color-alt);
+  --icon-color-focused: var(--colorful-icon-color);
+}
+body.anp-colorful-frame.anp-border-layout .workspace-ribbon .clickable-icon:hover {
+  background-color: rgba(var(--ctp-crust), 0.2);
+}
+body.anp-colorful-frame.anp-border-layout .workspace-ribbon .clickable-icon:active {
+  background-color: rgba(var(--ctp-crust), 0.3);
+}
+body.anp-colorful-frame.anp-border-layout .workspace-tabs.mod-top > .workspace-tab-header-container {
+  --icon-color: var(--colorful-icon-color);
+  --icon-color-hover: var(--colorful-icon-color-alt);
+  --icon-color-active: var(--colorful-icon-color-alt);
+  --icon-color-focused: var(--colorful-icon-color);
+}
+body.anp-colorful-frame.anp-border-layout .workspace-tabs.mod-top > .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+  background-color: rgba(var(--ctp-crust), 0.2);
+}
+body.anp-colorful-frame.anp-border-layout .workspace-tabs.mod-top > .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
+  background-color: rgba(var(--ctp-crust), 0.3);
+}
+body.anp-colorful-frame.anp-border-layout .workspace-tabs.mod-top > .workspace-tab-header-container .clickable-icon:hover {
+  background-color: rgba(var(--ctp-crust), 0.2);
+}
+body.anp-colorful-frame.anp-border-layout .workspace-tabs.mod-top > .workspace-tab-header-container .clickable-icon:active {
+  background-color: rgba(var(--ctp-crust), 0.3);
+}
+body.anp-colorful-frame.anp-border-layout .workspace-tabs.mod-top > .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner-icon, body.anp-colorful-frame.anp-border-layout .workspace-tabs.mod-top > .workspace-tab-header-container .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+  color: var(--colorful-icon-color);
 }
 
 /*------------CUSTOM CHECKBOXES-----------*/
@@ -6525,7 +6727,9 @@ Support me: https://buymeacoffee.com/AnubisNekhet
 [data-id=anp-safari-tab-radius],
 [data-id=anp-safari-tab-gap],
 [data-id=anp-safari-border-width],
-[data-id=anp-stacked-header-width]) .setting-item-control::after {
+[data-id=anp-stacked-header-width],
+[data-id=anp-border-radius],
+[data-id=anp-border-padding]) .setting-item-control::after {
   content: "px";
 }
 
