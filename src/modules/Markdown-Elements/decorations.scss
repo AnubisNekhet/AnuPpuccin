@@ -2,7 +2,7 @@
 .anp-decoration-toggle {
   --italic-color: rgb(var(--anp-italic-color, var(--ctp-green)));
   --bold-color: rgb(var(--anp-bold-color, var(--ctp-red)));
-  --text-highlight-bg: rgba(var(--anp-highlight-color), 0.2);
+  --text-highlight-bg: rgba(var(--anp-highlight-color, var(--ctp-yellow)), 0.2);
 }
 /*-Make it so that mark overwrites italic and bold colors-*/
 .markdown-rendered mark {
