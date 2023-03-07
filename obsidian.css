@@ -4061,6 +4061,7 @@ body.anp-card-layout .workspace-drop-overlay:before {
 }
 
 /*--------------------------
+Inspired by https://github.com/Akifyss/obsidian-border
 ---------------------------*/
 body.anp-border-layout {
   --card-background-color: rgb(var(--ctp-crust));
@@ -4179,7 +4180,7 @@ body.anp-border-layout .workspace-split.mod-right-split > .workspace-leaf-resize
   bottom: var(--anp-border-padding, 20px);
 }
 body.anp-border-layout .workspace-split {
-  box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.05);
+  --divider-vertical-height: calc(100% + -1*var(--header-height));
 }
 body.anp-border-layout .workspace-ribbon.mod-left:before {
   border-bottom: 1px solid var(--card-background-color);
@@ -4425,7 +4426,7 @@ body.anp-border-layout .workspace-ribbon.mod-left, body.anp-border-layout .works
 .anp-decoration-toggle {
   --italic-color: rgb(var(--anp-italic-color, var(--ctp-green)));
   --bold-color: rgb(var(--anp-bold-color, var(--ctp-red)));
-  --text-highlight-bg: rgba(var(--anp-highlight-color), 0.2);
+  --text-highlight-bg: rgba(var(--anp-highlight-color, var(--ctp-yellow)), 0.2);
 }
 
 /*-Make it so that mark overwrites italic and bold colors-*/

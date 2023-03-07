@@ -161,7 +161,7 @@ body.anp-border-layout {
         bottom: var(--anp-border-padding, 20px);
     }
     .workspace-split {
-                    box-shadow: 0 3px 4px 0px rgba(0,0,0,0.05);
+        --divider-vertical-height: calc(100% + -1*var(--header-height));
     }
     .workspace-ribbon.mod-left:before {
         border-bottom: 1px solid var(--card-background-color);
