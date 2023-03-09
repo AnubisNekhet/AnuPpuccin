@@ -413,9 +413,8 @@ settings:
   -
     id: callout-title-padding
     title: Callout Title Padding
-    type: variable-number
-    default: 8
-    format: px
+    type: variable-text
+    default: 8px
   -
     id: callout-title-opacity
     title: Callout Title Background Opacity
@@ -428,9 +427,8 @@ settings:
   -
     id: callout-content-padding
     title: Callout Content Padding
-    type: variable-number
-    default: 8
-    format: px
+    type: variable-text
+    default: 8px
   -
     id: anp-callout-fold-position
     title: Callout Fold Position
