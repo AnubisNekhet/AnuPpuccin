@@ -1,14 +1,17 @@
 .anp-background-image-toggle:not(.anp-colorful-frame) {
-  .horizontal-main-container, 
-  &.anp-bg-fix .horizontal-main-container {
+  .app-container, 
+  &.anp-bg-fix .app-container {
     background: var(--anp-background-image, url("https://i.redd.it/m23bwh4n0x151.png"));
     background-size: cover;
     background-color: transparent;
   }
-  .workspace,
-  &.anp-bg-fix .workspace {
+  .horizontal-main-container,
+  &.anp-bg-fix .horizontal-main-container {
     backdrop-filter: brightness(var(--anp-custom-bg-brightness, 0.5)) blur(var(--anp-custom-bg-blur,5px));
     background-color: transparent;
+  }
+  .workspace {
+    background: transparent;
   }
   --card-background-color: transparent;
   --card-foreground-color: rgba(var(--ctp-base), var(--anp-custom-bg-card-fg-opacity, 0.4));
@@ -35,11 +38,11 @@
   .workspace-split.mod-root {
     background-color: transparent;
   }
-  &:not(.anp-card-layout) .workspace-tab-header-container,
+  &:not(.anp-card-layout, .anp-border-layout) .workspace-tab-header-container,
   &:not(.anp-card-layout) .workspace-tabs .workspace-leaf,
   &:not(.anp-card-layout) .workspace-split.mod-root .view-content,
-  &:not(.anp-card-layout) .workspace-ribbon,
-  &:not(.anp-card-layout) .workspace-ribbon.mod-left:before,
+  &:not(.anp-card-layout, .anp-border-layout) .workspace-ribbon,
+  &:not(.anp-card-layout, .anp-border-layout) .workspace-ribbon.mod-left:before,
   &:not(.anp-card-layout) .view-header,
   &.is-focused:not(.anp-card-layout) .workspace-leaf.mod-active .view-header,
   .kanban-plugin__lane,
@@ -62,5 +65,11 @@
   }
   .kanban-plugin .kanban-plugin__lane button:hover {
     background-color: var(--card-foreground-color);
+  }
+  &.anp-border-layout {
+    .workspace-tab-header-container,
+    .workspace-ribbon.mod-left:before {
+      background: transparent;
+    }
   }
 }

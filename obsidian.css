@@ -6358,14 +6358,17 @@ None of the original code was used and the feature was implemented from scratch.
   --tab-inactive-color: rgba(var(--ctp-mantle), var(--anp-custom-bg-card-fg-opacity, 0.4));
   --code-background: var(--card-foreground-color);
 }
-.anp-background-image-toggle:not(.anp-colorful-frame) .horizontal-main-container, .anp-background-image-toggle:not(.anp-colorful-frame).anp-bg-fix .horizontal-main-container {
+.anp-background-image-toggle:not(.anp-colorful-frame) .app-container, .anp-background-image-toggle:not(.anp-colorful-frame).anp-bg-fix .app-container {
   background: var(--anp-background-image, url("https://i.redd.it/m23bwh4n0x151.png"));
   background-size: cover;
   background-color: transparent;
 }
-.anp-background-image-toggle:not(.anp-colorful-frame) .workspace, .anp-background-image-toggle:not(.anp-colorful-frame).anp-bg-fix .workspace {
+.anp-background-image-toggle:not(.anp-colorful-frame) .horizontal-main-container, .anp-background-image-toggle:not(.anp-colorful-frame).anp-bg-fix .horizontal-main-container {
   backdrop-filter: brightness(var(--anp-custom-bg-brightness, 0.5)) blur(var(--anp-custom-bg-blur, 5px));
   background-color: transparent;
+}
+.anp-background-image-toggle:not(.anp-colorful-frame) .workspace {
+  background: transparent;
 }
 .anp-background-image-toggle:not(.anp-colorful-frame).anp-card-layout .workspace-split.mod-root .view-content {
   background: transparent;
@@ -6385,7 +6388,7 @@ None of the original code was used and the feature was implemented from scratch.
 .anp-background-image-toggle:not(.anp-colorful-frame) .workspace-split.mod-root {
   background-color: transparent;
 }
-.anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-tab-header-container, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-tabs .workspace-leaf, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-split.mod-root .view-content, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-ribbon, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-ribbon.mod-left:before, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .view-header, .anp-background-image-toggle:not(.anp-colorful-frame).is-focused:not(.anp-card-layout) .workspace-leaf.mod-active .view-header,
+.anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout, .anp-border-layout) .workspace-tab-header-container, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-tabs .workspace-leaf, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-split.mod-root .view-content, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout, .anp-border-layout) .workspace-ribbon, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout, .anp-border-layout) .workspace-ribbon.mod-left:before, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .view-header, .anp-background-image-toggle:not(.anp-colorful-frame).is-focused:not(.anp-card-layout) .workspace-leaf.mod-active .view-header,
 .anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin__lane,
 .anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin__item-content-wrapper {
   background-color: var(--card-foreground-color);
@@ -6403,6 +6406,10 @@ None of the original code was used and the feature was implemented from scratch.
 }
 .anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin .kanban-plugin__lane button:hover {
   background-color: var(--card-foreground-color);
+}
+.anp-background-image-toggle:not(.anp-colorful-frame).anp-border-layout .workspace-tab-header-container,
+.anp-background-image-toggle:not(.anp-colorful-frame).anp-border-layout .workspace-ribbon.mod-left:before {
+  background: transparent;
 }
 
 /* AGPLv3 License
