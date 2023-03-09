@@ -2326,6 +2326,10 @@ settings:
     id: anp-bg-fix
     title: Background fix for applying colors
     type: class-toggle
+  -
+    id: anp-hide-borders
+    title: Hide borders
+    type: class-toggle
 
 # Workspace :: Workspace Layout :: Card Layout
 
@@ -3944,12 +3948,16 @@ body.anp-card-layout {
   --card-background-color: rgb(var(--ctp-crust));
   --card-foreground-color: var(--background-primary);
   --divider-color: transparent;
+  --tab-outline-color: var(--background-modifier-border);
   --divider-color-hover: var(--backgrouund-modifier-border);
   --divider-width: 4px;
   --divider-width-hover: 4px;
   --tab-container-background: var(--card-background-color);
   --file-header-border: var(--border-width) dashed var(--background-modifier-border);
   --ribbon-padding: 0;
+}
+body.anp-card-layout.anp-hide-borders {
+  --tab-outline-color: transparent;
 }
 body.anp-card-layout .sidebar-toggle-button, body.anp-card-layout .workspace-tabs.mod-top {
   --tab-container-background: var(--card-background-color);
@@ -3973,7 +3981,6 @@ body.anp-card-layout .mod-root .workspace-tabs .workspace-leaf,
 body.anp-card-layout .workspace-ribbon.mod-left,
 body.anp-card-layout .workspace-ribbon.mod-left:before {
   background-color: var(--tab-container-background);
-  --tab-outline-color: var(--background-modifier-border);
 }
 body.anp-card-layout.anp-card-layout-actions .workspace-ribbon.mod-left {
   margin-right: var(--anp-card-layout-padding, 10px);
@@ -4067,7 +4074,7 @@ Inspired by https://github.com/Akifyss/obsidian-border
 body.anp-border-layout {
   --card-background-color: rgb(var(--ctp-crust));
   --card-foreground-color: var(--background-primary);
-  --border-border-style: 1px solid var(--background-modifier-border);
+  --border-border-style: 1px solid var(--tab-outline-color);
 }
 body.anp-border-layout .horizontal-main-container {
   background-color: var(--card-background-color);
@@ -4194,6 +4201,11 @@ body.anp-border-layout .workspace-ribbon.mod-left, body.anp-border-layout .works
 .anp-bg-fix .app-container,
 .anp-bg-fix .horizontal-main-container {
   background-color: var(--tab-container-background);
+}
+
+.anp-hide-borders {
+  --tab-outline-color: transparent;
+  --divider-color: transparent;
 }
 
 /*----------------CALLOUTS-------------------*/

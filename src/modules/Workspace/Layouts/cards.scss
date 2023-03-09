@@ -2,12 +2,16 @@ body.anp-card-layout {
     --card-background-color: rgb(var(--ctp-crust));
     --card-foreground-color: var(--background-primary);
     --divider-color: transparent;
+    --tab-outline-color: var(--background-modifier-border);
     --divider-color-hover: var(--backgrouund-modifier-border);
     --divider-width: 4px;
     --divider-width-hover: 4px;
     --tab-container-background: var(--card-background-color);
     --file-header-border: var(--border-width) dashed var(--background-modifier-border);
     --ribbon-padding: 0;
+    &.anp-hide-borders {
+        --tab-outline-color: transparent;
+    }
     .sidebar-toggle-button, .workspace-tabs.mod-top {
         --tab-container-background: var(--card-background-color);
     }
@@ -32,7 +36,6 @@ body.anp-card-layout {
     .workspace-ribbon.mod-left,
     .workspace-ribbon.mod-left:before {
         background-color: var(--tab-container-background);
-        --tab-outline-color: var(--background-modifier-border);
     }
     &.anp-card-layout-actions {
         .workspace-ribbon.mod-left {

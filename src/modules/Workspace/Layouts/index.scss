@@ -5,3 +5,7 @@
 .anp-bg-fix .horizontal-main-container {
     background-color: var(--tab-container-background);
 }
+.anp-hide-borders {
+    --tab-outline-color: transparent;
+    --divider-color: transparent;
+}

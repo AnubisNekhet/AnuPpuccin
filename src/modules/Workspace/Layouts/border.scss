@@ -4,7 +4,7 @@ Inspired by https://github.com/Akifyss/obsidian-border
 body.anp-border-layout {
     --card-background-color: rgb(var(--ctp-crust));
     --card-foreground-color: var(--background-primary);
-    --border-border-style: 1px solid var(--background-modifier-border);
+    --border-border-style: 1px solid var(--tab-outline-color);
     .horizontal-main-container {
         background-color: var(--card-background-color);
         --titlebar-background: var(--card-background-color);
