@@ -12,10 +12,10 @@
     thead tr > th:last-child {
         border: var(--anp-table-thickness, 1px) solid var(--table-border-color);
     }
-    th ,
-    thead tr > th:first-child,
-    thead tr > th,
-    thead tr > th:last-child {
+    th:not([align]),
+    thead tr > th:first-child:not([align]),
+    thead tr > th:not([align]),
+    thead tr > th:last-child:not([align]) {
         text-align: var(--anp-table-align-th, center);
     }
     td:not([align]) {
