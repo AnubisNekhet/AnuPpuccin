@@ -331,7 +331,7 @@ body.anp-colorful-frame.anp-card-layout .workspace,
   --tab-text-color-focused: var(--text-muted);
   --tab-text-color-focused-active: var(--text-normal);
 }
-.anp-mini-tab-toggle.anp-colorful-frame .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header.is-active {
+.anp-mini-tab-toggle.anp-colorful-frame .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tabs.mod-top .workspace-tab-header-container-inner .workspace-tab-header.is-active {
   border-bottom: 2px solid var(--background-secondary-alt);
 }
 .anp-colorful-frame.anp-card-layout .workspace-drop-overlay:before {
@@ -407,6 +407,14 @@ body.anp-colorful-frame.anp-border-layout {
           }
         }
       }
+    }
+  }
+  .workspace-tabs.mod-top {
+    .workspace-tab-header-inner-title,
+    .workspace-tab-header-status-container,
+    .workspace-tab-header-inner-close-button,
+    .workspace-tab-header-inner-icon {
+      color: var(--background-primary);
     }
   }
 }

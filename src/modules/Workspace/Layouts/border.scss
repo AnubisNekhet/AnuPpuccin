@@ -43,7 +43,7 @@ body.anp-border-layout {
                     .workspace-tab-container {
                         border-right: var(--border-border-style);
                     }
-                    &.mod-top {
+                    &.mod-top-right-space {
                         .workspace-tab-container {
                             border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
                         }

@@ -4092,7 +4092,7 @@ body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.m
 body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs .workspace-tab-container {
   border-right: var(--border-border-style);
 }
-body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top .workspace-tab-container {
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top-right-space .workspace-tab-container {
   border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
 }
 body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:last-child .workspace-tab-container {
@@ -5625,7 +5625,7 @@ body.anp-colorful-frame.anp-card-layout .workspace,
   --tab-text-color-focused-active: var(--text-normal);
 }
 
-.anp-mini-tab-toggle.anp-colorful-frame .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header.is-active {
+.anp-mini-tab-toggle.anp-colorful-frame .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tabs.mod-top .workspace-tab-header-container-inner .workspace-tab-header.is-active {
   border-bottom: 2px solid var(--background-secondary-alt);
 }
 
@@ -5695,6 +5695,12 @@ body.anp-colorful-frame.anp-border-layout .workspace-split.mod-right-split .work
 }
 body.anp-colorful-frame.anp-border-layout .workspace-split.mod-right-split .workspace-tabs.mod-top > .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner-icon, body.anp-colorful-frame.anp-border-layout .workspace-split.mod-right-split .workspace-tabs.mod-top > .workspace-tab-header-container .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title, body.anp-colorful-frame.anp-border-layout .workspace-split.mod-left-split .workspace-tabs.mod-top > .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner-icon, body.anp-colorful-frame.anp-border-layout .workspace-split.mod-left-split .workspace-tabs.mod-top > .workspace-tab-header-container .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
   color: var(--colorful-icon-color);
+}
+body.anp-colorful-frame.anp-border-layout .workspace-tabs.mod-top .workspace-tab-header-inner-title,
+body.anp-colorful-frame.anp-border-layout .workspace-tabs.mod-top .workspace-tab-header-status-container,
+body.anp-colorful-frame.anp-border-layout .workspace-tabs.mod-top .workspace-tab-header-inner-close-button,
+body.anp-colorful-frame.anp-border-layout .workspace-tabs.mod-top .workspace-tab-header-inner-icon {
+  color: var(--background-primary);
 }
 
 /*------------CUSTOM CHECKBOXES-----------*/
