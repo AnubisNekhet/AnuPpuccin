@@ -3953,6 +3953,9 @@ body.anp-card-layout {
   --file-header-border: var(--border-width) dashed var(--background-modifier-border);
   --ribbon-padding: 0;
 }
+body.anp-card-layout .sidebar-toggle-button, body.anp-card-layout .workspace-tabs.mod-top {
+  --tab-container-background: var(--card-background-color);
+}
 body.anp-card-layout .workspace-tabs.mod-top:has(.obsidian-banner-wrapper) {
   --file-header-border: none;
 }

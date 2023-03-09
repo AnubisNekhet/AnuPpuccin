@@ -8,6 +8,9 @@ body.anp-card-layout {
     --tab-container-background: var(--card-background-color);
     --file-header-border: var(--border-width) dashed var(--background-modifier-border);
     --ribbon-padding: 0;
+    .sidebar-toggle-button, .workspace-tabs.mod-top {
+        --tab-container-background: var(--card-background-color);
+    }
     .workspace-tabs.mod-top:has(.obsidian-banner-wrapper) {
         --file-header-border: none;
     }
