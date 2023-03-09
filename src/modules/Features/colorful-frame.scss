@@ -409,7 +409,7 @@ body.anp-colorful-frame.anp-border-layout {
       }
     }
   }
-  .workspace-tabs.mod-top {
+  &.anp-mini-tab-toggle .workspace-tabs.mod-top {
     .workspace-tab-header-inner-title,
     .workspace-tab-header-status-container,
     .workspace-tab-header-inner-close-button,
