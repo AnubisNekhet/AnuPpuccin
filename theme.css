@@ -5675,25 +5675,25 @@ body.anp-colorful-frame.anp-border-layout .workspace-ribbon .clickable-icon:hove
 body.anp-colorful-frame.anp-border-layout .workspace-ribbon .clickable-icon:active {
   background-color: rgba(var(--ctp-crust), 0.3);
 }
-body.anp-colorful-frame.anp-border-layout .workspace-tabs.mod-top > .workspace-tab-header-container {
+body.anp-colorful-frame.anp-border-layout .workspace-split.mod-right-split .workspace-tabs.mod-top > .workspace-tab-header-container, body.anp-colorful-frame.anp-border-layout .workspace-split.mod-left-split .workspace-tabs.mod-top > .workspace-tab-header-container {
   --icon-color: var(--colorful-icon-color);
   --icon-color-hover: var(--colorful-icon-color-alt);
   --icon-color-active: var(--colorful-icon-color-alt);
   --icon-color-focused: var(--colorful-icon-color);
 }
-body.anp-colorful-frame.anp-border-layout .workspace-tabs.mod-top > .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+body.anp-colorful-frame.anp-border-layout .workspace-split.mod-right-split .workspace-tabs.mod-top > .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner, body.anp-colorful-frame.anp-border-layout .workspace-split.mod-left-split .workspace-tabs.mod-top > .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
   background-color: rgba(var(--ctp-crust), 0.2);
 }
-body.anp-colorful-frame.anp-border-layout .workspace-tabs.mod-top > .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
+body.anp-colorful-frame.anp-border-layout .workspace-split.mod-right-split .workspace-tabs.mod-top > .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner, body.anp-colorful-frame.anp-border-layout .workspace-split.mod-left-split .workspace-tabs.mod-top > .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
   background-color: rgba(var(--ctp-crust), 0.3);
 }
-body.anp-colorful-frame.anp-border-layout .workspace-tabs.mod-top > .workspace-tab-header-container .clickable-icon:hover {
+body.anp-colorful-frame.anp-border-layout .workspace-split.mod-right-split .workspace-tabs.mod-top > .workspace-tab-header-container .clickable-icon:hover, body.anp-colorful-frame.anp-border-layout .workspace-split.mod-left-split .workspace-tabs.mod-top > .workspace-tab-header-container .clickable-icon:hover {
   background-color: rgba(var(--ctp-crust), 0.2);
 }
-body.anp-colorful-frame.anp-border-layout .workspace-tabs.mod-top > .workspace-tab-header-container .clickable-icon:active {
+body.anp-colorful-frame.anp-border-layout .workspace-split.mod-right-split .workspace-tabs.mod-top > .workspace-tab-header-container .clickable-icon:active, body.anp-colorful-frame.anp-border-layout .workspace-split.mod-left-split .workspace-tabs.mod-top > .workspace-tab-header-container .clickable-icon:active {
   background-color: rgba(var(--ctp-crust), 0.3);
 }
-body.anp-colorful-frame.anp-border-layout .workspace-tabs.mod-top > .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner-icon, body.anp-colorful-frame.anp-border-layout .workspace-tabs.mod-top > .workspace-tab-header-container .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+body.anp-colorful-frame.anp-border-layout .workspace-split.mod-right-split .workspace-tabs.mod-top > .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner-icon, body.anp-colorful-frame.anp-border-layout .workspace-split.mod-right-split .workspace-tabs.mod-top > .workspace-tab-header-container .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title, body.anp-colorful-frame.anp-border-layout .workspace-split.mod-left-split .workspace-tabs.mod-top > .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner-icon, body.anp-colorful-frame.anp-border-layout .workspace-split.mod-left-split .workspace-tabs.mod-top > .workspace-tab-header-container .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
   color: var(--colorful-icon-color);
 }
 

@@ -381,26 +381,31 @@ body.anp-colorful-frame.anp-border-layout {
       background-color: rgba(var(--ctp-crust), 0.3);
     }
   }
-  .workspace-tabs.mod-top {
-    > .workspace-tab-header-container {
-      --icon-color: var(--colorful-icon-color);
-      --icon-color-hover: var(--colorful-icon-color-alt);
-      --icon-color-active: var(--colorful-icon-color-alt);
-      --icon-color-focused: var(--colorful-icon-color);
-      .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
-        background-color: rgba(var(--ctp-crust), 0.2);
-      }
-      .workspace-tab-header.is-active .workspace-tab-header-inner {
-        background-color: rgba(var(--ctp-crust), 0.3);
-      }
-      .clickable-icon:hover {
-        background-color: rgba(var(--ctp-crust), 0.2);
-      }
-      .clickable-icon:active {
-        background-color: rgba(var(--ctp-crust), 0.3);
-      }
-      .workspace-tab-header.is-active .workspace-tab-header-inner-icon, .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
-        color: var(--colorful-icon-color);
+  .workspace-split {
+    &.mod-right-split,
+    &.mod-left-split {
+      .workspace-tabs.mod-top {
+        > .workspace-tab-header-container {
+          --icon-color: var(--colorful-icon-color);
+          --icon-color-hover: var(--colorful-icon-color-alt);
+          --icon-color-active: var(--colorful-icon-color-alt);
+          --icon-color-focused: var(--colorful-icon-color);
+          .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+            background-color: rgba(var(--ctp-crust), 0.2);
+          }
+          .workspace-tab-header.is-active .workspace-tab-header-inner {
+            background-color: rgba(var(--ctp-crust), 0.3);
+          }
+          .clickable-icon:hover {
+            background-color: rgba(var(--ctp-crust), 0.2);
+          }
+          .clickable-icon:active {
+            background-color: rgba(var(--ctp-crust), 0.3);
+          }
+          .workspace-tab-header.is-active .workspace-tab-header-inner-icon, .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+            color: var(--colorful-icon-color);
+          }
+        }
       }
     }
   }
