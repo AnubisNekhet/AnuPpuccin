@@ -2250,21 +2250,6 @@ settings:
     type: variable-number
     default: 1
     format: px
-  -
-    id: anp-safari-tab-align
-    title: Tab align
-    type: variable-select
-    default: center
-    options:
-      -
-        label: Left
-        value: left
-      -
-        label: Center
-        value: center
-      -
-        label: Right
-        value: right
 
 # Workspace :: Tabs :: Vanilla Safari-style Tab Settings
 
