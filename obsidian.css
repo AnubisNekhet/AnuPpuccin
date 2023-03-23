@@ -5655,12 +5655,6 @@ body.anp-colorful-frame.anp-border-layout .horizontal-main-container {
   --ribbon-background-collapsed: var(--colorful-frame-color);
   --card-background-color: var(--colorful-frame-color);
 }
-body.anp-colorful-frame.anp-border-layout .workspace .workspace-split .workspace-tabs.mod-top .workspace-tab-container {
-  --border-border-style: none;
-}
-body.anp-colorful-frame.anp-border-layout .workspace .workspace-split .workspace-tabs:last-child .workspace-tab-container {
-  --border-border-style: none;
-}
 body.anp-colorful-frame.anp-border-layout .workspace-ribbon {
   --icon-color: var(--colorful-icon-color);
   --icon-color-hover: var(--colorful-icon-color-alt);
@@ -5671,6 +5665,18 @@ body.anp-colorful-frame.anp-border-layout .workspace-ribbon .clickable-icon:hove
   background-color: rgba(var(--ctp-crust), 0.2);
 }
 body.anp-colorful-frame.anp-border-layout .workspace-ribbon .clickable-icon:active {
+  background-color: rgba(var(--ctp-crust), 0.3);
+}
+body.anp-colorful-frame.anp-border-layout .workspace-tabs.mod-top .workspace-tab-header-container .clickable-icon {
+  --icon-color: var(--colorful-icon-color);
+  --icon-color-hover: var(--colorful-icon-color-alt);
+  --icon-color-active: var(--colorful-icon-color-alt);
+  --icon-color-focused: var(--colorful-icon-color);
+}
+body.anp-colorful-frame.anp-border-layout .workspace-tabs.mod-top .workspace-tab-header-container .clickable-icon:hover {
+  background-color: rgba(var(--ctp-crust), 0.2);
+}
+body.anp-colorful-frame.anp-border-layout .workspace-tabs.mod-top .workspace-tab-header-container .clickable-icon:active {
   background-color: rgba(var(--ctp-crust), 0.3);
 }
 body.anp-colorful-frame.anp-border-layout .workspace-split.mod-right-split .workspace-tabs.mod-top > .workspace-tab-header-container, body.anp-colorful-frame.anp-border-layout .workspace-split.mod-left-split .workspace-tabs.mod-top > .workspace-tab-header-container {

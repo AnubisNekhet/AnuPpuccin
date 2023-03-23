@@ -363,12 +363,6 @@ body.anp-colorful-frame.anp-border-layout {
     --ribbon-background-collapsed: var(--colorful-frame-color);
     --card-background-color: var(--colorful-frame-color);
   }
-  .workspace .workspace-split .workspace-tabs.mod-top .workspace-tab-container {
-    --border-border-style: none;
-  }
-  .workspace .workspace-split .workspace-tabs:last-child .workspace-tab-container {
-    --border-border-style: none;
-  }
   .workspace-ribbon {
     --icon-color: var(--colorful-icon-color);
     --icon-color-hover: var(--colorful-icon-color-alt);
@@ -379,6 +373,22 @@ body.anp-colorful-frame.anp-border-layout {
     }
     .clickable-icon:active {
       background-color: rgba(var(--ctp-crust), 0.3);
+    }
+  }
+  .workspace-tabs.mod-top {
+    .workspace-tab-header-container {
+      .clickable-icon {
+    --icon-color: var(--colorful-icon-color);
+    --icon-color-hover: var(--colorful-icon-color-alt);
+    --icon-color-active: var(--colorful-icon-color-alt);
+    --icon-color-focused: var(--colorful-icon-color);
+      }
+      .clickable-icon:hover {
+        background-color: rgba(var(--ctp-crust), 0.2);
+      }
+      .clickable-icon:active {
+        background-color: rgba(var(--ctp-crust), 0.3);
+      }
     }
   }
   .workspace-split {
