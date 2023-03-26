@@ -5,11 +5,15 @@ body.anp-border-layout {
     --card-background-color: rgb(var(--ctp-crust));
     --card-foreground-color: var(--background-primary);
     --border-border-style: 1px solid var(--tab-outline-color);
+    --anp-border-bottom-padding: var(--anp-border-padding, 20px);
     .horizontal-main-container {
         background-color: var(--card-background-color);
         --titlebar-background: var(--card-background-color);
         --ribbon-background: var(--card-background-color);
         --ribbon-background-collapsed: var(--card-background-color);
+    }
+    &.anp-fixed-status-bar {
+        --anp-border-bottom-padding: calc(var(--anp-border-padding, 20px) - 18px);
     }
     .workspace {
         margin-right: var(--anp-border-padding, 20px);
@@ -64,7 +68,7 @@ body.anp-border-layout {
         .workspace-split.mod-left-split {
             background-color: var(--card-background-color);
             padding-left: calc(var(--anp-border-padding, 20px) - 20px);
-            padding-bottom: var(--anp-border-padding, 20px);
+            padding-bottom: var(--anp-border-bottom-padding, 20px);
             .workspace-tabs {
                 background-color: var(--card-background-color);
                 .workspace-tab-container {
@@ -94,7 +98,7 @@ body.anp-border-layout {
             }
         }
         .workspace-split.mod-right-split {
-            padding-bottom: var(--anp-border-padding, 20px);
+            padding-bottom: var(--anp-border-bottom-padding, 20px);
             background-color: var(--card-background-color);
             .workspace-tabs {
                 background-color: var(--card-background-color);
@@ -142,7 +146,7 @@ body.anp-border-layout {
                     }
                 }
             }
-            padding-bottom: var(--anp-border-padding, 20px);
+            padding-bottom: var(--anp-border-bottom-padding, 20px);
         }
         .workspace-tabs:not(.mod-top) {
             .workspace-tab-header-container {

@@ -948,10 +948,6 @@ settings:
         label: Normal
         value: initial
   -
-    id: anp-floating-status-bar
-    title: Floating Status Bar
-    type: class-toggle
-  -
     id: anp-toggle-metadata
     title: Hide Metadata
     type: class-toggle
@@ -2152,6 +2148,31 @@ settings:
     description: Multiplies the stack tab pane with which depends on file line width
     type: variable-number
     default: 1
+
+# Workspace :: Status Bar
+
+  -
+    id: anp-status-bar-header
+    title: Status Bar
+    description: Select status bar style
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-status-bar-select
+    title: Status Bar Style
+    type: class-select
+    default: none
+    options:
+      -
+        label: Default
+        value: none
+      -
+        label: Floating
+        value: anp-floating-status-bar
+      -
+        label: Fixed
+        value: anp-fixed-status-bar
 
 # Workspace :: Tabs
 
@@ -3984,6 +4005,10 @@ body.anp-card-layout.anp-card-layout-actions .side-dock-settings {
   border-width: 1px 1px 0px 0px;
   border-radius: 0px var(--anp-card-radius, var(--radius-xl)) 0px 0px;
 }
+body.anp-card-layout.anp-card-layout-actions.anp-fixed-status-bar .side-dock-settings {
+  border-width: 1px;
+  border-radius: 0px var(--anp-card-radius, var(--radius-xl)) var(--anp-card-radius, var(--radius-xl)) 0px;
+}
 body.anp-card-layout .side-dock-actions,
 body.anp-card-layout .side-dock-settings {
   padding: var(--size-4-2) var(--size-4-1) var(--size-4-3);
@@ -4060,12 +4085,16 @@ body.anp-border-layout {
   --card-background-color: rgb(var(--ctp-crust));
   --card-foreground-color: var(--background-primary);
   --border-border-style: 1px solid var(--tab-outline-color);
+  --anp-border-bottom-padding: var(--anp-border-padding, 20px);
 }
 body.anp-border-layout .horizontal-main-container {
   background-color: var(--card-background-color);
   --titlebar-background: var(--card-background-color);
   --ribbon-background: var(--card-background-color);
   --ribbon-background-collapsed: var(--card-background-color);
+}
+body.anp-border-layout.anp-fixed-status-bar {
+  --anp-border-bottom-padding: calc(var(--anp-border-padding, 20px) - 18px);
 }
 body.anp-border-layout .workspace {
   margin-right: var(--anp-border-padding, 20px);
@@ -4097,7 +4126,7 @@ body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.
 body.anp-border-layout .workspace .workspace-split.mod-left-split {
   background-color: var(--card-background-color);
   padding-left: calc(var(--anp-border-padding, 20px) - 20px);
-  padding-bottom: var(--anp-border-padding, 20px);
+  padding-bottom: var(--anp-border-bottom-padding, 20px);
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs {
   background-color: var(--card-background-color);
@@ -4121,7 +4150,7 @@ body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tab
   border-left: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-right-split {
-  padding-bottom: var(--anp-border-padding, 20px);
+  padding-bottom: var(--anp-border-bottom-padding, 20px);
   background-color: var(--card-background-color);
 }
 body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs {
@@ -4147,7 +4176,7 @@ body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-ta
 }
 body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) {
   background-color: var(--card-background-color);
-  padding-bottom: var(--anp-border-padding, 20px);
+  padding-bottom: var(--anp-border-bottom-padding, 20px);
 }
 body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) > .workspace-split {
   padding-bottom: 0;
@@ -4191,6 +4220,49 @@ body.anp-border-layout .workspace-ribbon.mod-left, body.anp-border-layout .works
 .anp-hide-borders {
   --tab-outline-color: transparent;
   --divider-color: transparent;
+}
+
+/* AGPLv3 License
+Floating Status Bar
+Author: AnubisNekhet
+Note: If you decide to implement it in your theme or redistribute it, please keep this comment (Especially for *certain* individuals who may try to rebrand it as their own :))
+Support me: https://buymeacoffee.com/AnubisNekhet
+*/
+.anp-floating-status-bar {
+  --status-bar-position: absolute;
+  --status-bar-radius: var(--radius-m);
+  --status-bar-border-width: 1px;
+}
+.anp-floating-status-bar .status-bar {
+  transform: translateX(calc(100% + 5px));
+  transition: transform 300ms 150ms;
+  bottom: 5px;
+  right: 5px;
+  box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.05);
+}
+.anp-floating-status-bar .status-bar::before {
+  width: 100%;
+  min-height: 100%;
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-100%);
+}
+.anp-floating-status-bar .status-bar:hover {
+  transform: none;
+  transition: transform 300ms 150ms;
+}
+
+.anp-fixed-status-bar .status-bar {
+  --status-bar-position: relative;
+  --status-bar-radius: 0;
+}
+.anp-fixed-status-bar.anp-card-layout .status-bar, .anp-fixed-status-bar.anp-border-layout .status-bar {
+  --status-bar-border-width: 0;
+  --status-bar-background: transparent;
+  --status-bar-border-color: transparent;
+  --status-bar-background: var(--card-background-color);
 }
 
 /*----------------CALLOUTS-------------------*/
@@ -5365,6 +5437,14 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
   --colorful-icon-color-alt: var(--text-muted);
 }
 
+.anp-colorful-frame.anp-fixed-status-bar.anp-card-layout .status-bar, .anp-colorful-frame.anp-fixed-status-bar.anp-border-layout .status-bar {
+  --status-bar-background: var(--colorful-frame-color);
+  --status-bar-text-color: var(--colorful-icon-color);
+}
+.anp-colorful-frame.anp-fixed-status-bar.anp-card-layout .status-bar .status-bar-item.mod-clickable:hover, .anp-colorful-frame.anp-fixed-status-bar.anp-border-layout .status-bar .status-bar-item.mod-clickable:hover {
+  color: var(--colorful-icon-color);
+  background-color: rgba(var(--ctp-crust), 0.2);
+}
 .anp-colorful-frame.anp-card-layout .workspace-split.mod-right-split .workspace-tabs .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner, .anp-colorful-frame.anp-card-layout .workspace-split.mod-left-split .workspace-tabs .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .workspace-split.mod-left-split .workspace-tabs.mod-top .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .workspace-split.mod-right-split .workspace-tabs.mod-top .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
   background-color: rgba(var(--ctp-crust), 0.2);
 }
@@ -6405,37 +6485,13 @@ None of the original code was used and the feature was implemented from scratch.
 .anp-background-image-toggle:not(.anp-colorful-frame).anp-border-layout .workspace-ribbon.mod-left:before {
   background: transparent;
 }
-
-/* AGPLv3 License
-Floating Status Bar
-Author: AnubisNekhet
-Note: If you decide to implement it in your theme or redistribute it, please keep this comment (Especially for *certain* individuals who may try to rebrand it as their own :))
-Support me: https://buymeacoffee.com/AnubisNekhet
-*/
-.anp-floating-status-bar {
-  --status-bar-position: absolute;
-  --status-bar-radius: var(--radius-m);
-  --status-bar-border-width: 1px;
+.anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-border-layout, .anp-card-layout).anp-fixed-status-bar .status-bar {
+  background: var(--card-foreground-color);
+  backdrop-filter: brightness(var(--anp-custom-bg-brightness, 0.5)) blur(var(--anp-custom-bg-blur, 5px));
 }
-.anp-floating-status-bar .status-bar {
-  transform: translateX(calc(100% + 5px));
-  transition: transform 300ms 150ms;
-  bottom: 5px;
-  right: 5px;
-  box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.05);
-}
-.anp-floating-status-bar .status-bar::before {
-  width: 100%;
-  min-height: 100%;
-  content: " ";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transform: translateX(-100%);
-}
-.anp-floating-status-bar .status-bar:hover {
-  transform: none;
-  transition: transform 300ms 150ms;
+.anp-background-image-toggle:not(.anp-colorful-frame).anp-border-layout.anp-fixed-status-bar .status-bar, .anp-background-image-toggle:not(.anp-colorful-frame).anp-card-layout.anp-fixed-status-bar .status-bar {
+  background: transparent;
+  backdrop-filter: brightness(var(--anp-custom-bg-brightness, 0.5)) blur(var(--anp-custom-bg-blur, 5px));
 }
 
 /*--------------DISABLING IN-FRONTMATTER---------------*/
@@ -7367,8 +7423,8 @@ body .excalidraw .library-menu-items-container .library-actions--load, body .exc
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath d='M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z'/%3E%3C/svg%3E");
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath d='M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z'/%3E%3C/svg%3E");
   -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  background-color: var(--text-normal);
+  mask-repeat: no-repea;
+  background-color: var(--status-bar-text-color);
 }
 .status-bar-item.plugin-obsidian-discordrpc:hover:after {
   filter: brightness(60%);

@@ -947,10 +947,6 @@ settings:
         label: Normal
         value: initial
   -
-    id: anp-floating-status-bar
-    title: Floating Status Bar
-    type: class-toggle
-  -
     id: anp-toggle-metadata
     title: Hide Metadata
     type: class-toggle
@@ -2151,6 +2147,31 @@ settings:
     description: Multiplies the stack tab pane with which depends on file line width
     type: variable-number
     default: 1
+
+# Workspace :: Status Bar
+
+  -
+    id: anp-status-bar-header
+    title: Status Bar
+    description: Select status bar style
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-status-bar-select
+    title: Status Bar Style
+    type: class-select
+    default: none
+    options:
+      -
+        label: Default
+        value: none
+      -
+        label: Floating
+        value: anp-floating-status-bar
+      -
+        label: Fixed
+        value: anp-fixed-status-bar
 
 # Workspace :: Tabs
 

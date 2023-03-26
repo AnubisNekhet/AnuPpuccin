@@ -72,4 +72,20 @@
       background: transparent;
     }
   }
+  &:not(.anp-border-layout, .anp-card-layout) {
+    &.anp-fixed-status-bar {
+      .status-bar {
+        background: var(--card-foreground-color);
+        backdrop-filter: brightness(var(--anp-custom-bg-brightness, 0.5)) blur(var(--anp-custom-bg-blur, 5px))
+      }
+    }
+  }
+  &.anp-border-layout, &.anp-card-layout {
+    &.anp-fixed-status-bar {
+      .status-bar {
+        background: transparent;
+        backdrop-filter: brightness(var(--anp-custom-bg-brightness, 0.5)) blur(var(--anp-custom-bg-blur, 5px))
+      }
+    }
+  }
 }

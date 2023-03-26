@@ -14,6 +14,18 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
   --colorful-icon-color-alt: var(--text-muted);
 }
 .anp-colorful-frame {
+  &.anp-fixed-status-bar {
+    &.anp-card-layout, &.anp-border-layout {
+      .status-bar {
+        --status-bar-background: var(--colorful-frame-color);
+        --status-bar-text-color: var(--colorful-icon-color);
+        .status-bar-item.mod-clickable:hover {
+          color: var(--colorful-icon-color);
+          background-color: rgba(var(--ctp-crust), 0.2);
+        }
+      }
+    }
+  }
   &.anp-card-layout .workspace-split.mod-right-split .workspace-tabs,
   &.anp-card-layout .workspace-split.mod-left-split .workspace-tabs,
   &:not(.anp-card-layout, .anp-border-layout) .workspace-split.mod-left-split .workspace-tabs.mod-top,

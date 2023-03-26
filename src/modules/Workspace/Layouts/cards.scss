@@ -55,6 +55,12 @@ body.anp-card-layout {
             border-width: 1px 1px 0px 0px;
             border-radius: 0px var(--anp-card-radius, var(--radius-xl)) 0px 0px;
         }
+        &.anp-fixed-status-bar {
+            .side-dock-settings {
+                border-width: 1px;
+                border-radius: 0px var(--anp-card-radius, var(--radius-xl)) var(--anp-card-radius, var(--radius-xl)) 0px;
+            }
+        }
     }
     .side-dock-actions,
     .side-dock-settings {
