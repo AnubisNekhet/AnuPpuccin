@@ -3352,7 +3352,7 @@ input.slider,
   margin-right: -22px;
 }
 
-.print.theme-light, .print.theme-dark {
+.anp-print .print.theme-light, .anp-print .print.theme-dark {
   --ctp-crust: inherit;
   --ctp-mantle: inherit;
   --ctp-base: inherit;
@@ -3382,7 +3382,7 @@ input.slider,
 }
 
 @media print {
-  .print {
+  .anp-print .print {
     --ctp-crust: inherit;
     --ctp-mantle: inherit;
     --ctp-base: inherit;
@@ -3410,10 +3410,10 @@ input.slider,
     --ctp-blue: inherit;
     --ctp-lavender: inherit;
   }
-  .print, body, .markdown-rendered, :root {
+  .anp-print .print, body.anp-print, .anp-print .markdown-rendered, :root:has(.anp-print), :root {
     background-color: rgb(var(--ctp-base));
   }
-  .print .markdown-preview-view {
+  .anp-print .print .markdown-preview-view {
     color: rgb(var(--ctp-text));
   }
 }
@@ -7462,6 +7462,10 @@ body .excalidraw .library-menu-items-container .library-actions--load, body .exc
 
 #cMenuToolbarModalBar.top :is(.cMenuToolbarCommandItem, button[class^=cMenuToolbarCommandsubItem]):not(.cMenuToolbar-Divider-Line) {
   transition: all 0s linear;
+}
+
+div[class*=recent-files-] {
+  --anp-file-label-align: 1;
 }
 
 /* Recolor Colors */
