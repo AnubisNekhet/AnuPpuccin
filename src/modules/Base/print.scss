@@ -1,4 +1,4 @@
-.print.theme-light, .print.theme-dark  {
+.anp-print .print.theme-light, .anp-print .print.theme-dark  {
   --ctp-crust: inherit;
   --ctp-mantle: inherit;
   --ctp-base: inherit;
@@ -27,7 +27,7 @@
   --ctp-lavender: inherit;
 }
 @media print {
-  .print {
+  .anp-print .print {
     --ctp-crust: inherit;
     --ctp-mantle: inherit;
     --ctp-base: inherit;
@@ -55,10 +55,10 @@
     --ctp-blue: inherit;
     --ctp-lavender: inherit;
   }
-  .print, body, .markdown-rendered, :root {
+  .anp-print .print, body.anp-print, .anp-print .markdown-rendered, :root:has(.anp-print), :root {
     background-color: rgb(var(--ctp-base));
   }
-  .print .markdown-preview-view {
+  .anp-print .print .markdown-preview-view {
     color: rgb(var(--ctp-text));
   }
 }
