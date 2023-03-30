@@ -1,8 +1,7 @@
 .anp-full-rainbow-color-toggle {
   .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
   .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title,
-  .nav-folder-collapse-indicator svg,
-  .is-collapsed .nav-folder-collapse-indicator svg {
+  .tree-item-self .tree-item-icon {
     color: var(--anp-full-rainbow-text-inverted, var(--background-primary));
   }
   &.anp-rainbow-file-toggle {
@@ -22,14 +21,14 @@
   }
   //Root file colors are slightly white
   &:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:hover {
-    background-color: rgba(var(--ctp-text), 0.1);
+    background-color: rgba(var(--ctp-base), 0.1);
   }
-  &:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+  &:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children .nav-file .nav-file-title:hover {
+    background-color: rgba(var(--ctp-base), 0.1);
   }
   &:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title.is-active {
-    border-color: rgba(var(--ctp-text), 0.2);
-    background-color: rgba(var(--ctp-text), 0.2);
+    border-color: rgba(var(--ctp-base), 0.2);
+    background-color: rgba(var(--ctp-base), 0.2);
   }
   //Hide scrollbars and allow horizontal scrolling
   .nav-file {

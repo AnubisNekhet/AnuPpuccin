@@ -21,11 +21,8 @@
     border-color: rgba(var(--rainbow-folder-color), 0.5);
   }
   &.anp-simple-rainbow-collapse-toggle {
-    .nav-folder.is-collapsed .collapse-icon, .nav-folder-collapse-indicator.collapse-icon {
-      svg.svg-icon {
-        transition: color 0.4s;
-        color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
-      }
+    .tree-item-self .tree-item-icon {
+      --icon-color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
     }
   }
 }

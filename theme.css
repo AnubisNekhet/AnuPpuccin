@@ -6563,8 +6563,7 @@ None of the original code was used and the feature was implemented from scratch.
 /*-Full rainbow theme-*/
 .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
 .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title,
-.anp-full-rainbow-color-toggle .nav-folder-collapse-indicator svg,
-.anp-full-rainbow-color-toggle .is-collapsed .nav-folder-collapse-indicator svg {
+.anp-full-rainbow-color-toggle .tree-item-self .tree-item-icon {
   color: var(--anp-full-rainbow-text-inverted, var(--background-primary));
 }
 .anp-full-rainbow-color-toggle.anp-rainbow-file-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {
@@ -6581,14 +6580,14 @@ None of the original code was used and the feature was implemented from scratch.
   margin-bottom: 2px;
 }
 .anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:hover {
-  background-color: rgba(var(--ctp-text), 0.1);
+  background-color: rgba(var(--ctp-base), 0.1);
 }
-.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children .nav-file .nav-file-title:hover {
+  background-color: rgba(var(--ctp-base), 0.1);
 }
 .anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title.is-active {
-  border-color: rgba(var(--ctp-text), 0.2);
-  background-color: rgba(var(--ctp-text), 0.2);
+  border-color: rgba(var(--ctp-base), 0.2);
+  background-color: rgba(var(--ctp-base), 0.2);
 }
 .anp-full-rainbow-color-toggle .nav-file {
   overflow-y: hidden;
@@ -6652,9 +6651,8 @@ None of the original code was used and the feature was implemented from scratch.
   transition: color 0.4s;
   border-color: rgba(var(--rainbow-folder-color), 0.5);
 }
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-collapse-toggle .nav-folder.is-collapsed .collapse-icon svg.svg-icon, .anp-simple-rainbow-color-toggle.anp-simple-rainbow-collapse-toggle .nav-folder-collapse-indicator.collapse-icon svg.svg-icon {
-  transition: color 0.4s;
-  color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-collapse-toggle .tree-item-self .tree-item-icon {
+  --icon-color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
 }
 
 .modal {
