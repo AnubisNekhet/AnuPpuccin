@@ -7474,6 +7474,15 @@ div[class*=recent-files-] {
   --anp-file-label-align: 1;
 }
 
+.gemmy-tooltip.tooltip {
+  display: block;
+  --background-modifier-message: rgb(var(--ctp-yellow));
+  color: rgb(var(--ctp-base));
+  font-size: var(--font-ui-medium);
+  border-radius: var(--size-4-1);
+  padding: var(--size-4-2) var(--size-4-3);
+}
+
 /* Recolor Colors */
 div[class*=mk-] [style*="--label-color:#eb3b5a"] {
   --label-color: rgb(var(--ctp-red)) !important;
