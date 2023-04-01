@@ -2088,8 +2088,12 @@ settings:
     desc: Recolors files to match the folders
     type: class-toggle
   -
-    id: anp-full-rainbow-text-color-toggle
-    title: Invert title colors
+    id: anp-full-rainbow-text-color-toggle-light
+    title: Invert title colors (Dark Mode)
+    type: class-toggle
+  -
+    id: anp-full-rainbow-text-color-toggle-dark
+    title: Invert title colors (Light Mode)
     type: class-toggle
   -
     id: anp-rainbow-folder-bg-opacity
@@ -6627,7 +6631,11 @@ None of the original code was used and the feature was implemented from scratch.
   box-shadow: none;
 }
 
-.anp-full-rainbow-text-color-toggle {
+.anp-full-rainbow-text-color-toggle-dark.theme-dark {
+  --anp-full-rainbow-text-inverted: rgb(var(--ctp-text));
+}
+
+.anp-full-rainbow-text-color-toggle-light.theme-light {
   --anp-full-rainbow-text-inverted: rgb(var(--ctp-text));
 }
 
