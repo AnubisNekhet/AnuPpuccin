@@ -3575,7 +3575,7 @@ input.slider,
 
 /*-Suggestion selected item bg fix-*/
 .suggestion-item.is-selected {
-  background-color: var(--background-secondary);
+  background-color: rgba(var(--ctp-text), 0.075);
 }
 
 .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h1:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h2:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h3:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h4:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h5:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h6:first-child {
