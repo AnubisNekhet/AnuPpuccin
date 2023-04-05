@@ -82,5 +82,5 @@
 }
 /*-Suggestion selected item bg fix-*/
 .suggestion-item.is-selected {
-  background-color: var(--background-secondary);
+  background-color: rgba(var(--ctp-text), 0.075);
 }
