@@ -36,7 +36,13 @@ $accents: "rosewater", "flamingo", "pink", "mauve", "red", "maroon", "peach", "y
 }
 
 // Source editor recolor application
-.anp-header-toggle.anp-header-margin-toggle :is(h1,h2,h3,h4,h5,h6) {
+.anp-header-margin-toggle .cm-header-1,
+.anp-header-margin-toggle .cm-header-2,
+.anp-header-margin-toggle .cm-header-3,
+.anp-header-margin-toggle .cm-header-4,
+.anp-header-margin-toggle .cm-header-5,
+.anp-header-margin-toggle .cm-header-6 {
+  display: inline-block;
   margin-block-start: var(--anp-header-margin-value);
   margin-block-end: var(--anp-header-margin-value);
 }
