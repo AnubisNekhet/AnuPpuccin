@@ -23,7 +23,7 @@ body.anp-border-layout {
                     .workspace-tab-container {
                         border-left: var(--border-border-style);
                     }
-                    &.mod-top {
+                    &.mod-top-left-space {
                         .workspace-tab-container {
                             border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
                         }
