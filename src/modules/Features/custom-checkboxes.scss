@@ -383,8 +383,6 @@ $labels: (
     margin-inline-start: -15px;
     padding: 3px 10px !important; //hacky but it works i guess
     border-radius: 3px 10px 10px 10px;
-    margin-top: 8px;
-    margin-bottom: 8px;
     max-width: fit-content;
     color: var(--text-normal);
     --bold-color: var(--text-normal);
@@ -453,8 +451,6 @@ $labels: (
     &[data-task="8"],
     &[data-task="9"] {
         text-indent: 0px !important;
-          margin-top: 8px !important;
-          margin-bottom: 8px !important;
     }
 }
 .anp-speech-bubble [data-task="0"] { background-color: rgba(var(--ctp-red), var(--anp-speech-bubble-opacity)); }
