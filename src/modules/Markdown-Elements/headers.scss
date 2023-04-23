@@ -36,10 +36,16 @@ $accents: "rosewater", "flamingo", "pink", "mauve", "red", "maroon", "peach", "y
 }
 
 // Source editor recolor application
-.anp-header-toggle.anp-header-margin-toggle :is(h1,h2,h3,h4,h5,h6) {
-  margin-block-start: var(--anp-header-margin-value);
-  margin-block-end: var(--anp-header-margin-value);
+@for $i from 1 through 6 {
+  .anp-header-margin-toggle {
+    .cm-header-#{$i}, .markdown-preview-view h#{$i} {
+      display: inline-block;
+      margin-block-start: var(--anp-header-margin-value);
+      margin-block-end: var(--anp-header-margin-value);
+    }
+  }
 }
+
 .anp-editor-font-toggle .markdown-source-view:not(.is-live-preview) {
   --h1-font: var(--anp-editor-font);
   --h2-font: var(--anp-editor-font);
