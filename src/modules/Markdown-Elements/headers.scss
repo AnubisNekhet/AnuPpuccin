@@ -39,11 +39,14 @@ $accents: "rosewater", "flamingo", "pink", "mauve", "red", "maroon", "peach", "y
 @for $i from 1 through 6 {
   .anp-header-margin-toggle {
     .cm-header-#{$i}, .markdown-preview-view h#{$i} {
-      display: inline-block;
       margin-block-start: var(--anp-header-margin-value);
       margin-block-end: var(--anp-header-margin-value);
     }
   }
+}
+// fix source editor margins
+.cm-header {
+  display: inline-block;
 }
 
 .anp-editor-font-toggle .markdown-source-view:not(.is-live-preview) {
