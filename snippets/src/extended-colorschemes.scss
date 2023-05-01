@@ -32,7 +32,10 @@ settings:
             label: Gruvbox
             value: ctp-gruvbox-light
         - 
-            label: Notion
+            label: Material Mint
+            value: ctp-material-mint-light
+        - 
+            label: Luminescence
             value: ctp-luminescence-light
         - 
             label: Nord
@@ -79,6 +82,9 @@ settings:
             label: Kanagawa
             value: ctp-kanagawa-dark
         -
+            label: Material Mint
+            value: ctp-material-mint-dark
+        -
             label: Nord
             value: ctp-nord-dark
         -
@@ -124,6 +130,8 @@ settings:
 @import "ext-colorschemes/sandy-beaches-light.scss";
 @import "ext-colorschemes/solarized-dark.scss";
 @import "ext-colorschemes/solarized-light.scss";
+@import "ext-colorschemes/material-mint-light.scss";
+@import "ext-colorschemes/material-mint-dark.scss";
 
 $ext-color-list: "rosewater", "flamingo", "pink", "mauve", "red", "maroon", "peach", "yellow", "green", "teal", "sky", "sapphire", "blue", "lavender", "text", "subtext1", "subtext0", "overlay2", "overlay1", "overlay0", "surface2", "surface1", "surface0", "base", "mantle", "crust";
 
@@ -140,6 +148,8 @@ $ext-theme-list:
   $theme-gruvbox-light,
   $theme-kanagawa-dark,
   $theme-luminescence-light,
+  $theme-material-mint-light,
+  $theme-material-mint-dark,
   $theme-nord-dark,
   $theme-nord-darker,
   $theme-nord-light,
@@ -159,6 +169,12 @@ $ext-theme-list:
 }
 .theme-light.anp-theme-ext-light.ctp-nord-light {
   --ctp-accent: 136, 192, 208;
+}
+.theme-light.anp-theme-ext-light.ctp-material-mint-light {
+  --ctp-accent: var(--ctp-teal);
+}
+.theme-dark.anp-theme-ext-dark.ctp-material-mint-dark {
+  --ctp-accent: var(--ctp-teal);
 }
 .theme-dark.anp-theme-ext-dark.ctp-nord-dark {
   --ctp-accent: 136, 192, 208;
