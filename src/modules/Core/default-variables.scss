@@ -177,6 +177,11 @@ body {
   --callout-title-padding: var(--size-4-2);
   --callout-content-padding: var(--size-4-2);
   --background-modifier-active: hsla(var(--color-accent-hsl), 0.1);
+  --pdf-background: var(--background-primary);
+  --pdf-dark-opacity: 1;
+  --pdf-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 8px transparent;
+  --pdf-sidebar-background: var(--background-primary);
+  --pdf-thumbnail-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 8px transparent;
   &.theme-light {
     --anp-background-image: var(--anp-background-image-light);
     --anp-custom-bg-brightness: var(--anp-custom-bg-brightness-light);

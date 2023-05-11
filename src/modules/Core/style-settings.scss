@@ -2040,6 +2040,21 @@ settings:
         label: Left
         value: 0
 
+# Workspace :: PDF Viewer
+
+  -
+    id: anp-pdf-viewer-header
+    title: PDF Viewer
+    description: 
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-pdf-blend-toggle
+    title: Toggle PDF background blending
+    desc: Blends PDF viewer background with obsidian background
+    type: class-toggle
+
 # Workspace :: Rainbow Folders
 
   -

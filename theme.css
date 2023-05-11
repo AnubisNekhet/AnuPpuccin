@@ -2041,6 +2041,21 @@ settings:
         label: Left
         value: 0
 
+# Workspace :: PDF Viewer
+
+  -
+    id: anp-pdf-viewer-header
+    title: PDF Viewer
+    description: 
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-pdf-blend-toggle
+    title: Toggle PDF background blending
+    desc: Blends PDF viewer background with obsidian background
+    type: class-toggle
+
 # Workspace :: Rainbow Folders
 
   -
@@ -3109,6 +3124,11 @@ body {
   --callout-title-padding: var(--size-4-2);
   --callout-content-padding: var(--size-4-2);
   --background-modifier-active: hsla(var(--color-accent-hsl), 0.1);
+  --pdf-background: var(--background-primary);
+  --pdf-dark-opacity: 1;
+  --pdf-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 8px transparent;
+  --pdf-sidebar-background: var(--background-primary);
+  --pdf-thumbnail-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 8px transparent;
 }
 body.theme-light {
   --anp-background-image: var(--anp-background-image-light);
@@ -3421,6 +3441,28 @@ input.slider,
     color: rgb(var(--ctp-text));
   }
 }
+body:not(.anp-pdf-blend-toggle) {
+  --pdf-background: var(--background-secondary);
+  --pdf-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 8px transparent;
+  --pdf-thumbnail-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 8px transparent;
+}
+body:not(.anp-pdf-blend-toggle) .pdf-viewer .canvasWrapper,
+body:not(.anp-pdf-blend-toggle) .pdf-thumbnail-view .thumbnailImage {
+  filter: invert(1) hue-rotate(180deg);
+  mix-blend-mode: screen;
+}
+body:not(.anp-pdf-blend-toggle) .pdf-viewer {
+  background-color: var(--pdf-background);
+}
+body:not(.anp-pdf-blend-toggle) .pdf-viewer .page {
+  background-color: var(--background-primary);
+  border-color: var(--pdf-background);
+}
+
+.textLayer ::selection {
+  background: var(--color-accent);
+}
+
 .canvas-card-menu {
   box-shadow: none;
   border: 1px solid var(--background-modifier-border);
@@ -7933,5 +7975,3 @@ body.theme-dark.theme-dark {
   padding-bottom: 0;
   padding-top: 0;
 }
-
-/*# sourceMappingURL=theme.css.map */
