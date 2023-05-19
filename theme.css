@@ -370,6 +370,9 @@ settings:
       -
         label: Highlight + Border
         value: anp-current-line-border
+      -
+        label: Border Only
+        value: anp-current-line-border-only
 
 # File Editor & Markdown Elements :: Callouts
   -
@@ -3152,6 +3155,19 @@ body.theme-dark {
   border-left: 2px solid var(--interactive-accent);
   margin-left: -2px !important;
   background-color: rgba(var(--ctp-surface1), 0.4);
+}
+
+.anp-current-line-border-only .markdown-source-view .cm-active.cm-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1.5rem;
+  width: 2px;
+  background-color: rgba(var(--interactive-accent-rgb), 0.3);
+}
+.anp-current-line-border-only .markdown-source-view .cm-focused .cm-active.cm-line::before {
+  background-color: var(--interactive-accent);
 }
 
 /*-Custom editor font-*/
