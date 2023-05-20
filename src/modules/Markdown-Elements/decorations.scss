@@ -4,13 +4,6 @@
   --bold-color: rgb(var(--anp-bold-color, var(--ctp-red)));
   --text-highlight-bg: rgba(var(--anp-highlight-color, var(--ctp-yellow)), 0.2);
 }
-/*-Make it so that mark overwrites italic and bold colors-*/
-.markdown-rendered mark {
-  --italic-color: rgb(var(--ctp-text));
-  --bold-color: rgb(var(--ctp-text));
-  border-radius: 4px;
-  padding: 2px;
-}
 // Internal links have no underline
 .markdown-rendered .internal-link {
   &:hover, &:active, &.is-unresolved:hover, &.is-unresolved {
