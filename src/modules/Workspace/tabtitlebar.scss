@@ -9,7 +9,9 @@
   .workspace-leaf-content .view-header {
     margin-top: calc(var(--title-bar-translate-y) * -1);
     position: relative;
-    transition: transform var(--title-bar-duration) var(--title-bar-delay), margin-right 0s calc(var(--title-bar-duration) + var(--title-bar-delay)), padding 0s calc(var(--title-bar-duration) + var(--title-bar-delay));
+    transition: transform var(--title-bar-duration) var(--title-bar-delay), margin-right 0s calc(var(--title-bar-duration) + var(--title-bar-delay)), margin-right 0s calc(var(--title-bar-duration) + var(--title-bar-delay)), margin-left 0s calc(var(--title-bar-duration) + var(--title-bar-delay)), padding 0s calc(var(--title-bar-duration) + var(--title-bar-delay));
+    margin-left: 80px;
+    margin-right: 80px;
   }
   //hacky windows fix
   &:not(.mod-macos) .workspace-tabs:is(.mod-top-right-space, .mod-top-left-space) .workspace-leaf-content .view-header {
@@ -28,21 +30,26 @@
   .workspace-leaf-content .view-header::before {
     bottom: calc(var(--title-bar-target-translate-y) * -1);
     content: '';
-    left: 0;
+    left: -80px;
     position: absolute;
     top: 0;
     transition: transform var(--title-bar-duration) var(--title-bar-delay);
-    width: 100%;
+    width: calc(100% + 160px);
   }
   .workspace-leaf-content .view-content {
     transition: transform var(--title-bar-duration) var(--title-bar-delay);
   }
   .workspace-leaf-content .view-header:is(:hover,:focus-within)::before {
     transform: translateY(var(--title-bar-target-translate-y));
+    left: 0px;
+    width: 100%;
   }
   .workspace-leaf-content .view-header:is(:hover,:focus-within),
   .workspace-leaf-content .view-header:is(:hover,:focus-within) + .view-content {
+    transition: transform var(--title-bar-duration) var(--title-bar-delay), margin-right 0s, margin-left 0s, padding 0s calc(var(--title-bar-duration) + var(--title-bar-delay));
     transform: translateY(var(--title-bar-translate-y));
+    margin-left: 0;
+    margin-right: 0;
   }
   .workspace-leaf-content .view-header:not(:hover,:focus-within) .clickable-icon {
     app-region: drag;
