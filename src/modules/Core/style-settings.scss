@@ -2053,9 +2053,14 @@ settings:
     level: 2
     collapsed: true
   -
-    id: anp-pdf-blend-toggle
-    title: Toggle PDF background blending
-    desc: Blends PDF viewer background with obsidian background
+    id: anp-pdf-blend-toggle-dark
+    title: Toggle PDF background blending - Dark Mode
+    desc: Blends PDF viewer background with obsidian background in dark mode
+    type: class-toggle
+  -
+    id: anp-pdf-blend-toggle-light
+    title: Toggle PDF background blending - Light Mode
+    desc: Blends PDF viewer background with obsidian background in light mode
     type: class-toggle
 
 # Workspace :: Rainbow Folders

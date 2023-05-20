@@ -2054,9 +2054,14 @@ settings:
     level: 2
     collapsed: true
   -
-    id: anp-pdf-blend-toggle
-    title: Toggle PDF background blending
-    desc: Blends PDF viewer background with obsidian background
+    id: anp-pdf-blend-toggle-dark
+    title: Toggle PDF background blending - Dark Mode
+    desc: Blends PDF viewer background with obsidian background in dark mode
+    type: class-toggle
+  -
+    id: anp-pdf-blend-toggle-light
+    title: Toggle PDF background blending - Light Mode
+    desc: Blends PDF viewer background with obsidian background in light mode
     type: class-toggle
 
 # Workspace :: Rainbow Folders
@@ -3421,20 +3426,25 @@ input.slider,
     color: rgb(var(--ctp-text));
   }
 }
-body:not(.anp-pdf-blend-toggle) {
+.theme-dark.anp-pdf-blend-toggle-dark,
+.theme-light.anp-pdf-blend-toggle-light {
   --pdf-background: var(--background-secondary);
   --pdf-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 8px transparent;
   --pdf-thumbnail-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 8px transparent;
 }
-body:not(.anp-pdf-blend-toggle) .pdf-viewer .canvasWrapper,
-body:not(.anp-pdf-blend-toggle) .pdf-thumbnail-view .thumbnailImage {
+.theme-dark.anp-pdf-blend-toggle-dark .pdf-viewer .canvasWrapper,
+.theme-dark.anp-pdf-blend-toggle-dark .pdf-thumbnail-view .thumbnailImage,
+.theme-light.anp-pdf-blend-toggle-light .pdf-viewer .canvasWrapper,
+.theme-light.anp-pdf-blend-toggle-light .pdf-thumbnail-view .thumbnailImage {
   filter: invert(1) hue-rotate(180deg);
   mix-blend-mode: screen;
 }
-body:not(.anp-pdf-blend-toggle) .pdf-viewer {
+.theme-dark.anp-pdf-blend-toggle-dark .pdf-viewer,
+.theme-light.anp-pdf-blend-toggle-light .pdf-viewer {
   background-color: var(--pdf-background);
 }
-body:not(.anp-pdf-blend-toggle) .pdf-viewer .page {
+.theme-dark.anp-pdf-blend-toggle-dark .pdf-viewer .page,
+.theme-light.anp-pdf-blend-toggle-light .pdf-viewer .page {
   background-color: var(--background-primary);
   border-color: var(--pdf-background);
 }
