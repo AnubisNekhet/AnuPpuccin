@@ -5,14 +5,14 @@
   --h4-font: var(--font-text);
   --h5-font: var(--font-text);
   --h6-font: var(--font-text);
-  --h1-color: var(--font-normal);
-  --h2-color: var(--font-normal);
-  --h3-color: var(--font-normal);
-  --h4-color: var(--font-normal);
-  --h5-color: var(--font-normal);
-  --h6-color: var(--font-normal);
-  --italic-color: var(--font-normal);
-  --bold-color: var(--font-normal);
+  --h1-color: var(--text-normal);
+  --h2-color: var(--text-normal);
+  --h3-color: var(--text-normal);
+  --h4-color: var(--text-normal);
+  --h5-color: var(--text-normal);
+  --h6-color: var(--text-normal);
+  --italic-color: var(--text-normal);
+  --bold-color: var(--text-normal);
 }
 .callout[data-callout=capacities-index] {
   --highlight-mix-blend-mode: none;

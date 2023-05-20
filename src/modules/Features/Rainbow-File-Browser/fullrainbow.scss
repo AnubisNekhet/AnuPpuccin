@@ -8,10 +8,10 @@
     .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {
       color: var(--anp-full-rainbow-text-inverted, var(--background-primary));
     }
-    &.theme-dark  .nav-folder.mod-root > .nav-folder-children > .nav-file {
+    &.theme-dark .nav-folder.mod-root > .nav-folder-children > .nav-file {
       background-color: rgba(var(--ctp-text), var(--anp-rainbow-folder-bg-opacity));
     }
-    &.theme-light  .nav-folder.mod-root > .nav-folder-children > .nav-file {
+    &.theme-light .nav-folder.mod-root > .nav-folder-children > .nav-file {
       background-color: rgba(var(--ctp-overlay1), var(--anp-rainbow-folder-bg-opacity));
     }
     .nav-folder.mod-root > .nav-folder-children > .nav-file { 

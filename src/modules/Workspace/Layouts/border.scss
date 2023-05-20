@@ -173,4 +173,9 @@ body.anp-border-layout {
     .workspace-ribbon.mod-left, .workspace-ribbon.mod-left.is-focused {
         border-right-color: var(--card-background-color);
     }
+    &.is-popout-window {
+        .workspace {
+            margin-left: var(--anp-border-padding, 20px);
+        }
+    }
 }

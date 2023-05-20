@@ -687,8 +687,11 @@ $accents: rosewater, flamingo, pink, mauve, red, maroon, peach, yellow, green, t
     body.rainbow-repeat-#{$a} {
         @for $i from 1 through $a {
             @each $accent in $accents {
-                &.rainbow-color-#{$i}-#{"" + $accent} .nav-folder-children > .nav-folder {
-                    &:nth-child(#{$a}n + #{$i + 1}) { @include rainbow-colors($accent)};
+                &.rainbow-color-#{$i}-#{"" + $accent} {
+                    .nav-folder-children > .nav-folder,
+                    [data-type="bookmarks"] .tree-item.tree-item {
+                        &:nth-child(#{$a}n + #{$i + 1}) { @include rainbow-colors($accent)};
+                    }
                 }
             }
         }

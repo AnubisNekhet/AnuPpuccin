@@ -4224,6 +4224,9 @@ body.anp-border-layout .workspace-ribbon.mod-left:before {
 body.anp-border-layout .workspace-ribbon.mod-left, body.anp-border-layout .workspace-ribbon.mod-left.is-focused {
   border-right-color: var(--card-background-color);
 }
+body.anp-border-layout.is-popout-window .workspace {
+  margin-left: var(--anp-border-padding, 20px);
+}
 
 .anp-bg-fix .workspace,
 .anp-bg-fix .app-container,
@@ -5224,7 +5227,8 @@ body.rainbow-tags {
   --r7-color-light: rgba(var(--ctp-mauve), var(--rainbow-tags-opacity));
 }
 
-.anp-collapse-folders .nav-folder .nav-folder-collapse-indicator {
+.anp-collapse-folders .nav-folder .nav-folder-collapse-indicator,
+.anp-collapse-folders [data-type=bookmarks] .tree-item .collapse-icon {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linejoin='round' stroke-linecap='round' stroke-width='2'%3E%3Cpath d='M6 14l1.45-2.9A2 2 0 0 1 9.24 10H22a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H20a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E%0A");
   -webkit-mask-repeat: no-repeat;
   background-color: currentColor;
@@ -5232,12 +5236,12 @@ body.rainbow-tags {
   width: 17px;
   margin-right: 4px;
 }
-
-.anp-collapse-folders .nav-folder.is-collapsed .nav-folder-collapse-indicator {
+.anp-collapse-folders .nav-folder.is-collapsed .nav-folder-collapse-indicator,
+.anp-collapse-folders [data-type=bookmarks] .tree-item.is-collapsed .collapse-icon {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linejoin='round' stroke-linecap='round' stroke-width='2'%3E%3Cpath d='M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2z'/%3E%3Cpath d='M2 10h20' /%3E%3C/svg%3E%0A");
 }
-
-.anp-collapse-folders .nav-folder-collapse-indicator svg.svg-icon {
+.anp-collapse-folders .nav-folder-collapse-indicator svg.svg-icon,
+.anp-collapse-folders [data-type=bookmarks] .collapse-icon svg.svg-icon {
   color: transparent !important;
 }
 
@@ -5258,14 +5262,14 @@ body.rainbow-tags {
   --h4-font: var(--font-text);
   --h5-font: var(--font-text);
   --h6-font: var(--font-text);
-  --h1-color: var(--font-normal);
-  --h2-color: var(--font-normal);
-  --h3-color: var(--font-normal);
-  --h4-color: var(--font-normal);
-  --h5-color: var(--font-normal);
-  --h6-color: var(--font-normal);
-  --italic-color: var(--font-normal);
-  --bold-color: var(--font-normal);
+  --h1-color: var(--text-normal);
+  --h2-color: var(--text-normal);
+  --h3-color: var(--text-normal);
+  --h4-color: var(--text-normal);
+  --h5-color: var(--text-normal);
+  --h6-color: var(--text-normal);
+  --italic-color: var(--text-normal);
+  --bold-color: var(--text-normal);
 }
 
 .callout[data-callout=capacities-index] {
@@ -6557,41 +6561,53 @@ None of the original code was used and the feature was implemented from scratch.
 
 /*------------RAINBOW FOLDERS-------------*/
 /* Rainbow colors */
-.nav-folder-children > .nav-folder:nth-child(11n+2) {
+.nav-folder-children > .nav-folder:nth-child(11n+2),
+[data-type=bookmarks] .tree-item:nth-child(11n+2) {
   --rainbow-folder-color: var(--ctp-red);
 }
-.nav-folder-children > .nav-folder:nth-child(11n+3) {
+.nav-folder-children > .nav-folder:nth-child(11n+3),
+[data-type=bookmarks] .tree-item:nth-child(11n+3) {
   --rainbow-folder-color: var(--ctp-maroon);
 }
-.nav-folder-children > .nav-folder:nth-child(11n+4) {
+.nav-folder-children > .nav-folder:nth-child(11n+4),
+[data-type=bookmarks] .tree-item:nth-child(11n+4) {
   --rainbow-folder-color: var(--ctp-peach);
 }
-.nav-folder-children > .nav-folder:nth-child(11n+5) {
+.nav-folder-children > .nav-folder:nth-child(11n+5),
+[data-type=bookmarks] .tree-item:nth-child(11n+5) {
   --rainbow-folder-color: var(--ctp-yellow);
 }
-.nav-folder-children > .nav-folder:nth-child(11n+6) {
+.nav-folder-children > .nav-folder:nth-child(11n+6),
+[data-type=bookmarks] .tree-item:nth-child(11n+6) {
   --rainbow-folder-color: var(--ctp-green);
 }
-.nav-folder-children > .nav-folder:nth-child(11n+7) {
+.nav-folder-children > .nav-folder:nth-child(11n+7),
+[data-type=bookmarks] .tree-item:nth-child(11n+7) {
   --rainbow-folder-color: var(--ctp-teal);
 }
-.nav-folder-children > .nav-folder:nth-child(11n+8) {
+.nav-folder-children > .nav-folder:nth-child(11n+8),
+[data-type=bookmarks] .tree-item:nth-child(11n+8) {
   --rainbow-folder-color: var(--ctp-sky);
 }
-.nav-folder-children > .nav-folder:nth-child(11n+9) {
+.nav-folder-children > .nav-folder:nth-child(11n+9),
+[data-type=bookmarks] .tree-item:nth-child(11n+9) {
   --rainbow-folder-color: var(--ctp-sapphire);
 }
-.nav-folder-children > .nav-folder:nth-child(11n+10) {
+.nav-folder-children > .nav-folder:nth-child(11n+10),
+[data-type=bookmarks] .tree-item:nth-child(11n+10) {
   --rainbow-folder-color: var(--ctp-blue);
 }
-.nav-folder-children > .nav-folder:nth-child(11n+11) {
+.nav-folder-children > .nav-folder:nth-child(11n+11),
+[data-type=bookmarks] .tree-item:nth-child(11n+11) {
   --rainbow-folder-color: var(--ctp-lavender);
 }
-.nav-folder-children > .nav-folder:nth-child(11n+12) {
+.nav-folder-children > .nav-folder:nth-child(11n+12),
+[data-type=bookmarks] .tree-item:nth-child(11n+12) {
   --rainbow-folder-color: var(--ctp-mauve);
 }
 
-.anp-rainbow-subfolder-color-toggle .nav-folder.mod-root .nav-folder.nav-folder .nav-folder {
+.anp-rainbow-subfolder-color-toggle .nav-folder.mod-root .nav-folder.nav-folder .nav-folder,
+.anp-rainbow-subfolder-color-toggle [data-type=bookmarks] .tree-item .tree-item {
   --rainbow-folder-color: inherit;
 }
 
@@ -6671,13 +6687,14 @@ None of the original code was used and the feature was implemented from scratch.
 }
 
 /*-Simple rainbow theme-*/
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title {
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle [data-type=bookmarks] > .view-content > div > .tree-item .tree-item-inner {
   transition: color 0.4s;
   color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
   --nav-item-background-hover: rgba(var(--rainbow-folder-color), 0.1);
   --nav-item-background-active: rgba(var(--rainbow-folder-color), 0.1) ;
 }
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:after {
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:after, .anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle [data-type=bookmarks] > .view-content > div > .tree-item .tree-item-inner:after {
   transition: color 0.4s;
   color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
   content: "⬤";
@@ -6686,12 +6703,14 @@ None of the original code was used and the feature was implemented from scratch.
   top: 1px;
   opacity: 0.5;
 }
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle .nav-folder.mod-root .nav-folder > .nav-folder-children {
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle .nav-folder.mod-root .nav-folder > .nav-folder-children, .anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle [data-type=bookmarks] > .view-content > div > .tree-item .tree-item-children {
   transition: color 0.4s;
   border-color: rgba(var(--rainbow-folder-color), 0.5);
 }
 .anp-simple-rainbow-color-toggle.anp-simple-rainbow-collapse-toggle .tree-item-self .tree-item-icon {
   --icon-color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
+  --nav-collapse-icon-color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
+  --nav-collapse-icon-color-collapsed: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
 }
 
 .modal {
