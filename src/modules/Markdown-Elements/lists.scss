@@ -1,21 +1,21 @@
 .anp-list-toggle div.el-ul > ul.has-list-bullet > li > ul.has-list-bullet > li {
   & > .list-bullet::after {
-    border: 1px solid var(--list-marker-color);
+    --list-bullet-border: 1px solid var(--list-marker-color);
     background-color: transparent;
     width: calc(var(--list-bullet-size) - 1px);
     height: calc(var(--list-bullet-size) - 1px);
   }
   > ul.has-list-bullet > li {
     & > .list-bullet::after {
-      border-radius: 0;
+      --list-bullet-radius: 0;
       background-color: var(--list-marker-color);
     }
     > ul.has-list-bullet > li {
       & > .list-bullet::after {
         width: calc(var(--list-bullet-size) - 1px);
         height: calc(var(--list-bullet-size) - 1px);
-        border-radius: 0;
-        border: 1px solid var(--list-marker-color);
+        --list-bullet-radius: 0;
+        --list-bullet-border: 1px solid var(--list-marker-color);
         background-color: transparent;
       }
     }

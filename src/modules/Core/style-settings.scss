@@ -559,6 +559,70 @@ settings:
     type: variable-number
     default: 0.075
     format: em
+  -
+    id: list-marker-color
+    title: Unordered list bullet color
+    type: variable-themed-color
+    default-light: '#'
+    default-dark: '#'
+    format: 'hex'
+  -
+    id: list-numbered-style
+    title: Ordered list style
+    type: variable-select
+    default: decimal
+    options:
+      -
+        label: "Decimal"
+        value: decimal
+      -
+        label: "Decimal with leading zeroes"
+        value: decimal-leading-zero
+      -
+        label: "Lowercase alphabetical"
+        value: lower-alpha
+      -
+        label: "Uppercase alphabetical"
+        value: upper-alpha
+      -
+        label: "Lowercase Roman Numerals"
+        value: lower-roman
+      -
+        label: "Uppercase Roman Numerals"
+        value: upper-roman
+      -
+        label: "Lowercase Latin"
+        value: lower-latin
+      -
+        label: "Uppercase Latin"
+        value: upper-latin
+      -
+        label: "Lowercase Greek"
+        value: lower-greek
+      -
+        label: "Uppercase Greek"
+        value: upper-greek
+      -
+        label: "Hiragana"
+        value: hiragana
+      -
+        label: "Hiragana Iroha"
+        value: hiragana-iroha
+      -
+        label: "Katakana"
+        value: armenian
+      -
+        label: "Katakana Iroha"
+        value: katakana-iroha
+      -
+        label: "Armenian"
+        value: armenian
+      -
+        label: "CJK Ideographic"
+        value: cjk-ideographic
+      -
+        label: "Hebrew"
+        value: hebrew
 
 # File Editor & Markdown Elements :: Tables
 

@@ -560,6 +560,70 @@ settings:
     type: variable-number
     default: 0.075
     format: em
+  -
+    id: list-marker-color
+    title: Unordered list bullet color
+    type: variable-themed-color
+    default-light: '#'
+    default-dark: '#'
+    format: 'hex'
+  -
+    id: list-numbered-style
+    title: Ordered list style
+    type: variable-select
+    default: decimal
+    options:
+      -
+        label: "Decimal"
+        value: decimal
+      -
+        label: "Decimal with leading zeroes"
+        value: decimal-leading-zero
+      -
+        label: "Lowercase alphabetical"
+        value: lower-alpha
+      -
+        label: "Uppercase alphabetical"
+        value: upper-alpha
+      -
+        label: "Lowercase Roman Numerals"
+        value: lower-roman
+      -
+        label: "Uppercase Roman Numerals"
+        value: upper-roman
+      -
+        label: "Lowercase Latin"
+        value: lower-latin
+      -
+        label: "Uppercase Latin"
+        value: upper-latin
+      -
+        label: "Lowercase Greek"
+        value: lower-greek
+      -
+        label: "Uppercase Greek"
+        value: upper-greek
+      -
+        label: "Hiragana"
+        value: hiragana
+      -
+        label: "Hiragana Iroha"
+        value: hiragana-iroha
+      -
+        label: "Katakana"
+        value: armenian
+      -
+        label: "Katakana Iroha"
+        value: katakana-iroha
+      -
+        label: "Armenian"
+        value: armenian
+      -
+        label: "CJK Ideographic"
+        value: cjk-ideographic
+      -
+        label: "Hebrew"
+        value: hebrew
 
 # File Editor & Markdown Elements :: Tables
 
@@ -5093,20 +5157,20 @@ hr {
 }
 
 .anp-list-toggle div.el-ul > ul.has-list-bullet > li > ul.has-list-bullet > li > .list-bullet::after {
-  border: 1px solid var(--list-marker-color);
+  --list-bullet-border: 1px solid var(--list-marker-color);
   background-color: transparent;
   width: calc(var(--list-bullet-size) - 1px);
   height: calc(var(--list-bullet-size) - 1px);
 }
 .anp-list-toggle div.el-ul > ul.has-list-bullet > li > ul.has-list-bullet > li > ul.has-list-bullet > li > .list-bullet::after {
-  border-radius: 0;
+  --list-bullet-radius: 0;
   background-color: var(--list-marker-color);
 }
 .anp-list-toggle div.el-ul > ul.has-list-bullet > li > ul.has-list-bullet > li > ul.has-list-bullet > li > ul.has-list-bullet > li > .list-bullet::after {
   width: calc(var(--list-bullet-size) - 1px);
   height: calc(var(--list-bullet-size) - 1px);
-  border-radius: 0;
-  border: 1px solid var(--list-marker-color);
+  --list-bullet-radius: 0;
+  --list-bullet-border: 1px solid var(--list-marker-color);
   background-color: transparent;
 }
 
