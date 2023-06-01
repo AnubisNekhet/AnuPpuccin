@@ -4095,10 +4095,6 @@ body.anp-card-layout .workspace-split .workspace-leaf-content:not([data-type=fil
 body.anp-card-layout.anp-card-shadows .workspace-split .workspace-leaf-content, body.anp-card-layout.anp-card-shadows.anp-card-layout-actions .side-dock-actions, body.anp-card-layout.anp-card-shadows.anp-card-layout-filebrowser .workspace-split .workspace-leaf-content[data-type=file-explorer] {
   box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
 }
-body.anp-card-layout.anp-card-shadows .menu {
-  box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.05), -3px 3px 4px 0px rgba(0, 0, 0, 0.05);  /*add shadow for menu*/
-
-}
 body.anp-card-layout .workspace-split .mod-stacked .workspace-leaf-content {
   border-radius: 0;
   border: none;
