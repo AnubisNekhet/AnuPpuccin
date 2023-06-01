@@ -11,7 +11,11 @@ body.anp-card-layout {
     --ribbon-padding: 0;
     &.anp-hide-borders {
         --tab-outline-color: transparent;
+	.menu {
+		border: 0px !important;  // hide menu border
+	}
     }
+
     .sidebar-toggle-button, .workspace-tabs.mod-top {
         --tab-container-background: var(--card-background-color);
     }
