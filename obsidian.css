@@ -4627,6 +4627,12 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   color: var(--text-normal);
 }
 
+.cm-hmd-internal-link {
+  --link-decoration: none;
+  --link-decoration-hover: none;
+  --link-decoration-active: none;
+}
+
 .external-link,
 .external-link:hover {
   background-image: none;

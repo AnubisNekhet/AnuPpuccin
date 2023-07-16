@@ -14,6 +14,11 @@
 .cm-formatting-link-string {
   color: var(--text-normal);
 }
+.cm-hmd-internal-link {
+  --link-decoration: none;
+  --link-decoration-hover: none;
+  --link-decoration-active: none;
+}
 // External links have underline but no icon
 .external-link,
 .external-link:hover {
