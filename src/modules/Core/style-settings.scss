@@ -648,7 +648,7 @@ settings:
     description: Use anp-table-auto for yaml syntax
     type: class-toggle
   -
-    id: anp-th-highlight
+    id: anp-table-th-highlight
     title: <th> Highlight
     type: class-toggle
   -
@@ -660,19 +660,19 @@ settings:
     options:
       -
         label: None
-        value: anp-td-none
+        value: none
       -
         label: Alternate Rows
-        value: anp-td-alt-rows
+        value: anp-table-row-alt
       -
         label: Alternate Columns
-        value: anp-td-alt-cols
+        value: anp-table-col-alt
       -
         label: Checkered
-        value: anp-td-checkered
+        value: anp-table-checkered
       -
         label: Full
-        value: anp-td-full
+        value: anp-table-full
   -
     id: anp-table-highlight-opacity
     title: Highlight Opacity

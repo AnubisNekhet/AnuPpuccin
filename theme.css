@@ -649,7 +649,7 @@ settings:
     description: Use anp-table-auto for yaml syntax
     type: class-toggle
   -
-    id: anp-th-highlight
+    id: anp-table-th-highlight
     title: <th> Highlight
     type: class-toggle
   -
@@ -661,19 +661,19 @@ settings:
     options:
       -
         label: None
-        value: anp-td-none
+        value: none
       -
         label: Alternate Rows
-        value: anp-td-alt-rows
+        value: anp-table-row-alt
       -
         label: Alternate Columns
-        value: anp-td-alt-cols
+        value: anp-table-col-alt
       -
         label: Checkered
-        value: anp-td-checkered
+        value: anp-table-checkered
       -
         label: Full
-        value: anp-td-full
+        value: anp-table-full
   -
     id: anp-table-highlight-opacity
     title: Highlight Opacity
@@ -5188,12 +5188,18 @@ hr {
 .anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th:first-child,
 .anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th,
 .anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th:last-child,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table td,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table th,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:first-child,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:last-child,
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td,
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th,
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead tr > th:first-child,
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead tr > th,
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead tr > th:last-child,
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table,
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table td,
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table th,
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:first-child,
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th,
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:last-child,
 .anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview),
 .anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
 .anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) th,
@@ -5206,10 +5212,14 @@ hr {
 .anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th:first-child:not([align]),
 .anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th:not([align]),
 .anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th:last-child:not([align]),
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table th:not([align]),
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:first-child:not([align]),
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:not([align]),
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:last-child:not([align]),
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th:not([align]),
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead tr > th:first-child:not([align]),
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead tr > th:not([align]),
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead tr > th:last-child:not([align]),
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table th:not([align]),
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:first-child:not([align]),
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:not([align]),
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:last-child:not([align]),
 .anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) th:not([align]),
 .anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead tr > th:first-child:not([align]),
 .anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead tr > th:not([align]),
@@ -5217,7 +5227,8 @@ hr {
   text-align: var(--anp-table-align-th, center);
 }
 .anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table td:not([align]),
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table td:not([align]),
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td:not([align]),
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table td:not([align]),
 .anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) td:not([align]) {
   text-align: var(--anp-table-align-td, center);
 }
@@ -5226,27 +5237,76 @@ table.dataview.table-view-table > tbody > tr:hover {
   background-color: rgba(var(--ctp-surface1), 0.1) !important;
 }
 
-.anp-table-toggle.anp-th-highlight .markdown-preview-view:not(.cards):not(.table-disable) th, .anp-table-toggle.anp-th-highlight .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th, .anp-table-toggle.anp-th-highlight .is-live-preview:not(.cards):not(.table-disable) th, .anp-table-toggle.anp-th-highlight .is-live-preview.cards:not(.table-disable) table:not(.dataview) th {
+.anp-table-toggle.anp-table-th-highlight .markdown-preview-view:not(.cards):not(.table-disable) th,
+.anp-table-toggle.anp-table-th-highlight .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th,
+.anp-table-toggle.anp-table-th-highlight .is-live-preview:not(.cards):not(.table-disable) th,
+.anp-table-toggle.anp-table-th-highlight .is-live-preview.cards:not(.table-disable) table:not(.dataview) th {
   background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
 }
-.anp-table-toggle.anp-td-alt-rows .markdown-preview-view:not(.cards):not(.table-disable) table tr:nth-child(2n) td, .anp-table-toggle.anp-td-alt-rows .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td, .anp-table-toggle.anp-td-alt-rows .is-live-preview:not(.cards):not(.table-disable) table tr:nth-child(2n) td, .anp-table-toggle.anp-td-alt-rows .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td {
+
+.th-highlight.markdown-preview-view:not(.cards):not(.table-disable) th, .th-highlight.markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th, .th-highlight.is-live-preview:not(.cards):not(.table-disable) th, .th-highlight.is-live-preview.cards:not(.table-disable) table:not(.dataview) th {
   background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
 }
-.anp-table-toggle.anp-td-alt-cols .markdown-preview-view:not(.cards):not(.table-disable) table tr td:nth-child(2n), .anp-table-toggle.anp-td-alt-cols .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n), .anp-table-toggle.anp-td-alt-cols .is-live-preview:not(.cards):not(.table-disable) table tr td:nth-child(2n), .anp-table-toggle.anp-td-alt-cols .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n) {
+
+.anp-table-toggle.anp-table-row-alt .markdown-preview-view:not(.cards):not(.table-disable) tr:nth-child(2n) td,
+.anp-table-toggle.anp-table-row-alt .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td,
+.anp-table-toggle.anp-table-row-alt .is-live-preview:not(.cards):not(.table-disable) tr:nth-child(2n) td,
+.anp-table-toggle.anp-table-row-alt .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td {
   background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
 }
-.anp-table-toggle.anp-td-checkered .markdown-preview-view:not(.cards):not(.table-disable) table tr td:nth-child(2n),
-.anp-table-toggle.anp-td-checkered .markdown-preview-view:not(.cards):not(.table-disable) table tr:nth-child(2n) td, .anp-table-toggle.anp-td-checkered .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n),
-.anp-table-toggle.anp-td-checkered .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td, .anp-table-toggle.anp-td-checkered .is-live-preview:not(.cards):not(.table-disable) table tr td:nth-child(2n),
-.anp-table-toggle.anp-td-checkered .is-live-preview:not(.cards):not(.table-disable) table tr:nth-child(2n) td, .anp-table-toggle.anp-td-checkered .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n),
-.anp-table-toggle.anp-td-checkered .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td {
+
+.row-alt.markdown-preview-view:not(.cards):not(.table-disable) tr:nth-child(2n) td, .row-alt.markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td, .row-alt.is-live-preview:not(.cards):not(.table-disable) tr:nth-child(2n) td, .row-alt.is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td {
   background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
 }
-.anp-table-toggle.anp-td-checkered .markdown-preview-view:not(.cards):not(.table-disable) table tr:nth-child(2n) td:nth-child(2n), .anp-table-toggle.anp-td-checkered .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td:nth-child(2n), .anp-table-toggle.anp-td-checkered .is-live-preview:not(.cards):not(.table-disable) table tr:nth-child(2n) td:nth-child(2n), .anp-table-toggle.anp-td-checkered .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td:nth-child(2n) {
+
+.anp-table-toggle.anp-table-col-alt .markdown-preview-view:not(.cards):not(.table-disable) tr td:nth-child(2n),
+.anp-table-toggle.anp-table-col-alt .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n),
+.anp-table-toggle.anp-table-col-alt .is-live-preview:not(.cards):not(.table-disable) tr td:nth-child(2n),
+.anp-table-toggle.anp-table-col-alt .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n) {
+  background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
+}
+
+.col-alt.markdown-preview-view:not(.cards):not(.table-disable) tr td:nth-child(2n), .col-alt.markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n), .col-alt.is-live-preview:not(.cards):not(.table-disable) tr td:nth-child(2n), .col-alt.is-live-preview.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n) {
+  background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
+}
+
+.anp-table-toggle.anp-table-full .markdown-preview-view:not(.cards):not(.table-disable) td,
+.anp-table-toggle.anp-table-full .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td,
+.anp-table-toggle.anp-table-full .is-live-preview:not(.cards):not(.table-disable) td,
+.anp-table-toggle.anp-table-full .is-live-preview.cards:not(.table-disable) table:not(.dataview) td {
+  background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
+}
+
+.table-full.markdown-preview-view:not(.cards):not(.table-disable) td, .table-full.markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td, .table-full.is-live-preview:not(.cards):not(.table-disable) td, .table-full.is-live-preview.cards:not(.table-disable) table:not(.dataview) td {
+  background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
+}
+
+.anp-table-toggle.anp-table-checkered .markdown-preview-view:not(.cards):not(.table-disable) tr td:nth-child(2n),
+.anp-table-toggle.anp-table-checkered .markdown-preview-view:not(.cards):not(.table-disable) tr:nth-child(2n) td,
+.anp-table-toggle.anp-table-checkered .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n),
+.anp-table-toggle.anp-table-checkered .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td,
+.anp-table-toggle.anp-table-checkered .is-live-preview:not(.cards):not(.table-disable) tr td:nth-child(2n),
+.anp-table-toggle.anp-table-checkered .is-live-preview:not(.cards):not(.table-disable) tr:nth-child(2n) td,
+.anp-table-toggle.anp-table-checkered .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n),
+.anp-table-toggle.anp-table-checkered .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td {
+  background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
+}
+.anp-table-toggle.anp-table-checkered .markdown-preview-view:not(.cards):not(.table-disable) tr:nth-child(2n) td:nth-child(2n),
+.anp-table-toggle.anp-table-checkered .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td:nth-child(2n),
+.anp-table-toggle.anp-table-checkered .is-live-preview:not(.cards):not(.table-disable) tr:nth-child(2n) td:nth-child(2n),
+.anp-table-toggle.anp-table-checkered .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td:nth-child(2n) {
   background-color: rgba(var(--ctp-crust), var(--anp-table-highlight-opacity, 0.5));
 }
-.anp-table-toggle.anp-td-full .markdown-preview-view:not(.cards):not(.table-disable) table td, .anp-table-toggle.anp-td-full .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td, .anp-table-toggle.anp-td-full .is-live-preview:not(.cards:not(.table-disable)) table td, .anp-table-toggle.anp-td-full .is-live-preview.cards:not(.table-disable) table:not(.dataview) td {
+
+.checkered.markdown-preview-view:not(.cards):not(.table-disable) tr td:nth-child(2n),
+.checkered.markdown-preview-view:not(.cards):not(.table-disable) tr:nth-child(2n) td, .checkered.markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n),
+.checkered.markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td, .checkered.is-live-preview:not(.cards):not(.table-disable) tr td:nth-child(2n),
+.checkered.is-live-preview:not(.cards):not(.table-disable) tr:nth-child(2n) td, .checkered.is-live-preview.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n),
+.checkered.is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td {
   background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
+}
+.checkered.markdown-preview-view:not(.cards):not(.table-disable) tr:nth-child(2n) td:nth-child(2n), .checkered.markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td:nth-child(2n), .checkered.is-live-preview:not(.cards):not(.table-disable) tr:nth-child(2n) td:nth-child(2n), .checkered.is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td:nth-child(2n) {
+  background-color: rgba(var(--ctp-crust), var(--anp-table-highlight-opacity, 0.5));
 }
 
 .anp-table-auto.markdown-rendered:not(.cards):not(.table-disable) table,
