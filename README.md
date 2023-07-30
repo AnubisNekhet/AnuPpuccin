@@ -8,6 +8,10 @@
 <h3 align="center">Voted <b>Best Theme</b> in <a href="https://forum.obsidian.md/t/gems-of-the-year-2022-winners/54903">Gems of the Year 2022</a> awards 🎉
 </h3>
 
+<h2 align="center">Notice</h2>
+<p align="center">AnuPpuccin is currently on hiatus!<br>I have been busy with endsems and projects, thus I haven't been able to dedicate time to fix bugs and issues and I'm really sorry for that 😅. Thank you for your understanding!</p>
+
+
 ## Preface
 Please do note that I've made this theme for myself, and it may not fit your use cases. However, I've made most of the configuration completely optional so that the experience remains as close to vanilla if you choose to do so. Most of the in-application variables are recolored so that your custom snippets can be used easily with the theme.
 This theme makes heavy use of the <a href="https://github.com/mgmeyers/obsidian-style-settings">style settings</a> plugin, which controls most of the features in the theme. The theme is perfectly usable even without style settings, but it's only a fraction of what it actually is with the plugin.
