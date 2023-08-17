@@ -205,6 +205,13 @@ settings:
     default-dark: '#'
     format: 'rgb-values'
   -
+    id: ctp-custom-maroon
+    title: Maroon
+    type: variable-themed-color
+    default-light: '#'
+    default-dark: '#'
+    format: 'rgb-values'
+  -
     id: ctp-custom-peach
     title: Peach
     type: variable-themed-color
@@ -4673,23 +4680,6 @@ sup[data-footnote-id] {
   transition: opacity 0.1s;
 }
 
-.frontmatter-section-data-item {
-  background-color: var(--background-secondary);
-  padding: 0 4px;
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--radius-m);
-  font-family: var(--font-monospace);
-  font-size: 80%;
-}
-
-.frontmatter-container .frontmatter-section-label {
-  text-transform: uppercase;
-  font-size: 70%;
-}
-.frontmatter-container .frontmatter-section-label::first-letter {
-  font-size: 120%;
-}
-
 /*--------------HEADERS----------------*/
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
   margin-left: -22px;
@@ -7516,73 +7506,97 @@ None of the original code was used and the feature was implemented from scratch.
   padding-left: 8px;
 }
 
-.theme-dark .excalidraw, .theme-dark .excalidraw.theme--dark, .theme-light .excalidraw, .theme-light .excalidraw.theme--dark {
-  --button-destructive-bg-color: rgba(var(--ctp-red), 0.2);
-  --button-destructive-color: rgb(var(--ctp-red));
-  --button-gray-1: rgb(var(--ctp-base));
-  --button-gray-2: rgb(var(--ctp-mantle));
-  --button-gray-3: rgb(var(--ctp-crust));
-  --button-special-active-bg-color: rgb(var(--ctp-base));
-  --dialog-border-color: rgb(var(--ctp-surface1));
-  --focus-highlight-color: rgb(var(--ctp-accent, var(--ctp-teal)));
-  --icon-fill-color: var(--text-normal);
-  --icon-green-fill-color: rgb(var(--ctp-green));
-  --default-bg-color: rgb(var(--ctp-base));
-  --input-bg-color: rgb(var(--ctp-mantle));
-  --input-border-color: rgb(var(--ctp-surface1));
-  --input-hover-bg-color: rgb(var(--ctp-surface0));
-  --input-label-color: rgb(var(--ctp-text));
-  --island-bg-color: rgba(var(--ctp-base), 0.96);
-  --keybinding-color: rgb(var(--ctp-crust));
-  --link-color: var(--color-accent);
-  --overlay-bg-color: rgba(var(--ctp-base), 0.88);
-  --popup-bg-color: rgb(var(--ctp-base));
-  --popup-secondary-bg-color: rgb(var(--ctp-mantle));
-  --popup-text-color: rgb(var(--ctp-text));
-  --popup-text-inverted-color: rgb(var(--ctp-base));
-  --select-highlight-color: var(--color-accent);
-  --shadow-island: 0 0 0 1px rgba(var(--ctp-text), 0.01), 1px 1px 5px rgb(var(--ctp-text) / 12%);
-  --text-primary-color: rgb(var(--ctp-text));
-  --color-primary: var(--color-accent);
-  --color-primary-darker: var(--color-accent);
-  --color-primary-darkest: var(--color-accent);
-  --color-primary-light: rgb(var(--ctp-base));
-}
-
-.excalidraw-tooltip {
-  background: rgb(var(--ctp-crust)) !important;
-  color: var(--text-normal) !important;
-}
-
-.excalidraw .ToolIcon--plain,
-.excalidraw .reset-zoom-button,
-.excalidraw .ToolIcon[aria-label="Zoom in"],
-.excalidraw .ToolIcon[aria-label="Zoom out"],
-.excalidraw .ToolIcon[aria-label="Reset the canvas"] {
-  background-color: rgb(var(--ctp-crust)) !important;
-}
-.excalidraw .Dialog__titleContent {
-  font-family: var(--font-interface) !important;
-  font-variant-caps: normal;
-  --h2-color: var(--color-accent);
-}
-.excalidraw .confirm-dialog--confirm.ToolIcon_type_button {
-  background-color: rgb(var(--ctp-red)) !important;
-}
-.excalidraw .confirm-dialog--confirm.ToolIcon_type_button .ToolIcon__icon {
-  color: var(--background-primary) !important;
-}
-
-[data-type=excalidraw] .view-header {
-  margin: 0;
-}
-
-body .excalidraw .library-menu-items-container .library-actions--load, body .excalidraw .library-menu-items-container .library-actions--load:hover {
-  background-color: var(--color-accent);
-}
-
-.excalidraw h3 {
-  --h3-font: var(--font-interface);
+.theme-light .excalidraw.excalidraw-container:not(.theme--dark),
+.theme-dark .excalidraw.excalidraw-container.theme--dark {
+  --button-destructive-bg-color: #ffe3e3;
+  --button-destructive-color: #c92a2a;
+  --button-gray-1: #e9ecef;
+  --button-gray-2: #ced4da;
+  --button-gray-3: #adb5bd;
+  --button-special-active-bg-color: #ebfbee;
+  --dialog-border-color: var(--color-gray-20);
+  --dropdown-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="292.4" height="292.4" viewBox="0 0 292 292"><path d="M287 197L159 69c-4-3-8-5-13-5s-9 2-13 5L5 197c-3 4-5 8-5 13s2 9 5 13c4 4 8 5 13 5h256c5 0 9-1 13-5s5-8 5-13-1-9-5-13z"/></svg>');
+  --focus-highlight-color: #a5d8ff;
+  --icon-fill-color: var(--color-gray-80);
+  --icon-green-fill-color: #2b8a3e;
+  --default-bg-color: #ffffff;
+  --input-bg-color: #ffffff;
+  --input-border-color: #ced4da;
+  --input-hover-bg-color: #f1f3f5;
+  --input-label-color: #495057;
+  --island-bg-color: rgba(255, 255, 255, 0.96);
+  --keybinding-color: var(--color-gray-40);
+  --link-color: #1c7ed6;
+  --overlay-bg-color: rgba(255, 255, 255, 0.88);
+  --popup-bg-color: #ffffff;
+  --popup-secondary-bg-color: #f1f3f5;
+  --popup-text-color: #000000;
+  --popup-text-inverted-color: #ffffff;
+  --select-highlight-color: #339af0;
+  --shadow-island: 0px 7px 14px rgba(0, 0, 0, 0.05), 0px 0px 3.12708px rgba(0, 0, 0, 0.0798), 0px 0px 0.931014px rgba(0, 0, 0, 0.1702);
+  --button-hover-bg: var(--color-gray-10);
+  --default-border-color: var(--color-gray-30);
+  --default-button-size: 2rem;
+  --default-icon-size: 1rem;
+  --lg-button-size: 2.25rem;
+  --lg-icon-size: 1rem;
+  --editor-container-padding: 1rem;
+  --scrollbar-thumb: var(--button-gray-2);
+  --scrollbar-thumb-hover: var(--button-gray-3);
+  --modal-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+  --avatar-border-color: var(--color-gray-20);
+  --sidebar-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+  --sidebar-border-color: var(--color-gray-20);
+  --sidebar-bg-color: #fff;
+  --library-dropdown-shadow: 0px 15px 6px rgba(0, 0, 0, 0.01), 0px 8px 5px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba(0, 0, 0, 0.09), 0px 1px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  --space-factor: 0.25rem;
+  --text-primary-color: var(--color-gray-80);
+  --color-selection: #6965db;
+  --color-icon-white: #ffffff;
+  --color-primary: var(--color-accent) !important;
+  --color-primary-darker: color-mix(in hsl, var(--color-accent), #000000, 70%) !important;
+  --color-primary-darkest: color-mix(in hsl, var(--color-accent), #000000) !important;
+  --color-primary-light: color-mix(in hsl, var(--color-accent), #FFFFFF) !important;
+  --color-primary-light-darker: color-mix(in hsl, var(--color-accent), var(--color-primary)) !important;
+  --color-gray-10: #f5f5f5;
+  --color-gray-20: #ebebeb;
+  --color-gray-30: #d6d6d6;
+  --color-gray-40: #b8b8b8;
+  --color-gray-50: #999999;
+  --color-gray-60: #7a7a7a;
+  --color-gray-70: #5c5c5c;
+  --color-gray-80: #3d3d3d;
+  --color-gray-85: #242424;
+  --color-gray-90: #1e1e1e;
+  --color-gray-100: #121212;
+  --color-warning: #fceeca;
+  --color-warning-dark: #f5c354;
+  --color-warning-darker: #f3ab2c;
+  --color-warning-darkest: #ec8b14;
+  --color-text-warning: var(--text-primary-color);
+  --color-danger: #db6965;
+  --color-danger-dark: #db6965;
+  --color-danger-darker: #d65550;
+  --color-danger-darkest: #d1413c;
+  --color-danger-text: black;
+  --color-danger-background: #fff0f0;
+  --color-danger-icon-background: #ffdad6;
+  --color-danger-color: #700000;
+  --color-danger-icon-color: #700000;
+  --color-warning-background: var(--color-warning);
+  --color-warning-icon-background: var(--color-warning-dark);
+  --color-warning-color: var(--text-primary-color);
+  --color-warning-icon-color: var(--text-primary-color);
+  --color-muted: var(--color-gray-30);
+  --color-muted-darker: var(--color-gray-60);
+  --color-muted-darkest: var(--color-gray-100);
+  --color-muted-background: var(--color-gray-80);
+  --color-muted-background-darker: var(--color-gray-100);
+  --color-promo: #e70078;
+  --color-success: #268029;
+  --color-success-lighter: #cafccc;
+  --border-radius-md: 0.375rem;
+  --border-radius-lg: 0.5rem;
 }
 
 .obsidian-icon-folder-icon {
