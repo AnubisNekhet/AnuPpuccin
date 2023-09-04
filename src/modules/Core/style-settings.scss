@@ -541,6 +541,20 @@ settings:
     default-light: '#'
     default-dark: '#'
 
+# File Editor & Markdown Elements :: Embeds
+  -
+    id: anp-embed-header
+    title: Embeds
+    description: Maximum embed height
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: embed-max-height
+    title: Maximum embed height in px
+    type: variable-number
+    default: 200
+
 # File Editor & Markdown Elements :: Lists
 
   -
@@ -2113,6 +2127,19 @@ settings:
       -
         label: Left
         value: 0
+  -
+    id: anp-file-icon-align
+    title: File Icon Alignment
+    type: variable-select
+    default: '0'
+    format: px
+    options:
+      - 
+        label: Default
+        value: 0
+      - 
+        label: Aligned
+        value: -17
 
 # Workspace :: PDF Viewer
 

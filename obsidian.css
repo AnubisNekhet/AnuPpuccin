@@ -542,6 +542,20 @@ settings:
     default-light: '#'
     default-dark: '#'
 
+# File Editor & Markdown Elements :: Embeds
+  -
+    id: anp-embed-header
+    title: Embeds
+    description: Maximum embed height
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: embed-max-height
+    title: Maximum embed height in px
+    type: variable-number
+    default: 200
+
 # File Editor & Markdown Elements :: Lists
 
   -
@@ -2114,6 +2128,19 @@ settings:
       -
         label: Left
         value: 0
+  -
+    id: anp-file-icon-align
+    title: File Icon Alignment
+    type: variable-select
+    default: '0'
+    format: px
+    options:
+      - 
+        label: Default
+        value: 0
+      - 
+        label: Aligned
+        value: -17
 
 # Workspace :: PDF Viewer
 
@@ -6567,6 +6594,7 @@ None of the original code was used and the feature was implemented from scratch.
   height: 16px;
   width: 16px;
   margin-right: 5px;
+  margin-left: var(--anp-file-icon-align, 0px);
 }
 
 .anp-file-icons .nav-file .nav-file-title[data-path$=".md"]::before {
@@ -7506,6 +7534,7 @@ None of the original code was used and the feature was implemented from scratch.
   padding-left: 8px;
 }
 
+/* WIP, not implemented due to volatile excalidraw updates
 .theme-light .excalidraw.excalidraw-container:not(.theme--dark),
 .theme-dark .excalidraw.excalidraw-container.theme--dark {
   --button-destructive-bg-color: #ffe3e3;
@@ -7515,7 +7544,7 @@ None of the original code was used and the feature was implemented from scratch.
   --button-gray-3: #adb5bd;
   --button-special-active-bg-color: #ebfbee;
   --dialog-border-color: var(--color-gray-20);
-  --dropdown-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="292.4" height="292.4" viewBox="0 0 292 292"><path d="M287 197L159 69c-4-3-8-5-13-5s-9 2-13 5L5 197c-3 4-5 8-5 13s2 9 5 13c4 4 8 5 13 5h256c5 0 9-1 13-5s5-8 5-13-1-9-5-13z"/></svg>');
+  --dropdown-icon: url("data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"292.4\" height=\"292.4\" viewBox=\"0 0 292 292\"><path d=\"M287 197L159 69c-4-3-8-5-13-5s-9 2-13 5L5 197c-3 4-5 8-5 13s2 9 5 13c4 4 8 5 13 5h256c5 0 9-1 13-5s5-8 5-13-1-9-5-13z\"/></svg>");
   --focus-highlight-color: #a5d8ff;
   --icon-fill-color: var(--color-gray-80);
   --icon-green-fill-color: #2b8a3e;
@@ -7551,7 +7580,7 @@ None of the original code was used and the feature was implemented from scratch.
   --library-dropdown-shadow: 0px 15px 6px rgba(0, 0, 0, 0.01), 0px 8px 5px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba(0, 0, 0, 0.09), 0px 1px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
   --space-factor: 0.25rem;
   --text-primary-color: var(--color-gray-80);
-  --color-selection: #6965db;
+  --color-selection: var(--color-accent);
   --color-icon-white: #ffffff;
   --color-primary: var(--color-accent) !important;
   --color-primary-darker: color-mix(in hsl, var(--color-accent), #000000, 70%) !important;
@@ -7598,7 +7627,7 @@ None of the original code was used and the feature was implemented from scratch.
   --border-radius-md: 0.375rem;
   --border-radius-lg: 0.5rem;
 }
-
+*/
 .obsidian-icon-folder-icon {
   margin-top: -5px;
 }
