@@ -1,4 +1,17 @@
-@charset "UTF-8";
+/*===============================================================
+                           AnuPpuccin
+                           ----------
+                  Personal theme for Obsidian
+
+AnuPpuccin is licensed under the GPL-3.0 license which allows you
+  to modify the code freely, however the Copyright and license
+notices must be preserved in your CSS. If you redistribute a part
+of my code, please credit my theme in your CSS file, and specify
+  which code you are using. Please keep my Buy Me a Coffee link
+                  in your README if you do so.
+
+            https://www.buymeacoffee.com/anubisnekhet
+*===============================================================*/
 /* @settings
 name: AnuPpuccin
 id: anuppuccin-theme-settings
@@ -3249,6 +3262,10 @@ body.theme-dark {
   --anp-custom-bg-card-fg-opacity: var(--anp-custom-bg-card-fg-opacity-dark);
 }
 
+/*===============================================================
+* CORE
+*===============================================================*/
+/*======== EDITOR ===============*/
 /*-Highlight current line-*/
 .anp-current-line .markdown-source-view .cm-active.cm-line {
   background-color: rgba(var(--ctp-surface1), 0.4);
@@ -3334,6 +3351,7 @@ body.theme-dark {
   font-family: var(--font-monospace);
 }
 
+/*======== CURSOR MODS ==========*/
 .workspace-tab-header,
 .clickable-icon,
 .dropdown,
@@ -3378,13 +3396,14 @@ input.slider,
   cursor: var(--anp-cursor, var(--cursor));
 }
 
-/*----------FILE PREVIEW MARGINS--------------*/
+/*======== FILE PREVIEW =========*/
+/* FILE PREVIEW MARGINS */
 .anp-toggle-preview .markdown-preview-section {
   width: var(--anp-preview-width-pct);
   margin: 0 auto;
 }
 
-/*---------------HIGHLIGHTS-----------------*/
+/* HIGHLIGHTS */
 .markdown-rendered .search-highlight > div {
   box-shadow: none;
   opacity: 0.3;
@@ -3406,7 +3425,7 @@ input.slider,
   border-radius: 2px;
 }
 
-/* Font weights */
+/* FONT WEIGHTS */
 .markdown-preview-view {
   font-weight: var(--anp-font-preview-wt, normal);
 }
@@ -3419,6 +3438,7 @@ input.slider,
   font-weight: var(--anp-font-live-preview-wt, normal);
 }
 
+/*======== GRAPH ================*/
 .workspace-split:not(.mod-root) .graph-controls.is-close,
 .workspace-split:not(.mod-root) .graph-controls,
 .workspace-split:not(.mod-root) .graph-controls:not(.is-close) {
@@ -3437,6 +3457,7 @@ input.slider,
   background-color: rgb(var(--ctp-mantle));
 }
 
+/*======== RTL ==================*/
 .markdown-rendered.rtl .list-bullet {
   float: right;
   margin-right: -12px;
@@ -3459,6 +3480,7 @@ input.slider,
   margin-right: -22px;
 }
 
+/*======== PRINT ================*/
 .anp-print .print.theme-light, .anp-print .print.theme-dark {
   --ctp-crust: inherit;
   --ctp-mantle: inherit;
@@ -3524,6 +3546,8 @@ input.slider,
     color: rgb(var(--ctp-text));
   }
 }
+/*======== PDF ==================*/
+/* PDF Blending */
 .theme-dark.anp-pdf-blend-toggle-dark,
 .theme-light.anp-pdf-blend-toggle-light {
   --pdf-background: var(--background-secondary);
@@ -3547,6 +3571,7 @@ input.slider,
   border-color: var(--pdf-background);
 }
 
+/* Give accent to selected text */
 .textLayer ::selection {
   background: var(--color-accent);
 }
@@ -6723,8 +6748,20 @@ None of the original code was used and the feature was implemented from scratch.
   --italic-color: var(--text-muted) !important;
 }
 
-/*------------RAINBOW FOLDERS-------------*/
-/* Rainbow colors */
+/*===============================================================
+* RAINBOW FOLDERS
+* Author: AnubisNekhet
+* https://www.buymeacoffee.com/anubisnekhet
+*===============================================================*/
+/*---------------------------------------------------------------
+* RAIBOW FOLDER VARIABLE
+
+* --rainbow-folder-color is a raw rgb variable whose value
+* is cycled per child folder in a folder tree.
+* Applying "inherit" to every child folder excluding first-order
+* child folders results in folders "inheriting" their parent
+* folder colors.
+*---------------------------------------------------------------*/
 .nav-folder-children > .nav-folder:nth-child(11n+2),
 [data-type=bookmarks] .tree-item:nth-child(11n+2) {
   --rainbow-folder-color: var(--ctp-red);
@@ -6775,7 +6812,9 @@ None of the original code was used and the feature was implemented from scratch.
   --rainbow-folder-color: inherit;
 }
 
-/*-Full rainbow theme-*/
+/*---------------------------------------------------------------
+* FULL RAINBOW STYLE
+*---------------------------------------------------------------*/
 .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
 .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title,
 .anp-full-rainbow-color-toggle .tree-item-self .tree-item-icon {
@@ -6794,9 +6833,7 @@ None of the original code was used and the feature was implemented from scratch.
   border-radius: 5px;
   margin-bottom: 2px;
 }
-.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:hover {
-  background-color: rgba(var(--ctp-base), 0.1);
-}
+.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:hover,
 .anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children .nav-file .nav-file-title:hover {
   background-color: rgba(var(--ctp-base), 0.1);
 }
@@ -6807,12 +6844,14 @@ None of the original code was used and the feature was implemented from scratch.
 .anp-full-rainbow-color-toggle .nav-file {
   overflow-y: hidden;
 }
-.anp-full-rainbow-color-toggle .nav-file-title-content.is-being-renamed, .anp-full-rainbow-color-toggle .nav-folder-title-content.is-being-renamed {
+.anp-full-rainbow-color-toggle .nav-file-title-content.is-being-renamed,
+.anp-full-rainbow-color-toggle .nav-folder-title-content.is-being-renamed {
   cursor: text;
   border-color: var(--interactive-accent);
   background-color: rgba(var(--ctp-crust), 0.2);
 }
-.anp-full-rainbow-color-toggle .nav-file-title-content.is-being-renamed::selection, .anp-full-rainbow-color-toggle .nav-folder-title-content.is-being-renamed::selection {
+.anp-full-rainbow-color-toggle .nav-file-title-content.is-being-renamed::selection,
+.anp-full-rainbow-color-toggle .nav-folder-title-content.is-being-renamed::selection {
   background-color: hsla(var(--color-accent-hsl), 0.2);
 }
 .anp-full-rainbow-color-toggle .nav-file-title-content.is-being-renamed::selection {
@@ -6835,10 +6874,12 @@ None of the original code was used and the feature was implemented from scratch.
   border-left: none;
   border-color: rgb(var(--ctp-accent));
 }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file.has-focus > .nav-file-title, .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file > .nav-file-title {
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file > .nav-file-title, .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file.has-focus > .nav-file-title {
   margin-bottom: 0;
 }
-.anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title:focus-within, .anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title:focus-within, .anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title, .anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title {
+.anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-file-title, .anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-file-title:focus-within,
+.anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title,
+.anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title:focus-within {
   box-shadow: none;
 }
 
@@ -6850,15 +6891,18 @@ None of the original code was used and the feature was implemented from scratch.
   --anp-full-rainbow-text-inverted: rgb(var(--ctp-text));
 }
 
-/*-Simple rainbow theme-*/
+/*---------------------------------------------------------------
+* SIMPLE RAINBOW STYLE
+*---------------------------------------------------------------*/
 .anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
 .anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle [data-type=bookmarks] > .view-content > div > .tree-item .tree-item-inner {
   transition: color 0.4s;
   color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
   --nav-item-background-hover: rgba(var(--rainbow-folder-color), 0.1);
-  --nav-item-background-active: rgba(var(--rainbow-folder-color), 0.1) ;
+  --nav-item-background-active: rgba(var(--rainbow-folder-color), 0.1);
 }
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:after, .anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle [data-type=bookmarks] > .view-content > div > .tree-item .tree-item-inner:after {
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:after,
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle [data-type=bookmarks] > .view-content > div > .tree-item .tree-item-inner:after {
   transition: color 0.4s;
   color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
   content: "⬤";
@@ -6867,14 +6911,24 @@ None of the original code was used and the feature was implemented from scratch.
   top: 1px;
   opacity: 0.5;
 }
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle .nav-folder.mod-root .nav-folder > .nav-folder-children, .anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle [data-type=bookmarks] > .view-content > div > .tree-item .tree-item-children {
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle .nav-folder.mod-root .nav-folder > .nav-folder-children,
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle [data-type=bookmarks] > .view-content > div > .tree-item .tree-item-children {
   transition: color 0.4s;
   border-color: rgba(var(--rainbow-folder-color), 0.5);
 }
 .anp-simple-rainbow-color-toggle.anp-simple-rainbow-collapse-toggle .tree-item-self .tree-item-icon {
-  --icon-color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
-  --nav-collapse-icon-color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
-  --nav-collapse-icon-color-collapsed: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
+  --icon-color: rgba(
+  	var(--rainbow-folder-color),
+  	var(--anp-simple-rainbow-opacity, 1)
+  );
+  --nav-collapse-icon-color: rgba(
+  	var(--rainbow-folder-color),
+  	var(--anp-simple-rainbow-opacity, 1)
+  );
+  --nav-collapse-icon-color-collapsed: rgba(
+  	var(--rainbow-folder-color),
+  	var(--anp-simple-rainbow-opacity, 1)
+  );
 }
 
 .modal {

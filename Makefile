@@ -1,7 +1,7 @@
 .PHONY: build
 build: ## Build CSS
-	sass src/base.scss theme.css --no-source-map
-	sass src/base.scss obsidian.css --no-source-map
+	sass src/base.scss theme.css --no-source-map --no-charset
+	sass src/base.scss obsidian.css --no-source-map --no-charset
 
 .PHONY: snippets
 snippets: ## Build CSS for snippets

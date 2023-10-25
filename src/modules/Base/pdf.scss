@@ -1,8 +1,9 @@
+/* PDF Blending */
 .theme-dark.anp-pdf-blend-toggle-dark,
 .theme-light.anp-pdf-blend-toggle-light {
 	--pdf-background: var(--background-secondary);
-  --pdf-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 8px transparent;
-  --pdf-thumbnail-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 8px transparent;
+	--pdf-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 8px transparent;
+	--pdf-thumbnail-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 8px transparent;
 	.pdf-viewer .canvasWrapper,
 	.pdf-thumbnail-view .thumbnailImage {
 		filter: invert(1) hue-rotate(180deg);
@@ -11,11 +12,12 @@
 	.pdf-viewer {
 		background-color: var(--pdf-background);
 		.page {
-				background-color: var(--background-primary);
-				border-color: var(--pdf-background);
+			background-color: var(--background-primary);
+			border-color: var(--pdf-background);
 		}
 	}
 }
+/* Give accent to selected text */
 .textLayer ::selection {
 	background: var(--color-accent);
 }
