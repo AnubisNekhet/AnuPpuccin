@@ -3786,63 +3786,51 @@ body.is-translucent {
   --title-bar-duration: 300ms;
   --title-bar-target-translate-y: 18px;
   --title-bar-translate-y: 40px;
-  --title-bar-windows-fix: 5;
+  /**
+   * This should fix the drag/click titlebar issue.
+   * 
+   * Invisible boxes are not rendered (as if they were fully transparent),
+   * cannot be interacted with (and behave as if they had pointer-events: none),
+   * and are removed from navigation (similar to display: none).
+   * 
+   * @see: https://drafts.csswg.org/css-display/#visibility
+   */
 }
 .anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header {
   margin-top: calc(var(--title-bar-translate-y) * -1);
   position: relative;
-  transition: transform var(--title-bar-duration) var(--title-bar-delay), margin-right 0s calc(var(--title-bar-duration) + var(--title-bar-delay)), margin-right 0s calc(var(--title-bar-duration) + var(--title-bar-delay)), margin-left 0s calc(var(--title-bar-duration) + var(--title-bar-delay)), padding 0s calc(var(--title-bar-duration) + var(--title-bar-delay));
-  margin-left: 80px;
-  margin-right: 80px;
-}
-.anp-autohide-titlebar:not(.is-mobile):not(.mod-macos) .workspace-tabs:is(.mod-top-right-space, .mod-top-left-space) .workspace-leaf-content .view-header {
-  margin-right: calc(var(--title-bar-windows-fix) * var(--frame-right-space));
-  padding: 0;
-}
-.anp-autohide-titlebar:not(.is-mobile):not(.mod-macos) .workspace-tabs:is(.mod-top-right-space, .mod-top-left-space) .workspace-leaf-content .view-header:is(:hover, :focus-within) {
-  margin-right: 0;
-  transition: transform var(--title-bar-duration) var(--title-bar-delay), margin-right 0s, padding 0s;
-  padding: 0 var(--size-4-3);
-}
-.anp-autohide-titlebar:not(.is-mobile):not(.mod-macos) .workspace-tabs:is(.mod-top-right-space, .mod-top-left-space) .workspace-leaf-content .view-header::before {
-  width: calc(100% + var(--title-bar-windows-fix) * var(--frame-right-space));
-  top: var(--header-height);
+  transition: transform var(--title-bar-duration) var(--title-bar-delay);
 }
 .anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header::before {
   bottom: calc(var(--title-bar-target-translate-y) * -1);
   content: "";
-  left: -80px;
+  left: 0;
   position: absolute;
   top: 0;
   transition: transform var(--title-bar-duration) var(--title-bar-delay);
-  width: calc(100% + 160px);
+  width: 100%;
+  z-index: 0;
+}
+.anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:is(:hover, :focus-within)::before {
+  transform: translateY(var(--title-bar-target-translate-y));
+}
+.anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:is(:hover, :focus-within),
+.anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:is(:hover, :focus-within) + .view-content {
+  transform: translateY(var(--title-bar-translate-y));
 }
 .anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-content {
   transition: transform var(--title-bar-duration) var(--title-bar-delay);
 }
-.anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:is(:hover, :focus-within)::before {
-  transform: translateY(var(--title-bar-target-translate-y));
-  left: 0px;
-  width: 100%;
+.anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header-title {
+  --file-header-font-size: var(--font-ui-medium);
 }
-.anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:is(:hover, :focus-within),
-.anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:is(:hover, :focus-within) + .view-content {
-  transition: transform var(--title-bar-duration) var(--title-bar-delay), margin-right 0s, margin-left 0s, padding 0s calc(var(--title-bar-duration) + var(--title-bar-delay));
-  transform: translateY(var(--title-bar-translate-y));
-  margin-left: 0;
-  margin-right: 0;
-}
-.anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:not(:hover, :focus-within) .clickable-icon {
-  app-region: drag;
-}
-.anp-autohide-titlebar:not(.is-mobile) .view-header::before {
-  z-index: 0;
-}
-.anp-autohide-titlebar:not(.is-mobile) .view-header > div {
+.anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header > div {
+  transition: visibility var(--title-bar-duration) var(--title-bar-delay);
+  visibility: visible;
   z-index: 1;
 }
-.anp-autohide-titlebar:not(.is-mobile) .view-header-title {
-  --file-header-font-size: var(--font-ui-medium);
+.anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:not(:hover, :focus-within) > div {
+  visibility: hidden;
 }
 
 body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-split.mod-vertical .workspace-tab-header-spacer {
