@@ -1,66 +1,53 @@
 .anp-autohide-titlebar:not(.is-mobile) {
-
   --title-bar-delay: 150ms;
   --title-bar-duration: 300ms;
   --title-bar-target-translate-y: 18px;
   --title-bar-translate-y: 40px;
-  --title-bar-windows-fix: 5;
 
   .workspace-leaf-content .view-header {
     margin-top: calc(var(--title-bar-translate-y) * -1);
     position: relative;
-    transition: transform var(--title-bar-duration) var(--title-bar-delay), margin-right 0s calc(var(--title-bar-duration) + var(--title-bar-delay)), margin-right 0s calc(var(--title-bar-duration) + var(--title-bar-delay)), margin-left 0s calc(var(--title-bar-duration) + var(--title-bar-delay)), padding 0s calc(var(--title-bar-duration) + var(--title-bar-delay));
-    margin-left: 80px;
-    margin-right: 80px;
-  }
-  //hacky windows fix
-  &:not(.mod-macos) .workspace-tabs:is(.mod-top-right-space, .mod-top-left-space) .workspace-leaf-content .view-header {
-    margin-right: calc(var(--title-bar-windows-fix)*var(--frame-right-space));
-    padding: 0;
-    &:is(:hover,:focus-within) {
-      margin-right: 0;
-      transition: transform var(--title-bar-duration) var(--title-bar-delay), margin-right 0s, padding 0s;
-      padding: 0 var(--size-4-3);
-    }
-    &::before {
-      width: calc(100% + var(--title-bar-windows-fix)*var(--frame-right-space));
-      top: var(--header-height);
-    }
+    transition: transform var(--title-bar-duration) var(--title-bar-delay);
   }
   .workspace-leaf-content .view-header::before {
     bottom: calc(var(--title-bar-target-translate-y) * -1);
     content: '';
-    left: -80px;
+    left: 0;
     position: absolute;
     top: 0;
     transition: transform var(--title-bar-duration) var(--title-bar-delay);
-    width: calc(100% + 160px);
+    width: 100%;
+    z-index: 0;
+  }
+  .workspace-leaf-content .view-header:is(:hover,:focus-within)::before {
+    transform: translateY(var(--title-bar-target-translate-y));
+  }
+  .workspace-leaf-content .view-header:is(:hover,:focus-within),
+  .workspace-leaf-content .view-header:is(:hover,:focus-within) + .view-content {
+    transform: translateY(var(--title-bar-translate-y));
   }
   .workspace-leaf-content .view-content {
     transition: transform var(--title-bar-duration) var(--title-bar-delay);
   }
-  .workspace-leaf-content .view-header:is(:hover,:focus-within)::before {
-    transform: translateY(var(--title-bar-target-translate-y));
-    left: 0px;
-    width: 100%;
+  .workspace-leaf-content .view-header-title {
+    --file-header-font-size: var(--font-ui-medium);
   }
-  .workspace-leaf-content .view-header:is(:hover,:focus-within),
-  .workspace-leaf-content .view-header:is(:hover,:focus-within) + .view-content {
-    transition: transform var(--title-bar-duration) var(--title-bar-delay), margin-right 0s, margin-left 0s, padding 0s calc(var(--title-bar-duration) + var(--title-bar-delay));
-    transform: translateY(var(--title-bar-translate-y));
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .workspace-leaf-content .view-header:not(:hover,:focus-within) .clickable-icon {
-    app-region: drag;
-  }
-  .view-header::before {
-    z-index: 0;
-  }
-  .view-header > div {
+
+  /**
+   * This should fix the drag/click titlebar issue.
+   * 
+   * Invisible boxes are not rendered (as if they were fully transparent),
+   * cannot be interacted with (and behave as if they had pointer-events: none),
+   * and are removed from navigation (similar to display: none).
+   * 
+   * @see: https://drafts.csswg.org/css-display/#visibility
+   */
+  .workspace-leaf-content .view-header > div {
+    transition: visibility var(--title-bar-duration) var(--title-bar-delay);
+    visibility: visible;
     z-index: 1;
   }
-  .view-header-title {
-    --file-header-font-size: var(--font-ui-medium);
+  .workspace-leaf-content .view-header:not(:hover,:focus-within) > div {
+    visibility: hidden;
   }
 }
