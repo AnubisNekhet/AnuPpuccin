@@ -2132,14 +2132,13 @@ settings:
     title: File Icon Alignment
     type: variable-select
     default: '0'
-    format: px
     options:
       - 
         label: Default
         value: 0
       - 
         label: Aligned
-        value: -17
+        value: '-17px'
 
 # Workspace :: PDF Viewer
 

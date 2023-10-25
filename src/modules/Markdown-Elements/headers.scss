@@ -2,58 +2,65 @@
 
 // Fix fold indicators of headings in edit mode when using em font sizes (match reading mode)
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
-  margin-left: -22px;
-  padding: 0px 6px;
+	margin-left: -22px;
+	padding: 0px 6px;
 }
 
 // Custom header font
 
-$accents: "rosewater", "flamingo", "pink", "mauve", "red", "maroon", "peach", "yellow", "green", "teal", "sky", "sapphire", "blue", "lavender";
+$accents: "rosewater", "flamingo", "pink", "mauve", "red", "maroon", "peach",
+	"yellow", "green", "teal", "sky", "sapphire", "blue", "lavender";
 @for $i from 1 through 6 {
-  @each $accent in $accents {
-    .anp-header-color-toggle {
-      &.anp-h#{$i}-#{$accent} {
-        .app-container, .print {
-          --h#{$i}-color: rgb(var(--ctp-#{$accent}));
-        }
-      }
-    }
-  }
-  .anp-h#{$i}-divider {
-    .markdown-rendered h#{$i},
-    .HyperMD-header-#{$i} {
-      border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
-      padding-bottom: 2px;
-    }
-    &.anp-header-divider-color-toggle {
-      .markdown-rendered h#{$i},
-      .HyperMD-header-#{$i} {
-        border-bottom-color: currentColor;
-      }
-    }
-  }
-  .cm-formatting-header-#{$i} { color: var(--h#{$i}-color); }
+	@each $accent in $accents {
+		.anp-header-color-toggle {
+			&.anp-h#{$i}-#{$accent} {
+				.app-container,
+				.print {
+					--h#{$i}-color: rgb(var(--ctp-#{$accent}));
+				}
+			}
+		}
+	}
+	.anp-h#{$i}-divider {
+		.markdown-rendered h#{$i},
+		.HyperMD-header-#{$i} {
+			border-bottom: var(--hr-thickness)
+				solid
+				var(--background-modifier-border);
+			padding-bottom: 2px;
+		}
+		&.anp-header-divider-color-toggle {
+			.markdown-rendered h#{$i},
+			.HyperMD-header-#{$i} {
+				border-bottom-color: currentColor;
+			}
+		}
+	}
+	.cm-formatting-header-#{$i} {
+		color: var(--h#{$i}-color);
+	}
 }
 
 // Source editor recolor application
 @for $i from 1 through 6 {
-  .anp-header-margin-toggle {
-    .cm-header-#{$i}, .markdown-preview-view h#{$i} {
-      margin-block-start: var(--anp-header-margin-value);
-      margin-block-end: var(--anp-header-margin-value);
-    }
-  }
+	.anp-header-margin-toggle {
+		.cm-header-#{$i},
+		.markdown-preview-view h#{$i} {
+			margin-block-start: var(--anp-header-margin-value);
+			margin-block-end: var(--anp-header-margin-value);
+		}
+	}
 }
 // fix source editor margins
 .cm-header {
-  display: inline-block;
+	display: inline-block;
 }
 
 .anp-editor-font-toggle .markdown-source-view:not(.is-live-preview) {
-  --h1-font: var(--anp-editor-font);
-  --h2-font: var(--anp-editor-font);
-  --h3-font: var(--anp-editor-font);
-  --h4-font: var(--anp-editor-font);
-  --h5-font: var(--anp-editor-font);
-  --h6-font: var(--anp-editor-font);
+	--h1-font: var(--anp-editor-font);
+	--h2-font: var(--anp-editor-font);
+	--h3-font: var(--anp-editor-font);
+	--h4-font: var(--anp-editor-font);
+	--h5-font: var(--anp-editor-font);
+	--h6-font: var(--anp-editor-font);
 }
