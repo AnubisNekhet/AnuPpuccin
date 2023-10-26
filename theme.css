@@ -2114,8 +2114,8 @@ settings:
     level: 2
     collapsed: true
   -
-    id: anp-collapse-folders
-    title: Enable folder icons for collapse indicators
+    id: anp-custom-vault-toggle
+    title: Enable custom vault title
     type: class-toggle
   -
     id: anp-file-icons
@@ -2126,8 +2126,8 @@ settings:
     title: Enable floating vault title
     type: class-toggle
   -
-    id: anp-custom-vault-toggle
-    title: Enable custom vault title
+    id: anp-collapse-folders
+    title: Enable folder icons for collapse indicators
     type: class-toggle
   -
     id: anp-file-label-align
@@ -2141,18 +2141,6 @@ settings:
       -
         label: Left
         value: 0
-  -
-    id: anp-file-icon-align
-    title: File Icon Alignment
-    type: variable-select
-    default: '0'
-    options:
-      - 
-        label: Default
-        value: 0
-      - 
-        label: Aligned
-        value: '-17px'
 
 # Workspace :: PDF Viewer
 
@@ -5504,22 +5492,26 @@ body.rainbow-tags {
   --r7-color-light: rgba(var(--ctp-mauve), var(--rainbow-tags-opacity));
 }
 
-.anp-collapse-folders .nav-folder .nav-folder-collapse-indicator,
-.anp-collapse-folders [data-type=bookmarks] .tree-item .collapse-icon {
+.anp-collapse-folders .workspace-leaf-content:not([data-type=search]) .nav-folder.mod-root .nav-folder > .nav-folder-children :is(.nav-file, .nav-folder) {
+  margin-left: var(--size-2-1);
+}
+.anp-collapse-folders .workspace-leaf-content:not([data-type=search]) .tree-item .nav-folder-title {
+  align-items: center;
+}
+.anp-collapse-folders .workspace-leaf-content:not([data-type=search]) .tree-item .collapse-icon {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linejoin='round' stroke-linecap='round' stroke-width='2'%3E%3Cpath d='M6 14l1.45-2.9A2 2 0 0 1 9.24 10H22a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H20a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E%0A");
   -webkit-mask-repeat: no-repeat;
   background-color: currentColor;
+  display: flex;
+  flex-basis: 100%;
   height: 16px;
   width: 17px;
-  margin-right: 4px;
 }
-.anp-collapse-folders .nav-folder.is-collapsed .nav-folder-collapse-indicator,
-.anp-collapse-folders [data-type=bookmarks] .tree-item.is-collapsed .collapse-icon {
+.anp-collapse-folders .workspace-leaf-content:not([data-type=search]) .tree-item.is-collapsed .collapse-icon {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linejoin='round' stroke-linecap='round' stroke-width='2'%3E%3Cpath d='M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2z'/%3E%3Cpath d='M2 10h20' /%3E%3C/svg%3E%0A");
 }
-.anp-collapse-folders .nav-folder-collapse-indicator svg.svg-icon,
-.anp-collapse-folders [data-type=bookmarks] .collapse-icon svg.svg-icon {
-  color: transparent !important;
+.anp-collapse-folders .workspace-leaf-content:not([data-type=search]) .tree-item .collapse-icon svg {
+  display: none;
 }
 
 .anp-color-transition-toggle .horizontal-tab-content,
@@ -6686,17 +6678,22 @@ None of the original code was used and the feature was implemented from scratch.
   display: none;
 }
 
+.anp-file-icons .nav-file .nav-file-title[data-path] {
+  align-items: center;
+}
+
 .anp-file-icons .nav-file .nav-file-title[data-path]::before {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z'/%3E%3Cpath d='M14 2v6h6'/%3E%3C/svg%3E%0A");
   -webkit-mask-repeat: no-repeat;
-  background-color: currentColor;
+  background-color: var(--icon-color);
   content: "";
-  display: inline-flex;
+  display: flex;
   flex-shrink: 0;
-  height: 16px;
-  width: 16px;
-  margin-right: 5px;
-  margin-left: var(--anp-file-icon-align, 0px);
+  height: var(--size-4-4);
+  margin-left: calc(-1 * var(--size-4-5));
+  opacity: var(--icon-opacity);
+  position: absolute;
+  width: var(--size-4-4);
 }
 
 .anp-file-icons .nav-file .nav-file-title[data-path$=".md"]::before {
@@ -6741,10 +6738,6 @@ None of the original code was used and the feature was implemented from scratch.
 .anp-file-icons .nav-file .nav-file-title[data-path$=".mkv"]::before {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 11v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8H4Z'/%3E%3Cpath d='m4 11-.88-2.87a2 2 0 0 1 1.33-2.5l11.48-3.5a2 2 0 0 1 2.5 1.32l.87 2.87L4 11.01Z'/%3E%3Cpath d='M6.6 4.99l3.38 4.2m1.88-5.81l3.38 4.2'/%3E%3C/svg%3E");
   -webkit-mask-repeat: no-repeat;
-}
-
-.anp-file-icons .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {
-  padding-left: var(--size-4-2);
 }
 
 .anp-background-image-toggle:not(.anp-colorful-frame) {
