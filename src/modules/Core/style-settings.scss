@@ -2100,8 +2100,8 @@ settings:
     level: 2
     collapsed: true
   -
-    id: anp-collapse-folders
-    title: Enable folder icons for collapse indicators
+    id: anp-custom-vault-toggle
+    title: Enable custom vault title
     type: class-toggle
   -
     id: anp-file-icons
@@ -2112,8 +2112,8 @@ settings:
     title: Enable floating vault title
     type: class-toggle
   -
-    id: anp-custom-vault-toggle
-    title: Enable custom vault title
+    id: anp-collapse-folders
+    title: Enable folder icons for collapse indicators
     type: class-toggle
   -
     id: anp-file-label-align
@@ -2127,18 +2127,6 @@ settings:
       -
         label: Left
         value: 0
-  -
-    id: anp-file-icon-align
-    title: File Icon Alignment
-    type: variable-select
-    default: '0'
-    options:
-      - 
-        label: Default
-        value: 0
-      - 
-        label: Aligned
-        value: '-17px'
 
 # Workspace :: PDF Viewer
 
