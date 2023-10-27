@@ -5,6 +5,7 @@
 	// Apply styling to folders
 	.nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
 	.nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title,
+	.nav-folder.mod-root .collapse-icon svg.svg-icon,
 	.tree-item-self .tree-item-icon {
 		color: var(--anp-full-rainbow-text-inverted, var(--background-primary));
 	}
