@@ -2236,16 +2236,12 @@ settings:
     title: Enable title recolor
     type: class-toggle
   -
-    id: anp-simple-rainbow-icon-folder-toggle
-    title: Enable icon recolor (For icon folder users)
+    id: anp-simple-rainbow-collapse-icon-toggle
+    title: Enable collapse icon recolor
     type: class-toggle
   -
     id: anp-simple-rainbow-indentation-toggle
     title: Enable collapse indent recolor
-    type: class-toggle
-  -
-    id: anp-simple-rainbow-collapse-toggle
-    title: Enable collapse indicator
     type: class-toggle
   -
     id: anp-simple-rainbow-icon-toggle
@@ -6899,6 +6895,7 @@ None of the original code was used and the feature was implemented from scratch.
 *---------------------------------------------------------------*/
 .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
 .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title,
+.anp-full-rainbow-color-toggle .nav-folder.mod-root .collapse-icon svg.svg-icon,
 .anp-full-rainbow-color-toggle .tree-item-self .tree-item-icon {
   color: var(--anp-full-rainbow-text-inverted, var(--background-primary));
 }
@@ -6977,28 +6974,35 @@ None of the original code was used and the feature was implemented from scratch.
 * SIMPLE RAINBOW STYLE
 *---------------------------------------------------------------*/
 .anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle [data-type=bookmarks] > .view-content > div > .tree-item .tree-item-inner {
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle [data-type=bookmarks] .tree-item .tree-item-inner {
   transition: color 0.4s;
   color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
   --nav-item-background-hover: rgba(var(--rainbow-folder-color), 0.1);
   --nav-item-background-active: rgba(var(--rainbow-folder-color), 0.1);
 }
 .anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:after,
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle [data-type=bookmarks] > .view-content > div > .tree-item .tree-item-inner:after {
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle [data-type=bookmarks] .tree-item .tree-item-inner:after {
   transition: color 0.4s;
   color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
   content: "⬤";
+  font-size: 10px;
   position: relative;
   margin-left: 4px;
-  top: 1px;
   opacity: 0.5;
+  top: -0.5px;
+}
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle [data-type=bookmarks] .tree-item .tree-item-inner {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
 }
 .anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle .nav-folder.mod-root .nav-folder > .nav-folder-children,
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle [data-type=bookmarks] > .view-content > div > .tree-item .tree-item-children {
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle [data-type=bookmarks] .tree-item .tree-item-children {
   transition: color 0.4s;
   border-color: rgba(var(--rainbow-folder-color), 0.5);
 }
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-collapse-toggle .tree-item-self .tree-item-icon {
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-collapse-icon-toggle .tree-item-self .tree-item-icon {
   --icon-color: rgba(
   	var(--rainbow-folder-color),
   	var(--anp-simple-rainbow-opacity, 1)
