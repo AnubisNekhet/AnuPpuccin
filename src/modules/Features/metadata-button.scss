@@ -1,58 +1,61 @@
 /*-Button for metadata-*/
 body.anuppuccin-accent-toggle {
-  &.anp-button-metadata-toggle, .markdown-rendered.metadata-button {
-    .frontmatter-container .frontmatter-container-header {
-      background-color: rgba(var(--ctp-accent), 0.8);
-      &:hover {
-        background-color: rgba(var(--ctp-accent), 0.7);
-      }
-      &:active {
-        background-color: rgba(var(--ctp-accent), 0.6);
-      }
-    }
-  }
+	&.anp-button-metadata-toggle,
+	.markdown-rendered.metadata-button {
+		.frontmatter-container .frontmatter-container-header {
+			background-color: rgba(var(--ctp-accent), 0.8);
+			&:hover {
+				background-color: rgba(var(--ctp-accent), 0.7);
+			}
+			&:active {
+				background-color: rgba(var(--ctp-accent), 0.6);
+			}
+		}
+	}
 }
 body:not(.anuppuccin-accent-toggle) {
-  &.anp-button-metadata-toggle, .markdown-rendered.metadata-button {
-    .frontmatter-container .frontmatter-container-header {
-      background-color: hsla(var(--color-accent-hsl), 0.8);
-      &:hover {
-        background-color: hsla(var(--color-accent-hsl), 0.7);
-      }
-      &:active {
-        background-color: hsla(var(--color-accent-hsl), 0.6);
-      }
-    }
-  }
+	&.anp-button-metadata-toggle,
+	.markdown-rendered.metadata-button {
+		.frontmatter-container .frontmatter-container-header {
+			background-color: hsla(var(--color-accent-hsl), 0.8);
+			&:hover {
+				background-color: hsla(var(--color-accent-hsl), 0.7);
+			}
+			&:active {
+				background-color: hsla(var(--color-accent-hsl), 0.6);
+			}
+		}
+	}
 }
-.anp-button-metadata-toggle, .markdown-rendered.metadata-button {
-  .frontmatter-container {
-    padding: 0;
-    .frontmatter-container-header {
-      width: 32px !important;
-      z-index: 1;
-      height: 32px !important;
-      text-overflow: clip;
-      overflow: hidden;
-      color: transparent !important;
-      position: absolute;
-      left: calc(100% - 32px);
-      border-radius: 6px;
-    }
-    .frontmatter-container-header:after {
-      position: absolute;
-      content: " ";
-      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' data-darkreader-inline-stroke='' style='--darkreader-inline-stroke:currentColor;'%3E%3Cpolygon points='12 2 2 7 12 12 22 7 12 2'%3E%3C/polygon%3E%3Cpolyline points='2 17 12 22 22 17'%3E%3C/polyline%3E%3Cpolyline points='2 12 12 17 22 12'%3E%3C/polyline%3E%3C/svg%3E");
-      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' data-darkreader-inline-stroke='' style='--darkreader-inline-stroke:currentColor;'%3E%3Cpolygon points='12 2 2 7 12 12 22 7 12 2'%3E%3C/polygon%3E%3Cpolyline points='2 17 12 22 22 17'%3E%3C/polyline%3E%3Cpolyline points='2 12 12 17 22 12'%3E%3C/polyline%3E%3C/svg%3E");
-      -webkit-mask-repeat: no-repeat;
-      mask-repeat: no-repeat;
-      background-size: contain;
-      background-color: var(--background-primary);
-      color: var(--background-secondary);
-      width: 22px;
-      height: 22px;
-      margin-left: 5px;
-      margin-top: 5px;
-    }
-  }
+.anp-button-metadata-toggle,
+.markdown-rendered.metadata-button {
+	.frontmatter-container {
+		padding: 0;
+		.frontmatter-container-header {
+			width: 32px !important;
+			z-index: 1;
+			height: 32px !important;
+			text-overflow: clip;
+			overflow: hidden;
+			color: transparent !important;
+			position: absolute;
+			left: calc(100% - 32px);
+			border-radius: 6px;
+		}
+		.frontmatter-container-header:after {
+			position: absolute;
+			content: " ";
+			-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' data-darkreader-inline-stroke='' style='--darkreader-inline-stroke:currentColor;'%3E%3Cpolygon points='12 2 2 7 12 12 22 7 12 2'%3E%3C/polygon%3E%3Cpolyline points='2 17 12 22 22 17'%3E%3C/polyline%3E%3Cpolyline points='2 12 12 17 22 12'%3E%3C/polyline%3E%3C/svg%3E");
+			mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' data-darkreader-inline-stroke='' style='--darkreader-inline-stroke:currentColor;'%3E%3Cpolygon points='12 2 2 7 12 12 22 7 12 2'%3E%3C/polygon%3E%3Cpolyline points='2 17 12 22 22 17'%3E%3C/polyline%3E%3Cpolyline points='2 12 12 17 22 12'%3E%3C/polyline%3E%3C/svg%3E");
+			-webkit-mask-repeat: no-repeat;
+			mask-repeat: no-repeat;
+			background-size: contain;
+			background-color: var(--background-primary);
+			color: var(--background-secondary);
+			width: 22px;
+			height: 22px;
+			margin-left: 5px;
+			margin-top: 5px;
+		}
+	}
 }

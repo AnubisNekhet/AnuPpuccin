@@ -1965,103 +1965,6 @@ settings:
     title: Darker Canvas Background
     type: class-toggle
 
-# Workspace :: Custom Background
-
-  -
-    id: anp-custom-background-header
-    title: Background
-    description: Custom workspace backgrounds
-    type: heading
-    level: 2
-    collapsed: true
-  -
-    id: anp-background-image-toggle
-    title: Enable Custom Background (WIP)
-    description: Not compatible with colorful frame
-    type: class-toggle
-
-# Workspace :: Custom Background :: Light Mode
-
-  -
-    id: anp-custom-background-light-header
-    title: Light Mode
-    description: 
-    type: heading
-    level: 3
-    collapsed: true
-  -
-    id: anp-background-image-light
-    title: Custom Background Image URL
-    description: 'Formatted as url("https://link-to-image.png")'
-    type: variable-text
-    default: url("https://link-to-image.png")
-  -
-    id: anp-custom-bg-brightness-light
-    title: Background brightness
-    type: variable-number-slider
-    min: 0
-    max: 2
-    step: 0.05
-    default: 0.7
-  -
-    id: anp-custom-bg-blur-light
-    title: Background blur
-    type: variable-number-slider
-    min: 0
-    max: 20
-    step: 1
-    default: 5
-    format: px
-  -
-    id: anp-custom-bg-card-fg-opacity-light
-    title: Container opacity
-    type: variable-number-slider
-    min: 0
-    max: 1
-    step: 0.05
-    default: 0.4
-
-# Workspace :: Custom Background :: Dark Mode
-
-  -
-    id: anp-custom-background-dark-header
-    title: Dark Mode
-    description: 
-    type: heading
-    level: 3
-    collapsed: true
-  -
-    id: anp-background-image-dark
-    title: Custom Background Image URL
-    description: 'Formatted as url("https://link-to-image.png")'
-    type: variable-text
-    default: url("https://link-to-image.png")
-  -
-    id: anp-custom-bg-brightness-dark
-    title: Background brightness
-    type: variable-number-slider
-    min: 0
-    max: 1
-    step: 0.05
-    default: 0.7
-  -
-    id: anp-custom-bg-blur-dark
-    title: Background blur
-    type: variable-number-slider
-    min: 0
-    max: 20
-    step: 1
-    default: 5
-    format: px
-  -
-    id: anp-custom-bg-card-fg-opacity-dark
-    title: Container opacity
-    type: variable-number-slider
-    min: 0
-    max: 1
-    step: 0.05
-    default: 0.4
-
 # Workspace :: Colorful Frame
 
   -
@@ -5642,30 +5545,38 @@ body.rainbow-tags {
 }
 
 /*-Button for metadata-*/
-body.anuppuccin-accent-toggle.anp-button-metadata-toggle .frontmatter-container .frontmatter-container-header, body.anuppuccin-accent-toggle .markdown-rendered.metadata-button .frontmatter-container .frontmatter-container-header {
+body.anuppuccin-accent-toggle.anp-button-metadata-toggle .frontmatter-container .frontmatter-container-header,
+body.anuppuccin-accent-toggle .markdown-rendered.metadata-button .frontmatter-container .frontmatter-container-header {
   background-color: rgba(var(--ctp-accent), 0.8);
 }
-body.anuppuccin-accent-toggle.anp-button-metadata-toggle .frontmatter-container .frontmatter-container-header:hover, body.anuppuccin-accent-toggle .markdown-rendered.metadata-button .frontmatter-container .frontmatter-container-header:hover {
+body.anuppuccin-accent-toggle.anp-button-metadata-toggle .frontmatter-container .frontmatter-container-header:hover,
+body.anuppuccin-accent-toggle .markdown-rendered.metadata-button .frontmatter-container .frontmatter-container-header:hover {
   background-color: rgba(var(--ctp-accent), 0.7);
 }
-body.anuppuccin-accent-toggle.anp-button-metadata-toggle .frontmatter-container .frontmatter-container-header:active, body.anuppuccin-accent-toggle .markdown-rendered.metadata-button .frontmatter-container .frontmatter-container-header:active {
+body.anuppuccin-accent-toggle.anp-button-metadata-toggle .frontmatter-container .frontmatter-container-header:active,
+body.anuppuccin-accent-toggle .markdown-rendered.metadata-button .frontmatter-container .frontmatter-container-header:active {
   background-color: rgba(var(--ctp-accent), 0.6);
 }
 
-body:not(.anuppuccin-accent-toggle).anp-button-metadata-toggle .frontmatter-container .frontmatter-container-header, body:not(.anuppuccin-accent-toggle) .markdown-rendered.metadata-button .frontmatter-container .frontmatter-container-header {
+body:not(.anuppuccin-accent-toggle).anp-button-metadata-toggle .frontmatter-container .frontmatter-container-header,
+body:not(.anuppuccin-accent-toggle) .markdown-rendered.metadata-button .frontmatter-container .frontmatter-container-header {
   background-color: hsla(var(--color-accent-hsl), 0.8);
 }
-body:not(.anuppuccin-accent-toggle).anp-button-metadata-toggle .frontmatter-container .frontmatter-container-header:hover, body:not(.anuppuccin-accent-toggle) .markdown-rendered.metadata-button .frontmatter-container .frontmatter-container-header:hover {
+body:not(.anuppuccin-accent-toggle).anp-button-metadata-toggle .frontmatter-container .frontmatter-container-header:hover,
+body:not(.anuppuccin-accent-toggle) .markdown-rendered.metadata-button .frontmatter-container .frontmatter-container-header:hover {
   background-color: hsla(var(--color-accent-hsl), 0.7);
 }
-body:not(.anuppuccin-accent-toggle).anp-button-metadata-toggle .frontmatter-container .frontmatter-container-header:active, body:not(.anuppuccin-accent-toggle) .markdown-rendered.metadata-button .frontmatter-container .frontmatter-container-header:active {
+body:not(.anuppuccin-accent-toggle).anp-button-metadata-toggle .frontmatter-container .frontmatter-container-header:active,
+body:not(.anuppuccin-accent-toggle) .markdown-rendered.metadata-button .frontmatter-container .frontmatter-container-header:active {
   background-color: hsla(var(--color-accent-hsl), 0.6);
 }
 
-.anp-button-metadata-toggle .frontmatter-container, .markdown-rendered.metadata-button .frontmatter-container {
+.anp-button-metadata-toggle .frontmatter-container,
+.markdown-rendered.metadata-button .frontmatter-container {
   padding: 0;
 }
-.anp-button-metadata-toggle .frontmatter-container .frontmatter-container-header, .markdown-rendered.metadata-button .frontmatter-container .frontmatter-container-header {
+.anp-button-metadata-toggle .frontmatter-container .frontmatter-container-header,
+.markdown-rendered.metadata-button .frontmatter-container .frontmatter-container-header {
   width: 32px !important;
   z-index: 1;
   height: 32px !important;
@@ -5676,7 +5587,8 @@ body:not(.anuppuccin-accent-toggle).anp-button-metadata-toggle .frontmatter-cont
   left: calc(100% - 32px);
   border-radius: 6px;
 }
-.anp-button-metadata-toggle .frontmatter-container .frontmatter-container-header:after, .markdown-rendered.metadata-button .frontmatter-container .frontmatter-container-header:after {
+.anp-button-metadata-toggle .frontmatter-container .frontmatter-container-header:after,
+.markdown-rendered.metadata-button .frontmatter-container .frontmatter-container-header:after {
   position: absolute;
   content: " ";
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' data-darkreader-inline-stroke='' style='--darkreader-inline-stroke:currentColor;'%3E%3Cpolygon points='12 2 2 7 12 12 22 7 12 2'%3E%3C/polygon%3E%3Cpolyline points='2 17 12 22 22 17'%3E%3C/polyline%3E%3Cpolyline points='2 12 12 17 22 12'%3E%3C/polyline%3E%3C/svg%3E");
@@ -6105,37 +6017,44 @@ This feature is inspired by Cecilia May's Primary theme: https://github.com/ceci
 None of the original code was used and only the checkbox ideas were utilised.
 Icons were taken from Font Awesome: https://fontawesome.com/
 ----------------------------------*/
-.anp-custom-checkboxes [data-task=x] > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=x] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=x][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task=x] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=x] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=x][type=checkbox]:checked {
   --checkbox-color: rgb(var(--ctp-green));
-  --checkbox-color-hover: rgb(var(--ctp-green)) ;
+  --checkbox-color-hover: rgb(var(--ctp-green));
 }
-.anp-custom-checkboxes [data-task="!"] > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="!"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="!"][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task="!"] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task="!"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="!"][type=checkbox]:checked {
   --checkbox-color: rgb(var(--ctp-yellow));
   --checkbox-color-hover: rgb(var(--ctp-yellow));
 }
-.anp-custom-checkboxes [data-task="!"] > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="!"] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="!"][type=checkbox]:checked:after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M96 64c0-17.7-14.3-32-32-32S32 46.3 32 64V320c0 17.7 14.3 32 32 32s32-14.3 32-32V64zM64 480c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40s17.9 40 40 40z'/%3E%3C/svg%3E");
+.anp-custom-checkboxes [data-task="!"] > input[type=checkbox]:checked:after,
+.anp-custom-checkboxes [data-task="!"] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="!"][type=checkbox]:checked:after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 512'%3E%3C!--!  --%3E%3Cpath d='M96 64c0-17.7-14.3-32-32-32S32 46.3 32 64V320c0 17.7 14.3 32 32 32s32-14.3 32-32V64zM64 480c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40s17.9 40 40 40z'/%3E%3C/svg%3E");
   -webkit-mask-size: 20%;
 }
-.anp-custom-checkboxes [data-task="!"] > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="!"] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="!"][type=checkbox]:checked:before {
+.anp-custom-checkboxes [data-task="!"] > input[type=checkbox]:checked:before,
+.anp-custom-checkboxes [data-task="!"] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="!"][type=checkbox]:checked:before {
   color: var(--checkbox-color);
   margin: 0 3px;
   position: absolute;
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task="?"] > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="?"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="?"][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task="?"] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task="?"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="?"][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
 }
-.anp-custom-checkboxes [data-task="?"] > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="?"] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="?"][type=checkbox]:checked:after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM169.8 165.3c7.9-22.3 29.1-37.3 52.8-37.3h58.3c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24V250.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1H222.6c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM288 352c0 17.7-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32z'/%3E%3C/svg%3E");
+.anp-custom-checkboxes [data-task="?"] > input[type=checkbox]:checked:after,
+.anp-custom-checkboxes [data-task="?"] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="?"][type=checkbox]:checked:after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--!  --%3E%3Cpath d='M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM169.8 165.3c7.9-22.3 29.1-37.3 52.8-37.3h58.3c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24V250.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1H222.6c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM288 352c0 17.7-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32z'/%3E%3C/svg%3E");
   -webkit-mask-size: contain;
   background-color: rgb(var(--ctp-peach));
   left: 0px;
 }
-.anp-custom-checkboxes [data-task="?"] > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="?"] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="?"][type=checkbox]:checked:before {
+.anp-custom-checkboxes [data-task="?"] > input[type=checkbox]:checked:before,
+.anp-custom-checkboxes [data-task="?"] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="?"][type=checkbox]:checked:before {
   color: rgb(var(--ctp-peach));
   margin: 0 3px;
   position: absolute;
@@ -6146,246 +6065,288 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   text-decoration: var(--checklist-done-decoration);
   color: var(--checklist-done-color);
 }
-.anp-custom-checkboxes [data-task="-"] > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="-"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="-"][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task="-"] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task="-"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="-"][type=checkbox]:checked {
   --checkbox-color: rgb(var(--ctp-red));
   --checkbox-color-hover: rgb(var(--ctp-red));
 }
-.anp-custom-checkboxes [data-task="-"] > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="-"] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="-"][type=checkbox]:checked:after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z'/%3E%3C/svg%3E");
+.anp-custom-checkboxes [data-task="-"] > input[type=checkbox]:checked:after,
+.anp-custom-checkboxes [data-task="-"] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="-"][type=checkbox]:checked:after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--!  --%3E%3Cpath d='M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z'/%3E%3C/svg%3E");
   -webkit-mask-size: 50%;
 }
-.anp-custom-checkboxes [data-task="-"] > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="-"] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="-"][type=checkbox]:checked:before {
+.anp-custom-checkboxes [data-task="-"] > input[type=checkbox]:checked:before,
+.anp-custom-checkboxes [data-task="-"] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="-"][type=checkbox]:checked:before {
   color: var(--checkbox-color);
   margin: 0 3px;
   position: absolute;
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=b] > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=b] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=b][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task=b] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=b] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=b][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
 }
-.anp-custom-checkboxes [data-task=b] > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=b] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=b][type=checkbox]:checked:after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z'/%3E%3C/svg%3E");
+.anp-custom-checkboxes [data-task=b] > input[type=checkbox]:checked:after,
+.anp-custom-checkboxes [data-task=b] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=b][type=checkbox]:checked:after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--!  --%3E%3Cpath d='M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z'/%3E%3C/svg%3E");
   -webkit-mask-size: contain;
   background-color: rgb(var(--ctp-red));
   left: 0px;
 }
-.anp-custom-checkboxes [data-task=b] > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=b] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=b][type=checkbox]:checked:before {
+.anp-custom-checkboxes [data-task=b] > input[type=checkbox]:checked:before,
+.anp-custom-checkboxes [data-task=b] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=b][type=checkbox]:checked:before {
   color: rgb(var(--ctp-red));
   margin: 0 3px;
   position: absolute;
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=I] > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=I] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=I][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task=I] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=I] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=I][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
 }
-.anp-custom-checkboxes [data-task=I] > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=I] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=I][type=checkbox]:checked:after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M272 384c9.6-31.9 29.5-59.1 49.2-86.2l0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4l0 0c19.8 27.1 39.7 54.4 49.2 86.2H272zM192 512c44.2 0 80-35.8 80-80V416H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z'/%3E%3C/svg%3E");
+.anp-custom-checkboxes [data-task=I] > input[type=checkbox]:checked:after,
+.anp-custom-checkboxes [data-task=I] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=I][type=checkbox]:checked:after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--!  --%3E%3Cpath d='M272 384c9.6-31.9 29.5-59.1 49.2-86.2l0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4l0 0c19.8 27.1 39.7 54.4 49.2 86.2H272zM192 512c44.2 0 80-35.8 80-80V416H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z'/%3E%3C/svg%3E");
   -webkit-mask-size: contain;
   background-color: rgb(var(--ctp-yellow));
   left: 0px;
 }
-.anp-custom-checkboxes [data-task=I] > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=I] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=I][type=checkbox]:checked:before {
+.anp-custom-checkboxes [data-task=I] > input[type=checkbox]:checked:before,
+.anp-custom-checkboxes [data-task=I] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=I][type=checkbox]:checked:before {
   color: rgb(var(--ctp-yellow));
   margin: 0 3px;
   position: absolute;
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=p] > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=p] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=p][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task=p] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=p] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=p][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
 }
-.anp-custom-checkboxes [data-task=p] > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=p] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=p][type=checkbox]:checked:after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 25.3-19.5 46-44.3 47.9c7.7 8.5 12.3 19.8 12.3 32.1c0 23.4-16.8 42.9-38.9 47.1c4.4 7.2 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z'/%3E%3C/svg%3E");
+.anp-custom-checkboxes [data-task=p] > input[type=checkbox]:checked:after,
+.anp-custom-checkboxes [data-task=p] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=p][type=checkbox]:checked:after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--!  --%3E%3Cpath d='M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 25.3-19.5 46-44.3 47.9c7.7 8.5 12.3 19.8 12.3 32.1c0 23.4-16.8 42.9-38.9 47.1c4.4 7.2 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z'/%3E%3C/svg%3E");
   -webkit-mask-size: contain;
   background-color: rgb(var(--ctp-green));
   left: 0px;
 }
-.anp-custom-checkboxes [data-task=p] > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=p] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=p][type=checkbox]:checked:before {
+.anp-custom-checkboxes [data-task=p] > input[type=checkbox]:checked:before,
+.anp-custom-checkboxes [data-task=p] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=p][type=checkbox]:checked:before {
   color: rgb(var(--ctp-green));
   margin: 0 3px;
   position: absolute;
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=c] > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=c] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=c][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task=c] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=c] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=c][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
 }
-.anp-custom-checkboxes [data-task=c] > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=c] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=c][type=checkbox]:checked:after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M313.4 479.1c26-5.2 42.9-30.5 37.7-56.5l-2.3-11.4c-5.3-26.7-15.1-52.1-28.8-75.2H464c26.5 0 48-21.5 48-48c0-25.3-19.5-46-44.3-47.9c7.7-8.5 12.3-19.8 12.3-32.1c0-23.4-16.8-42.9-38.9-47.1c4.4-7.3 6.9-15.8 6.9-24.9c0-21.3-13.9-39.4-33.1-45.6c.7-3.3 1.1-6.8 1.1-10.4c0-26.5-21.5-48-48-48H294.5c-19 0-37.5 5.6-53.3 16.1L202.7 73.8C176 91.6 160 121.6 160 153.7V192v48 24.9c0 29.2 13.3 56.7 36 75l7.4 5.9c26.5 21.2 44.6 51 51.2 84.2l2.3 11.4c5.2 26 30.5 42.9 56.5 37.7zM32 320H96c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64V288c0 17.7 14.3 32 32 32z'/%3E%3C/svg%3E");
+.anp-custom-checkboxes [data-task=c] > input[type=checkbox]:checked:after,
+.anp-custom-checkboxes [data-task=c] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=c][type=checkbox]:checked:after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--!  --%3E%3Cpath d='M313.4 479.1c26-5.2 42.9-30.5 37.7-56.5l-2.3-11.4c-5.3-26.7-15.1-52.1-28.8-75.2H464c26.5 0 48-21.5 48-48c0-25.3-19.5-46-44.3-47.9c7.7-8.5 12.3-19.8 12.3-32.1c0-23.4-16.8-42.9-38.9-47.1c4.4-7.3 6.9-15.8 6.9-24.9c0-21.3-13.9-39.4-33.1-45.6c.7-3.3 1.1-6.8 1.1-10.4c0-26.5-21.5-48-48-48H294.5c-19 0-37.5 5.6-53.3 16.1L202.7 73.8C176 91.6 160 121.6 160 153.7V192v48 24.9c0 29.2 13.3 56.7 36 75l7.4 5.9c26.5 21.2 44.6 51 51.2 84.2l2.3 11.4c5.2 26 30.5 42.9 56.5 37.7zM32 320H96c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64V288c0 17.7 14.3 32 32 32z'/%3E%3C/svg%3E");
   -webkit-mask-size: 100%;
   background-color: rgb(var(--ctp-red));
   left: 0px;
 }
-.anp-custom-checkboxes [data-task=c] > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=c] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=c][type=checkbox]:checked:before {
+.anp-custom-checkboxes [data-task=c] > input[type=checkbox]:checked:before,
+.anp-custom-checkboxes [data-task=c] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=c][type=checkbox]:checked:before {
   color: var(--checkbox-color);
   margin: 0 3px;
   position: absolute;
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=i] > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=i] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=i][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task=i] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=i] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=i][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
 }
-.anp-custom-checkboxes [data-task=i] > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=i] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=i][type=checkbox]:checked:after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-144c-17.7 0-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32s-14.3 32-32 32z'/%3E%3C/svg%3E");
+.anp-custom-checkboxes [data-task=i] > input[type=checkbox]:checked:after,
+.anp-custom-checkboxes [data-task=i] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=i][type=checkbox]:checked:after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--!  --%3E%3Cpath d='M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-144c-17.7 0-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32s-14.3 32-32 32z'/%3E%3C/svg%3E");
   -webkit-mask-size: contain;
   background-color: rgb(var(--ctp-blue));
   left: 0px;
 }
-.anp-custom-checkboxes [data-task=i] > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=i] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=i][type=checkbox]:checked:before {
+.anp-custom-checkboxes [data-task=i] > input[type=checkbox]:checked:before,
+.anp-custom-checkboxes [data-task=i] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=i][type=checkbox]:checked:before {
   color: rgb(var(--ctp-blue));
   margin: 0 3px;
   position: absolute;
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=l] > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=l] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=l][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task=l] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=l] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=l][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
 }
-.anp-custom-checkboxes [data-task=l] > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=l] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=l][type=checkbox]:checked:after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64z'/%3E%3C/svg%3E");
+.anp-custom-checkboxes [data-task=l] > input[type=checkbox]:checked:after,
+.anp-custom-checkboxes [data-task=l] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=l][type=checkbox]:checked:after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--!  --%3E%3Cpath d='M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64z'/%3E%3C/svg%3E");
   -webkit-mask-size: contain;
   background-color: rgb(var(--ctp-mauve));
   left: 0px;
 }
-.anp-custom-checkboxes [data-task=l] > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=l] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=l][type=checkbox]:checked:before {
+.anp-custom-checkboxes [data-task=l] > input[type=checkbox]:checked:before,
+.anp-custom-checkboxes [data-task=l] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=l][type=checkbox]:checked:before {
   color: rgb(var(--ctp-mauve));
   margin: 0 3px;
   position: absolute;
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task="*"] > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="*"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="*"][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task="*"] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task="*"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="*"][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
 }
-.anp-custom-checkboxes [data-task="*"] > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="*"] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="*"][type=checkbox]:checked:after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z'/%3E%3C/svg%3E");
+.anp-custom-checkboxes [data-task="*"] > input[type=checkbox]:checked:after,
+.anp-custom-checkboxes [data-task="*"] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="*"][type=checkbox]:checked:after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3C!--!  --%3E%3Cpath d='M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z'/%3E%3C/svg%3E");
   -webkit-mask-size: contain;
   background-color: rgb(var(--ctp-yellow));
   left: 0px;
 }
-.anp-custom-checkboxes [data-task="*"] > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="*"] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="*"][type=checkbox]:checked:before {
+.anp-custom-checkboxes [data-task="*"] > input[type=checkbox]:checked:before,
+.anp-custom-checkboxes [data-task="*"] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="*"][type=checkbox]:checked:before {
   color: rgb(var(--ctp-yellow));
   margin: 0 3px;
   position: absolute;
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=n] > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=n] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=n][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task=n] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=n] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=n][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
 }
-.anp-custom-checkboxes [data-task=n] > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=n] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=n][type=checkbox]:checked:after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M32 32C32 14.3 46.3 0 64 0H320c17.7 0 32 14.3 32 32s-14.3 32-32 32H290.5l11.4 148.2c36.7 19.9 65.7 53.2 79.5 94.7l1 3c3.3 9.8 1.6 20.5-4.4 28.8s-15.7 13.3-26 13.3H32c-10.3 0-19.9-4.9-26-13.3s-7.7-19.1-4.4-28.8l1-3c13.8-41.5 42.8-74.8 79.5-94.7L93.5 64H64C46.3 64 32 49.7 32 32zM160 384h64v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V384z'/%3E%3C/svg%3E");
+.anp-custom-checkboxes [data-task=n] > input[type=checkbox]:checked:after,
+.anp-custom-checkboxes [data-task=n] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=n][type=checkbox]:checked:after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--!  --%3E%3Cpath d='M32 32C32 14.3 46.3 0 64 0H320c17.7 0 32 14.3 32 32s-14.3 32-32 32H290.5l11.4 148.2c36.7 19.9 65.7 53.2 79.5 94.7l1 3c3.3 9.8 1.6 20.5-4.4 28.8s-15.7 13.3-26 13.3H32c-10.3 0-19.9-4.9-26-13.3s-7.7-19.1-4.4-28.8l1-3c13.8-41.5 42.8-74.8 79.5-94.7L93.5 64H64C46.3 64 32 49.7 32 32zM160 384h64v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V384z'/%3E%3C/svg%3E");
   -webkit-mask-size: contain;
   background-color: rgb(var(--ctp-maroon));
   left: 0px;
 }
-.anp-custom-checkboxes [data-task=n] > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=n] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=n][type=checkbox]:checked:before {
+.anp-custom-checkboxes [data-task=n] > input[type=checkbox]:checked:before,
+.anp-custom-checkboxes [data-task=n] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=n][type=checkbox]:checked:before {
   color: rgb(var(--ctp-maroon));
   margin: 0 3px;
   position: absolute;
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=S] > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=S] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=S][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task=S] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=S] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=S][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
 }
-.anp-custom-checkboxes [data-task=S] > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=S] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=S][type=checkbox]:checked:after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M320 96H192L144.6 24.9C137.5 14.2 145.1 0 157.9 0H354.1c12.8 0 20.4 14.2 13.3 24.9L320 96zM192 128H320c3.8 2.5 8.1 5.3 13 8.4C389.7 172.7 512 250.9 512 416c0 53-43 96-96 96H96c-53 0-96-43-96-96C0 250.9 122.3 172.7 179 136.4l0 0 0 0c4.8-3.1 9.2-5.9 13-8.4zm84.1 96c0-11.1-9-20.1-20.1-20.1s-20.1 9-20.1 20.1v6c-5.6 1.2-10.9 2.9-15.9 5.1c-15 6.8-27.9 19.4-31.1 37.7c-1.8 10.2-.8 20 3.4 29c4.2 8.8 10.7 15 17.3 19.5c11.6 7.9 26.9 12.5 38.6 16l2.2 .7c13.9 4.2 23.4 7.4 29.3 11.7c2.5 1.8 3.4 3.2 3.8 4.1c.3 .8 .9 2.6 .2 6.7c-.6 3.5-2.5 6.4-8 8.8c-6.1 2.6-16 3.9-28.8 1.9c-6-1-16.7-4.6-26.2-7.9l0 0 0 0 0 0 0 0c-2.2-.8-4.3-1.5-6.3-2.1c-10.5-3.5-21.8 2.2-25.3 12.7s2.2 21.8 12.7 25.3c1.2 .4 2.7 .9 4.4 1.5c7.9 2.7 20.3 6.9 29.8 9.1V416c0 11.1 9 20.1 20.1 20.1s20.1-9 20.1-20.1v-5.5c5.4-1 10.5-2.5 15.4-4.6c15.7-6.7 28.4-19.7 31.6-38.7c1.8-10.4 1-20.3-3-29.4c-3.9-9-10.2-15.6-16.9-20.5c-12.2-8.8-28.3-13.7-40.4-17.4l-.8-.2c-14.2-4.3-23.8-7.3-29.9-11.4c-2.6-1.8-3.4-3-3.6-3.5c-.2-.3-.7-1.6-.1-5c.3-1.9 1.9-5.2 8.2-8.1c6.4-2.9 16.4-4.5 28.6-2.6c4.3 .7 17.9 3.3 21.7 4.3c10.7 2.8 21.6-3.5 24.5-14.2s-3.5-21.6-14.2-24.5c-4.4-1.2-14.4-3.2-21-4.4V224z'/%3E%3C/svg%3E");
+.anp-custom-checkboxes [data-task=S] > input[type=checkbox]:checked:after,
+.anp-custom-checkboxes [data-task=S] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=S][type=checkbox]:checked:after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--!  --%3E%3Cpath d='M320 96H192L144.6 24.9C137.5 14.2 145.1 0 157.9 0H354.1c12.8 0 20.4 14.2 13.3 24.9L320 96zM192 128H320c3.8 2.5 8.1 5.3 13 8.4C389.7 172.7 512 250.9 512 416c0 53-43 96-96 96H96c-53 0-96-43-96-96C0 250.9 122.3 172.7 179 136.4l0 0 0 0c4.8-3.1 9.2-5.9 13-8.4zm84.1 96c0-11.1-9-20.1-20.1-20.1s-20.1 9-20.1 20.1v6c-5.6 1.2-10.9 2.9-15.9 5.1c-15 6.8-27.9 19.4-31.1 37.7c-1.8 10.2-.8 20 3.4 29c4.2 8.8 10.7 15 17.3 19.5c11.6 7.9 26.9 12.5 38.6 16l2.2 .7c13.9 4.2 23.4 7.4 29.3 11.7c2.5 1.8 3.4 3.2 3.8 4.1c.3 .8 .9 2.6 .2 6.7c-.6 3.5-2.5 6.4-8 8.8c-6.1 2.6-16 3.9-28.8 1.9c-6-1-16.7-4.6-26.2-7.9l0 0 0 0 0 0 0 0c-2.2-.8-4.3-1.5-6.3-2.1c-10.5-3.5-21.8 2.2-25.3 12.7s2.2 21.8 12.7 25.3c1.2 .4 2.7 .9 4.4 1.5c7.9 2.7 20.3 6.9 29.8 9.1V416c0 11.1 9 20.1 20.1 20.1s20.1-9 20.1-20.1v-5.5c5.4-1 10.5-2.5 15.4-4.6c15.7-6.7 28.4-19.7 31.6-38.7c1.8-10.4 1-20.3-3-29.4c-3.9-9-10.2-15.6-16.9-20.5c-12.2-8.8-28.3-13.7-40.4-17.4l-.8-.2c-14.2-4.3-23.8-7.3-29.9-11.4c-2.6-1.8-3.4-3-3.6-3.5c-.2-.3-.7-1.6-.1-5c.3-1.9 1.9-5.2 8.2-8.1c6.4-2.9 16.4-4.5 28.6-2.6c4.3 .7 17.9 3.3 21.7 4.3c10.7 2.8 21.6-3.5 24.5-14.2s-3.5-21.6-14.2-24.5c-4.4-1.2-14.4-3.2-21-4.4V224z'/%3E%3C/svg%3E");
   -webkit-mask-size: contain;
   background-color: rgb(var(--ctp-green));
   left: 0px;
 }
-.anp-custom-checkboxes [data-task=S] > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=S] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=S][type=checkbox]:checked:before {
+.anp-custom-checkboxes [data-task=S] > input[type=checkbox]:checked:before,
+.anp-custom-checkboxes [data-task=S] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=S][type=checkbox]:checked:before {
   color: rgb(var(--ctp-green));
   margin: 0 3px;
   position: absolute;
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task="/"] > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="/"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="/"][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task="/"] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task="/"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="/"][type=checkbox]:checked {
   --checkbox-color: rgba(var(--ctp-subtext0), 0.3);
   --checkbox-color-hover: rgba(var(--ctp-subtext0), 0.3);
   border-color: rgb(var(--ctp-subtext0)) !important;
 }
-.anp-custom-checkboxes [data-task="/"] > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="/"] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="/"][type=checkbox]:checked:after {
+.anp-custom-checkboxes [data-task="/"] > input[type=checkbox]:checked:after,
+.anp-custom-checkboxes [data-task="/"] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="/"][type=checkbox]:checked:after {
   background-color: transparent;
 }
-.anp-custom-checkboxes [data-task="/"] > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="/"] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="/"][type=checkbox]:checked:before {
+.anp-custom-checkboxes [data-task="/"] > input[type=checkbox]:checked:before,
+.anp-custom-checkboxes [data-task="/"] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="/"][type=checkbox]:checked:before {
   color: rgb(var(--ctp-subtext0));
   margin: 0 3px;
   position: absolute;
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task="<"] > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="<"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="<"][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task="<"] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task="<"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="<"][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
 }
-.anp-custom-checkboxes [data-task="<"] > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="<"] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="<"][type=checkbox]:checked:after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M96 32V64H48C21.5 64 0 85.5 0 112v48H448V112c0-26.5-21.5-48-48-48H352V32c0-17.7-14.3-32-32-32s-32 14.3-32 32V64H160V32c0-17.7-14.3-32-32-32S96 14.3 96 32zM448 192H0V464c0 26.5 21.5 48 48 48H400c26.5 0 48-21.5 48-48V192z'/%3E%3C/svg%3E");
+.anp-custom-checkboxes [data-task="<"] > input[type=checkbox]:checked:after,
+.anp-custom-checkboxes [data-task="<"] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="<"][type=checkbox]:checked:after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!  --%3E%3Cpath d='M96 32V64H48C21.5 64 0 85.5 0 112v48H448V112c0-26.5-21.5-48-48-48H352V32c0-17.7-14.3-32-32-32s-32 14.3-32 32V64H160V32c0-17.7-14.3-32-32-32S96 14.3 96 32zM448 192H0V464c0 26.5 21.5 48 48 48H400c26.5 0 48-21.5 48-48V192z'/%3E%3C/svg%3E");
   -webkit-mask-size: contain;
   background-color: rgb(var(--ctp-teal));
   left: 0px;
 }
-.anp-custom-checkboxes [data-task="<"] > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="<"] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="<"][type=checkbox]:checked:before {
+.anp-custom-checkboxes [data-task="<"] > input[type=checkbox]:checked:before,
+.anp-custom-checkboxes [data-task="<"] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task="<"][type=checkbox]:checked:before {
   color: rgb(var(--ctp-teal));
   margin: 0 3px;
   position: absolute;
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task=">"] > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=">"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=">"][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task=">"] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=">"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=">"][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
 }
-.anp-custom-checkboxes [data-task=">"] > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=">"] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=">"][type=checkbox]:checked:after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z'/%3E%3C/svg%3E");
+.anp-custom-checkboxes [data-task=">"] > input[type=checkbox]:checked:after,
+.anp-custom-checkboxes [data-task=">"] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=">"][type=checkbox]:checked:after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--!  --%3E%3Cpath d='M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z'/%3E%3C/svg%3E");
   -webkit-mask-size: contain;
   background-color: rgb(var(--ctp-sapphire));
   left: 0px;
 }
-.anp-custom-checkboxes [data-task=">"] > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=">"] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=">"][type=checkbox]:checked:before {
+.anp-custom-checkboxes [data-task=">"] > input[type=checkbox]:checked:before,
+.anp-custom-checkboxes [data-task=">"] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=">"][type=checkbox]:checked:before {
   color: rgb(var(--ctp-sapphire));
   margin: 0 3px;
   position: absolute;
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
-.anp-custom-checkboxes [data-task='"'] > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task='"'] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task='"'][type=checkbox]:checked {
+.anp-custom-checkboxes [data-task='"'] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task='"'] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task='"'][type=checkbox]:checked {
   --checkbox-color: transparent;
   --checkbox-color-hover: transparent;
   border-width: 0;
 }
-.anp-custom-checkboxes [data-task='"'] > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task='"'] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task='"'][type=checkbox]:checked:after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z'/%3E%3C/svg%3E");
+.anp-custom-checkboxes [data-task='"'] > input[type=checkbox]:checked:after,
+.anp-custom-checkboxes [data-task='"'] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task='"'][type=checkbox]:checked:after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!  --%3E%3Cpath d='M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z'/%3E%3C/svg%3E");
   -webkit-mask-size: contain;
   background-color: rgb(var(--ctp-subtext0));
   left: 0px;
 }
-.anp-custom-checkboxes [data-task='"'] > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task='"'] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task='"'][type=checkbox]:checked:before {
+.anp-custom-checkboxes [data-task='"'] > input[type=checkbox]:checked:before,
+.anp-custom-checkboxes [data-task='"'] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task='"'][type=checkbox]:checked:before {
   color: rgb(var(--ctp-subtext0));
   margin: 0 3px;
   position: absolute;
@@ -6734,74 +6695,6 @@ None of the original code was used and the feature was implemented from scratch.
 .anp-file-icons .nav-file .nav-file-title[data-path$=".mkv"]::before {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 11v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8H4Z'/%3E%3Cpath d='m4 11-.88-2.87a2 2 0 0 1 1.33-2.5l11.48-3.5a2 2 0 0 1 2.5 1.32l.87 2.87L4 11.01Z'/%3E%3Cpath d='M6.6 4.99l3.38 4.2m1.88-5.81l3.38 4.2'/%3E%3C/svg%3E");
   -webkit-mask-repeat: no-repeat;
-}
-
-.anp-background-image-toggle:not(.anp-colorful-frame) {
-  --card-background-color: transparent;
-  --card-foreground-color: rgba(var(--ctp-base), var(--anp-custom-bg-card-fg-opacity, 0.4));
-  --tab-inactive-color: rgba(var(--ctp-mantle), var(--anp-custom-bg-card-fg-opacity, 0.4));
-  --code-background: var(--card-foreground-color);
-}
-.anp-background-image-toggle:not(.anp-colorful-frame) .app-container, .anp-background-image-toggle:not(.anp-colorful-frame).anp-bg-fix .app-container {
-  background: var(--anp-background-image, url("https://i.redd.it/m23bwh4n0x151.png"));
-  background-size: cover;
-  background-color: transparent;
-}
-.anp-background-image-toggle:not(.anp-colorful-frame) .horizontal-main-container, .anp-background-image-toggle:not(.anp-colorful-frame).anp-bg-fix .horizontal-main-container {
-  backdrop-filter: brightness(var(--anp-custom-bg-brightness, 0.5)) blur(var(--anp-custom-bg-blur, 5px));
-  background-color: transparent;
-}
-.anp-background-image-toggle:not(.anp-colorful-frame) .workspace {
-  background: transparent;
-}
-.anp-background-image-toggle:not(.anp-colorful-frame).anp-card-layout .workspace-split.mod-root .view-content {
-  background: transparent;
-}
-.anp-background-image-toggle:not(.anp-colorful-frame).anp-alternate-tab-toggle .workspace-tabs:not(.mod-stacked), .anp-background-image-toggle:not(.anp-colorful-frame).anp-safari-tab-toggle .workspace-tabs:not(.mod-stacked) {
-  --tab-background: var(--tab-inactive-color);
-  --tab-background-active: var(--card-foreground-color);
-  --tab-background-inactive: var(--tab-inactive-color);
-}
-.anp-background-image-toggle:not(.anp-colorful-frame).anp-floating-header .nav-folder.mod-root > .nav-folder-title {
-  background-color: var(--tab-inactive-color);
-}
-.anp-background-image-toggle:not(.anp-colorful-frame).anp-canvas-dark-bg .canvas-wrapper,
-.anp-background-image-toggle:not(.anp-colorful-frame) .canvas-wrapper,
-.anp-background-image-toggle:not(.anp-colorful-frame) .mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout).mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right, .anp-background-image-toggle:not(.anp-colorful-frame).anp-card-layout .workspace-ribbon.mod-left:before,
-.anp-background-image-toggle:not(.anp-colorful-frame) .anp-card-layout .workspace-tab-header-container,
-.anp-background-image-toggle:not(.anp-colorful-frame) .workspace-split.mod-root {
-  background-color: transparent;
-}
-.anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout, .anp-border-layout) .workspace-tab-header-container, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-tabs .workspace-leaf, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .workspace-split.mod-root .view-content, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout, .anp-border-layout) .workspace-ribbon, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout, .anp-border-layout) .workspace-ribbon.mod-left:before, .anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-card-layout) .view-header, .anp-background-image-toggle:not(.anp-colorful-frame).is-focused:not(.anp-card-layout) .workspace-leaf.mod-active .view-header,
-.anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin__lane,
-.anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin__item-content-wrapper {
-  background-color: var(--card-foreground-color);
-}
-.anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin__item-title-wrapper, .anp-background-image-toggle:not(.anp-colorful-frame).is-focused.anp-card-layout .workspace-leaf.mod-active .view-header, .anp-background-image-toggle:not(.anp-colorful-frame).anp-card-layout .workspace-ribbon {
-  background: transparent;
-}
-.anp-background-image-toggle:not(.anp-colorful-frame) .workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
-.anp-background-image-toggle:not(.anp-colorful-frame) .mod-root .workspace-tabs .workspace-leaf, .anp-background-image-toggle:not(.anp-colorful-frame).anp-card-layout .view-header,
-.anp-background-image-toggle:not(.anp-colorful-frame) .is-focused .workspace-leaf.mod-active .view-header {
-  background-color: transparent;
-}
-.anp-background-image-toggle:not(.anp-colorful-frame) .view-header-title-container:not(.mod-at-end):after {
-  display: none;
-}
-.anp-background-image-toggle:not(.anp-colorful-frame) .kanban-plugin .kanban-plugin__lane button:hover {
-  background-color: var(--card-foreground-color);
-}
-.anp-background-image-toggle:not(.anp-colorful-frame).anp-border-layout .workspace-tab-header-container,
-.anp-background-image-toggle:not(.anp-colorful-frame).anp-border-layout .workspace-ribbon.mod-left:before {
-  background: transparent;
-}
-.anp-background-image-toggle:not(.anp-colorful-frame):not(.anp-border-layout, .anp-card-layout).anp-fixed-status-bar .status-bar {
-  background: var(--card-foreground-color);
-  backdrop-filter: brightness(var(--anp-custom-bg-brightness, 0.5)) blur(var(--anp-custom-bg-blur, 5px));
-}
-.anp-background-image-toggle:not(.anp-colorful-frame).anp-border-layout.anp-fixed-status-bar .status-bar, .anp-background-image-toggle:not(.anp-colorful-frame).anp-card-layout.anp-fixed-status-bar .status-bar {
-  background: transparent;
-  backdrop-filter: brightness(var(--anp-custom-bg-brightness, 0.5)) blur(var(--anp-custom-bg-blur, 5px));
 }
 
 /*--------------DISABLING IN-FRONTMATTER---------------*/
