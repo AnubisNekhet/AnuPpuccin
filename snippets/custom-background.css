@@ -1,0 +1,211 @@
+/* AGPLv3 license
+Custom Background
+Author: AnubisNekhet
+support me: https://buymeacoffee.com/anubisnekhet
+*/
+
+/* @settings
+name: AnuPpuccin Custom Background
+id: anuppuccin-custom-background
+settings:
+
+-
+  id: anp-custom-background-header
+  title: Background
+  description: Custom workspace backgrounds
+  type: heading
+  level: 1
+  collapsed: true
+-
+  id: anp-background-image-toggle
+  title: Enable Custom Background (WIP)
+  description: Not compatible with colorful frame
+  type: class-toggle
+
+-
+  id: anp-custom-background-light-header
+  title: Light Mode
+  description: 
+  type: heading
+  level: 2
+  collapsed: true
+-
+  id: anp-background-image-light
+  title: Custom Background Image URL
+  description: 'Formatted as url("https://link-to-image.png")'
+  type: variable-text
+  default: url("https://link-to-image.png")
+-
+  id: anp-custom-bg-brightness-light
+  title: Background brightness
+  type: variable-number-slider
+  min: 0
+  max: 2
+  step: 0.05
+  default: 0.7
+-
+  id: anp-custom-bg-blur-light
+  title: Background blur
+  type: variable-number-slider
+  min: 0
+  max: 20
+  step: 1
+  default: 5
+  format: px
+-
+  id: anp-custom-bg-card-fg-opacity-light
+  title: Container opacity
+  type: variable-number-slider
+  min: 0
+  max: 1
+  step: 0.05
+  default: 0.4
+
+-
+  id: anp-custom-background-dark-header
+  title: Dark Mode
+  description: 
+  type: heading
+  level: 2
+  collapsed: true
+-
+  id: anp-background-image-dark
+  title: Custom Background Image URL
+  description: 'Formatted as url("https://link-to-image.png")'
+  type: variable-text
+  default: url("https://link-to-image.png")
+-
+  id: anp-custom-bg-brightness-dark
+  title: Background brightness
+  type: variable-number-slider
+  min: 0
+  max: 1
+  step: 0.05
+  default: 0.7
+-
+  id: anp-custom-bg-blur-dark
+  title: Background blur
+  type: variable-number-slider
+  min: 0
+  max: 20
+  step: 1
+  default: 5
+  format: px
+-
+  id: anp-custom-bg-card-fg-opacity-dark
+  title: Container opacity
+  type: variable-number-slider
+  min: 0
+  max: 1
+  step: 0.05
+  default: 0.4
+*/
+
+.anp-background-image-toggle:not(.anp-colorful-frame) {
+	.app-container,
+	&.anp-bg-fix .app-container {
+		background: var(
+			--anp-background-image,
+			url("https://i.redd.it/m23bwh4n0x151.png")
+		);
+		background-size: cover;
+		background-color: transparent;
+	}
+	.horizontal-main-container,
+	&.anp-bg-fix .horizontal-main-container {
+		backdrop-filter: brightness(var(--anp-custom-bg-brightness, 0.5))
+			blur(var(--anp-custom-bg-blur, 5px));
+		background-color: transparent;
+	}
+	.workspace {
+		background: transparent;
+	}
+	--card-background-color: transparent;
+	--card-foreground-color: rgba(
+		var(--ctp-base),
+		var(--anp-custom-bg-card-fg-opacity, 0.4)
+	);
+	--tab-inactive-color: rgba(
+		var(--ctp-mantle),
+		var(--anp-custom-bg-card-fg-opacity, 0.4)
+	);
+	--code-background: var(--card-foreground-color);
+	&.anp-card-layout .workspace-split.mod-root .view-content {
+		background: transparent;
+	}
+	&.anp-alternate-tab-toggle .workspace-tabs:not(.mod-stacked),
+	&.anp-safari-tab-toggle .workspace-tabs:not(.mod-stacked) {
+		--tab-background: var(--tab-inactive-color);
+		--tab-background-active: var(--card-foreground-color);
+		--tab-background-inactive: var(--tab-inactive-color);
+	}
+	&.anp-floating-header .nav-folder.mod-root > .nav-folder-title {
+		background-color: var(--tab-inactive-color);
+	}
+	&.anp-canvas-dark-bg .canvas-wrapper,
+	.canvas-wrapper,
+	.mod-macos.is-hidden-frameless:not(.is-popout-window)
+		.sidebar-toggle-button.mod-right,
+	&:not(.anp-card-layout).mod-macos.is-hidden-frameless:not(.is-popout-window)
+		.sidebar-toggle-button.mod-right,
+	&.anp-card-layout .workspace-ribbon.mod-left:before,
+	.anp-card-layout .workspace-tab-header-container,
+	.workspace-split.mod-root {
+		background-color: transparent;
+	}
+	&:not(.anp-card-layout, .anp-border-layout) .workspace-tab-header-container,
+	&:not(.anp-card-layout) .workspace-tabs .workspace-leaf,
+	&:not(.anp-card-layout) .workspace-split.mod-root .view-content,
+	&:not(.anp-card-layout, .anp-border-layout) .workspace-ribbon,
+	&:not(.anp-card-layout, .anp-border-layout) .workspace-ribbon.mod-left:before,
+	&:not(.anp-card-layout) .view-header,
+	&.is-focused:not(.anp-card-layout) .workspace-leaf.mod-active .view-header,
+	.kanban-plugin__lane,
+	.kanban-plugin__item-content-wrapper {
+		background-color: var(--card-foreground-color);
+	}
+	.kanban-plugin__item-title-wrapper,
+	&.is-focused.anp-card-layout .workspace-leaf.mod-active .view-header,
+	&.anp-card-layout .workspace-ribbon {
+		background: transparent;
+	}
+	.workspace-fake-target-overlay:not(.is-in-sidebar)
+		.workspace-tabs
+		.workspace-leaf,
+	.mod-root .workspace-tabs .workspace-leaf,
+	&.anp-card-layout .view-header,
+	.is-focused .workspace-leaf.mod-active .view-header {
+		background-color: transparent;
+	}
+	.view-header-title-container:not(.mod-at-end):after {
+		display: none;
+	}
+	.kanban-plugin .kanban-plugin__lane button:hover {
+		background-color: var(--card-foreground-color);
+	}
+	&.anp-border-layout {
+		.workspace-tab-header-container,
+		.workspace-ribbon.mod-left:before {
+			background: transparent;
+		}
+	}
+	&:not(.anp-border-layout, .anp-card-layout) {
+		&.anp-fixed-status-bar {
+			.status-bar {
+				background: var(--card-foreground-color);
+				backdrop-filter: brightness(var(--anp-custom-bg-brightness, 0.5))
+					blur(var(--anp-custom-bg-blur, 5px));
+			}
+		}
+	}
+	&.anp-border-layout,
+	&.anp-card-layout {
+		&.anp-fixed-status-bar {
+			.status-bar {
+				background: transparent;
+				backdrop-filter: brightness(var(--anp-custom-bg-brightness, 0.5))
+					blur(var(--anp-custom-bg-blur, 5px));
+			}
+		}
+	}
+}
