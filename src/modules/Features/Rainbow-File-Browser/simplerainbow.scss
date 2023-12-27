@@ -14,10 +14,16 @@
 			--nav-item-background-hover: rgba(var(--rainbow-folder-color), 0.1);
 			--nav-item-background-active: rgba(var(--rainbow-folder-color), 0.1);
 		}
+		.nav-folder.is-being-dragged-over {
+			background-color: rgba(var(--rainbow-folder-color), 0.1);
+		}
 	}
 	// Circle icon indicator
 	&.anp-simple-rainbow-icon-toggle {
-		.nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:after,
+		.nav-folder.mod-root
+			> .nav-folder-children
+			> .nav-folder
+			.nav-folder-title:after,
 		[data-type="bookmarks"] .tree-item .tree-item-inner:after {
 			transition: color 0.4s;
 			color: rgba(
@@ -29,13 +35,13 @@
 			position: relative;
 			margin-left: 4px;
 			opacity: 0.5;
-			top: -0.5px
+			top: -0.5px;
 		}
 		[data-type="bookmarks"] .tree-item .tree-item-inner {
-		    align-items: center;
-		    display: flex;
-		    flex-grow: 1;
-		    justify-content: space-between;
+			align-items: center;
+			display: flex;
+			flex-grow: 1;
+			justify-content: space-between;
 		}
 	}
 	// Color indents
