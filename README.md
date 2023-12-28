@@ -114,6 +114,11 @@ Speech bubbles have been provided which are useful for language learners and RPG
 | `- [c]` | Con             |
 | `- [b]` | Bookmark        |
 | `- ["]` | Quote           |
+| `- [u]` | Up              |
+| `- [d]` | Down            |
+| `- [w]` | Win             |
+| `- [k]` | Key             |
+| `- [f]` | Fire            |
 | `- [0]` | Speech bubble 0 |
 | `- [1]` | Speech bubble 1 |
 | `- [2]` | Speech bubble 2 |

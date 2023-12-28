@@ -358,6 +358,116 @@ Icons were taken from Font Awesome: https://fontawesome.com/
 			border-width: 0;
 		}
 	}
+	[data-task="u"] {
+		> input[type="checkbox"]:checked,
+		> p > input[type="checkbox"]:checked,
+		&[type="checkbox"]:checked {
+			&:after {
+				-webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXRyZW5kaW5nLXVwIj48cG9seWxpbmUgcG9pbnRzPSIyMiA3IDEzLjUgMTUuNSA4LjUgMTAuNSAyIDE3Ii8+PHBvbHlsaW5lIHBvaW50cz0iMTYgNyAyMiA3IDIyIDEzIi8+PC9zdmc+");
+				-webkit-mask-size: contain;
+				background-color: rgb(var(--ctp-green));
+				left: 0px;
+			}
+			&:before {
+				color: rgb(var(--ctp-green));
+				margin: 0 3px;
+				position: absolute;
+				left: calc(var(--checkbox-size) * 1);
+				font-weight: bold;
+			}
+			--checkbox-color: transparent;
+			--checkbox-color-hover: transparent;
+			border-width: 0;
+		}
+	}
+	[data-task="d"] {
+		> input[type="checkbox"]:checked,
+		> p > input[type="checkbox"]:checked,
+		&[type="checkbox"]:checked {
+			&:after {
+				-webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXRyZW5kaW5nLWRvd24iPjxwb2x5bGluZSBwb2ludHM9IjIyIDE3IDEzLjUgOC41IDguNSAxMy41IDIgNyIvPjxwb2x5bGluZSBwb2ludHM9IjE2IDE3IDIyIDE3IDIyIDExIi8+PC9zdmc+");
+				-webkit-mask-size: contain;
+				background-color: rgb(var(--ctp-red));
+				left: 0px;
+			}
+			&:before {
+				color: rgb(var(--ctp-red));
+				margin: 0 3px;
+				position: absolute;
+				left: calc(var(--checkbox-size) * 1);
+				font-weight: bold;
+			}
+			--checkbox-color: transparent;
+			--checkbox-color-hover: transparent;
+			border-width: 0;
+		}
+	}
+	[data-task="f"] {
+		> input[type="checkbox"]:checked,
+		> p > input[type="checkbox"]:checked,
+		&[type="checkbox"]:checked {
+			&:after {
+				-webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWZsYW1lIj48cGF0aCBkPSJNOC41IDE0LjVBMi41IDIuNSAwIDAgMCAxMSAxMmMwLTEuMzgtLjUtMi0xLTMtMS4wNzItMi4xNDMtLjIyNC00LjA1NCAyLTYgLjUgMi41IDIgNC45IDQgNi41IDIgMS42IDMgMy41IDMgNS41YTcgNyAwIDEgMS0xNCAwYzAtMS4xNTMuNDMzLTIuMjk0IDEtM2EyLjUgMi41IDAgMCAwIDIuNSAyLjV6Ii8+PC9zdmc+");
+				-webkit-mask-size: contain;
+				background-color: rgb(var(--ctp-red));
+				left: 0px;
+			}
+			&:before {
+				color: rgb(var(--ctp-red));
+				margin: 0 3px;
+				position: absolute;
+				left: calc(var(--checkbox-size) * 1);
+				font-weight: bold;
+			}
+			--checkbox-color: transparent;
+			--checkbox-color-hover: transparent;
+			border-width: 0;
+		}
+	}
+	[data-task="k"] {
+		> input[type="checkbox"]:checked,
+		> p > input[type="checkbox"]:checked,
+		&[type="checkbox"]:checked {
+			&:after {
+				-webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWtleS1yb3VuZCI+PHBhdGggZD0iTTIgMTh2M2MwIC42LjQgMSAxIDFoNHYtM2gzdi0zaDJsMS40LTEuNGE2LjUgNi41IDAgMSAwLTQtNFoiLz48Y2lyY2xlIGN4PSIxNi41IiBjeT0iNy41IiByPSIuNSIvPjwvc3ZnPg==");
+				-webkit-mask-size: contain;
+				background-color: rgb(var(--ctp-yellow));
+				left: 0px;
+			}
+			&:before {
+				color: rgb(var(--ctp-yellow));
+				margin: 0 3px;
+				position: absolute;
+				left: calc(var(--checkbox-size) * 1);
+				font-weight: bold;
+			}
+			--checkbox-color: transparent;
+			--checkbox-color-hover: transparent;
+			border-width: 0;
+		}
+	}
+	[data-task="w"] {
+		> input[type="checkbox"]:checked,
+		> p > input[type="checkbox"]:checked,
+		&[type="checkbox"]:checked {
+			&:after {
+				-webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWNha2UiPjxwYXRoIGQ9Ik0yMCAyMXYtOGEyIDIgMCAwIDAtMi0ySDZhMiAyIDAgMCAwLTIgMnY4Ii8+PHBhdGggZD0iTTQgMTZzLjUtMSAyLTEgMi41IDIgNCAyIDIuNS0yIDQtMiAyLjUgMiA0IDIgMi0xIDItMSIvPjxwYXRoIGQ9Ik0yIDIxaDIwIi8+PHBhdGggZD0iTTcgOHYzIi8+PHBhdGggZD0iTTEyIDh2MyIvPjxwYXRoIGQ9Ik0xNyA4djMiLz48cGF0aCBkPSJNNyA0aDAuMDEiLz48cGF0aCBkPSJNMTIgNGgwLjAxIi8+PHBhdGggZD0iTTE3IDRoMC4wMSIvPjwvc3ZnPg==");
+				-webkit-mask-size: contain;
+				background-color: rgb(var(--ctp-mauve));
+				left: 0px;
+			}
+			&:before {
+				color: rgb(var(--ctp-mauve));
+				margin: 0 3px;
+				position: absolute;
+				left: calc(var(--checkbox-size) * 1);
+				font-weight: bold;
+			}
+			--checkbox-color: transparent;
+			--checkbox-color-hover: transparent;
+			border-width: 0;
+		}
+	}
 }
 
 $labels: (
