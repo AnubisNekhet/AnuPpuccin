@@ -152,6 +152,7 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 | [Atom](https://github.com/kognise/obsidian-atom)          | Yes        | Yes       | Accent value is hardcoded into the theme.                                                                                   |
 | [Catppuccin](https://github.com/catppuccin/catppuccin)    | Yes        | Yes       | There are 4 variants of the dark theme, namely: Frappe, Macchiato, Mocha and Mocha Old.<br>The light theme is called Latte. |
 | Coffee                                                    | No         | Yes       | Custom colorscheme                                                                                                          |
+| [Biscuit](https://github.com/Biscuit-Colorscheme/biscuit) | Yes        | Yes       | -                                                                                                                           |
 | [Everforest](https://github.com/sainnhe/everforest)       | Yes        | Yes       | -                                                                                                                           |
 | [Dracula](https://github.com/dracula/dracula-theme)       | No         | Yes       | -                                                                                                                           |
 | [Gruvbox](https://github.com/morhetz/gruvbox)             | Yes        | Yes       | -                                                                                                                           |
@@ -194,6 +195,10 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 <details>
 <summary><h4>Coffee</h4></summary>
 <img src="assets/colorschemes/coffee-dark.webp"/>
+</details>
+<details>
+<summary><h4>Biscuit</h4></summary>
+<img src="assets/colorschemes/biscuit-dark.webp"/>
 </details>
 <details>
 <summary><h4>Everforest</h4></summary>

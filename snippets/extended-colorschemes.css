@@ -65,6 +65,9 @@ settings:
             label: Atom
             value: ctp-atom-dark
         -
+            label: Biscuit
+            value: ctp-biscuit-dark
+        -
             label: Coffee
             value: ctp-coffee-dark
         -
@@ -149,727 +152,2134 @@ settings:
   --ctp-ext-crust: 0, 0, 0 !important;
 }
 
-.theme-light.anp-theme-ext-light.ctp-atom-light, .anp-theme-ext-light.ctp-atom-light .themed-color-wrapper > .theme-light {
-  --ctp-ext-rosewater: 229, 148, 121;
-  --ctp-ext-flamingo: 197, 103, 131;
-  --ctp-ext-pink: 166, 37, 104;
-  --ctp-ext-mauve: 166, 37, 164;
-  --ctp-ext-red: 231, 85, 69;
-  --ctp-ext-maroon: 231, 101, 69;
-  --ctp-ext-peach: 227, 86, 73;
-  --ctp-ext-yellow: 152, 104, 0;
-  --ctp-ext-green: 78, 162, 76;
-  --ctp-ext-teal: 0, 188, 182;
-  --ctp-ext-sky: 0, 132, 188;
-  --ctp-ext-sapphire: 0, 119, 188;
-  --ctp-ext-blue: 61, 116, 246;
-  --ctp-ext-lavender: 152, 84, 151;
-  --ctp-ext-text: 56, 58, 66;
-  --ctp-ext-subtext1: 77, 80, 91;
-  --ctp-ext-subtext0: 99, 102, 116;
-  --ctp-ext-overlay2: 123, 124, 138;
-  --ctp-ext-overlay1: 148, 148, 158;
-  --ctp-ext-overlay0: 174, 173, 179;
-  --ctp-ext-surface2: 201, 197, 197;
-  --ctp-ext-surface1: 218, 216, 216;
-  --ctp-ext-surface0: 237, 237, 237;
-  --ctp-ext-base: 250, 250, 250;
-  --ctp-ext-mantle: 234, 234, 235;
-  --ctp-ext-crust: 219, 219, 220;
+.theme-light.anp-theme-ext-light.ctp-atom-light,
+.anp-theme-ext-light.ctp-atom-light .themed-color-wrapper > .theme-light {
+  --ctp-ext-rosewater: 229,
+  	148,
+  	121;
+  --ctp-ext-flamingo: 197,
+  	103,
+  	131;
+  --ctp-ext-pink: 166,
+  	37,
+  	104;
+  --ctp-ext-mauve: 166,
+  	37,
+  	164;
+  --ctp-ext-red: 231,
+  	85,
+  	69;
+  --ctp-ext-maroon: 231,
+  	101,
+  	69;
+  --ctp-ext-peach: 227,
+  	86,
+  	73;
+  --ctp-ext-yellow: 152,
+  	104,
+  	0;
+  --ctp-ext-green: 78,
+  	162,
+  	76;
+  --ctp-ext-teal: 0,
+  	188,
+  	182;
+  --ctp-ext-sky: 0,
+  	132,
+  	188;
+  --ctp-ext-sapphire: 0,
+  	119,
+  	188;
+  --ctp-ext-blue: 61,
+  	116,
+  	246;
+  --ctp-ext-lavender: 152,
+  	84,
+  	151;
+  --ctp-ext-text: 56,
+  	58,
+  	66;
+  --ctp-ext-subtext1: 77,
+  	80,
+  	91;
+  --ctp-ext-subtext0: 99,
+  	102,
+  	116;
+  --ctp-ext-overlay2: 123,
+  	124,
+  	138;
+  --ctp-ext-overlay1: 148,
+  	148,
+  	158;
+  --ctp-ext-overlay0: 174,
+  	173,
+  	179;
+  --ctp-ext-surface2: 201,
+  	197,
+  	197;
+  --ctp-ext-surface1: 218,
+  	216,
+  	216;
+  --ctp-ext-surface0: 237,
+  	237,
+  	237;
+  --ctp-ext-base: 250,
+  	250,
+  	250;
+  --ctp-ext-mantle: 234,
+  	234,
+  	235;
+  --ctp-ext-crust: 219,
+  	219,
+  	220;
 }
 
-.theme-dark.anp-theme-ext-dark.ctp-amoled-dark, .anp-theme-ext-dark.ctp-amoled-dark .themed-color-wrapper > .theme-dark {
-  --ctp-ext-rosewater: 245, 224, 220;
-  --ctp-ext-flamingo: 242, 205, 205;
-  --ctp-ext-pink: 245, 194, 231;
-  --ctp-ext-mauve: 203, 166, 247;
-  --ctp-ext-red: 243, 139, 168;
-  --ctp-ext-maroon: 235, 160, 172;
-  --ctp-ext-peach: 250, 179, 135;
-  --ctp-ext-yellow: 249, 226, 175;
-  --ctp-ext-green: 166, 227, 161;
-  --ctp-ext-teal: 148, 226, 213;
-  --ctp-ext-sky: 137, 220, 235;
-  --ctp-ext-sapphire: 116, 199, 236;
-  --ctp-ext-blue: 135, 176, 249;
-  --ctp-ext-lavender: 180, 190, 254;
-  --ctp-ext-text: 255, 255, 255;
-  --ctp-ext-subtext1: 210, 210, 210;
-  --ctp-ext-subtext0: 189, 189, 189;
-  --ctp-ext-overlay2: 168, 168, 168;
-  --ctp-ext-overlay1: 147, 147, 147;
-  --ctp-ext-overlay0: 126, 126, 126;
-  --ctp-ext-surface2: 80, 80, 80;
-  --ctp-ext-surface1: 50, 50, 50;
-  --ctp-ext-surface0: 30, 30, 30;
-  --ctp-ext-base: 10, 10, 10;
-  --ctp-ext-mantle: 5, 5, 5;
-  --ctp-ext-crust: 0, 0, 0;
+.theme-dark.anp-theme-ext-dark.ctp-amoled-dark,
+.anp-theme-ext-dark.ctp-amoled-dark .themed-color-wrapper > .theme-dark {
+  --ctp-ext-rosewater: 245,
+  	224,
+  	220;
+  --ctp-ext-flamingo: 242,
+  	205,
+  	205;
+  --ctp-ext-pink: 245,
+  	194,
+  	231;
+  --ctp-ext-mauve: 203,
+  	166,
+  	247;
+  --ctp-ext-red: 243,
+  	139,
+  	168;
+  --ctp-ext-maroon: 235,
+  	160,
+  	172;
+  --ctp-ext-peach: 250,
+  	179,
+  	135;
+  --ctp-ext-yellow: 249,
+  	226,
+  	175;
+  --ctp-ext-green: 166,
+  	227,
+  	161;
+  --ctp-ext-teal: 148,
+  	226,
+  	213;
+  --ctp-ext-sky: 137,
+  	220,
+  	235;
+  --ctp-ext-sapphire: 116,
+  	199,
+  	236;
+  --ctp-ext-blue: 135,
+  	176,
+  	249;
+  --ctp-ext-lavender: 180,
+  	190,
+  	254;
+  --ctp-ext-text: 255,
+  	255,
+  	255;
+  --ctp-ext-subtext1: 210,
+  	210,
+  	210;
+  --ctp-ext-subtext0: 189,
+  	189,
+  	189;
+  --ctp-ext-overlay2: 168,
+  	168,
+  	168;
+  --ctp-ext-overlay1: 147,
+  	147,
+  	147;
+  --ctp-ext-overlay0: 126,
+  	126,
+  	126;
+  --ctp-ext-surface2: 80,
+  	80,
+  	80;
+  --ctp-ext-surface1: 50,
+  	50,
+  	50;
+  --ctp-ext-surface0: 30,
+  	30,
+  	30;
+  --ctp-ext-base: 10,
+  	10,
+  	10;
+  --ctp-ext-mantle: 5,
+  	5,
+  	5;
+  --ctp-ext-crust: 0,
+  	0,
+  	0;
 }
 
-.theme-dark.anp-theme-ext-dark.ctp-atom-dark, .anp-theme-ext-dark.ctp-atom-dark .themed-color-wrapper > .theme-dark {
-  --ctp-ext-rosewater: 226, 196, 168;
-  --ctp-ext-flamingo: 238, 187, 216;
-  --ctp-ext-pink: 221, 120, 211;
-  --ctp-ext-mauve: 198, 120, 221;
-  --ctp-ext-red: 224, 108, 117;
-  --ctp-ext-maroon: 224, 121, 108;
-  --ctp-ext-peach: 209, 154, 102;
-  --ctp-ext-yellow: 229, 192, 123;
-  --ctp-ext-green: 152, 195, 121;
-  --ctp-ext-teal: 86, 182, 194;
-  --ctp-ext-sky: 83, 185, 174;
-  --ctp-ext-sapphire: 93, 185, 187;
-  --ctp-ext-blue: 97, 175, 239;
-  --ctp-ext-lavender: 170, 127, 183;
-  --ctp-ext-text: 221, 222, 223;
-  --ctp-ext-subtext1: 171, 171, 171;
-  --ctp-ext-subtext0: 135, 135, 135;
-  --ctp-ext-overlay2: 108, 115, 132;
-  --ctp-ext-overlay1: 96, 102, 118;
-  --ctp-ext-overlay0: 80, 85, 98;
-  --ctp-ext-surface2: 66, 73, 88;
-  --ctp-ext-surface1: 57, 63, 76;
-  --ctp-ext-surface0: 48, 53, 64;
-  --ctp-ext-base: 39, 43, 52;
-  --ctp-ext-mantle: 33, 37, 43;
-  --ctp-ext-crust: 26, 30, 36;
+.theme-dark.anp-theme-ext-dark.ctp-atom-dark,
+.anp-theme-ext-dark.ctp-atom-dark .themed-color-wrapper > .theme-dark {
+  --ctp-ext-rosewater: 226,
+  	196,
+  	168;
+  --ctp-ext-flamingo: 238,
+  	187,
+  	216;
+  --ctp-ext-pink: 221,
+  	120,
+  	211;
+  --ctp-ext-mauve: 198,
+  	120,
+  	221;
+  --ctp-ext-red: 224,
+  	108,
+  	117;
+  --ctp-ext-maroon: 224,
+  	121,
+  	108;
+  --ctp-ext-peach: 209,
+  	154,
+  	102;
+  --ctp-ext-yellow: 229,
+  	192,
+  	123;
+  --ctp-ext-green: 152,
+  	195,
+  	121;
+  --ctp-ext-teal: 86,
+  	182,
+  	194;
+  --ctp-ext-sky: 83,
+  	185,
+  	174;
+  --ctp-ext-sapphire: 93,
+  	185,
+  	187;
+  --ctp-ext-blue: 97,
+  	175,
+  	239;
+  --ctp-ext-lavender: 170,
+  	127,
+  	183;
+  --ctp-ext-text: 221,
+  	222,
+  	223;
+  --ctp-ext-subtext1: 171,
+  	171,
+  	171;
+  --ctp-ext-subtext0: 135,
+  	135,
+  	135;
+  --ctp-ext-overlay2: 108,
+  	115,
+  	132;
+  --ctp-ext-overlay1: 96,
+  	102,
+  	118;
+  --ctp-ext-overlay0: 80,
+  	85,
+  	98;
+  --ctp-ext-surface2: 66,
+  	73,
+  	88;
+  --ctp-ext-surface1: 57,
+  	63,
+  	76;
+  --ctp-ext-surface0: 48,
+  	53,
+  	64;
+  --ctp-ext-base: 39,
+  	43,
+  	52;
+  --ctp-ext-mantle: 33,
+  	37,
+  	43;
+  --ctp-ext-crust: 26,
+  	30,
+  	36;
 }
 
-.theme-dark.anp-theme-ext-dark.ctp-coffee-dark, .anp-theme-ext-dark.ctp-coffee-dark .themed-color-wrapper > .theme-dark {
-  --ctp-ext-rosewater: 236, 222, 213;
-  --ctp-ext-flamingo: 234, 195, 214;
-  --ctp-ext-pink: 234, 159, 194;
-  --ctp-ext-mauve: 215, 159, 234;
-  --ctp-ext-red: 234, 159, 159;
-  --ctp-ext-maroon: 234, 169, 159;
-  --ctp-ext-peach: 234, 178, 159;
-  --ctp-ext-yellow: 234, 201, 159;
-  --ctp-ext-green: 174, 213, 165;
-  --ctp-ext-teal: 164, 234, 192;
-  --ctp-ext-sky: 174, 224, 206;
-  --ctp-ext-sapphire: 163, 225, 235;
-  --ctp-ext-blue: 163, 200, 235;
-  --ctp-ext-lavender: 182, 186, 226;
-  --ctp-ext-text: 250, 218, 195;
-  --ctp-ext-subtext1: 247, 204, 172;
-  --ctp-ext-subtext0: 235, 192, 160;
-  --ctp-ext-overlay2: 199, 163, 136;
-  --ctp-ext-overlay1: 173, 144, 124;
-  --ctp-ext-overlay0: 120, 102, 96;
-  --ctp-ext-surface2: 94, 84, 86;
-  --ctp-ext-surface1: 85, 77, 82;
-  --ctp-ext-surface0: 76, 70, 78;
-  --ctp-ext-base: 58, 56, 69;
-  --ctp-ext-mantle: 47, 46, 56;
-  --ctp-ext-crust: 38, 37, 45;
+.theme-dark.anp-theme-ext-dark.ctp-biscuit-dark,
+.anp-theme-ext-dark.ctp-biscuit-dark .themed-color-wrapper > .theme-dark {
+  --ctp-ext-rosewater: 219,
+  	177,
+  	127;
+  --ctp-ext-flamingo: 205,
+  	98,
+  	123;
+  --ctp-ext-pink: 174,
+  	63,
+  	130;
+  --ctp-ext-mauve: 123,
+  	61,
+  	121;
+  --ctp-ext-red: 207,
+  	34,
+  	62;
+  --ctp-ext-maroon: 207,
+  	48,
+  	34;
+  --ctp-ext-peach: 227,
+  	156,
+  	69;
+  --ctp-ext-yellow: 227,
+  	187,
+  	69;
+  --ctp-ext-green: 149,
+  	154,
+  	107;
+  --ctp-ext-teal: 118,
+  	143,
+  	128;
+  --ctp-ext-sky: 118,
+  	143,
+  	134;
+  --ctp-ext-sapphire: 79,
+  	84,
+  	118;
+  --ctp-ext-blue: 97,
+  	79,
+  	118;
+  --ctp-ext-lavender: 117,
+  	109,
+  	148;
+  --ctp-ext-text: 255,
+  	233,
+  	199;
+  --ctp-ext-subtext1: 220,
+  	201,
+  	188;
+  --ctp-ext-subtext0: 194,
+  	178,
+  	178;
+  --ctp-ext-overlay2: 174,
+  	152,
+  	152;
+  --ctp-ext-overlay1: 156,
+  	129,
+  	129;
+  --ctp-ext-overlay0: 140,
+  	110,
+  	110;
+  --ctp-ext-surface2: 114,
+  	90,
+  	90;
+  --ctp-ext-surface1: 100,
+  	79,
+  	79;
+  --ctp-ext-surface0: 83,
+  	65,
+  	65;
+  --ctp-ext-base: 69,
+  	54,
+  	54;
+  --ctp-ext-mantle: 45,
+  	36,
+  	36;
+  --ctp-ext-crust: 26,
+  	21,
+  	21;
 }
 
-.theme-dark.anp-theme-ext-dark.ctp-dracula, .anp-theme-ext-dark.ctp-dracula .themed-color-wrapper > .theme-dark {
-  --ctp-ext-rosewater: 246, 201, 153;
-  --ctp-ext-flamingo: 245, 189, 166;
-  --ctp-ext-pink: 228, 157, 248;
-  --ctp-ext-mauve: 189, 147, 249;
-  --ctp-ext-red: 255, 85, 85;
-  --ctp-ext-maroon: 230, 102, 102;
-  --ctp-ext-peach: 255, 184, 108;
-  --ctp-ext-yellow: 241, 250, 140;
-  --ctp-ext-green: 80, 250, 123;
-  --ctp-ext-teal: 104, 219, 211;
-  --ctp-ext-sky: 139, 233, 253;
-  --ctp-ext-sapphire: 104, 197, 240;
-  --ctp-ext-blue: 95, 126, 222;
-  --ctp-ext-lavender: 197, 146, 222;
-  --ctp-ext-text: 248, 248, 242;
-  --ctp-ext-subtext1: 211, 211, 197;
-  --ctp-ext-subtext0: 191, 191, 181;
-  --ctp-ext-overlay2: 139, 143, 167;
-  --ctp-ext-overlay1: 110, 114, 145;
-  --ctp-ext-overlay0: 88, 92, 116;
-  --ctp-ext-surface2: 68, 71, 90;
-  --ctp-ext-surface1: 56, 59, 76;
-  --ctp-ext-surface0: 48, 50, 65;
-  --ctp-ext-base: 40, 42, 54;
-  --ctp-ext-mantle: 33, 34, 44;
-  --ctp-ext-crust: 26, 27, 35;
+.theme-dark.anp-theme-ext-dark.ctp-coffee-dark,
+.anp-theme-ext-dark.ctp-coffee-dark .themed-color-wrapper > .theme-dark {
+  --ctp-ext-rosewater: 236,
+  	222,
+  	213;
+  --ctp-ext-flamingo: 234,
+  	195,
+  	214;
+  --ctp-ext-pink: 234,
+  	159,
+  	194;
+  --ctp-ext-mauve: 215,
+  	159,
+  	234;
+  --ctp-ext-red: 234,
+  	159,
+  	159;
+  --ctp-ext-maroon: 234,
+  	169,
+  	159;
+  --ctp-ext-peach: 234,
+  	178,
+  	159;
+  --ctp-ext-yellow: 234,
+  	201,
+  	159;
+  --ctp-ext-green: 174,
+  	213,
+  	165;
+  --ctp-ext-teal: 164,
+  	234,
+  	192;
+  --ctp-ext-sky: 174,
+  	224,
+  	206;
+  --ctp-ext-sapphire: 163,
+  	225,
+  	235;
+  --ctp-ext-blue: 163,
+  	200,
+  	235;
+  --ctp-ext-lavender: 182,
+  	186,
+  	226;
+  --ctp-ext-text: 250,
+  	218,
+  	195;
+  --ctp-ext-subtext1: 247,
+  	204,
+  	172;
+  --ctp-ext-subtext0: 235,
+  	192,
+  	160;
+  --ctp-ext-overlay2: 199,
+  	163,
+  	136;
+  --ctp-ext-overlay1: 173,
+  	144,
+  	124;
+  --ctp-ext-overlay0: 120,
+  	102,
+  	96;
+  --ctp-ext-surface2: 94,
+  	84,
+  	86;
+  --ctp-ext-surface1: 85,
+  	77,
+  	82;
+  --ctp-ext-surface0: 76,
+  	70,
+  	78;
+  --ctp-ext-base: 58,
+  	56,
+  	69;
+  --ctp-ext-mantle: 47,
+  	46,
+  	56;
+  --ctp-ext-crust: 38,
+  	37,
+  	45;
 }
 
-.theme-light.anp-theme-ext-light.ctp-everforest-light, .anp-theme-ext-light.ctp-everforest-light .themed-color-wrapper > .theme-light {
-  --ctp-ext-rosewater: 222, 177, 145;
-  --ctp-ext-flamingo: 221, 181, 194;
-  --ctp-ext-pink: 233, 130, 190;
-  --ctp-ext-mauve: 184, 122, 156;
-  --ctp-ext-red: 248, 85, 82;
-  --ctp-ext-maroon: 248, 104, 82;
-  --ctp-ext-peach: 245, 125, 38;
-  --ctp-ext-yellow: 191, 152, 61;
-  --ctp-ext-green: 137, 156, 64;
-  --ctp-ext-teal: 86, 157, 121;
-  --ctp-ext-sky: 86, 157, 139;
-  --ctp-ext-sapphire: 86, 157, 138;
-  --ctp-ext-blue: 90, 147, 162;
-  --ctp-ext-lavender: 208, 161, 187;
-  --ctp-ext-text: 92, 106, 114;
-  --ctp-ext-subtext1: 114, 125, 132;
-  --ctp-ext-subtext0: 135, 150, 134;
-  --ctp-ext-overlay2: 147, 159, 145;
-  --ctp-ext-overlay1: 164, 173, 158;
-  --ctp-ext-overlay0: 223, 219, 200;
-  --ctp-ext-surface2: 227, 224, 204;
-  --ctp-ext-surface1: 237, 234, 213;
-  --ctp-ext-surface0: 243, 239, 218;
-  --ctp-ext-base: 253, 246, 227;
-  --ctp-ext-mantle: 246, 241, 221;
-  --ctp-ext-crust: 240, 237, 216;
+.theme-dark.anp-theme-ext-dark.ctp-dracula,
+.anp-theme-ext-dark.ctp-dracula .themed-color-wrapper > .theme-dark {
+  --ctp-ext-rosewater: 246,
+  	201,
+  	153;
+  --ctp-ext-flamingo: 245,
+  	189,
+  	166;
+  --ctp-ext-pink: 228,
+  	157,
+  	248;
+  --ctp-ext-mauve: 189,
+  	147,
+  	249;
+  --ctp-ext-red: 255,
+  	85,
+  	85;
+  --ctp-ext-maroon: 230,
+  	102,
+  	102;
+  --ctp-ext-peach: 255,
+  	184,
+  	108;
+  --ctp-ext-yellow: 241,
+  	250,
+  	140;
+  --ctp-ext-green: 80,
+  	250,
+  	123;
+  --ctp-ext-teal: 104,
+  	219,
+  	211;
+  --ctp-ext-sky: 139,
+  	233,
+  	253;
+  --ctp-ext-sapphire: 104,
+  	197,
+  	240;
+  --ctp-ext-blue: 95,
+  	126,
+  	222;
+  --ctp-ext-lavender: 197,
+  	146,
+  	222;
+  --ctp-ext-text: 248,
+  	248,
+  	242;
+  --ctp-ext-subtext1: 211,
+  	211,
+  	197;
+  --ctp-ext-subtext0: 191,
+  	191,
+  	181;
+  --ctp-ext-overlay2: 139,
+  	143,
+  	167;
+  --ctp-ext-overlay1: 110,
+  	114,
+  	145;
+  --ctp-ext-overlay0: 88,
+  	92,
+  	116;
+  --ctp-ext-surface2: 68,
+  	71,
+  	90;
+  --ctp-ext-surface1: 56,
+  	59,
+  	76;
+  --ctp-ext-surface0: 48,
+  	50,
+  	65;
+  --ctp-ext-base: 40,
+  	42,
+  	54;
+  --ctp-ext-mantle: 33,
+  	34,
+  	44;
+  --ctp-ext-crust: 26,
+  	27,
+  	35;
 }
 
-.theme-dark.anp-theme-ext-dark.ctp-everforest-dark, .anp-theme-ext-dark.ctp-everforest-dark .themed-color-wrapper > .theme-dark {
-  --ctp-ext-rosewater: 231, 198, 155;
-  --ctp-ext-flamingo: 224, 186, 207;
-  --ctp-ext-pink: 227, 150, 174;
-  --ctp-ext-mauve: 184, 123, 157;
-  --ctp-ext-red: 218, 99, 98;
-  --ctp-ext-maroon: 218, 116, 98;
-  --ctp-ext-peach: 215, 127, 72;
-  --ctp-ext-yellow: 191, 152, 61;
-  --ctp-ext-green: 137, 156, 64;
-  --ctp-ext-teal: 86, 157, 121;
-  --ctp-ext-sky: 86, 157, 144;
-  --ctp-ext-sapphire: 86, 156, 157;
-  --ctp-ext-blue: 90, 147, 162;
-  --ctp-ext-lavender: 180, 144, 202;
-  --ctp-ext-text: 211, 198, 170;
-  --ctp-ext-subtext1: 182, 192, 180;
-  --ctp-ext-subtext0: 154, 167, 157;
-  --ctp-ext-overlay2: 133, 146, 137;
-  --ctp-ext-overlay1: 127, 137, 125;
-  --ctp-ext-overlay0: 81, 91, 97;
-  --ctp-ext-surface2: 74, 85, 91;
-  --ctp-ext-surface1: 64, 76, 81;
-  --ctp-ext-surface0: 55, 66, 71;
-  --ctp-ext-base: 47, 56, 62;
-  --ctp-ext-mantle: 39, 47, 52;
-  --ctp-ext-crust: 34, 40, 44;
+.theme-light.anp-theme-ext-light.ctp-everforest-light,
+.anp-theme-ext-light.ctp-everforest-light .themed-color-wrapper > .theme-light {
+  --ctp-ext-rosewater: 222,
+  	177,
+  	145;
+  --ctp-ext-flamingo: 221,
+  	181,
+  	194;
+  --ctp-ext-pink: 233,
+  	130,
+  	190;
+  --ctp-ext-mauve: 184,
+  	122,
+  	156;
+  --ctp-ext-red: 248,
+  	85,
+  	82;
+  --ctp-ext-maroon: 248,
+  	104,
+  	82;
+  --ctp-ext-peach: 245,
+  	125,
+  	38;
+  --ctp-ext-yellow: 191,
+  	152,
+  	61;
+  --ctp-ext-green: 137,
+  	156,
+  	64;
+  --ctp-ext-teal: 86,
+  	157,
+  	121;
+  --ctp-ext-sky: 86,
+  	157,
+  	139;
+  --ctp-ext-sapphire: 86,
+  	157,
+  	138;
+  --ctp-ext-blue: 90,
+  	147,
+  	162;
+  --ctp-ext-lavender: 208,
+  	161,
+  	187;
+  --ctp-ext-text: 92,
+  	106,
+  	114;
+  --ctp-ext-subtext1: 114,
+  	125,
+  	132;
+  --ctp-ext-subtext0: 135,
+  	150,
+  	134;
+  --ctp-ext-overlay2: 147,
+  	159,
+  	145;
+  --ctp-ext-overlay1: 164,
+  	173,
+  	158;
+  --ctp-ext-overlay0: 223,
+  	219,
+  	200;
+  --ctp-ext-surface2: 227,
+  	224,
+  	204;
+  --ctp-ext-surface1: 237,
+  	234,
+  	213;
+  --ctp-ext-surface0: 243,
+  	239,
+  	218;
+  --ctp-ext-base: 253,
+  	246,
+  	227;
+  --ctp-ext-mantle: 246,
+  	241,
+  	221;
+  --ctp-ext-crust: 240,
+  	237,
+  	216;
 }
 
-.theme-dark.anp-theme-ext-dark.ctp-generic-dark, .anp-theme-ext-dark.ctp-generic-dark .themed-color-wrapper > .theme-dark {
-  --ctp-ext-rosewater: 245, 224, 220;
-  --ctp-ext-flamingo: 242, 205, 205;
-  --ctp-ext-pink: 245, 194, 231;
-  --ctp-ext-mauve: 203, 166, 247;
-  --ctp-ext-red: 243, 139, 168;
-  --ctp-ext-maroon: 235, 160, 172;
-  --ctp-ext-peach: 250, 179, 135;
-  --ctp-ext-yellow: 249, 226, 175;
-  --ctp-ext-green: 166, 227, 161;
-  --ctp-ext-teal: 148, 226, 213;
-  --ctp-ext-sky: 137, 220, 235;
-  --ctp-ext-sapphire: 116, 199, 236;
-  --ctp-ext-blue: 135, 176, 249;
-  --ctp-ext-lavender: 180, 190, 254;
-  --ctp-ext-text: 255, 255, 255;
-  --ctp-ext-subtext1: 210, 210, 210;
-  --ctp-ext-subtext0: 189, 189, 189;
-  --ctp-ext-overlay2: 168, 168, 168;
-  --ctp-ext-overlay1: 147, 147, 147;
-  --ctp-ext-overlay0: 126, 126, 126;
-  --ctp-ext-surface2: 105, 105, 105;
-  --ctp-ext-surface1: 84, 84, 84;
-  --ctp-ext-surface0: 63, 63, 63;
-  --ctp-ext-base: 42, 42, 42;
-  --ctp-ext-mantle: 21, 21, 21;
-  --ctp-ext-crust: 0, 0, 0;
+.theme-dark.anp-theme-ext-dark.ctp-everforest-dark,
+.anp-theme-ext-dark.ctp-everforest-dark .themed-color-wrapper > .theme-dark {
+  --ctp-ext-rosewater: 231,
+  	198,
+  	155;
+  --ctp-ext-flamingo: 224,
+  	186,
+  	207;
+  --ctp-ext-pink: 227,
+  	150,
+  	174;
+  --ctp-ext-mauve: 184,
+  	123,
+  	157;
+  --ctp-ext-red: 218,
+  	99,
+  	98;
+  --ctp-ext-maroon: 218,
+  	116,
+  	98;
+  --ctp-ext-peach: 215,
+  	127,
+  	72;
+  --ctp-ext-yellow: 191,
+  	152,
+  	61;
+  --ctp-ext-green: 137,
+  	156,
+  	64;
+  --ctp-ext-teal: 86,
+  	157,
+  	121;
+  --ctp-ext-sky: 86,
+  	157,
+  	144;
+  --ctp-ext-sapphire: 86,
+  	156,
+  	157;
+  --ctp-ext-blue: 90,
+  	147,
+  	162;
+  --ctp-ext-lavender: 180,
+  	144,
+  	202;
+  --ctp-ext-text: 211,
+  	198,
+  	170;
+  --ctp-ext-subtext1: 182,
+  	192,
+  	180;
+  --ctp-ext-subtext0: 154,
+  	167,
+  	157;
+  --ctp-ext-overlay2: 133,
+  	146,
+  	137;
+  --ctp-ext-overlay1: 127,
+  	137,
+  	125;
+  --ctp-ext-overlay0: 81,
+  	91,
+  	97;
+  --ctp-ext-surface2: 74,
+  	85,
+  	91;
+  --ctp-ext-surface1: 64,
+  	76,
+  	81;
+  --ctp-ext-surface0: 55,
+  	66,
+  	71;
+  --ctp-ext-base: 47,
+  	56,
+  	62;
+  --ctp-ext-mantle: 39,
+  	47,
+  	52;
+  --ctp-ext-crust: 34,
+  	40,
+  	44;
 }
 
-.theme-dark.anp-theme-ext-dark.ctp-gruvbox-dark, .anp-theme-ext-dark.ctp-gruvbox-dark .themed-color-wrapper > .theme-dark {
-  --ctp-ext-rosewater: 243, 128, 25;
-  --ctp-ext-flamingo: 207, 162, 174;
-  --ctp-ext-pink: 177, 98, 118;
-  --ctp-ext-mauve: 177, 98, 134;
-  --ctp-ext-red: 204, 36, 29;
-  --ctp-ext-maroon: 204, 49, 29;
-  --ctp-ext-peach: 214, 93, 14;
-  --ctp-ext-yellow: 215, 153, 33;
-  --ctp-ext-green: 152, 151, 26;
-  --ctp-ext-teal: 102, 152, 26;
-  --ctp-ext-sky: 26, 152, 76;
-  --ctp-ext-sapphire: 26, 133, 152;
-  --ctp-ext-blue: 69, 133, 136;
-  --ctp-ext-lavender: 146, 111, 175;
-  --ctp-ext-text: 251, 241, 199;
-  --ctp-ext-subtext1: 213, 196, 161;
-  --ctp-ext-subtext0: 189, 174, 147;
-  --ctp-ext-overlay2: 151, 137, 125;
-  --ctp-ext-overlay1: 124, 111, 100;
-  --ctp-ext-overlay0: 102, 92, 84;
-  --ctp-ext-surface2: 80, 73, 69;
-  --ctp-ext-surface1: 60, 56, 54;
-  --ctp-ext-surface0: 50, 48, 47;
-  --ctp-ext-base: 40, 40, 40;
-  --ctp-ext-mantle: 29, 32, 33;
-  --ctp-ext-crust: 19, 21, 22;
+.theme-dark.anp-theme-ext-dark.ctp-generic-dark,
+.anp-theme-ext-dark.ctp-generic-dark .themed-color-wrapper > .theme-dark {
+  --ctp-ext-rosewater: 245,
+  	224,
+  	220;
+  --ctp-ext-flamingo: 242,
+  	205,
+  	205;
+  --ctp-ext-pink: 245,
+  	194,
+  	231;
+  --ctp-ext-mauve: 203,
+  	166,
+  	247;
+  --ctp-ext-red: 243,
+  	139,
+  	168;
+  --ctp-ext-maroon: 235,
+  	160,
+  	172;
+  --ctp-ext-peach: 250,
+  	179,
+  	135;
+  --ctp-ext-yellow: 249,
+  	226,
+  	175;
+  --ctp-ext-green: 166,
+  	227,
+  	161;
+  --ctp-ext-teal: 148,
+  	226,
+  	213;
+  --ctp-ext-sky: 137,
+  	220,
+  	235;
+  --ctp-ext-sapphire: 116,
+  	199,
+  	236;
+  --ctp-ext-blue: 135,
+  	176,
+  	249;
+  --ctp-ext-lavender: 180,
+  	190,
+  	254;
+  --ctp-ext-text: 255,
+  	255,
+  	255;
+  --ctp-ext-subtext1: 210,
+  	210,
+  	210;
+  --ctp-ext-subtext0: 189,
+  	189,
+  	189;
+  --ctp-ext-overlay2: 168,
+  	168,
+  	168;
+  --ctp-ext-overlay1: 147,
+  	147,
+  	147;
+  --ctp-ext-overlay0: 126,
+  	126,
+  	126;
+  --ctp-ext-surface2: 105,
+  	105,
+  	105;
+  --ctp-ext-surface1: 84,
+  	84,
+  	84;
+  --ctp-ext-surface0: 63,
+  	63,
+  	63;
+  --ctp-ext-base: 42,
+  	42,
+  	42;
+  --ctp-ext-mantle: 21,
+  	21,
+  	21;
+  --ctp-ext-crust: 0,
+  	0,
+  	0;
 }
 
-.theme-light.anp-theme-ext-light.ctp-gruvbox-light, .anp-theme-ext-light.ctp-gruvbox-light .themed-color-wrapper > .theme-light {
-  --ctp-ext-rosewater: 243, 128, 25;
-  --ctp-ext-flamingo: 207, 162, 174;
-  --ctp-ext-pink: 177, 98, 118;
-  --ctp-ext-mauve: 177, 98, 134;
-  --ctp-ext-red: 204, 36, 29;
-  --ctp-ext-maroon: 204, 49, 29;
-  --ctp-ext-peach: 214, 93, 14;
-  --ctp-ext-yellow: 215, 153, 33;
-  --ctp-ext-green: 152, 151, 26;
-  --ctp-ext-teal: 102, 152, 26;
-  --ctp-ext-sky: 26, 152, 76;
-  --ctp-ext-sapphire: 26, 133, 152;
-  --ctp-ext-blue: 69, 133, 136;
-  --ctp-ext-lavender: 146, 111, 175;
-  --ctp-ext-text: 40, 40, 40;
-  --ctp-ext-subtext1: 80, 73, 69;
-  --ctp-ext-subtext0: 102, 92, 84;
-  --ctp-ext-overlay2: 149, 131, 106;
-  --ctp-ext-overlay1: 168, 153, 133;
-  --ctp-ext-overlay0: 189, 174, 147;
-  --ctp-ext-surface2: 214, 196, 161;
-  --ctp-ext-surface1: 235, 219, 179;
-  --ctp-ext-surface0: 242, 229, 188;
-  --ctp-ext-base: 249, 245, 215;
-  --ctp-ext-mantle: 236, 225, 196;
-  --ctp-ext-crust: 230, 215, 178;
+.theme-dark.anp-theme-ext-dark.ctp-gruvbox-dark,
+.anp-theme-ext-dark.ctp-gruvbox-dark .themed-color-wrapper > .theme-dark {
+  --ctp-ext-rosewater: 243,
+  	128,
+  	25;
+  --ctp-ext-flamingo: 207,
+  	162,
+  	174;
+  --ctp-ext-pink: 177,
+  	98,
+  	118;
+  --ctp-ext-mauve: 177,
+  	98,
+  	134;
+  --ctp-ext-red: 204,
+  	36,
+  	29;
+  --ctp-ext-maroon: 204,
+  	49,
+  	29;
+  --ctp-ext-peach: 214,
+  	93,
+  	14;
+  --ctp-ext-yellow: 215,
+  	153,
+  	33;
+  --ctp-ext-green: 152,
+  	151,
+  	26;
+  --ctp-ext-teal: 102,
+  	152,
+  	26;
+  --ctp-ext-sky: 26,
+  	152,
+  	76;
+  --ctp-ext-sapphire: 26,
+  	133,
+  	152;
+  --ctp-ext-blue: 69,
+  	133,
+  	136;
+  --ctp-ext-lavender: 146,
+  	111,
+  	175;
+  --ctp-ext-text: 251,
+  	241,
+  	199;
+  --ctp-ext-subtext1: 213,
+  	196,
+  	161;
+  --ctp-ext-subtext0: 189,
+  	174,
+  	147;
+  --ctp-ext-overlay2: 151,
+  	137,
+  	125;
+  --ctp-ext-overlay1: 124,
+  	111,
+  	100;
+  --ctp-ext-overlay0: 102,
+  	92,
+  	84;
+  --ctp-ext-surface2: 80,
+  	73,
+  	69;
+  --ctp-ext-surface1: 60,
+  	56,
+  	54;
+  --ctp-ext-surface0: 50,
+  	48,
+  	47;
+  --ctp-ext-base: 40,
+  	40,
+  	40;
+  --ctp-ext-mantle: 29,
+  	32,
+  	33;
+  --ctp-ext-crust: 19,
+  	21,
+  	22;
 }
 
-.theme-dark.anp-theme-ext-dark.ctp-kanagawa-dark, .anp-theme-ext-dark.ctp-kanagawa-dark .themed-color-wrapper > .theme-dark {
-  --ctp-ext-rosewater: 255, 200, 148;
-  --ctp-ext-flamingo: 210, 126, 129;
-  --ctp-ext-pink: 210, 126, 153;
-  --ctp-ext-mauve: 149, 127, 184;
-  --ctp-ext-red: 255, 93, 98;
-  --ctp-ext-maroon: 228, 104, 118;
-  --ctp-ext-peach: 255, 160, 102;
-  --ctp-ext-yellow: 230, 195, 132;
-  --ctp-ext-green: 152, 187, 108;
-  --ctp-ext-teal: 122, 168, 159;
-  --ctp-ext-sky: 163, 212, 213;
-  --ctp-ext-sapphire: 127, 180, 202;
-  --ctp-ext-blue: 126, 156, 216;
-  --ctp-ext-lavender: 147, 138, 169;
-  --ctp-ext-text: 220, 215, 186;
-  --ctp-ext-subtext1: 212, 206, 170;
-  --ctp-ext-subtext0: 200, 192, 147;
-  --ctp-ext-overlay2: 95, 95, 124;
-  --ctp-ext-overlay1: 84, 84, 109;
-  --ctp-ext-overlay0: 73, 73, 95;
-  --ctp-ext-surface2: 62, 62, 81;
-  --ctp-ext-surface1: 54, 54, 69;
-  --ctp-ext-surface0: 42, 42, 55;
-  --ctp-ext-base: 31, 31, 40;
-  --ctp-ext-mantle: 22, 22, 29;
-  --ctp-ext-crust: 11, 11, 15;
+.theme-light.anp-theme-ext-light.ctp-gruvbox-light,
+.anp-theme-ext-light.ctp-gruvbox-light .themed-color-wrapper > .theme-light {
+  --ctp-ext-rosewater: 243,
+  	128,
+  	25;
+  --ctp-ext-flamingo: 207,
+  	162,
+  	174;
+  --ctp-ext-pink: 177,
+  	98,
+  	118;
+  --ctp-ext-mauve: 177,
+  	98,
+  	134;
+  --ctp-ext-red: 204,
+  	36,
+  	29;
+  --ctp-ext-maroon: 204,
+  	49,
+  	29;
+  --ctp-ext-peach: 214,
+  	93,
+  	14;
+  --ctp-ext-yellow: 215,
+  	153,
+  	33;
+  --ctp-ext-green: 152,
+  	151,
+  	26;
+  --ctp-ext-teal: 102,
+  	152,
+  	26;
+  --ctp-ext-sky: 26,
+  	152,
+  	76;
+  --ctp-ext-sapphire: 26,
+  	133,
+  	152;
+  --ctp-ext-blue: 69,
+  	133,
+  	136;
+  --ctp-ext-lavender: 146,
+  	111,
+  	175;
+  --ctp-ext-text: 40,
+  	40,
+  	40;
+  --ctp-ext-subtext1: 80,
+  	73,
+  	69;
+  --ctp-ext-subtext0: 102,
+  	92,
+  	84;
+  --ctp-ext-overlay2: 149,
+  	131,
+  	106;
+  --ctp-ext-overlay1: 168,
+  	153,
+  	133;
+  --ctp-ext-overlay0: 189,
+  	174,
+  	147;
+  --ctp-ext-surface2: 214,
+  	196,
+  	161;
+  --ctp-ext-surface1: 235,
+  	219,
+  	179;
+  --ctp-ext-surface0: 242,
+  	229,
+  	188;
+  --ctp-ext-base: 249,
+  	245,
+  	215;
+  --ctp-ext-mantle: 236,
+  	225,
+  	196;
+  --ctp-ext-crust: 230,
+  	215,
+  	178;
 }
 
-.theme-light.anp-theme-ext-light.ctp-luminescence-light, .anp-theme-ext-light.ctp-luminescence-light .themed-color-wrapper > .theme-light {
-  --ctp-ext-rosewater: 227, 130, 130;
-  --ctp-ext-flamingo: 227, 130, 154;
-  --ctp-ext-pink: 237, 172, 171;
-  --ctp-ext-mauve: 212, 165, 198;
-  --ctp-ext-red: 232, 152, 151;
-  --ctp-ext-maroon: 209, 149, 148;
-  --ctp-ext-peach: 229, 172, 154;
-  --ctp-ext-yellow: 242, 203, 140;
-  --ctp-ext-green: 148, 189, 117;
-  --ctp-ext-teal: 98, 157, 142;
-  --ctp-ext-sky: 98, 157, 157;
-  --ctp-ext-sapphire: 117, 153, 189;
-  --ctp-ext-blue: 130, 146, 201;
-  --ctp-ext-lavender: 151, 151, 211;
-  --ctp-ext-text: 101, 73, 65;
-  --ctp-ext-subtext1: 122, 91, 82;
-  --ctp-ext-subtext0: 122, 91, 82;
-  --ctp-ext-overlay2: 157, 130, 123;
-  --ctp-ext-overlay1: 194, 171, 163;
-  --ctp-ext-overlay0: 223, 219, 200;
-  --ctp-ext-surface2: 246, 243, 239;
-  --ctp-ext-surface1: 225, 212, 208;
-  --ctp-ext-surface0: 205, 183, 177;
-  --ctp-ext-base: 242, 238, 232;
-  --ctp-ext-mantle: 236, 231, 223;
-  --ctp-ext-crust: 236, 231, 223;
+.theme-dark.anp-theme-ext-dark.ctp-kanagawa-dark,
+.anp-theme-ext-dark.ctp-kanagawa-dark .themed-color-wrapper > .theme-dark {
+  --ctp-ext-rosewater: 255,
+  	200,
+  	148;
+  --ctp-ext-flamingo: 210,
+  	126,
+  	129;
+  --ctp-ext-pink: 210,
+  	126,
+  	153;
+  --ctp-ext-mauve: 149,
+  	127,
+  	184;
+  --ctp-ext-red: 255,
+  	93,
+  	98;
+  --ctp-ext-maroon: 228,
+  	104,
+  	118;
+  --ctp-ext-peach: 255,
+  	160,
+  	102;
+  --ctp-ext-yellow: 230,
+  	195,
+  	132;
+  --ctp-ext-green: 152,
+  	187,
+  	108;
+  --ctp-ext-teal: 122,
+  	168,
+  	159;
+  --ctp-ext-sky: 163,
+  	212,
+  	213;
+  --ctp-ext-sapphire: 127,
+  	180,
+  	202;
+  --ctp-ext-blue: 126,
+  	156,
+  	216;
+  --ctp-ext-lavender: 147,
+  	138,
+  	169;
+  --ctp-ext-text: 220,
+  	215,
+  	186;
+  --ctp-ext-subtext1: 212,
+  	206,
+  	170;
+  --ctp-ext-subtext0: 200,
+  	192,
+  	147;
+  --ctp-ext-overlay2: 95,
+  	95,
+  	124;
+  --ctp-ext-overlay1: 84,
+  	84,
+  	109;
+  --ctp-ext-overlay0: 73,
+  	73,
+  	95;
+  --ctp-ext-surface2: 62,
+  	62,
+  	81;
+  --ctp-ext-surface1: 54,
+  	54,
+  	69;
+  --ctp-ext-surface0: 42,
+  	42,
+  	55;
+  --ctp-ext-base: 31,
+  	31,
+  	40;
+  --ctp-ext-mantle: 22,
+  	22,
+  	29;
+  --ctp-ext-crust: 11,
+  	11,
+  	15;
 }
 
-.theme-light.anp-theme-ext-light.ctp-material-mint-light, .anp-theme-ext-light.ctp-material-mint-light .themed-color-wrapper > .theme-light {
-  --ctp-ext-rosewater: 195, 126, 112;
-  --ctp-ext-flamingo: 180, 78, 78;
-  --ctp-ext-pink: 144, 61, 122;
-  --ctp-ext-mauve: 98, 61, 143;
-  --ctp-ext-red: 146, 62, 86;
-  --ctp-ext-maroon: 145, 62, 76;
-  --ctp-ext-peach: 195, 145, 114;
-  --ctp-ext-yellow: 184, 164, 123;
-  --ctp-ext-green: 51, 107, 46;
-  --ctp-ext-teal: 71, 123, 133;
-  --ctp-ext-sky: 47, 101, 110;
-  --ctp-ext-sapphire: 45, 88, 108;
-  --ctp-ext-blue: 46, 69, 109;
-  --ctp-ext-lavender: 53, 60, 100;
-  --ctp-ext-text: 5, 9, 10;
-  --ctp-ext-subtext1: 11, 18, 20;
-  --ctp-ext-subtext0: 18, 31, 33;
-  --ctp-ext-overlay2: 29, 49, 53;
-  --ctp-ext-overlay1: 43, 73, 80;
-  --ctp-ext-overlay0: 57, 98, 106;
-  --ctp-ext-surface2: 71, 122, 133;
-  --ctp-ext-surface1: 86, 147, 159;
-  --ctp-ext-surface0: 109, 165, 176;
-  --ctp-ext-base: 189, 214, 219;
-  --ctp-ext-mantle: 162, 198, 205;
-  --ctp-ext-crust: 136, 182, 191;
+.theme-light.anp-theme-ext-light.ctp-luminescence-light,
+.anp-theme-ext-light.ctp-luminescence-light .themed-color-wrapper > .theme-light {
+  --ctp-ext-rosewater: 227,
+  	130,
+  	130;
+  --ctp-ext-flamingo: 227,
+  	130,
+  	154;
+  --ctp-ext-pink: 237,
+  	172,
+  	171;
+  --ctp-ext-mauve: 212,
+  	165,
+  	198;
+  --ctp-ext-red: 232,
+  	152,
+  	151;
+  --ctp-ext-maroon: 209,
+  	149,
+  	148;
+  --ctp-ext-peach: 229,
+  	172,
+  	154;
+  --ctp-ext-yellow: 242,
+  	203,
+  	140;
+  --ctp-ext-green: 148,
+  	189,
+  	117;
+  --ctp-ext-teal: 98,
+  	157,
+  	142;
+  --ctp-ext-sky: 98,
+  	157,
+  	157;
+  --ctp-ext-sapphire: 117,
+  	153,
+  	189;
+  --ctp-ext-blue: 130,
+  	146,
+  	201;
+  --ctp-ext-lavender: 151,
+  	151,
+  	211;
+  --ctp-ext-text: 101,
+  	73,
+  	65;
+  --ctp-ext-subtext1: 122,
+  	91,
+  	82;
+  --ctp-ext-subtext0: 122,
+  	91,
+  	82;
+  --ctp-ext-overlay2: 157,
+  	130,
+  	123;
+  --ctp-ext-overlay1: 194,
+  	171,
+  	163;
+  --ctp-ext-overlay0: 223,
+  	219,
+  	200;
+  --ctp-ext-surface2: 246,
+  	243,
+  	239;
+  --ctp-ext-surface1: 225,
+  	212,
+  	208;
+  --ctp-ext-surface0: 205,
+  	183,
+  	177;
+  --ctp-ext-base: 242,
+  	238,
+  	232;
+  --ctp-ext-mantle: 236,
+  	231,
+  	223;
+  --ctp-ext-crust: 236,
+  	231,
+  	223;
 }
 
-.theme-dark.anp-theme-ext-dark.ctp-material-mint-dark, .anp-theme-ext-dark.ctp-material-mint-dark .themed-color-wrapper > .theme-dark {
-  --ctp-ext-rosewater: 245, 224, 220;
-  --ctp-ext-flamingo: 242, 205, 205;
-  --ctp-ext-pink: 245, 194, 231;
-  --ctp-ext-mauve: 203, 166, 247;
-  --ctp-ext-red: 243, 139, 168;
-  --ctp-ext-maroon: 235, 160, 172;
-  --ctp-ext-peach: 250, 179, 135;
-  --ctp-ext-yellow: 249, 226, 175;
-  --ctp-ext-green: 166, 227, 161;
-  --ctp-ext-teal: 189, 214, 219;
-  --ctp-ext-sky: 137, 220, 235;
-  --ctp-ext-sapphire: 116, 199, 236;
-  --ctp-ext-blue: 135, 176, 249;
-  --ctp-ext-lavender: 180, 190, 254;
-  --ctp-ext-text: 189, 214, 219;
-  --ctp-ext-subtext1: 162, 198, 205;
-  --ctp-ext-subtext0: 136, 182, 191;
-  --ctp-ext-overlay2: 109, 165, 176;
-  --ctp-ext-overlay1: 86, 147, 159;
-  --ctp-ext-overlay0: 71, 122, 133;
-  --ctp-ext-surface2: 57, 98, 106;
-  --ctp-ext-surface1: 43, 73, 80;
-  --ctp-ext-surface0: 29, 49, 53;
-  --ctp-ext-base: 18, 31, 33;
-  --ctp-ext-mantle: 11, 18, 20;
-  --ctp-ext-crust: 5, 9, 10;
+.theme-light.anp-theme-ext-light.ctp-material-mint-light,
+.anp-theme-ext-light.ctp-material-mint-light .themed-color-wrapper > .theme-light {
+  --ctp-ext-rosewater: 195,
+  	126,
+  	112;
+  --ctp-ext-flamingo: 180,
+  	78,
+  	78;
+  --ctp-ext-pink: 144,
+  	61,
+  	122;
+  --ctp-ext-mauve: 98,
+  	61,
+  	143;
+  --ctp-ext-red: 146,
+  	62,
+  	86;
+  --ctp-ext-maroon: 145,
+  	62,
+  	76;
+  --ctp-ext-peach: 195,
+  	145,
+  	114;
+  --ctp-ext-yellow: 184,
+  	164,
+  	123;
+  --ctp-ext-green: 51,
+  	107,
+  	46;
+  --ctp-ext-teal: 71,
+  	123,
+  	133;
+  --ctp-ext-sky: 47,
+  	101,
+  	110;
+  --ctp-ext-sapphire: 45,
+  	88,
+  	108;
+  --ctp-ext-blue: 46,
+  	69,
+  	109;
+  --ctp-ext-lavender: 53,
+  	60,
+  	100;
+  --ctp-ext-text: 5,
+  	9,
+  	10;
+  --ctp-ext-subtext1: 11,
+  	18,
+  	20;
+  --ctp-ext-subtext0: 18,
+  	31,
+  	33;
+  --ctp-ext-overlay2: 29,
+  	49,
+  	53;
+  --ctp-ext-overlay1: 43,
+  	73,
+  	80;
+  --ctp-ext-overlay0: 57,
+  	98,
+  	106;
+  --ctp-ext-surface2: 71,
+  	122,
+  	133;
+  --ctp-ext-surface1: 86,
+  	147,
+  	159;
+  --ctp-ext-surface0: 109,
+  	165,
+  	176;
+  --ctp-ext-base: 189,
+  	214,
+  	219;
+  --ctp-ext-mantle: 162,
+  	198,
+  	205;
+  --ctp-ext-crust: 136,
+  	182,
+  	191;
 }
 
-.theme-dark.anp-theme-ext-dark.ctp-nord-dark, .anp-theme-ext-dark.ctp-nord-dark .themed-color-wrapper > .theme-dark {
-  --ctp-ext-rosewater: 226, 191, 169;
-  --ctp-ext-flamingo: 239, 171, 150;
-  --ctp-ext-pink: 214, 163, 222;
-  --ctp-ext-mauve: 180, 142, 173;
-  --ctp-ext-red: 191, 97, 106;
-  --ctp-ext-maroon: 191, 108, 97;
-  --ctp-ext-peach: 208, 135, 112;
-  --ctp-ext-yellow: 235, 203, 139;
-  --ctp-ext-green: 163, 190, 140;
-  --ctp-ext-teal: 143, 188, 187;
-  --ctp-ext-sky: 136, 192, 208;
-  --ctp-ext-sapphire: 129, 161, 193;
-  --ctp-ext-blue: 94, 129, 172;
-  --ctp-ext-lavender: 192, 167, 187;
-  --ctp-ext-text: 236, 239, 244;
-  --ctp-ext-subtext1: 229, 233, 240;
-  --ctp-ext-subtext0: 217, 222, 232;
-  --ctp-ext-overlay2: 196, 201, 212;
-  --ctp-ext-overlay1: 172, 180, 195;
-  --ctp-ext-overlay0: 149, 158, 178;
-  --ctp-ext-surface2: 125, 137, 161;
-  --ctp-ext-surface1: 103, 116, 142;
-  --ctp-ext-surface0: 77, 87, 106;
-  --ctp-ext-base: 67, 76, 94;
-  --ctp-ext-mantle: 59, 66, 82;
-  --ctp-ext-crust: 46, 52, 64;
+.theme-dark.anp-theme-ext-dark.ctp-material-mint-dark,
+.anp-theme-ext-dark.ctp-material-mint-dark .themed-color-wrapper > .theme-dark {
+  --ctp-ext-rosewater: 245,
+  	224,
+  	220;
+  --ctp-ext-flamingo: 242,
+  	205,
+  	205;
+  --ctp-ext-pink: 245,
+  	194,
+  	231;
+  --ctp-ext-mauve: 203,
+  	166,
+  	247;
+  --ctp-ext-red: 243,
+  	139,
+  	168;
+  --ctp-ext-maroon: 235,
+  	160,
+  	172;
+  --ctp-ext-peach: 250,
+  	179,
+  	135;
+  --ctp-ext-yellow: 249,
+  	226,
+  	175;
+  --ctp-ext-green: 166,
+  	227,
+  	161;
+  --ctp-ext-teal: 189,
+  	214,
+  	219;
+  --ctp-ext-sky: 137,
+  	220,
+  	235;
+  --ctp-ext-sapphire: 116,
+  	199,
+  	236;
+  --ctp-ext-blue: 135,
+  	176,
+  	249;
+  --ctp-ext-lavender: 180,
+  	190,
+  	254;
+  --ctp-ext-text: 189,
+  	214,
+  	219;
+  --ctp-ext-subtext1: 162,
+  	198,
+  	205;
+  --ctp-ext-subtext0: 136,
+  	182,
+  	191;
+  --ctp-ext-overlay2: 109,
+  	165,
+  	176;
+  --ctp-ext-overlay1: 86,
+  	147,
+  	159;
+  --ctp-ext-overlay0: 71,
+  	122,
+  	133;
+  --ctp-ext-surface2: 57,
+  	98,
+  	106;
+  --ctp-ext-surface1: 43,
+  	73,
+  	80;
+  --ctp-ext-surface0: 29,
+  	49,
+  	53;
+  --ctp-ext-base: 18,
+  	31,
+  	33;
+  --ctp-ext-mantle: 11,
+  	18,
+  	20;
+  --ctp-ext-crust: 5,
+  	9,
+  	10;
 }
 
-.theme-dark.anp-theme-ext-dark.ctp-nord-darker, .anp-theme-ext-dark.ctp-nord-darker .themed-color-wrapper > .theme-dark {
-  --ctp-ext-rosewater: 226, 191, 169;
-  --ctp-ext-flamingo: 239, 171, 150;
-  --ctp-ext-pink: 214, 163, 222;
-  --ctp-ext-mauve: 180, 142, 173;
-  --ctp-ext-red: 191, 97, 106;
-  --ctp-ext-maroon: 191, 108, 97;
-  --ctp-ext-peach: 208, 135, 112;
-  --ctp-ext-yellow: 235, 203, 139;
-  --ctp-ext-green: 163, 190, 140;
-  --ctp-ext-teal: 143, 188, 187;
-  --ctp-ext-sky: 136, 192, 208;
-  --ctp-ext-sapphire: 129, 161, 193;
-  --ctp-ext-blue: 94, 129, 172;
-  --ctp-ext-lavender: 192, 167, 187;
-  --ctp-ext-text: 236, 239, 244;
-  --ctp-ext-subtext1: 229, 233, 240;
-  --ctp-ext-subtext0: 217, 222, 232;
-  --ctp-ext-overlay2: 196, 201, 212;
-  --ctp-ext-overlay1: 172, 180, 195;
-  --ctp-ext-overlay0: 149, 158, 178;
-  --ctp-ext-surface2: 125, 137, 161;
-  --ctp-ext-surface1: 67, 76, 94;
-  --ctp-ext-surface0: 59, 66, 82;
-  --ctp-ext-base: 46, 52, 64;
-  --ctp-ext-mantle: 39, 43, 53;
-  --ctp-ext-crust: 30, 34, 41;
+.theme-dark.anp-theme-ext-dark.ctp-nord-dark,
+.anp-theme-ext-dark.ctp-nord-dark .themed-color-wrapper > .theme-dark {
+  --ctp-ext-rosewater: 226,
+  	191,
+  	169;
+  --ctp-ext-flamingo: 239,
+  	171,
+  	150;
+  --ctp-ext-pink: 214,
+  	163,
+  	222;
+  --ctp-ext-mauve: 180,
+  	142,
+  	173;
+  --ctp-ext-red: 191,
+  	97,
+  	106;
+  --ctp-ext-maroon: 191,
+  	108,
+  	97;
+  --ctp-ext-peach: 208,
+  	135,
+  	112;
+  --ctp-ext-yellow: 235,
+  	203,
+  	139;
+  --ctp-ext-green: 163,
+  	190,
+  	140;
+  --ctp-ext-teal: 143,
+  	188,
+  	187;
+  --ctp-ext-sky: 136,
+  	192,
+  	208;
+  --ctp-ext-sapphire: 129,
+  	161,
+  	193;
+  --ctp-ext-blue: 94,
+  	129,
+  	172;
+  --ctp-ext-lavender: 192,
+  	167,
+  	187;
+  --ctp-ext-text: 236,
+  	239,
+  	244;
+  --ctp-ext-subtext1: 229,
+  	233,
+  	240;
+  --ctp-ext-subtext0: 217,
+  	222,
+  	232;
+  --ctp-ext-overlay2: 196,
+  	201,
+  	212;
+  --ctp-ext-overlay1: 172,
+  	180,
+  	195;
+  --ctp-ext-overlay0: 149,
+  	158,
+  	178;
+  --ctp-ext-surface2: 125,
+  	137,
+  	161;
+  --ctp-ext-surface1: 103,
+  	116,
+  	142;
+  --ctp-ext-surface0: 77,
+  	87,
+  	106;
+  --ctp-ext-base: 67,
+  	76,
+  	94;
+  --ctp-ext-mantle: 59,
+  	66,
+  	82;
+  --ctp-ext-crust: 46,
+  	52,
+  	64;
 }
 
-.theme-light.anp-theme-ext-light.ctp-nord-light, .anp-theme-ext-light.ctp-nord-light .themed-color-wrapper > .theme-light {
-  --ctp-ext-rosewater: 209, 135, 112;
-  --ctp-ext-flamingo: 180, 142, 173;
-  --ctp-ext-pink: 180, 142, 173;
-  --ctp-ext-mauve: 180, 142, 173;
-  --ctp-ext-red: 191, 97, 106;
-  --ctp-ext-maroon: 191, 97, 106;
-  --ctp-ext-peach: 208, 135, 112;
-  --ctp-ext-yellow: 216, 172, 84;
-  --ctp-ext-green: 136, 167, 108;
-  --ctp-ext-teal: 121, 191, 142;
-  --ctp-ext-sky: 143, 188, 187;
-  --ctp-ext-sapphire: 136, 192, 208;
-  --ctp-ext-blue: 94, 129, 172;
-  --ctp-ext-lavender: 94, 129, 172;
-  --ctp-ext-text: 46, 52, 64;
-  --ctp-ext-subtext1: 59, 66, 82;
-  --ctp-ext-subtext0: 67, 76, 94;
-  --ctp-ext-overlay2: 76, 86, 106;
-  --ctp-ext-overlay1: 86, 97, 118;
-  --ctp-ext-overlay0: 143, 188, 187;
-  --ctp-ext-surface2: 216, 222, 233;
-  --ctp-ext-surface1: 216, 222, 233;
-  --ctp-ext-surface0: 229, 233, 240;
-  --ctp-ext-base: 236, 239, 244;
-  --ctp-ext-mantle: 231, 235, 241;
-  --ctp-ext-crust: 229, 233, 240;
+.theme-dark.anp-theme-ext-dark.ctp-nord-darker,
+.anp-theme-ext-dark.ctp-nord-darker .themed-color-wrapper > .theme-dark {
+  --ctp-ext-rosewater: 226,
+  	191,
+  	169;
+  --ctp-ext-flamingo: 239,
+  	171,
+  	150;
+  --ctp-ext-pink: 214,
+  	163,
+  	222;
+  --ctp-ext-mauve: 180,
+  	142,
+  	173;
+  --ctp-ext-red: 191,
+  	97,
+  	106;
+  --ctp-ext-maroon: 191,
+  	108,
+  	97;
+  --ctp-ext-peach: 208,
+  	135,
+  	112;
+  --ctp-ext-yellow: 235,
+  	203,
+  	139;
+  --ctp-ext-green: 163,
+  	190,
+  	140;
+  --ctp-ext-teal: 143,
+  	188,
+  	187;
+  --ctp-ext-sky: 136,
+  	192,
+  	208;
+  --ctp-ext-sapphire: 129,
+  	161,
+  	193;
+  --ctp-ext-blue: 94,
+  	129,
+  	172;
+  --ctp-ext-lavender: 192,
+  	167,
+  	187;
+  --ctp-ext-text: 236,
+  	239,
+  	244;
+  --ctp-ext-subtext1: 229,
+  	233,
+  	240;
+  --ctp-ext-subtext0: 217,
+  	222,
+  	232;
+  --ctp-ext-overlay2: 196,
+  	201,
+  	212;
+  --ctp-ext-overlay1: 172,
+  	180,
+  	195;
+  --ctp-ext-overlay0: 149,
+  	158,
+  	178;
+  --ctp-ext-surface2: 125,
+  	137,
+  	161;
+  --ctp-ext-surface1: 67,
+  	76,
+  	94;
+  --ctp-ext-surface0: 59,
+  	66,
+  	82;
+  --ctp-ext-base: 46,
+  	52,
+  	64;
+  --ctp-ext-mantle: 39,
+  	43,
+  	53;
+  --ctp-ext-crust: 30,
+  	34,
+  	41;
 }
 
-.theme-light.anp-theme-ext-light.ctp-notion-light, .anp-theme-ext-light.ctp-notion-light .themed-color-wrapper > .theme-light {
-  --ctp-ext-rosewater: 228, 122, 112;
-  --ctp-ext-flamingo: 186, 82, 117;
-  --ctp-ext-pink: 173, 26, 114;
-  --ctp-ext-mauve: 105, 64, 165;
-  --ctp-ext-red: 224, 62, 62;
-  --ctp-ext-maroon: 224, 76, 62;
-  --ctp-ext-peach: 217, 115, 13;
-  --ctp-ext-yellow: 223, 171, 1;
-  --ctp-ext-green: 15, 123, 108;
-  --ctp-ext-teal: 15, 123, 123;
-  --ctp-ext-sky: 11, 136, 153;
-  --ctp-ext-sapphire: 11, 122, 153;
-  --ctp-ext-blue: 11, 110, 153;
-  --ctp-ext-lavender: 107, 84, 141;
-  --ctp-ext-text: 55, 53, 47;
-  --ctp-ext-subtext1: 77, 74, 66;
-  --ctp-ext-subtext0: 99, 95, 84;
-  --ctp-ext-overlay2: 121, 117, 103;
-  --ctp-ext-overlay1: 123, 135, 142;
-  --ctp-ext-overlay0: 145, 155, 161;
-  --ctp-ext-surface2: 170, 177, 182;
-  --ctp-ext-surface1: 189, 195, 199;
-  --ctp-ext-surface0: 208, 212, 215;
-  --ctp-ext-base: 255, 255, 255;
-  --ctp-ext-mantle: 244, 245, 246;
-  --ctp-ext-crust: 227, 230, 232;
+.theme-light.anp-theme-ext-light.ctp-nord-light,
+.anp-theme-ext-light.ctp-nord-light .themed-color-wrapper > .theme-light {
+  --ctp-ext-rosewater: 209,
+  	135,
+  	112;
+  --ctp-ext-flamingo: 180,
+  	142,
+  	173;
+  --ctp-ext-pink: 180,
+  	142,
+  	173;
+  --ctp-ext-mauve: 180,
+  	142,
+  	173;
+  --ctp-ext-red: 191,
+  	97,
+  	106;
+  --ctp-ext-maroon: 191,
+  	97,
+  	106;
+  --ctp-ext-peach: 208,
+  	135,
+  	112;
+  --ctp-ext-yellow: 216,
+  	172,
+  	84;
+  --ctp-ext-green: 136,
+  	167,
+  	108;
+  --ctp-ext-teal: 121,
+  	191,
+  	142;
+  --ctp-ext-sky: 143,
+  	188,
+  	187;
+  --ctp-ext-sapphire: 136,
+  	192,
+  	208;
+  --ctp-ext-blue: 94,
+  	129,
+  	172;
+  --ctp-ext-lavender: 94,
+  	129,
+  	172;
+  --ctp-ext-text: 46,
+  	52,
+  	64;
+  --ctp-ext-subtext1: 59,
+  	66,
+  	82;
+  --ctp-ext-subtext0: 67,
+  	76,
+  	94;
+  --ctp-ext-overlay2: 76,
+  	86,
+  	106;
+  --ctp-ext-overlay1: 86,
+  	97,
+  	118;
+  --ctp-ext-overlay0: 143,
+  	188,
+  	187;
+  --ctp-ext-surface2: 216,
+  	222,
+  	233;
+  --ctp-ext-surface1: 216,
+  	222,
+  	233;
+  --ctp-ext-surface0: 229,
+  	233,
+  	240;
+  --ctp-ext-base: 236,
+  	239,
+  	244;
+  --ctp-ext-mantle: 231,
+  	235,
+  	241;
+  --ctp-ext-crust: 229,
+  	233,
+  	240;
 }
 
-.theme-dark.anp-theme-ext-dark.ctp-notion-dark, .anp-theme-ext-dark.ctp-notion-dark .themed-color-wrapper > .theme-dark {
-  --ctp-ext-rosewater: 246, 174, 138;
-  --ctp-ext-flamingo: 248, 160, 154;
-  --ctp-ext-pink: 226, 85, 161;
-  --ctp-ext-mauve: 154, 109, 215;
-  --ctp-ext-red: 255, 115, 105;
-  --ctp-ext-maroon: 255, 120, 105;
-  --ctp-ext-peach: 255, 163, 68;
-  --ctp-ext-yellow: 255, 220, 73;
-  --ctp-ext-green: 77, 171, 154;
-  --ctp-ext-teal: 77, 171, 165;
-  --ctp-ext-sky: 77, 166, 171;
-  --ctp-ext-sapphire: 82, 178, 202;
-  --ctp-ext-blue: 82, 156, 202;
-  --ctp-ext-lavender: 156, 125, 198;
-  --ctp-ext-text: 227, 230, 232;
-  --ctp-ext-subtext1: 222, 225, 227;
-  --ctp-ext-subtext0: 200, 205, 208;
-  --ctp-ext-overlay2: 178, 185, 189;
-  --ctp-ext-overlay1: 156, 165, 171;
-  --ctp-ext-overlay0: 134, 145, 152;
-  --ctp-ext-surface2: 113, 125, 132;
-  --ctp-ext-surface1: 94, 104, 110;
-  --ctp-ext-surface0: 75, 83, 88;
-  --ctp-ext-base: 61, 68, 72;
-  --ctp-ext-mantle: 54, 60, 63;
-  --ctp-ext-crust: 47, 52, 55;
+.theme-light.anp-theme-ext-light.ctp-notion-light,
+.anp-theme-ext-light.ctp-notion-light .themed-color-wrapper > .theme-light {
+  --ctp-ext-rosewater: 228,
+  	122,
+  	112;
+  --ctp-ext-flamingo: 186,
+  	82,
+  	117;
+  --ctp-ext-pink: 173,
+  	26,
+  	114;
+  --ctp-ext-mauve: 105,
+  	64,
+  	165;
+  --ctp-ext-red: 224,
+  	62,
+  	62;
+  --ctp-ext-maroon: 224,
+  	76,
+  	62;
+  --ctp-ext-peach: 217,
+  	115,
+  	13;
+  --ctp-ext-yellow: 223,
+  	171,
+  	1;
+  --ctp-ext-green: 15,
+  	123,
+  	108;
+  --ctp-ext-teal: 15,
+  	123,
+  	123;
+  --ctp-ext-sky: 11,
+  	136,
+  	153;
+  --ctp-ext-sapphire: 11,
+  	122,
+  	153;
+  --ctp-ext-blue: 11,
+  	110,
+  	153;
+  --ctp-ext-lavender: 107,
+  	84,
+  	141;
+  --ctp-ext-text: 55,
+  	53,
+  	47;
+  --ctp-ext-subtext1: 77,
+  	74,
+  	66;
+  --ctp-ext-subtext0: 99,
+  	95,
+  	84;
+  --ctp-ext-overlay2: 121,
+  	117,
+  	103;
+  --ctp-ext-overlay1: 123,
+  	135,
+  	142;
+  --ctp-ext-overlay0: 145,
+  	155,
+  	161;
+  --ctp-ext-surface2: 170,
+  	177,
+  	182;
+  --ctp-ext-surface1: 189,
+  	195,
+  	199;
+  --ctp-ext-surface0: 208,
+  	212,
+  	215;
+  --ctp-ext-base: 255,
+  	255,
+  	255;
+  --ctp-ext-mantle: 244,
+  	245,
+  	246;
+  --ctp-ext-crust: 227,
+  	230,
+  	232;
 }
 
-.theme-dark.anp-theme-ext-dark.ctp-rosebox, .anp-theme-ext-dark.ctp-rosebox .themed-color-wrapper > .theme-dark {
-  --ctp-ext-rosewater: 165, 117, 98;
-  --ctp-ext-flamingo: 165, 117, 98;
-  --ctp-ext-pink: 180, 142, 173;
-  --ctp-ext-mauve: 180, 142, 173;
-  --ctp-ext-red: 191, 97, 106;
-  --ctp-ext-maroon: 191, 97, 106;
-  --ctp-ext-peach: 208, 135, 112;
-  --ctp-ext-yellow: 235, 203, 139;
-  --ctp-ext-green: 163, 190, 140;
-  --ctp-ext-teal: 143, 188, 187;
-  --ctp-ext-sky: 136, 192, 208;
-  --ctp-ext-sapphire: 136, 192, 208;
-  --ctp-ext-blue: 94, 129, 172;
-  --ctp-ext-lavender: 129, 161, 193;
-  --ctp-ext-text: 163, 165, 170;
-  --ctp-ext-subtext1: 135, 137, 145;
-  --ctp-ext-subtext0: 110, 113, 119;
-  --ctp-ext-overlay2: 92, 92, 92;
-  --ctp-ext-overlay1: 82, 82, 82;
-  --ctp-ext-overlay0: 71, 71, 71;
-  --ctp-ext-surface2: 61, 61, 61;
-  --ctp-ext-surface1: 51, 51, 51;
-  --ctp-ext-surface0: 40, 40, 40;
-  --ctp-ext-base: 35, 35, 35;
-  --ctp-ext-mantle: 30, 30, 30;
-  --ctp-ext-crust: 25, 25, 25;
+.theme-dark.anp-theme-ext-dark.ctp-notion-dark,
+.anp-theme-ext-dark.ctp-notion-dark .themed-color-wrapper > .theme-dark {
+  --ctp-ext-rosewater: 246,
+  	174,
+  	138;
+  --ctp-ext-flamingo: 248,
+  	160,
+  	154;
+  --ctp-ext-pink: 226,
+  	85,
+  	161;
+  --ctp-ext-mauve: 154,
+  	109,
+  	215;
+  --ctp-ext-red: 255,
+  	115,
+  	105;
+  --ctp-ext-maroon: 255,
+  	120,
+  	105;
+  --ctp-ext-peach: 255,
+  	163,
+  	68;
+  --ctp-ext-yellow: 255,
+  	220,
+  	73;
+  --ctp-ext-green: 77,
+  	171,
+  	154;
+  --ctp-ext-teal: 77,
+  	171,
+  	165;
+  --ctp-ext-sky: 77,
+  	166,
+  	171;
+  --ctp-ext-sapphire: 82,
+  	178,
+  	202;
+  --ctp-ext-blue: 82,
+  	156,
+  	202;
+  --ctp-ext-lavender: 156,
+  	125,
+  	198;
+  --ctp-ext-text: 227,
+  	230,
+  	232;
+  --ctp-ext-subtext1: 222,
+  	225,
+  	227;
+  --ctp-ext-subtext0: 200,
+  	205,
+  	208;
+  --ctp-ext-overlay2: 178,
+  	185,
+  	189;
+  --ctp-ext-overlay1: 156,
+  	165,
+  	171;
+  --ctp-ext-overlay0: 134,
+  	145,
+  	152;
+  --ctp-ext-surface2: 113,
+  	125,
+  	132;
+  --ctp-ext-surface1: 94,
+  	104,
+  	110;
+  --ctp-ext-surface0: 75,
+  	83,
+  	88;
+  --ctp-ext-base: 61,
+  	68,
+  	72;
+  --ctp-ext-mantle: 54,
+  	60,
+  	63;
+  --ctp-ext-crust: 47,
+  	52,
+  	55;
 }
 
-.theme-dark.anp-theme-ext-dark.ctp-rosepine-dark, .anp-theme-ext-dark.ctp-rosepine-dark .themed-color-wrapper > .theme-dark {
-  --ctp-ext-rosewater: 243, 215, 204;
-  --ctp-ext-flamingo: 235, 188, 186;
-  --ctp-ext-pink: 223, 167, 231;
-  --ctp-ext-mauve: 196, 167, 231;
-  --ctp-ext-red: 235, 111, 146;
-  --ctp-ext-maroon: 235, 122, 111;
-  --ctp-ext-peach: 235, 159, 111;
-  --ctp-ext-yellow: 246, 193, 119;
-  --ctp-ext-green: 114, 182, 156;
-  --ctp-ext-teal: 156, 207, 216;
-  --ctp-ext-sky: 49, 116, 143;
-  --ctp-ext-sapphire: 68, 132, 171;
-  --ctp-ext-blue: 76, 127, 169;
-  --ctp-ext-lavender: 210, 193, 231;
-  --ctp-ext-text: 224, 222, 244;
-  --ctp-ext-subtext1: 144, 140, 170;
-  --ctp-ext-subtext0: 110, 106, 134;
-  --ctp-ext-overlay2: 82, 79, 103;
-  --ctp-ext-overlay1: 64, 61, 82;
-  --ctp-ext-overlay0: 54, 50, 83;
-  --ctp-ext-surface2: 46, 42, 70;
-  --ctp-ext-surface1: 33, 32, 46;
-  --ctp-ext-surface0: 31, 29, 46;
-  --ctp-ext-base: 25, 23, 36;
-  --ctp-ext-mantle: 17, 16, 25;
-  --ctp-ext-crust: 11, 10, 16;
+.theme-dark.anp-theme-ext-dark.ctp-rosebox,
+.anp-theme-ext-dark.ctp-rosebox .themed-color-wrapper > .theme-dark {
+  --ctp-ext-rosewater: 165,
+  	117,
+  	98;
+  --ctp-ext-flamingo: 165,
+  	117,
+  	98;
+  --ctp-ext-pink: 180,
+  	142,
+  	173;
+  --ctp-ext-mauve: 180,
+  	142,
+  	173;
+  --ctp-ext-red: 191,
+  	97,
+  	106;
+  --ctp-ext-maroon: 191,
+  	97,
+  	106;
+  --ctp-ext-peach: 208,
+  	135,
+  	112;
+  --ctp-ext-yellow: 235,
+  	203,
+  	139;
+  --ctp-ext-green: 163,
+  	190,
+  	140;
+  --ctp-ext-teal: 143,
+  	188,
+  	187;
+  --ctp-ext-sky: 136,
+  	192,
+  	208;
+  --ctp-ext-sapphire: 136,
+  	192,
+  	208;
+  --ctp-ext-blue: 94,
+  	129,
+  	172;
+  --ctp-ext-lavender: 129,
+  	161,
+  	193;
+  --ctp-ext-text: 163,
+  	165,
+  	170;
+  --ctp-ext-subtext1: 135,
+  	137,
+  	145;
+  --ctp-ext-subtext0: 110,
+  	113,
+  	119;
+  --ctp-ext-overlay2: 92,
+  	92,
+  	92;
+  --ctp-ext-overlay1: 82,
+  	82,
+  	82;
+  --ctp-ext-overlay0: 71,
+  	71,
+  	71;
+  --ctp-ext-surface2: 61,
+  	61,
+  	61;
+  --ctp-ext-surface1: 51,
+  	51,
+  	51;
+  --ctp-ext-surface0: 40,
+  	40,
+  	40;
+  --ctp-ext-base: 35,
+  	35,
+  	35;
+  --ctp-ext-mantle: 30,
+  	30,
+  	30;
+  --ctp-ext-crust: 25,
+  	25,
+  	25;
 }
 
-.theme-dark.anp-theme-ext-dark.ctp-royal-velvet, .anp-theme-ext-dark.ctp-royal-velvet .themed-color-wrapper > .theme-dark {
-  --ctp-ext-rosewater: 246, 201, 153;
-  --ctp-ext-flamingo: 245, 189, 166;
-  --ctp-ext-pink: 228, 157, 248;
-  --ctp-ext-mauve: 197, 146, 222;
-  --ctp-ext-red: 240, 120, 160;
-  --ctp-ext-maroon: 230, 102, 102;
-  --ctp-ext-peach: 230, 195, 125;
-  --ctp-ext-yellow: 241, 250, 140;
-  --ctp-ext-green: 130, 235, 130;
-  --ctp-ext-teal: 114, 224, 214;
-  --ctp-ext-sky: 139, 233, 253;
-  --ctp-ext-sapphire: 104, 197, 240;
-  --ctp-ext-blue: 95, 126, 222;
-  --ctp-ext-lavender: 154, 141, 247;
-  --ctp-ext-text: 248, 248, 242;
-  --ctp-ext-subtext1: 211, 211, 197;
-  --ctp-ext-subtext0: 191, 191, 181;
-  --ctp-ext-overlay2: 139, 143, 167;
-  --ctp-ext-overlay1: 110, 114, 145;
-  --ctp-ext-overlay0: 88, 92, 116;
-  --ctp-ext-surface2: 68, 71, 90;
-  --ctp-ext-surface1: 56, 59, 76;
-  --ctp-ext-surface0: 48, 50, 65;
-  --ctp-ext-base: 30, 30, 36;
-  --ctp-ext-mantle: 25, 25, 30;
-  --ctp-ext-crust: 20, 20, 25;
+.theme-dark.anp-theme-ext-dark.ctp-rosepine-dark,
+.anp-theme-ext-dark.ctp-rosepine-dark .themed-color-wrapper > .theme-dark {
+  --ctp-ext-rosewater: 243,
+  	215,
+  	204;
+  --ctp-ext-flamingo: 235,
+  	188,
+  	186;
+  --ctp-ext-pink: 223,
+  	167,
+  	231;
+  --ctp-ext-mauve: 196,
+  	167,
+  	231;
+  --ctp-ext-red: 235,
+  	111,
+  	146;
+  --ctp-ext-maroon: 235,
+  	122,
+  	111;
+  --ctp-ext-peach: 235,
+  	159,
+  	111;
+  --ctp-ext-yellow: 246,
+  	193,
+  	119;
+  --ctp-ext-green: 114,
+  	182,
+  	156;
+  --ctp-ext-teal: 156,
+  	207,
+  	216;
+  --ctp-ext-sky: 49,
+  	116,
+  	143;
+  --ctp-ext-sapphire: 68,
+  	132,
+  	171;
+  --ctp-ext-blue: 76,
+  	127,
+  	169;
+  --ctp-ext-lavender: 210,
+  	193,
+  	231;
+  --ctp-ext-text: 224,
+  	222,
+  	244;
+  --ctp-ext-subtext1: 144,
+  	140,
+  	170;
+  --ctp-ext-subtext0: 110,
+  	106,
+  	134;
+  --ctp-ext-overlay2: 82,
+  	79,
+  	103;
+  --ctp-ext-overlay1: 64,
+  	61,
+  	82;
+  --ctp-ext-overlay0: 54,
+  	50,
+  	83;
+  --ctp-ext-surface2: 46,
+  	42,
+  	70;
+  --ctp-ext-surface1: 33,
+  	32,
+  	46;
+  --ctp-ext-surface0: 31,
+  	29,
+  	46;
+  --ctp-ext-base: 25,
+  	23,
+  	36;
+  --ctp-ext-mantle: 17,
+  	16,
+  	25;
+  --ctp-ext-crust: 11,
+  	10,
+  	16;
 }
 
-.theme-light.anp-theme-ext-light.ctp-sandy-beaches-light, .anp-theme-ext-light.ctp-sandy-beaches-light .themed-color-wrapper > .theme-light {
-  --ctp-ext-rosewater: 228, 212, 196;
-  --ctp-ext-flamingo: 214, 188, 174;
-  --ctp-ext-pink: 200, 164, 152;
-  --ctp-ext-mauve: 149, 136, 138;
-  --ctp-ext-red: 166, 137, 123;
-  --ctp-ext-maroon: 186, 144, 123;
-  --ctp-ext-peach: 199, 161, 135;
-  --ctp-ext-yellow: 212, 187, 160;
-  --ctp-ext-green: 152, 150, 134;
-  --ctp-ext-teal: 149, 156, 153;
-  --ctp-ext-sky: 138, 155, 163;
-  --ctp-ext-sapphire: 124, 133, 143;
-  --ctp-ext-blue: 109, 111, 123;
-  --ctp-ext-lavender: 135, 128, 142;
-  --ctp-ext-text: 104, 88, 80;
-  --ctp-ext-subtext1: 108, 92, 84;
-  --ctp-ext-subtext0: 111, 96, 88;
-  --ctp-ext-overlay2: 118, 103, 96;
-  --ctp-ext-overlay1: 124, 110, 103;
-  --ctp-ext-overlay0: 130, 117, 110;
-  --ctp-ext-surface2: 205, 197, 193;
-  --ctp-ext-surface1: 212, 205, 200;
-  --ctp-ext-surface0: 222, 216, 209;
-  --ctp-ext-base: 240, 234, 226;
-  --ctp-ext-mantle: 237, 231, 224;
-  --ctp-ext-crust: 230, 223, 216;
+.theme-dark.anp-theme-ext-dark.ctp-royal-velvet,
+.anp-theme-ext-dark.ctp-royal-velvet .themed-color-wrapper > .theme-dark {
+  --ctp-ext-rosewater: 246,
+  	201,
+  	153;
+  --ctp-ext-flamingo: 245,
+  	189,
+  	166;
+  --ctp-ext-pink: 228,
+  	157,
+  	248;
+  --ctp-ext-mauve: 197,
+  	146,
+  	222;
+  --ctp-ext-red: 240,
+  	120,
+  	160;
+  --ctp-ext-maroon: 230,
+  	102,
+  	102;
+  --ctp-ext-peach: 230,
+  	195,
+  	125;
+  --ctp-ext-yellow: 241,
+  	250,
+  	140;
+  --ctp-ext-green: 130,
+  	235,
+  	130;
+  --ctp-ext-teal: 114,
+  	224,
+  	214;
+  --ctp-ext-sky: 139,
+  	233,
+  	253;
+  --ctp-ext-sapphire: 104,
+  	197,
+  	240;
+  --ctp-ext-blue: 95,
+  	126,
+  	222;
+  --ctp-ext-lavender: 154,
+  	141,
+  	247;
+  --ctp-ext-text: 248,
+  	248,
+  	242;
+  --ctp-ext-subtext1: 211,
+  	211,
+  	197;
+  --ctp-ext-subtext0: 191,
+  	191,
+  	181;
+  --ctp-ext-overlay2: 139,
+  	143,
+  	167;
+  --ctp-ext-overlay1: 110,
+  	114,
+  	145;
+  --ctp-ext-overlay0: 88,
+  	92,
+  	116;
+  --ctp-ext-surface2: 68,
+  	71,
+  	90;
+  --ctp-ext-surface1: 56,
+  	59,
+  	76;
+  --ctp-ext-surface0: 48,
+  	50,
+  	65;
+  --ctp-ext-base: 30,
+  	30,
+  	36;
+  --ctp-ext-mantle: 25,
+  	25,
+  	30;
+  --ctp-ext-crust: 20,
+  	20,
+  	25;
 }
 
-.theme-dark.anp-theme-ext-dark.ctp-solarized-dark, .anp-theme-ext-dark.ctp-solarized-dark .themed-color-wrapper > .theme-dark {
-  --ctp-ext-rosewater: 227, 131, 89;
-  --ctp-ext-flamingo: 241, 142, 168;
-  --ctp-ext-pink: 211, 54, 130;
-  --ctp-ext-mauve: 108, 113, 196;
-  --ctp-ext-red: 220, 50, 47;
-  --ctp-ext-maroon: 220, 60, 46;
-  --ctp-ext-peach: 203, 75, 22;
-  --ctp-ext-yellow: 181, 137, 0;
-  --ctp-ext-green: 133, 153, 0;
-  --ctp-ext-teal: 42, 161, 152;
-  --ctp-ext-sky: 42, 145, 161;
-  --ctp-ext-sapphire: 39, 168, 211;
-  --ctp-ext-blue: 38, 139, 210;
-  --ctp-ext-lavender: 139, 143, 222;
-  --ctp-ext-text: 253, 246, 227;
-  --ctp-ext-subtext1: 237, 232, 214;
-  --ctp-ext-subtext0: 225, 215, 183;
-  --ctp-ext-overlay2: 147, 161, 161;
-  --ctp-ext-overlay1: 117, 159, 163;
-  --ctp-ext-overlay0: 106, 168, 175;
-  --ctp-ext-surface2: 51, 129, 153;
-  --ctp-ext-surface1: 38, 97, 115;
-  --ctp-ext-surface0: 10, 76, 92;
-  --ctp-ext-base: 7, 54, 66;
-  --ctp-ext-mantle: 0, 43, 54;
-  --ctp-ext-crust: 0, 33, 41;
+.theme-light.anp-theme-ext-light.ctp-sandy-beaches-light,
+.anp-theme-ext-light.ctp-sandy-beaches-light .themed-color-wrapper > .theme-light {
+  --ctp-ext-rosewater: 228,
+  	212,
+  	196;
+  --ctp-ext-flamingo: 214,
+  	188,
+  	174;
+  --ctp-ext-pink: 200,
+  	164,
+  	152;
+  --ctp-ext-mauve: 149,
+  	136,
+  	138;
+  --ctp-ext-red: 166,
+  	137,
+  	123;
+  --ctp-ext-maroon: 186,
+  	144,
+  	123;
+  --ctp-ext-peach: 199,
+  	161,
+  	135;
+  --ctp-ext-yellow: 212,
+  	187,
+  	160;
+  --ctp-ext-green: 152,
+  	150,
+  	134;
+  --ctp-ext-teal: 149,
+  	156,
+  	153;
+  --ctp-ext-sky: 138,
+  	155,
+  	163;
+  --ctp-ext-sapphire: 124,
+  	133,
+  	143;
+  --ctp-ext-blue: 109,
+  	111,
+  	123;
+  --ctp-ext-lavender: 135,
+  	128,
+  	142;
+  --ctp-ext-text: 104,
+  	88,
+  	80;
+  --ctp-ext-subtext1: 108,
+  	92,
+  	84;
+  --ctp-ext-subtext0: 111,
+  	96,
+  	88;
+  --ctp-ext-overlay2: 118,
+  	103,
+  	96;
+  --ctp-ext-overlay1: 124,
+  	110,
+  	103;
+  --ctp-ext-overlay0: 130,
+  	117,
+  	110;
+  --ctp-ext-surface2: 205,
+  	197,
+  	193;
+  --ctp-ext-surface1: 212,
+  	205,
+  	200;
+  --ctp-ext-surface0: 222,
+  	216,
+  	209;
+  --ctp-ext-base: 240,
+  	234,
+  	226;
+  --ctp-ext-mantle: 237,
+  	231,
+  	224;
+  --ctp-ext-crust: 230,
+  	223,
+  	216;
 }
 
-.theme-light.anp-theme-ext-light.ctp-solarized-light, .anp-theme-ext-light.ctp-solarized-light .themed-color-wrapper > .theme-light {
-  --ctp-ext-rosewater: 227, 131, 89;
-  --ctp-ext-flamingo: 241, 142, 168;
-  --ctp-ext-pink: 211, 54, 130;
-  --ctp-ext-mauve: 108, 113, 196;
-  --ctp-ext-red: 220, 50, 47;
-  --ctp-ext-maroon: 220, 60, 46;
-  --ctp-ext-peach: 203, 75, 22;
-  --ctp-ext-yellow: 181, 137, 0;
-  --ctp-ext-green: 133, 153, 0;
-  --ctp-ext-teal: 42, 161, 152;
-  --ctp-ext-sky: 42, 145, 161;
-  --ctp-ext-sapphire: 39, 168, 211;
-  --ctp-ext-blue: 38, 139, 210;
-  --ctp-ext-lavender: 139, 143, 222;
-  --ctp-ext-text: 0, 43, 54;
-  --ctp-ext-subtext1: 7, 54, 66;
-  --ctp-ext-subtext0: 10, 76, 92;
-  --ctp-ext-overlay2: 77, 96, 102;
-  --ctp-ext-overlay1: 88, 110, 117;
-  --ctp-ext-overlay0: 101, 123, 131;
-  --ctp-ext-surface2: 131, 148, 150;
-  --ctp-ext-surface1: 145, 160, 161;
-  --ctp-ext-surface0: 173, 184, 184;
-  --ctp-ext-base: 253, 246, 227;
-  --ctp-ext-mantle: 237, 232, 214;
-  --ctp-ext-crust: 224, 215, 184;
+.theme-dark.anp-theme-ext-dark.ctp-solarized-dark,
+.anp-theme-ext-dark.ctp-solarized-dark .themed-color-wrapper > .theme-dark {
+  --ctp-ext-rosewater: 227,
+  	131,
+  	89;
+  --ctp-ext-flamingo: 241,
+  	142,
+  	168;
+  --ctp-ext-pink: 211,
+  	54,
+  	130;
+  --ctp-ext-mauve: 108,
+  	113,
+  	196;
+  --ctp-ext-red: 220,
+  	50,
+  	47;
+  --ctp-ext-maroon: 220,
+  	60,
+  	46;
+  --ctp-ext-peach: 203,
+  	75,
+  	22;
+  --ctp-ext-yellow: 181,
+  	137,
+  	0;
+  --ctp-ext-green: 133,
+  	153,
+  	0;
+  --ctp-ext-teal: 42,
+  	161,
+  	152;
+  --ctp-ext-sky: 42,
+  	145,
+  	161;
+  --ctp-ext-sapphire: 39,
+  	168,
+  	211;
+  --ctp-ext-blue: 38,
+  	139,
+  	210;
+  --ctp-ext-lavender: 139,
+  	143,
+  	222;
+  --ctp-ext-text: 253,
+  	246,
+  	227;
+  --ctp-ext-subtext1: 237,
+  	232,
+  	214;
+  --ctp-ext-subtext0: 225,
+  	215,
+  	183;
+  --ctp-ext-overlay2: 147,
+  	161,
+  	161;
+  --ctp-ext-overlay1: 117,
+  	159,
+  	163;
+  --ctp-ext-overlay0: 106,
+  	168,
+  	175;
+  --ctp-ext-surface2: 51,
+  	129,
+  	153;
+  --ctp-ext-surface1: 38,
+  	97,
+  	115;
+  --ctp-ext-surface0: 10,
+  	76,
+  	92;
+  --ctp-ext-base: 7,
+  	54,
+  	66;
+  --ctp-ext-mantle: 0,
+  	43,
+  	54;
+  --ctp-ext-crust: 0,
+  	33,
+  	41;
+}
+
+.theme-light.anp-theme-ext-light.ctp-solarized-light,
+.anp-theme-ext-light.ctp-solarized-light .themed-color-wrapper > .theme-light {
+  --ctp-ext-rosewater: 227,
+  	131,
+  	89;
+  --ctp-ext-flamingo: 241,
+  	142,
+  	168;
+  --ctp-ext-pink: 211,
+  	54,
+  	130;
+  --ctp-ext-mauve: 108,
+  	113,
+  	196;
+  --ctp-ext-red: 220,
+  	50,
+  	47;
+  --ctp-ext-maroon: 220,
+  	60,
+  	46;
+  --ctp-ext-peach: 203,
+  	75,
+  	22;
+  --ctp-ext-yellow: 181,
+  	137,
+  	0;
+  --ctp-ext-green: 133,
+  	153,
+  	0;
+  --ctp-ext-teal: 42,
+  	161,
+  	152;
+  --ctp-ext-sky: 42,
+  	145,
+  	161;
+  --ctp-ext-sapphire: 39,
+  	168,
+  	211;
+  --ctp-ext-blue: 38,
+  	139,
+  	210;
+  --ctp-ext-lavender: 139,
+  	143,
+  	222;
+  --ctp-ext-text: 0,
+  	43,
+  	54;
+  --ctp-ext-subtext1: 7,
+  	54,
+  	66;
+  --ctp-ext-subtext0: 10,
+  	76,
+  	92;
+  --ctp-ext-overlay2: 77,
+  	96,
+  	102;
+  --ctp-ext-overlay1: 88,
+  	110,
+  	117;
+  --ctp-ext-overlay0: 101,
+  	123,
+  	131;
+  --ctp-ext-surface2: 131,
+  	148,
+  	150;
+  --ctp-ext-surface1: 145,
+  	160,
+  	161;
+  --ctp-ext-surface0: 173,
+  	184,
+  	184;
+  --ctp-ext-base: 253,
+  	246,
+  	227;
+  --ctp-ext-mantle: 237,
+  	232,
+  	214;
+  --ctp-ext-crust: 224,
+  	215,
+  	184;
 }

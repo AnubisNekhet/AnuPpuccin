@@ -64,6 +64,9 @@ settings:
             label: Atom
             value: ctp-atom-dark
         -
+            label: Biscuit
+            value: ctp-biscuit-dark
+        -
             label: Coffee
             value: ctp-coffee-dark
         -
@@ -110,6 +113,7 @@ settings:
 @import "ext-colorschemes/amoled-dark.scss";
 @import "ext-colorschemes/atom-dark.scss";
 @import "ext-colorschemes/atom-light.scss";
+@import "ext-colorschemes/biscuit-dark.scss";
 @import "ext-colorschemes/coffee-dark.scss";
 @import "ext-colorschemes/dracula.scss";
 @import "ext-colorschemes/everforest-light.scss";
@@ -133,74 +137,64 @@ settings:
 @import "ext-colorschemes/material-mint-light.scss";
 @import "ext-colorschemes/material-mint-dark.scss";
 
-$ext-color-list: "rosewater", "flamingo", "pink", "mauve", "red", "maroon", "peach", "yellow", "green", "teal", "sky", "sapphire", "blue", "lavender", "text", "subtext1", "subtext0", "overlay2", "overlay1", "overlay0", "surface2", "surface1", "surface0", "base", "mantle", "crust";
+$ext-color-list: "rosewater", "flamingo", "pink", "mauve", "red", "maroon",
+	"peach", "yellow", "green", "teal", "sky", "sapphire", "blue", "lavender",
+	"text", "subtext1", "subtext0", "overlay2", "overlay1", "overlay0", "surface2",
+	"surface1", "surface0", "base", "mantle", "crust";
 
-$ext-theme-list:
-  $theme-atom-light,
-  $theme-amoled-dark,
-  $theme-atom-dark,
-  $theme-coffee-dark,
-  $theme-dracula,
-  $theme-everforest-light,
-  $theme-everforest-dark,
-  $theme-generic-dark,
-  $theme-gruvbox-dark,
-  $theme-gruvbox-light,
-  $theme-kanagawa-dark,
-  $theme-luminescence-light,
-  $theme-material-mint-light,
-  $theme-material-mint-dark,
-  $theme-nord-dark,
-  $theme-nord-darker,
-  $theme-nord-light,
-  $theme-notion-light,
-  $theme-notion-dark,
-  $theme-rosebox,
-  $theme-rosepine-dark,
-  $theme-royal-velvet,
-  $theme-sandy-beaches-light,
-  $theme-solarized-dark,
-  $theme-solarized-light
-;
+$ext-theme-list: $theme-atom-light, $theme-amoled-dark, $theme-atom-dark,
+	$theme-biscuit-dark, $theme-coffee-dark, $theme-dracula,
+	$theme-everforest-light, $theme-everforest-dark, $theme-generic-dark,
+	$theme-gruvbox-dark, $theme-gruvbox-light, $theme-kanagawa-dark,
+	$theme-luminescence-light, $theme-material-mint-light,
+	$theme-material-mint-dark, $theme-nord-dark, $theme-nord-darker,
+	$theme-nord-light, $theme-notion-light, $theme-notion-dark, $theme-rosebox,
+	$theme-rosepine-dark, $theme-royal-velvet, $theme-sandy-beaches-light,
+	$theme-solarized-dark, $theme-solarized-light;
 
 .theme-dark.anp-theme-ext-dark.ctp-rosebox {
-  --ctp-accent: 165, 117, 98;
-  --background-modifier-border: rgb(51, 51, 51);
+	--ctp-accent: 165, 117, 98;
+	--background-modifier-border: rgb(51, 51, 51);
 }
 .theme-light.anp-theme-ext-light.ctp-nord-light {
-  --ctp-accent: 136, 192, 208;
+	--ctp-accent: 136, 192, 208;
 }
 .theme-light.anp-theme-ext-light.ctp-material-mint-light {
-  --ctp-accent: var(--ctp-teal);
+	--ctp-accent: var(--ctp-teal);
 }
 .theme-dark.anp-theme-ext-dark.ctp-material-mint-dark {
-  --ctp-accent: var(--ctp-teal);
+	--ctp-accent: var(--ctp-teal);
 }
 .theme-dark.anp-theme-ext-dark.ctp-nord-dark {
-  --ctp-accent: 136, 192, 208;
+	--ctp-accent: 136, 192, 208;
 }
 .theme-dark.anp-theme-ext-dark.ctp-nord-darker {
-  --ctp-accent: 136, 192, 208;
+	--ctp-accent: 136, 192, 208;
 }
 .theme-light.anp-theme-ext-light.ctp-atom-light {
-  --ctp-accent: var(--ctp-blue);
+	--ctp-accent: var(--ctp-blue);
 }
 .theme-dark.anp-theme-ext-dark.ctp-atom-dark {
-  --ctp-accent: var(--ctp-blue);
+	--ctp-accent: var(--ctp-blue);
 }
 .theme-dark.anp-theme-ext-amoled {
-  --ctp-ext-surface2: 80, 80, 80 !important;
-  --ctp-ext-surface1: 50, 50, 50 !important;
-  --ctp-ext-surface0: 30, 30, 30 !important;
-  --ctp-ext-base: 10, 10, 10 !important;
-  --ctp-ext-mantle: 5, 5, 5 !important;
-  --ctp-ext-crust: 0, 0, 0 !important;
+	--ctp-ext-surface2: 80, 80, 80 !important;
+	--ctp-ext-surface1: 50, 50, 50 !important;
+	--ctp-ext-surface0: 30, 30, 30 !important;
+	--ctp-ext-base: 10, 10, 10 !important;
+	--ctp-ext-mantle: 5, 5, 5 !important;
+	--ctp-ext-crust: 0, 0, 0 !important;
 }
 
 @each $theme-name in $ext-theme-list {
-  .theme-#{map-get($theme-name, theme-mode)}.anp-theme-ext-#{map-get($theme-name, theme-mode)}.ctp-#{map-get($theme-name, theme-name)}, .anp-theme-ext-#{map-get($theme-name, theme-mode)}.ctp-#{map-get($theme-name, theme-name)} .themed-color-wrapper > .theme-#{map-get($theme-name, theme-mode)} {
-    @each $color-name in $ext-color-list {
-      --ctp-ext-#{$color-name}: #{red(map-get($theme-name, ctp-#{$color-name}))}, #{green(map-get($theme-name, ctp-#{$color-name}))}, #{blue(map-get($theme-name, ctp-#{$color-name}))};
-    }
-  }
+	.theme-#{map-get($theme-name, theme-mode)}.anp-theme-ext-#{map-get($theme-name, theme-mode)}.ctp-#{map-get($theme-name, theme-name)},
+	.anp-theme-ext-#{map-get($theme-name, theme-mode)}.ctp-#{map-get($theme-name, theme-name)}
+		.themed-color-wrapper
+		> .theme-#{map-get($theme-name, theme-mode)} {
+		@each $color-name in $ext-color-list {
+			--ctp-ext-#{$color-name}: #{red(map-get($theme-name, ctp-#{$color-name}))},
+				#{green(map-get($theme-name, ctp-#{$color-name}))},
+				#{blue(map-get($theme-name, ctp-#{$color-name}))};
+		}
+	}
 }
