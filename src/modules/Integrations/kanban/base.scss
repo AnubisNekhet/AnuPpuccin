@@ -28,6 +28,7 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
   }
   &__lane-wrapper {
     margin-right: var(--anp-kanban-lane-spacing, 10px);
+    transition: width 200ms;
   }
   &__lane-form-wrapper {
     border-color: var(--interactive-accent);
