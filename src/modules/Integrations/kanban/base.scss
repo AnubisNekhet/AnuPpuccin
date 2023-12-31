@@ -68,8 +68,11 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
 }
 
 /* Kanban Callout Fix */
-.kanban-plugin__drag-container .callout-fold,
-.kanban-plugin__drag-container .callout-icon {
+.kanban-plugin__item .callout {
+  margin-top: .66em;
+}
+.kanban-plugin__item .callout-fold,
+.kanban-plugin__item .callout-icon {
   display: none;
 }
 
