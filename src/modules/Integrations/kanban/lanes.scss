@@ -48,6 +48,28 @@
   margin: 8px 8px 0;
 }
 
+.kanban-plugin__lane-setting-wrapper {
+  border-bottom: 1px solid var(--background-modifier-border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 0;
+  & > div {
+    padding: 0 12px;
+  }
+  & > div:last-child {
+    border-width: 0;
+  }
+  .kanban-plugin__checkbox-wrapper {
+    flex-direction: row-reverse;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+  .checkbox-container {
+    margin-left: 0;
+  }
+}
+
 .kanban-plugin__lane-wrapper {
   .kanban-plugin__lane-items > .kanban-plugin__placeholder {
     border-width: 2px;
@@ -76,11 +98,15 @@
   .kanban-plugin__lane-header-wrapper,
   .kanban-plugin__item-button-wrapper,
   .kanban-plugin__item-form {
-      border-width: 0;
-      box-shadow: none;
+    border-width: 0;
+    box-shadow: none;
   }
   .kanban-plugin__lane-items {
-      padding-bottom: 0;
-      padding-top: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  .kanban-plugin__lane-setting-wrapper {
+    border-bottom-width: 0;
+    padding-top: 6px;
   }
 }
