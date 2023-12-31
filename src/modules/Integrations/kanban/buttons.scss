@@ -1,12 +1,28 @@
+.kanban-plugin,
+.kanban-plugin__drag-container {
+  button {
+    box-shadow: none;
+    &:hover {
+      background-color: var(--background-modifier-hover);
+      color: var(--text-normal);
+      transition: background-color 0.1s;
+    }
+  }
+  .kanban-plugin__new-item-button {
+    font-size: .875rem;
+    gap: 0.25em;
+    height: auto;
+    line-height: var(--line-height-tight);
+    padding: 7px 10px;
+  }
+}
+
 .anp-kanban-hide-card-menus:not(.is-mobile) {
   .kanban-plugin__item-title + .kanban-plugin__item-postfix-button-wrapper {
     display: none;
   }
 }
 
-.setting-item[data-id="anp-kanban-hide-card-menus"]:not(:has(.is-enabled)) + [data-id="anp-kanban-hide-archive-btn"] {
-  display: none;
-}
 .anp-kanban-hide-card-menus.anp-kanban-hide-archive-btn {
   &:not(.is-mobile) .kanban-plugin__item-title-wrapper {
     padding: 8px;
@@ -27,4 +43,8 @@
   &.is-mobile .kanban-plugin__item-prefix-button-wrapper {
     display: none;
   }
+}
+
+.setting-item[data-id="anp-kanban-hide-card-menus"]:not(:has(.is-enabled)) + [data-id="anp-kanban-hide-archive-btn"] {
+  display: none;
 }
