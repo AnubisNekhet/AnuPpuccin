@@ -46,15 +46,8 @@
 }
 .kanban-plugin__item-title-wrapper {
   background-color: transparent;
+  column-gap: 5px;
   padding: 8px;
-  div:first-child > a.clickable-icon {
-    position: relative;
-    left: -2px;
-  }
-  div:last-child > a.clickable-icon {
-    position: relative;
-    right: -2px;
-  }
 }
 .kanban-plugin__item .kanban-plugin__item-metadata {
   display: flex;

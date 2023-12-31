@@ -72,3 +72,8 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
 .kanban-plugin__drag-container .callout-icon {
   display: none;
 }
+
+/* Kanban conditional settings */
+.setting-item[data-id="anp-kanban-hide-card-menus"]:not(:has(.is-enabled)) + [data-id="anp-kanban-hide-archive-btn"] {
+  display: none;
+}
