@@ -8,9 +8,6 @@
   margin-right: var(--anp-kanban-lane-spacing, 10px);
   transition: width 200ms;
 }
-.kanban-plugin__lane-form-wrapper {
-  border-color: var(--interactive-accent);
-}
 .kanban-plugin__lane-grip {
   color: var(--background-modifier-border);
   margin: 0;

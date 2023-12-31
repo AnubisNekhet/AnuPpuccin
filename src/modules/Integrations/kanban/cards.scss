@@ -91,6 +91,7 @@
 
 .kanban-plugin__drag-container > .kanban-plugin__item-wrapper {
   .kanban-plugin__item {
-    box-shadow: inset 0 0 0 1px var(--interactive-accent), var(--shadow-s);
+    border-color: var(--background-modifier-border-hover);
+    box-shadow: inset 0 0 0 1px var(--background-modifier-border-hover), var(--shadow-s);
   }
 }
