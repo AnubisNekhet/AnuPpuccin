@@ -41,6 +41,7 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
   }
   &__lane-title p {
     font-weight: 500;
+    white-space: nowrap;
   }
   &__lane-title-count {
     margin-right: 5px;

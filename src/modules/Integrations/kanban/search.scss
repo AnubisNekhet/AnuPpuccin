@@ -29,17 +29,13 @@
     width: 44px !important;
     .kanban-plugin__lane-header-wrapper {
       gap: 5px;
-      margin-top: 3px;
       position: absolute;
-      transform-origin: 20px 20px;
+      transform-origin: 18px 22px;
       transform: rotate(90deg);
       z-index: 1;
     }
     .kanban-plugin__lane-grip {
       transform: rotate(-90deg);
-    }
-    .kanban-plugin__lane-title {
-      white-space: nowrap;
     }
     .kanban-plugin__lane-settings-button-wrapper {
       display: none;
