@@ -915,6 +915,41 @@ settings:
     max: 20
     step: 1
 
+# Integrations :: Kanban :: Search Settings
+
+  -
+    id: anp-plugin-kanban-search-settings
+    title: Search Settings
+    description: 
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: anp-kanban-search-full
+    title: Enable Full Width Search Bar
+    description: 
+    type: class-toggle
+  -
+    id: anp-kanban-collapse-lanes
+    title: Collapse Lanes With No Search Results
+    description: 
+    type: class-toggle
+  -
+    id: anp-kanban-hide-cards
+    title: Hide Cards That Don't Contain the Search Query
+    description: 
+    type: class-toggle
+  -
+    id: anp-kanban-hide-mark
+    title: Hide Search Result Highlight in Cards
+    description: 
+    type: class-toggle
+  -
+    id: anp-kanban-uncollapse-lanes
+    title: Uncollapse Lanes and Unhide Cards When Sorting
+    description: 
+    type: class-toggle
+
 # Integrations :: MAKE.md
 
   -
