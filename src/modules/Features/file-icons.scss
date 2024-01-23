@@ -22,6 +22,10 @@
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 3h7v9H3zm11 0h7v5h-7zm0 9h7v9h-7zM3 16h7v5H3z'/%3E%3C/svg%3E");
     -webkit-mask-repeat: no-repeat;
 }
+.anp-file-icons .nav-file .nav-file-title[data-path$=".excalidraw.md"]::before {
+		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 13.5V4a2 2 0 0 1 2-2h8.5L20 7.5V20a2 2 0 0 1-2 2h-5.5'/%3E%3Cpath d='M14 2v6h6'/%3E%3Cpath d='M10.4 12.6a2 2 0 0 1 3 3L8 21l-4 1 1-4Z'/%3E%3C/svg%3E");
+    -webkit-mask-repeat: no-repeat;
+}
 .anp-file-icons .nav-file .nav-file-title[data-path$=".svg"]::before,
 .anp-file-icons .nav-file .nav-file-title[data-path$=".bmp"]::before,
 .anp-file-icons .nav-file .nav-file-title[data-path$=".jpg"]::before,

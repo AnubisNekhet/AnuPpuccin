@@ -80,6 +80,9 @@ settings:
             label: Everforest
             value: ctp-everforest-dark
         -
+            label: Flexoki
+            value: ctp-flexoki-dark
+        -
             label: Gruvbox
             value: ctp-gruvbox-dark
         -
@@ -806,6 +809,88 @@ settings:
   --ctp-ext-crust: 34,
   	40,
   	44;
+}
+
+.theme-dark.anp-theme-ext-dark.ctp-flexoki-dark,
+.anp-theme-ext-dark.ctp-flexoki-dark .themed-color-wrapper > .theme-dark {
+  --ctp-ext-rosewater: 245,
+  	224,
+  	220;
+  --ctp-ext-flamingo: 242,
+  	205,
+  	205;
+  --ctp-ext-pink: 245,
+  	194,
+  	231;
+  --ctp-ext-mauve: 203,
+  	166,
+  	247;
+  --ctp-ext-red: 243,
+  	139,
+  	168;
+  --ctp-ext-maroon: 235,
+  	160,
+  	172;
+  --ctp-ext-peach: 250,
+  	179,
+  	135;
+  --ctp-ext-yellow: 249,
+  	226,
+  	175;
+  --ctp-ext-green: 166,
+  	227,
+  	161;
+  --ctp-ext-teal: 148,
+  	226,
+  	213;
+  --ctp-ext-sky: 137,
+  	220,
+  	235;
+  --ctp-ext-sapphire: 116,
+  	199,
+  	236;
+  --ctp-ext-blue: 135,
+  	176,
+  	249;
+  --ctp-ext-lavender: 180,
+  	190,
+  	254;
+  --ctp-ext-text: 207,
+  	206,
+  	196;
+  --ctp-ext-subtext1: 179,
+  	177,
+  	168;
+  --ctp-ext-subtext0: 158,
+  	156,
+  	148;
+  --ctp-ext-overlay2: 136,
+  	134,
+  	129;
+  --ctp-ext-overlay1: 123,
+  	122,
+  	116;
+  --ctp-ext-overlay0: 111,
+  	110,
+  	105;
+  --ctp-ext-surface2: 87,
+  	86,
+  	83;
+  --ctp-ext-surface1: 64,
+  	62,
+  	60;
+  --ctp-ext-surface0: 52,
+  	51,
+  	49;
+  --ctp-ext-base: 28,
+  	27,
+  	26;
+  --ctp-ext-mantle: 16,
+  	15,
+  	15;
+  --ctp-ext-crust: 8,
+  	7,
+  	7;
 }
 
 .theme-dark.anp-theme-ext-dark.ctp-generic-dark,

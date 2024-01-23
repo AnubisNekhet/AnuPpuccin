@@ -79,6 +79,9 @@ settings:
             label: Everforest
             value: ctp-everforest-dark
         -
+            label: Flexoki
+            value: ctp-flexoki-dark
+        -
             label: Gruvbox
             value: ctp-gruvbox-dark
         -
@@ -118,6 +121,7 @@ settings:
 @import "ext-colorschemes/dracula.scss";
 @import "ext-colorschemes/everforest-light.scss";
 @import "ext-colorschemes/everforest-dark.scss";
+@import "ext-colorschemes/flexoki-dark.scss";
 @import "ext-colorschemes/generic-dark.scss";
 @import "ext-colorschemes/gruvbox-dark.scss";
 @import "ext-colorschemes/gruvbox-light.scss";
@@ -144,7 +148,7 @@ $ext-color-list: "rosewater", "flamingo", "pink", "mauve", "red", "maroon",
 
 $ext-theme-list: $theme-atom-light, $theme-amoled-dark, $theme-atom-dark,
 	$theme-biscuit-dark, $theme-coffee-dark, $theme-dracula,
-	$theme-everforest-light, $theme-everforest-dark, $theme-generic-dark,
+	$theme-everforest-light, $theme-everforest-dark, $theme-flexoki-dark, $theme-generic-dark,
 	$theme-gruvbox-dark, $theme-gruvbox-light, $theme-kanagawa-dark,
 	$theme-luminescence-light, $theme-material-mint-light,
 	$theme-material-mint-dark, $theme-nord-dark, $theme-nord-darker,
