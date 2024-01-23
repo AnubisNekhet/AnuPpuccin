@@ -2148,11 +2148,11 @@ settings:
     type: class-toggle
   -
     id: anp-full-rainbow-text-color-toggle-light
-    title: Invert title colors (Dark Mode)
+    title: Invert title colors (Light Mode)
     type: class-toggle
   -
     id: anp-full-rainbow-text-color-toggle-dark
-    title: Invert title colors (Light Mode)
+    title: Invert title colors (Dark Mode)
     type: class-toggle
   -
     id: anp-rainbow-folder-bg-opacity
