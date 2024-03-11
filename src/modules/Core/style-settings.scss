@@ -555,6 +555,25 @@ settings:
     type: variable-number
     default: 200
 
+# File Editor & Markdown Elements :: LaTeX
+
+  -
+    id: anp-latex-header
+    title: LaTex
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-latex-color
+    title: LaTeX Color
+    type: variable-themed-color
+    description: Applies to LaTeX blocks
+    allowEmpty: true
+    format: hex
+    opacity: false
+    default-light: '#'
+    default-dark: '#'
+
 # File Editor & Markdown Elements :: Lists
 
   -

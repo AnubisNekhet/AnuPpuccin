@@ -569,6 +569,25 @@ settings:
     type: variable-number
     default: 200
 
+# File Editor & Markdown Elements :: LaTeX
+
+  -
+    id: anp-latex-header
+    title: LaTex
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-latex-color
+    title: LaTeX Color
+    type: variable-themed-color
+    description: Applies to LaTeX blocks
+    allowEmpty: true
+    format: hex
+    opacity: false
+    default-light: '#'
+    default-dark: '#'
+
 # File Editor & Markdown Elements :: Lists
 
   -
@@ -5222,6 +5241,11 @@ hr {
   --list-bullet-radius: 0;
   --list-bullet-border: 1px solid var(--list-marker-color);
   background-color: transparent;
+}
+
+/*-LaTeX-*/
+.math {
+  color: var(--anp-latex-color, var(--text-normal));
 }
 
 .anp-toggle-metadata .frontmatter-container, .markdown-rendered.hide-metadata .frontmatter-container {
