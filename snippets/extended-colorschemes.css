@@ -112,6 +112,9 @@ settings:
         -
             label: Solarized
             value: ctp-solarized-dark
+        -
+            label: Thorns
+            value: ctp-thorns-dark
 */
 .theme-dark.anp-theme-ext-dark.ctp-rosebox {
   --ctp-accent: 165, 117, 98;
@@ -2367,4 +2370,86 @@ settings:
   --ctp-ext-crust: 224,
   	215,
   	184;
+}
+
+.theme-dark.anp-theme-ext-dark.ctp-thorns,
+.anp-theme-ext-dark.ctp-thorns .themed-color-wrapper > .theme-dark {
+  --ctp-ext-rosewater: 230,
+  	194,
+  	173;
+  --ctp-ext-flamingo: 232,
+  	180,
+  	150;
+  --ctp-ext-pink: 216,
+  	149,
+  	238;
+  --ctp-ext-mauve: 202,
+  	151,
+  	232;
+  --ctp-ext-red: 238,
+  	149,
+  	152;
+  --ctp-ext-maroon: 238,
+  	161,
+  	150;
+  --ctp-ext-peach: 232,
+  	177,
+  	151;
+  --ctp-ext-yellow: 232,
+  	208,
+  	151;
+  --ctp-ext-green: 155,
+  	224,
+  	153;
+  --ctp-ext-teal: 178,
+  	225,
+  	223;
+  --ctp-ext-sky: 151,
+  	208,
+  	232;
+  --ctp-ext-sapphire: 150,
+  	180,
+  	232;
+  --ctp-ext-blue: 151,
+  	154,
+  	232;
+  --ctp-ext-lavender: 190,
+  	173,
+  	230;
+  --ctp-ext-text: 216,
+  	208,
+  	213;
+  --ctp-ext-subtext1: 173,
+  	169,
+  	171;
+  --ctp-ext-subtext0: 144,
+  	144,
+  	144;
+  --ctp-ext-overlay2: 128,
+  	128,
+  	128;
+  --ctp-ext-overlay1: 112,
+  	112,
+  	112;
+  --ctp-ext-overlay0: 80,
+  	80,
+  	80;
+  --ctp-ext-surface2: 69,
+  	69,
+  	69;
+  --ctp-ext-surface1: 59,
+  	59,
+  	59;
+  --ctp-ext-surface0: 46,
+  	46,
+  	46;
+  --ctp-ext-base: 21,
+  	21,
+  	21;
+  --ctp-ext-mantle: 15,
+  	15,
+  	15;
+  --ctp-ext-crust: 10,
+  	10,
+  	10;
 }

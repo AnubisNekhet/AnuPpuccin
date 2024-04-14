@@ -164,6 +164,7 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 | [Royal Velvet](https://github.com/caro401/royal-velvet)   | No         | Yes       | -                                                                                                                           |
 | Sandy Beaches                                             | Yes        | No        | Provided by [melnhh](https://github.com/melnhh)                                                                             |
 | [Solarized](https://github.com/altercation/solarized)     | Yes        | Yes       | -                                                                                                                           |
+| [thorns](https://codeberg.org/rini/thorns)                | No         | Yes       | -                                                                                                                           |
 
 <details>
 <summary><h3>Previews</h3></summary>

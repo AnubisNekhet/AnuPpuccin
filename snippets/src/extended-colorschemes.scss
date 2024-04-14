@@ -111,6 +111,9 @@ settings:
         -
             label: Solarized
             value: ctp-solarized-dark
+        -
+            label: Thorns
+            value: ctp-thorns-dark
 */
 
 @import "ext-colorschemes/amoled-dark.scss";
@@ -138,6 +141,7 @@ settings:
 @import "ext-colorschemes/sandy-beaches-light.scss";
 @import "ext-colorschemes/solarized-dark.scss";
 @import "ext-colorschemes/solarized-light.scss";
+@import "ext-colorschemes/thorns.scss";
 @import "ext-colorschemes/material-mint-light.scss";
 @import "ext-colorschemes/material-mint-dark.scss";
 
@@ -148,39 +152,47 @@ $ext-color-list: "rosewater", "flamingo", "pink", "mauve", "red", "maroon",
 
 $ext-theme-list: $theme-atom-light, $theme-amoled-dark, $theme-atom-dark,
 	$theme-biscuit-dark, $theme-coffee-dark, $theme-dracula,
-	$theme-everforest-light, $theme-everforest-dark, $theme-flexoki-dark, $theme-generic-dark,
-	$theme-gruvbox-dark, $theme-gruvbox-light, $theme-kanagawa-dark,
-	$theme-luminescence-light, $theme-material-mint-light,
+	$theme-everforest-light, $theme-everforest-dark, $theme-flexoki-dark,
+	$theme-generic-dark, $theme-gruvbox-dark, $theme-gruvbox-light,
+	$theme-kanagawa-dark, $theme-luminescence-light, $theme-material-mint-light,
 	$theme-material-mint-dark, $theme-nord-dark, $theme-nord-darker,
 	$theme-nord-light, $theme-notion-light, $theme-notion-dark, $theme-rosebox,
 	$theme-rosepine-dark, $theme-royal-velvet, $theme-sandy-beaches-light,
-	$theme-solarized-dark, $theme-solarized-light;
+	$theme-solarized-dark, $theme-solarized-light, $theme-thorns;
 
 .theme-dark.anp-theme-ext-dark.ctp-rosebox {
 	--ctp-accent: 165, 117, 98;
 	--background-modifier-border: rgb(51, 51, 51);
 }
+
 .theme-light.anp-theme-ext-light.ctp-nord-light {
 	--ctp-accent: 136, 192, 208;
 }
+
 .theme-light.anp-theme-ext-light.ctp-material-mint-light {
 	--ctp-accent: var(--ctp-teal);
 }
+
 .theme-dark.anp-theme-ext-dark.ctp-material-mint-dark {
 	--ctp-accent: var(--ctp-teal);
 }
+
 .theme-dark.anp-theme-ext-dark.ctp-nord-dark {
 	--ctp-accent: 136, 192, 208;
 }
+
 .theme-dark.anp-theme-ext-dark.ctp-nord-darker {
 	--ctp-accent: 136, 192, 208;
 }
+
 .theme-light.anp-theme-ext-light.ctp-atom-light {
 	--ctp-accent: var(--ctp-blue);
 }
+
 .theme-dark.anp-theme-ext-dark.ctp-atom-dark {
 	--ctp-accent: var(--ctp-blue);
 }
+
 .theme-dark.anp-theme-ext-amoled {
 	--ctp-ext-surface2: 80, 80, 80 !important;
 	--ctp-ext-surface1: 50, 50, 50 !important;
