@@ -113,7 +113,7 @@ settings:
             value: ctp-solarized-dark
         -
             label: Thorns
-            value: ctp-thorns-dark
+            value: ctp-thorns
 */
 
 @import "ext-colorschemes/amoled-dark.scss";
@@ -203,14 +203,22 @@ $ext-theme-list: $theme-atom-light, $theme-amoled-dark, $theme-atom-dark,
 }
 
 @each $theme-name in $ext-theme-list {
+
 	.theme-#{map-get($theme-name, theme-mode)}.anp-theme-ext-#{map-get($theme-name, theme-mode)}.ctp-#{map-get($theme-name, theme-name)},
-	.anp-theme-ext-#{map-get($theme-name, theme-mode)}.ctp-#{map-get($theme-name, theme-name)}
-		.themed-color-wrapper
-		> .theme-#{map-get($theme-name, theme-mode)} {
+	.anp-theme-ext-#{map-get($theme-name, theme-mode)}.ctp-#{map-get($theme-name, theme-name)} .themed-color-wrapper>.theme-#{map-get($theme-name, theme-mode)} {
 		@each $color-name in $ext-color-list {
-			--ctp-ext-#{$color-name}: #{red(map-get($theme-name, ctp-#{$color-name}))},
-				#{green(map-get($theme-name, ctp-#{$color-name}))},
-				#{blue(map-get($theme-name, ctp-#{$color-name}))};
+			--ctp-ext-#{$color-name}: #{red(map-get($theme-name, ctp-#{$color-name}))
 		}
+
+		,
+		#{green(map-get($theme-name, ctp-#{$color-name}))
 	}
+
+	,
+	#{blue(map-get($theme-name, ctp-#{$color-name}))
+}
+
+;
+}
+}
 }
