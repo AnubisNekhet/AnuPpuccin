@@ -8,6 +8,7 @@
 * folder colors.
 *---------------------------------------------------------------*/
 .nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder,
 [data-type="bookmarks"] .tree-item {
 	&:nth-child(11n + 2) {
 		--rainbow-folder-color: var(--ctp-red);
@@ -44,7 +45,7 @@
 	}
 }
 .anp-rainbow-subfolder-color-toggle {
-	.nav-folder.mod-root .nav-folder.nav-folder .nav-folder,
+	.nav-files-container .nav-folder.nav-folder .nav-folder,
 	[data-type="bookmarks"] .tree-item .tree-item {
 		--rainbow-folder-color: inherit;
 	}

@@ -4057,7 +4057,8 @@ body.anp-card-layout {
   --divider-width: 4px;
   --divider-width-hover: 4px;
   --tab-container-background: var(--card-background-color);
-  --file-header-border: var(--border-width) dashed var(--background-modifier-border);
+  --file-header-border: var(--border-width) dashed
+  	var(--background-modifier-border);
   --ribbon-padding: 0;
 }
 body.anp-card-layout.anp-hide-borders {
@@ -4066,7 +4067,8 @@ body.anp-card-layout.anp-hide-borders {
 body.anp-card-layout.anp-hide-borders .menu {
   border: 0px !important;
 }
-body.anp-card-layout .sidebar-toggle-button, body.anp-card-layout .workspace-tabs.mod-top {
+body.anp-card-layout .sidebar-toggle-button,
+body.anp-card-layout .workspace-tabs.mod-top {
   --tab-container-background: var(--card-background-color);
 }
 body.anp-card-layout .workspace-tabs.mod-top:has(.obsidian-banner-wrapper) {
@@ -4097,27 +4099,31 @@ body.anp-card-layout.anp-card-layout-actions .side-dock-actions {
   margin-top: 2px;
   border-width: 1px 1px 0px 1px;
 }
-body.anp-card-layout.anp-card-layout-actions .side-dock-actions, body.anp-card-layout.anp-card-layout-actions .side-dock-settings {
+body.anp-card-layout.anp-card-layout-actions .side-dock-actions {
   border-style: solid;
   border-color: var(--tab-outline-color);
   background-color: var(--card-foreground-color);
-}
-body.anp-card-layout.anp-card-layout-actions .side-dock-settings {
-  border-width: 1px 1px 0px 0px;
-  border-radius: 0px var(--anp-card-radius, var(--radius-xl)) 0px 0px;
 }
 body.anp-card-layout.anp-card-layout-actions.anp-fixed-status-bar .side-dock-settings {
   border-width: 1px;
   border-radius: 0px var(--anp-card-radius, var(--radius-xl)) var(--anp-card-radius, var(--radius-xl)) 0px;
 }
-body.anp-card-layout .side-dock-actions,
-body.anp-card-layout .side-dock-settings {
+body.anp-card-layout .side-dock-actions {
   padding: var(--size-4-2) var(--size-4-1) var(--size-4-3);
+}
+body.anp-card-layout .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  border: var(--tab-outline-width) solid var(--tab-outline-color);
+  border-bottom: none;
+  margin: var(--anp-card-layout-padding, 10px);
+  margin-bottom: 0;
+  border-radius: var(--anp-card-radius, var(--radius-xl)) var(--anp-card-radius, var(--radius-xl)) 0 0;
+  background-color: var(--card-foreground-color);
 }
 body.anp-card-layout .workspace-ribbon.mod-left {
   margin-top: calc(var(--header-height) - 1px);
 }
-body.anp-card-layout .workspace-tab-header-container, body.anp-card-layout .workspace-ribbon.mod-left:before {
+body.anp-card-layout .workspace-tab-header-container,
+body.anp-card-layout .workspace-ribbon.mod-left:before {
   border-bottom: none;
 }
 body.anp-card-layout .mod-vertical .workspace-tabs {
@@ -6908,51 +6914,62 @@ None of the original code was used and the feature was implemented from scratch.
 * folder colors.
 *---------------------------------------------------------------*/
 .nav-folder-children > .nav-folder:nth-child(11n+2),
+.nav-files-container > div > .nav-folder:nth-child(11n+2),
 [data-type=bookmarks] .tree-item:nth-child(11n+2) {
   --rainbow-folder-color: var(--ctp-red);
 }
 .nav-folder-children > .nav-folder:nth-child(11n+3),
+.nav-files-container > div > .nav-folder:nth-child(11n+3),
 [data-type=bookmarks] .tree-item:nth-child(11n+3) {
   --rainbow-folder-color: var(--ctp-maroon);
 }
 .nav-folder-children > .nav-folder:nth-child(11n+4),
+.nav-files-container > div > .nav-folder:nth-child(11n+4),
 [data-type=bookmarks] .tree-item:nth-child(11n+4) {
   --rainbow-folder-color: var(--ctp-peach);
 }
 .nav-folder-children > .nav-folder:nth-child(11n+5),
+.nav-files-container > div > .nav-folder:nth-child(11n+5),
 [data-type=bookmarks] .tree-item:nth-child(11n+5) {
   --rainbow-folder-color: var(--ctp-yellow);
 }
 .nav-folder-children > .nav-folder:nth-child(11n+6),
+.nav-files-container > div > .nav-folder:nth-child(11n+6),
 [data-type=bookmarks] .tree-item:nth-child(11n+6) {
   --rainbow-folder-color: var(--ctp-green);
 }
 .nav-folder-children > .nav-folder:nth-child(11n+7),
+.nav-files-container > div > .nav-folder:nth-child(11n+7),
 [data-type=bookmarks] .tree-item:nth-child(11n+7) {
   --rainbow-folder-color: var(--ctp-teal);
 }
 .nav-folder-children > .nav-folder:nth-child(11n+8),
+.nav-files-container > div > .nav-folder:nth-child(11n+8),
 [data-type=bookmarks] .tree-item:nth-child(11n+8) {
   --rainbow-folder-color: var(--ctp-sky);
 }
 .nav-folder-children > .nav-folder:nth-child(11n+9),
+.nav-files-container > div > .nav-folder:nth-child(11n+9),
 [data-type=bookmarks] .tree-item:nth-child(11n+9) {
   --rainbow-folder-color: var(--ctp-sapphire);
 }
 .nav-folder-children > .nav-folder:nth-child(11n+10),
+.nav-files-container > div > .nav-folder:nth-child(11n+10),
 [data-type=bookmarks] .tree-item:nth-child(11n+10) {
   --rainbow-folder-color: var(--ctp-blue);
 }
 .nav-folder-children > .nav-folder:nth-child(11n+11),
+.nav-files-container > div > .nav-folder:nth-child(11n+11),
 [data-type=bookmarks] .tree-item:nth-child(11n+11) {
   --rainbow-folder-color: var(--ctp-lavender);
 }
 .nav-folder-children > .nav-folder:nth-child(11n+12),
+.nav-files-container > div > .nav-folder:nth-child(11n+12),
 [data-type=bookmarks] .tree-item:nth-child(11n+12) {
   --rainbow-folder-color: var(--ctp-mauve);
 }
 
-.anp-rainbow-subfolder-color-toggle .nav-folder.mod-root .nav-folder.nav-folder .nav-folder,
+.anp-rainbow-subfolder-color-toggle .nav-files-container .nav-folder.nav-folder .nav-folder,
 .anp-rainbow-subfolder-color-toggle [data-type=bookmarks] .tree-item .tree-item {
   --rainbow-folder-color: inherit;
 }
@@ -6960,30 +6977,30 @@ None of the original code was used and the feature was implemented from scratch.
 /*---------------------------------------------------------------
 * FULL RAINBOW STYLE
 *---------------------------------------------------------------*/
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title,
-.anp-full-rainbow-color-toggle .nav-folder.mod-root .collapse-icon svg.svg-icon,
+.anp-full-rainbow-color-toggle .nav-files-container > div > .nav-folder .nav-folder-title,
+.anp-full-rainbow-color-toggle .nav-files-container > div > .nav-folder .nav-file-title,
+.anp-full-rainbow-color-toggle .nav-files-container .collapse-icon svg.svg-icon,
 .anp-full-rainbow-color-toggle .tree-item-self .tree-item-icon {
   color: var(--anp-full-rainbow-text-inverted, var(--background-primary));
 }
-.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {
+.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle .nav-files-container > div > .nav-folder-children > .nav-file .nav-file-title {
   color: var(--anp-full-rainbow-text-inverted, var(--background-primary));
 }
-.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle.theme-dark .nav-folder.mod-root > .nav-folder-children > .nav-file {
+.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle.theme-dark .nav-files-container > .nav-folder-children > .nav-file {
   background-color: rgba(var(--ctp-text), var(--anp-rainbow-folder-bg-opacity));
 }
-.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle.theme-light .nav-folder.mod-root > .nav-folder-children > .nav-file {
+.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle.theme-light .nav-files-container > div > .nav-file {
   background-color: rgba(var(--ctp-overlay1), var(--anp-rainbow-folder-bg-opacity));
 }
-.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file {
+.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle .nav-files-container > div > .nav-file {
   border-radius: 5px;
   margin-bottom: 2px;
 }
-.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:hover,
-.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children .nav-file .nav-file-title:hover {
+.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-files-container > div > .nav-folder .nav-folder-title:hover,
+.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-files-container > div .nav-file .nav-file-title:hover {
   background-color: rgba(var(--ctp-base), 0.1);
 }
-.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title.is-active {
+.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-files-container > div > .nav-folder .nav-file-title.is-active {
   border-color: rgba(var(--ctp-base), 0.2);
   background-color: rgba(var(--ctp-base), 0.2);
 }
@@ -7003,24 +7020,24 @@ None of the original code was used and the feature was implemented from scratch.
 .anp-full-rainbow-color-toggle .nav-file-title-content.is-being-renamed::selection {
   background-color: rgba(var(--ctp-accent), 0.2);
 }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root .nav-folder > .nav-folder-children {
+.anp-full-rainbow-color-toggle .nav-files-container .nav-folder > .nav-folder-children {
   padding: 0 5px 0 5px;
 }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder {
+.anp-full-rainbow-color-toggle .nav-files-container > div > .nav-folder {
   transition: background-color 0.4s;
   background-color: rgba(var(--rainbow-folder-color), var(--anp-rainbow-folder-bg-opacity));
   margin-bottom: 2px;
   border-radius: 5px;
 }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-children {
+.anp-full-rainbow-color-toggle .nav-files-container > div > .nav-folder .nav-folder-children {
   border-color: rgba(var(--ctp-crust), 0.4);
 }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file.has-focus {
+.anp-full-rainbow-color-toggle .nav-files-container > div > .nav-file.has-focus {
   background-color: rgba(var(--ctp-text), var(--anp-rainbow-folder-bg-opacity));
   border-left: none;
   border-color: rgb(var(--ctp-accent));
 }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file > .nav-file-title, .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file.has-focus > .nav-file-title {
+.anp-full-rainbow-color-toggle .nav-files-container > div > .nav-file > .nav-file-title, .anp-full-rainbow-color-toggle .nav-files-container > div > .nav-file.has-focus > .nav-file-title {
   margin-bottom: 0;
 }
 .anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-file-title, .anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-file-title:focus-within,
@@ -7040,7 +7057,7 @@ None of the original code was used and the feature was implemented from scratch.
 /*---------------------------------------------------------------
 * SIMPLE RAINBOW STYLE
 *---------------------------------------------------------------*/
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle .nav-files-container > div > .nav-folder .nav-folder-title,
 .anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle [data-type=bookmarks] .tree-item .tree-item-inner {
   transition: color 0.4s;
   color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
@@ -7050,7 +7067,7 @@ None of the original code was used and the feature was implemented from scratch.
 .anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle .nav-folder.is-being-dragged-over {
   background-color: rgba(var(--rainbow-folder-color), 0.1);
 }
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:after,
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle .nav-files-container > div > .nav-folder .nav-folder-title:after,
 .anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle [data-type=bookmarks] .tree-item .tree-item-inner:after {
   transition: color 0.4s;
   color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
@@ -7067,7 +7084,7 @@ None of the original code was used and the feature was implemented from scratch.
   flex-grow: 1;
   justify-content: space-between;
 }
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle .nav-folder.mod-root .nav-folder > .nav-folder-children,
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle .nav-files-container .nav-folder > .nav-folder-children,
 .anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle [data-type=bookmarks] .tree-item .tree-item-children {
   transition: color 0.4s;
   border-color: rgba(var(--rainbow-folder-color), 0.5);

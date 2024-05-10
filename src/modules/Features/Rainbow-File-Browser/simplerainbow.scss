@@ -4,7 +4,7 @@
 .anp-simple-rainbow-color-toggle {
 	// Apply styling to titles
 	&.anp-simple-rainbow-title-toggle {
-		.nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
+		.nav-files-container > div > .nav-folder .nav-folder-title,
 		[data-type="bookmarks"] .tree-item .tree-item-inner {
 			transition: color 0.4s;
 			color: rgba(
@@ -20,10 +20,7 @@
 	}
 	// Circle icon indicator
 	&.anp-simple-rainbow-icon-toggle {
-		.nav-folder.mod-root
-			> .nav-folder-children
-			> .nav-folder
-			.nav-folder-title:after,
+		.nav-files-container > div > .nav-folder .nav-folder-title:after,
 		[data-type="bookmarks"] .tree-item .tree-item-inner:after {
 			transition: color 0.4s;
 			color: rgba(
@@ -46,7 +43,7 @@
 	}
 	// Color indents
 	&.anp-simple-rainbow-indentation-toggle {
-		.nav-folder.mod-root .nav-folder > .nav-folder-children,
+		.nav-files-container .nav-folder > .nav-folder-children,
 		[data-type="bookmarks"] .tree-item .tree-item-children {
 			transition: color 0.4s;
 			border-color: rgba(var(--rainbow-folder-color), 0.5);
