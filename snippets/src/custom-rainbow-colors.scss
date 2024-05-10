@@ -624,76 +624,79 @@ settings:
 
 */
 
-
 %rainbow-accent {
-    --rainbow-folder-color: var(--ctp-accent);
+	--rainbow-folder-color: var(--ctp-accent);
 }
 %rainbow-flamingo {
-    --rainbow-folder-color: var(--ctp-flamingo);
+	--rainbow-folder-color: var(--ctp-flamingo);
 }
 %rainbow-rosewater {
-    --rainbow-folder-color: var(--ctp-rosewater);
+	--rainbow-folder-color: var(--ctp-rosewater);
 }
 %rainbow-pink {
-    --rainbow-folder-color: var(--ctp-pink);
+	--rainbow-folder-color: var(--ctp-pink);
 }
 %rainbow-mauve {
-    --rainbow-folder-color: var(--ctp-mauve);
+	--rainbow-folder-color: var(--ctp-mauve);
 }
 %rainbow-red {
-    --rainbow-folder-color: var(--ctp-red);
+	--rainbow-folder-color: var(--ctp-red);
 }
 %rainbow-maroon {
-    --rainbow-folder-color: var(--ctp-maroon);
+	--rainbow-folder-color: var(--ctp-maroon);
 }
 %rainbow-peach {
-    --rainbow-folder-color: var(--ctp-peach);
+	--rainbow-folder-color: var(--ctp-peach);
 }
 %rainbow-yellow {
-    --rainbow-folder-color: var(--ctp-yellow);
+	--rainbow-folder-color: var(--ctp-yellow);
 }
 %rainbow-green {
-    --rainbow-folder-color: var(--ctp-green);
+	--rainbow-folder-color: var(--ctp-green);
 }
 %rainbow-teal {
-    --rainbow-folder-color: var(--ctp-teal);
+	--rainbow-folder-color: var(--ctp-teal);
 }
 %rainbow-sky {
-    --rainbow-folder-color: var(--ctp-sky);
+	--rainbow-folder-color: var(--ctp-sky);
 }
 %rainbow-sapphire {
-    --rainbow-folder-color: var(--ctp-sapphire);
+	--rainbow-folder-color: var(--ctp-sapphire);
 }
 %rainbow-blue {
-    --rainbow-folder-color: var(--ctp-blue);
+	--rainbow-folder-color: var(--ctp-blue);
 }
 %rainbow-lavender {
-    --rainbow-folder-color: var(--ctp-lavender);
+	--rainbow-folder-color: var(--ctp-lavender);
 }
 
 //---------------------------------------------------
 // This is where the magic happens
 //---------------------------------------------------
-// Accent list 
-$accents: rosewater, flamingo, pink, mauve, red, maroon, peach, yellow, green, teal, sky, sapphire, blue, lavender, accent;
+// Accent list
+$accents: rosewater, flamingo, pink, mauve, red, maroon, peach, yellow, green,
+	teal, sky, sapphire, blue, lavender, accent;
 // Function rainbow-colors(x) gives --rainbow-folder-color as --ctp-color */
 @mixin rainbow-colors($arg) {
-    @extend %rainbow-#{"" + $arg};
+	@extend %rainbow-#{"" + $arg};
 }
 // variable a is the repeat count, it varies from 1 to 11
 // variable i is the color position count, it varies from 1 to a
 // the function runs 3 loops: once for repetition counts, once for position, and once for the different colors available
 @for $a from 1 through 11 {
-    body.rainbow-repeat-#{$a} {
-        @for $i from 1 through $a {
-            @each $accent in $accents {
-                &.rainbow-color-#{$i}-#{"" + $accent} {
-                    .nav-folder-children > .nav-folder,
-                    [data-type="bookmarks"] .tree-item.tree-item {
-                        &:nth-child(#{$a}n + #{$i + 1}) { @include rainbow-colors($accent)};
-                    }
-                }
-            }
-        }
-    }
+	body.rainbow-repeat-#{$a} {
+		@for $i from 1 through $a {
+			@each $accent in $accents {
+				&.rainbow-color-#{$i}-#{"" + $accent} {
+					.nav-folder-children > .nav-folder,
+					.nav-files-container > div > .nav-folder,
+					[data-type="bookmarks"] .tree-item.tree-item {
+						&:nth-child(#{$a}n + #{$i + 1}) {
+							@include rainbow-colors($accent);
+						}
+					}
+				}
+			}
+		}
+	}
 }
