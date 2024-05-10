@@ -7757,6 +7757,10 @@ None of the original code was used and the feature was implemented from scratch.
   --button-hover-bg: rgba(var(--ctp-surface2), 0.6) !important;
 }
 
+.excalidraw .HintViewer {
+  display: none;
+}
+
 .obsidian-icon-folder-icon {
   margin-top: -5px;
 }
