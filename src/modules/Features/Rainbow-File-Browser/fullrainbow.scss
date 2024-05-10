@@ -8,6 +8,10 @@
 	.nav-files-container .collapse-icon svg.svg-icon,
 	.tree-item-self .tree-item-icon {
 		color: var(--anp-full-rainbow-text-inverted, var(--background-primary));
+		--icon-color: var(
+			--anp-full-rainbow-text-inverted,
+			var(--background-primary)
+		);
 	}
 	// Apply styling to files in root level
 	&.anp-rainbow-file-toggle {
