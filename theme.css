@@ -4145,6 +4145,10 @@ body.anp-card-layout div.workspace-split.mod-horizontal.mod-sidedock.mod-left-sp
     padding-right: 0px;
 }
 
+body.anp-card-layout div.workspace-split.mod-horizontal.mod-sidedock.mod-right-split .workspace-tab-container {
+    padding-left: 0px;
+}
+
 body.anp-card-layout .mod-vertical .workspace-tabs .workspace-tab-header-container {
   padding-left: var(--anp-card-header-left-padding, 20px);
 }
