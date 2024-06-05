@@ -4126,10 +4126,21 @@ body.anp-card-layout .workspace-tab-header-container,
 body.anp-card-layout .workspace-ribbon.mod-left:before {
   border-bottom: none;
 }
-body.anp-card-layout .mod-vertical .workspace-tabs {
-  padding-left: var(--anp-card-layout-padding, 10px);
-  padding-right: var(--anp-card-layout-padding, 10px);
+
+body.anp-card-layout .mod-vertical {
+    gap: var(--anp-card-layout-padding, 10px);
 }
+
+body.anp-card-layout .mod-vertical {
+    padding-left: var(--anp-card-layout-padding, 10px);
+    padding-right: var(--anp-card-layout-padding, 10px);
+}
+
+body.anp-card-layout .mod-vertical .mod-vertical {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 body.anp-card-layout .mod-vertical .workspace-tabs .workspace-tab-header-container {
   padding-left: var(--anp-card-header-left-padding, 20px);
 }
