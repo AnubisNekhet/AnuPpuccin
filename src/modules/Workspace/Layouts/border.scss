@@ -84,7 +84,6 @@ body.anp-border-layout {
                 }
                 &:last-child {
                     .workspace-tab-container {
-                        border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
                         border-bottom: var(--border-border-style);
                     }
                 }
@@ -95,6 +94,13 @@ body.anp-border-layout {
                         border-left: var(--border-border-style);
                     }
                 }
+            }
+            .workspace-sidedock-vault-profile {
+                border-top: none;
+                background-color: var(--card-foreground-color);
+                border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+                border-left: var(--border-border-style);
+                border-bottom: var(--border-border-style);
             }
         }
         .workspace-split.mod-right-split {
