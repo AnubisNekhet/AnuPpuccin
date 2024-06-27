@@ -4112,12 +4112,10 @@ body.anp-card-layout .side-dock-actions {
   padding: var(--size-4-2) var(--size-4-1) var(--size-4-3);
 }
 body.anp-card-layout .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
-  border: var(--tab-outline-width) solid var(--tab-outline-color);
-  border-bottom: none;
+  border: none;
   margin: var(--anp-card-layout-padding, 10px);
   margin-bottom: 0;
-  border-radius: var(--anp-card-radius, var(--radius-xl)) var(--anp-card-radius, var(--radius-xl)) 0 0;
-  background-color: var(--card-foreground-color);
+  background-color: transparent;
 }
 body.anp-card-layout .workspace-ribbon.mod-left {
   margin-top: calc(var(--header-height) - 1px);
@@ -4126,29 +4124,10 @@ body.anp-card-layout .workspace-tab-header-container,
 body.anp-card-layout .workspace-ribbon.mod-left:before {
   border-bottom: none;
 }
-
-body.anp-card-layout .mod-vertical {
-    gap: var(--anp-card-layout-padding, 10px);
+body.anp-card-layout .mod-vertical .workspace-tabs {
+  padding-left: var(--anp-card-layout-padding, 10px);
+  padding-right: var(--anp-card-layout-padding, 10px);
 }
-
-body.anp-card-layout .mod-vertical {
-    padding-left: var(--anp-card-layout-padding, 10px);
-    padding-right: var(--anp-card-layout-padding, 10px);
-}
-
-body.anp-card-layout .mod-vertical .mod-vertical {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-body.anp-card-layout div.workspace-split.mod-horizontal.mod-sidedock.mod-left-split .workspace-tab-container {
-    padding-right: 0px;
-}
-
-body.anp-card-layout div.workspace-split.mod-horizontal.mod-sidedock.mod-right-split .workspace-tab-container {
-    padding-left: 0px;
-}
-
 body.anp-card-layout .mod-vertical .workspace-tabs .workspace-tab-header-container {
   padding-left: var(--anp-card-header-left-padding, 20px);
 }
@@ -4267,13 +4246,19 @@ body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tab
   border-left: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs:last-child .workspace-tab-container {
-  border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
   border-bottom: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-container {
   border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
   border-top: var(--border-border-style);
   border-left: var(--border-border-style);
+}
+body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  border-top: none;
+  background-color: var(--card-foreground-color);
+  border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+  border-left: var(--border-border-style);
+  border-bottom: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-right-split {
   padding-bottom: var(--anp-border-bottom-padding, 20px);
