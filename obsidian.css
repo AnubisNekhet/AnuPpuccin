@@ -1152,6 +1152,11 @@ settings:
     title: Live Preview Editor Font
     type: variable-text
     default: Noto Sans
+  -
+    id: anp-editor-font-rv
+    title: Reading View Editor Font
+    type: variable-text
+    default: Noto Sans
 
 # Typography :: Font Weights
 
@@ -3243,6 +3248,10 @@ body.theme-dark {
 
 .markdown-source-view.is-live-preview {
   --font-text: var(--anp-editor-font-lp, var(--font-text-override)), var(--font-text-theme), var(--font-interface);
+}
+
+.markdown-preview-view {
+  --font-text: var(--anp-editor-font-rv, var(--font-text-override)), var(--font-text-theme), var(--font-interface);
 }
 
 /*-Highlighted gutter number-*/
