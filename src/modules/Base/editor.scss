@@ -38,6 +38,9 @@
 .markdown-source-view.is-live-preview {
   --font-text: var(--anp-editor-font-lp, var(--font-text-override)), var(--font-text-theme), var(--font-interface);
 }
+.markdown-preview-view {
+  --font-text: var(--anp-editor-font-rv, var(--font-text-override)), var(--font-text-theme), var(--font-interface);
+}
 /*-Highlighted gutter number-*/
 .cm-lineNumbers .cm-gutterElement.cm-active {    
   color:  var(--interactive-accent);
