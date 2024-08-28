@@ -4246,24 +4246,32 @@ body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.m
 }
 body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top-left-space .workspace-tab-container {
   border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
-}
-body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:last-child .workspace-tab-container {
   border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
 }
 body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
   border-left: var(--border-border-style);
+}
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-horizontal .workspace-tabs.mod-top-left-space .workspace-tab-container {
+  border-bottom-left-radius: 0;
+}
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-horizontal .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
 }
 body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs .workspace-tab-container {
   border-right: var(--border-border-style);
 }
 body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top-right-space .workspace-tab-container {
   border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
-}
-body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:last-child .workspace-tab-container {
   border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
 }
 body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
   border-right: var(--border-border-style);
+}
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-horizontal .workspace-tabs.mod-top-right-space .workspace-tab-container {
+  border-bottom-right-radius: 0;
+}
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-horizontal .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split {
   background-color: var(--card-background-color);
