@@ -1,36 +1,45 @@
 /*-Button for metadata-*/
 body.anuppuccin-accent-toggle {
+
 	&.anp-button-metadata-toggle,
 	.markdown-rendered.metadata-button {
 		.frontmatter-container .frontmatter-container-header {
 			background-color: rgba(var(--ctp-accent), 0.8);
+
 			&:hover {
 				background-color: rgba(var(--ctp-accent), 0.7);
 			}
+
 			&:active {
 				background-color: rgba(var(--ctp-accent), 0.6);
 			}
 		}
 	}
 }
+
 body:not(.anuppuccin-accent-toggle) {
+
 	&.anp-button-metadata-toggle,
 	.markdown-rendered.metadata-button {
 		.frontmatter-container .frontmatter-container-header {
 			background-color: hsla(var(--color-accent-hsl), 0.8);
+
 			&:hover {
 				background-color: hsla(var(--color-accent-hsl), 0.7);
 			}
+
 			&:active {
 				background-color: hsla(var(--color-accent-hsl), 0.6);
 			}
 		}
 	}
 }
+
 .anp-button-metadata-toggle,
 .markdown-rendered.metadata-button {
 	.frontmatter-container {
 		padding: 0;
+
 		.frontmatter-container-header {
 			width: 32px !important;
 			z-index: 1;
@@ -42,6 +51,7 @@ body:not(.anuppuccin-accent-toggle) {
 			left: calc(100% - 32px);
 			border-radius: 6px;
 		}
+
 		.frontmatter-container-header:after {
 			position: absolute;
 			content: " ";

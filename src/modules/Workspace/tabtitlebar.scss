@@ -9,6 +9,7 @@
     position: relative;
     transition: transform var(--title-bar-duration) var(--title-bar-delay);
   }
+
   .workspace-leaf-content .view-header::before {
     bottom: calc(var(--title-bar-target-translate-y) * -1);
     content: '';
@@ -19,16 +20,20 @@
     width: 100%;
     z-index: 0;
   }
-  .workspace-leaf-content .view-header:is(:hover,:focus-within)::before {
+
+  .workspace-leaf-content .view-header:is(:hover, :focus-within)::before {
     transform: translateY(var(--title-bar-target-translate-y));
   }
-  .workspace-leaf-content .view-header:is(:hover,:focus-within),
-  .workspace-leaf-content .view-header:is(:hover,:focus-within) + .view-content {
+
+  .workspace-leaf-content .view-header:is(:hover, :focus-within),
+  .workspace-leaf-content .view-header:is(:hover, :focus-within)+.view-content {
     transform: translateY(var(--title-bar-translate-y));
   }
+
   .workspace-leaf-content .view-content {
     transition: transform var(--title-bar-duration) var(--title-bar-delay);
   }
+
   .workspace-leaf-content .view-header-title {
     --file-header-font-size: var(--font-ui-medium);
   }
@@ -42,12 +47,13 @@
    * 
    * @see: https://drafts.csswg.org/css-display/#visibility
    */
-  .workspace-leaf-content .view-header > div {
+  .workspace-leaf-content .view-header>div {
     transition: visibility var(--title-bar-duration) var(--title-bar-delay);
     visibility: visible;
     z-index: 1;
   }
-  .workspace-leaf-content .view-header:not(:hover,:focus-within) > div {
+
+  .workspace-leaf-content .view-header:not(:hover, :focus-within)>div {
     visibility: hidden;
   }
 }

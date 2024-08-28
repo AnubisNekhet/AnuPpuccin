@@ -3,7 +3,7 @@
 This feature is inspired by Cecilia May's Primary theme: https://github.com/ceciliamay/obsidianmd-theme-primary
 None of the original code was used and the feature was implemented from scratch.
 ----------------------------------*/
-.anp-floating-header .nav-folder.mod-root > .nav-folder-title {
+.anp-floating-header .nav-folder.mod-root>.nav-folder-title {
   background-color: var(--background-secondary);
   position: sticky;
   top: 0;
@@ -13,11 +13,13 @@ None of the original code was used and the feature was implemented from scratch.
   border-radius: var(--radius-s);
   box-shadow: 0 3px 4px 0px rgb(0 0 0 / 5%);
 }
-.anp-floating-header.anp-card-layout .nav-folder.mod-root > .nav-folder-title {
+
+.anp-floating-header.anp-card-layout .nav-folder.mod-root>.nav-folder-title {
   background-color: var(--card-foreground-color, var(--background-primary));
 }
+
 .anp-floating-header.anp-custom-vault-toggle {
-  .nav-folder.mod-root > .nav-folder-title {
+  .nav-folder.mod-root>.nav-folder-title {
     padding-top: 10px;
   }
 }

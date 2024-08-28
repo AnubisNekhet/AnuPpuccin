@@ -14,37 +14,45 @@
   --italic-color: var(--text-normal);
   --bold-color: var(--text-normal);
 }
+
 .callout[data-callout=capacities-index] {
   --highlight-mix-blend-mode: none;
   margin-left: 10px;
 }
+
 .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek {
-  &, &.anp-callout-normal-toggle {
-   div.callout:not([data-callout-metadata*=revert]) {
+
+  &,
+  &.anp-callout-normal-toggle {
+    div.callout:not([data-callout-metadata*=revert]) {
       &[data-callout=capacities-card] {
-        > .callout-content {
+        >.callout-content {
           padding: 0;
           background-color: var(--background-primary);
-        overflow-y: hidden;
+          overflow-y: hidden;
         }
+
         background-color: var(--background-primary);
         border-radius: 6px;
         mix-blend-mode: normal;
         overflow-y: hidden;
       }
+
       &[data-callout=capacities-card-prop] {
-          border-radius: 0;
-          top: -1px;
-          padding-top: 1px;
-          right: 11px;
-          padding-right: 1px;
-          height: calc(100% + 6px);
-          > .callout-content {
-            padding: 0;
-          }
+        border-radius: 0;
+        top: -1px;
+        padding-top: 1px;
+        right: 11px;
+        padding-right: 1px;
+        height: calc(100% + 6px);
+
+        >.callout-content {
+          padding: 0;
         }
+      }
+
       &[data-callout=capacities-prop] {
-        > .callout-content {
+        >.callout-content {
           margin: 0 10px 7px 10px;
           background-color: var(--background-primary);
           border-color: var(--background-modifier-border);
@@ -52,49 +60,63 @@
           border-top-style: solid;
           border-radius: 6px;
         }
-        > .callout-title {
+
+        >.callout-title {
           text-transform: uppercase;
-          > .callout-title-inner {
+
+          >.callout-title-inner {
             color: rgba(var(--ctp-text), 0.7);
             font-size: 80%;
           }
+
           background-color: transparent;
         }
+
         border: none;
         padding: 0;
       }
+
       &[data-callout=capacities-index] {
-        > .callout-content {
+        >.callout-content {
           padding: 0;
         }
+
         border-radius: 0;
+
         p:first-child {
           margin-bottom: 0;
         }
+
         margin: -1px;
       }
+
       &[data-callout=capacities-sidebar] {
-        > .callout-content {
+        >.callout-content {
           padding-right: 0;
           padding-left: 0;
           background-color: var(--background-secondary);
         }
+
         background-color: var(--background-secondary);
       }
+
       &[data-callout=capacities-prop-image] {
-        > .callout-content {
+        >.callout-content {
           padding: 0;
         }
       }
+
       &[data-callout=capacities-body] {
-        > .callout-content {
+        >.callout-content {
           padding: var(--callout-padding);
           background-color: var(--background-primary);
         }
+
         border-width: 0 1px 0 0;
         background-color: var(--background-primary);
         mix-blend-mode: normal;
       }
+
       &[data-callout=capacities-index],
       &[data-callout=capacities-card-prop],
       &[data-callout=capacities-prop-image],
@@ -102,16 +124,21 @@
       &[data-callout=capacities-body],
       &[data-callout=capacities-card] {
         border-color: var(--background-modifier-border);
-        > .callout-content {
+
+        >.callout-content {
           border-top: none;
         }
       }
     }
   }
 }
+
 .anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-vanilla {
-  &, &.anp-callout-normal-toggle {
+
+  &,
+  &.anp-callout-normal-toggle {
     div.callout:not([data-callout-metadata*=revert]) {
+
       &[data-callout=capacities-index],
       &[data-callout=capacities-card-prop],
       &[data-callout=capacities-sidebar] {
@@ -120,6 +147,7 @@
           padding: 0;
         }
       }
+
       &[data-callout=capacities-prop] {
         .callout-title {
           border-left: none;
@@ -129,11 +157,14 @@
     }
   }
 }
+
 .anp-card-layout.anp-callout-toggle.anp-callout-toggle.anp-callout-toggle.anp-callout-sleek {
   --capacities-sidebar-bottom: calc(var(--anp-card-layout-padding, 10px) + 80px);
 }
+
 .markdown-reading-view .markdown-preview-view.capacities-card {
   overflow-y: hidden;
+
   &::after {
     display: none;
   }

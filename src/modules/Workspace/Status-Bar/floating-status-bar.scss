@@ -8,12 +8,14 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   --status-bar-position: absolute;
   --status-bar-radius: var(--radius-m);
   --status-bar-border-width: 1px;
+
   .status-bar {
     transform: translateX(calc(100% + 5px));
     transition: transform 300ms 150ms;
     bottom: 5px;
     right: 5px;
     box-shadow: 0 3px 4px 0px rgb(0 0 0 / 5%);
+
     &::before {
       width: 100%;
       min-height: 100%;
@@ -23,6 +25,7 @@ Support me: https://buymeacoffee.com/AnubisNekhet
       bottom: 0;
       transform: translateX(-100%);
     }
+
     &:hover {
       transform: none;
       transition: transform 300ms 150ms;

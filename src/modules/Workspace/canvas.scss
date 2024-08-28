@@ -2,41 +2,53 @@
   box-shadow: none;
   border: 1px solid var(--background-modifier-border);
   background-color: var(--background-secondary);
+
   .canvas-card-menu-button svg {
     fill: var(--background-secondary);
   }
+
   .canvas-card-menu-button {
     &:hover {
       color: var(--text-normal);
     }
   }
 }
+
 .canvas-controls button {
   background-color: var(--background-secondary);
+
   &:hover {
     filter: brightness(95%);
   }
 }
+
 .anp-canvas-dark-bg {
   .canvas-wrapper {
     background-color: var(--background-secondary);
   }
-  .canvas-controls button, .canvas-card-menu {
+
+  .canvas-controls button,
+  .canvas-card-menu {
     background-color: var(--background-primary);
   }
+
   .canvas-card-menu .canvas-card-menu-button svg {
     fill: var(--background-primary);
   }
 }
+
 .anuppuccin-accent-toggle .canvas-selection {
   background-color: rgba(var(--ctp-accent), 0.1);
   border: 2px solid var(--color-accent);
 }
+
 .canvas-node.is-themed .canvas-node-label {
   color: rgb(var(--canvas-color));
 }
+
 .canvas-node-placeholder {
   color: rgb(var(--canvas-color));
+
   &::after {
     top: 0;
     bottom: 0;
@@ -44,6 +56,7 @@
     left: 0;
   }
 }
+
 .anuppuccin-accent-toggle .canvas-placeholder-message {
   background: rgba(var(--ctp-accent), 0.1)
 }

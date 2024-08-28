@@ -5,22 +5,22 @@ body.theme-dark.theme-dark {
 }
 
 /* Fix bottom padding of kanban board on mobile */
-body.is-mobile .kanban-plugin__board > div {
+body.is-mobile .kanban-plugin__board>div {
   padding-bottom: 5rem;
 }
 
 /* Fix bottom padding of kanban board when status bar is visible */
-body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
+body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board>div {
   padding-bottom: 2.5rem;
 }
 
 /* Kanban background */
-.kanban-plugin__board > div {
+.kanban-plugin__board>div {
   --kanban-dot-color: var(--canvas-dot-pattern);
   --kanban-dot-offset: 7px;
   --kanban-dot-spacing: 20px;
   --kanban-dot-size: 0.7px;
-  background-image: radial-gradient(circle, var(--kanban-dot-color) var(--kanban-dot-size),transparent var(--kanban-dot-size));
+  background-image: radial-gradient(circle, var(--kanban-dot-color) var(--kanban-dot-size), transparent var(--kanban-dot-size));
   background-position: var(--kanban-dot-offset) var(--kanban-dot-offset);
   background-size: var(--kanban-dot-spacing) var(--kanban-dot-spacing);
   flex-grow: 1;
@@ -32,6 +32,7 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
     position: relative;
     display: inline-block;
   }
+
   &__item-metadata-date.is-button:hover::before {
     position: absolute;
     display: inline-flex;
@@ -45,6 +46,7 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
     border-radius: var(--clickable-icon-radius);
   }
 }
+
 .kanban-plugin__date-picker {
   --background-primary-alt: var(--background-modifier-hover);
   --input-shadow: none;
@@ -52,11 +54,14 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
 
   .flatpickr-current-month input,
   .flatpickr-monthDropdown-months {
-    &:hover, &:focus {
+
+    &:hover,
+    &:focus {
       background-color: var(--background-modifier-hover);
       box-shadow: none;
     }
   }
+
   .flatpickr-day:not(.today):hover {
     border-width: 0;
   }
@@ -71,12 +76,13 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
 .kanban-plugin__item .callout {
   margin-top: .66em;
 }
+
 .kanban-plugin__item .callout-fold,
 .kanban-plugin__item .callout-icon {
   display: none;
 }
 
 /* Kanban conditional settings */
-.setting-item[data-id="anp-kanban-hide-card-menus"]:not(:has(.is-enabled)) + [data-id="anp-kanban-hide-archive-btn"] {
+.setting-item[data-id="anp-kanban-hide-card-menus"]:not(:has(.is-enabled))+[data-id="anp-kanban-hide-archive-btn"] {
   display: none;
 }

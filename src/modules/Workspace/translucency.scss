@@ -2,12 +2,15 @@ body.is-translucent {
   background-color: transparent;
   --workspace-background-translucent: rgba(var(--ctp-crust), var(--anp-translucency-opacity));
 }
+
 .is-translucent:not(.is-fullscreen) {
   --nav-collapse-icon-color: rgba(var(--mono-rgb-100), 0.3);
   --nav-collapse-icon-color-collapsed: rgba(var(--mono-rgb-100), 0.3);
   --divider-color: rgba(var(--ctp-surface0), 0.15);
 }
+
 .is-translucent:not(.is-fullscreen) {
+
   .workspace-ribbon.mod-left,
   .workspace-tabs,
   .mod-left-split .workspace-tab-header-container,
@@ -21,22 +24,30 @@ body.is-translucent {
   .horizontal-main-container {
     background-color: transparent;
   }
+
   .view-header-title-container:not(.mod-at-end):after {
     background-image: none;
   }
+
   .workspace-tabs.mod-stacked {
-    .workspace-tab-header, .view-header {
+
+    .workspace-tab-header,
+    .view-header {
       background-color: var(--background-primary);
     }
   }
 }
+
 .is-translucent .workspace {
   background-color: transparent;
 }
+
 .is-translucent .workspace-split.mod-left-split.is-sidedock-collapsed .workspace-tabs,
 .is-translucent .workspace-split.mod-right-split.is-sidedock-collapsed .workspace-tabs {
   visibility: hidden;
 }
-.is-translucent.anp-card-layout, .is-translucent.anp-border-layout {
+
+.is-translucent.anp-card-layout,
+.is-translucent.anp-border-layout {
   --card-background-color: transparent;
 }

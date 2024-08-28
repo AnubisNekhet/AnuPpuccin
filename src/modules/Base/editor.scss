@@ -4,6 +4,7 @@
     background-color: rgba(var(--ctp-surface1), 0.4);
   }
 }
+
 .anp-current-line-border .markdown-source-view {
   .cm-active.cm-line {
     border-left: 2px solid var(--interactive-accent);
@@ -11,6 +12,7 @@
     background-color: rgba(var(--ctp-surface1), 0.4);
   }
 }
+
 .anp-current-line-border-only .markdown-source-view {
   .cm-active.cm-line::before {
     content: '';
@@ -21,10 +23,12 @@
     width: 2px;
     background-color: rgba(var(--interactive-accent-rgb), 0.3);
   }
+
   .cm-focused .cm-active.cm-line::before {
     background-color: var(--interactive-accent);
   }
 }
+
 /*-Custom editor font-*/
 .markdown-source-view:not(.is-live-preview) {
   --font-text: var(--anp-editor-font-source, var(--font-text-override)), var(--font-text-theme), var(--font-interface);
@@ -35,49 +39,63 @@
   --h5-font: var(--font-text, inherit);
   --h6-font: var(--font-text, inherit);
 }
+
 .markdown-source-view.is-live-preview {
   --font-text: var(--anp-editor-font-lp, var(--font-text-override)), var(--font-text-theme), var(--font-interface);
 }
+
 .markdown-preview-view {
   --font-text: var(--anp-editor-font-rv, var(--font-text-override)), var(--font-text-theme), var(--font-interface);
 }
+
 /*-Highlighted gutter number-*/
-.cm-lineNumbers .cm-gutterElement.cm-active {    
-  color:  var(--interactive-accent);
+.cm-lineNumbers .cm-gutterElement.cm-active {
+  color: var(--interactive-accent);
 }
+
 /*-ZWSP Highlight-*/
 .ͼ2 .cm-specialChar {
   color: rgb(var(--ctp-red));
 }
+
 /*-Block edit button-*/
 .markdown-source-view.mod-cm6 .edit-block-button {
   background-color: var(--background-secondary);
   cursor: pointer;
   border: 1px solid var(--background-modifer-border);
+
   &:hover {
     background-color: var(--background-secondary);
-  background-color: var(--background-secondary);
+    background-color: var(--background-secondary);
     opacity: 1;
   }
 }
+
 .markdown-source-view.mod-cm6 .cm-embed-block:hover .edit-block-button:hover {
   background-color: var(--background-secondary);
   border: 1px solid var(--background-modifer-border);
   opacity: 1;
 }
+
 /*-Vim Terminal-*/
 .ͼ2 .cm-panels-bottom {
   border-top: 1px solid rgb(var(--ctp-surface1));
+
   input {
-    &:hover, &:focus, &:focus-visible {
+
+    &:hover,
+    &:focus,
+    &:focus-visible {
       border: none;
       box-shadow: none;
     }
+
     background-color: transparent;
     font-family: var(--font-monospace);
     width: 100%;
   }
 }
+
 .ͼp .cm-vim-panel {
   font-family: var(--font-monospace);
 }

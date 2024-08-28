@@ -6,6 +6,7 @@
   margin-right: 20px;
   padding: 0px
 }
+
 .status-bar-item.plugin-obsidian-discordrpc {
   &:after {
     position: absolute;
@@ -19,6 +20,7 @@
     mask-repeat: no-repea;
     background-color: var(--status-bar-text-color);
   }
+
   &:hover:after {
     filter: brightness(60%);
   }

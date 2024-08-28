@@ -7,14 +7,15 @@
   --h5-color: var(--text-normal) !important;
   --h6-color: var(--text-normal) !important;
 }
+
 .decorations-normal-toggle,
 .decorations-normal-toggle.markdown-rendered {
   --bold-color: var(--text-normal) !important;
   --italic-color: var(--text-normal) !important;
 }
+
 .decorations-normal-toggle.markdown-rendered .table-view-table,
 .decorations-normal-toggle.is-live-preview .table-view-table {
   --bold-color: var(--text-muted) !important;
   --italic-color: var(--text-muted) !important;
 }
-

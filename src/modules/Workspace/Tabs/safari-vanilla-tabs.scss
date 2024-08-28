@@ -13,52 +13,62 @@
     --tab-divider-color: var(--background-modifier-border-hover);
     --tab-width: 200px;
     --tab-max-width: 320px;
+
     /*-------CONFIGS---------*/
     .workspace-tabs {
       .workspace-tab-header-container {
         .workspace-tab-header-container-inner {
           margin: 5px 0 !important;
+
           .workspace-tab-header {
             &:not(.is-active) {
               --icon-color: var(--text-muted);
               --icon-color-hover: var(--text-muted);
             }
+
             .workspace-tab-header-inner {
               .workspace-tab-header-inner-title {
                 margin-top: 3px;
               }
             }
+
             &::before,
             &::after {
               display: none;
             }
+
             border-radius: var(--anp-safari-tab-radius, 5px);
             border: var(--anp-safari-border-width, 1px) solid var(--tab-outline-color);
             background-color: var(--tab-background-inactive);
             color: var(--text-muted);
-            max-width: var(--tab-max-width) ;
+            max-width: var(--tab-max-width);
+
             &.is-active {
               background-color: var(--tab-background-active);
-              max-width: var(--tab-max-width) ;
+              max-width: var(--tab-max-width);
               box-shadow: none;
             }
+
             &:not(.is-active):hover {
               .workspace-tab-header-inner {
                 background-color: transparent;
               }
             }
           }
+
           gap: var(--anp-safari-tab-gap, 10px);
         }
       }
     }
   }
+
   &:not(.anp-disable-newtab-align) {
     .workspace-tab-header-container-inner {
       width: 100%;
     }
   }
 }
+
 .anp-safari-tab-toggle.anp-safari-tab-animated {
   .workspace-split.mod-vertical.mod-root {
     .workspace-tabs {
@@ -67,9 +77,13 @@
           .workspace-tab-header {
             &.is-active {
               flex-grow: 1.67;
-              max-width: var(--tab-max-width-active) ;
+              max-width: var(--tab-max-width-active);
             }
-            transition: max-width 400ms ease-in-out, width 400ms ease-in-out, flex-grow 400ms ease, background-color 150ms;
+
+            transition: max-width 400ms ease-in-out,
+            width 400ms ease-in-out,
+            flex-grow 400ms ease,
+            background-color 150ms;
           }
         }
       }

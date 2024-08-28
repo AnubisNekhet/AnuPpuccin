@@ -1,28 +1,33 @@
 /* Context card view */
 .mk-cards-grid {
   .mk-list-group {
-    > ul {
+    >ul {
       justify-content: center;
-      > .mk-list-item {
+
+      >.mk-list-item {
         box-shadow: none;
         border: 1px solid var(--background-modifier-border);
         border-radius: var(--radius-m);
-        > .mk-file-preview {
+
+        >.mk-file-preview {
           margin-bottom: 0px;
         }
-        > .mk-list-content {
+
+        >.mk-list-content {
           border-top: 1px dashed var(--background-modifier-border);
         }
       }
     }
   }
 }
+
 /* Folder Header */
 .mk-folder-header .inline-title {
   --inline-title-color: var(--text-normal);
   --inline-title-font: var(--font-interface);
   display: block;
 }
+
 .mk-list-container {
   .mk-list-view {
     .mk-list-group {
@@ -34,6 +39,7 @@
     }
   }
 }
+
 /* FIlter Button */
 .mk-filter-bar .mk-filter {
   -webkit-app-region: no-drag;
@@ -53,17 +59,20 @@
   white-space: nowrap;
   background-color: var(--interactive-normal);
   box-shadow: var(--input-shadow);
-  > span, > div {
+
+  >span,
+  >div {
     background-color: transparent;
     border-right: 1px solid var(--background-modifier-border);
+
     &:hover {
       background-color: var(--interactive-hover);
     }
   }
-  > div {
+
+  >div {
     height: 100%;
     width: 100%;
     padding: 0 7px;
   }
 }
-

@@ -1,12 +1,20 @@
 .mod-community-theme .modal-content .community-modal-details .community-modal-info summary {
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     &:first-child {
       margin-block: 0;
       display: inline;
     }
   }
 }
+
 .modal {
+
   &.mod-settings,
   &.mod-community-theme,
   &.kanban-plugin__board-settings-modal,
@@ -26,4 +34,3 @@
     --h6-color: var(--text-normal);
   }
 }
-

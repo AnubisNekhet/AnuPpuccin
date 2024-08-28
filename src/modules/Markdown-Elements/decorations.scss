@@ -4,21 +4,30 @@
   --bold-color: rgb(var(--anp-bold-color, var(--ctp-red)));
   --text-highlight-bg: rgba(var(--anp-highlight-color, var(--ctp-yellow)), 0.2);
 }
+
 // Internal links have no underline
 .markdown-rendered .internal-link {
-  &:hover, &:active, &.is-unresolved:hover, &.is-unresolved {
+
+  &:hover,
+  &:active,
+  &.is-unresolved:hover,
+  &.is-unresolved {
     text-decoration-line: none;
   }
+
   text-decoration-line: none;
 }
+
 .cm-formatting-link-string {
   color: var(--text-normal);
 }
+
 .cm-hmd-internal-link {
   --link-decoration: none;
   --link-decoration-hover: none;
   --link-decoration-active: none;
 }
+
 // External links have underline but no icon
 .external-link,
 .external-link:hover {
@@ -28,13 +37,18 @@
 
 // Editor colors follow the same color as in reading mode
 .cm-s-obsidian span {
-  &.cm-formatting-strong, &.cm-strong {
+
+  &.cm-formatting-strong,
+  &.cm-strong {
     color: var(--bold-color);
   }
-  &.cm-formatting-em, &.cm-em {
+
+  &.cm-formatting-em,
+  &.cm-em {
     color: var(--italic-color);
   }
 }
+
 /*-Footnote-*/
 sup[data-footnote-id] {
   font-size: var(--font-smallest);

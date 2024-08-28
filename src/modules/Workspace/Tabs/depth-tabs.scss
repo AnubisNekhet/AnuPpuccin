@@ -3,36 +3,46 @@
     --tab-text-color-focused-active-current: rgb(var(--anp-depth-tab-text, var(--ctp-text)));
     --tab-text-color-focused: rgb(var(--anp-depth-tab-text, var(--ctp-text)));
   }
+
   .workspace-tab-header:not(.is-active) {
     --tab-text-color: rgb(var(--anp-depth-tab-text));
     --icon-color: rgb(var(--anp-depth-tab-text));
     --icon-color-hover: rgb(var(--anp-depth-tab-text));
     background-color: rgba(var(--ctp-mantle), var(--anp-depth-tab-opacity, 0.6));
-    &::before, &::after {
+
+    &::before,
+    &::after {
       box-shadow: inset 0 0 0 var(--tab-outline-width) transparent, 0 0 0 calc(var(--tab-curve) * 4) rgba(var(--ctp-mantle), var(--anp-depth-tab-opacity, 0.6));
     }
+
     &::after {
       clip-path: inset(50% 50% 0 calc(var(--tab-curve) * 0));
     }
+
     &::before {
-      clip-path: inset(50% calc(var(--tab-curve) *  0) 0 50%);
+      clip-path: inset(50% calc(var(--tab-curve) * 0) 0 50%);
     }
   }
+
   .workspace-tab-header-inner::after {
     display: none;
   }
+
   .workspace-tab-header-container-inner {
     gap: var(--anp-depth-tab-gap, 10px);
   }
+
   .workspace-tab-header:not(.is-active):hover {
     .workspace-tab-header-inner {
       background-color: transparent;
     }
   }
+
   .workspace-tab-header-inner-close-button:hover {
     background-color: var(--background-modifier-hover);
   }
 }
+
 .anp-depth-tab-toggle.anp-depth-tab-text-invert {
   --anp-depth-tab-text: var(--ctp-crust);
 }

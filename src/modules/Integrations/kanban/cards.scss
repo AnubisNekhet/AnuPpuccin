@@ -1,6 +1,7 @@
 .kanban-plugin__item-wrapper:hover {
   z-index: 1;
 }
+
 .kanban-plugin__item {
   --checkbox-size: 16px;
   --input-radius: var(--anp-kanban-card-radius, 6px);
@@ -13,14 +14,17 @@
   &:hover {
     box-shadow: inset 0 0 0 1px var(--background-modifier-border-hover);
   }
+
   &.is-search-hit {
     box-shadow: 0 15px 25px #0003, inset 0 0 0 1px var(--background-modifier-border);
   }
+
   &.is-complete .kanban-plugin__item-markdown {
     color: var(--text-muted);
     text-decoration-line: line-through;
     opacity: .75;
   }
+
   .markdown-preview-view .tag {
     --tag-border-width: 0;
     --tag-padding-y: 0;
@@ -29,53 +33,66 @@
     --tag-color: var(--link-color);
     --tag-size: reset;
   }
+
   code[class*="language-"] {
     font-size: .875em;
     padding: .75em;
     white-space: pre; // don't wrap code!
   }
+
   button.copy-code-button {
     display: none; // because it doesn't work
   }
+
   textarea {
-    background-color: transparent; 
+    background-color: transparent;
   }
 }
+
 .kanban-plugin__item-content-wrapper {
   background-color: transparent;
 }
+
 .kanban-plugin__item-title-wrapper {
   background-color: transparent;
   column-gap: 5px;
   padding: 8px;
 }
+
 .kanban-plugin__item .kanban-plugin__item-metadata {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   width: 100%;
+
   &:not(:empty) {
     padding-top: 8px;
   }
 }
+
 .kanban-plugin__item .kanban-plugin__item-metadata-date-wrapper {
   line-height: var(--line-height-tight);
 }
+
 .kanban-plugin__item .kanban-plugin__item-tags {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
   gap: 4px;
+
   &:not(:empty) {
     padding-top: 0;
   }
 }
+
 .kanban-plugin__item .kanban-plugin__item-tag {
   margin: 0;
 }
 
 .kanban-plugin__drag-container {
-  p, code {
+
+  p,
+  code {
     overflow: hidden;
   }
 }
@@ -84,12 +101,13 @@
   .kanban-plugin__item:not(:hover) {
     box-shadow: none;
   }
+
   .kanban-plugin__item.is-search-hit {
     box-shadow: 0 15px 25px #0003;
   }
 }
 
-.kanban-plugin__drag-container > .kanban-plugin__item-wrapper {
+.kanban-plugin__drag-container>.kanban-plugin__item-wrapper {
   .kanban-plugin__item {
     border-color: var(--background-modifier-border-hover);
     box-shadow: inset 0 0 0 1px var(--background-modifier-border-hover), var(--shadow-s);
