@@ -4251,10 +4251,10 @@ body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.m
 body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
   border-left: var(--border-border-style);
 }
-body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-horizontal .workspace-tabs.mod-top-left-space .workspace-tab-container {
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-horizontal:nth-child(2) .workspace-tabs.mod-top-left-space .workspace-tab-container {
   border-bottom-left-radius: 0;
 }
-body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-horizontal .workspace-tabs:last-child .workspace-tab-container {
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-horizontal:nth-child(2) .workspace-tabs:last-child .workspace-tab-container {
   border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
 }
 body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs .workspace-tab-container {
@@ -4267,10 +4267,10 @@ body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.
 body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
   border-right: var(--border-border-style);
 }
-body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-horizontal .workspace-tabs.mod-top-right-space .workspace-tab-container {
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-horizontal:last-child .workspace-tabs.mod-top-right-space .workspace-tab-container {
   border-bottom-right-radius: 0;
 }
-body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-horizontal .workspace-tabs:last-child .workspace-tab-container {
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-horizontal:last-child .workspace-tabs:last-child .workspace-tab-container {
   border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split {

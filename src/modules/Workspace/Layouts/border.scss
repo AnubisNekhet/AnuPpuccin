@@ -31,7 +31,6 @@ body.anp-border-layout {
           &.mod-top-left-space {
             .workspace-tab-container {
               border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
-              // it seems that mod-bottom-left-space does not exist, this will break if you stack 2 tabs vertically
               border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
             }
           }
@@ -45,16 +44,18 @@ body.anp-border-layout {
       }
 
       .workspace-split.mod-horizontal {
-        .workspace-tabs {
-          &.mod-top-left-space {
-            .workspace-tab-container {
-              border-bottom-left-radius: 0;
+        &:nth-child(2) {
+          .workspace-tabs {
+            &.mod-top-left-space {
+              .workspace-tab-container {
+                border-bottom-left-radius: 0;
+              }
             }
-          }
-
-          &:last-child {
-            .workspace-tab-container {
-              border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+  
+            &:last-child {
+              .workspace-tab-container {
+                border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+              }
             }
           }
         }
@@ -84,16 +85,18 @@ body.anp-border-layout {
       }
 
       .workspace-split.mod-horizontal {
-        .workspace-tabs {
-          &.mod-top-right-space {
-            .workspace-tab-container {
-              border-bottom-right-radius: 0;
+        &:last-child {
+          .workspace-tabs {
+            &.mod-top-right-space {
+              .workspace-tab-container {
+                border-bottom-right-radius: 0;
+              }
             }
-          }
-
-          &:last-child {
-            .workspace-tab-container {
-              border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+  
+            &:last-child {
+              .workspace-tab-container {
+                border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+              }
             }
           }
         }
