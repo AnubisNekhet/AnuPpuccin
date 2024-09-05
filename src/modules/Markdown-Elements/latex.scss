@@ -2,3 +2,7 @@
 .math {
 	color: var(--anp-latex-color, var(--text-normal));
 }
+
+.math-block {
+    font-size: var(--anp-latex-block-font-size, var(--font-size-lg));
+}

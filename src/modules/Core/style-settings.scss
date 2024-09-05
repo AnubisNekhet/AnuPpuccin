@@ -545,15 +545,19 @@ settings:
   -
     id: anp-embed-header
     title: Embeds
-    description: Maximum embed height
+    description: Images, videos, iframes, etc.
     type: heading
     level: 2
     collapsed: true
   -
-    id: embed-max-height
-    title: Maximum embed height in px
-    type: variable-number
-    default: 200
+    id: anp-embed-corner-radius
+    title: Embed Corner Radius
+    type: variable-number-slider
+    default: 4
+    min: 0
+    max: 10
+    step: 1
+    format: px
 
 # File Editor & Markdown Elements :: LaTeX
 
@@ -561,6 +565,7 @@ settings:
     id: anp-latex-header
     title: LaTex
     type: heading
+    description: LaTeX (Math) color, font size
     level: 2
     collapsed: true
   -
@@ -573,6 +578,13 @@ settings:
     opacity: false
     default-light: '#'
     default-dark: '#'
+  -
+    id: anp-latex-block-font-size
+    title: LaTeX Block Font Size
+    description: Change the font size of LaTeX blocks.
+    type: variable-number
+    default: 100
+    format: "%"
 
 # File Editor & Markdown Elements :: Lists
 
@@ -1823,6 +1835,26 @@ settings:
   -
     id: anp-h6-divider
     title: H6 Divider
+    type: class-toggle
+
+# Typography :: Comments
+  
+  -
+    id: anp-comment-header
+    title: Comments
+    description: 
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: hide-comments
+    title: Hide Comments
+    description: Hides the comments while not editing them.
+    type: class-toggle
+  -
+    id: hide-comment-indicators
+    title: Hide Comment Indicators
+    description: Hides the '%%' while not editing comments.
     type: class-toggle
 
 # Typography :: Text Decoration

@@ -1,3 +1,8 @@
+img, iframe {
+  border-radius: var(--anp-embed-corner-radius, 4px);
+}
+
+
 .internal-embed[alt*="seamless"] {
   &.markdown-embed {
     --embed-padding: 0;
@@ -12,7 +17,6 @@
       opacity: 0;
       transition: opacity 0.1s;
     }
-
     >.markdown-embed-link {
       opacity: 0;
       transition: opacity 0.1s;
