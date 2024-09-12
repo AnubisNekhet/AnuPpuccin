@@ -121,10 +121,14 @@ body.anp-border-layout {
     // REWORKING THE WHOLE THING
     &:not(.is-left-sidedock-open) {
       >.workspace-split.mod-vertical {
-        >.workspace-tabs:nth-child(2), >.workspace-split.mod-vertical>.workspace-tabs:nth-child(2), >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-tabs:nth-child(2){
-          // if you think this is retarded, blame obsidian
+        >.workspace-tabs:nth-child(2),
+        // the following 2 selectors don't make sense but they are here because obsidan let's you create a vertical split inside a vertical split in certain conditions
+        // ideally this would be fixed in a future release but for now this is a workaround
+        // please remove the 2 selectors for other elements if you remove this one
+        >.workspace-split.mod-vertical>.workspace-tabs:nth-child(2),
+        >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-tabs:nth-child(2) {
           >.workspace-tab-container {
-            border: 1px solid violet;
+            // border: 1px solid violet;
             border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
             border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
           }
@@ -132,71 +136,32 @@ body.anp-border-layout {
 
         & .workspace-tabs.mod-top-left-space {
           .workspace-tab-container {
-            border: 1px solid greenyellow; 
+            // border: 1px solid greenyellow; 
             border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
           }
         }
         
-        >.workspace-split.mod-horizontal:nth-child(2), >.workspace-split.mod-vertical>.workspace-split.mod-horizontal:nth-child(2), >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-split.mod-horizontal:nth-child(2) {
+        >.workspace-split.mod-horizontal:nth-child(2),
+        >.workspace-split.mod-vertical>.workspace-split.mod-horizontal:nth-child(2),
+        >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-split.mod-horizontal:nth-child(2) {
           > .workspace-tabs:last-child {
             .workspace-tab-container {
-              border: 1px solid orange;
+              // border: 1px solid orange;
               border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
             }
           }
-        }
 
-        >.workspace-split.mod-horizontal:nth-child(2), >.workspace-split.mod-vertical>.workspace-split.mod-horizontal:nth-child(2), >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-split.mod-horizontal:nth-child(2) {
           >.workspace-split.mod-vertical:last-child {
             > .workspace-tabs:nth-child(2) {
               .workspace-tab-container {
+                // border: 1px solid cyan;
                 border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
-                border: 1px solid cyan;
               }
             }
           }
         }
-
-
       }
     }
-
-
-
-
-
-    // &:not(.is-left-sidedock-open) {
-    //   .workspace-split.mod-vertical {
-    //     .workspace-tabs {
-    //       &.mod-top-left-space {
-    //         .workspace-tab-container {
-    //           border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
-    //           // border: 1px solid red;
-    //         }
-    //       }
-    //     }
-    //   }
-
-    //   .workspace-split.mod-horizontal:nth-child(2) { // temporary, just for debugging
-    //     // border: 1px solid lightblue;
-    //     > .workspace-tabs:last-child {
-    //       .workspace-tab-container {
-    //         border: 1px solid orange;
-    //       }
-    //     }
-    //   }
-
-    //   .workspace-split.mod-horizontal:nth-child(2) {
-    //     .workspace-split.mod-vertical:last-child {
-    //       > .workspace-tabs:nth-child(2) {
-    //         .workspace-tab-container {
-    //           border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
-    //           border: 1px solid violet;
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
 
     .workspace-split.mod-left-split {
       background-color: var(--card-background-color);
