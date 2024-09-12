@@ -550,13 +550,10 @@ settings:
     level: 2
     collapsed: true
   -
-    id: anp-embed-corner-radius
+    id: embed-corner-radius
     title: Embed Corner Radius
-    type: variable-number-slider
+    type: variable-number
     default: 4
-    min: 0
-    max: 10
-    step: 1
     format: px
 
 # File Editor & Markdown Elements :: LaTeX

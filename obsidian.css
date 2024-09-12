@@ -564,13 +564,10 @@ settings:
     level: 2
     collapsed: true
   -
-    id: anp-embed-corner-radius
+    id: embed-corner-radius
     title: Embed Corner Radius
-    type: variable-number-slider
+    type: variable-number
     default: 4
-    min: 0
-    max: 10
-    step: 1
     format: px
 
 # File Editor & Markdown Elements :: LaTeX
@@ -4273,37 +4270,19 @@ body.anp-border-layout.anp-fixed-status-bar {
 body.anp-border-layout .workspace {
   margin-right: var(--anp-border-padding, 20px);
 }
-body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs .workspace-tab-container {
-  border-left: var(--border-border-style);
-}
 body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top-left-space .workspace-tab-container {
   border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
+  border: 1px solid red;
+}
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-horizontal:last-child {
+  border: 1px solid lightblue;
+}
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-horizontal:not(:last-child) .workspace-split.mod-vertical:last-child {
+  border: 1px solid blue;
+}
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-horizontal:not(:last-child) .workspace-split.mod-vertical:last-child .workspace-tabs:nth-child(2):not(.mod-top) .workspace-tab-container {
   border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
-}
-body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
-  border-left: var(--border-border-style);
-}
-body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-horizontal:nth-child(2) .workspace-tabs.mod-top-left-space .workspace-tab-container {
-  border-bottom-left-radius: 0;
-}
-body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-horizontal:nth-child(2) .workspace-tabs:last-child .workspace-tab-container {
-  border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
-}
-body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs .workspace-tab-container {
-  border-right: var(--border-border-style);
-}
-body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top-right-space .workspace-tab-container {
-  border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
-  border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
-}
-body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
-  border-right: var(--border-border-style);
-}
-body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-horizontal:last-child .workspace-tabs.mod-top-right-space .workspace-tab-container {
-  border-bottom-right-radius: 0;
-}
-body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-horizontal:last-child .workspace-tabs:last-child .workspace-tab-container {
-  border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+  border: 1px solid violet;
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split {
   background-color: var(--card-background-color);
@@ -4315,6 +4294,7 @@ body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tab
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs .workspace-tab-container {
   border-left: var(--border-border-style);
+  border-bottom: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs .workspace-tab-container .workspace-leaf {
   background-color: var(--card-foreground-color);
@@ -4329,6 +4309,7 @@ body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tab
   border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
   border-top: var(--border-border-style);
   border-left: var(--border-border-style);
+  border-bottom: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
   border-top: none;
@@ -4346,6 +4327,7 @@ body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-ta
 }
 body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs .workspace-tab-container {
   border-right: var(--border-border-style);
+  border-bottom: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs .workspace-tab-container .workspace-leaf {
   background-color: var(--card-foreground-color);
@@ -4361,6 +4343,7 @@ body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-ta
   border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
   border-top: var(--border-border-style);
   border-right: var(--border-border-style);
+  border-bottom: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) {
   background-color: var(--card-background-color);
@@ -4377,6 +4360,7 @@ body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mo
 }
 body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) .workspace-tabs.mod-top .workspace-tab-container {
   border-top: var(--border-border-style);
+  border-bottom: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
   background-color: var(--card-foreground-color);
@@ -4734,7 +4718,7 @@ sup[data-footnote-id] {
 }
 
 img, iframe {
-  border-radius: var(--anp-embed-corner-radius, 4px);
+  border-radius: var(--embed-corner-radius, 4px);
 }
 
 .internal-embed[alt*=seamless].markdown-embed {
