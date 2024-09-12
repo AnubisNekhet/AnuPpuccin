@@ -4270,17 +4270,20 @@ body.anp-border-layout.anp-fixed-status-bar {
 body.anp-border-layout .workspace {
   margin-right: var(--anp-border-padding, 20px);
 }
-body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top-left-space .workspace-tab-container {
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical > .workspace-tabs:nth-child(2) > .workspace-tab-container, body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-tabs:nth-child(2) > .workspace-tab-container, body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-tabs:nth-child(2) > .workspace-tab-container {
+  border: 1px solid violet;
   border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
-  border: 1px solid red;
+  border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
 }
-body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-horizontal:last-child {
-  border: 1px solid lightblue;
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical .workspace-tabs.mod-top-left-space .workspace-tab-container {
+  border: 1px solid greenyellow;
+  border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
 }
-body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-horizontal:nth-child(2) .workspace-split.mod-vertical:last-child {
-  border: 1px solid blue;
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-tabs:last-child .workspace-tab-container {
+  border: 1px solid orange;
+  border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
 }
-body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-horizontal:nth-child(2) .workspace-split.mod-vertical:last-child > .workspace-tabs:nth-child(2) .workspace-tab-container {
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) .workspace-split.mod-vertical:last-child > .workspace-tabs:nth-child(2) .workspace-tab-container {
   border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
   border: 1px solid violet;
 }
