@@ -4279,13 +4279,13 @@ body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split
   border: 1px solid greenyellow;
   border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
 }
-body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-tabs:last-child .workspace-tab-container {
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-tabs:last-child .workspace-tab-container, body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-tabs:last-child .workspace-tab-container, body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-tabs:last-child .workspace-tab-container {
   border: 1px solid orange;
   border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
 }
-body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) .workspace-split.mod-vertical:last-child > .workspace-tabs:nth-child(2) .workspace-tab-container {
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-split.mod-vertical:last-child > .workspace-tabs:nth-child(2) .workspace-tab-container, body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-split.mod-vertical:last-child > .workspace-tabs:nth-child(2) .workspace-tab-container, body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-split.mod-vertical:last-child > .workspace-tabs:nth-child(2) .workspace-tab-container {
   border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
-  border: 1px solid violet;
+  border: 1px solid cyan;
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split {
   background-color: var(--card-background-color);

@@ -137,7 +137,7 @@ body.anp-border-layout {
           }
         }
         
-        >.workspace-split.mod-horizontal:nth-child(2) {
+        >.workspace-split.mod-horizontal:nth-child(2), >.workspace-split.mod-vertical>.workspace-split.mod-horizontal:nth-child(2), >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-split.mod-horizontal:nth-child(2) {
           > .workspace-tabs:last-child {
             .workspace-tab-container {
               border: 1px solid orange;
@@ -146,12 +146,12 @@ body.anp-border-layout {
           }
         }
 
-        >.workspace-split.mod-horizontal:nth-child(2) {
-          .workspace-split.mod-vertical:last-child {
+        >.workspace-split.mod-horizontal:nth-child(2), >.workspace-split.mod-vertical>.workspace-split.mod-horizontal:nth-child(2), >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-split.mod-horizontal:nth-child(2) {
+          >.workspace-split.mod-vertical:last-child {
             > .workspace-tabs:nth-child(2) {
               .workspace-tab-container {
                 border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
-                border: 1px solid violet;
+                border: 1px solid cyan;
               }
             }
           }
