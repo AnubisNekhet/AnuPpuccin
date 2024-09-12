@@ -132,17 +132,14 @@ body.anp-border-layout {
         }
       }
 
-
-      .workspace-split.mod-horizontal:last-child {
+      .workspace-split.mod-horizontal:last-child { // temporary, just for debugging
         border: 1px solid lightblue;
       }
 
-
-
-      .workspace-split.mod-horizontal:not(:last-child) {
+      .workspace-split.mod-horizontal:nth-child(2) {
         .workspace-split.mod-vertical:last-child {
           border: 1px solid blue;
-          .workspace-tabs:nth-child(2):not(.mod-top) {
+          > .workspace-tabs:nth-child(2) {
             .workspace-tab-container {
               border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
               border: 1px solid violet;

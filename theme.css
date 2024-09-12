@@ -4277,10 +4277,10 @@ body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.m
 body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-horizontal:last-child {
   border: 1px solid lightblue;
 }
-body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-horizontal:not(:last-child) .workspace-split.mod-vertical:last-child {
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-horizontal:nth-child(2) .workspace-split.mod-vertical:last-child {
   border: 1px solid blue;
 }
-body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-horizontal:not(:last-child) .workspace-split.mod-vertical:last-child .workspace-tabs:nth-child(2):not(.mod-top) .workspace-tab-container {
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-horizontal:nth-child(2) .workspace-split.mod-vertical:last-child > .workspace-tabs:nth-child(2) .workspace-tab-container {
   border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
   border: 1px solid violet;
 }
