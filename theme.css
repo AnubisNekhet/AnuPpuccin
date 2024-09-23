@@ -3054,7 +3054,8 @@ settings:
   --icon-color-focused: rgb(var(--ctp-accent));
 }
 
-.theme-dark, .theme-light {
+.theme-dark,
+.theme-light {
   --mono-rgb-0: var(--ctp-crust);
   --mono-rgb-100: var(--ctp-text);
   --color-red-rgb: var(--ctp-red);
@@ -3087,21 +3088,19 @@ settings:
   --text-highlight-bg: rgba(var(--ctp-yellow), 0.2);
   --text-highlight-bg-active: rgba(var(--ctp-yellow), 0.4);
   --input-shadow: inset 0 0.5px 0.5px 0.5px rgba(var(255, 255, 255), 0.09),
-  0 2px 4px 0 rgba(var(--ctp-crust),.15),
-  0 1px 1.5px 0 rgba(var(--ctp-crust),.1),
-  0 1px 2px 0 rgba(var(--ctp-crust),.2),
-  0 0 0 0 transparent;
+  	0 2px 4px 0 rgba(var(--ctp-crust), 0.15),
+  	0 1px 1.5px 0 rgba(var(--ctp-crust), 0.1),
+  	0 1px 2px 0 rgba(var(--ctp-crust), 0.2), 0 0 0 0 transparent;
   --input-shadow-hover: inset 0 0.5px 1px 0.5px rgba(var(255, 255, 255), 0.16),
-  0 2px 3px 0 rgba(var(--ctp-crust),.3),
-  0 1px 1.5px 0 rgba(var(--ctp-crust),.2),
-  0 1px 2px 0 rgba(var(--ctp-crust),.4),
-  0 0 0 0 transparent;
+  	0 2px 3px 0 rgba(var(--ctp-crust), 0.3),
+  	0 1px 1.5px 0 rgba(var(--ctp-crust), 0.2),
+  	0 1px 2px 0 rgba(var(--ctp-crust), 0.4), 0 0 0 0 transparent;
   --shadow-s: 0px 1px 2px rgba(var(--ctp-crust), 0.121),
-  0px 3.4px 6.7px rgba(var(--ctp-crust), 0.179),
-  0px 15px 30px rgba(var(--ctp-crust), 0.3);
+  	0px 3.4px 6.7px rgba(var(--ctp-crust), 0.179),
+  	0px 15px 30px rgba(var(--ctp-crust), 0.3);
   --shadow-l: 0px 1.8px 7.3px rgba(var(--ctp-crust), 0.071),
-  0px 6.3px 24.7px rgba(var(--ctp-crust), 0.112),
-  0px 30px 90px rgba(var(--ctp-crust), 0.2);
+  	0px 6.3px 24.7px rgba(var(--ctp-crust), 0.112),
+  	0px 30px 90px rgba(var(--ctp-crust), 0.2);
   --background-primary: rgb(var(--ctp-base));
   --background-primary-alt: rgb(var(--ctp-mantle));
   --background-secondary: rgb(var(--ctp-mantle));
@@ -3115,7 +3114,7 @@ settings:
   --background-modifier-error-rgb: var(--ctp-red);
   --background-modifier-error-hover: rgba(var(--ctp-red), 0.9);
   --background-modifier-message: rgba(var(--ctp-crust), 0.9);
-  --modal-border-color:rgb(var(--ctp-surface0));
+  --modal-border-color: rgb(var(--ctp-surface0));
   --text-normal: rgb(var(--ctp-text));
   --text-muted: rgb(var(--ctp-overlay2));
   --text-muted-rgb: var(--ctp-overlay2);
@@ -3134,7 +3133,7 @@ settings:
   --max-width-image: 90%;
   --drag-ghost-background: rgb(var(--ctp-text));
   --drag-ghost-text-color: rgb(var(--ctp-crust));
-  --nav-indentation-guide-color: rgba(var(--ctp-crust), 0.4);
+  --nav-indentation-guide-color: rgb(var(--ctp-overlay0));
   --titlebar-text-color-focused: var(--color-accent);
   --callout-title-padding: var(--size-4-2);
   --table-border-width: var(--anp-table-thickness, 1px);
@@ -3176,7 +3175,9 @@ body {
   --anp-preview-width-max: 800px;
   --anp-header-margin-value: 15px;
   --anp-header-font: "Noto Serif";
-  --tab-stacked-pane-width: calc(var(--anp-tab-stacked-pane-width, 1)*var(--file-line-width));
+  --tab-stacked-pane-width: calc(
+  	var(--anp-tab-stacked-pane-width, 1) * var(--file-line-width)
+  );
   --anp-table-width-pct: 100%;
   --code-background: var(--anp-code-bg-color, var(--background-secondary-alt));
   --canvas-color: var(--ctp-overlay2);
@@ -7063,10 +7064,7 @@ None of the original code was used and the feature was implemented from scratch.
   box-shadow: none;
 }
 
-.anp-full-rainbow-text-color-toggle-dark.theme-dark {
-  --anp-full-rainbow-text-inverted: rgb(var(--ctp-text));
-}
-
+.anp-full-rainbow-text-color-toggle-dark.theme-dark,
 .anp-full-rainbow-text-color-toggle-light.theme-light {
   --anp-full-rainbow-text-inverted: rgb(var(--ctp-text));
 }

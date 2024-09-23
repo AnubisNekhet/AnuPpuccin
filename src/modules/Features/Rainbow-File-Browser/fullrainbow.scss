@@ -116,9 +116,7 @@
 }
 
 // Invert item text colors
-.anp-full-rainbow-text-color-toggle-dark.theme-dark {
-	--anp-full-rainbow-text-inverted: rgb(var(--ctp-text));
-}
+.anp-full-rainbow-text-color-toggle-dark.theme-dark,
 .anp-full-rainbow-text-color-toggle-light.theme-light {
 	--anp-full-rainbow-text-inverted: rgb(var(--ctp-text));
 }
