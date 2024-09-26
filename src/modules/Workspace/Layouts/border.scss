@@ -22,17 +22,18 @@ body.anp-border-layout {
   .workspace {
     margin-right: var(--anp-border-padding, 20px);
 
+    // LEFT SIDE
     &:not(.is-left-sidedock-open) {
-      >.workspace-split.mod-vertical {
-        >.workspace-tabs:nth-child(2),
+      >.workspace-split.mod-vertical.mod-root {
+        >.workspace-tabs:nth-child(2).workspace-tabs.mod-top-left-space,
         // the following 2 selectors don't make sense but they are here because obsidan let's you create a vertical split inside a vertical split in certain conditions
         // ideally this would be fixed in a future release but for now this is a workaround
         // please remove the 2 selectors for other elements if you remove this one
-        >.workspace-split.mod-vertical>.workspace-tabs:nth-child(2),
-        >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-tabs:nth-child(2) {
+        >.workspace-split.mod-vertical>.workspace-tabs:nth-child(2).mod-top-left-space,
+        >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-tabs:nth-child(2).mod-top-left-space {
           >.workspace-tab-container {
             // border: 1px solid violet;
-            border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
+            // border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
             border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
           }
         }
@@ -59,6 +60,51 @@ body.anp-border-layout {
               .workspace-tab-container {
                 // border: 1px solid cyan;
                 border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // RIGHT SIDE
+    &:not(.is-right-sidedock-open) {
+      >.workspace-split.mod-vertical.mod-root {
+        >.workspace-tabs:last-child.mod-top-right-space,
+        // the following 2 selectors don't make sense but they are here because obsidan let's you create a vertical split inside a vertical split in certain conditions
+        // ideally this would be fixed in a future release but for now this is a workaround
+        // please remove the 2 selectors for other elements if you remove this one
+        >.workspace-split.mod-vertical>.workspace-tabs:last-child.mod-top-right-space,
+        >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-tabs:last-child.mod-top-right-space {
+          >.workspace-tab-container {
+            // border: 1px solid purple;
+            // border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
+            border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+          }
+        }
+
+        & .workspace-tabs.mod-top-right-space {
+          .workspace-tab-container {
+            // border: 1px solid yellow; 
+            border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
+          }
+        }
+        
+        >.workspace-split.mod-horizontal:last-child,
+        >.workspace-split.mod-vertical>.workspace-split.mod-horizontal:last-child,
+        >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-split.mod-horizontal:last-child {
+          > .workspace-tabs:last-child {
+            .workspace-tab-container {
+              // border: 1px solid red;
+              border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+            }
+          }
+
+          >.workspace-split.mod-vertical:last-child {
+            > .workspace-tabs:last-child {
+              .workspace-tab-container {
+                // border: 1px solid blue;
+                border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
               }
             }
           }
