@@ -4134,16 +4134,18 @@ body.anp-card-layout .workspace-tab-header-container,
 body.anp-card-layout .workspace-ribbon.mod-left:before {
   border-bottom: none;
 }
-body.anp-card-layout .mod-vertical .workspace-tabs {
-  padding-left: var(--anp-card-layout-padding, 10px);
-  padding-right: var(--anp-card-layout-padding, 10px);
-}
 body.anp-card-layout .mod-vertical .workspace-tabs .workspace-tab-header-container {
   padding-left: var(--anp-card-header-left-padding, 20px);
 }
 body.anp-card-layout .mod-vertical .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner {
   margin: 6px -5px calc(var(--tab-outline-width) * -1);
   z-index: 1;
+}
+@media screen and (min-width: 600px) {
+  body.anp-card-layout .mod-vertical .workspace-tabs {
+    padding-left: var(--anp-card-layout-padding, 10px);
+    padding-right: var(--anp-card-layout-padding, 10px);
+  }
 }
 body.anp-card-layout .mod-left-split .workspace-tab-container,
 body.anp-card-layout .mod-right-split .workspace-tab-container {
@@ -4152,10 +4154,14 @@ body.anp-card-layout .mod-right-split .workspace-tab-container {
   background-color: var(--tab-container-background);
 }
 body.anp-card-layout .workspace-split .workspace-leaf-content:not([data-type=file-explorer]), body.anp-card-layout.anp-card-layout-filebrowser .workspace-leaf-content[data-type=file-explorer] {
-  border-radius: var(--anp-card-radius, var(--radius-xl));
   background-color: var(--card-foreground-color);
   border: 1px solid var(--tab-outline-color);
-  margin-bottom: var(--anp-card-layout-padding, 10px);
+}
+@media screen and (min-width: 600px) {
+  body.anp-card-layout .workspace-split .workspace-leaf-content:not([data-type=file-explorer]), body.anp-card-layout.anp-card-layout-filebrowser .workspace-leaf-content[data-type=file-explorer] {
+    border-radius: var(--anp-card-radius, var(--radius-xl));
+    margin-bottom: var(--anp-card-layout-padding, 10px);
+  }
 }
 body.anp-card-layout.anp-card-shadows .workspace-split .workspace-leaf-content, body.anp-card-layout.anp-card-shadows.anp-card-layout-actions .side-dock-actions, body.anp-card-layout.anp-card-shadows.anp-card-layout-filebrowser .workspace-split .workspace-leaf-content[data-type=file-explorer] {
   box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.05);
@@ -4211,17 +4217,8 @@ body.anp-border-layout .horizontal-main-container {
 body.anp-border-layout.anp-fixed-status-bar {
   --anp-border-bottom-padding: calc(var(--anp-border-padding, 20px) - 18px);
 }
-body.anp-border-layout .workspace {
-  margin-right: var(--anp-border-padding, 20px);
-}
 body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs .workspace-tab-container {
   border-left: var(--border-border-style);
-}
-body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top-left-space .workspace-tab-container {
-  border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
-}
-body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:last-child .workspace-tab-container {
-  border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
 }
 body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
   border-left: var(--border-border-style);
@@ -4229,19 +4226,12 @@ body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.m
 body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs .workspace-tab-container {
   border-right: var(--border-border-style);
 }
-body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top-right-space .workspace-tab-container {
-  border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
-}
-body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:last-child .workspace-tab-container {
-  border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
-}
 body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
   border-right: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split {
   background-color: var(--card-background-color);
   padding-left: calc(var(--anp-border-padding, 20px) - 20px);
-  padding-bottom: var(--anp-border-bottom-padding, 20px);
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs {
   background-color: var(--card-background-color);
@@ -4259,19 +4249,16 @@ body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tab
   border-bottom: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-container {
-  border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
   border-top: var(--border-border-style);
   border-left: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
   border-top: none;
   background-color: var(--card-foreground-color);
-  border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
   border-left: var(--border-border-style);
   border-bottom: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-right-split {
-  padding-bottom: var(--anp-border-bottom-padding, 20px);
   background-color: var(--card-background-color);
 }
 body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs {
@@ -4287,17 +4274,14 @@ body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-ta
   border-right: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs:last-child .workspace-tab-container {
-  border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
   border-bottom: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-container {
-  border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
   border-top: var(--border-border-style);
   border-right: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) {
   background-color: var(--card-background-color);
-  padding-bottom: var(--anp-border-bottom-padding, 20px);
 }
 body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) > .workspace-split {
   padding-bottom: 0;
@@ -4316,6 +4300,44 @@ body.anp-border-layout .workspace .workspace-tabs:not(.mod-top) .workspace-tab-h
 }
 body.anp-border-layout .workspace .workspace-tabs.mod-top .workspace-tab-header-container {
   border-bottom: none;
+}
+@media screen and (min-width: 600px) {
+  body.anp-border-layout .workspace {
+    margin-right: var(--anp-border-padding, 20px);
+  }
+  body.anp-border-layout .workspace .workspace-split.mod-left-split {
+    padding-bottom: var(--anp-border-bottom-padding, 20px);
+  }
+  body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-container {
+    border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
+  }
+  body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+    border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+  }
+  body.anp-border-layout .workspace .workspace-split.mod-right-split {
+    padding-bottom: var(--anp-border-bottom-padding, 20px);
+  }
+  body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs:last-child .workspace-tab-container {
+    border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+  }
+  body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-container {
+    border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
+  }
+  body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) {
+    padding-bottom: var(--anp-border-bottom-padding, 20px);
+  }
+  body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top-left-space .workspace-tab-container {
+    border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
+  }
+  body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:last-child .workspace-tab-container {
+    border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+  }
+  body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top-right-space .workspace-tab-container {
+    border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
+  }
+  body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:last-child .workspace-tab-container {
+    border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+  }
 }
 body.anp-border-layout .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
 body.anp-border-layout .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
