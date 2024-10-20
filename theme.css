@@ -1415,6 +1415,10 @@ settings:
         label: Lavender
         value: anp-h1-lavender
   -
+    id: anp-inline-color-match-h1
+    title: Apply H1 Color to Inline Title
+    type: class-toggle
+  -
     id: anp-h1-divider
     title: H1 Divider
     type: class-toggle
@@ -5255,6 +5259,10 @@ sup[data-footnote-id] {
   --h4-font: var(--anp-editor-font);
   --h5-font: var(--anp-editor-font);
   --h6-font: var(--anp-editor-font);
+}
+
+.anp-inline-color-match-h1 .inline-title {
+  color: var(--h1-color);
 }
 
 /*-Custom hr margins-*/
