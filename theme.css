@@ -4141,12 +4141,6 @@ body.anp-card-layout .mod-vertical .workspace-tabs .workspace-tab-header-contain
   margin: 6px -5px calc(var(--tab-outline-width) * -1);
   z-index: 1;
 }
-@media screen and (min-width: 600px) {
-  body.anp-card-layout .mod-vertical .workspace-tabs {
-    padding-left: var(--anp-card-layout-padding, 10px);
-    padding-right: var(--anp-card-layout-padding, 10px);
-  }
-}
 body.anp-card-layout .mod-left-split .workspace-tab-container,
 body.anp-card-layout .mod-right-split .workspace-tab-container {
   padding-left: var(--anp-card-layout-padding, 10px);
@@ -4156,12 +4150,6 @@ body.anp-card-layout .mod-right-split .workspace-tab-container {
 body.anp-card-layout .workspace-split .workspace-leaf-content:not([data-type=file-explorer]), body.anp-card-layout.anp-card-layout-filebrowser .workspace-leaf-content[data-type=file-explorer] {
   background-color: var(--card-foreground-color);
   border: 1px solid var(--tab-outline-color);
-}
-@media screen and (min-width: 600px) {
-  body.anp-card-layout .workspace-split .workspace-leaf-content:not([data-type=file-explorer]), body.anp-card-layout.anp-card-layout-filebrowser .workspace-leaf-content[data-type=file-explorer] {
-    border-radius: var(--anp-card-radius, var(--radius-xl));
-    margin-bottom: var(--anp-card-layout-padding, 10px);
-  }
 }
 body.anp-card-layout.anp-card-shadows .workspace-split .workspace-leaf-content, body.anp-card-layout.anp-card-shadows.anp-card-layout-actions .side-dock-actions, body.anp-card-layout.anp-card-shadows.anp-card-layout-filebrowser .workspace-split .workspace-leaf-content[data-type=file-explorer] {
   box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.05);
@@ -4197,6 +4185,15 @@ body.anp-card-layout .workspace-drop-overlay:before {
   width: calc(100% - 6px - var(--anp-card-layout-padding, 0) * 2);
   height: calc(100% - 6px - var(--anp-card-layout-padding, 0) * 2);
   margin: auto;
+}
+
+body.anp-card-layout:not(.is-phone) .mod-vertical .workspace-tabs {
+  padding-left: var(--anp-card-layout-padding, 10px);
+  padding-right: var(--anp-card-layout-padding, 10px);
+}
+body.anp-card-layout:not(.is-phone) .workspace-split .workspace-leaf-content:not([data-type=file-explorer]), body.anp-card-layout:not(.is-phone).anp-card-layout-filebrowser .workspace-leaf-content[data-type=file-explorer] {
+  border-radius: var(--anp-card-radius, var(--radius-xl));
+  margin-bottom: var(--anp-card-layout-padding, 10px);
 }
 
 /*--------------------------
@@ -4301,44 +4298,6 @@ body.anp-border-layout .workspace .workspace-tabs:not(.mod-top) .workspace-tab-h
 body.anp-border-layout .workspace .workspace-tabs.mod-top .workspace-tab-header-container {
   border-bottom: none;
 }
-@media screen and (min-width: 600px) {
-  body.anp-border-layout .workspace {
-    margin-right: var(--anp-border-padding, 20px);
-  }
-  body.anp-border-layout .workspace .workspace-split.mod-left-split {
-    padding-bottom: var(--anp-border-bottom-padding, 20px);
-  }
-  body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-container {
-    border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
-  }
-  body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
-    border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
-  }
-  body.anp-border-layout .workspace .workspace-split.mod-right-split {
-    padding-bottom: var(--anp-border-bottom-padding, 20px);
-  }
-  body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs:last-child .workspace-tab-container {
-    border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
-  }
-  body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-container {
-    border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
-  }
-  body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) {
-    padding-bottom: var(--anp-border-bottom-padding, 20px);
-  }
-  body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top-left-space .workspace-tab-container {
-    border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
-  }
-  body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:last-child .workspace-tab-container {
-    border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
-  }
-  body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top-right-space .workspace-tab-container {
-    border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
-  }
-  body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:last-child .workspace-tab-container {
-    border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
-  }
-}
 body.anp-border-layout .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
 body.anp-border-layout .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   height: calc(100% + -1 * var(--header-height) + -1 * var(--anp-border-bottom-padding, 20px));
@@ -4355,6 +4314,43 @@ body.anp-border-layout .workspace-ribbon.mod-left, body.anp-border-layout .works
 }
 body.anp-border-layout.is-popout-window .workspace {
   margin-left: var(--anp-border-padding, 20px);
+}
+
+body.anp-border-layout:not(.is-mobile) .workspace {
+  margin-right: var(--anp-border-padding, 20px);
+}
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-left-split {
+  padding-bottom: var(--anp-border-bottom-padding, 20px);
+}
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-container {
+  border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-right-split {
+  padding-bottom: var(--anp-border-bottom-padding, 20px);
+}
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-right-split .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-container {
+  border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) {
+  padding-bottom: var(--anp-border-bottom-padding, 20px);
+}
+body.anp-border-layout:not(.is-mobile) .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top-left-space .workspace-tab-container {
+  border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout:not(.is-mobile) .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout:not(.is-mobile) .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top-right-space .workspace-tab-container {
+  border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout:not(.is-mobile) .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
 }
 
 .anp-bg-fix .workspace,
