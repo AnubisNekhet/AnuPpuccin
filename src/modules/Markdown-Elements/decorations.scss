@@ -20,10 +20,12 @@
   --link-decoration-active: none;
 }
 // External links have underline but no icon
-.external-link,
-.external-link:hover {
-  background-image: none;
-  padding-right: 0px;
+.anp-hide-external-link-icon {
+  .external-link,
+  .external-link:hover {
+    background-image: none;
+    padding-right: 0px;
+  }
 }
 
 // Editor colors follow the same color as in reading mode
