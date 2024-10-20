@@ -3,6 +3,22 @@ name: AnuPpuccin
 id: anuppuccin-theme-settings
 settings:
 
+# WIP
+
+  -
+    id: anp-zen-mode-header
+    title: Zen Mode
+    description:
+    type: heading
+    level: 3
+    collapsed: false
+  -
+    id: anp-zen-mode
+    title: Enable Zen Mode
+    description: Hides top bar
+    type: class-toggle
+
+
 # Colors
 
   -
