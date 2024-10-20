@@ -86,8 +86,6 @@ body.anp-card-layout {
 	}
 	.mod-vertical {
 		.workspace-tabs {
-			padding-left: var(--anp-card-layout-padding, 10px);
-			padding-right: var(--anp-card-layout-padding, 10px);
 			.workspace-tab-header-container {
 				padding-left: var(--anp-card-header-left-padding, 20px);
 				.workspace-tab-header-container-inner {
@@ -97,6 +95,7 @@ body.anp-card-layout {
 			}
 		}
 	}
+
 	.mod-left-split,
 	.mod-right-split {
 		.workspace-tab-container {
@@ -105,14 +104,14 @@ body.anp-card-layout {
 			background-color: var(--tab-container-background);
 		}
 	}
-	.workspace-split .workspace-leaf-content:not([data-type="file-explorer"]),
-	&.anp-card-layout-filebrowser
-		.workspace-leaf-content[data-type="file-explorer"] {
-		border-radius: var(--anp-card-radius, var(--radius-xl));
-		background-color: var(--card-foreground-color);
-		border: 1px solid var(--tab-outline-color);
-		margin-bottom: var(--anp-card-layout-padding, 10px);
-	}
+
+    .workspace-split .workspace-leaf-content:not([data-type="file-explorer"]),
+	    &.anp-card-layout-filebrowser
+	    	.workspace-leaf-content[data-type="file-explorer"] {
+	    	background-color: var(--card-foreground-color);
+	    	border: 1px solid var(--tab-outline-color);
+	    }
+
 	&.anp-card-shadows {
 		.workspace-split .workspace-leaf-content,
 		&.anp-card-layout-actions .side-dock-actions,
@@ -157,5 +156,23 @@ body.anp-card-layout {
 		width: calc(100% - 6px - var(--anp-card-layout-padding, 0) * 2);
 		height: calc(100% - 6px - var(--anp-card-layout-padding, 0) * 2);
 		margin: auto;
+	}
+}
+
+// Apply margins & border radius if on PC
+// Only applies to phone (>=600px width)
+body.anp-card-layout:not(.is-phone) {
+    .mod-vertical {
+        .workspace-tabs {
+            padding-left: var(--anp-card-layout-padding, 10px);
+            padding-right: var(--anp-card-layout-padding, 10px);
+        }
+    }
+
+    .workspace-split .workspace-leaf-content:not([data-type="file-explorer"]),
+	    &.anp-card-layout-filebrowser
+	    	.workspace-leaf-content[data-type="file-explorer"] {
+	    	border-radius: var(--anp-card-radius, var(--radius-xl));
+	    	margin-bottom: var(--anp-card-layout-padding, 10px);
 	}
 }

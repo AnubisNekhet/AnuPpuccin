@@ -16,22 +16,11 @@ body.anp-border-layout {
         --anp-border-bottom-padding: calc(var(--anp-border-padding, 20px) - 18px);
     }
     .workspace {
-        margin-right: var(--anp-border-padding, 20px);
         &:not(.is-left-sidedock-open) {
             .workspace-split.mod-vertical {
                 .workspace-tabs {
                     .workspace-tab-container {
                         border-left: var(--border-border-style);
-                    }
-                    &.mod-top-left-space {
-                        .workspace-tab-container {
-                            border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
-                        }
-                    }
-                    &:last-child {
-                        .workspace-tab-container {
-                            border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
-                        }
                     }
                     &:not(.mod-top) {
                         .workspace-tab-header-container {
@@ -47,16 +36,6 @@ body.anp-border-layout {
                     .workspace-tab-container {
                         border-right: var(--border-border-style);
                     }
-                    &.mod-top-right-space {
-                        .workspace-tab-container {
-                            border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
-                        }
-                    }
-                    &:last-child {
-                        .workspace-tab-container {
-                            border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
-                        }
-                    }
                     &:not(.mod-top) {
                         .workspace-tab-header-container {
                             border-right: var(--border-border-style);
@@ -68,7 +47,6 @@ body.anp-border-layout {
         .workspace-split.mod-left-split {
             background-color: var(--card-background-color);
             padding-left: calc(var(--anp-border-padding, 20px) - 20px);
-            padding-bottom: var(--anp-border-bottom-padding, 20px);
             .workspace-tabs {
                 background-color: var(--card-background-color);
                 .workspace-tab-container {
@@ -89,7 +67,6 @@ body.anp-border-layout {
                 }
                 &.mod-top-left-space {
                     .workspace-tab-container {
-                        border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
                         border-top: var(--border-border-style);
                         border-left: var(--border-border-style);
                     }
@@ -98,13 +75,11 @@ body.anp-border-layout {
             .workspace-sidedock-vault-profile {
                 border-top: none;
                 background-color: var(--card-foreground-color);
-                border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
                 border-left: var(--border-border-style);
                 border-bottom: var(--border-border-style);
             }
         }
         .workspace-split.mod-right-split {
-            padding-bottom: var(--anp-border-bottom-padding, 20px);
             background-color: var(--card-background-color);
             .workspace-tabs {
                 background-color: var(--card-background-color);
@@ -121,13 +96,11 @@ body.anp-border-layout {
                 }
                 &:last-child {
                     .workspace-tab-container {
-                        border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
                         border-bottom: var(--border-border-style);
                     }
                 }
                 &.mod-top-right-space {
                     .workspace-tab-container {
-                        border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
                         border-top: var(--border-border-style);
                         border-right: var(--border-border-style);
                     }
@@ -152,7 +125,6 @@ body.anp-border-layout {
                     }
                 }
             }
-            padding-bottom: var(--anp-border-bottom-padding, 20px);
         }
         .workspace-tabs:not(.mod-top) {
             .workspace-tab-header-container {
@@ -165,6 +137,7 @@ body.anp-border-layout {
             }
         }
     }
+
     .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
     .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
         height: calc(100% + -1*var(--header-height) + -1*var(--anp-border-bottom-padding, 20px));
@@ -182,6 +155,87 @@ body.anp-border-layout {
     &.is-popout-window {
         .workspace {
             margin-left: var(--anp-border-padding, 20px);
+        }
+    }
+}
+
+// Apply margins & border radius if on PC
+// Does NOT applies on phone and tablets
+// todo: needs some fixes to enable & look great on tablets
+body.anp-border-layout:not(.is-mobile) {
+    .workspace {
+        margin-right: var(--anp-border-padding, 20px);
+
+        .workspace-split.mod-left-split {
+            padding-bottom: var(--anp-border-bottom-padding, 20px);
+
+            .workspace-tabs {
+                &.mod-top-left-space {
+                    .workspace-tab-container {
+                        border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
+                    }
+                }
+            }
+
+            .workspace-sidedock-vault-profile {
+                border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+            }
+        }
+
+        .workspace-split.mod-right-split {
+            padding-bottom: var(--anp-border-bottom-padding, 20px);
+
+            .workspace-tabs {
+                &:last-child {
+                    .workspace-tab-container {
+                        border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+                    }
+                }
+
+                &.mod-top-right-space {
+                    .workspace-tab-container {
+                        border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
+                    }
+                }
+            }
+        }
+
+        .workspace-split:not(.mod-right-split):not(.mod-left-split) {
+            padding-bottom: var(--anp-border-bottom-padding, 20px);
+        }
+
+        &:not(.is-left-sidedock-open) {
+            .workspace-split.mod-vertical {
+                .workspace-tabs {
+                    &.mod-top-left-space {
+                        .workspace-tab-container {
+                            border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
+                        }
+                    }
+                    &:last-child {
+                        .workspace-tab-container {
+                            border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+                        }
+                    }
+                }
+            }
+        }
+
+        &:not(.is-right-sidedock-open) {
+            .workspace-split.mod-vertical {
+                .workspace-tabs {
+                    &.mod-top-right-space {
+                        .workspace-tab-container {
+                            border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
+                        }
+                    }
+                    &:last-child {
+                        .workspace-tab-container {
+                            border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+                        }
+                    }
+                }
+            }
         }
     }
 }
