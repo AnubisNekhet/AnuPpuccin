@@ -421,6 +421,12 @@ settings:
     default: 4
     format: px
   -
+    id: callout-padding
+    title: Callout Padding
+    description: Be careful, it does not properly work with all the callouts style yet.
+    type: variable-text
+    default: 0px
+  -
     id: callout-title-padding
     title: Callout Title Padding
     type: variable-text
