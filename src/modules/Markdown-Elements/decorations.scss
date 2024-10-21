@@ -1,7 +1,7 @@
 /*-Decorations for bold and italics-*/
 .anp-decoration-toggle {
-  --italic-color: rgb(var(--anp-italic-color, var(--ctp-green)));
-  --bold-color: rgb(var(--anp-bold-color, var(--ctp-red)));
+  --italic-color: rgb(var(--anp-italic-color, var(--text-normal)));
+  --bold-color: rgb(var(--anp-bold-color, var(--text-normal)));
   --text-highlight-bg: rgba(var(--anp-highlight-color, var(--ctp-yellow)), 0.2);
 }
 // Internal links have no underline

@@ -1842,9 +1842,12 @@ settings:
     id: anp-bold-custom
     title: Bold Color
     type: class-select
-    allowEmpty: true
+    allowEmpty: false
     default: anp-bold-red
     options:
+      - 
+        label: None
+        value: anp-bold-none
       - 
         label: Rosewater
         value: anp-bold-rosewater
@@ -1891,9 +1894,12 @@ settings:
     id: anp-italic-custom
     title: Italic Color
     type: class-select
-    allowEmpty: true
+    allowEmpty: false
     default: anp-italic-green
     options:
+      - 
+        label: None
+        value: anp-bold-none
       - 
         label: Rosewater
         value: anp-italic-rosewater
@@ -1940,7 +1946,7 @@ settings:
     id: anp-highlight-custom
     title: Highlight Color
     type: class-select
-    allowEmpty: true
+    allowEmpty: false
     default: anp-highlight-yellow
     options:
       - 
