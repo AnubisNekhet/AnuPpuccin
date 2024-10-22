@@ -1122,6 +1122,11 @@ settings:
     id: anp-tooltip-toggle
     title: Hide Tooltips
     type: class-toggle
+  -
+    id: anp-hide-external-link-icon
+    title: Hide External Link Icon
+    type: class-toggle
+    default: true
 
 # Typography
 
@@ -4658,8 +4663,8 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   --link-decoration-active: none;
 }
 
-.external-link,
-.external-link:hover {
+.anp-hide-external-link-icon .external-link,
+.anp-hide-external-link-icon .external-link:hover {
   background-image: none;
   padding-right: 0px;
 }
