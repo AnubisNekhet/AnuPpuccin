@@ -1,7 +1,7 @@
 /*-Decorations for bold and italics-*/
 .anp-decoration-toggle {
-  --italic-color: rgb(var(--anp-italic-color, var(--ctp-green)));
-  --bold-color: rgb(var(--anp-bold-color, var(--ctp-red)));
+  --italic-color: rgb(var(--anp-italic-color, var(--text-normal)));
+  --bold-color: rgb(var(--anp-bold-color, var(--text-normal)));
   --text-highlight-bg: rgba(var(--anp-highlight-color, var(--ctp-yellow)), 0.2);
 }
 
@@ -29,10 +29,12 @@
 }
 
 // External links have underline but no icon
-.external-link,
-.external-link:hover {
-  background-image: none;
-  padding-right: 0px;
+.anp-hide-external-link-icon {
+  .external-link,
+  .external-link:hover {
+    background-image: none;
+    padding-right: 0px;
+  }
 }
 
 // Editor colors follow the same color as in reading mode

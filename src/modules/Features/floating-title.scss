@@ -11,7 +11,7 @@ None of the original code was used and the feature was implemented from scratch.
   width: 100%;
   border: 1px solid var(--background-modifier-border);
   border-radius: var(--radius-s);
-  box-shadow: 0 3px 4px 0px rgb(0 0 0 / 5%);
+  box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 5%);
 }
 
 .anp-floating-header.anp-card-layout .nav-folder.mod-root>.nav-folder-title {
