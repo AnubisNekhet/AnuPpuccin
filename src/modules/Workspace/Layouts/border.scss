@@ -3,296 +3,301 @@ Inspired by https://github.com/Akifyss/obsidian-border
 ---------------------------*/
 
 body.anp-border-layout {
-  --card-background-color: rgb(var(--ctp-crust));
-  --card-foreground-color: var(--background-primary);
-  --border-border-style: 1px solid var(--tab-outline-color);
-  --anp-border-bottom-padding: var(--anp-border-padding, 20px);
+    --card-background-color: rgb(var(--ctp-crust));
+    --card-foreground-color: var(--background-primary);
+    --border-border-style: 1px solid var(--tab-outline-color);
+    --anp-border-bottom-padding: var(--anp-border-padding, 20px);
 
-  .horizontal-main-container {
-    background-color: var(--card-background-color);
-    --titlebar-background: var(--card-background-color);
-    --ribbon-background: var(--card-background-color);
-    --ribbon-background-collapsed: var(--card-background-color);
-  }
-
-  &.anp-fixed-status-bar {
-    --anp-border-bottom-padding: calc(var(--anp-border-padding, 20px) - 18px);
-  }
-
-  .workspace {
-    margin-right: var(--anp-border-padding, 20px);
-
-    & .workspace-tab-container{
-      border-right: var(--border-border-style);
-      border-bottom: var(--border-border-style);
-    }
-
-    // .workspace-split.mod-root {
-    //   border-bottom: var(--border-border-style);
-    // }
-
-    // LEFT SIDE
-    &:not(.is-left-sidedock-open) {
-      >.workspace-split.mod-vertical.mod-root {
-        >.workspace-tabs:nth-child(2).workspace-tabs.mod-top-left-space,
-        // the following 2 selectors don't make sense but they are here because obsidan let's you create a vertical split inside a vertical split in certain conditions
-        // ideally this would be fixed in a future release but for now this is a workaround
-        // please remove the 2 selectors for other elements if you remove this one
-        >.workspace-split.mod-vertical>.workspace-tabs:nth-child(2).mod-top-left-space,
-        >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-tabs:nth-child(2).mod-top-left-space {
-          >.workspace-tab-container {
-            // border: 1px solid violet;
-            border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
-            // border-left: var(--border-border-style);
-          }
-        }
-
-        // select all tabs that are on the extreme left
-        >.workspace-tabs:nth-child(2).workspace-tabs.mod-top-left-space,
-        >.workspace-split.mod-vertical>.workspace-tabs:nth-child(2).mod-top-left-space,
-        >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-tabs:nth-child(2).mod-top-left-space,
-        >.workspace-split.mod-horizontal:nth-child(2) {
-          >.workspace-tabs:not(.mod-top) >.workspace-tab-container,
-          >.workspace-tabs:not(.mod-top) >.workspace-tab-header-container,
-          >.workspace-tab-container,
-          >.workspace-tab-header-container {
-            border-left: var(--border-border-style);
-            // border: 1px solid red;
-          }
-          >.workspace-split.mod-vertical >.workspace-tabs:nth-child(2) {
-            >.workspace-tab-container,
-            >.workspace-tab-header-container {
-              border-left: var(--border-border-style);
-              // border: 1px solid blue;
-            }
-          }
-        }
-
-        
-        & .workspace-tabs.mod-top-left-space {
-          .workspace-tab-container {
-            // border: 1px solid greenyellow; 
-            border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
-          }
-        }
-        
-        >.workspace-split.mod-horizontal:nth-child(2),
-        >.workspace-split.mod-vertical>.workspace-split.mod-horizontal:nth-child(2),
-        >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-split.mod-horizontal:nth-child(2) {
-          > .workspace-tabs:last-child {
-            .workspace-tab-container {
-              // border: 1px solid orange;
-              border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
-            }
-          }
-          
-          >.workspace-split.mod-vertical:last-child {
-            > .workspace-tabs:nth-child(2) {
-              .workspace-tab-container {
-                // border: 1px solid cyan;
-                border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
-                // border-left: var(--border-border-style);
-              }
-            }
-          }
-        }
-      }
-    }
-
-    // RIGHT SIDE
-    &:not(.is-right-sidedock-open) {
-      >.workspace-split.mod-vertical.mod-root {
-        >.workspace-tabs:last-child.mod-top-right-space,
-        // the following 2 selectors don't make sense but they are here because obsidan let's you create a vertical split inside a vertical split in certain conditions
-        // ideally this would be fixed in a future release but for now this is a workaround
-        // please remove the 2 selectors for other elements if you remove this one
-        >.workspace-split.mod-vertical>.workspace-tabs:last-child.mod-top-right-space,
-        >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-tabs:last-child.mod-top-right-space {
-          >.workspace-tab-container {
-            // border: 1px solid purple;
-            border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
-          }
-        }
-        
-        & .workspace-tabs.mod-top-right-space {
-          .workspace-tab-container {
-            // border: 1px solid yellow; 
-            border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
-          }
-        }
-        
-        >.workspace-split.mod-horizontal:last-child,
-        >.workspace-split.mod-vertical>.workspace-split.mod-horizontal:last-child,
-        >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-split.mod-horizontal:last-child {
-          > .workspace-tabs:last-child {
-            .workspace-tab-container {
-              // border: 1px solid red;
-              border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
-            }
-          }
-          
-          >.workspace-split.mod-vertical:last-child {
-            > .workspace-tabs:last-child {
-              .workspace-tab-container {
-                // border: 1px solid blue;
-                border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .workspace-split.mod-left-split {
-      background-color: var(--card-background-color);
-      padding-left: calc(var(--anp-border-padding, 20px) - 20px);
-      padding-bottom: var(--anp-border-bottom-padding, 20px);
-
-      .workspace-tabs {
+    .horizontal-main-container {
         background-color: var(--card-background-color);
-
-        .workspace-tab-container {
-          .workspace-leaf {
-            background-color: var(--card-foreground-color);
-          }
-
-          border-left: var(--border-border-style);
-          border-bottom: var(--border-border-style);
-        }
-
-        &:not(.mod-top) {
-          .workspace-tab-header-container {
-            border-left: var(--border-border-style);
-          }
-        }
-
-        &:last-child {
-          .workspace-tab-container {
-            border-bottom: var(--border-border-style);
-          }
-        }
-
-        &.mod-top-left-space {
-          .workspace-tab-container {
-            border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
-            border-top: var(--border-border-style);
-            border-left: var(--border-border-style);
-            border-bottom: var(--border-border-style);
-          }
-        }
-      }
-
-      .workspace-sidedock-vault-profile {
-        border-top: none;
-        background-color: var(--card-foreground-color);
-        border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
-        border-left: var(--border-border-style);
-        border-bottom: var(--border-border-style);
-      }
+        --titlebar-background: var(--card-background-color);
+        --ribbon-background: var(--card-background-color);
+        --ribbon-background-collapsed: var(--card-background-color);
     }
 
-    .workspace-split.mod-right-split {
-      padding-bottom: var(--anp-border-bottom-padding, 20px);
-      background-color: var(--card-background-color);
-
-      .workspace-tabs {
-        background-color: var(--card-background-color);
-
-        .workspace-tab-container {
-          .workspace-leaf {
-            background-color: var(--card-foreground-color);
-          }
-
-          border-right: var(--border-border-style);
-          border-bottom: var(--border-border-style);
-        }
-
-        &:not(.mod-top) {
-          .workspace-tab-header-container {
-            border-right: var(--border-border-style);
-          }
-        }
-
-        &:last-child {
-          .workspace-tab-container {
-            border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
-            border-bottom: var(--border-border-style);
-          }
-        }
-
-        &.mod-top-right-space {
-          .workspace-tab-container {
-            border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
-            border-top: var(--border-border-style);
-            border-right: var(--border-border-style);
-            border-bottom: var(--border-border-style);
-          }
-        }
-      }
+    &.anp-fixed-status-bar {
+        --anp-border-bottom-padding: calc(var(--anp-border-padding, 20px) - 18px);
     }
 
-    .workspace-split:not(.mod-right-split):not(.mod-left-split) {
-      >.workspace-split {
-        padding-bottom: 0;
-      }
-
-      background-color: var(--card-background-color);
-
-      .workspace-tabs {
-        background-color: var(--card-background-color);
-
-        &:last-child {
-          .workspace-tab-container {
-            border-bottom: var(--border-border-style);
-          }
-        }
-
-        &.mod-top {
-          .workspace-tab-container {
-            border-top: var(--border-border-style);
-            border-bottom: var(--border-border-style);
-          }
-        }
-      }
-
-      padding-bottom: var(--anp-border-bottom-padding, 20px);
-    }
-
-    .workspace-tabs:not(.mod-top) {
-      .workspace-tab-header-container {
-        background-color: var(--card-foreground-color);
-      }
-    }
-
-    .workspace-tabs.mod-top {
-      .workspace-tab-header-container {
-        border-bottom: none;
-      }
-    }
-  }
-
-  .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
-  .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
-    height: calc(100% + -1*var(--header-height) + -1*var(--anp-border-bottom-padding, 20px));
-    bottom: var(--anp-border-bottom-padding, 20px);
-  }
-
-  .workspace-split {
-    --divider-vertical-height: calc(100% + -1*var(--header-height));
-  }
-
-  .workspace-ribbon.mod-left:before {
-    border-bottom: 1px solid var(--card-background-color);
-  }
-
-  .workspace-ribbon.mod-left,
-  .workspace-ribbon.mod-left.is-focused {
-    border-right-color: var(--card-background-color);
-  }
-
-  &.is-popout-window {
     .workspace {
-      margin-left: var(--anp-border-padding, 20px);
+        margin-right: var(--anp-border-padding, 20px);
+
+        & .workspace-tab-container {
+            border-right: var(--border-border-style);
+            border-bottom: var(--border-border-style);
+        }
+
+        // .workspace-split.mod-root {
+        //   border-bottom: var(--border-border-style);
+        // }
+
+        // LEFT SIDE
+        &:not(.is-left-sidedock-open) {
+            >.workspace-split.mod-vertical.mod-root {
+
+                >.workspace-tabs:nth-child(2).workspace-tabs.mod-top-left-space,
+                // the following 2 selectors don't make sense but they are here because obsidan let's you create a vertical split inside a vertical split in certain conditions
+                // ideally this would be fixed in a future release but for now this is a workaround
+                // please remove the 2 selectors for other elements if you remove this one
+                >.workspace-split.mod-vertical>.workspace-tabs:nth-child(2).mod-top-left-space,
+                >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-tabs:nth-child(2).mod-top-left-space {
+                    >.workspace-tab-container {
+                        // border: 1px solid violet;
+                        border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+                        // border-left: var(--border-border-style);
+                    }
+                }
+
+                // select all tabs that are on the extreme left
+                >.workspace-tabs:nth-child(2).workspace-tabs.mod-top-left-space,
+                >.workspace-split.mod-vertical>.workspace-tabs:nth-child(2).mod-top-left-space,
+                >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-tabs:nth-child(2).mod-top-left-space,
+                >.workspace-split.mod-horizontal:nth-child(2) {
+
+                    >.workspace-tabs:not(.mod-top)>.workspace-tab-container,
+                    >.workspace-tabs:not(.mod-top)>.workspace-tab-header-container,
+                    >.workspace-tab-container,
+                    >.workspace-tab-header-container {
+                        border-left: var(--border-border-style);
+                        // border: 1px solid red;
+                    }
+
+                    >.workspace-split.mod-vertical>.workspace-tabs:nth-child(2) {
+
+                        >.workspace-tab-container,
+                        >.workspace-tab-header-container {
+                            border-left: var(--border-border-style);
+                            // border: 1px solid blue;
+                        }
+                    }
+                }
+
+
+                & .workspace-tabs.mod-top-left-space {
+                    .workspace-tab-container {
+                        // border: 1px solid greenyellow; 
+                        border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
+                    }
+                }
+
+                >.workspace-split.mod-horizontal:nth-child(2),
+                >.workspace-split.mod-vertical>.workspace-split.mod-horizontal:nth-child(2),
+                >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-split.mod-horizontal:nth-child(2) {
+                    >.workspace-tabs:last-child {
+                        .workspace-tab-container {
+                            // border: 1px solid orange;
+                            border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+                        }
+                    }
+
+                    >.workspace-split.mod-vertical:last-child {
+                        >.workspace-tabs:nth-child(2) {
+                            .workspace-tab-container {
+                                // border: 1px solid cyan;
+                                border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+                                // border-left: var(--border-border-style);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // RIGHT SIDE
+        &:not(.is-right-sidedock-open) {
+            >.workspace-split.mod-vertical.mod-root {
+
+                >.workspace-tabs:last-child.mod-top-right-space,
+                // the following 2 selectors don't make sense but they are here because obsidan let's you create a vertical split inside a vertical split in certain conditions
+                // ideally this would be fixed in a future release but for now this is a workaround
+                // please remove the 2 selectors for other elements if you remove this one
+                >.workspace-split.mod-vertical>.workspace-tabs:last-child.mod-top-right-space,
+                >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-tabs:last-child.mod-top-right-space {
+                    >.workspace-tab-container {
+                        // border: 1px solid purple;
+                        border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+                    }
+                }
+
+                & .workspace-tabs.mod-top-right-space {
+                    .workspace-tab-container {
+                        // border: 1px solid yellow; 
+                        border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
+                    }
+                }
+
+                >.workspace-split.mod-horizontal:last-child,
+                >.workspace-split.mod-vertical>.workspace-split.mod-horizontal:last-child,
+                >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-split.mod-horizontal:last-child {
+                    >.workspace-tabs:last-child {
+                        .workspace-tab-container {
+                            // border: 1px solid red;
+                            border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+                        }
+                    }
+
+                    >.workspace-split.mod-vertical:last-child {
+                        >.workspace-tabs:last-child {
+                            .workspace-tab-container {
+                                // border: 1px solid blue;
+                                border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .workspace-split.mod-left-split {
+            background-color: var(--card-background-color);
+            padding-left: calc(var(--anp-border-padding, 20px) - 20px);
+            padding-bottom: var(--anp-border-bottom-padding, 20px);
+
+            .workspace-tabs {
+                background-color: var(--card-background-color);
+
+                .workspace-tab-container {
+                    .workspace-leaf {
+                        background-color: var(--card-foreground-color);
+                    }
+
+                    border-left: var(--border-border-style);
+                    border-bottom: var(--border-border-style);
+                }
+
+                &:not(.mod-top) {
+                    .workspace-tab-header-container {
+                        border-left: var(--border-border-style);
+                    }
+                }
+
+                &:last-child {
+                    .workspace-tab-container {
+                        border-bottom: var(--border-border-style);
+                    }
+                }
+
+                &.mod-top-left-space {
+                    .workspace-tab-container {
+                        border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
+                        border-top: var(--border-border-style);
+                        border-left: var(--border-border-style);
+                        border-bottom: var(--border-border-style);
+                    }
+                }
+            }
+
+            .workspace-sidedock-vault-profile {
+                border-top: none;
+                background-color: var(--card-foreground-color);
+                border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+                border-left: var(--border-border-style);
+                border-bottom: var(--border-border-style);
+            }
+        }
+
+        .workspace-split.mod-right-split {
+            padding-bottom: var(--anp-border-bottom-padding, 20px);
+            background-color: var(--card-background-color);
+
+            .workspace-tabs {
+                background-color: var(--card-background-color);
+
+                .workspace-tab-container {
+                    .workspace-leaf {
+                        background-color: var(--card-foreground-color);
+                    }
+
+                    border-right: var(--border-border-style);
+                    border-bottom: var(--border-border-style);
+                }
+
+                &:not(.mod-top) {
+                    .workspace-tab-header-container {
+                        border-right: var(--border-border-style);
+                    }
+                }
+
+                &:last-child {
+                    .workspace-tab-container {
+                        border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+                        border-bottom: var(--border-border-style);
+                    }
+                }
+
+                &.mod-top-right-space {
+                    .workspace-tab-container {
+                        border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
+                        border-top: var(--border-border-style);
+                        border-right: var(--border-border-style);
+                        border-bottom: var(--border-border-style);
+                    }
+                }
+            }
+        }
+
+        .workspace-split:not(.mod-right-split):not(.mod-left-split) {
+            >.workspace-split {
+                padding-bottom: 0;
+            }
+
+            background-color: var(--card-background-color);
+
+            .workspace-tabs {
+                background-color: var(--card-background-color);
+
+                &:last-child {
+                    .workspace-tab-container {
+                        border-bottom: var(--border-border-style);
+                    }
+                }
+
+                &.mod-top {
+                    .workspace-tab-container {
+                        border-top: var(--border-border-style);
+                        border-bottom: var(--border-border-style);
+                    }
+                }
+            }
+
+            padding-bottom: var(--anp-border-bottom-padding, 20px);
+        }
+
+        .workspace-tabs:not(.mod-top) {
+            .workspace-tab-header-container {
+                background-color: var(--card-foreground-color);
+            }
+        }
+
+        .workspace-tabs.mod-top {
+            .workspace-tab-header-container {
+                border-bottom: none;
+            }
+        }
     }
-  }
+
+    .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
+    .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
+        height: calc(100% + -1*var(--header-height) + -1*var(--anp-border-bottom-padding, 20px));
+        bottom: var(--anp-border-bottom-padding, 20px);
+    }
+
+    .workspace-split {
+        --divider-vertical-height: calc(100% + -1*var(--header-height));
+    }
+
+    .workspace-ribbon.mod-left:before {
+        border-bottom: 1px solid var(--card-background-color);
+    }
+
+    .workspace-ribbon.mod-left,
+    .workspace-ribbon.mod-left.is-focused {
+        border-right-color: var(--card-background-color);
+    }
+
+    &.is-popout-window {
+        .workspace {
+            margin-left: var(--anp-border-padding, 20px);
+        }
+    }
 }
