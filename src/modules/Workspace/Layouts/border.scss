@@ -22,7 +22,7 @@ body.anp-border-layout {
   .workspace {
     margin-right: var(--anp-border-padding, 20px);
 
-    & .workspace-tab-container, .workspace-tab-header-container{
+    & .workspace-tab-container{
       border-right: var(--border-border-style);
       border-bottom: var(--border-border-style);
     }
@@ -46,12 +46,33 @@ body.anp-border-layout {
             // border-left: var(--border-border-style);
           }
         }
+
+        // select all tabs that are on the extreme left
+        >.workspace-tabs:nth-child(2).workspace-tabs.mod-top-left-space,
+        >.workspace-split.mod-vertical>.workspace-tabs:nth-child(2).mod-top-left-space,
+        >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-tabs:nth-child(2).mod-top-left-space,
+        >.workspace-split.mod-horizontal:nth-child(2) {
+          >.workspace-tabs:not(.mod-top) >.workspace-tab-container,
+          >.workspace-tabs:not(.mod-top) >.workspace-tab-header-container,
+          >.workspace-tab-container,
+          >.workspace-tab-header-container {
+            border-left: var(--border-border-style);
+            // border: 1px solid red;
+          }
+          >.workspace-split.mod-vertical >.workspace-tabs:nth-child(2) {
+            >.workspace-tab-container,
+            >.workspace-tab-header-container {
+              border-left: var(--border-border-style);
+              // border: 1px solid blue;
+            }
+          }
+        }
+
         
         & .workspace-tabs.mod-top-left-space {
           .workspace-tab-container {
             // border: 1px solid greenyellow; 
             border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
-            border-left: var(--border-border-style);
           }
         }
         
@@ -62,15 +83,8 @@ body.anp-border-layout {
             .workspace-tab-container {
               // border: 1px solid orange;
               border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
-              // border-left: var(--border-border-style);
             }
           }
-
-          .workspace-tab-container, .workspace-tab-header-container {
-            // border: 1px solid red;
-            border-left: var(--border-border-style);
-          }
-
           
           >.workspace-split.mod-vertical:last-child {
             > .workspace-tabs:nth-child(2) {
