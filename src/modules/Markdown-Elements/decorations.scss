@@ -1,57 +1,58 @@
 /*-Decorations for bold and italics-*/
 .anp-decoration-toggle {
-  --italic-color: rgb(var(--anp-italic-color, var(--text-normal)));
-  --bold-color: rgb(var(--anp-bold-color, var(--text-normal)));
-  --text-highlight-bg: rgba(var(--anp-highlight-color, var(--ctp-yellow)), 0.2);
+    --italic-color: rgb(var(--anp-italic-color, var(--text-normal)));
+    --bold-color: rgb(var(--anp-bold-color, var(--text-normal)));
+    --text-highlight-bg: rgba(var(--anp-highlight-color, var(--ctp-yellow)), 0.2);
 }
 
 // Internal links have no underline
 .markdown-rendered .internal-link {
 
-  &:hover,
-  &:active,
-  &.is-unresolved:hover,
-  &.is-unresolved {
-    text-decoration-line: none;
-  }
+    &:hover,
+    &:active,
+    &.is-unresolved:hover,
+    &.is-unresolved {
+        text-decoration-line: none;
+    }
 
-  text-decoration-line: none;
+    text-decoration-line: none;
 }
 
 .cm-formatting-link-string {
-  color: var(--text-normal);
+    color: var(--text-normal);
 }
 
 .cm-hmd-internal-link {
-  --link-decoration: none;
-  --link-decoration-hover: none;
-  --link-decoration-active: none;
+    --link-decoration: none;
+    --link-decoration-hover: none;
+    --link-decoration-active: none;
 }
 
 // External links have underline but no icon
 .anp-hide-external-link-icon {
-  .external-link,
-  .external-link:hover {
-    background-image: none;
-    padding-right: 0px;
-  }
+
+    .external-link,
+    .external-link:hover {
+        background-image: none;
+        padding-right: 0px;
+    }
 }
 
 // Editor colors follow the same color as in reading mode
 .cm-s-obsidian span {
 
-  &.cm-formatting-strong,
-  &.cm-strong {
-    color: var(--bold-color);
-  }
+    &.cm-formatting-strong,
+    &.cm-strong {
+        color: var(--bold-color);
+    }
 
-  &.cm-formatting-em,
-  &.cm-em {
-    color: var(--italic-color);
-  }
+    &.cm-formatting-em,
+    &.cm-em {
+        color: var(--italic-color);
+    }
 }
 
 /*-Footnote-*/
 sup[data-footnote-id] {
-  font-size: var(--font-smallest);
+    font-size: var(--font-smallest);
 }

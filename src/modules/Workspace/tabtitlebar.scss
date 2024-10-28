@@ -1,44 +1,44 @@
 .anp-autohide-titlebar:not(.is-mobile) {
-  --title-bar-delay: 150ms;
-  --title-bar-duration: 300ms;
-  --title-bar-target-translate-y: 18px;
-  --title-bar-translate-y: 40px;
+    --title-bar-delay: 150ms;
+    --title-bar-duration: 300ms;
+    --title-bar-target-translate-y: 18px;
+    --title-bar-translate-y: 40px;
 
-  .workspace-leaf-content .view-header {
-    margin-top: calc(var(--title-bar-translate-y) * -1);
-    position: relative;
-    transition: transform var(--title-bar-duration) var(--title-bar-delay);
-  }
+    .workspace-leaf-content .view-header {
+        margin-top: calc(var(--title-bar-translate-y) * -1);
+        position: relative;
+        transition: transform var(--title-bar-duration) var(--title-bar-delay);
+    }
 
-  .workspace-leaf-content .view-header::before {
-    bottom: calc(var(--title-bar-target-translate-y) * -1);
-    content: '';
-    left: 0;
-    position: absolute;
-    top: 0;
-    transition: transform var(--title-bar-duration) var(--title-bar-delay);
-    width: 100%;
-    z-index: 0;
-  }
+    .workspace-leaf-content .view-header::before {
+        bottom: calc(var(--title-bar-target-translate-y) * -1);
+        content: '';
+        left: 0;
+        position: absolute;
+        top: 0;
+        transition: transform var(--title-bar-duration) var(--title-bar-delay);
+        width: 100%;
+        z-index: 0;
+    }
 
-  .workspace-leaf-content .view-header:is(:hover, :focus-within)::before {
-    transform: translateY(var(--title-bar-target-translate-y));
-  }
+    .workspace-leaf-content .view-header:is(:hover, :focus-within)::before {
+        transform: translateY(var(--title-bar-target-translate-y));
+    }
 
-  .workspace-leaf-content .view-header:is(:hover, :focus-within),
-  .workspace-leaf-content .view-header:is(:hover, :focus-within)+.view-content {
-    transform: translateY(var(--title-bar-translate-y));
-  }
+    .workspace-leaf-content .view-header:is(:hover, :focus-within),
+    .workspace-leaf-content .view-header:is(:hover, :focus-within)+.view-content {
+        transform: translateY(var(--title-bar-translate-y));
+    }
 
-  .workspace-leaf-content .view-content {
-    transition: transform var(--title-bar-duration) var(--title-bar-delay);
-  }
+    .workspace-leaf-content .view-content {
+        transition: transform var(--title-bar-duration) var(--title-bar-delay);
+    }
 
-  .workspace-leaf-content .view-header-title {
-    --file-header-font-size: var(--font-ui-medium);
-  }
+    .workspace-leaf-content .view-header-title {
+        --file-header-font-size: var(--font-ui-medium);
+    }
 
-  /**
+    /**
    * This should fix the drag/click titlebar issue.
    * 
    * Invisible boxes are not rendered (as if they were fully transparent),
@@ -47,13 +47,13 @@
    * 
    * @see: https://drafts.csswg.org/css-display/#visibility
    */
-  .workspace-leaf-content .view-header>div {
-    transition: visibility var(--title-bar-duration) var(--title-bar-delay);
-    visibility: visible;
-    z-index: 1;
-  }
+    .workspace-leaf-content .view-header>div {
+        transition: visibility var(--title-bar-duration) var(--title-bar-delay);
+        visibility: visible;
+        z-index: 1;
+    }
 
-  .workspace-leaf-content .view-header:not(:hover, :focus-within)>div {
-    visibility: hidden;
-  }
+    .workspace-leaf-content .view-header:not(:hover, :focus-within)>div {
+        visibility: hidden;
+    }
 }

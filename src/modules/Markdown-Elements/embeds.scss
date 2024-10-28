@@ -1,34 +1,36 @@
-img, iframe {
-  border-radius: var(--embed-corner-radius, 4px);
+img,
+iframe {
+    border-radius: var(--embed-corner-radius, 4px);
 }
 
 
 .internal-embed[alt*="seamless"] {
-  &.markdown-embed {
-    --embed-padding: 0;
-    border-width: 0px;
+    &.markdown-embed {
+        --embed-padding: 0;
+        border-width: 0px;
 
-    >.markdown-embed-title {
-      width: fit-content;
-      position: absolute;
-      left: unset;
-      right: 33px;
-      top: 5px;
-      opacity: 0;
-      transition: opacity 0.1s;
-    }
-    >.markdown-embed-link {
-      opacity: 0;
-      transition: opacity 0.1s;
-    }
+        >.markdown-embed-title {
+            width: fit-content;
+            position: absolute;
+            left: unset;
+            right: 33px;
+            top: 5px;
+            opacity: 0;
+            transition: opacity 0.1s;
+        }
 
-    &:hover {
+        >.markdown-embed-link {
+            opacity: 0;
+            transition: opacity 0.1s;
+        }
 
-      &>.markdown-embed-title,
-      &>.markdown-embed-link {
-        opacity: 1;
-        transition: opacity 0.1s;
-      }
+        &:hover {
+
+            &>.markdown-embed-title,
+            &>.markdown-embed-link {
+                opacity: 1;
+                transition: opacity 0.1s;
+            }
+        }
     }
-  }
 }

@@ -1,51 +1,51 @@
 /*-Slider checkboxes-*/
 .checkbox-container.is-enabled:after {
-  background-color: var(--background-primary);
+    background-color: var(--background-primary);
 }
 
 /*-Notices-*/
 .notice {
-  color: rgb(var(--ctp-text));
+    color: rgb(var(--ctp-text));
 }
 
 /*-Recolor copy code button-*/
 .markdown-rendered button.copy-code-button {
-  background-color: rgb(var(--ctp-crust));
+    background-color: rgb(var(--ctp-crust));
 }
 
 /*-Banners are always sharp-*/
 .obsidian-banner-wrapper .obsidian-banner .banner-image.banner-image.banner-image.banner-image {
-  border-radius: 0px;
+    border-radius: 0px;
 }
 
 /*-Padding for banner pages-*/
 .obsidian-banner-wrapper .frontmatter-container {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 /*-Disable scrollbars-*/
 .anp-toggle-scrollbars *::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 /*-Smoother popover transition-*/
 .popover.hover-popover.is-loaded {
-  animation: fade .2s;
+    animation: fade .2s;
 }
 
 .popover .markdown-embed-link {
-  --icon-color: var(--text-normal);
-  --icon-color-hover: var(--text-faint);
+    --icon-color: var(--text-normal);
+    --icon-color-hover: var(--text-faint);
 }
 
 /*-Recolor tooltips-*/
 .tooltip {
-  color: rgb(var(--text));
+    color: rgb(var(--text));
 }
 
 /*-Disable tooltips-*/
 .anp-tooltip-toggle .tooltip {
-  display: none;
+    display: none;
 }
 
 /*-Tab icons-*/
@@ -53,57 +53,57 @@
 .mod-right-split .workspace-tab-header.has-active-menu,
 .mod-left-split .workspace-tab-header.is-active,
 .mod-right-split .workspace-tab-header.is-active {
-  background-color: var(--background-modifier-active);
+    background-color: var(--background-modifier-active);
 }
 
 .mod-left-split .workspace-tab-header.has-active-menu:hover,
 .mod-right-split .workspace-tab-header.has-active-menu:hover,
 .mod-left-split .workspace-tab-header.is-active:hover,
 .mod-right-split .workspace-tab-header.is-active:hover {
-  background-color: var(--background-modifier-active-hover);
+    background-color: var(--background-modifier-active-hover);
 }
 
 .anp-hide-status-bar .status-bar {
-  display: none;
+    display: none;
 }
 
 .workspace,
 .horizontal-main-container,
 .anp-card-layout .mod-vertical .workspace-tabs,
 .anp-border-layout .mod-vertical .workspace-tabs {
-  background-color: var(--tab-container-background);
+    background-color: var(--tab-container-background);
 }
 
 /* Align file extension labels to the right in sidebar */
 .nav-file-title-content {
-  flex-grow: var(--anp-file-label-align);
+    flex-grow: var(--anp-file-label-align);
 }
 
 .nav-folder-title-content {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 
 /* Hide empty frontmatter (uses :has()) */
 .frontmatter-container:not(:has(.frontmatter-section)) {
-  display: none;
+    display: none;
 }
 
 /* Inline title visibility */
 .inline-title {
-  display: var(--anp-inline-title-vis, block);
+    display: var(--anp-inline-title-vis, block);
 }
 
 /* Search page hover item fix */
 .search-result-file-match:hover {
-  background-color: var(--background-modifier-hover);
+    background-color: var(--background-modifier-hover);
 }
 
 // Fix ribbon icon drag backgrounds 
 .anuppuccin-accent-toggle .drag-ghost-hidden:before {
-  background-color: rgba(var(--ctp-accent), 0.3)
+    background-color: rgba(var(--ctp-accent), 0.3)
 }
 
 /*-Suggestion selected item bg fix-*/
 .suggestion-item.is-selected {
-  background-color: rgba(var(--ctp-text), 0.075);
+    background-color: rgba(var(--ctp-text), 0.075);
 }
