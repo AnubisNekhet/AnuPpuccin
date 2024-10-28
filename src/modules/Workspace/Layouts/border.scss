@@ -78,7 +78,8 @@ body.anp-border-layout {
                 // selecting all tabs that are on the extreme left for the border
                 & .workspace-tabs.mod-top-left-space {
                     >.workspace-tab-container {
-                        border: 1px solid violet;
+                        // border: 1px solid violet;
+                        border-left: var(--border-border-style);
                     }
                 }
                 >.workspace-split.mod-horizontal:nth-child(2),
@@ -86,14 +87,65 @@ body.anp-border-layout {
                 >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-split.mod-horizontal:nth-child(2) {
                     >.workspace-tabs {
                         >.workspace-tab-container {
-                            border: 1px solid orange;
+                            // border: 1px solid orange;
+                            border-left: var(--border-border-style);
                         }
                     }
-
+                    >.workspace-tabs:not(.mod-top-left-space) {
+                        >.workspace-tab-header-container {
+                            // border: 1px solid orange;
+                            border-left: var(--border-border-style);
+                        }
+                    }
                     >.workspace-split.mod-vertical {
                         >.workspace-tabs:nth-child(2) {
                             >.workspace-tab-container {
-                                border: 1px solid cyan;
+                                // border: 1px solid cyan;
+                                border-left: var(--border-border-style);
+                            }
+                        }
+                        >.workspace-tabs:nth-child(2):not(.mod-top-left-space) {
+                            >.workspace-tab-header-container {
+                                // border: 1px solid cyan;
+                                border-left: var(--border-border-style);
+                            }
+                        }
+                    }
+                }
+
+                // selecting all tabs that are on the extreme right for the border
+                & .workspace-tabs.mod-top-right-space {
+                    >.workspace-tab-container {
+                        // border: 1px solid violet;
+                        border-right: var(--border-border-style);
+                    }
+                }
+                >.workspace-split.mod-horizontal:last-child,
+                >.workspace-split.mod-vertical>.workspace-split.mod-horizontal:last-child,
+                >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-split.mod-horizontal:last-child {
+                    >.workspace-tabs {
+                        >.workspace-tab-container {
+                            // border: 1px solid orange;
+                            border-right: var(--border-border-style);
+                        }
+                    }
+                    >.workspace-tabs:not(.mod-top-right-space) {
+                        >.workspace-tab-header-container {
+                            // border: 1px solid orange;
+                            border-right: var(--border-border-style);
+                        }
+                    }
+                    >.workspace-split.mod-vertical {
+                        >.workspace-tabs:last-child {
+                            >.workspace-tab-container {
+                                // border: 1px solid cyan;
+                                border-right: var(--border-border-style);
+                            }
+                        }
+                        >.workspace-tabs:last-child:not(.mod-top-right-space) {
+                            >.workspace-tab-header-container {
+                                // border: 1px solid cyan;
+                                border-right: var(--border-border-style);
                             }
                         }
                     }
@@ -115,7 +167,6 @@ body.anp-border-layout {
                     >.workspace-tab-container {
                         // border: 1px solid purple;
                         border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
-                        border-right: var(--border-border-style);
                     }
                 }
 
@@ -123,7 +174,6 @@ body.anp-border-layout {
                     .workspace-tab-container {
                         // border: 1px solid yellow; 
                         border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
-                        border-right: var(--border-border-style);
                     }
                 }
 
@@ -134,7 +184,6 @@ body.anp-border-layout {
                         .workspace-tab-container {
                             // border: 1px solid red;
                             border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
-                            border-right: var(--border-border-style);
                         }
                     }
 
@@ -143,7 +192,6 @@ body.anp-border-layout {
                             .workspace-tab-container {
                                 // border: 1px solid blue;
                                 border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
-                                border-right: var(--border-border-style);
                             }
                         }
                     }
@@ -167,19 +215,19 @@ body.anp-border-layout {
                     border-left: var(--border-border-style);
                     border-bottom: var(--border-border-style);
                 }
-
+                
                 &:not(.mod-top) {
                     .workspace-tab-header-container {
                         border-left: var(--border-border-style);
                     }
                 }
-
+                
                 &:last-child {
                     .workspace-tab-container {
                         border-bottom: var(--border-border-style);
                     }
                 }
-
+                
                 &.mod-top-left-space {
                     .workspace-tab-container {
                         border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
