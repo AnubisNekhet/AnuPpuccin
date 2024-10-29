@@ -366,39 +366,5 @@ body.anp-border-layout:not(.is-mobile) {
         .workspace-split:not(.mod-right-split):not(.mod-left-split) {
             padding-bottom: var(--anp-border-bottom-padding, 20px);
         }
-
-        &:not(.is-left-sidedock-open) {
-            .workspace-split.mod-vertical {
-                .workspace-tabs {
-                    &.mod-top-left-space {
-                        .workspace-tab-container {
-                            border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
-                        }
-                    }
-                    &:last-child {
-                        .workspace-tab-container {
-                            border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
-                        }
-                    }
-                }
-            }
-        }
-
-        &:not(.is-right-sidedock-open) {
-            .workspace-split.mod-vertical {
-                .workspace-tabs {
-                    &.mod-top-right-space {
-                        .workspace-tab-container {
-                            border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
-                        }
-                    }
-                    &:last-child {
-                        .workspace-tab-container {
-                            border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
-                        }
-                    }
-                }
-            }
-        }
     }
 }

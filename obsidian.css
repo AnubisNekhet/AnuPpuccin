@@ -4482,18 +4482,6 @@ body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-right-spl
 body.anp-border-layout:not(.is-mobile) .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) {
   padding-bottom: var(--anp-border-bottom-padding, 20px);
 }
-body.anp-border-layout:not(.is-mobile) .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top-left-space .workspace-tab-container {
-  border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
-}
-body.anp-border-layout:not(.is-mobile) .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:last-child .workspace-tab-container {
-  border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
-}
-body.anp-border-layout:not(.is-mobile) .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top-right-space .workspace-tab-container {
-  border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
-}
-body.anp-border-layout:not(.is-mobile) .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:last-child .workspace-tab-container {
-  border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
-}
 
 .anp-bg-fix .workspace,
 .anp-bg-fix .app-container,
