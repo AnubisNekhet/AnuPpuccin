@@ -3819,14 +3819,14 @@ body.is-translucent {
   --title-bar-target-translate-y: 18px;
   --title-bar-translate-y: 40px;
   /**
-   * This should fix the drag/click titlebar issue.
-   * 
-   * Invisible boxes are not rendered (as if they were fully transparent),
-   * cannot be interacted with (and behave as if they had pointer-events: none),
-   * and are removed from navigation (similar to display: none).
-   * 
-   * @see: https://drafts.csswg.org/css-display/#visibility
-   */
+  * This should fix the drag/click titlebar issue.
+  * 
+  * Invisible boxes are not rendered (as if they were fully transparent),
+  * cannot be interacted with (and behave as if they had pointer-events: none),
+  * and are removed from navigation (similar to display: none).
+  * 
+  * @see: https://drafts.csswg.org/css-display/#visibility
+  */
 }
 .anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header {
   margin-top: calc(var(--title-bar-translate-y) * -1);
@@ -4135,7 +4135,8 @@ body.anp-card-layout {
   --divider-width: 4px;
   --divider-width-hover: 4px;
   --tab-container-background: var(--card-background-color);
-  --file-header-border: var(--border-width) dashed var(--background-modifier-border);
+  --file-header-border: var(--border-width) dashed
+  	var(--background-modifier-border);
   --ribbon-padding: 0;
 }
 body.anp-card-layout.anp-hide-borders {
@@ -4201,10 +4202,6 @@ body.anp-card-layout .workspace-tab-header-container,
 body.anp-card-layout .workspace-ribbon.mod-left:before {
   border-bottom: none;
 }
-body.anp-card-layout .mod-vertical .workspace-tabs {
-  padding-left: var(--anp-card-layout-padding, 10px);
-  padding-right: var(--anp-card-layout-padding, 10px);
-}
 body.anp-card-layout .mod-vertical .workspace-tabs .workspace-tab-header-container {
   padding-left: var(--anp-card-header-left-padding, 20px);
 }
@@ -4219,10 +4216,8 @@ body.anp-card-layout .mod-right-split .workspace-tab-container {
   background-color: var(--tab-container-background);
 }
 body.anp-card-layout .workspace-split .workspace-leaf-content:not([data-type=file-explorer]), body.anp-card-layout.anp-card-layout-filebrowser .workspace-leaf-content[data-type=file-explorer] {
-  border-radius: var(--anp-card-radius, var(--radius-xl));
   background-color: var(--card-foreground-color);
   border: 1px solid var(--tab-outline-color);
-  margin-bottom: var(--anp-card-layout-padding, 10px);
 }
 body.anp-card-layout.anp-card-shadows .workspace-split .workspace-leaf-content, body.anp-card-layout.anp-card-shadows.anp-card-layout-actions .side-dock-actions, body.anp-card-layout.anp-card-shadows.anp-card-layout-filebrowser .workspace-split .workspace-leaf-content[data-type=file-explorer] {
   box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.05);
@@ -4260,6 +4255,15 @@ body.anp-card-layout .workspace-drop-overlay:before {
   margin: auto;
 }
 
+body.anp-card-layout:not(.is-phone) .mod-vertical .workspace-tabs {
+  padding-left: var(--anp-card-layout-padding, 10px);
+  padding-right: var(--anp-card-layout-padding, 10px);
+}
+body.anp-card-layout:not(.is-phone) .workspace-split .workspace-leaf-content:not([data-type=file-explorer]), body.anp-card-layout:not(.is-phone).anp-card-layout-filebrowser .workspace-leaf-content[data-type=file-explorer] {
+  border-radius: var(--anp-card-radius, var(--radius-xl));
+  margin-bottom: var(--anp-card-layout-padding, 10px);
+}
+
 /*--------------------------
 Inspired by https://github.com/Akifyss/obsidian-border
 ---------------------------*/
@@ -4277,9 +4281,6 @@ body.anp-border-layout .horizontal-main-container {
 }
 body.anp-border-layout.anp-fixed-status-bar {
   --anp-border-bottom-padding: calc(var(--anp-border-padding, 20px) - 18px);
-}
-body.anp-border-layout .workspace {
-  margin-right: var(--anp-border-padding, 20px);
 }
 body.anp-border-layout .workspace .workspace-tab-container {
   border-bottom: var(--border-border-style);
@@ -4369,14 +4370,12 @@ body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-spli
 body.anp-border-layout .workspace .workspace-split.mod-left-split {
   background-color: var(--card-background-color);
   padding-left: calc(var(--anp-border-padding, 20px) - 20px);
-  padding-bottom: var(--anp-border-bottom-padding, 20px);
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs {
   background-color: var(--card-background-color);
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs .workspace-tab-container {
   border-left: var(--border-border-style);
-  border-bottom: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs .workspace-tab-container .workspace-leaf {
   background-color: var(--card-foreground-color);
@@ -4388,20 +4387,16 @@ body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tab
   border-bottom: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-container {
-  border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
   border-top: var(--border-border-style);
   border-left: var(--border-border-style);
-  border-bottom: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
   border-top: none;
   background-color: var(--card-foreground-color);
-  border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
   border-left: var(--border-border-style);
   border-bottom: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-right-split {
-  padding-bottom: var(--anp-border-bottom-padding, 20px);
   background-color: var(--card-background-color);
 }
 body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs {
@@ -4409,7 +4404,6 @@ body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-ta
 }
 body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs .workspace-tab-container {
   border-right: var(--border-border-style);
-  border-bottom: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs .workspace-tab-container .workspace-leaf {
   background-color: var(--card-foreground-color);
@@ -4418,18 +4412,14 @@ body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-ta
   border-right: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs:last-child .workspace-tab-container {
-  border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
   border-bottom: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-container {
-  border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
   border-top: var(--border-border-style);
   border-right: var(--border-border-style);
-  border-bottom: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) {
   background-color: var(--card-background-color);
-  padding-bottom: var(--anp-border-bottom-padding, 20px);
 }
 body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) > .workspace-split {
   padding-bottom: 0;
@@ -4442,7 +4432,6 @@ body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mo
 }
 body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) .workspace-tabs.mod-top .workspace-tab-container {
   border-top: var(--border-border-style);
-  border-bottom: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
   background-color: var(--card-foreground-color);
@@ -4467,6 +4456,43 @@ body.anp-border-layout .workspace-ribbon.mod-left.is-focused {
 }
 body.anp-border-layout.is-popout-window .workspace {
   margin-left: var(--anp-border-padding, 20px);
+}
+
+body.anp-border-layout:not(.is-mobile) .workspace {
+  margin-right: var(--anp-border-padding, 20px);
+}
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-left-split {
+  padding-bottom: var(--anp-border-bottom-padding, 20px);
+}
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-container {
+  border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-right-split {
+  padding-bottom: var(--anp-border-bottom-padding, 20px);
+}
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-right-split .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-container {
+  border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) {
+  padding-bottom: var(--anp-border-bottom-padding, 20px);
+}
+body.anp-border-layout:not(.is-mobile) .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top-left-space .workspace-tab-container {
+  border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout:not(.is-mobile) .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout:not(.is-mobile) .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top-right-space .workspace-tab-container {
+  border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout:not(.is-mobile) .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
 }
 
 .anp-bg-fix .workspace,
@@ -4799,7 +4825,8 @@ sup[data-footnote-id] {
   font-size: var(--font-smallest);
 }
 
-img, iframe {
+img,
+iframe {
   border-radius: var(--embed-corner-radius, 4px);
 }
 

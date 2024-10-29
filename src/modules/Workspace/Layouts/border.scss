@@ -20,8 +20,7 @@ body.anp-border-layout {
     }
 
     .workspace {
-        margin-right: var(--anp-border-padding, 20px);
-        
+
         & .workspace-tab-container {
             border-bottom: var(--border-border-style);
         }
@@ -29,6 +28,7 @@ body.anp-border-layout {
         // LEFT SIDE rules when the left sidedock is closed
         &:not(.is-left-sidedock-open) {
             >.workspace-split.mod-vertical.mod-root {
+
                 >.workspace-tabs:nth-child(2).workspace-tabs.mod-top-left-space,
                 // the following 2 selectors don't make sense but they are here because obsidan let's you create a vertical split inside a vertical split in certain conditions
                 // ideally this would be fixed in a future release but for now this is a workaround
@@ -39,13 +39,13 @@ body.anp-border-layout {
                         border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
                     }
                 }
-                
+
                 & .workspace-tabs.mod-top-left-space {
                     .workspace-tab-container {
                         border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
                     }
                 }
-                
+
                 >.workspace-split.mod-horizontal:nth-child(2),
                 >.workspace-split.mod-vertical>.workspace-split.mod-horizontal:nth-child(2),
                 >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-split.mod-horizontal:nth-child(2) {
@@ -54,7 +54,7 @@ body.anp-border-layout {
                             border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
                         }
                     }
-                    
+
                     >.workspace-split.mod-vertical:last-child {
                         >.workspace-tabs:nth-child(2) {
                             .workspace-tab-container {
@@ -70,6 +70,7 @@ body.anp-border-layout {
                         border-left: var(--border-border-style);
                     }
                 }
+
                 >.workspace-split.mod-horizontal:nth-child(2),
                 >.workspace-split.mod-vertical>.workspace-split.mod-horizontal:nth-child(2),
                 >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-split.mod-horizontal:nth-child(2) {
@@ -78,17 +79,20 @@ body.anp-border-layout {
                             border-left: var(--border-border-style);
                         }
                     }
+
                     >.workspace-tabs:not(.mod-top-left-space) {
                         >.workspace-tab-header-container {
                             border-left: var(--border-border-style);
                         }
                     }
+
                     >.workspace-split.mod-vertical {
                         >.workspace-tabs:nth-child(2) {
                             >.workspace-tab-container {
                                 border-left: var(--border-border-style);
                             }
                         }
+
                         >.workspace-tabs:nth-child(2):not(.mod-top-left-space) {
                             >.workspace-tab-header-container {
                                 border-left: var(--border-border-style);
@@ -102,6 +106,7 @@ body.anp-border-layout {
         // RIGHT SIDE rules when the right sidedock is closed (please make sure it similar in structure to the left side rules above)
         &:not(.is-right-sidedock-open) {
             >.workspace-split.mod-vertical.mod-root {
+
                 >.workspace-tabs:last-child.mod-top-right-space,
                 // the following 2 selectors don't make sense but they are here because obsidan let's you create a vertical split inside a vertical split in certain conditions
                 // ideally this would be fixed in a future release but for now this is a workaround
@@ -143,6 +148,7 @@ body.anp-border-layout {
                         border-right: var(--border-border-style);
                     }
                 }
+
                 >.workspace-split.mod-horizontal:last-child,
                 >.workspace-split.mod-vertical>.workspace-split.mod-horizontal:last-child,
                 >.workspace-split.mod-vertical>.workspace-split.mod-vertical>.workspace-split.mod-horizontal:last-child {
@@ -151,17 +157,20 @@ body.anp-border-layout {
                             border-right: var(--border-border-style);
                         }
                     }
+
                     >.workspace-tabs:not(.mod-top-right-space) {
                         >.workspace-tab-header-container {
                             border-right: var(--border-border-style);
                         }
                     }
+
                     >.workspace-split.mod-vertical {
                         >.workspace-tabs:last-child {
                             >.workspace-tab-container {
                                 border-right: var(--border-border-style);
                             }
                         }
+
                         >.workspace-tabs:last-child:not(.mod-top-right-space) {
                             >.workspace-tab-header-container {
                                 border-right: var(--border-border-style);
@@ -175,7 +184,6 @@ body.anp-border-layout {
         .workspace-split.mod-left-split {
             background-color: var(--card-background-color);
             padding-left: calc(var(--anp-border-padding, 20px) - 20px);
-            padding-bottom: var(--anp-border-bottom-padding, 20px);
 
             .workspace-tabs {
                 background-color: var(--card-background-color);
@@ -186,27 +194,24 @@ body.anp-border-layout {
                     }
 
                     border-left: var(--border-border-style);
-                    border-bottom: var(--border-border-style);
                 }
-                
+
                 &:not(.mod-top) {
                     .workspace-tab-header-container {
                         border-left: var(--border-border-style);
                     }
                 }
-                
+
                 &:last-child {
                     .workspace-tab-container {
                         border-bottom: var(--border-border-style);
                     }
                 }
-                
+
                 &.mod-top-left-space {
                     .workspace-tab-container {
-                        border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
                         border-top: var(--border-border-style);
                         border-left: var(--border-border-style);
-                        border-bottom: var(--border-border-style);
                     }
                 }
             }
@@ -214,14 +219,12 @@ body.anp-border-layout {
             .workspace-sidedock-vault-profile {
                 border-top: none;
                 background-color: var(--card-foreground-color);
-                border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
                 border-left: var(--border-border-style);
                 border-bottom: var(--border-border-style);
             }
         }
 
         .workspace-split.mod-right-split {
-            padding-bottom: var(--anp-border-bottom-padding, 20px);
             background-color: var(--card-background-color);
 
             .workspace-tabs {
@@ -233,7 +236,6 @@ body.anp-border-layout {
                     }
 
                     border-right: var(--border-border-style);
-                    border-bottom: var(--border-border-style);
                 }
 
                 &:not(.mod-top) {
@@ -244,17 +246,14 @@ body.anp-border-layout {
 
                 &:last-child {
                     .workspace-tab-container {
-                        border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
                         border-bottom: var(--border-border-style);
                     }
                 }
 
                 &.mod-top-right-space {
                     .workspace-tab-container {
-                        border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
                         border-top: var(--border-border-style);
                         border-right: var(--border-border-style);
-                        border-bottom: var(--border-border-style);
                     }
                 }
             }
@@ -279,12 +278,9 @@ body.anp-border-layout {
                 &.mod-top {
                     .workspace-tab-container {
                         border-top: var(--border-border-style);
-                        border-bottom: var(--border-border-style);
                     }
                 }
             }
-
-            padding-bottom: var(--anp-border-bottom-padding, 20px);
         }
 
         .workspace-tabs:not(.mod-top) {
@@ -322,6 +318,87 @@ body.anp-border-layout {
     &.is-popout-window {
         .workspace {
             margin-left: var(--anp-border-padding, 20px);
+        }
+    }
+}
+
+// Apply margins & border radius if on PC
+// Does NOT applies on phone and tablets
+// todo: needs some fixes to enable & look great on tablets
+body.anp-border-layout:not(.is-mobile) {
+    .workspace {
+        margin-right: var(--anp-border-padding, 20px);
+
+        .workspace-split.mod-left-split {
+            padding-bottom: var(--anp-border-bottom-padding, 20px);
+
+            .workspace-tabs {
+                &.mod-top-left-space {
+                    .workspace-tab-container {
+                        border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
+                    }
+                }
+            }
+
+            .workspace-sidedock-vault-profile {
+                border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+            }
+        }
+
+        .workspace-split.mod-right-split {
+            padding-bottom: var(--anp-border-bottom-padding, 20px);
+
+            .workspace-tabs {
+                &:last-child {
+                    .workspace-tab-container {
+                        border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+                    }
+                }
+
+                &.mod-top-right-space {
+                    .workspace-tab-container {
+                        border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
+                    }
+                }
+            }
+        }
+
+        .workspace-split:not(.mod-right-split):not(.mod-left-split) {
+            padding-bottom: var(--anp-border-bottom-padding, 20px);
+        }
+
+        &:not(.is-left-sidedock-open) {
+            .workspace-split.mod-vertical {
+                .workspace-tabs {
+                    &.mod-top-left-space {
+                        .workspace-tab-container {
+                            border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
+                        }
+                    }
+                    &:last-child {
+                        .workspace-tab-container {
+                            border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+                        }
+                    }
+                }
+            }
+        }
+
+        &:not(.is-right-sidedock-open) {
+            .workspace-split.mod-vertical {
+                .workspace-tabs {
+                    &.mod-top-right-space {
+                        .workspace-tab-container {
+                            border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
+                        }
+                    }
+                    &:last-child {
+                        .workspace-tab-container {
+                            border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+                        }
+                    }
+                }
+            }
         }
     }
 }
