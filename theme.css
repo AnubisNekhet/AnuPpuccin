@@ -580,15 +580,158 @@ settings:
     level: 2
     collapsed: true
   -
-    id: anp-latex-color
-    title: LaTeX Color
-    type: variable-themed-color
-    description: Applies to LaTeX blocks
+    id: anp-latex-inline-color
+    title: LaTeX Inline Color
+    type: class-select
     allowEmpty: true
-    format: hex
-    opacity: false
-    default-light: '#'
-    default-dark: '#'
+    default: anp-latex-inline-text
+    options:
+      - 
+        label: Rosewater
+        value: anp-latex-inline-rosewater
+      - 
+        label: Flamingo
+        value: anp-latex-inline-flamingo
+      - 
+        label: Pink
+        value: anp-latex-inline-pink
+      - 
+        label: Mauve
+        value: anp-latex-inline-mauve
+      - 
+        label: Red
+        value: anp-latex-inline-red
+      - 
+        label: Maroon
+        value: anp-latex-inline-maroon
+      - 
+        label: Peach
+        value: anp-latex-inline-peach
+      - 
+        label: Yellow
+        value: anp-latex-inline-yellow
+      - 
+        label: Green
+        value: anp-latex-inline-green
+      - 
+        label: Teal
+        value: anp-latex-inline-teal
+      - 
+        label: Sky
+        value: anp-latex-inline-sky
+      - 
+        label: Sapphire
+        value: anp-latex-inline-sapphire
+      - 
+        label: Blue
+        value: anp-latex-inline-blue
+      - 
+        label: Lavender
+        value: anp-latex-inline-lavender
+      -
+        label: Text
+        value: anp-latex-inline-text
+      -
+        label: Subtext 1
+        value: anp-latex-inline-subtext1
+      -
+        label: Subtext 0
+        value: anp-latex-inline-subtext0
+      -
+        label: Overlay 2
+        value: anp-latex-inline-overlay2
+      -
+        label: Overlay 1
+        value: anp-latex-inline-overlay1
+      -
+        label: Overlay 0
+        value: anp-latex-inline-overlay0
+      -
+        label: Surface 2
+        value: anp-latex-inline-surface2
+      -
+        label: Surface 1
+        value: anp-latex-inline-surface1
+      -
+        label: Surface 0
+        value: anp-latex-inline-surface0
+  -
+    id: anp-latex-block-color
+    title: LaTeX Block Color
+    type: class-select
+    allowEmpty: true
+    default: anp-latex-block-text
+    options:
+      - 
+        label: Rosewater
+        value: anp-latex-block-rosewater
+      - 
+        label: Flamingo
+        value: anp-latex-block-flamingo
+      - 
+        label: Pink
+        value: anp-latex-block-pink
+      - 
+        label: Mauve
+        value: anp-latex-block-mauve
+      - 
+        label: Red
+        value: anp-latex-block-red
+      - 
+        label: Maroon
+        value: anp-latex-block-maroon
+      - 
+        label: Peach
+        value: anp-latex-block-peach
+      - 
+        label: Yellow
+        value: anp-latex-block-yellow
+      - 
+        label: Green
+        value: anp-latex-block-green
+      - 
+        label: Teal
+        value: anp-latex-block-teal
+      - 
+        label: Sky
+        value: anp-latex-block-sky
+      - 
+        label: Sapphire
+        value: anp-latex-block-sapphire
+      - 
+        label: Blue
+        value: anp-latex-block-blue
+      - 
+        label: Lavender
+        value: anp-latex-block-lavender
+      -
+        label: Text
+        value: anp-latex-block-text
+      -
+        label: Subtext 1
+        value: anp-latex-block-subtext1
+      -
+        label: Subtext 0
+        value: anp-latex-block-subtext0
+      -
+        label: Overlay 2
+        value: anp-latex-block-overlay2
+      -
+        label: Overlay 1
+        value: anp-latex-block-overlay1
+      -
+        label: Overlay 0
+        value: anp-latex-block-overlay0
+      -
+        label: Surface 2
+        value: anp-latex-block-surface2
+      -
+        label: Surface 1
+        value: anp-latex-block-surface1
+      -
+        label: Surface 0
+        value: anp-latex-block-surface0
+
   -
     id: anp-latex-block-font-size
     title: LaTeX Block Font Size
@@ -5431,9 +5574,188 @@ hr {
   background-color: transparent;
 }
 
-/*-LaTeX-*/
-.math {
-  color: var(--anp-latex-color, var(--text-normal));
+.anp-latex-inline-rosewater span.math {
+  color: rgb(var(--ctp-rosewater));
+}
+
+.anp-latex-block-rosewater div.math {
+  color: rgb(var(--ctp-rosewater));
+}
+
+.anp-latex-inline-flamingo span.math {
+  color: rgb(var(--ctp-flamingo));
+}
+
+.anp-latex-block-flamingo div.math {
+  color: rgb(var(--ctp-flamingo));
+}
+
+.anp-latex-inline-pink span.math {
+  color: rgb(var(--ctp-pink));
+}
+
+.anp-latex-block-pink div.math {
+  color: rgb(var(--ctp-pink));
+}
+
+.anp-latex-inline-mauve span.math {
+  color: rgb(var(--ctp-mauve));
+}
+
+.anp-latex-block-mauve div.math {
+  color: rgb(var(--ctp-mauve));
+}
+
+.anp-latex-inline-red span.math {
+  color: rgb(var(--ctp-red));
+}
+
+.anp-latex-block-red div.math {
+  color: rgb(var(--ctp-red));
+}
+
+.anp-latex-inline-maroon span.math {
+  color: rgb(var(--ctp-maroon));
+}
+
+.anp-latex-block-maroon div.math {
+  color: rgb(var(--ctp-maroon));
+}
+
+.anp-latex-inline-peach span.math {
+  color: rgb(var(--ctp-peach));
+}
+
+.anp-latex-block-peach div.math {
+  color: rgb(var(--ctp-peach));
+}
+
+.anp-latex-inline-yellow span.math {
+  color: rgb(var(--ctp-yellow));
+}
+
+.anp-latex-block-yellow div.math {
+  color: rgb(var(--ctp-yellow));
+}
+
+.anp-latex-inline-green span.math {
+  color: rgb(var(--ctp-green));
+}
+
+.anp-latex-block-green div.math {
+  color: rgb(var(--ctp-green));
+}
+
+.anp-latex-inline-teal span.math {
+  color: rgb(var(--ctp-teal));
+}
+
+.anp-latex-block-teal div.math {
+  color: rgb(var(--ctp-teal));
+}
+
+.anp-latex-inline-sky span.math {
+  color: rgb(var(--ctp-sky));
+}
+
+.anp-latex-block-sky div.math {
+  color: rgb(var(--ctp-sky));
+}
+
+.anp-latex-inline-sapphire span.math {
+  color: rgb(var(--ctp-sapphire));
+}
+
+.anp-latex-block-sapphire div.math {
+  color: rgb(var(--ctp-sapphire));
+}
+
+.anp-latex-inline-blue span.math {
+  color: rgb(var(--ctp-blue));
+}
+
+.anp-latex-block-blue div.math {
+  color: rgb(var(--ctp-blue));
+}
+
+.anp-latex-inline-lavender span.math {
+  color: rgb(var(--ctp-lavender));
+}
+
+.anp-latex-block-lavender div.math {
+  color: rgb(var(--ctp-lavender));
+}
+
+.anp-latex-inline-text span.math {
+  color: rgb(var(--ctp-text));
+}
+
+.anp-latex-block-text div.math {
+  color: rgb(var(--ctp-text));
+}
+
+.anp-latex-inline-subtext1 span.math {
+  color: rgb(var(--ctp-subtext1));
+}
+
+.anp-latex-block-subtext1 div.math {
+  color: rgb(var(--ctp-subtext1));
+}
+
+.anp-latex-inline-subtext0 span.math {
+  color: rgb(var(--ctp-subtext0));
+}
+
+.anp-latex-block-subtext0 div.math {
+  color: rgb(var(--ctp-subtext0));
+}
+
+.anp-latex-inline-overlay2 span.math {
+  color: rgb(var(--ctp-overlay2));
+}
+
+.anp-latex-block-overlay2 div.math {
+  color: rgb(var(--ctp-overlay2));
+}
+
+.anp-latex-inline-overlay1 span.math {
+  color: rgb(var(--ctp-overlay1));
+}
+
+.anp-latex-block-overlay1 div.math {
+  color: rgb(var(--ctp-overlay1));
+}
+
+.anp-latex-inline-overlay0 span.math {
+  color: rgb(var(--ctp-overlay0));
+}
+
+.anp-latex-block-overlay0 div.math {
+  color: rgb(var(--ctp-overlay0));
+}
+
+.anp-latex-inline-surface2 span.math {
+  color: rgb(var(--ctp-surface2));
+}
+
+.anp-latex-block-surface2 div.math {
+  color: rgb(var(--ctp-surface2));
+}
+
+.anp-latex-inline-surface1 span.math {
+  color: rgb(var(--ctp-surface1));
+}
+
+.anp-latex-block-surface1 div.math {
+  color: rgb(var(--ctp-surface1));
+}
+
+.anp-latex-inline-surface0 span.math {
+  color: rgb(var(--ctp-surface0));
+}
+
+.anp-latex-block-surface0 div.math {
+  color: rgb(var(--ctp-surface0));
 }
 
 .math-block {

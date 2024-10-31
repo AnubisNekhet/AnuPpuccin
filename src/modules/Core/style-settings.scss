@@ -566,15 +566,158 @@ settings:
     level: 2
     collapsed: true
   -
-    id: anp-latex-color
-    title: LaTeX Color
-    type: variable-themed-color
-    description: Applies to LaTeX blocks
+    id: anp-latex-inline-color
+    title: LaTeX Inline Color
+    type: class-select
     allowEmpty: true
-    format: hex
-    opacity: false
-    default-light: '#'
-    default-dark: '#'
+    default: anp-latex-inline-text
+    options:
+      - 
+        label: Rosewater
+        value: anp-latex-inline-rosewater
+      - 
+        label: Flamingo
+        value: anp-latex-inline-flamingo
+      - 
+        label: Pink
+        value: anp-latex-inline-pink
+      - 
+        label: Mauve
+        value: anp-latex-inline-mauve
+      - 
+        label: Red
+        value: anp-latex-inline-red
+      - 
+        label: Maroon
+        value: anp-latex-inline-maroon
+      - 
+        label: Peach
+        value: anp-latex-inline-peach
+      - 
+        label: Yellow
+        value: anp-latex-inline-yellow
+      - 
+        label: Green
+        value: anp-latex-inline-green
+      - 
+        label: Teal
+        value: anp-latex-inline-teal
+      - 
+        label: Sky
+        value: anp-latex-inline-sky
+      - 
+        label: Sapphire
+        value: anp-latex-inline-sapphire
+      - 
+        label: Blue
+        value: anp-latex-inline-blue
+      - 
+        label: Lavender
+        value: anp-latex-inline-lavender
+      -
+        label: Text
+        value: anp-latex-inline-text
+      -
+        label: Subtext 1
+        value: anp-latex-inline-subtext1
+      -
+        label: Subtext 0
+        value: anp-latex-inline-subtext0
+      -
+        label: Overlay 2
+        value: anp-latex-inline-overlay2
+      -
+        label: Overlay 1
+        value: anp-latex-inline-overlay1
+      -
+        label: Overlay 0
+        value: anp-latex-inline-overlay0
+      -
+        label: Surface 2
+        value: anp-latex-inline-surface2
+      -
+        label: Surface 1
+        value: anp-latex-inline-surface1
+      -
+        label: Surface 0
+        value: anp-latex-inline-surface0
+  -
+    id: anp-latex-block-color
+    title: LaTeX Block Color
+    type: class-select
+    allowEmpty: true
+    default: anp-latex-block-text
+    options:
+      - 
+        label: Rosewater
+        value: anp-latex-block-rosewater
+      - 
+        label: Flamingo
+        value: anp-latex-block-flamingo
+      - 
+        label: Pink
+        value: anp-latex-block-pink
+      - 
+        label: Mauve
+        value: anp-latex-block-mauve
+      - 
+        label: Red
+        value: anp-latex-block-red
+      - 
+        label: Maroon
+        value: anp-latex-block-maroon
+      - 
+        label: Peach
+        value: anp-latex-block-peach
+      - 
+        label: Yellow
+        value: anp-latex-block-yellow
+      - 
+        label: Green
+        value: anp-latex-block-green
+      - 
+        label: Teal
+        value: anp-latex-block-teal
+      - 
+        label: Sky
+        value: anp-latex-block-sky
+      - 
+        label: Sapphire
+        value: anp-latex-block-sapphire
+      - 
+        label: Blue
+        value: anp-latex-block-blue
+      - 
+        label: Lavender
+        value: anp-latex-block-lavender
+      -
+        label: Text
+        value: anp-latex-block-text
+      -
+        label: Subtext 1
+        value: anp-latex-block-subtext1
+      -
+        label: Subtext 0
+        value: anp-latex-block-subtext0
+      -
+        label: Overlay 2
+        value: anp-latex-block-overlay2
+      -
+        label: Overlay 1
+        value: anp-latex-block-overlay1
+      -
+        label: Overlay 0
+        value: anp-latex-block-overlay0
+      -
+        label: Surface 2
+        value: anp-latex-block-surface2
+      -
+        label: Surface 1
+        value: anp-latex-block-surface1
+      -
+        label: Surface 0
+        value: anp-latex-block-surface0
+  
   -
     id: anp-latex-block-font-size
     title: LaTeX Block Font Size
