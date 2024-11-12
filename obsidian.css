@@ -435,6 +435,12 @@ settings:
     default: 4
     format: px
   -
+    id: callout-padding
+    title: Callout Padding
+    description: Be careful, it does not properly work with all the callouts style yet.
+    type: variable-text
+    default: 0px
+  -
     id: callout-title-padding
     title: Callout Title Padding
     type: variable-text
@@ -4714,6 +4720,9 @@ Support me: https://buymeacoffee.com/AnubisNekhet
 .callout-content > ol:last-child {
   margin-bottom: 0px;
 }
+.callout-content > h1, .callout-content > h2, .callout-content > h3, .callout-content > h4, .callout-content > h5, .callout-content > h6 {
+  margin: 0 !important;
+}
 
 .anp-callout-block .callout:not([data-callout-metadata*=anp-sleek],
 [data-callout-metadata*=anp-vanilla-normal],
@@ -5574,187 +5583,187 @@ hr {
   background-color: transparent;
 }
 
-.anp-latex-inline-rosewater span.math {
+.anp-latex-inline-rosewater span.math:not(.math-block) {
   color: rgb(var(--ctp-rosewater));
 }
 
-.anp-latex-block-rosewater div.math {
+.anp-latex-block-rosewater .math-block {
   color: rgb(var(--ctp-rosewater));
 }
 
-.anp-latex-inline-flamingo span.math {
+.anp-latex-inline-flamingo span.math:not(.math-block) {
   color: rgb(var(--ctp-flamingo));
 }
 
-.anp-latex-block-flamingo div.math {
+.anp-latex-block-flamingo .math-block {
   color: rgb(var(--ctp-flamingo));
 }
 
-.anp-latex-inline-pink span.math {
+.anp-latex-inline-pink span.math:not(.math-block) {
   color: rgb(var(--ctp-pink));
 }
 
-.anp-latex-block-pink div.math {
+.anp-latex-block-pink .math-block {
   color: rgb(var(--ctp-pink));
 }
 
-.anp-latex-inline-mauve span.math {
+.anp-latex-inline-mauve span.math:not(.math-block) {
   color: rgb(var(--ctp-mauve));
 }
 
-.anp-latex-block-mauve div.math {
+.anp-latex-block-mauve .math-block {
   color: rgb(var(--ctp-mauve));
 }
 
-.anp-latex-inline-red span.math {
+.anp-latex-inline-red span.math:not(.math-block) {
   color: rgb(var(--ctp-red));
 }
 
-.anp-latex-block-red div.math {
+.anp-latex-block-red .math-block {
   color: rgb(var(--ctp-red));
 }
 
-.anp-latex-inline-maroon span.math {
+.anp-latex-inline-maroon span.math:not(.math-block) {
   color: rgb(var(--ctp-maroon));
 }
 
-.anp-latex-block-maroon div.math {
+.anp-latex-block-maroon .math-block {
   color: rgb(var(--ctp-maroon));
 }
 
-.anp-latex-inline-peach span.math {
+.anp-latex-inline-peach span.math:not(.math-block) {
   color: rgb(var(--ctp-peach));
 }
 
-.anp-latex-block-peach div.math {
+.anp-latex-block-peach .math-block {
   color: rgb(var(--ctp-peach));
 }
 
-.anp-latex-inline-yellow span.math {
+.anp-latex-inline-yellow span.math:not(.math-block) {
   color: rgb(var(--ctp-yellow));
 }
 
-.anp-latex-block-yellow div.math {
+.anp-latex-block-yellow .math-block {
   color: rgb(var(--ctp-yellow));
 }
 
-.anp-latex-inline-green span.math {
+.anp-latex-inline-green span.math:not(.math-block) {
   color: rgb(var(--ctp-green));
 }
 
-.anp-latex-block-green div.math {
+.anp-latex-block-green .math-block {
   color: rgb(var(--ctp-green));
 }
 
-.anp-latex-inline-teal span.math {
+.anp-latex-inline-teal span.math:not(.math-block) {
   color: rgb(var(--ctp-teal));
 }
 
-.anp-latex-block-teal div.math {
+.anp-latex-block-teal .math-block {
   color: rgb(var(--ctp-teal));
 }
 
-.anp-latex-inline-sky span.math {
+.anp-latex-inline-sky span.math:not(.math-block) {
   color: rgb(var(--ctp-sky));
 }
 
-.anp-latex-block-sky div.math {
+.anp-latex-block-sky .math-block {
   color: rgb(var(--ctp-sky));
 }
 
-.anp-latex-inline-sapphire span.math {
+.anp-latex-inline-sapphire span.math:not(.math-block) {
   color: rgb(var(--ctp-sapphire));
 }
 
-.anp-latex-block-sapphire div.math {
+.anp-latex-block-sapphire .math-block {
   color: rgb(var(--ctp-sapphire));
 }
 
-.anp-latex-inline-blue span.math {
+.anp-latex-inline-blue span.math:not(.math-block) {
   color: rgb(var(--ctp-blue));
 }
 
-.anp-latex-block-blue div.math {
+.anp-latex-block-blue .math-block {
   color: rgb(var(--ctp-blue));
 }
 
-.anp-latex-inline-lavender span.math {
+.anp-latex-inline-lavender span.math:not(.math-block) {
   color: rgb(var(--ctp-lavender));
 }
 
-.anp-latex-block-lavender div.math {
+.anp-latex-block-lavender .math-block {
   color: rgb(var(--ctp-lavender));
 }
 
-.anp-latex-inline-text span.math {
+.anp-latex-inline-text span.math:not(.math-block) {
   color: rgb(var(--ctp-text));
 }
 
-.anp-latex-block-text div.math {
+.anp-latex-block-text .math-block {
   color: rgb(var(--ctp-text));
 }
 
-.anp-latex-inline-subtext1 span.math {
+.anp-latex-inline-subtext1 span.math:not(.math-block) {
   color: rgb(var(--ctp-subtext1));
 }
 
-.anp-latex-block-subtext1 div.math {
+.anp-latex-block-subtext1 .math-block {
   color: rgb(var(--ctp-subtext1));
 }
 
-.anp-latex-inline-subtext0 span.math {
+.anp-latex-inline-subtext0 span.math:not(.math-block) {
   color: rgb(var(--ctp-subtext0));
 }
 
-.anp-latex-block-subtext0 div.math {
+.anp-latex-block-subtext0 .math-block {
   color: rgb(var(--ctp-subtext0));
 }
 
-.anp-latex-inline-overlay2 span.math {
+.anp-latex-inline-overlay2 span.math:not(.math-block) {
   color: rgb(var(--ctp-overlay2));
 }
 
-.anp-latex-block-overlay2 div.math {
+.anp-latex-block-overlay2 .math-block {
   color: rgb(var(--ctp-overlay2));
 }
 
-.anp-latex-inline-overlay1 span.math {
+.anp-latex-inline-overlay1 span.math:not(.math-block) {
   color: rgb(var(--ctp-overlay1));
 }
 
-.anp-latex-block-overlay1 div.math {
+.anp-latex-block-overlay1 .math-block {
   color: rgb(var(--ctp-overlay1));
 }
 
-.anp-latex-inline-overlay0 span.math {
+.anp-latex-inline-overlay0 span.math:not(.math-block) {
   color: rgb(var(--ctp-overlay0));
 }
 
-.anp-latex-block-overlay0 div.math {
+.anp-latex-block-overlay0 .math-block {
   color: rgb(var(--ctp-overlay0));
 }
 
-.anp-latex-inline-surface2 span.math {
+.anp-latex-inline-surface2 span.math:not(.math-block) {
   color: rgb(var(--ctp-surface2));
 }
 
-.anp-latex-block-surface2 div.math {
+.anp-latex-block-surface2 .math-block {
   color: rgb(var(--ctp-surface2));
 }
 
-.anp-latex-inline-surface1 span.math {
+.anp-latex-inline-surface1 span.math:not(.math-block) {
   color: rgb(var(--ctp-surface1));
 }
 
-.anp-latex-block-surface1 div.math {
+.anp-latex-block-surface1 .math-block {
   color: rgb(var(--ctp-surface1));
 }
 
-.anp-latex-inline-surface0 span.math {
+.anp-latex-inline-surface0 span.math:not(.math-block) {
   color: rgb(var(--ctp-surface0));
 }
 
-.anp-latex-block-surface0 div.math {
+.anp-latex-block-surface0 .math-block {
   color: rgb(var(--ctp-surface0));
 }
 

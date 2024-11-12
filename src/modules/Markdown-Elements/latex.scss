@@ -3,12 +3,14 @@ $accents: "rosewater", "flamingo", "pink", "mauve", "red", "maroon", "peach",
 
 @each $accent in $accents {
     .anp-latex-inline-#{$accent} {
-        span.math {
+        span.math:not(.math-block) {
+            // math blocks can be span if they are in a callout
             color: rgb(var(--ctp-#{$accent}));
         }
     }
+
     .anp-latex-block-#{$accent} {
-        div.math {
+        .math-block {
             color: rgb(var(--ctp-#{$accent}));
         }
     }
