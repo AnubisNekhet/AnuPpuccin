@@ -1,40 +1,40 @@
 .excalibrain-searchinput,
 .multiselect-wrapper {
-  --background-modifier-form-field: rgb(var(--ctp-crust));
+    --background-modifier-form-field: rgb(var(--ctp-crust));
 }
 
 .multiselect-wrapper {
-  -webkit-app-region: no-drag;
-  background: var(--background-modifier-form-field);
-  border: var(--input-border-width) solid var(--background-modifier-border);
-  color: var(--text-normal);
-  font-family: inherit;
-  padding: var(--size-4-1) var(--size-4-2);
-  font-size: var(--font-ui-small);
-  border-radius: var(--input-radius);
-  outline: none;
+    -webkit-app-region: no-drag;
+    background: var(--background-modifier-form-field);
+    border: var(--input-border-width) solid var(--background-modifier-border);
+    color: var(--text-normal);
+    font-family: inherit;
+    padding: var(--size-4-1) var(--size-4-2);
+    font-size: var(--font-ui-small);
+    border-radius: var(--input-radius);
+    outline: none;
 }
 
 .multiselect-container .multiselect-wrapper .options-wrapper {
-  background: var(--background-modifier-form-field);
-  margin-top: -4px;
-  border-radius: 0 0 var(--input-radius) var(--input-radius);
-  border-top: none;
-  width: calc(100% + 2px);
-  margin-left: -1px;
+    background: var(--background-modifier-form-field);
+    margin-top: -4px;
+    border-radius: 0 0 var(--input-radius) var(--input-radius);
+    border-top: none;
+    width: calc(100% + 2px);
+    margin-left: -1px;
 }
 
 .excalidraw-dirty {
-  color: rgb(var(--ctp-red));
+    color: rgb(var(--ctp-red));
 }
 
 .excalibrain-button.on {
-  background-color: rgb(var(--ctp-base));
-  border-color: var(--color-accent);
-  --input-shadow: inset 0 0 0 2px var(--color-accent);
-  --input-shadow-hover: inset 0 0 0 2px var(--color-accent);
+    background-color: rgb(var(--ctp-base));
+    border-color: var(--color-accent);
+    --input-shadow: inset 0 0 0 2px var(--color-accent);
+    --input-shadow-hover: inset 0 0 0 2px var(--color-accent);
 }
 
 .excalibrain-button.off {
-  background-color: rgb(var(--ctp-crust));
+    background-color: rgb(var(--ctp-crust));
 }

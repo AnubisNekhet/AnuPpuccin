@@ -1,11 +1,11 @@
 .anp-callout-block .callout:not([data-callout-metadata*="anp-sleek"],
-  [data-callout-metadata*="anp-vanilla-normal"],
-  [data-callout-metadata*="anp-vanilla-plus"]),
+    [data-callout-metadata*="anp-vanilla-normal"],
+    [data-callout-metadata*="anp-vanilla-plus"]),
 .callout[data-callout-metadata*="anp-block"] {
 
-  &:not([data-callout-metadata*="revert"],
-    [data-callout="blank-container"],
-    [data-callout="multi-column"]) {
-    border-left: var(--size-2-3) solid rgb(var(--callout-color));
-  }
+    &:not([data-callout-metadata*="revert"],
+        [data-callout="blank-container"],
+        [data-callout="multi-column"]) {
+        border-left: var(--size-2-3) solid rgb(var(--callout-color));
+    }
 }

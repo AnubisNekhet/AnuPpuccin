@@ -4,21 +4,21 @@ Link: https://gist.github.com/raisabelatrix/eb383f7e19b59f951430c2f3c6ed80b0
 -----------------------------------*/
 
 body.rainbow-tags {
-  --rainbow-tags-opacity: 0.3;
+     --rainbow-tags-opacity: 0.3;
 
-  --r1-color: rgb(var(--ctp-red));
-  --r2-color: rgb(var(--ctp-peach));
-  --r3-color: rgb(var(--ctp-yellow));
-  --r4-color: rgb(var(--ctp-green));
-  --r5-color: rgb(var(--ctp-blue));
-  --r6-color: rgb(var(--ctp-lavender));
-  --r7-color: rgb(var(--ctp-mauve));
+     --r1-color: rgb(var(--ctp-red));
+     --r2-color: rgb(var(--ctp-peach));
+     --r3-color: rgb(var(--ctp-yellow));
+     --r4-color: rgb(var(--ctp-green));
+     --r5-color: rgb(var(--ctp-blue));
+     --r6-color: rgb(var(--ctp-lavender));
+     --r7-color: rgb(var(--ctp-mauve));
 
-  --r1-color-light: rgba(var(--ctp-red), var(--rainbow-tags-opacity));
-  --r2-color-light: rgba(var(--ctp-peach), var(--rainbow-tags-opacity));
-  --r3-color-light: rgba(var(--ctp-yellow), var(--rainbow-tags-opacity));
-  --r4-color-light: rgba(var(--ctp-green), var(--rainbow-tags-opacity));
-  --r5-color-light: rgba(var(--ctp-blue), var(--rainbow-tags-opacity));
-  --r6-color-light: rgba(var(--ctp-lavender), var(--rainbow-tags-opacity));
-  --r7-color-light: rgba(var(--ctp-mauve), var(--rainbow-tags-opacity));
+     --r1-color-light: rgba(var(--ctp-red), var(--rainbow-tags-opacity));
+     --r2-color-light: rgba(var(--ctp-peach), var(--rainbow-tags-opacity));
+     --r3-color-light: rgba(var(--ctp-yellow), var(--rainbow-tags-opacity));
+     --r4-color-light: rgba(var(--ctp-green), var(--rainbow-tags-opacity));
+     --r5-color-light: rgba(var(--ctp-blue), var(--rainbow-tags-opacity));
+     --r6-color-light: rgba(var(--ctp-lavender), var(--rainbow-tags-opacity));
+     --r7-color-light: rgba(var(--ctp-mauve), var(--rainbow-tags-opacity));
 }

@@ -3,27 +3,27 @@
  * This file will be removed if it's determined that excalidraw is not capable of being consistently themed.
 **/
 .excalidraw.theme--dark {
-	--island-bg-color: rgb(var(--ctp-base));
-	--color-primary-darkest: rgb(var(--ctp-accent));
-	--color-surface-high: rgba(var(--ctp-surface2), 0.4);
-	--color-surface-low: rgb(var(--ctp-base));
-	--color-on-surface: rgb(var(--ctp-text));
-	--color-brand-hover: rgb(var(--ctp-base));
-	--color-surface-primary-container: rgb(var(--ctp-accent));
-	--color-on-primary-container: rgb(var(--ctp-base));
+    --island-bg-color: rgb(var(--ctp-base));
+    --color-primary-darkest: rgb(var(--ctp-accent));
+    --color-surface-high: rgba(var(--ctp-surface2), 0.4);
+    --color-surface-low: rgb(var(--ctp-base));
+    --color-on-surface: rgb(var(--ctp-text));
+    --color-brand-hover: rgb(var(--ctp-base));
+    --color-surface-primary-container: rgb(var(--ctp-accent));
+    --color-on-primary-container: rgb(var(--ctp-base));
 }
 
 .excalidraw .buttonList .zIndexButton.active,
 .excalidraw .buttonList button.active,
 .excalidraw .buttonList label.active {
-	--icon-fill-color: rgb(var(--ctp-base));
+    --icon-fill-color: rgb(var(--ctp-base));
 }
 
 .excalidraw.theme--dark.excalidraw .App-menu__left {
-	--button-hover-bg: rgba(var(--ctp-surface2), 0.6) !important;
+    --button-hover-bg: rgba(var(--ctp-surface2), 0.6) !important;
 }
 
 // remove annyoing hint
 .excalidraw .HintViewer {
-	display: none;
+    display: none;
 }

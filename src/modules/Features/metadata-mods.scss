@@ -1,21 +1,21 @@
 /*--------------DISABLING IN-FRONTMATTER---------------*/
 .heading-normal-toggle {
-  --h1-color: var(--text-normal) !important;
-  --h2-color: var(--text-normal) !important;
-  --h3-color: var(--text-normal) !important;
-  --h4-color: var(--text-normal) !important;
-  --h5-color: var(--text-normal) !important;
-  --h6-color: var(--text-normal) !important;
+    --h1-color: var(--text-normal) !important;
+    --h2-color: var(--text-normal) !important;
+    --h3-color: var(--text-normal) !important;
+    --h4-color: var(--text-normal) !important;
+    --h5-color: var(--text-normal) !important;
+    --h6-color: var(--text-normal) !important;
 }
 
 .decorations-normal-toggle,
 .decorations-normal-toggle.markdown-rendered {
-  --bold-color: var(--text-normal) !important;
-  --italic-color: var(--text-normal) !important;
+    --bold-color: var(--text-normal) !important;
+    --italic-color: var(--text-normal) !important;
 }
 
 .decorations-normal-toggle.markdown-rendered .table-view-table,
 .decorations-normal-toggle.is-live-preview .table-view-table {
-  --bold-color: var(--text-muted) !important;
-  --italic-color: var(--text-muted) !important;
+    --bold-color: var(--text-muted) !important;
+    --italic-color: var(--text-muted) !important;
 }

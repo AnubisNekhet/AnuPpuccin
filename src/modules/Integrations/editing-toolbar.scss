@@ -1,13 +1,13 @@
 .cMenuToolbarDefaultAesthetic {
-  margin: 5px 10px 0 10px;
-  box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 5%);
-  background-color: var(--background-primary);
+    margin: 5px 10px 0 10px;
+    box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 5%);
+    background-color: var(--background-primary);
 }
 
 #cMenuToolbarModalBar.top button.cMenuToolbarCommandItem:hover {
-  background-color: var(--background-secondary);
+    background-color: var(--background-secondary);
 }
 
 #cMenuToolbarModalBar.top :is(.cMenuToolbarCommandItem, button[class^=cMenuToolbarCommandsubItem]):not(.cMenuToolbar-Divider-Line) {
-  transition: all 0s linear;
+    transition: all 0s linear;
 }

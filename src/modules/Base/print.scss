@@ -1,35 +1,5 @@
 .anp-print .print.theme-light,
 .anp-print .print.theme-dark {
-  --ctp-crust: inherit;
-  --ctp-mantle: inherit;
-  --ctp-base: inherit;
-  --ctp-surface0: inherit;
-  --ctp-surface1: inherit;
-  --ctp-surface2: inherit;
-  --ctp-overlay0: inherit;
-  --ctp-overlay1: inherit;
-  --ctp-overlay2: inherit;
-  --ctp-subtext0: inherit;
-  --ctp-subtext1: inherit;
-  --ctp-text: inherit;
-  --ctp-rosewater: inherit;
-  --ctp-flamingo: inherit;
-  --ctp-red: inherit;
-  --ctp-maroon: inherit;
-  --ctp-mauve: inherit;
-  --ctp-pink: inherit;
-  --ctp-peach: inherit;
-  --ctp-yellow: inherit;
-  --ctp-green: inherit;
-  --ctp-teal: inherit;
-  --ctp-sky: inherit;
-  --ctp-sapphire: inherit;
-  --ctp-blue: inherit;
-  --ctp-lavender: inherit;
-}
-
-@media print {
-  .anp-print .print {
     --ctp-crust: inherit;
     --ctp-mantle: inherit;
     --ctp-base: inherit;
@@ -56,17 +26,47 @@
     --ctp-sapphire: inherit;
     --ctp-blue: inherit;
     --ctp-lavender: inherit;
-  }
+}
 
-  .anp-print .print,
-  body.anp-print,
-  .anp-print .markdown-rendered,
-  :root:has(.anp-print),
-  :root {
-    background-color: rgb(var(--ctp-base));
-  }
+@media print {
+    .anp-print .print {
+        --ctp-crust: inherit;
+        --ctp-mantle: inherit;
+        --ctp-base: inherit;
+        --ctp-surface0: inherit;
+        --ctp-surface1: inherit;
+        --ctp-surface2: inherit;
+        --ctp-overlay0: inherit;
+        --ctp-overlay1: inherit;
+        --ctp-overlay2: inherit;
+        --ctp-subtext0: inherit;
+        --ctp-subtext1: inherit;
+        --ctp-text: inherit;
+        --ctp-rosewater: inherit;
+        --ctp-flamingo: inherit;
+        --ctp-red: inherit;
+        --ctp-maroon: inherit;
+        --ctp-mauve: inherit;
+        --ctp-pink: inherit;
+        --ctp-peach: inherit;
+        --ctp-yellow: inherit;
+        --ctp-green: inherit;
+        --ctp-teal: inherit;
+        --ctp-sky: inherit;
+        --ctp-sapphire: inherit;
+        --ctp-blue: inherit;
+        --ctp-lavender: inherit;
+    }
 
-  .anp-print .print .markdown-preview-view {
-    color: rgb(var(--ctp-text));
-  }
+    .anp-print .print,
+    body.anp-print,
+    .anp-print .markdown-rendered,
+    :root:has(.anp-print),
+    :root {
+        background-color: rgb(var(--ctp-base));
+    }
+
+    .anp-print .print .markdown-preview-view {
+        color: rgb(var(--ctp-text));
+    }
 }

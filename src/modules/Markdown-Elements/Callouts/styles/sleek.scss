@@ -1,31 +1,31 @@
 .anp-callout-sleek .callout:not([data-callout-metadata*="anp-block"],
-  [data-callout-metadata*="anp-vanilla-normal"],
-  [data-callout-metadata*="anp-vanilla-plus"]),
+    [data-callout-metadata*="anp-vanilla-normal"],
+    [data-callout-metadata*="anp-vanilla-plus"]),
 //do not apply to callouts with these metadata
 .callout[data-callout-metadata*="anp-sleek"] {
 
-  //apply to any callout with this metadata
-  &:not([data-callout-metadata*="revert"],
-    [data-callout="blank-container"],
-    [data-callout="multi-column"]) {
-    //do not apply to revert or MCL metadata
-    --callout-padding: 0;
-    --callout-border-width: 1px;
-    --callout-border-opacity: 0.4;
-    --callout-border-width: 1px;
-    background-color: rgba(var(--ctp-mantle), 0.4);
+    //apply to any callout with this metadata
+    &:not([data-callout-metadata*="revert"],
+        [data-callout="blank-container"],
+        [data-callout="multi-column"]) {
+        //do not apply to revert or MCL metadata
+        --callout-padding: 0;
+        --callout-border-width: 1px;
+        --callout-border-opacity: 0.4;
+        --callout-border-width: 1px;
+        background-color: rgba(var(--ctp-mantle), 0.4);
 
-    &>.callout-title {
-      background-color: rgba(var(--callout-color), var(--callout-title-opacity, 0.1));
-    }
+        &>.callout-title {
+            background-color: rgba(var(--callout-color), var(--callout-title-opacity, 0.1));
+        }
 
-    &>.callout-content {
-      border-top: var(--callout-border-width) dashed rgba(var(--callout-color), var(--callout-border-opacity));
-    }
+        &>.callout-content {
+            border-top: var(--callout-border-width) dashed rgba(var(--callout-color), var(--callout-border-opacity));
+        }
 
-    .list-collapse-indicator {
-      margin-left: -35px;
-      padding-right: 3px;
+        .list-collapse-indicator {
+            margin-left: -35px;
+            padding-right: 3px;
+        }
     }
-  }
 }

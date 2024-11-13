@@ -1,15 +1,15 @@
 #cMenuModalBar {
-  .cMenuCommandItem {
-    background-color: rgba(var(--ctp-mantle), 0.4);
+    .cMenuCommandItem {
+        background-color: rgba(var(--ctp-mantle), 0.4);
 
-    &:hover {
-      background-color: rgba(var(--ctp-mantle), 0.6);
+        &:hover {
+            background-color: rgba(var(--ctp-mantle), 0.6);
+        }
     }
-  }
 
-  border: 2px solid rgba(var(--ctp-crust), 0.2);
+    border: 2px solid rgba(var(--ctp-crust), 0.2);
 }
 
 #cMenuModalBar button.cMenuCommandItem:hover {
-  background-color: rgba(var(--ctp-mantle), 0.6);
+    background-color: rgba(var(--ctp-mantle), 0.6);
 }

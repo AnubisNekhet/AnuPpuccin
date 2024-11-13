@@ -1,88 +1,88 @@
 /* Notion-Styled Kanban Fix */
 body.theme-dark.theme-dark {
-  --notion-kanban-card: rgb(var(--ctp-surface0));
-  --notion-kanban-card-hover: rgb(var(--ctp-surface1));
+    --notion-kanban-card: rgb(var(--ctp-surface0));
+    --notion-kanban-card-hover: rgb(var(--ctp-surface1));
 }
 
 /* Fix bottom padding of kanban board on mobile */
 body.is-mobile .kanban-plugin__board>div {
-  padding-bottom: 5rem;
+    padding-bottom: 5rem;
 }
 
 /* Fix bottom padding of kanban board when status bar is visible */
 body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board>div {
-  padding-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
 }
 
 /* Kanban background */
 .kanban-plugin__board>div {
-  --kanban-dot-color: var(--canvas-dot-pattern);
-  --kanban-dot-offset: 7px;
-  --kanban-dot-spacing: 20px;
-  --kanban-dot-size: 0.7px;
-  background-image: radial-gradient(circle, var(--kanban-dot-color) var(--kanban-dot-size), transparent var(--kanban-dot-size));
-  background-position: var(--kanban-dot-offset) var(--kanban-dot-offset);
-  background-size: var(--kanban-dot-spacing) var(--kanban-dot-spacing);
-  flex-grow: 1;
+    --kanban-dot-color: var(--canvas-dot-pattern);
+    --kanban-dot-offset: 7px;
+    --kanban-dot-spacing: 20px;
+    --kanban-dot-size: 0.7px;
+    background-image: radial-gradient(circle, var(--kanban-dot-color) var(--kanban-dot-size), transparent var(--kanban-dot-size));
+    background-position: var(--kanban-dot-offset) var(--kanban-dot-offset);
+    background-size: var(--kanban-dot-spacing) var(--kanban-dot-spacing);
+    flex-grow: 1;
 }
 
 /* Kanban date button and date picker */
 .kanban-plugin {
-  &__item-metadata-date.is-button {
-    position: relative;
-    display: inline-block;
-  }
+    &__item-metadata-date.is-button {
+        position: relative;
+        display: inline-block;
+    }
 
-  &__item-metadata-date.is-button:hover::before {
-    position: absolute;
-    display: inline-flex;
-    top: -3px;
-    left: -5px;
-    right: -5px;
-    bottom: -3px;
-    content: '';
-    z-index: 0;
-    background-color: var(--background-modifier-hover);
-    border-radius: var(--clickable-icon-radius);
-  }
+    &__item-metadata-date.is-button:hover::before {
+        position: absolute;
+        display: inline-flex;
+        top: -3px;
+        left: -5px;
+        right: -5px;
+        bottom: -3px;
+        content: '';
+        z-index: 0;
+        background-color: var(--background-modifier-hover);
+        border-radius: var(--clickable-icon-radius);
+    }
 }
 
 .kanban-plugin__date-picker {
-  --background-primary-alt: var(--background-modifier-hover);
-  --input-shadow: none;
-  --input-shadow-hover: none;
+    --background-primary-alt: var(--background-modifier-hover);
+    --input-shadow: none;
+    --input-shadow-hover: none;
 
-  .flatpickr-current-month input,
-  .flatpickr-monthDropdown-months {
+    .flatpickr-current-month input,
+    .flatpickr-monthDropdown-months {
 
-    &:hover,
-    &:focus {
-      background-color: var(--background-modifier-hover);
-      box-shadow: none;
+        &:hover,
+        &:focus {
+            background-color: var(--background-modifier-hover);
+            box-shadow: none;
+        }
     }
-  }
 
-  .flatpickr-day:not(.today):hover {
-    border-width: 0;
-  }
+    .flatpickr-day:not(.today):hover {
+        border-width: 0;
+    }
 }
 
 /* Kanban Autocomplete Fix */
 .kanban-plugin__autocomplete-item-active em {
-  color: var(--text-on-accent);
+    color: var(--text-on-accent);
 }
 
 /* Kanban Callout Fix */
 .kanban-plugin__item .callout {
-  margin-top: .66em;
+    margin-top: .66em;
 }
 
 .kanban-plugin__item .callout-fold,
 .kanban-plugin__item .callout-icon {
-  display: none;
+    display: none;
 }
 
 /* Kanban conditional settings */
 .setting-item[data-id="anp-kanban-hide-card-menus"]:not(:has(.is-enabled))+[data-id="anp-kanban-hide-archive-btn"] {
-  display: none;
+    display: none;
 }
