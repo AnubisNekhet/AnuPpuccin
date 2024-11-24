@@ -421,6 +421,12 @@ settings:
     default: 4
     format: px
   -
+    id: callout-padding
+    title: Callout Padding
+    description: Be careful, it does not properly work with all the callouts style yet.
+    type: variable-text
+    default: 0px
+  -
     id: callout-title-padding
     title: Callout Title Padding
     type: variable-text
@@ -1108,6 +1114,11 @@ settings:
     id: anp-tooltip-toggle
     title: Hide Tooltips
     type: class-toggle
+  -
+    id: anp-hide-external-link-icon
+    title: Hide External Link Icon
+    type: class-toggle
+    default: true
 
 # Typography
 
@@ -1846,9 +1857,12 @@ settings:
     id: anp-bold-custom
     title: Bold Color
     type: class-select
-    allowEmpty: true
+    allowEmpty: false
     default: anp-bold-red
     options:
+      - 
+        label: None
+        value: none
       - 
         label: Rosewater
         value: anp-bold-rosewater
@@ -1895,9 +1909,12 @@ settings:
     id: anp-italic-custom
     title: Italic Color
     type: class-select
-    allowEmpty: true
+    allowEmpty: false
     default: anp-italic-green
     options:
+      - 
+        label: None
+        value: none
       - 
         label: Rosewater
         value: anp-italic-rosewater
@@ -1944,7 +1961,7 @@ settings:
     id: anp-highlight-custom
     title: Highlight Color
     type: class-select
-    allowEmpty: true
+    allowEmpty: false
     default: anp-highlight-yellow
     options:
       - 
