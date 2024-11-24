@@ -64,3 +64,9 @@ $accents: "rosewater", "flamingo", "pink", "mauve", "red", "maroon", "peach",
 	--h5-font: var(--anp-editor-font);
 	--h6-font: var(--anp-editor-font);
 }
+
+.anp-inline-color-match-h1 {
+    .inline-title {
+        color: var(--h1-color);
+    }
+}
