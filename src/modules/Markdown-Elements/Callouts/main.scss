@@ -1,41 +1,62 @@
 /*----------------CALLOUTS-------------------*/
-.callout:not([data-callout-metadata*="revert"]) { //targets callouts that dont have revert metadata
-  --callout-blend-mode: normal;
-  > .callout-title > .callout-title-inner {
-    .theme-light & {
-      color: var(--text-normal); //text color for callout titles in light theme
+.callout:not([data-callout-metadata*="revert"]) {
+    //targets callouts that dont have revert metadata
+    --callout-blend-mode: normal;
+
+    >.callout-title>.callout-title-inner {
+        .theme-light & {
+            color: var(--text-normal); //text color for callout titles in light theme
+        }
+
+        flex-grow: var(--anp-callout-fold-position, 0); //set fold position via style settings
     }
-    flex-grow: var(--anp-callout-fold-position, 0); //set fold position via style settings
-  }
-  &:not(.is-collapsible) { //targets callout that dont have revert metadata and are not collapsible
-    > .callout-title .callout-title-inner {
-      font-weight: 500; //lighter font weight for callout title
+
+    &:not(.is-collapsible) {
+
+        //targets callout that dont have revert metadata and are not collapsible
+        >.callout-title .callout-title-inner {
+            font-weight: 500; //lighter font weight for callout title
+        }
     }
-  }
-  .callout-title { //set bold and italic colors to text color
-    --bold-color: currentColor;
-    --italic-color: currentColor;
-  }
-}
-.callout[data-callout-metadata*="revert"] { //reverts back to vanilla for callouts with revert tag
-  --callout-padding: var(--size-4-3) var(--size-4-3) var(--size-4-3) var(--size-4-6);
-  --callout-title-padding: 0;
-  --callout-content-padding: 0;
+
+    .callout-title {
+        //set bold and italic colors to text color
+        --bold-color: currentColor;
+        --italic-color: currentColor;
+    }
 }
 
-.callout-content > {
-  p, ul, ol {
-    &:first-child {
-      margin-top: 0px;
-    }
-    &:last-child {
-      margin-bottom: 0px;
-    }
-  }
-  h1, h2, h3, h4, h5, h6 {
-    margin: 0 !important;
-  }
+.callout[data-callout-metadata*="revert"] {
+    //reverts back to vanilla for callouts with revert tag
+    --callout-padding: var(--size-4-3) var(--size-4-3) var(--size-4-3) var(--size-4-6);
+    --callout-title-padding: 0;
+    --callout-content-padding: 0;
 }
+
+.callout-content> {
+
+    p,
+    ul,
+    ol {
+        &:first-child {
+            margin-top: 0px;
+        }
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0 !important;
+    }
+}
+
 @import "styles/block.scss";
 @import "styles/sleek.scss";
 @import "styles/vanilla-normal.scss";

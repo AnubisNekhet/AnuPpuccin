@@ -1,14 +1,17 @@
 //Normalize calendar header
 #calendar-container h3 {
-  font-family: var(--font-interface);
-  font-weight: bold;
+    font-family: var(--font-interface);
+    font-weight: bold;
 }
+
 #calendar-container .right-nav .reset-button {
-  margin: auto;
+    margin: auto;
 }
+
 .calendar .day.svelte-q3wqg9 {
-  &:hover {
-    background-color: rgb(var(--ctp-crust));
-  }
-  transition: background-color 0.1s;
+    &:hover {
+        background-color: rgb(var(--ctp-crust));
+    }
+
+    transition: background-color 0.1s;
 }

@@ -1,29 +1,36 @@
 .mod-community-theme .modal-content .community-modal-details .community-modal-info summary {
-  h1, h2, h3, h4, h5, h6 {
-    &:first-child {
-      margin-block: 0;
-      display: inline;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        &:first-child {
+            margin-block: 0;
+            display: inline;
+        }
     }
-  }
-}
-.modal {
-  &.mod-settings,
-  &.mod-community-theme,
-  &.kanban-plugin__board-settings-modal,
-  &.mod-community-plugin {
-    --h1-font: var(--font-interface);
-    --h2-font: var(--font-interface);
-    --h3-font: var(--font-interface);
-    --h4-font: var(--font-interface);
-    --h5-font: var(--font-interface);
-    --h6-font: var(--font-interface);
-    --h1-weight: 600;
-    --h1-color: var(--text-normal);
-    --h2-color: var(--text-normal);
-    --h3-color: var(--text-normal);
-    --h4-color: var(--text-normal);
-    --h5-color: var(--text-normal);
-    --h6-color: var(--text-normal);
-  }
 }
 
+.modal {
+
+    &.mod-settings,
+    &.mod-community-theme,
+    &.kanban-plugin__board-settings-modal,
+    &.mod-community-plugin {
+        --h1-font: var(--font-interface);
+        --h2-font: var(--font-interface);
+        --h3-font: var(--font-interface);
+        --h4-font: var(--font-interface);
+        --h5-font: var(--font-interface);
+        --h6-font: var(--font-interface);
+        --h1-weight: 600;
+        --h1-color: var(--text-normal);
+        --h2-color: var(--text-normal);
+        --h3-color: var(--text-normal);
+        --h4-color: var(--text-normal);
+        --h5-color: var(--text-normal);
+        --h6-color: var(--text-normal);
+    }
+}

@@ -1,14 +1,16 @@
 .anp-fixed-status-bar {
-  .status-bar {
-    --status-bar-position: relative;
-    --status-bar-radius: 0;
-  }
-  &.anp-card-layout, &.anp-border-layout {
     .status-bar {
-      --status-bar-border-width: 0;
-      --status-bar-background: transparent;
-      --status-bar-border-color: transparent;
-      --status-bar-background: var(--card-background-color);
+        --status-bar-position: relative;
+        --status-bar-radius: 0;
     }
-  }
+
+    &.anp-card-layout,
+    &.anp-border-layout {
+        .status-bar {
+            --status-bar-border-width: 0;
+            --status-bar-background: transparent;
+            --status-bar-border-color: transparent;
+            --status-bar-background: var(--card-background-color);
+        }
+    }
 }

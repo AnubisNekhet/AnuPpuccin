@@ -1,7 +1,8 @@
 .excalibrain-searchinput,
 .multiselect-wrapper {
-  --background-modifier-form-field: rgb(var(--ctp-crust));
+    --background-modifier-form-field: rgb(var(--ctp-crust));
 }
+
 .multiselect-wrapper {
     -webkit-app-region: no-drag;
     background: var(--background-modifier-form-field);
@@ -13,6 +14,7 @@
     border-radius: var(--input-radius);
     outline: none;
 }
+
 .multiselect-container .multiselect-wrapper .options-wrapper {
     background: var(--background-modifier-form-field);
     margin-top: -4px;
@@ -21,15 +23,18 @@
     width: calc(100% + 2px);
     margin-left: -1px;
 }
+
 .excalidraw-dirty {
-  color: rgb(var(--ctp-red));
+    color: rgb(var(--ctp-red));
 }
+
 .excalibrain-button.on {
-  background-color: rgb(var(--ctp-base));
-  border-color: var(--color-accent);
-  --input-shadow: inset 0 0 0 2px var(--color-accent);
-  --input-shadow-hover: inset 0 0 0 2px var(--color-accent);
+    background-color: rgb(var(--ctp-base));
+    border-color: var(--color-accent);
+    --input-shadow: inset 0 0 0 2px var(--color-accent);
+    --input-shadow-hover: inset 0 0 0 2px var(--color-accent);
 }
+
 .excalibrain-button.off {
-  background-color: rgb(var(--ctp-crust));
+    background-color: rgb(var(--ctp-crust));
 }

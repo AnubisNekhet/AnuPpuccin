@@ -1,0 +1,13 @@
+.hide-comment-indicators {
+
+    .is-live-preview .cm-line:not(.cm-active) .cm-comment-start,
+    .is-live-preview .cm-line:not(.cm-active) .cm-comment-end {
+        display: none;
+    }
+}
+
+.hide-comments {
+    .is-live-preview .cm-line:not(.cm-active) .cm-comment {
+        display: none;
+    }
+}

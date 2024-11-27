@@ -1,92 +1,100 @@
 @mixin collapseLane {
-  width: 44px !important;
-  .kanban-plugin__lane-header-wrapper {
-    border-width: 0;
-    gap: 10px;
-    position: absolute;
-    transform-origin: 18px 22px;
-    transform: rotate(90deg);
-    z-index: 1;
-  }
-  .kanban-plugin__lane-grip {
-    transform: rotate(-90deg);
-  }
-  .kanban-plugin__lane-settings-button-wrapper {
-    display: none;
-  }
-  .kanban-plugin__item-wrapper {
-    display: none;
-  }
-  .kanban-plugin__placeholder:only-child {
-    display: none;
-  }
-  .kanban-plugin__new-item-button {
-    font-size: 0;
-  }
-  .kanban-plugin__item-button-plus {
-    font-size: .875rem;
-  }
+    width: 44px !important;
+
+    .kanban-plugin__lane-header-wrapper {
+        border-width: 0;
+        gap: 10px;
+        position: absolute;
+        transform-origin: 18px 22px;
+        transform: rotate(90deg);
+        z-index: 1;
+    }
+
+    .kanban-plugin__lane-grip {
+        transform: rotate(-90deg);
+    }
+
+    .kanban-plugin__lane-settings-button-wrapper {
+        display: none;
+    }
+
+    .kanban-plugin__item-wrapper {
+        display: none;
+    }
+
+    .kanban-plugin__placeholder:only-child {
+        display: none;
+    }
+
+    .kanban-plugin__new-item-button {
+        font-size: 0;
+    }
+
+    .kanban-plugin__item-button-plus {
+        font-size: .875rem;
+    }
 }
 
 .anp-kanban-search-full {
-  .kanban-plugin__search-wrapper {
-    padding: 10px;
-  }
-  .kanban-plugin__search-wrapper .kanban-plugin__filter-input {
-    flex: 1;
-  }
-  .kanban-plugin__search-wrapper .clickable-icon {
-    position: absolute;
-    right: calc(1em - 2px);
-  }
-  .kanban-plugin__search-wrapper .kanban-plugin__icon {
-    display: flex;
-  }
+    .kanban-plugin__search-wrapper {
+        padding: 10px;
+    }
+
+    .kanban-plugin__search-wrapper .kanban-plugin__filter-input {
+        flex: 1;
+    }
+
+    .kanban-plugin__search-wrapper .clickable-icon {
+        position: absolute;
+        right: calc(1em - 2px);
+    }
+
+    .kanban-plugin__search-wrapper .kanban-plugin__icon {
+        display: flex;
+    }
 }
 
 .anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes),
 .anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) {
-  .kanban-plugin__lane-wrapper:not(:has(
-    .kanban-plugin__lane[data-count="0"],
-    .kanban-plugin__item:not(.is-search-miss),
-    .kanban-plugin__item-form
-  )),
-  .kanban-plugin__lane-wrapper:not(:has(
-    .kanban-plugin__lane[data-count="0"],
-    .kanban-plugin__item:not(.is-search-miss),
-    .kanban-plugin__item-form
-  )) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) {
-    @include collapseLane;
-  }
+
+    .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+            .kanban-plugin__item:not(.is-search-miss),
+            .kanban-plugin__item-form)),
+    .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+            .kanban-plugin__item:not(.is-search-miss),
+            .kanban-plugin__item-form))~.kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) {
+        @include collapseLane;
+    }
 }
 
 .anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes {
-  .kanban-plugin__drag-container[style*="width: 54px;"] .kanban-plugin__lane-wrapper {
-    @include collapseLane;
-  }
+    .kanban-plugin__drag-container[style*="width: 54px;"] .kanban-plugin__lane-wrapper {
+        @include collapseLane;
+    }
 }
 
 .anp-kanban-hide-cards:not(.anp-kanban-uncollapse-lanes),
 .anp-kanban-hide-cards.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container)) {
-  .kanban-plugin__item-wrapper:has(.is-search-miss) {
-    display: none;
-  }
+    .kanban-plugin__item-wrapper:has(.is-search-miss) {
+        display: none;
+    }
 }
 
 .anp-kanban-hide-cards.anp-kanban-hide-card-border {
-  .kanban-plugin__item.is-search-hit {
-    box-shadow: none;
-  }
+    .kanban-plugin__item.is-search-hit {
+        box-shadow: none;
+    }
 }
+
 .anp-kanban-hide-cards:not(.anp-kanban-hide-card-border) {
-  .kanban-plugin__item.is-search-hit {
-    box-shadow: inset 0 0 0 1px var(--background-modifier-border);
-  }
+    .kanban-plugin__item.is-search-hit {
+        box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+    }
 }
 
 .anp-kanban-hide-mark {
-  .kanban-plugin__item-wrapper .is-search-hit mark {
-    background-color: transparent; 
-    color: inherit;
-  }
+    .kanban-plugin__item-wrapper .is-search-hit mark {
+        background-color: transparent;
+        color: inherit;
+    }
 }
