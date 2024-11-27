@@ -363,7 +363,7 @@ body.anp-border-layout:not(.is-mobile) {
             }
         }
 
-        .workspace-split:not(.mod-right-split):not(.mod-left-split) {
+        .workspace-split.mod-root:not(.mod-right-split):not(.mod-left-split) {
             padding-bottom: var(--anp-border-bottom-padding, 20px);
         }
     }
