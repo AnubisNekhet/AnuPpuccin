@@ -11,6 +11,7 @@
     --color-brand-hover: rgb(var(--ctp-base));
     --color-surface-primary-container: rgb(var(--ctp-accent));
     --color-on-primary-container: rgb(var(--ctp-base));
+    --color-gray-50: rgb(var(--ctp-mantle));
 }
 
 .excalidraw .buttonList .zIndexButton.active,
@@ -26,4 +27,16 @@
 // remove annyoing hint
 .excalidraw .HintViewer {
     display: none;
+}
+
+.excalidraw .ExcTextField__input input::placeholder {
+	color: rgb(var(--ctp-subtext1));
+}
+
+.excalidraw-container.theme--dark {
+	color: rgb(var(--ctp-text));
+}
+
+.excalidraw .layer-ui__result-item b {
+	color: rgb(var(--ctp-accent));
 }
