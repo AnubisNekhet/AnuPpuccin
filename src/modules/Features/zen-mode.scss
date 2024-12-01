@@ -1,0 +1,32 @@
+.anp-zen-mode {
+    &:not(.is-fullscreen) {
+        &.is-focused {
+            .titlebar-button-container {
+                &.mod-right {
+                    background-color: var(--background-primary);
+                }
+            }
+        }
+
+        .titlebar-button-container {
+            &.mod-right {
+                background-color: var(--background-primary);
+            }
+        }
+    }
+
+
+    .mod-root {
+        .workspace-tabs {
+            .workspace-tab-header-container {
+                display: none;
+            }
+
+            .workspace-tab-container {
+                .view-header {
+                    display: none;
+                }
+            }
+        }
+    }
+}

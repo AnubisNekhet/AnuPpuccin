@@ -17,6 +17,22 @@ name: AnuPpuccin
 id: anuppuccin-theme-settings
 settings:
 
+# WIP
+
+  -
+    id: anp-zen-mode-header
+    title: Zen Mode
+    description:
+    type: heading
+    level: 3
+    collapsed: false
+  -
+    id: anp-zen-mode
+    title: Enable Zen Mode
+    description: Hides top bar
+    type: class-toggle
+
+
 # Colors
 
 -
@@ -7652,6 +7668,19 @@ None of the original code was used and the feature was implemented from scratch.
           var(--anp-simple-rainbow-opacity, 1));
   --nav-collapse-icon-color-collapsed: rgba(var(--rainbow-folder-color),
           var(--anp-simple-rainbow-opacity, 1));
+}
+
+.anp-zen-mode:not(.is-fullscreen).is-focused .titlebar-button-container.mod-right {
+  background-color: var(--background-primary);
+}
+.anp-zen-mode:not(.is-fullscreen) .titlebar-button-container.mod-right {
+  background-color: var(--background-primary);
+}
+.anp-zen-mode .mod-root .workspace-tabs .workspace-tab-header-container {
+  display: none;
+}
+.anp-zen-mode .mod-root .workspace-tabs .workspace-tab-container .view-header {
+  display: none;
 }
 
 .modal {
