@@ -7868,7 +7868,7 @@ None of the original code was used and the feature was implemented from scratch.
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
   margin-right: calc(var(--size-4-2) - 3px);
-  transition: transform 0.1s;
+  transition: transform 0.15s;
   vertical-align: text-top;
   margin-right: 0;
 }
@@ -7893,7 +7893,7 @@ None of the original code was used and the feature was implemented from scratch.
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
   margin-right: calc(var(--size-4-2) - 3px);
-  transition: transform 0.1s;
+  transition: transform 0.15s;
   vertical-align: text-top;
   margin-right: 0;
 }
@@ -7918,7 +7918,7 @@ None of the original code was used and the feature was implemented from scratch.
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
   margin-right: calc(var(--size-4-2) - 3px);
-  transition: transform 0.1s;
+  transition: transform 0.15s;
   vertical-align: text-top;
   margin-right: 0;
 }
@@ -7943,7 +7943,7 @@ None of the original code was used and the feature was implemented from scratch.
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
   margin-right: calc(var(--size-4-2) - 3px);
-  transition: transform 0.1s;
+  transition: transform 0.15s;
   vertical-align: text-top;
   margin-right: 0;
 }
@@ -7968,7 +7968,7 @@ None of the original code was used and the feature was implemented from scratch.
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
   margin-right: calc(var(--size-4-2) - 3px);
-  transition: transform 0.1s;
+  transition: transform 0.15s;
   vertical-align: text-top;
   margin-right: 0;
 }
@@ -7993,7 +7993,7 @@ None of the original code was used and the feature was implemented from scratch.
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
   margin-right: calc(var(--size-4-2) - 3px);
-  transition: transform 0.1s;
+  transition: transform 0.15s;
   vertical-align: text-top;
   margin-right: 0;
 }
@@ -8018,7 +8018,7 @@ None of the original code was used and the feature was implemented from scratch.
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
   margin-right: calc(var(--size-4-2) - 3px);
-  transition: transform 0.1s;
+  transition: transform 0.15s;
   vertical-align: text-top;
   margin-right: 0;
 }
@@ -8043,7 +8043,7 @@ None of the original code was used and the feature was implemented from scratch.
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
   margin-right: calc(var(--size-4-2) - 3px);
-  transition: transform 0.1s;
+  transition: transform 0.15s;
   vertical-align: text-top;
   margin-right: 0;
 }
@@ -8068,7 +8068,7 @@ None of the original code was used and the feature was implemented from scratch.
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
   margin-right: calc(var(--size-4-2) - 3px);
-  transition: transform 0.1s;
+  transition: transform 0.15s;
   vertical-align: text-top;
   margin-right: 0;
 }
@@ -8093,7 +8093,7 @@ None of the original code was used and the feature was implemented from scratch.
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
   margin-right: calc(var(--size-4-2) - 3px);
-  transition: transform 0.1s;
+  transition: transform 0.15s;
   vertical-align: text-top;
   margin-right: 0;
 }
@@ -8118,7 +8118,7 @@ None of the original code was used and the feature was implemented from scratch.
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
   margin-right: calc(var(--size-4-2) - 3px);
-  transition: transform 0.1s;
+  transition: transform 0.15s;
   vertical-align: text-top;
   margin-right: 0;
 }
@@ -8143,7 +8143,7 @@ None of the original code was used and the feature was implemented from scratch.
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
   margin-right: calc(var(--size-4-2) - 3px);
-  transition: transform 0.1s;
+  transition: transform 0.15s;
   vertical-align: text-top;
   margin-right: 0;
 }
@@ -8166,13 +8166,13 @@ None of the original code was used and the feature was implemented from scratch.
 [data-id=anuppuccin-support],
 [data-id=anp-custom-rainbow-colors]):not(.is-collapsed) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
   transform: rotate(90deg);
-  transition: transform 0.1s;
+  transition: transform 0.15s;
 }
 
 .setting-item:is([data-id=anuppuccin-theme-settings-extended],
 [data-id=anp-preview-header]):not(.is-collapsed) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
   transform: rotate(-90deg);
-  transition: transform 0.1s;
+  transition: transform 0.15s;
 }
 
 .setting-item:is([data-id=anuppuccin-theme-settings]) > .setting-item-info > .setting-item-name > .style-settings-collapse-indicator::after {
