@@ -40,7 +40,7 @@
     --h6-font: var(--font-text, inherit);
 }
 
-.markdown-source-view.is-live-preview {
+.markdown-live-view {
     --font-text: var(--anp-editor-font-lp, var(--font-text-override)), var(--font-text-theme), var(--font-interface);
 }
 
