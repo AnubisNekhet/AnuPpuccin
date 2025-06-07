@@ -329,21 +329,45 @@ Icons were taken from Font Awesome: https://fontawesome.com/
         >input[type="checkbox"]:checked,
         >p>input[type="checkbox"]:checked,
         &[type="checkbox"]:checked {
+            // needed for the halfbar effect
+            position: relative;
+            overflow: hidden;
             &:after {
-                background-color: transparent;
-            }
+                content: " ";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 100%;
+                background-color: rgb(var(--ctp-sky));
+                -webkit-mask-image: none;
+
+				// Make with just 4 lines up 100% insted of 50% if you want this diagonal
+				// then un comment the 5 lines below
+
+            	// background-image: linear-gradient(
+	            //     135deg,
+	            //     rgb(var(--ctp-sky)) 50%,
+	            //     transparent 50%
+	            // );
+        	}
+
+            // &:before {
+            //     color: rgb(var(--ctp-subtext0));
+            //     margin: 0 3px;
+            //     position: absolute;
+            //     left: calc(var(--checkbox-size) * 1);
+            //     font-weight: bold;
+            // }
 
             &:before {
-                color: rgb(var(--ctp-subtext0));
-                margin: 0 3px;
-                position: absolute;
-                left: calc(var(--checkbox-size) * 1);
-                font-weight: bold;
+                content: none;
             }
 
-            --checkbox-color: rgba(var(--ctp-subtext0), 0.3);
-            --checkbox-color-hover: rgba(var(--ctp-subtext0), 0.3);
-            border-color: rgb(var(--ctp-subtext0)) !important;
+            --checkbox-color: transparent;
+            --checkbox-color-hover: transparent;
+            border-color: rgb(var(--ctp-sky))
         }
     }
 
