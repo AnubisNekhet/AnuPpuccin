@@ -1,5 +1,5 @@
 .callout[data-callout="formula"] {
-    --callout-color: var(--ctp-text);
+    --callout-color: rgb(var(--ctp-text));
     width: fit-content;
     height: fit-content;
     mix-blend-mode: normal;
@@ -12,7 +12,7 @@
             display: none;
         }
 
-        background-color: rgba(var(--callout-color), 0.05) !important;
+        background-color: rgb(from var(--callout-color) r g b / 0.05) !important;
         color: var(--ctp-text);
     }
 

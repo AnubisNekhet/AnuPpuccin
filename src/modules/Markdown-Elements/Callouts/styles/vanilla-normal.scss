@@ -9,7 +9,7 @@
         background-color: transparent;
 
         >.callout-title {
-            background-color: rgba(var(--callout-color), var(--callout-title-opacity, 0.1));
+            background-color: rgb(from var(--callout-color) r g b / var(--callout-title-opacity, 0.1));
         }
 
         >.callout-content {
@@ -18,7 +18,7 @@
 
         >.callout-title,
         >.callout-content {
-            border-left: var(--size-2-3) solid rgb(var(--callout-color));
+            border-left: var(--size-2-3) solid var(--callout-color);
         }
     }
 }

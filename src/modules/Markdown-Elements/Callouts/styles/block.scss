@@ -6,6 +6,6 @@
     &:not([data-callout-metadata*="revert"],
         [data-callout="blank-container"],
         [data-callout="multi-column"]) {
-        border-left: var(--size-2-3) solid rgb(var(--callout-color));
+        border-left: var(--size-2-3) solid var(--callout-color);
     }
 }

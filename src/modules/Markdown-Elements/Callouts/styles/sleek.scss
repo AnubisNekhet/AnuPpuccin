@@ -16,11 +16,11 @@
         background-color: rgba(var(--ctp-mantle), 0.4);
 
         &>.callout-title {
-            background-color: rgba(var(--callout-color), var(--callout-title-opacity, 0.1));
+            background-color: rgb(from var(--callout-color) r g b / var(--callout-title-opacity, 0.1));
         }
 
         &>.callout-content {
-            border-top: var(--callout-border-width) dashed rgba(var(--callout-color), var(--callout-border-opacity));
+            border-top: var(--callout-border-width) dashed rgb(from var(--callout-color) r g b / var(--callout-border-opacity));
         }
 
         .list-collapse-indicator {
