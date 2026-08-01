@@ -12,7 +12,7 @@
             display: none;
         }
 
-        background-color: rgba(var(--callout-color), 0.05) !important;
+        background-color: color-mix(in srgb, var(--callout-color) 5%, transparent) !important;
         color: var(--ctp-text);
     }
 
