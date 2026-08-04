@@ -43,11 +43,11 @@
 }
 
 .canvas-node.is-themed .canvas-node-label {
-    color: rgb(var(--canvas-color));
+    color: var(--canvas-color);
 }
 
 .canvas-node-placeholder {
-    color: rgb(var(--canvas-color));
+    color: var(--canvas-color);
 
     &::after {
         top: 0;
