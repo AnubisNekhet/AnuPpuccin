@@ -315,6 +315,12 @@ body.anp-border-layout {
         border-right-color: var(--card-background-color);
     }
 
+    /*-Side dock Ribbon border fix-*/
+    .side-dock-ribbon,
+    .workspace-ribbon.mod-primary:before {
+        border: none;
+    }
+
     &.is-popout-window {
         .workspace {
             margin-left: var(--anp-border-padding, 20px);
